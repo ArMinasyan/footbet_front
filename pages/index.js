@@ -1,9 +1,5 @@
-import styles from '../styles/Home.module.css'
+const IndexPage = () => <h1>Index page</h1>;
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      Hello foot bet
-    </div>
-  )
-}
+IndexPage.layout = "main";
+
+export default IndexPage;
