@@ -1,0 +1,44 @@
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteiner {
+    @include center();
+    justify-content: space-between;
+    width: 80%;
+    padding: 1% 2%;
+
+    .label_content {
+        @include center();
+        width: 10%;
+
+        label {
+            @include center();
+            padding: 10%;
+            border-radius: 100%;
+            background-color: rgba(255, 255, 251, 0.09);
+
+            img {
+                width: 80%;
+                height: 80%;
+            }
+        }
+    }
+
+    .input_container {
+        width: 95%;
+
+        .input_content {
+            input {
+                padding: 2%;
+                width: 100%;
+                background: rgba(196, 196, 196, 0.2);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                box-sizing: border-box;
+                border-radius: 10px;
+            }
+        }
+    }
+}
