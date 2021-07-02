@@ -1,3 +1,5 @@
+$labelsBackgroundColor:rgba(255, 255, 251, 0.09);
+
 @mixin center {
     display: flex;
     justify-content: center;
@@ -16,13 +18,15 @@
 
         label {
             @include center();
-            padding: 10%;
-            border-radius: 100%;
-            background-color: rgba(255, 255, 251, 0.09);
+            width: 60%;
+            height: 60%;
+            padding: 15%;
+            border-radius: 50%;
+            background-color: $labelsBackgroundColor;
 
             img {
-                width: 80%;
-                height: 80%;
+                width: 100%;
+                height: 100%;
             }
         }
     }
@@ -32,12 +36,14 @@
 
         .input_content {
             input {
-                padding: 2%;
+                outline: none;
+                padding: 2% 8%;
                 width: 100%;
                 background: rgba(196, 196, 196, 0.2);
                 border: 1px solid rgba(255, 255, 255, 0.5);
                 box-sizing: border-box;
                 border-radius: 10px;
+                color: rgba(255, 255, 255, 0.5);
             }
         }
     }
