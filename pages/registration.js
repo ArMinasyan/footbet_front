@@ -1,4 +1,6 @@
-const RegistrationPage = () => <h1>Registration page</h1>;
+import { Index } from '/components/Registration/Index'
+
+const RegistrationPage = () => <Index />;
 
 RegistrationPage.layout = "main";
 
