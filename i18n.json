@@ -1,0 +1,7 @@
+{
+  "locales": ["rs", "am", "en"],
+  "defaultLocale": "rs",
+  "pages": {
+    "*": ["common"]
+  }
+}

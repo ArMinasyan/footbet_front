@@ -1,0 +1,13 @@
+{
+    "registration": {
+        "title": "Регистрация",
+        "inputPlaceHolders": {
+            "fullName": "Имя пользователя",
+            "birthDate": "Дата рождения",
+            "email": "Адрес почты",
+            "phone": "Номер телефона",
+            "password": "Пароль",
+            "buttonTitle": "Зарегистрироваться"
+        }
+    }
+}

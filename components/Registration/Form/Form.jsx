@@ -1,3 +1,5 @@
+// hooks and helpers
+import useTranslation from 'next-translate/useTranslation'
 // components
 import { InputConteiner } from './InputConteiner/InputConteiner'
 import { FileInput } from './FileInput/FileInput'
@@ -14,43 +16,49 @@ import key from '/public/images/register/key.svg'
 
 export function Form({ title }) {
 
-    const inputs = [
-        {
-            label: userIcon,
-            id: 'name',
-            type: 'text',
-            placeholder: 'Имя пользователя',
-            other: '',
-        },
-        {
-            label: calendar,
-            id: 'birth_date',
-            type: 'text',
-            placeholder: 'Дата рождения',
-            other: '',
-        },
-        {
-            label: email,
-            id: 'email',
-            type: 'email',
-            placeholder: 'Адрес почты',
-            other: '',
-        },
-        {
-            label: phone,
-            id: 'phone_number',
-            type: 'text',
-            placeholder: 'Номер телефона',
-            other: '',
-        },
-        {
-            label: key,
-            id: 'birth_date',
-            type: 'password',
-            placeholder: 'Пароль',
-            other: '',
-        }
-    ]
+    const
+        // translation consfigs
+        { t } = useTranslation('common'),
+        translationPath = 'registration.inputPlaceHolders.',
+        translate = key => t(`${translationPath}${key}`),
+        // inputs
+        inputs = [
+            {
+                label: userIcon,
+                id: 'name',
+                type: 'text',
+                placeholder: translate('fullName'),
+                other: '',
+            },
+            {
+                label: calendar,
+                id: 'birth_date',
+                type: 'text',
+                placeholder: translate('birthDate'),
+                other: '',
+            },
+            {
+                label: email,
+                id: 'email',
+                type: 'email',
+                placeholder: translate('email'),
+                other: '',
+            },
+            {
+                label: phone,
+                id: 'phone_number',
+                type: 'text',
+                placeholder: translate('phone'),
+                other: '',
+            },
+            {
+                label: key,
+                id: 'birth_date',
+                type: 'password',
+                placeholder: translate('password'),
+                other: '',
+            }
+        ]
 
     return (
         <div className={styles.conteiner}>
@@ -66,6 +74,7 @@ export function Form({ title }) {
                 {
                     inputs.map(el => (
                         <InputConteiner
+                            key={el.id}
                             label={el.label}
                             id={el.id}
                             type={el.type}
@@ -75,7 +84,7 @@ export function Form({ title }) {
                     ))
                 }
                 <Button
-                    title={'Зарегистрироваться'}
+                    title={translate('buttonTitle')}
                 />
             </form>
         </div>

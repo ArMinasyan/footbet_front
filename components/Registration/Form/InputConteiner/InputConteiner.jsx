@@ -1,6 +1,6 @@
 import styles from './InputConteiner.module.scss'
 
-export function InputConteiner({ label, id, type, placeholder, other }) {
+export function InputConteiner({ label, id, type, placeholder, errors = false, other }) {
     return (
         <div className={styles.conteiner}>
             <div className={styles.label_content}>
@@ -12,7 +12,7 @@ export function InputConteiner({ label, id, type, placeholder, other }) {
                 </label>
             </div>
             <div className={styles.input_container}>
-                <div className={styles.input_content}>
+                <div className={errors ? styles.input_error_content : styles.input_success_content}>
                     <input
                         id={id}
                         type={type}
