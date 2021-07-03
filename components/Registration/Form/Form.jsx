@@ -1,5 +1,6 @@
 // hooks and helpers
 import useTranslation from 'next-translate/useTranslation'
+import { useForm } from 'react-hook-form'
 // components
 import { InputConteiner } from './InputConteiner/InputConteiner'
 import { FileInput } from './FileInput/FileInput'
@@ -12,6 +13,8 @@ import calendar from '/public/images/register/calendar.svg'
 import email from '/public/images/register/mail.svg'
 import phone from '/public/images/register/phone.svg'
 import key from '/public/images/register/key.svg'
+import { request } from '../../../lib/er.lib'
+import { REGISTER } from '../../../lib/request-destinations'
 
 
 export function Form({ title }) {
@@ -21,44 +24,67 @@ export function Form({ title }) {
         { t } = useTranslation('common'),
         translationPath = 'registration.inputPlaceHolders.',
         translate = key => t(`${translationPath}${key}`),
+        // form configs
+        { register, handleSubmit, formState: { errors } } = useForm({
+            mode: 'onChange'
+        }),
         // inputs
         inputs = [
             {
                 label: userIcon,
                 id: 'name',
                 type: 'text',
+                key: Math.random(),
                 placeholder: translate('fullName'),
-                other: '',
+                other: { ...register('name') },
             },
             {
                 label: calendar,
                 id: 'birth_date',
                 type: 'text',
+                key: Math.random(),
                 placeholder: translate('birthDate'),
-                other: '',
+                other: { ...register('birthDate') },
             },
             {
                 label: email,
                 id: 'email',
                 type: 'email',
+                key: Math.random(),
                 placeholder: translate('email'),
-                other: '',
+                other: { ...register('email') },
             },
             {
                 label: phone,
                 id: 'phone_number',
                 type: 'text',
+                key: Math.random(),
                 placeholder: translate('phone'),
-                other: '',
+                other: { ...register('number') },
             },
             {
                 label: key,
-                id: 'birth_date',
+                id: 'password',
                 type: 'password',
+                key: Math.random(),
                 placeholder: translate('password'),
-                other: '',
+                other: { ...register('password') },
             }
-        ]
+        ],
+        // send form values
+        submit = (data) => {
+            console.log(data);
+            // const registerFormData = new FormData();
+            // Object.entries(data).forEach(([key, item]) => {
+            //     registerFormData.append(key, item);
+            // })
+            // try {
+                // request(REGISTER, registerFormData)
+            // } catch (error) {
+            //     console.log(error);
+            // }
+        }
+
 
     return (
         <div className={styles.conteiner}>
@@ -69,12 +95,14 @@ export function Form({ title }) {
                     }
                 </h1>
             </div>
-            <form action="">
+            <form
+                onSubmit={(handleSubmit(submit))}
+            >
                 <FileInput />
                 {
                     inputs.map(el => (
                         <InputConteiner
-                            key={el.id}
+                            key={el.key}
                             label={el.label}
                             id={el.id}
                             type={el.type}
