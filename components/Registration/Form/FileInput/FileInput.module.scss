@@ -1,5 +1,13 @@
 $labelsBackgroundColor:rgba(255, 255, 251, 0.09);
 
+@mixin vw($px, $vw:1920) {
+    width: ($px * 100) / 1920 + vw;
+}
+
+@mixin vh($px) {
+    height: ($px * 100) / 1920 + vh;
+}
+
 @mixin center {
     display: flex;
     justify-content: center;
@@ -8,13 +16,12 @@ $labelsBackgroundColor:rgba(255, 255, 251, 0.09);
 
 .uploadImageConteiner {
     @include center();
-    width: 80%;
-    height: 200px;
+    width: 100%;
     padding: 1% 0;
 
     label {
-        width: 30%;
-        height: 100%;
+        @include vw(270);
+        @include vh(320);
         @include center();
 
         .uploadImageContent {

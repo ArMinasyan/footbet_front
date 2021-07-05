@@ -79,7 +79,7 @@ export function Form({ title }) {
             //     registerFormData.append(key, item);
             // })
             // try {
-                // request(REGISTER, registerFormData)
+            // request(REGISTER, registerFormData)
             // } catch (error) {
             //     console.log(error);
             // }
@@ -98,7 +98,11 @@ export function Form({ title }) {
             <form
                 onSubmit={(handleSubmit(submit))}
             >
-                <FileInput />
+                <FileInput
+                    id='upload_file_input'
+                    type='file'
+                    other={register('file')}
+                />
                 {
                     inputs.map(el => (
                         <InputConteiner

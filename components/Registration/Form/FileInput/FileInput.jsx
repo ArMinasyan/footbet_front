@@ -6,7 +6,7 @@ import styles from './FileInput.module.scss'
 import plusIcon from '/public/images/register/plus.svg'
 
 
-export function FileInput() {
+export function FileInput({ id, type, other }) {
 
     const
         // for img input
@@ -22,10 +22,11 @@ export function FileInput() {
                         <img src={plusIcon.src} />
                     }
                     <input
-                        type='file'
-                        id='file'
+                        type={type}
+                        id={id}
                         style={{ display: 'none' }}
                         onChange={e => setImgInput(e.target.files[0])}
+                        {...other}
                     />
                 </div>
             </label>
