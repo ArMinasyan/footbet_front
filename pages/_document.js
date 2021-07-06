@@ -6,13 +6,15 @@ class MyDocument extends Document {
     return { ...initialProps }
   }
 
+
+
   render() {
     return (
       <Html>
         <Head />
         <body>
           <Main />
-          <div id="login-modal-conteiner">
+          <div id="modal-conteiner">
           </div>
           <NextScript />
         </body>

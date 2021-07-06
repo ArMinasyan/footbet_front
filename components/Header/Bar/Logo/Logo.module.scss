@@ -1,4 +1,16 @@
-.logo_conatiner{
-    width: auto;
-    height: auto;    
+@use 'sass:math';
+
+@function get-width($px, $vw-context: 1740px) {
+    @return math.div($px * 100%, $vw-context);
+}
+
+
+.logo_conatiner {
+    cursor: pointer;
+    width: get-width(437px);
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }

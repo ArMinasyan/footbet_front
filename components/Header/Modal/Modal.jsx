@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from 'react'
-import close from '/public/images/register/close.svg'
 import styles from './Modal.module.scss'
 import { createPortal } from 'react-dom'
 
@@ -31,29 +30,16 @@ export function Modal({ onClose, children }) {
     const modal = (
         <div className={styles.modalConteiner}>
             <div className={styles.modalContent} ref={node} >
-                <div className={styles.mHead}>
-                    <div className={styles.closeIcon}>
-                        <img
-                            onClick={() => handleClose(true)}
-                            src={close.src}
-                            alt=""
-                        />
-                    </div>
-                </div>
-                <div className={styles.mBody}>
-                    {
-                        children
-                    }
-                </div>
-                <div className={styles.footer}>
-                </div>
+                {
+                    children
+                }
             </div>
         </div>
     )
 
     if (showModal) return createPortal(
         modal,
-        document.getElementById('login-modal-conteiner')
+        document.getElementById('modal-conteiner')
     )
     else return null
 }

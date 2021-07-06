@@ -1,7 +1,7 @@
 @use 'sass:math';
 
-@function get-width($px, $vw-context: 1920px) {
-    @return math.div($px * 100%, $vw-context);
+@function get_percent($px, $context: 1920px) {
+    @return math.div($px * 100%, $context);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
@@ -12,46 +12,60 @@
     align-items: center;
 }
 
-@mixin flex-around {
+@mixin flex-between {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 .bar_item_container {
     @include center();
-    width: get-width(336px);
+    justify-content: space-between;
+    width: get_percent(336px);
 
-    .auth_buttons {
-        width: get-width(252px, 336px);
-        @include flex-around();
+    .auth_container {
+        width: 100%;
+        @include center();
+        justify-content: flex-start ;
 
-        .sign_up_button {
-            width: get-width(137px, 252px);
-            @include flex-around();
+        .auth_buttons {
+            width: 100%;
+            @include center();
+            justify-content: space-around;
+            border-right: 2px solid white;
+
+
+            .sign_up_button {
+                width: get_percent(137px, 252px);
+                @include flex-between();
+            }
+
+            .sign_in_button {
+                width: get_percent(75px, 252px);
+                @include flex-between();
+            }
+
+            span {
+                cursor: pointer;
+                font-family: Arimo;
+                font-size: 18px;
+                line-height: 21px;
+            }
+
+            img {
+                cursor: pointer;
+            }
         }
-
-        .sign_in_button {
-            width: get-width(75px, 252px);
-            @include flex-around();
-        }
-
-        span {
-            font-family: Arimo;
-            font-size: 18px;
-            line-height: 21px;
-        }
-    }
-
-    .vertical_border {
-        background-color: white
     }
 
     .lang_button {
-        @include flex-around();
+        @include center();
+        justify-content: space-around;
         width: 25%;
+        margin-left: 20px;
 
         span {
+            cursor: pointer;
             font-family: Arimo;
             font-size: 18px;
             line-height: 21px;

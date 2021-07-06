@@ -1,0 +1,18 @@
+$modal-width:634px;
+
+@use 'sass:math';
+
+@function get_percent($px, $context: 1920px) {
+    @return math.div($px * 100%, $context);
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_container{
+    @include center();
+    width:get_percent(537px, $modal-width )
+}
