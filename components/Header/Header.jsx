@@ -1,14 +1,11 @@
-import Link from 'next/link'
+import { Bar } from './Bar/Bar'
+import { NavBar } from './NavBar/NavBar'
 
 export function Header() {
     return (
-        <div>
-            <Link href="/">
-                <button>Home</button>
-            </Link>
-            <Link href="/registration">
-                <button>Register</button>
-            </Link>
-        </div>
+        <>
+            <Bar />
+            <NavBar />
+        </>
     )
 }

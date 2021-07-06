@@ -1,0 +1,16 @@
+@use 'sass:math';
+
+@function get-vw($px) {
+    $vw-context: 1920px;
+    @return math.div($px * 100vw, $vw-context);
+}
+
+@function get-vh($px) {
+    $vw-context: 1080px;
+    @return math.div($px * 100vh, $vw-context);
+}
+
+.bar_container{
+    width: 100vw;
+    height: get-vh(383px);
+}
