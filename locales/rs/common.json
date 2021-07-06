@@ -1,4 +1,9 @@
 {
+    "header": {
+        "register": "Регистрация",
+        "login": "Войти",
+        "language": "Рус."
+    },
     "registration": {
         "title": "Регистрация",
         "inputPlaceHolders": {

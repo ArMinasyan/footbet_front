@@ -1,0 +1,60 @@
+@use 'sass:math';
+
+@function get-width($px, $vw-context: 1920px) {
+    @return math.div($px * 100%, $vw-context);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bar_item_container {
+    @include center();
+    width: get-width(336px);
+
+    .auth_buttons {
+        width: get-width(252px, 336px);
+        @include flex-around();
+
+        .sign_up_button {
+            width: get-width(137px, 252px);
+            @include flex-around();
+        }
+
+        .sign_in_button {
+            width: get-width(75px, 252px);
+            @include flex-around();
+        }
+
+        span {
+            font-family: Arimo;
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+
+    .vertical_border {
+        background-color: white
+    }
+
+    .lang_button {
+        @include flex-around();
+        width: 25%;
+
+        span {
+            font-family: Arimo;
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+}
