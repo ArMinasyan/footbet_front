@@ -1,6 +1,13 @@
 import styles from './InputConteiner.module.scss'
 
-export function InputConteiner({ label, id, type, placeholder, errors = false, other }) {
+export function InputConteiner({
+    label,
+    id,
+    type,
+    placeholder,
+    errors,
+    other }) {
+
     return (
         <div className={styles.conteiner}>
             <div className={styles.label_content}>

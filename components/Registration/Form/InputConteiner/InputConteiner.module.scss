@@ -43,7 +43,7 @@ $errorInputBorderColor: #9E094A21;
 .conteiner {
     @include center();
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     padding: 1% 2%;
 
     .label_content {

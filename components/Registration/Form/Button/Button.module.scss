@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin center {
     display: flex;
     justify-content: center;
@@ -6,8 +8,10 @@
 
 .conteiner {
     @include center();
+    padding-top: 1%;
     width: 100%;
     button {
+        width: get-vw(265px);
         cursor: pointer;
         background: #9E094A;
         outline: none;
@@ -18,7 +22,7 @@
         font-weight: normal;
         font-size: 18px;
         line-height: 23px;
-        letter-spacing: 0.16em;
+        letter-spacing: 0.12em;
         color: #FFFFFF;
     }
 }
