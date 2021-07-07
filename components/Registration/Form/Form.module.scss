@@ -1,14 +1,10 @@
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@import "/styles/scss/_mixins.scss";
 
 .conteiner {
     @include center();
+    width: 39vw;
     flex-direction: column;
     margin: auto;
-    width: 39vw;
 
     form {
         @include center();

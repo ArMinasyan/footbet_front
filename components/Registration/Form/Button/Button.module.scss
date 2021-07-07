@@ -1,17 +1,10 @@
-@use "sass:math";
-
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@import "/styles/scss/_mixins.scss";
 
 .conteiner {
     @include center();
     padding-top: 1%;
     width: 100%;
     button {
-        width: get-vw(265px);
         cursor: pointer;
         background: #9E094A;
         outline: none;

@@ -8,7 +8,7 @@ import { InputContainer } from '/components/common/auth/InputContainer/InputCont
 // styles 
 import styles from './LoginForm.module.scss'
 
-export function LoginForm({ title }) {
+export function LoginForm() {
 
     const
         // translation consfigs
@@ -37,7 +37,7 @@ export function LoginForm({ title }) {
             <div className={styles.form_title}>
                 <h2>
                     {
-                        title
+                        t('header.loginModal.title')
                     }
                 </h2>
             </div>

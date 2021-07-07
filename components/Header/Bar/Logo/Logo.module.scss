@@ -1,13 +1,9 @@
-@use 'sass:math';
-
-@function get-width($px, $vw-context: 1740px) {
-    @return math.div($px * 100%, $vw-context);
-}
+@import "/styles/scss/_functions";
 
 
 .logo_conatiner {
     cursor: pointer;
-    width: get-width(437px);
+    width: get_percent(437px);
 
     img {
         width: 100%;

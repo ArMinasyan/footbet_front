@@ -2,7 +2,10 @@
     "header": {
         "register": "Регистрация",
         "login": "Войти",
-        "language": "Рус."
+        "language": "Рус.",
+        "loginModal": {
+            "title": "Авторизация"
+        }
     },
     "registration": {
         "title": "Регистрация",

@@ -1,16 +1,8 @@
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
+
 $parent-width:573px;
-
-@use 'sass:math';
-
-@function get_percent($px, $context) {
-    @return math.div($px * 100%, $context);
-}
-
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .conteiner {
     width: 100%;

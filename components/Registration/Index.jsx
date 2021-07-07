@@ -12,10 +12,10 @@ export function Index() {
         translate = key => t(`${translationPath}${key}`)
 
     return (
-        <div>
+        <>
             <Form
                 title={translate('title')}
             />
-        </div>
+        </>
     )
 }

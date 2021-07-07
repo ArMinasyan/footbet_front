@@ -1,15 +1,5 @@
-@use 'sass:math';
-
-@function get-vh($px) {
-    $vw-context: 1080px;
-    @return math.div($px * 100vh, $vw-context);
-}
-
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
 
 .header_container {
     @include center();

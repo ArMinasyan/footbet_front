@@ -1,15 +1,6 @@
-$page_color:#12112C;
-
-@use 'sass:math';
-
-@function get_percent($px, $context: 1920px) {
-    @return math.div($px * 100%, $context);
-}
-
-@function get_vw($px, $context: 1920px) {
-    @return math.div($px * 100vw, $context);
-}
-
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
 
 .modalConteiner {
     position: absolute;
@@ -31,7 +22,7 @@ $page_color:#12112C;
         min-width: 300px;
         height: auto;
         border-radius: 22px;
-        background: $page_color;
+        background: $primaryBackground;
         z-index: 100;
         border-top: 20px;
     }

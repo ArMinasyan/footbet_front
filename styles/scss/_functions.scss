@@ -1,0 +1,13 @@
+@use 'sass:math';
+
+@function get_percent($px, $context: 1920px) {
+    @return math.div($px * 100%, $context);
+}
+
+@function get-vw($px, $context: 1920px) {
+    @return math.div($px * 100vw, $context);
+}
+
+@function get-vh($px, $context: 1080px) {
+    @return math.div($px * 100vh, $context);
+}
