@@ -1,0 +1,19 @@
+@use 'sass:math';
+
+@function get-vh($px) {
+    $vw-context: 1080px;
+    @return math.div($px * 100vh, $vw-context);
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_container {
+    @include center();
+    justify-content: space-around;
+    flex-direction: column;
+    height: get-vh(383px);
+}

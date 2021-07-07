@@ -1,0 +1,13 @@
+{
+    "registration": {
+        "title": "Գրանցում",
+        "inputPlaceHolders": {
+            "fullName": "Օգտագործողի անուն",
+            "birthDate": "Ծննդյան տարեթիվ",
+            "email": "Էլ․ հասցե",
+            "phone": "Հեռախոսահամար",
+            "password": "Գաղտնաբառ",
+            "buttonTitle":"Գրանցվել"
+        }
+    }
+}

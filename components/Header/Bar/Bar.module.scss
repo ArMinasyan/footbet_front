@@ -1,0 +1,17 @@
+@use 'sass:math';
+
+@function get-width($px, $vw-context: 1920px) {
+    @return math.div($px * 100%, $vw-context);
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar_container {
+    @include center();
+    justify-content: space-between;
+    width: get-width(1740px, 1920px);
+}

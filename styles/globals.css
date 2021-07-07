@@ -1,5 +1,12 @@
+:root {
+  --pageColor: #12112C;
+  --textColor: #FFFFFF;
+}
+
 html,
 body {
+  background-color: var(--pageColor);
+  color: var(--textColor);
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,

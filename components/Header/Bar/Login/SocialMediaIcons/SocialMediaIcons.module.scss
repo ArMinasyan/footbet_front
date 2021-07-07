@@ -1,0 +1,38 @@
+$parent-width:573px;
+
+@use 'sass:math';
+
+@function get_percent($px, $context) {
+    @return math.div($px * 100%, $context);
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteiner {
+    width: 100%;
+    @include center();
+
+    .content {
+        width: 100%;
+        @include center();
+        justify-content: space-evenly;
+
+        .iconContent {
+            width:get_percent(76px, $parent-width);
+            height: get_percent(76px, $parent-width );
+
+            .iconBody {
+                @include center();
+
+                .icon {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

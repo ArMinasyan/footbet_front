@@ -1,0 +1,13 @@
+{
+    "registration": {
+        "title": "Sign Up",
+        "inputPlaceHolders": {
+            "fullName": "User name",
+            "birthDate": "Birth date",
+            "email": "Email",
+            "phone": "Phone number",
+            "password": "Password",
+            "buttonTitle": "Sign Up"
+        }
+    }
+}

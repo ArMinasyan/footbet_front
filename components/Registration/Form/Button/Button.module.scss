@@ -1,0 +1,28 @@
+@use "sass:math";
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteiner {
+    @include center();
+    padding-top: 1%;
+    width: 100%;
+    button {
+        width: get-vw(265px);
+        cursor: pointer;
+        background: #9E094A;
+        outline: none;
+        border-radius: 8px;
+        padding: 2% 4%;
+        font-family: Arsenal;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: 0.12em;
+        color: #FFFFFF;
+    }
+}

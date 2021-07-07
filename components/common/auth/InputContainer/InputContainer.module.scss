@@ -1,0 +1,83 @@
+$backgroundColor:rgba(255, 255, 251, 0.09);
+$inputBackColor:rgba(196, 196, 196, 0.2);
+$inputBorderColor:rgba(255, 255, 255, 0.5);
+$errorInputBackColor:rgba(158, 9, 74, 0.13);
+$errorInputBorderColor: #9E094A21;
+
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin input {
+    outline: none;
+    padding: 3% 4%;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@mixin success {
+    border: 1px solid $inputBorderColor;
+    background: $inputBackColor;
+}
+
+@mixin error {
+    border: 1px solid $errorInputBorderColor;
+    background: $errorInputBackColor;
+}
+
+@mixin successInput {
+    @include input();
+    @include success();
+}
+
+@mixin errorInput {
+    @include input();
+    @include error();
+}
+
+.conteiner {
+    @include center();
+    justify-content: space-between;
+    width: 100%;
+    padding: 1% 2%;
+
+    .label_content {
+        @include center();
+        width: 10%;
+
+        label {
+            @include center();
+            width: 60%;
+            height: 60%;
+            padding: 15%;
+            border-radius: 50%;
+            background-color: $backgroundColor;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .input_container {
+        width: 95%;
+
+        .input_success_content {
+            input {
+                @include successInput()
+            }
+        }
+
+        .input_error_content {
+            input {
+                @include errorInput()
+            }
+        }
+    }
+}

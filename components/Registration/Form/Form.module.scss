@@ -1,0 +1,18 @@
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteiner {
+    @include center();
+    flex-direction: column;
+    margin: auto;
+    width: 39vw;
+
+    form {
+        @include center();
+        flex-direction: column;
+        width: 100%;
+    }
+}
