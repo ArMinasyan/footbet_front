@@ -11,7 +11,7 @@ $modal-width: 634px;
 }
 
 .login_container {
-    @include center();
-    flex-direction: column;
+    @include column-center();
+    margin: 61px 0;
     width: get_percent(537px, $modal-width);
 }

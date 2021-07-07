@@ -5,10 +5,10 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 //components
 import { InputContainer } from '/components/common/auth/InputContainer/InputContainer'
-import { Title } from './LoginFormComponents/Title'
-import { ResetPassword } from './LoginFormComponents/ResetPassword'
-import { Submit } from './LoginFormComponents/Submit'
-import { ToRegister } from './LoginFormComponents/ToRegister'
+import { Title } from '../common/Title'
+import { ResetPasswordLink } from '../common/ResetPasswordLink'
+import { Submit } from '../common/Submit'
+import { ToRegister } from '../common/ToRegister'
 // styles 
 import styles from './LoginForm.module.scss'
 
@@ -19,6 +19,10 @@ export function LoginForm({ onModalClose }) {
         { t } = useTranslation('common'),
         translationPath = 'registration.inputPlaceHolders.',
         translate = key => t(`${translationPath}${key}`),
+        handle_to_register_click = () => {
+            document.querySelector('body').style.overflow = 'visible'
+            onModalClose()
+        },
         // yup configs
         schema = yup.object().shape({
             email: yup
@@ -35,6 +39,7 @@ export function LoginForm({ onModalClose }) {
             mode: 'onChange',
             resolver: yupResolver(schema)
         }),
+        // on form submit
         submit = (data) => console.log(data);
 
     return (
@@ -44,21 +49,23 @@ export function LoginForm({ onModalClose }) {
                 content={t('header.loginModal.title')}
             />
             <form onSubmit={handleSubmit(submit)}>
-                <InputContainer
-                    id='name'
-                    type='text'
-                    placeholder={translate('email')}
-                    errors={(!!errors.email)}
-                    other={register('email')}
-                />
-                <InputContainer
-                    id='password'
-                    type='password'
-                    placeholder={translate('password')}
-                    errors={!!errors.password}
-                    other={register('password')}
-                />
-                <ResetPassword
+                <div className={styles.inputs}>
+                    <InputContainer
+                        id='name'
+                        type='text'
+                        placeholder={translate('email')}
+                        errors={(!!errors.email)}
+                        other={register('email')}
+                    />
+                    <InputContainer
+                        id='password'
+                        type='password'
+                        placeholder={translate('password')}
+                        errors={!!errors.password}
+                        other={register('password')}
+                    />
+                </div>
+                <ResetPasswordLink
                     styles={styles.reset_password}
                     content={t('header.loginModal.resPassword')}
                 />
@@ -69,7 +76,7 @@ export function LoginForm({ onModalClose }) {
             </form>
             <ToRegister
                 href='/registration'
-                click={onModalClose}
+                click={handle_to_register_click}
                 container_styles={styles.to_register_container}
                 content_styles={styles.to_register_content}
                 or={t('header.loginModal.or')}

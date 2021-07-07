@@ -33,7 +33,6 @@ export function Modal({ onClose, children }) {
     }
 
     pageOverflow ? body.style.overflow = 'hidden' : body.style.overflow = 'visible'
-    console.log(showModal);
 
     const modal = (
         <div className={styles.modalConteiner}>

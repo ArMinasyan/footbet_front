@@ -28,19 +28,18 @@
 
         .auth_buttons {
             width: 100%;
-            @include center();
-            justify-content: space-around;
+            @include flex-around();
             border-right: 2px solid white;
 
 
             .sign_up_button {
-                width: get_percent(137px, 252px);
-                @include flex-between();
+                width: get_percent(130px, 252px);
+                @include flex-around();
             }
 
             .sign_in_button {
                 width: get_percent(75px, 252px);
-                @include flex-between();
+                @include flex-around();
             }
 
             span {

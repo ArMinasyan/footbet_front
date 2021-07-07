@@ -1,6 +1,8 @@
 @import "/styles/scss/_functions";
 @import "/styles/scss/_mixins.scss";
 @import "/styles/scss/_variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
+$modalHeight: 601px;
 
 .container {
     * {
@@ -8,43 +10,79 @@
         padding: 0;
     }
     width: 100%;
+    margin: 32px 0 0 0;
     @include column-center();
 
     .title {
         @include center();
         width: 100%;
         h2 {
-
+            font-size: 30px;
+            line-height: 34px;
+            letter-spacing: 0.1em;
         }
     }
 
     form {
         width: 100%;
-        input {
-            width: 100% !important;
-            color: rgba(255, 255, 255, 0.31) !important;
-            background-color: rgba(255, 255, 255, 0.12) !important;
-        }
-        .reset_password{
-            @include flex-start();
-            width: 100%;
-            span{
+        margin-top: 18px;
 
+        .inputs {
+            width: 100%;
+            input {
+                margin-top: 21px;
+                font-size: 16px;
+                line-height: 18px;
+                padding: 3% 0;
+                width: 100% !important;
+                color: rgba(255, 255, 255, 0.31) !important;
+                background-color: rgba(255, 255, 255, 0.12);
             }
         }
-        .submit{
+
+        .reset_password {
+            @include flex-start();
+            width: 100%;
+            margin: 10px 0 0 7px;
+            span {
+                cursor: pointer;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.05em;
+                font-family: Arimo;
+            }
+        }
+        .submit {
             @include center();
             width: 100%;
-            button{
-
+            margin-top: 41px;
+            button {
+                width: 100%;
+                padding: 2.4%;
+                font-size: 20px;
+                line-height: 23px;
+                letter-spacing: 0.14em;
+                color: #ffffff;
+                background: $buttonsColor;
+                border-radius: 8px;
+                border: none;
+                outline: none;
+                cursor: pointer;
             }
         }
     }
-    .to_register_container{
+    .to_register_container {
         @include center();
         width: 100%;
-        .to_register_content{
-            .to_register_text{
+        margin-top: 25px;
+        .to_register_content {
+            font-family: Arimo;
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 0.05em;
+
+            .to_register_text {
+                color: $buttonsColor;
                 cursor: pointer;
             }
         }

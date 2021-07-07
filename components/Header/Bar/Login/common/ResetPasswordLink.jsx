@@ -1,5 +1,5 @@
 
-export function ResetPassword({ styles, content }) {
+export function ResetPasswordLink({ styles, content }) {
     return (
         <div className={styles}>
             <span>
