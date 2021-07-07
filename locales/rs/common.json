@@ -9,6 +9,9 @@
             "submit": "Войти",
             "or": "или",
             "register": "Зарегистрироваться"
+        },
+        "resetPasswordModal": {
+            "title": "Восстановление пароля"
         }
     },
     "registration": {

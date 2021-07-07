@@ -12,7 +12,7 @@ import { ToRegister } from '../common/ToRegister'
 // styles 
 import styles from './LoginForm.module.scss'
 
-export function LoginForm({ onModalClose }) {
+export function LoginForm({ onModalClose, handleResetPassModal }) {
 
     const
         // translation consfigs
@@ -66,6 +66,7 @@ export function LoginForm({ onModalClose }) {
                     />
                 </div>
                 <ResetPasswordLink
+                    click={handleResetPassModal}
                     styles={styles.reset_password}
                     content={t('header.loginModal.resPassword')}
                 />
