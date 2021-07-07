@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 // components
-import { InputConteiner } from './InputConteiner/InputConteiner'
+import {InputContainer} from '/components/common/auth/InputContainer/InputContainer'
 import { FileInput } from './FileInput/FileInput'
 import { Button } from './Button/Button'
 // styles
@@ -137,7 +137,7 @@ export function Form({ title }) {
                     type='file'
                     other={register('file')}
                 />
-                <InputConteiner
+                <InputContainer
                     label={userIcon}
                     id='name'
                     type='text'
@@ -145,7 +145,7 @@ export function Form({ title }) {
                     errors={(!!errors.name)}
                     other={register('name')}
                 />
-                <InputConteiner
+                <InputContainer
                     label={calendar}
                     id='birth_date'
                     type='text'
@@ -157,7 +157,7 @@ export function Form({ title }) {
                         onBlur: (e) => e.target.type = 'text'
                     }}
                 />
-                <InputConteiner
+                <InputContainer
                     label={email}
                     id='email'
                     type='text'
@@ -165,7 +165,7 @@ export function Form({ title }) {
                     errors={!!errors.email}
                     other={register('email')}
                 />
-                <InputConteiner
+                <InputContainer
                     label={phone}
                     id='phone_number'
                     type='text'
@@ -173,7 +173,7 @@ export function Form({ title }) {
                     errors={!!errors.number}
                     other={register('number')}
                 />
-                <InputConteiner
+                <InputContainer
                     label={key}
                     id='password'
                     type='password'
