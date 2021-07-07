@@ -1,7 +1,9 @@
 :root {
   --pageColor: #12112C;
   --textColor: #FFFFFF;
+  --font: url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 }
+
 
 html,
 body {
@@ -9,8 +11,7 @@ body {
   color: var(--textColor);
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:var(--font);
 }
 
 a {

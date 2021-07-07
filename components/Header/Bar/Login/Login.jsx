@@ -11,7 +11,7 @@ export function Login({ onModalClose }) {
         <Modal onClose={onModalClose}>
             <div className={styles.login_container}>
                 <SocialMediaIcons />
-                <LoginForm />
+                <LoginForm onModalClose={onModalClose} />
             </div>
         </Modal>
     )

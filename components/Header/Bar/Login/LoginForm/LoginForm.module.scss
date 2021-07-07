@@ -2,19 +2,51 @@
 @import "/styles/scss/_mixins.scss";
 @import "/styles/scss/_variables.scss";
 
-
 .container {
+    * {
+        margin: 0;
+        padding: 0;
+    }
     width: 100%;
+    @include column-center();
 
-    input {
-        width: 100% !important;
-        color: rgba(255, 255, 255, 0.31) !important;
-        background-color: rgba(255, 255, 255, 0.12) !important;
+    .title {
+        @include center();
+        width: 100%;
+        h2 {
+
+        }
     }
 
-    .form_title {
-        h2{
+    form {
+        width: 100%;
+        input {
+            width: 100% !important;
+            color: rgba(255, 255, 255, 0.31) !important;
+            background-color: rgba(255, 255, 255, 0.12) !important;
+        }
+        .reset_password{
+            @include flex-start();
+            width: 100%;
+            span{
 
+            }
+        }
+        .submit{
+            @include center();
+            width: 100%;
+            button{
+
+            }
+        }
+    }
+    .to_register_container{
+        @include center();
+        width: 100%;
+        .to_register_content{
+            .to_register_text{
+                cursor: pointer;
+            }
         }
     }
 }

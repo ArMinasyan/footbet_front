@@ -2,7 +2,6 @@
 @import "/styles/scss/_mixins.scss";
 @import "/styles/scss/_variables.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 
 @mixin center {
     display: flex;
@@ -19,7 +18,8 @@
 .bar_item_container {
     @include center();
     justify-content: space-between;
-    width: get_percent(336px);
+    width: 19.4%;
+    min-width: 236px;
 
     .auth_container {
         width: 100%;

@@ -4,7 +4,11 @@
         "login": "Войти",
         "language": "Рус.",
         "loginModal": {
-            "title": "Авторизация"
+            "title": "Авторизация",
+            "resPassword": "Забыли пароль?",
+            "submit": "Войти",
+            "or": "или",
+            "register": "Зарегистрироваться"
         }
     },
     "registration": {
