@@ -121,8 +121,8 @@ export function Form({ title }) {
         }
 
     return (
-        <div className={styles.conteiner}>
-            <div>
+        <div className={styles.container}>
+            <div className={styles.title_container}>
                 <h1>
                     {
                         title
@@ -182,7 +182,7 @@ export function Form({ title }) {
                     other={register('password')}
                 />
                 <Button
-                    title={translate('buttonTitle')}
+                    content={translate('buttonTitle')}
                 />
             </form>
         </div>

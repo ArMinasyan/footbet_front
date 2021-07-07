@@ -1,11 +1,23 @@
 @import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_functions.scss";
 
-.conteiner {
-    @include center();
-    width: 39vw;
+$formWidth:752px;
+$formHeight:758px;
+
+.container {
+    @include flex-between();
+    width: get-vw($formWidth);
     flex-direction: column;
     margin: auto;
-
+    .title_container {
+        @include center();
+        align-items: flex-start;
+        width: 100%;
+        padding:0 0 get_percent(49px,$formHeight) 0;
+        h1 {
+            margin: 0;
+        }
+    }
     form {
         @include center();
         flex-direction: column;

@@ -5,13 +5,16 @@ import { createPortal } from 'react-dom'
 
 export function Modal({ onClose, children }) {
 
-    const
-        [showModal, setShowModal] = useState(false)
 
+
+    const
+        [showModal, setShowModal] = useState(false),
+        [pageOverflow, setPageOverflow] = useState(false),
+        body = document.querySelector('body')
 
     useEffect(() => {
         setShowModal(true)
-
+        setPageOverflow(true)
         document.addEventListener("mousedown", handleClose);
         return () => {
             document.removeEventListener("mousedown", handleClose);
@@ -23,9 +26,14 @@ export function Modal({ onClose, children }) {
     const handleClose = e => {
         if (node.current.contains(e.target)) {
             return;
+        }else{
+            setPageOverflow(false)
+            onClose()
         }
-        onClose()
     }
+
+    pageOverflow ? body.style.overflow = 'hidden' : body.style.overflow = 'visible'
+    console.log(showModal);
 
     const modal = (
         <div className={styles.modalConteiner}>
@@ -37,9 +45,11 @@ export function Modal({ onClose, children }) {
         </div>
     )
 
-    if (showModal) return createPortal(
-        modal,
-        document.getElementById('modal-conteiner')
-    )
+    if (showModal) {
+        return createPortal(
+            modal,
+            document.getElementById('modal-conteiner')
+        )
+    }
     else return null
 }

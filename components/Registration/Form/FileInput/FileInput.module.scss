@@ -6,8 +6,8 @@ $labelsBackgroundColor: rgba(255, 255, 251, 0.09);
 
 .uploadImageConteiner {
     @include center();
+    margin-bottom: 4%;
     width: 100%;
-    padding: 1% 0;
 
     label {
         width: get-vw(325px);

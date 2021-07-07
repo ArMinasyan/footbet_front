@@ -9,7 +9,7 @@ export function InputContainer({
     other }) {
 
     return (
-        <div className={styles.conteiner}>
+        <div className={styles.container}>
             {label &&
                 <div className={styles.label_content}>
                     <label htmlFor={id}>

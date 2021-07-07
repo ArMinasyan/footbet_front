@@ -1,10 +1,10 @@
 import styles from './Button.module.scss'
 
-export function Button({title}) {
+export function Button({content}) {
     return (
         <div className={styles.conteiner}>
             <button>
-                {title}
+                {content}
             </button>
         </div>
     )

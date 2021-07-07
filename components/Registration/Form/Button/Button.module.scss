@@ -1,21 +1,23 @@
+@import "/styles/scss/_functions";
 @import "/styles/scss/_mixins.scss";
+$conteinerWidth: 752px;
 
 .conteiner {
     @include center();
-    padding-top: 1%;
     width: 100%;
+
     button {
         cursor: pointer;
-        background: #9E094A;
+        background: #9e094a;
         outline: none;
         border-radius: 8px;
-        padding: 2% 4%;
+        padding: 2.7% 4.7%;
         font-family: Arsenal;
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
         line-height: 23px;
         letter-spacing: 0.12em;
-        color: #FFFFFF;
+        color: #ffffff;
     }
 }

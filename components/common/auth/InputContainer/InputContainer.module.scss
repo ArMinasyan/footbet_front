@@ -1,20 +1,18 @@
-$backgroundColor:rgba(255, 255, 251, 0.09);
-$inputBackColor:rgba(196, 196, 196, 0.2);
-$inputBorderColor:rgba(255, 255, 255, 0.5);
-$errorInputBackColor:rgba(158, 9, 74, 0.13);
-$errorInputBorderColor: #9E094A21;
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
 
-
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+$backgroundColor: rgba(255, 255, 251, 0.09);
+$inputBackColor: rgba(196, 196, 196, 0.2);
+$inputBorderColor: rgba(255, 255, 255, 0.5);
+$errorInputBackColor: rgba(158, 9, 74, 0.13);
+$errorInputBorderColor: #9e094a21;
+$conteinerWidth: 752px;
 
 @mixin input {
     outline: none;
-    padding: 3% 4%;
     width: 100%;
+    padding: 1.8% 4.8%;
     box-sizing: border-box;
     border-radius: 10px;
     color: rgba(255, 255, 255, 0.5);
@@ -40,22 +38,19 @@ $errorInputBorderColor: #9E094A21;
     @include error();
 }
 
-.conteiner {
-    @include center();
-    justify-content: space-between;
+.container {
+    @include flex-between;
+    margin-bottom:4.7% ;
     width: 100%;
-    padding: 1% 2%;
 
     .label_content {
         @include center();
-        width: 10%;
+        width: 7%;
 
         label {
             @include center();
-            width: 60%;
-            height: 60%;
             padding: 15%;
-            border-radius: 50%;
+            border-radius: 100%;
             background-color: $backgroundColor;
 
             img {
@@ -66,17 +61,17 @@ $errorInputBorderColor: #9E094A21;
     }
 
     .input_container {
-        width: 95%;
+        width: 100%;
 
         .input_success_content {
             input {
-                @include successInput()
+                @include successInput();
             }
         }
 
         .input_error_content {
             input {
-                @include errorInput()
+                @include errorInput();
             }
         }
     }
