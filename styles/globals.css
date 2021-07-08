@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 :root {
   --pageColor: #12112C;
   --textColor: #FFFFFF;
-  --font: url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+  --font: Arimo;
 }
 
 

@@ -1,8 +1,8 @@
 @import "/styles/scss/_mixins.scss";
 @import "/styles/scss/_functions.scss";
 
-$formWidth:752px;
-$formHeight:758px;
+$formWidth: 752px;
+$formHeight: 758px;
 
 .container {
     @include flex-between();
@@ -13,9 +13,12 @@ $formHeight:758px;
         @include center();
         align-items: flex-start;
         width: 100%;
-        padding:0 0 get_percent(49px,$formHeight) 0;
-        h1 {
+        padding: 0 0 get_percent(49px, $formHeight) 0;
+        p {
             margin: 0;
+            font-size: 30px;
+            line-height: 34px;
+            letter-spacing: 0.1em;
         }
     }
     form {

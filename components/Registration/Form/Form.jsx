@@ -123,11 +123,11 @@ export function Form({ title }) {
     return (
         <div className={styles.container}>
             <div className={styles.title_container}>
-                <h1>
+                <p>
                     {
                         title
                     }
-                </h1>
+                </p>
             </div>
             <form
                 onSubmit={(handleSubmit(submit))}

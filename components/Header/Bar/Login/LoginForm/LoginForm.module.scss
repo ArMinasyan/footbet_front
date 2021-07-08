@@ -8,15 +8,16 @@ $modalHeight: 601px;
     * {
         margin: 0;
         padding: 0;
+        font-family: Arimo;
     }
     width: 100%;
-    margin: 32px 0 0 0;
+    margin-top: 39px;
     @include column-center();
 
     .title {
         @include center();
         width: 100%;
-        h2 {
+        p {
             font-size: 30px;
             line-height: 34px;
             letter-spacing: 0.1em;
@@ -26,14 +27,13 @@ $modalHeight: 601px;
     form {
         width: 100%;
         margin-top: 18px;
-
         .inputs {
             width: 100%;
             input {
                 margin-top: 21px;
                 font-size: 16px;
                 line-height: 18px;
-                padding: 3% 0;
+                padding: 3% 4.8% !important;
                 width: 100% !important;
                 color: rgba(255, 255, 255, 0.31) !important;
                 background-color: rgba(255, 255, 255, 0.12);
@@ -55,10 +55,10 @@ $modalHeight: 601px;
         .submit {
             @include center();
             width: 100%;
-            margin-top: 41px;
+            margin-top: 44px;
             button {
                 width: 100%;
-                padding: 2.4%;
+                padding: 2.7%;
                 font-size: 20px;
                 line-height: 23px;
                 letter-spacing: 0.14em;
