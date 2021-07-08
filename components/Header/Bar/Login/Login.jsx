@@ -1,7 +1,7 @@
 // components
 import { Modal } from '../../../common/auth/Modal/Modal'
 import { SocialMediaIcons } from './SocialMediaIcons/SocialMediaIcons'
-import { ResetPassword } from './ResetPassword/ResetPassword'
+import { ForgotPassword } from './ResetPassword/ForgotPassword/ForgotPassword'
 import { LoginForm } from './LoginForm/LoginForm'
 // styles
 import styles from './Login.module.scss'
@@ -31,7 +31,7 @@ export function Login({ onModalClose }) {
                     </div>
                 </Modal>
             }
-            {showResetPasswordModal && <ResetPassword onModalClose={onModalClose} />}
+            {showResetPasswordModal && <ForgotPassword onModalClose={onModalClose} />}
         </>
     )
 }

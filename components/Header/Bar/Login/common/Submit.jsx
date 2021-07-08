@@ -1,7 +1,7 @@
-export function Submit({ styles, content }) {
+export function Submit({ styles, content, click }) {
     return (
         <div className={styles}>
-            <button>
+            <button onClick={click}>
                 {
                     content
                 }

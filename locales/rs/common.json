@@ -11,7 +11,13 @@
             "register": "Зарегистрироваться"
         },
         "resetPasswordModal": {
-            "title": "Восстановление пароля"
+            "title": "Восстановление пароля",
+            "send":"Отправить"
+        },
+        "getEmailCodeModal":{
+            "title":"Восстановление пароля",
+            "description":"Код",
+            "send":"Отправить"
         }
     },
     "registration": {
