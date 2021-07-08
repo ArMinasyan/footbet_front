@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { inputs } from './input_configs'
 //components
 import { Title } from '../../common/Title'
 import { Submit } from '../../common/Submit'
@@ -22,16 +23,36 @@ export function GetEmailCode({ onModalClose }) {
         translate = key => t(`${translationPath}${key}`),
         // yup configs
         schema = yup.object().shape({
-            email: yup
-                .string()
-                .required()
-                .matches(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/),
+            num1: yup.string().required().matches(/[0-9]/mg),
+            num2: yup.string().required().matches(/[0-9]/mg),
+            num3: yup.string().required().matches(/[0-9]/mg),
+            num4: yup.string().required().matches(/[0-9]/mg),
+            num5: yup.string().required().matches(/[0-9]/mg),
+            num6: yup.string().required().matches(/[0-9]/mg),
         }),
         // form configs
         { register, handleSubmit, formState: { errors } } = useForm({
             mode: 'onChange',
             resolver: yupResolver(schema)
         }),
+        // input jumps 
+        jump = (x) => {
+            if (x.value.length) {
+                x = x.nextSibling;
+                if (x && /text/.test(x.type)) {
+                    x.focus();
+                }
+            }
+        },
+        jumpBack = (x) => {
+            if (x.target.value.length == 0) {
+                if (x.code === 'Backspace') {
+                    if (document.querySelector(".move:focus").previousSibling) {
+                        document.querySelector(".move:focus").previousSibling.focus();
+                    }
+                }
+            }
+        },
         // on form submit
         submit = (data) => console.log(data)
 
@@ -44,21 +65,30 @@ export function GetEmailCode({ onModalClose }) {
                             styles={styles.title}
                             content={translate('title')}
                         />
-                        <Title
-                            styles={styles.title}
-                            content={translate('description')}
-                        />
                         <form onSubmit={handleSubmit(submit)}>
+                            <Title
+                                styles={styles.description}
+                                content={translate('description')}
+                            />
                             <div className={styles.inputs}>
-
+                                {
+                                    inputs.map((el, i) => (
+                                        <input
+                                            id={el.id}
+                                            className={el.class}
+                                            type={el.type}
+                                            key={el.key}
+                                            maxLength={el.maxLength}
+                                            onInput={e => jump(e.target)}
+                                            onKeyDown={e => jumpBack(e)}
+                                            {...register('num' + (i + 1))}
+                                        />
+                                    ))
+                                }
                             </div>
                             <Submit
                                 styles={styles.submit}
                                 content={translate('send')}
-                                click={() => {
-                                    setShowForgotPassMl(false)
-                                    setShowEmailCodeMl(true)
-                                }}
                             />
                         </form>
                     </div>

@@ -1,0 +1,82 @@
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
+
+$modalHeight: 601px;
+$modalWidth: 634px;
+$contentWidth: 401px;
+$formWidth: 378px;
+$inputWidth: 47px;
+
+.container {
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arimo;
+    }
+
+    width: get-percent($contentWidth, $modalWidth);
+    margin: get-percent(162px, $modalWidth) 0;
+    @include column-center();
+
+    .title {
+        width: 100%;
+        p {
+            font-size: 30px;
+            line-height: 34px;
+            letter-spacing: 0.1em;
+        }
+    }
+    form {
+        width: get-percent($formWidth, $contentWidth);
+        margin-top: 39px;
+
+        .description {
+            @include center();
+            p {
+                font-family: Arimo;
+                font-size: 18px;
+                line-height: 21px;
+            }
+        }
+
+        .inputs {
+            width: 100%;
+            margin-top: 39px;
+            @include flex-around;
+
+            input {
+                width: get-percent($inputWidth, $formWidth) !important;
+                font-size: 16px;
+                line-height: 18px;
+                padding: 4.3% 4.8% !important;
+                color: rgba(255, 255, 255, 0.31) !important;
+                background-color: rgba(255, 255, 255, 0.12);
+                border: 1px solid #f7f7f7;
+                box-sizing: border-box;
+                border-radius: 8px;
+                outline: none;
+            }
+        }
+    }
+    .submit {
+        @include center();
+        width: 100%;
+        margin-top: 39px;
+        button {
+            width: 100%;
+            padding: 3.8%;
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: 0.14em;
+            color: #ffffff;
+            background: $buttonsColor;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}

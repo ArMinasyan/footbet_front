@@ -38,7 +38,11 @@ export function ForgotPassword({ onModalClose }) {
             resolver: yupResolver(schema)
         }),
         // on form submit
-        submit = (data) => console.log(data)
+        submit = (data) => {
+            console.log(data)
+            setShowForgotPassMl(false)
+            setShowEmailCodeMl(true)
+        }
 
     return (
         <>
@@ -62,10 +66,6 @@ export function ForgotPassword({ onModalClose }) {
                             <Submit
                                 styles={styles.submit}
                                 content={translate('send')}
-                                click={()=>{
-                                    setShowForgotPassMl(false)
-                                    setShowEmailCodeMl(true)
-                                }}
                             />
                         </form>
                     </div>
