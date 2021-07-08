@@ -11,11 +11,13 @@ import { Submit } from '../../common/Submit'
 import { Modal } from '../../../../../common/auth/Modal/Modal'
 // styles
 import styles from './NewPassword.module.scss'
+import { Success } from '../Success/Success'
 
 export function NewPassword({ onModalClose }) {
     const
         // modal states pass => password Ml => Modal
         [showNewPassMl, setShowNewPassMl] = useState(true),
+        [showSuccessMl, setShowSuccessMl] = useState(false),
         // translation consfigs
         { t } = useTranslation('common'),
         translationPath = 'header.newPasswordModal.',
@@ -36,6 +38,7 @@ export function NewPassword({ onModalClose }) {
         submit = (data) => {
             console.log(data)
             setShowNewPassMl(false)
+            setShowSuccessMl(true)
         }
 
     return (
@@ -64,6 +67,9 @@ export function NewPassword({ onModalClose }) {
                         </form>
                     </div>
                 </Modal>
+            }
+            {
+                showSuccessMl && <Success onModalClose={onModalClose} />
             }
         </>
     )

@@ -22,6 +22,9 @@
         "newPasswordModal": {
             "title": "Новый пароль",
             "success": "Подтвердить"
+        },
+        "successModal": {
+            "title": "Пароль восстановлен"
         }
     },
     "registration": {
