@@ -26,4 +26,5 @@ $formHeight: 758px;
         flex-direction: column;
         width: 100%;
     }
+    @include animation();
 }

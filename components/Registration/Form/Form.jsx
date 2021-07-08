@@ -31,7 +31,7 @@ export function Form({ title }) {
             name: yup
                 .string()
                 .required()
-                .matches(/(^[A-Za-z]{1,16})([ ]{0,1})([A-Za-z]{1,16})?([ ]{0,1})?([A-Za-z]{1,16})?([ ]{0,1})?([A-Za-z]{1,16})/mg),
+                .matches(/(^[A-Za-z]{1,8})([ ]{0,1})([A-Za-z]{1,10})/mg),
             birthDate: yup
                 .string()
                 .required()

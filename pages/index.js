@@ -1,4 +1,4 @@
-const IndexPage = () => <h1>Index page</h1>;
+const IndexPage = () => <h1 style={{textAlign:"center"}}>Main page will be here</h1>;
 
 IndexPage.layout = "main";
 

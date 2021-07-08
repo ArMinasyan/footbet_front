@@ -25,27 +25,6 @@
         background: $primaryBackground;
         z-index: 100;
         border-top: 20px;
-
-        animation-name: grow;
-        animation-duration: 0.3s;
-        animation-timing-function: ease-in-out;
-
-        @keyframes grow {
-            0% {
-                opacity: 0.2;
-            }
-            25% {
-                opacity: 0.4;
-            }
-            50% {
-                opacity: 0.6;
-            }
-            75% {
-                opacity: 0.8;
-            }
-            100% {
-                opacity: 0.9;
-            }
-        }
     }
+    @include animation;
 }

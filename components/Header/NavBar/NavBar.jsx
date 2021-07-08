@@ -3,7 +3,7 @@ import styles from './NavBar.module.scss'
 export function NavBar() {
     return (
         <div>
-            navbar
+            Navbar will be here
         </div>
     )
 }
