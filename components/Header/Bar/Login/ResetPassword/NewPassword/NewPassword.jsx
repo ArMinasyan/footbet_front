@@ -9,28 +9,23 @@ import { Title } from '../../common/Title'
 import { InputContainer } from '/components/common/auth/InputContainer/InputContainer'
 import { Submit } from '../../common/Submit'
 import { Modal } from '../../../../../common/auth/Modal/Modal'
-import { GetEmailCode } from '../GetEmailCode/GetEmailCode'
 // styles
-import styles from './ForgotPassword.module.scss'
+import styles from './NewPassword.module.scss'
 
-
-
-export function ForgotPassword({ onModalClose }) {
-
+export function NewPassword({ onModalClose }) {
     const
         // modal states pass => password Ml => Modal
-        [showForgotPassMl, setShowForgotPassMl] = useState(true),
-        [showGetEmailCodeMl, setShowEmailCodeMl] = useState(false),
+        [showNewPassMl, setShowNewPassMl] = useState(true),
         // translation consfigs
         { t } = useTranslation('common'),
-        translationPath = 'header.resetPasswordModal.',
+        translationPath = 'header.newPasswordModal.',
         translate = key => t(`${translationPath}${key}`),
         // yup configs
         schema = yup.object().shape({
-            email: yup
+            password: yup
                 .string()
                 .required()
-                .matches(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/),
+                .min(6)
         }),
         // form configs
         { register, handleSubmit, formState: { errors } } = useForm({
@@ -40,13 +35,12 @@ export function ForgotPassword({ onModalClose }) {
         // on form submit
         submit = (data) => {
             console.log(data)
-            setShowForgotPassMl(false)
-            setShowEmailCodeMl(true)
+            setShowNewPassMl(false)
         }
 
     return (
         <>
-            {showForgotPassMl &&
+            {showNewPassMl &&
                 <Modal onClose={onModalClose}>
                     <div className={styles.container}>
                         <Title
@@ -56,23 +50,20 @@ export function ForgotPassword({ onModalClose }) {
                         <form onSubmit={handleSubmit(submit)}>
                             <div className={styles.inputs}>
                                 <InputContainer
-                                    id='name'
-                                    type='text'
-                                    placeholder={t('registration.inputPlaceHolders.email')}
-                                    errors={(!!errors.email)}
-                                    other={register('email')}
+                                    id='password'
+                                    type='password'
+                                    placeholder={t('registration.inputPlaceHolders.password')}
+                                    errors={!!errors.password}
+                                    other={register('password')}
                                 />
                             </div>
                             <Submit
                                 styles={styles.submit}
-                                content={translate('send')}
+                                content={translate('success')}
                             />
                         </form>
                     </div>
                 </Modal>
-            }
-            {
-                showGetEmailCodeMl && <GetEmailCode onModalClose={onModalClose} />
             }
         </>
     )

@@ -12,12 +12,16 @@
         },
         "resetPasswordModal": {
             "title": "Восстановление пароля",
-            "send":"Отправить"
+            "send": "Отправить"
         },
-        "getEmailCodeModal":{
-            "title":"Восстановление пароля",
-            "description":"Код",
-            "send":"Отправить"
+        "getEmailCodeModal": {
+            "title": "Восстановление пароля",
+            "description": "Код",
+            "send": "Отправить"
+        },
+        "newPasswordModal": {
+            "title": "Новый пароль",
+            "success": "Подтвердить"
         }
     },
     "registration": {

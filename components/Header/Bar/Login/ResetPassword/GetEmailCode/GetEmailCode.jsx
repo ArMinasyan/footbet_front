@@ -9,14 +9,17 @@ import { inputs } from './input_configs'
 import { Title } from '../../common/Title'
 import { Submit } from '../../common/Submit'
 import { Modal } from '../../../../../common/auth/Modal/Modal'
+import { NewPassword } from '../NewPassword/NewPassword'
 // styles
 import styles from './GetEmailCode.module.scss'
+
 
 export function GetEmailCode({ onModalClose }) {
 
     const
         // modal states pass => password Ml => Modal
         [showGetEmailCodeMl, setShowEmailCodeMl] = useState(true),
+        [showNewPasswordMl, setShowNewPasswordMl] = useState(false),
         // translation consfigs
         { t } = useTranslation('common'),
         translationPath = 'header.getEmailCodeModal.',
@@ -54,7 +57,11 @@ export function GetEmailCode({ onModalClose }) {
             }
         },
         // on form submit
-        submit = (data) => console.log(data)
+        submit = (data) => {
+            console.log(data)
+            setShowEmailCodeMl(false)
+            setShowNewPasswordMl(true)
+        }
 
     return (
         <>
@@ -93,6 +100,9 @@ export function GetEmailCode({ onModalClose }) {
                         </form>
                     </div>
                 </Modal >
+            }
+            {
+                showNewPasswordMl && <NewPassword onModalClose={onModalClose} />
             }
         </>
 
