@@ -1,9 +1,9 @@
-import MainLayout from "./MainLayout";
-import RegisterLayout from "./RegisterLayout";
+import Main from "./Main";
+import Register from "./Register";
 
 const layouts = {
-  main: MainLayout,
-  register: RegisterLayout
+  main: Main,
+  register: Register
 };
 
 const LayoutWrapper = (props) => {
@@ -14,7 +14,7 @@ const LayoutWrapper = (props) => {
     return <Layout {...props}>{props.children}</Layout>;
   }
   // if not render children with fragment
-  return <MainLayout {...props}>{props.children}</MainLayout>;
+  return <Main {...props}>{props.children}</Main>;
 };
 
 export default LayoutWrapper;
