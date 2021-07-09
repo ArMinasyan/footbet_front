@@ -4,7 +4,7 @@ import { Header } from '../components/Header/Header'
 export default function Main({ children }) {
     return (
         <>
-            <Header />
+            <Header mainsPages={true} />
             <main>
                 {children}
             </main>

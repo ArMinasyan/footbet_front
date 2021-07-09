@@ -7,10 +7,16 @@ import register_icon from '/public/images/header/register.png'
 import login_icon from '/public/images/header/login.png'
 import rus_flag from '/public/images/header/flags/rus.png'
 
-export function BarItems({ registration, login, language, registration_path, loginModalHandle }) {
+export function BarItems({
+    registration,
+    login,
+    language,
+    registration_path,
+    loginModalHandle,
+    bar_items }) {
 
     return (
-        <div className={styles.bar_item_container}>
+        <div className={`${styles.bar_item_container} ${bar_items}`}>
             <div className={styles.auth_container}>
                 <div className={styles.auth_buttons}>
                     <div className={styles.sign_up_button}>

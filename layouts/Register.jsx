@@ -4,7 +4,7 @@ import { Footer } from '../components/Registration/Footer/Footer'
 export default function RegisterLayout({ children }) {
     return (
         <>
-            <Header />
+            <Header mainsPages={false}/>
             <main>
                 {children}
             </main>

@@ -36,6 +36,18 @@
     align-items: center;
     flex-direction: column;
 }
+@mixin column-start {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+@mixin column-end {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
 @mixin animation {
     animation-name: transition;
     animation-duration: 0.3s;

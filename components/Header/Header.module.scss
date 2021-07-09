@@ -1,9 +1,60 @@
 @import "/styles/scss/_functions";
 @import "/styles/scss/_mixins.scss";
+$bg-url: url("../../public/images/header/header_back.png");
 
-.header_container {
+.header_container_big {
+    @include column-end();
+    justify-content: flex-start;
+    .bar {
+        @include flex-end;
+        width: 100%;
+        .bar_controler {
+            @include center();
+            align-items: flex-start;
+            position: relative;
+            width: get_percent(1872px);
+            height: get-vw(666px);
+            background-image: $bg-url;
+            background-size: cover;
+
+            .bar_conteiner {
+                width: 100%;
+                padding-top: 1.8%;
+
+                .bar_content {
+                    width: 100%;
+                    @include center();
+
+                    .bar_items_cont {
+                        align-items: flex-start;
+
+                        .bar_items {
+                            padding-top: 1.1%;
+                        }
+                    }
+                }
+            }
+            .footballer {
+                width: get_percent(662px, 1872px);
+                position: absolute;
+                bottom: -9.5%;
+                @include flex-end();
+                flex-direction: column;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    @include animation();
+}
+
+.header_container_small {
     @include center();
     justify-content: space-around;
     flex-direction: column;
     height: get-vh(383px);
+
+    @include animation();
 }
