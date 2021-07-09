@@ -1,7 +1,6 @@
-import { Footer } from '../components/Footer/Footer'
 import { Header } from '../components/Header/Header'
 
-export default function MainLayout({ children }) {
+export default function RegisterLayout({ children }) {
     return (
         <>
             <>
@@ -10,7 +9,6 @@ export default function MainLayout({ children }) {
             <main>
                 {children}
             </main>
-            <Footer />
         </>
     )
 }

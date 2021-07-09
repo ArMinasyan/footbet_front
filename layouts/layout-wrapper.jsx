@@ -1,7 +1,9 @@
 import MainLayout from "./MainLayout";
+import RegisterLayout from "./RegisterLayout";
 
 const layouts = {
   main: MainLayout,
+  register: RegisterLayout
 };
 
 const LayoutWrapper = (props) => {
