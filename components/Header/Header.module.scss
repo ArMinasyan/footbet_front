@@ -3,7 +3,7 @@
 $bg-url: url("../../public/images/header/header_back.png");
 
 .header_container_big {
-    @include column-end();
+    @include column-start();
     justify-content: flex-start;
     .bar {
         @include flex-end;

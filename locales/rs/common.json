@@ -25,6 +25,21 @@
         },
         "successModal": {
             "title": "Пароль восстановлен"
+        },
+        "navBar": {
+            "main": "Главная",
+            "games": "Игры",
+            "statistics": {
+                "frs": "Статистика",
+                "sec": "матчей"
+            },
+            "prediction": {
+                "frs": "Прогнозы/",
+                "sec": "Оплата"
+            },
+            "testimonials": "Отзывы",
+            "aboutUs": "О нас",
+            "contacts": "Контакты"
         }
     },
     "registration": {

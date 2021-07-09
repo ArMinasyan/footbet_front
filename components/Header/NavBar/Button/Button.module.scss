@@ -1,0 +1,29 @@
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
+
+$parentWidth: 1460px;
+$buttonWidth: 170px;
+
+.container {
+    @include flex-end();
+    align-items: center;
+    height: 100%;
+    width: get_percent($buttonWidth, $parentWidth);
+    cursor: pointer;
+    .content {
+        @include center();
+        width: get_percent($buttonWidth - 10px, $buttonWidth);
+        height: 100%;
+        pre {
+            @include center();
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arimo;
+            font-size: 19px;
+            line-height: 22px;
+        }
+    }
+}

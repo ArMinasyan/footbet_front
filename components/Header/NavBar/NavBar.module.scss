@@ -1,0 +1,18 @@
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
+
+$parentWidth: 1920px;
+$contentWidth: 1460px;
+
+.container {
+    @include center();
+    width: 100%;
+    height: get-vw(63px);
+    z-index: 10;
+    .content {
+        @include flex-evenly();
+        width: get_percent($contentWidth, $parentWidth);
+        height: 100%;
+    }
+}

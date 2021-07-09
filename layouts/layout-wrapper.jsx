@@ -1,5 +1,6 @@
 import Main from "./Main";
 import Register from "./Register";
+import Error from "./Error"
 
 const layouts = {
   main: Main,
@@ -14,7 +15,7 @@ const LayoutWrapper = (props) => {
     return <Layout {...props}>{props.children}</Layout>;
   }
   // if not render children with fragment
-  return <Main {...props}>{props.children}</Main>;
+  return <Error {...props}>{props.children}</Error>;
 };
 
 export default LayoutWrapper;
