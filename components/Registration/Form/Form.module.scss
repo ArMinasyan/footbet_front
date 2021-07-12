@@ -7,8 +7,10 @@ $formHeight: 758px;
 .container {
     @include flex-between();
     width: get-vw($formWidth);
+    min-width: 370px;
     flex-direction: column;
     margin: 2.66% auto;
+
     .title_container {
         @include center();
         align-items: flex-start;

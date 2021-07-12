@@ -2,10 +2,13 @@
 import styles from './BarItems.module.scss'
 // components
 import Link from 'next/link'
+import { LanguageDrop } from './LanguageDrop/LanguageDrop'
 // icons
 import register_icon from '/public/images/header/register.png'
 import login_icon from '/public/images/header/login.png'
 import rus_flag from '/public/images/header/flags/rus.png'
+import { useState } from 'react'
+
 
 export function BarItems({
     registration,
@@ -14,6 +17,10 @@ export function BarItems({
     registration_path,
     loginModalHandle,
     bar_items }) {
+
+    const
+        [showDrop, setShowDrop] = useState(false)
+    console.log(showDrop);
 
     return (
         <div className={`${styles.bar_item_container} ${bar_items}`}>
@@ -45,12 +52,21 @@ export function BarItems({
                 </div>
             </div>
             <div className={styles.lang_button}>
-                <span>
-                    {
-                        language
-                    }
-                </span>
-                <img src={rus_flag.src} alt="" />
+                <div
+                    className={styles.lang_button_content}
+                    onClick={() => setShowDrop(!showDrop)}
+                >
+                    <span>
+                        {
+                            language
+                        }
+                    </span>
+                    <img
+                        src={rus_flag.src}
+                        alt="lang-flag"
+                    />
+                </div>
+                {showDrop && <LanguageDrop onClose={() => setShowDrop(false)} />}
             </div>
         </div>
     )

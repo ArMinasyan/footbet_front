@@ -8,6 +8,7 @@ $bg-url: url("../../public/images/header/header_back.png");
     .bar {
         @include flex-end;
         width: 100%;
+        margin-bottom: 44.6px;
         .bar_controler {
             @include center();
             align-items: flex-start;

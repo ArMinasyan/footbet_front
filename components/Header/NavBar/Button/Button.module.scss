@@ -5,17 +5,26 @@
 
 $parentWidth: 1460px;
 $buttonWidth: 170px;
+$buttonBackground: linear-gradient(80.04deg, #040749 1.6%, rgba(44, 44, 44, 0) 106.17%);
+$buttonBackgroundOnHover: linear-gradient(80.04deg, #d10a52 1.6%, rgba(5, 5, 11, 0) 106.17%);
+$contentBorder: 1px solid #d10a52;
+$contentBorderOnHover: 2px solid #12112c;
 
 .container {
     @include flex-end();
     align-items: center;
     height: 100%;
+    min-width: 121px;
+    min-height: 39px;
     width: get_percent($buttonWidth, $parentWidth);
     cursor: pointer;
+    background: $buttonBackground;
+    transition: all 0.2s ease-in-out;
     .content {
         @include center();
         width: get_percent($buttonWidth - 10px, $buttonWidth);
         height: 100%;
+        border-left: $contentBorder;
         pre {
             @include center();
             width: 100%;
@@ -25,5 +34,12 @@ $buttonWidth: 170px;
             font-size: 19px;
             line-height: 22px;
         }
+    }
+    // hovers
+    &:hover {
+        background: $buttonBackgroundOnHover;
+    }
+    &:hover .content {
+        border-left: $contentBorderOnHover;
     }
 }

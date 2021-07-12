@@ -15,21 +15,27 @@ export function SocialMedia() {
     const
         icons = [
             {
+                key: Math.random(),
                 src: phone.src
             },
             {
+                key: Math.random(),
                 src: facebook.src
             },
             {
+                key: Math.random(),
                 src: telegram.src
             },
             {
+                key: Math.random(),
                 src: watsup.src
             },
             {
+                key: Math.random(),
                 src: instagram.src
             },
             {
+                key: Math.random(),
                 src: viber.src
             },
         ]
@@ -39,6 +45,7 @@ export function SocialMedia() {
             {
                 icons.map(el => (
                     <Icon
+                        key={el.key}
                         src={el.src}
                     />
                 ))

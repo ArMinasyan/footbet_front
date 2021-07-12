@@ -40,6 +40,11 @@
             "testimonials": "Отзывы",
             "aboutUs": "О нас",
             "contacts": "Контакты"
+        },
+        "lang-name": {
+            "am": "Հայերեն",
+            "rs": "Русский",
+            "en": "English"
         }
     },
     "registration": {

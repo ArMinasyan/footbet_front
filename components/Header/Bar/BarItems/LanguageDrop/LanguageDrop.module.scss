@@ -1,0 +1,12 @@
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
+
+$containerBorderColor: #9e094a;
+
+.container {
+    width: get-vw(141px);
+    position: absolute;
+    right: 0;
+    border: 1px solid $containerBorderColor;
+}

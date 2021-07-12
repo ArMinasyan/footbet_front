@@ -14,32 +14,39 @@ export function NavBar() {
         // nav bar buttons configs
         buttons = [
             {
+                key: Math.random(),
                 frstContent: translate('main'),
                 href: '/'
             },
             {
+                key: Math.random(),
                 frstContent: translate('games'),
                 href: '/games'
             },
             {
+                key: Math.random(),
                 frstContent: translate('statistics.frs'),
                 secContent: translate('statistics.sec'),
                 href: '/statistics'
             },
             {
+                key: Math.random(),
                 frstContent: translate('prediction.frs'),
                 secContent: translate('prediction.sec'),
                 href: '/prediction'
             },
             {
+                key: Math.random(),
                 frstContent: translate('testimonials'),
                 href: '/testimonials'
             },
             {
+                key: Math.random(),
                 frstContent: translate('aboutUs'),
                 href: '/aboutUs'
             },
             {
+                key: Math.random(),
                 frstContent: translate('contacts'),
                 href: '/contacts'
             },
@@ -54,6 +61,7 @@ export function NavBar() {
                             contentFrstP={el.frstContent}
                             contentSecP={el.secContent}
                             href={el.href}
+                            key={el.key}
                         />
                     ))
                 }
