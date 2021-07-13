@@ -4,6 +4,8 @@ $bg-url: url("../../public/images/header/header_back.png");
 
 .header_container_big {
     @include column-start();
+    min-width: 1100px;
+    min-height: 452px;
     justify-content: flex-start;
     .bar {
         @include flex-end;

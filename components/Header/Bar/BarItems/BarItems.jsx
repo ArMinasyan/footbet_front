@@ -54,6 +54,7 @@ export function BarItems({
             <div className={styles.lang_button}>
                 <div
                     className={styles.lang_button_content}
+                    style={showDrop ? { display: 'none' } : null}
                     onClick={() => setShowDrop(!showDrop)}
                 >
                     <span>
@@ -68,6 +69,6 @@ export function BarItems({
                 </div>
                 {showDrop && <LanguageDrop onClose={() => setShowDrop(false)} />}
             </div>
-        </div>
+        </div >
     )
 }

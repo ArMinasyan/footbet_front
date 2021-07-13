@@ -43,3 +43,9 @@ $contentBorderOnHover: 2px solid #12112c;
         border-left: $contentBorderOnHover;
     }
 }
+.active {
+    background: $buttonBackgroundOnHover;
+}
+.active .content {
+    border-left: $contentBorderOnHover;
+}

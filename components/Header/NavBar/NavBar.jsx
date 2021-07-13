@@ -1,3 +1,5 @@
+// hooks and helpers
+import { useRouter } from 'next/dist/client/router'
 // styles
 import styles from './NavBar.module.scss'
 // translation 
@@ -5,12 +7,16 @@ import useTranslation from 'next-translate/useTranslation'
 // componetns
 import { Button } from './Button/Button'
 
+
 export function NavBar() {
+
 
     const
         { t } = useTranslation('common'),
         translationPath = 'header.navBar.',
         translate = (key) => t(`${translationPath}${key}`),
+        // router
+        router = useRouter(),
         // nav bar buttons configs
         buttons = [
             {
@@ -62,6 +68,7 @@ export function NavBar() {
                             contentSecP={el.secContent}
                             href={el.href}
                             key={el.key}
+                            active={router.pathname === el.href ? true : false}
                         />
                     ))
                 }

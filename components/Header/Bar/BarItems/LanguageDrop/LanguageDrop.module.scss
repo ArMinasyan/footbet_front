@@ -7,6 +7,7 @@ $containerBorderColor: #9e094a;
 .container {
     width: get-vw(141px);
     position: absolute;
-    right: 0;
+    top: -15px;
+    right: -70px;
     border: 1px solid $containerBorderColor;
 }
