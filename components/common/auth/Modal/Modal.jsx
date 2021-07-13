@@ -3,7 +3,12 @@ import styles from './Modal.module.scss'
 import { createPortal } from 'react-dom'
 
 
-export function Modal({ onClose, children }) {
+export function Modal({
+    onClose,
+    children,
+    containerStyles = null,
+    contentStyles = null,
+    otherStyles = null }) {
 
 
 
@@ -26,7 +31,7 @@ export function Modal({ onClose, children }) {
     const handleClose = e => {
         if (node.current.contains(e.target)) {
             return;
-        }else{
+        } else {
             setPageOverflow(false)
             onClose()
         }
@@ -35,8 +40,12 @@ export function Modal({ onClose, children }) {
     pageOverflow ? body.style.overflow = 'hidden' : body.style.overflow = 'visible'
 
     const modal = (
-        <div className={styles.modalConteiner}>
-            <div className={styles.modalContent} ref={node} >
+        <div className={`${styles.modalConteiner} ${containerStyles}`}>
+            <div
+                className={`${styles.modalContent} ${contentStyles}`}
+                style={otherStyles}
+                ref={node}
+            >
                 {
                     children
                 }
