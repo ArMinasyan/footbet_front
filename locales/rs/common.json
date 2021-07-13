@@ -41,10 +41,31 @@
             "aboutUs": "О нас",
             "contacts": "Контакты"
         },
-        "lang-name": {
-            "am": "Հայերեն",
-            "rs": "Русский",
-            "en": "English"
+        "lang": {
+            "am": {
+                "onTitle": "Հայ.",
+                "onDrop": "Հայերեն"
+            },
+            "rs": {
+                "onTitle": "Рус.",
+                "onDrop": "Русский"
+            },
+            "en": {
+                "onTitle": "Eng.",
+                "onDrop": "English"
+            },
+            "esp": {
+                "onTitle": "Esp.",
+                "onDrop": "Español"
+            },
+            "frc": {
+                "onTitle": "Frc.",
+                "onDrop": "Français"
+            },
+            "deu": {
+                "onTitle": "Deu.",
+                "onDrop": "Deutsche"
+            }
         }
     },
     "registration": {

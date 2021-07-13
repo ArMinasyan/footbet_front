@@ -1,3 +1,5 @@
+// hooks and helpers
+import { languages } from './LanguageDropConfigs/lang-configs'
 // styles 
 import styles from './BarItems.module.scss'
 // components
@@ -6,21 +8,27 @@ import { LanguageDrop } from './LanguageDrop/LanguageDrop'
 // icons
 import register_icon from '/public/images/header/register.png'
 import login_icon from '/public/images/header/login.png'
-import rus_flag from '/public/images/header/flags/rus.png'
 import { useState } from 'react'
 
 
 export function BarItems({
     registration,
     login,
-    language,
     registration_path,
     loginModalHandle,
     bar_items }) {
 
+    
+
     const
-        [showDrop, setShowDrop] = useState(false)
-    console.log(showDrop);
+        languages_data = languages(),
+        [showDrop, setShowDrop] = useState(false),
+        [languagesTitle, setLanguagesTitle] = useState(languages_data[1]),
+        changeLangTitle = (event) => {
+            let lang_title_data = languages_data.filter(el => el.lang === event.target.className)
+            setLanguagesTitle(lang_title_data[0])
+            setShowDrop(false)
+        }
 
     return (
         <div className={`${styles.bar_item_container} ${bar_items}`}>
@@ -55,19 +63,23 @@ export function BarItems({
                 <div
                     className={styles.lang_button_content}
                     style={showDrop ? { display: 'none' } : null}
-                    onClick={() => setShowDrop(!showDrop)}
+                    onClick={() => setShowDrop(true)}
                 >
                     <span>
                         {
-                            language
+                            languagesTitle.contentOnTitle
                         }
                     </span>
                     <img
-                        src={rus_flag.src}
+                        src={languagesTitle.icon}
                         alt="lang-flag"
                     />
                 </div>
-                {showDrop && <LanguageDrop onClose={() => setShowDrop(false)} />}
+                {showDrop && <LanguageDrop
+                    click={changeLangTitle}
+                    onClose={() => setShowDrop(false)}
+                    data={languages_data}
+                />}
             </div>
         </div >
     )

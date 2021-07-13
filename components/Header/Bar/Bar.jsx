@@ -24,7 +24,6 @@ export function Bar({ bar_items, bar_items_cont }) {
             <BarItems
                 registration={translate('register')}
                 login={translate('login')}
-                language={translate('language')}
                 registration_path='/registration'
                 loginModalHandle={() => setShowLoginModal(true)}
                 bar_items={bar_items}

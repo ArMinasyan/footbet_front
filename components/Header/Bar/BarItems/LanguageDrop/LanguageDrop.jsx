@@ -1,14 +1,12 @@
 // hooks and helpers
 import { useRouter } from 'next/dist/client/router';
 import { useEffect, useRef } from 'react';
-import useTranslation from 'next-translate/useTranslation'
-import i18n from '/i18n.json'
 // componetns
 import Link from 'next/link'
 // styles 
 import styles from './LanguageDrop.module.scss'
 
-export function LanguageDrop({ onClose }) {
+export function LanguageDrop({ onClose, click, data }) {
 
     useEffect(() => {
         document.addEventListener("mousedown", handleClose);
@@ -20,19 +18,13 @@ export function LanguageDrop({ onClose }) {
     const
         node = useRef(),
         router = useRouter(),
-        { locales } = i18n,
-        // translation consfigs
-        { t, lang } = useTranslation('common'),
-        translationPath = 'header.lang-name.',
-        translate = key => t(`${translationPath}${key}`),
 
         handleClose = (e) => {
-            if (node.current.contains(e.target) ){
-                if(e.target.parentNode) return
+            if (node.current.contains(e.target)) {
+                if (e.target.parentNode) return
             }
             onClose()
         }
-
 
 
     return (
@@ -40,29 +32,35 @@ export function LanguageDrop({ onClose }) {
             className={styles.container}
             ref={node}
         >
-            {
-                locales.map(el => {
-                    {
-                        if (el === lang) return null
-                    }
-                    return (
-                        <Link
-                            href={`${router.pathname}`}
-                            locale={el}
-                            key={`change-lang-${el}`}>
-                            <div>
-                                <span>
-                                    {
-                                        translate(`${el}`)
-                                    }
-                                </span>
-                                <img src="" alt="" />
-                            </div>
-                        </Link>
-                    )
+            <div className={styles.content}>
+                {
+                    data.map(el => {
+                        return (
+                            <Link
+                                href={`${router.pathname}`}
+                                locale={el.lang}
+                                key={`change-lang-${el.lang}`}>
+                                <div className={styles.row}>
+                                    <span
+                                        onClick={click}
+                                        className={`${el.lang}`}
+                                    >
+                                        {
+                                            el.contentOnDrop
+                                        }
+                                    </span>
+                                    <img
+                                        onClick={click}
+                                        src={el.icon}
+                                        className={`${el.lang}`}
+                                    />
+                                </div>
+                            </Link>
+                        )
 
-                })
-            }
+                    })
+                }
+            </div>
         </div>
     )
 

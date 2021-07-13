@@ -3,11 +3,36 @@
 @import "/styles/scss/_variables.scss";
 
 $containerBorderColor: #9e094a;
+$containerWidth: 141px;
+$contentWidth: 106px;
 
 .container {
-    width: get-vw(141px);
+    @include center();
+    width: get-vw($containerWidth);
     position: absolute;
     top: -15px;
     right: -70px;
     border: 1px solid $containerBorderColor;
+    .content {
+        width: get_percent($contentWidth, $containerWidth);
+        @include column-center();
+        margin-top:get_percent(10px, $containerWidth);
+        // margin-top: 7.2%;
+        .row {
+            @include flex-between();
+            margin-bottom:get_percent(14px, $contentWidth);
+            width: 100%;
+            span {
+                cursor: pointer;
+                font-family: Arial;
+                line-height: 18px;
+                letter-spacing: 0.08em;
+            }
+            img {
+                cursor: pointer;
+                border-radius: 100%;
+            }
+        }
+    }
+    @include animation();
 }
