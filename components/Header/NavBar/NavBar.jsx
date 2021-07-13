@@ -54,7 +54,7 @@ export function NavBar() {
             {
                 key: Math.random(),
                 frstContent: translate('contacts'),
-                href: '/contacts'
+                href: '#'
             },
         ]
 

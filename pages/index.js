@@ -1,4 +1,6 @@
-const IndexPage = () => <h1 style={{textAlign:"center"}}>Main page will be here</h1>;
+import Main from '/components/Main/Main'
+
+const IndexPage = () => <Main />
 
 IndexPage.layout = "main";
 

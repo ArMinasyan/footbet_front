@@ -1,9 +1,11 @@
 import Main from "./Main";
+import WithoutPhoto from "./WithoutPhoto";
 import Register from "./Register";
 import Error from "./Error"
 
 const layouts = {
   main: Main,
+  withoutPhoto: WithoutPhoto,
   register: Register
 };
 
