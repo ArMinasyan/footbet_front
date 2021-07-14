@@ -3,7 +3,7 @@
 @import "/styles/scss/_variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
 
-$parentWidth: 1460px;
+$parentWidth: 790px;
 $buttonWidth: 170px;
 $buttonBackground: linear-gradient(80.04deg, #040749 1.6%, rgba(44, 44, 44, 0) 106.17%);
 $buttonBackgroundOnHover: linear-gradient(80.04deg, #d10a52 1.6%, rgba(5, 5, 11, 0) 106.17%);
@@ -28,6 +28,7 @@ $contentBorderOnHover: 2px solid #12112c;
         pre {
             @include center();
             width: 100%;
+            height: 100%;
             margin: 0;
             padding: 0;
             font-family: Arimo;
