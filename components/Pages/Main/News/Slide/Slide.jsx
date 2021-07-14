@@ -4,6 +4,7 @@ import Carousel from 'react-elastic-carousel'
 // styles 
 import styles from './Slide.module.scss'
 import { Item } from './SlideItems/Item/Item'
+import { Arrow } from './SlideItems/Arrows/Arrow'
 
 export function Slide() {
 
@@ -15,6 +16,7 @@ export function Slide() {
                 itemsToShow={4}
                 itemsToScroll={2}
                 itemPadding={[35,12]}
+                renderArrow={Arrow}
                 className={styles.carousel}
             >
                 {
