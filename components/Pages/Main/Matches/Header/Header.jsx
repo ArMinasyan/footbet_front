@@ -15,12 +15,14 @@ export function Header({
             />
             <div className={styles.buttons}>
                 <Button
-                    content='Today Matches'
+                    locationInMainPage={'matches'}
+                    textPathName={'.buttons.TodayMatches'}
                     active={buttonsActivity ? true : false}
                     click={on_TM_click}
                 />
                 <Button
-                    content='Game Rules'
+                    locationInMainPage={'matches'}
+                    textPathName={'.buttons.GameRules'}
                     active={!buttonsActivity ? true : false}
                     click={on_GM_click}
                 />

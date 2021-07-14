@@ -1,11 +1,13 @@
 {
-    "news":{
-        "title":"Новости",
-        "sldes":{
-            
-        }
+    "news": {
+        "title": "Новости",
+        "sldes": {}
     },
-    "matches":{
-        "title":"Матчи"
+    "matches": {
+        "title": "Матчи",
+        "buttons": {
+            "TodayMatches": "Матчи дня",
+            "GameRules": "Правила игры"
+        }
     }
 }

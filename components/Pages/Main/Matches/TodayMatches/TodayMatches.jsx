@@ -1,6 +1,6 @@
 export function TodayMatches() {
     return (
-        <div>
+        <div className=''>
             Today Matches
         </div>
     )
