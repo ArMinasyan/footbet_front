@@ -4,19 +4,21 @@ import useTranslation from 'next-translate/useTranslation'
 import styles from './Title.module.scss'
 
 
-export function Title() {
+export function Title({
+    textPathName = "You are dont put there text.",
+    locationInMainPage = "Change translation location." }) {
 
     const
         // translation consfigs
         { t } = useTranslation('home'),
-        translationPath = 'news.',
+        translationPath = `${locationInMainPage}`,
         translate = key => t(`${translationPath}${key}`)
 
     return (
         <div className={styles.container}>
             <p>
                 {
-                    translate('title')
+                    translate(`${textPathName}`)
                 }
             </p>
         </div>

@@ -4,6 +4,10 @@
 @import "/styles/scss/_fonts.scss";
 
 .container {
+    *{
+        margin: 0;
+        padding: 0;
+    }
     @include center();
     p {
         @include arimo-font();

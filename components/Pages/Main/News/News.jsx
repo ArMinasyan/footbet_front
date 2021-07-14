@@ -1,13 +1,16 @@
 // styles 
 import styles from './News.module.scss'
 // components 
-import { Title } from './Title/Title'
+import { Title } from '../common/Title/Title'
 import { Slide } from './Slide/Slide'
 
 export function News() {
     return (
         <div className={styles.container}>
-            <Title />
+            <Title 
+                locationInMainPage={'news'}
+                textPathName={'.title'}
+            />
             <Slide />
         </div>
     )
