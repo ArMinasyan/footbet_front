@@ -15,6 +15,16 @@
     justify-content: flex-end;
     align-items: center;
 }
+@mixin align-start {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+@mixin align-end {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
 @mixin flex-around {
     display: flex;
     justify-content: space-around;
@@ -72,7 +82,7 @@
             right: -35%;
         }
         to {
-            right: 33.5%
+            right: 33.5%;
         }
     }
 }
@@ -86,7 +96,7 @@
             right: 33.5%;
         }
         to {
-            right: -35%
+            right: -35%;
         }
     }
 }

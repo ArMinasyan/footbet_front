@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
+
+@mixin arimo-font {
+    font-family: 'Arimo', sans-serif;
+}
+@mixin arsenal-font {
+    font-family: 'Arsenal', sans-serif;
+}

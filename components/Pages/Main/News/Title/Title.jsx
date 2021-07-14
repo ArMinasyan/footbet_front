@@ -8,13 +8,17 @@ export function Title() {
 
     const
         // translation consfigs
-        { t } = useTranslation('common'),
-        translationPath = 'registration.inputPlaceHolders.',
+        { t } = useTranslation('home'),
+        translationPath = 'news.',
         translate = key => t(`${translationPath}${key}`)
 
     return (
         <div className={styles.container}>
-
+            <p>
+                {
+                    translate('title')
+                }
+            </p>
         </div>
     )
 }

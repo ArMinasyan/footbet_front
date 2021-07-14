@@ -1,0 +1,10 @@
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
+
+.container {
+    border-top: 24px solid rgba(42, 64, 90, 0.19);
+    margin-top: get_percent(50px);
+    .carousel {
+    }
+}
