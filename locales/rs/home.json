@@ -8,6 +8,15 @@
         "buttons": {
             "TodayMatches": "Матчи дня",
             "GameRules": "Правила игры"
+        },
+        "TM":{
+            "headerTitle":"Результаты",
+            "headerButtons":{
+                "yesterday":"Вчера",
+                "today":"Сегодня",
+                "tomorrow":"Завтра"
+            }
+
         }
     }
 }

@@ -6,7 +6,8 @@ import styles from './Title.module.scss'
 
 export function Title({
     textPathName = "You are dont put there text.",
-    locationInMainPage = "Change translation location." }) {
+    locationInMainPage = "Change translation location.",
+    textStyles = null }) {
 
     const
         // translation consfigs
@@ -16,7 +17,7 @@ export function Title({
 
     return (
         <div className={styles.container}>
-            <p>
+            <p style={textStyles}>
                 {
                     translate(`${textPathName}`)
                 }

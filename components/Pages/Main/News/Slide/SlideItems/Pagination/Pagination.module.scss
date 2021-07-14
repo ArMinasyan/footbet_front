@@ -15,6 +15,7 @@
         margin-right: get_percent(8px);
         border-radius: 50%;
         background-color: white;
+        cursor: pointer;
     }
     .active{
         background-color: $buttonsColor;;

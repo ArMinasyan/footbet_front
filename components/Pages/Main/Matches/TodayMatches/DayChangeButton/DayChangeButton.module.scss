@@ -1,0 +1,58 @@
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
+@import "/styles/scss/_fonts.scss";
+
+$activeButtonBorders: 1px solid #d10a52;
+$buttonsContentWidth: 435px;
+
+.container {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    @include column-center();
+    .name {
+        cursor: pointer;
+        p {
+            @include arimo-font();
+            font-size: 26px;
+            line-height: 30px;
+        }
+    }
+    .date {
+        margin-top: 10px;
+        p {
+            font-size: 14px;
+            line-height: 16px;
+            color: #d10a52;
+        }
+    }
+    .active_name {
+        border-left: $activeButtonBorders;
+        border-right: $activeButtonBorders;
+        cursor: pointer;
+        padding: 0 37px;
+
+        p {
+            @include arimo-font();
+            font-weight: bold;
+            font-size: 29px;
+            line-height: 33px;
+            text-decoration-line: underline;
+            text-underline-position: under;
+        }
+        @include animation();
+    }
+    .active_date {
+        margin-top: 10px;
+        p {
+            font-weight: bold;
+            font-size: 17px;
+            line-height: 20px;
+            color: #d10a52;
+        }
+        @include animation();
+    }
+    
+}

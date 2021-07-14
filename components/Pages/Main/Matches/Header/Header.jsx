@@ -17,13 +17,13 @@ export function Header({
                 <Button
                     locationInMainPage={'matches'}
                     textPathName={'.buttons.TodayMatches'}
-                    active={buttonsActivity ? true : false}
+                    active={buttonsActivity ? 'true' : null}
                     click={on_TM_click}
                 />
                 <Button
                     locationInMainPage={'matches'}
                     textPathName={'.buttons.GameRules'}
-                    active={!buttonsActivity ? true : false}
+                    active={!buttonsActivity ? 'true' : null}
                     click={on_GM_click}
                 />
             </div>

@@ -75,7 +75,7 @@ export function NavBar() {
                                 contentSecP={el.secContent}
                                 href={el.href}
                                 key={el.key}
-                                active={router.pathname === el.href ? true : false}
+                                active={router.pathname === el.href ? 'true' : null }
                                 click={el.click && el.click}
                             />
                         ))

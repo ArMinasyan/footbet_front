@@ -12,7 +12,7 @@ export function Pagination({ pages, activePage, onClick }) {
                         <div
                             key={el}
                             onClick={() => onClick(el)}
-                            active={isActivePage}
+                            active={isActivePage ? 'true' : 'false'}
                             className={`${styles.round} ${isActivePage && styles.active}`}
                         />
                     )

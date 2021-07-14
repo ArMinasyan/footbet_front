@@ -27,6 +27,7 @@ export function Slide() {
                         <Item
                             img_src={el.url}
                             description={el.description}
+                            key={Math.random()}
                         />
                     ))
                 }
