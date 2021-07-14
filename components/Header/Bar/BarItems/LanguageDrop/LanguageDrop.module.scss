@@ -13,14 +13,15 @@ $contentWidth: 106px;
     top: -15px;
     right: -70px;
     border: 1px solid $containerBorderColor;
+    background: $primaryBackground;
     .content {
         width: get_percent($contentWidth, $containerWidth);
         @include column-center();
-        margin-top:get_percent(10px, $containerWidth);
+        margin-top: get_percent(10px, $containerWidth);
         // margin-top: 7.2%;
         .row {
             @include flex-between();
-            margin-bottom:get_percent(14px, $contentWidth);
+            margin-bottom: get_percent(14px, $contentWidth);
             width: 100%;
             span {
                 cursor: pointer;

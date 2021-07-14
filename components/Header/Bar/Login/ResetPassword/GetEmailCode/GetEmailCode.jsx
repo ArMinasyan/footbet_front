@@ -58,10 +58,12 @@ export function GetEmailCode({ onModalClose }) {
         },
         // on form submit
         submit = (data) => {
-            console.log(data)
+            data = Object.values(data).reduce((ac, el) => ac + el)
+            console.log(data);
             setShowEmailCodeMl(false)
             setShowNewPasswordMl(true)
         }
+    console.log(errors);
 
     return (
         <>
@@ -82,7 +84,16 @@ export function GetEmailCode({ onModalClose }) {
                                     inputs.map((el, i) => (
                                         <input
                                             id={el.id}
-                                            className={el.class}
+                                            className={
+                                                `${el.class} 
+                                                ${
+                                                    errors.num1 ||
+                                                    errors.num2 ||
+                                                    errors.num3 ||
+                                                    errors.num4 ||
+                                                    errors.num5 ||
+                                                    errors.num6 ? styles.error_input : styles.success_input
+                                                }`.trim()}
                                             type={el.type}
                                             key={el.key}
                                             maxLength={el.maxLength}

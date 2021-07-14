@@ -1,17 +1,22 @@
 // hooks and helpers
 import { useRouter } from 'next/dist/client/router'
+import { useState } from 'react'
 // styles
 import styles from './NavBar.module.scss'
 // translation 
 import useTranslation from 'next-translate/useTranslation'
 // componetns
 import { Button } from './Button/Button'
+import Contacts from '../../Pages/Contacts/Contacts'
+
 
 
 export function NavBar() {
 
 
     const
+        //states
+        [showContactsModal, setShowContactsModal] = useState(false),
         { t } = useTranslation('common'),
         translationPath = 'header.navBar.',
         translate = (key) => t(`${translationPath}${key}`),
@@ -54,25 +59,34 @@ export function NavBar() {
             {
                 key: Math.random(),
                 frstContent: translate('contacts'),
-                href: '#'
+                href: '',
+                click: () => setShowContactsModal(true)
             },
         ]
 
     return (
-        <div className={styles.container}>
-            <div className={styles.content}>
-                {
-                    buttons.map(el => (
-                        <Button
-                            contentFrstP={el.frstContent}
-                            contentSecP={el.secContent}
-                            href={el.href}
-                            key={el.key}
-                            active={router.pathname === el.href ? true : false}
-                        />
-                    ))
-                }
+        <>
+            <div className={styles.container}>
+                <div className={styles.content}>
+                    {
+                        buttons.map(el => (
+                            <Button
+                                contentFrstP={el.frstContent}
+                                contentSecP={el.secContent}
+                                href={el.href}
+                                key={el.key}
+                                active={router.pathname === el.href ? true : false}
+                                click={el.click && el.click}
+                            />
+                        ))
+                    }
+                </div>
             </div>
-        </div>
+            {showContactsModal && <Contacts
+                opened={showContactsModal}
+                onModalClose={() => setShowContactsModal(false)}
+            />}
+        </>
+
     )
 }

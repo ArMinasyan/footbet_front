@@ -36,7 +36,6 @@ export function NewPassword({ onModalClose }) {
         }),
         // on form submit
         submit = (data) => {
-            console.log(data)
             setShowNewPassMl(false)
             setShowSuccessMl(true)
         }

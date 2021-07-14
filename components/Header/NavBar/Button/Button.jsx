@@ -8,10 +8,13 @@ export function Button({
     href,
     contentFrstP,
     contentSecP = null,
-    active }) {
+    active,
+    click = null }) {
     return (
         <div className={`${styles.container} ${active && styles.active}`}>
-            <div className={styles.content}>
+            <div className={styles.content}
+                onClick={click}
+            >
                 <Link href={href}>
                     <pre>
                         {

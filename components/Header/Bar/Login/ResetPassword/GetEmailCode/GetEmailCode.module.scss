@@ -9,6 +9,42 @@ $modalWidth: 634px;
 $contentWidth: 401px;
 $formWidth: 378px;
 $inputWidth: 47px;
+$backgroundColor: rgba(255, 255, 251, 0.09);
+$inputBackColor: rgba(196, 196, 196, 0.2);
+$inputBorderColor: rgba(255, 255, 255, 0.5);
+$errorInputBackColor: rgba(158, 9, 74, 0.13);
+$errorInputBorderColor: #9e094a21;
+
+@mixin input {
+    width: get-percent($inputWidth, $formWidth) !important;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 4.3% 4.8% !important;
+    color: rgba(255, 255, 255, 0.31) !important;
+    box-sizing: border-box;
+    border-radius: 8px;
+    outline: none;
+}
+
+@mixin success {
+    border: 1px solid $inputBorderColor;
+    background: $inputBackColor;
+}
+
+@mixin error {
+    border: 1px solid $errorInputBorderColor;
+    background: $errorInputBackColor;
+}
+
+@mixin successInput {
+    @include input();
+    @include success();
+}
+
+@mixin errorInput {
+    @include input();
+    @include error();
+}
 
 .container {
     * {
@@ -47,17 +83,12 @@ $inputWidth: 47px;
             margin-top: 39px;
             @include flex-around;
 
-            input {
-                width: get-percent($inputWidth, $formWidth) !important;
-                font-size: 16px;
-                line-height: 18px;
-                padding: 4.3% 4.8% !important;
-                color: rgba(255, 255, 255, 0.31) !important;
-                background-color: rgba(255, 255, 255, 0.12);
-                border: 1px solid #f7f7f7;
-                box-sizing: border-box;
-                border-radius: 8px;
-                outline: none;
+            .error_input {
+                @include errorInput();
+            }
+
+            .success_input {
+                @include successInput();
             }
         }
     }

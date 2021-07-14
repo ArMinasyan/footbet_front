@@ -1,6 +1,7 @@
 @import "/styles/scss/_functions";
 @import "/styles/scss/_mixins.scss";
 @import "/styles/scss/_variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
 
 $contentWidth: 171px;
 $contentHeight: 40px;
@@ -15,5 +16,11 @@ $contentHeight: 40px;
         left: get-vw(47px);
         border-radius: 0;
         background: rgba(21, 17, 37, 0.63);
+        p {
+            font-family: Arimo;
+            font-size: 19px;
+            line-height: 22px;
+            letter-spacing: 0.05em;
+        }
     }
 }
