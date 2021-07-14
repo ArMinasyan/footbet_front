@@ -62,3 +62,31 @@
         }
     }
 }
+@mixin animation-left-right {
+    animation-name: leftRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+
+    @keyframes leftRight {
+        from {
+            right: -35%;
+        }
+        to {
+            right: 33.5%
+        }
+    }
+}
+@mixin animation-right-left {
+    animation-name: rightLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+
+    @keyframes rightLeft {
+        from {
+            right: 33.5%;
+        }
+        to {
+            right: -35%
+        }
+    }
+}

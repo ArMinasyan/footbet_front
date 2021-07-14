@@ -1,0 +1,15 @@
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
+
+.container {
+    background: none;
+    .content {
+        position: absolute;
+        @include animation-left-right;
+    }
+    .close {
+        position: absolute;
+        @include animation-right-left;
+    }
+}
