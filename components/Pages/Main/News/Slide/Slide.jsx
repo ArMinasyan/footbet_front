@@ -1,10 +1,12 @@
 import { slide_show_data } from './slide_show_data'
 // components
 import Carousel from 'react-elastic-carousel'
-// styles 
-import styles from './Slide.module.scss'
 import { Item } from './SlideItems/Item/Item'
 import { Arrow } from './SlideItems/Arrows/Arrow'
+import { Pagination } from './SlideItems/Pagination/Pagination'
+// styles 
+import styles from './Slide.module.scss'
+
 
 export function Slide() {
 
@@ -15,8 +17,9 @@ export function Slide() {
             <Carousel
                 itemsToShow={4}
                 itemsToScroll={2}
-                itemPadding={[35,12]}
+                itemPadding={[35, 12]}
                 renderArrow={Arrow}
+                renderPagination={Pagination}
                 className={styles.carousel}
             >
                 {

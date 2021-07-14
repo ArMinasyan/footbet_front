@@ -11,8 +11,8 @@ export function Item({ img_src, description }) {
     return (
         <div className={styles.container}>
             <div className={styles.topLines}>
-                <div className={styles.lineOne}></div>
-                <div className={styles.lineTwo}></div>
+                <div className={styles.lineOne} />
+                <div className={styles.lineTwo} />
             </div>
             <div
                 className={styles.content}
@@ -25,8 +25,8 @@ export function Item({ img_src, description }) {
                 </p>
             </div>
             <div className={styles.bottomLines}>
-                <div className={styles.lineOne}></div>
-                <div className={styles.lineTwo}></div>
+                <div className={styles.lineOne} />
+                <div className={styles.lineTwo} />
             </div>
         </div>
     )
