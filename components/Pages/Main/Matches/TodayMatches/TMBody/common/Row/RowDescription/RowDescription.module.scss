@@ -1,0 +1,119 @@
+@import "/styles/scss/_scssExports.scss";
+
+$containerBacgroundColor: #0c0b22;
+$containerWidth: 1407px;
+$dateGameStateWidth: 123px;
+$teamsContainerWidth: 512px;
+$buyedButtonBackColor: rgba(255, 255, 255, 0.2);
+$buyedButtonColor: rgba(255, 255, 255, 0.3);
+$buyButtonHover: #a10b45;
+$buyButtonWidth: 102px;
+
+@mixin buyedButton {
+    padding: 9% 26%;
+    background-color: $buyedButtonBackColor;
+    color: $buyedButtonBackColor;
+    border-radius: 8px;
+}
+
+@mixin buyButton {
+    padding: 9% 26%;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+}
+
+@mixin buyButtonHover {
+    background-color: $buyButtonHover;
+    border: none;
+}
+
+@mixin teamNames {
+    @include arsenal-font();
+    font-size: 21px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+}
+
+.container {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    @include center();
+    width: 100%;
+    background-color: $containerBacgroundColor;
+
+    .content {
+        @include flex-between();
+        width: 100%;
+        height: 100%;
+        padding: 6px 95px 6px 91px;
+        .date_gameState_content {
+            @include flex-between();
+            width: get_percent($dateGameStateWidth, $containerWidth);
+            span {
+                @include arsenal-font();
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 23px;
+                color: rgba(255, 255, 255, 0.35);
+            }
+            .started {
+                @include arsenal-font();
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 23px;
+                color: white
+            }
+        }
+        .teams {
+            @include flex-between();
+            width: get_percent($teamsContainerWidth, $containerWidth);
+            .teamOne {
+                min-width: get_percent(155px, $teamsContainerWidth);
+                @include flex-between();
+                p {
+                    @include teamNames();
+                }
+            }
+            .score {
+                p {
+                    // TODO font family
+                    font-family: Cuprum;
+                    font-weight: bold;
+                    font-size: 46px;
+                    line-height: 53px;
+                    letter-spacing: 0.05em;
+                    color: #0bbe28;
+                }
+            }
+            .teamTwo {
+                @include flex-between();
+                min-width: get_percent(155px, $teamsContainerWidth);
+                p {
+                    @include teamNames();
+                }
+            }
+        }
+        .buyButton_container {
+            @include flex-between();
+            width: get_percent($buyButtonWidth, $containerWidth);
+            cursor: pointer;
+            .button_content {
+                @include center();
+                // @include buyedButton();
+                @include buyButton();
+                width: 100%;
+                p {
+                    @include arsenal-font();
+                    font-size: 14px;
+                    line-height: 18px;
+                    letter-spacing: 0.1em;
+                }
+                &:hover {
+                    @include buyButtonHover();
+                }
+            }
+        }
+    }
+}

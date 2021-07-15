@@ -1,0 +1,6 @@
+@import "/styles/scss/_scssExports.scss";
+
+.container {
+    @include column-center();
+    width: 100%;
+}

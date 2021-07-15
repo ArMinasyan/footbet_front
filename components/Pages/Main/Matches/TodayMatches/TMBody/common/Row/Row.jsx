@@ -14,12 +14,15 @@ export function Row({
     teamTwo,
     teamTwoIcon,
     buyButtonName,
-    titleName
+    titleName,
 }) {
+    const
+        trasnlationLocation = 'matches.TM.today'
     return (
-        <div>
+        <div className={styles.container}>
             <RowTitle
                 content={titleName}
+                locationInMainPage={trasnlationLocation}
             />
             <RowDescription
                 date={date}
@@ -30,6 +33,7 @@ export function Row({
                 teamTwo={teamTwo}
                 teamTwoIcon={teamTwoIcon}
                 buyButtonName={buyButtonName}
+                locationInMainPage={trasnlationLocation}
             />
         </div>
     )

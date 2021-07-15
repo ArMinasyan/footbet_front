@@ -3,7 +3,18 @@
 $titleBackground: rgba(42, 64, 90, 0.2);
 
 .container {
+    * {
+        margin: 0;
+        padding: 0;
+    }
     @include center();
     width: 100%;
     background-color: $titleBackground;
+    padding: 6px 0;
+    p {
+        @include arsenal-font();
+        font-size: 19px;
+        line-height: 24px;
+        letter-spacing: 0.07em;
+    }
 }
