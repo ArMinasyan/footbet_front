@@ -60,7 +60,15 @@
             }
         }
     },
-    "prediction":{
-        "title":"Прогнозы"
+    "prediction": {
+        "title": "Прогнозы",
+        "slide": {
+            "firstSlide": {
+                "teamOne": "Барселона",
+                "teamTwo": "ПСЖ"
+            },
+            "pred_button": "Прогноз",
+            "buy_button": "Купить"
+        }
     }
 }

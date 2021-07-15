@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo&family=Arsenal&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cuprum&display=swap');
 
 @mixin arimo-font {
     font-family: 'Arimo', sans-serif;
@@ -7,3 +7,7 @@
 @mixin arsenal-font {
     font-family: 'Arsenal', sans-serif;
 }
+@mixin cuprum-font {
+    font-family: 'Cuprum', sans-serif;
+}
+
