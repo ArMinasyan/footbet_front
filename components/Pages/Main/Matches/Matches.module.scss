@@ -8,7 +8,6 @@
     margin-top: 2.1%;
     .content{
         @include column-center();
-        width: get_percent(1593px);
-
+        width: get-vw(1593px);
     }
 }

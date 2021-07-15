@@ -1,0 +1,9 @@
+@import "/styles/scss/_scssExports.scss";
+
+$titleBackground: rgba(42, 64, 90, 0.2);
+
+.container {
+    @include center();
+    width: 100%;
+    background-color: $titleBackground;
+}

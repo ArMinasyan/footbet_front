@@ -1,26 +1,41 @@
 // components
-import { useState } from "react";
 import { Title } from "../../../common/Title/Title";
-import { DayChangeButton } from '../DayChangeButton/DayChangeButton';
+import { DayChangeButton } from './DayChangeButton/DayChangeButton';
 // styles
 import styles from './TMHeader.module.scss'
 
-export function TMHeader() {
-
-
+export function TMHeader({
+    clickYD,
+    clickTD,
+    clickTM,
+    YDBoardState,
+    TDBoardState,
+    TMBoardState }) {
 
     const
-        // states
-        [showYesterdayGames, setShowYesterdayGames] = useState(false),
-        [showTodayGames, setShowTodayGames] = useState(true),
-        [showTomorrowGames, setShowTomorrowGames] = useState(false),
         // functions
-        get_date = () => {
+        // get_date value changes y_d => yesterday, t_d => today, t_w =>tomorrow
+        get_date = (value) => {
             let
                 date = new Date(),
-                day = date.getDate(),
+                day = null,
                 month = date.getMonth() + 1,
                 year = date.getFullYear()
+
+            switch (value) {
+                case 'y_d':
+                    day = date.getDate() - 1
+                    break;
+                case 't_d':
+                    day = date.getDate()
+                    break;
+                case 't_m':
+                    day = date.getDate() + 1
+                    break;
+                default:
+                    day = ""
+                    break;
+            }
 
             return `${day}.${month < 10 ? "0" + month : month}.${year}`
         }
@@ -40,35 +55,23 @@ export function TMHeader() {
                 <DayChangeButton
                     name='.TM.headerButtons.yesterday'
                     locationInMainPage={'matches'}
-                    date={get_date()}
-                    active={showYesterdayGames ? 'show': null}
-                    click={() => {
-                        setShowYesterdayGames(true)
-                        setShowTodayGames(false)
-                        setShowTomorrowGames(false)
-                    }}
+                    date={get_date('y_d')}
+                    active={YDBoardState ? 'show' : null}
+                    click={clickYD}
                 />
                 <DayChangeButton
                     name='.TM.headerButtons.today'
                     locationInMainPage={'matches'}
-                    date={get_date()}
-                    active={showTodayGames ? 'show': null}
-                    click={() => {
-                        setShowYesterdayGames(false)
-                        setShowTodayGames(true)
-                        setShowTomorrowGames(false)
-                    }}
+                    date={get_date('t_d')}
+                    active={TDBoardState ? 'show' : null}
+                    click={clickTD}
                 />
                 <DayChangeButton
                     name='.TM.headerButtons.tomorrow'
                     locationInMainPage={'matches'}
-                    date={get_date()}
-                    active={showTomorrowGames ? 'show': null}
-                    click={() => {
-                        setShowYesterdayGames(false)
-                        setShowTodayGames(false)
-                        setShowTomorrowGames(true)
-                    }}
+                    date={get_date('t_m')}
+                    active={TMBoardState ? 'show' : null}
+                    click={clickTM}
                 />
             </div>
         </div>
