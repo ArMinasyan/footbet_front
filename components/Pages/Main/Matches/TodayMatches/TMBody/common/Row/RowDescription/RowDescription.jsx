@@ -14,14 +14,14 @@ export function RowDescription({
     buyButtonName,
     locationInMainPage
 }) {
-    console.log(gameState.slice(gameState.lastIndexOf(".") + 1))
+
     const
         // translation consfigs
         { t } = useTranslation('home'),
         translationPath = `${locationInMainPage}`,
         translate = key => t(`${translationPath}${key}`),
         gameStarted = gameState.slice(gameState.lastIndexOf(".") + 1) === 'started'
-    console.log(gameStarted);
+
 
 
     return (
