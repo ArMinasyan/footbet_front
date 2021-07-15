@@ -58,6 +58,18 @@
     align-items: flex-end;
     flex-direction: column;
 }
+@mixin column-between {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    flex-direction: column;
+}
+@mixin column-around {
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    flex-direction: column;
+}
 @mixin animation {
     animation-name: transition;
     animation-duration: 0.3s;

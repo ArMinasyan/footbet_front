@@ -1,0 +1,95 @@
+@import "/styles/scss/scssExports";
+
+$parentWidth: 1592px;
+$topContentWidth: 1545px;
+$ratingContentWidth: 184px;
+
+.container {
+    @include column-center();
+    width: 100%;
+    margin-top: 1.58%;
+    .top {
+        width: get_percent($topContentWidth, $parentWidth);
+        .avatar {
+            width: get_percent(250px, $topContentWidth);
+            @include flex-between();
+            img {
+                width: 30%;
+            }
+            span {
+                @include arsenal-font();
+                font-size: 22px;
+                line-height: 28px;
+                letter-spacing: 0.07em;
+            }
+        }
+        .rateing {
+            @include flex-between();
+            width: get_percent($ratingContentWidth, $parentWidth);
+            margin-top: 2.4%;
+        }
+    }
+    .bottom {
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        @include column-between();
+        width: 100%;
+        background: rgba(255, 255, 255, 0.11);
+        border-radius: 23px;
+        padding: 34px 50px 21px 47px;
+        margin-top: 7px;
+        .bottom_content {
+            width: 100%;
+            .description {
+                @include center();
+                width: 100%;
+                p {
+                    @include arsenal-font();
+                    font-size: 18px;
+                    line-height: 181%;
+                    letter-spacing: 0.07em;
+                }
+            }
+        }
+        .date_likes_container {
+            width: 100%;
+            @include flex-between();
+            margin-top: 5.09%;
+            .date {
+                @include arimo-font();
+                font-size: 20px;
+                line-height: 23px;
+                color: rgba(177, 11, 73, 0.5);
+            }
+            .likes_dislikes {
+                width: get_percent(131.5px, 1495px);
+                @include flex-between();
+                .like {
+                    @include flex-start();
+                    width: 50%;
+                    border-right:  2px solid #8D0B40;
+                    img{
+                        cursor: pointer;
+                    }
+                }
+                .disLike {
+                    width: 50%;
+                    @include flex-end();
+                    img{
+                        cursor: pointer;
+                    }
+                }
+                span {
+                    @include arimo-font();
+                    font-size: 25px;
+                    line-height: 29px;
+                }
+                img{
+                    margin-right: 14%;
+                }
+            }
+        }
+    }
+}

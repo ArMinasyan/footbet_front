@@ -1,0 +1,10 @@
+@import "/styles//scss/scssExports";
+
+.container {
+    @include column-center();
+    margin-top: 2.102%;
+    .feed_backs_container {
+        width: get-vw(1592px);
+        position: relative;
+    }
+}

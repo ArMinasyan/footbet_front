@@ -70,5 +70,8 @@
             "pred_button": "Прогноз",
             "buy_button": "Купить"
         }
+    },
+    "testimonials":{
+        "title":"Отзывы"
     }
 }

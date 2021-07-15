@@ -41,6 +41,7 @@ export function PrdeictionSlide() {
                             buyButtonName={el.buyButtonName}
                             locationInMainPage={'prediction'}
                             expiryTimestamp={time}
+                            key={Math.random()}
                         />
                     ))
                 }

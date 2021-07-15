@@ -32,6 +32,7 @@ export function TDMatchesBoard() {
                                 teamTwoIcon={el.teamTwoIcon}
                                 buyButtonName={el.buyButtonName}
                                 titleName={el.titleName}
+                                key={Math.random()}
                             />
                         ) : null
                     )
@@ -52,6 +53,7 @@ export function TDMatchesBoard() {
                                 teamTwoIcon={el.teamTwoIcon}
                                 buyButtonName={el.buyButtonName}
                                 titleName={el.titleName}
+                                key={Math.random()}
                             />
                         ) : null
                     )
