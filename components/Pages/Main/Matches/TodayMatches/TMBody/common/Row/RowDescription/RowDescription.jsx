@@ -21,17 +21,22 @@ export function RowDescription({
         translationPath = `${locationInMainPage}`,
         translate = key => t(`${translationPath}${key}`),
         gameStarted = gameState.slice(gameState.lastIndexOf(".") + 1) === 'started'
-        console.log(gameStarted);
+    console.log(gameStarted);
 
 
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-                <div className={styles.date_gameState_content}>
-                    <span  className={gameStarted ? styles.started : null}>
+                <div
+                    className={`
+                        ${styles.date_gameNStarted_content} 
+                        ${gameStarted ? styles.date_gameStarted_content : null}
+                    `}
+                >
+                    <span >
                         {date}
                     </span>
-                    <span className={gameStarted ? styles.started : null}>
+                    <span >
                         {translate(gameState)}
                     </span>
                 </div>

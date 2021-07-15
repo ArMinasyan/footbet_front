@@ -1,0 +1,25 @@
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
+
+$containerBacgroundColor: #0c0b22;
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $containerBacgroundColor;
+    padding: 2.07% 0;
+    .round {
+        width: 6px;
+        height: 6px;
+        margin-right: get_percent(8px) !important;
+        border-radius: 50%;
+        background-color: white;
+        cursor: pointer;
+    }
+    .active {
+        background-color: $buttonsColor;
+    }
+}

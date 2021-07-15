@@ -2,7 +2,8 @@
 
 $containerBacgroundColor: #0c0b22;
 $containerWidth: 1407px;
-$dateGameStateWidth: 123px;
+$dateGameStateWidthWhenStarted: 123px;
+$dateGameStateWidthWhenNotStarted: 146px;
 $teamsContainerWidth: 512px;
 $buyedButtonBackColor: rgba(255, 255, 255, 0.2);
 $buyedButtonColor: rgba(255, 255, 255, 0.3);
@@ -48,9 +49,9 @@ $buyButtonWidth: 102px;
         width: 100%;
         height: 100%;
         padding: 6px 95px 6px 91px;
-        .date_gameState_content {
+        .date_gameNStarted_content {
             @include flex-between();
-            width: get_percent($dateGameStateWidth, $containerWidth);
+            width: get_percent($dateGameStateWidthWhenNotStarted, $containerWidth);
             span {
                 @include arsenal-font();
                 font-weight: bold;
@@ -58,16 +59,14 @@ $buyButtonWidth: 102px;
                 line-height: 23px;
                 color: rgba(255, 255, 255, 0.35);
             }
-            .started {
-                @include arsenal-font();
-                font-weight: bold;
-                font-size: 18px;
-                line-height: 23px;
-                color: white
+        }
+        .date_gameStarted_content {
+            span {
+                color: white;
             }
         }
         .teams {
-            @include flex-between();
+            @include flex-around();
             width: get_percent($teamsContainerWidth, $containerWidth);
             .teamOne {
                 min-width: get_percent(155px, $teamsContainerWidth);
@@ -88,7 +87,7 @@ $buyButtonWidth: 102px;
                 }
             }
             .teamTwo {
-                @include flex-between();
+                @include flex-around();
                 min-width: get_percent(155px, $teamsContainerWidth);
                 p {
                     @include teamNames();

@@ -3,7 +3,7 @@ import useTranslation from 'next-translate/useTranslation'
 // styles 
 import styles from './RowTitle.module.scss'
 
-export function RowTitle({ content, locationInMainPage }) {
+export function RowTitle({ content, locationInMainPage, rowStyles }) {
 
     const
         // translation consfigs
@@ -12,10 +12,10 @@ export function RowTitle({ content, locationInMainPage }) {
         translate = key => t(`${translationPath}${key}`)
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} style={rowStyles}>
             <p>
                 {
-                    translate(content)
+                    content ? translate(content) : ""
                 }
             </p>
         </div>
