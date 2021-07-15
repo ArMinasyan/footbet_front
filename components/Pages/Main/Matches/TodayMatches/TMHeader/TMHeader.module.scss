@@ -3,17 +3,22 @@
 @import "/styles/scss/_variables.scss";
 @import "/styles/scss/_fonts.scss";
 
-$containerWidth: 1579px;
+$containerWidth: 1593px;
+$contentWidth: 1407px;
 $buttonsContentWidth: 435px;
-$backColor:#0C0B22;
+$backColor: #0c0b22;
 
 .container {
     @include column-center();
     background-color: $backColor;
     padding: 39px 0 27px 0;
-    .day_change_buttons {
-        @include flex-between();
-        margin-top: 35px;
-        width: get_percent($buttonsContentWidth, $containerWidth);
+    .content {
+        @include column-center();
+        width: get_percent($contentWidth, $containerWidth);
+        .day_change_buttons {
+            @include flex-between();
+            margin-top: 35px;
+            width: get_percent($buttonsContentWidth, $contentWidth);
+        }
     }
 }

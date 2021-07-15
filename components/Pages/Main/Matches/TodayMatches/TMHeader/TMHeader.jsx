@@ -42,37 +42,39 @@ export function TMHeader({
 
     return (
         <div className={styles.container}>
-            <Title
-                locationInMainPage={'matches'}
-                textPathName={'.TM.headerTitle'}
-                textStyles={{
-                    fontSize: '29px',
-                    lineHeight: '33px',
-                    letterSpacing: '0.18em'
-                }}
-            />
-            <div className={styles.day_change_buttons}>
-                <DayChangeButton
-                    name='.TM.headerButtons.yesterday'
+            <div className={styles.content}>
+                <Title
                     locationInMainPage={'matches'}
-                    date={get_date('y_d')}
-                    active={YDBoardState ? 'show' : null}
-                    click={clickYD}
+                    textPathName={'.TM.headerTitle'}
+                    textStyles={{
+                        fontSize: '29px',
+                        lineHeight: '33px',
+                        letterSpacing: '0.18em'
+                    }}
                 />
-                <DayChangeButton
-                    name='.TM.headerButtons.today'
-                    locationInMainPage={'matches'}
-                    date={get_date('t_d')}
-                    active={TDBoardState ? 'show' : null}
-                    click={clickTD}
-                />
-                <DayChangeButton
-                    name='.TM.headerButtons.tomorrow'
-                    locationInMainPage={'matches'}
-                    date={get_date('t_m')}
-                    active={TMBoardState ? 'show' : null}
-                    click={clickTM}
-                />
+                <div className={styles.day_change_buttons}>
+                    <DayChangeButton
+                        name='.TM.headerButtons.yesterday'
+                        locationInMainPage={'matches'}
+                        date={get_date('y_d')}
+                        active={YDBoardState ? 'show' : null}
+                        click={clickYD}
+                    />
+                    <DayChangeButton
+                        name='.TM.headerButtons.today'
+                        locationInMainPage={'matches'}
+                        date={get_date('t_d')}
+                        active={TDBoardState ? 'show' : null}
+                        click={clickTD}
+                    />
+                    <DayChangeButton
+                        name='.TM.headerButtons.tomorrow'
+                        locationInMainPage={'matches'}
+                        date={get_date('t_m')}
+                        active={TMBoardState ? 'show' : null}
+                        click={clickTM}
+                    />
+                </div>
             </div>
         </div>
     )
