@@ -1,0 +1,9 @@
+@import "/styles/scss/scssExports";
+
+$footerBAckColor: rgba(255, 255, 255, 0.09);
+
+.container {
+    position: relative;
+    height: get-vw(235px);
+    background-color: $footerBAckColor;
+}
