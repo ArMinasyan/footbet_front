@@ -1,0 +1,14 @@
+.stars_content{
+    width: 100%;
+    padding-left: 2.8%;
+    padding-bottom: 0.4%;
+    .stars_area{
+        width: 100%;
+        img{
+            margin-right: 10px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
