@@ -1,4 +1,5 @@
 // styles
+import { useState } from 'react'
 import styles from './Sorting.module.scss'
 
 export function Sorting({
@@ -6,8 +7,10 @@ export function Sorting({
     dateSortingText,
     rateSorting,
     sortByData,
-    sortByRate
+    sortByRate,
+    dateActive
 }) {
+
     return (
         <div className={styles.container}>
             <div className={styles.name}>
@@ -18,16 +21,21 @@ export function Sorting({
                 </span>
             </div>
             <div className={styles.bar}>
-                <span onClick={sortByData}>
+                <p
+                    className={`${styles.byDate} ${dateActive ? styles.active : null}`}
+                    onClick={sortByData}>
                     {
                         dateSortingText
                     }
-                </span>
-                <span onClick={sortByRate}>
+                </p>
+                <p
+                    onClick={sortByRate}
+                    className={!dateActive ? styles.active : null}
+                >
                     {
                         rateSorting
                     }
-                </span>
+                </p>
             </div>
         </div>
     )

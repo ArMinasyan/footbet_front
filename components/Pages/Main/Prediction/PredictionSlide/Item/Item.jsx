@@ -31,7 +31,8 @@ export function Item({
                         <img src={teamOneIcon} alt="" />
                         <p>{translate(teamOneName)}</p>
                     </div>
-                    <div>
+                    <div className={styles.timer_container}>
+                        <p>Игра начинается через</p>
                         <Timer
                             expiryTimestamp={expiryTimestamp}
                             timeClass={styles.timer}

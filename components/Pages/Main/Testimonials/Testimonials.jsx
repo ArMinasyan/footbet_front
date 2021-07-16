@@ -15,27 +15,26 @@ export function Testimonials() {
     const
         // states
         [feedBacks, setFeedBacks] = useState(feedback_data),
-        [updateThisComponent, setUpdatethisComponent] = useState(true),
+        [dateActive, setDateActive] = useState(true),
         // functions
         sortDataByDate = () => {
             const sortedByDataFeedBacks = feedBacks.sort((a, b) => (
-                b.date - a.date
+                b.date.sortFormat - a.date.sortFormat
             ))
-            setFeedBacks(sortedByDataFeedBacks)
-            setUpdatethisComponent(true)
+            setFeedBacks([...sortedByDataFeedBacks])
+            setDateActive(true)
         },
         sortDataByRate = () => {
             const sortedByRateFeedBacks = feedBacks.sort((a, b) => (
-                a.rateing - b.rateing
+                b.rateing - a.rateing
             ))
-            setFeedBacks(sortedByRateFeedBacks)
-            setUpdatethisComponent(true)
-            console.log(sortedByRateFeedBacks);
+            setFeedBacks([...sortedByRateFeedBacks])
+            setDateActive(false)
         }
 
     return (
         <>
-            {updateThisComponent &&
+            {feedBacks &&
                 <div className={styles.container}>
                     <Title
                         locationInMainPage='testimonials'
@@ -48,6 +47,7 @@ export function Testimonials() {
                             rateSorting='по оценке'
                             sortByData={sortDataByDate}
                             sortByRate={sortDataByRate}
+                            dateActive={dateActive}
                         />
                         <Carousel
                             renderArrow={Arrow}
@@ -57,13 +57,13 @@ export function Testimonials() {
                         >
                             <div style={{ width: '100%' }}>
                                 {
-                                    feedback_data.map(el => (
+                                    feedBacks.map(el => (
                                         <FeedBack
                                             avatar={el.avatar}
                                             nikName={el.nikName}
                                             rateing={el.rateing}
                                             description={el.description}
-                                            date={el.date}
+                                            date={el.date.renderFormat}
                                             likes={el.likes}
                                             disLikes={el.disLikes}
                                             key={Math.random()}
@@ -79,7 +79,7 @@ export function Testimonials() {
                                             nikName={el.nikName}
                                             rateing={el.rateing}
                                             description={el.description}
-                                            date={el.date}
+                                            date={el.date.renderFormat}
                                             likes={el.likes}
                                             disLikes={el.disLikes}
                                             key={Math.random()}
@@ -90,9 +90,6 @@ export function Testimonials() {
                         </Carousel>
                     </div>
                 </div>
-            }
-            {
-                console.log(1)
             }
         </>
     )

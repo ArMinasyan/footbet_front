@@ -35,15 +35,26 @@ $buyButtonHover: #a10b45;
                     letter-spacing: 0.05em;
                 }
             }
-            .timer {
-                div {
-                    @include cuprum-font();
-                    font-size: 66px;
-                    line-height: 76px;
-                    letter-spacing: 0.2em;
-                    color: #00ff29;
+            .timer_container {
+                p {
+                    @include arimo-font();
+                    font-size: 21px;
+                    line-height: 24px;
+                    letter-spacing: 0.1em;
+                    color: rgba(255, 255, 255, 0.48);
+                    text-align: center
+                }
+                .timer {
+                    div {
+                        @include cuprum-font();
+                        font-size: 66px;
+                        line-height: 76px;
+                        letter-spacing: 0.2em;
+                        color: #00ff29;
+                    }
                 }
             }
+
             .team2 {
                 @include column-center();
                 img {
