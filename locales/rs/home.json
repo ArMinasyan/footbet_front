@@ -71,7 +71,15 @@
             "buy_button": "Купить"
         }
     },
-    "testimonials":{
-        "title":"Отзывы"
+    "testimonials": {
+        "title": "Отзывы",
+        "sorting": {
+            "byDate": "по дате",
+            "byRate": "по оценке"
+        },
+        "textarea": {
+            "placeHolder": "оставить отзыв...",
+            "sendButton": "Отправить"
+        }
     }
 }

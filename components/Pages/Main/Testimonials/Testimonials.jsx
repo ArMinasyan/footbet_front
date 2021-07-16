@@ -5,6 +5,7 @@ import { Title } from '../common/Title/Title'
 import { Arrow } from './Arrows/Arrow'
 import { FeedBack } from './FeedBack/FeedBack'
 import { feedback_data } from './feed_back_data'
+import { LeaveComment } from './LeaveComment/LeaveComment'
 import { Pagination } from './Pagination/Pagination'
 import { Sorting } from './Sorting/Sorting'
 // styles
@@ -54,6 +55,7 @@ export function Testimonials() {
                             renderPagination={Pagination}
                             itemsToShow={1}
                             itemsToScroll={1}
+                            className={styles.carousel}
                         >
                             <div style={{ width: '100%' }}>
                                 {
@@ -88,6 +90,7 @@ export function Testimonials() {
                                 }
                             </div>
                         </Carousel>
+                        <LeaveComment />
                     </div>
                 </div>
             }
