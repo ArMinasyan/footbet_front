@@ -29,18 +29,23 @@ export function Modal({
     const node = useRef()
 
     const handleClose = e => {
-        if (node.current.contains(e.target)) {
+        if (node?.current?.contains(e.target)) {
             return;
         } else {
             setPageOverflow(false)
             onClose()
         }
-    }
+    },
+        dinamicTop = window.scrollY
 
     pageOverflow ? body.style.overflow = 'hidden' : body.style.overflow = 'visible'
 
     const modal = (
-        <div className={`${styles.modalConteiner} ${containerStyles}`}>
+        <div
+            className={`${styles.modalConteiner} ${containerStyles}`}
+            style={{
+                top: dinamicTop + 'px'
+            }}>
             <div
                 className={`${styles.modalContent} ${contentStyles}`}
                 style={otherStyles}

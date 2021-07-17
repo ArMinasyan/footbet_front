@@ -40,6 +40,7 @@ $contentHeight: 323px;
         width: get_percent($contentWidth, $containerWidth);
         height: get_percent($contentHeight, $containerHeight);
         border-radius: 8px;
+        cursor: pointer;
         p {
             @include arimo-font();
             padding: 3px;
@@ -49,7 +50,6 @@ $contentHeight: 323px;
             letter-spacing: 0.02em;
             text-align: left;
             background:rgba(0, 0, 0, 0.6); 
-            cursor: pointer;
             border-radius: 0 0 8px 8px;
         }
     }

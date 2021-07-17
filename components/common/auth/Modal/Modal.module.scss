@@ -4,7 +4,7 @@
 
 .modalConteiner {
     position: absolute;
-    top: 0;
+    // top: 0;
     left: 0;
     width: 100vw;
     min-height: 100vh;
@@ -12,6 +12,7 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(22, 23, 22, 0.4);
+    z-index: 1000;
 
     .modalContent {
         display: flex;
