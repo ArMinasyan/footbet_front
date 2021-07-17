@@ -14,7 +14,7 @@ export function Matches({ gameRulesState }) {
         [showGameRules, setShowGameRules] = useState(false)
 
     return (
-        <div className={styles.container}>
+        <div className={`${gameRulesState ? styles.container : styles.in_seperete_page}`}>
             <div className={styles.content}>
                 <Header
                     buttonsActivity={showTodayMatches}

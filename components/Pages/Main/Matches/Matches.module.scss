@@ -11,3 +11,13 @@
         width: get-vw(1593px);
     }
 }
+.in_seperete_page{
+    @include center();
+    width: 100%;
+    margin-top: 2.1%;
+    margin-bottom: 11.14%;
+    .content{
+        @include column-center();
+        width: get-vw(1593px);
+    }
+}
