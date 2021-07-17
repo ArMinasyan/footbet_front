@@ -1,5 +1,7 @@
 // hooks and helpers
 import { languages } from './LanguageDropConfigs/lang-configs'
+// translation 
+import useTranslation from 'next-translate/useTranslation'
 // styles 
 import styles from './BarItems.module.scss'
 // components
@@ -18,17 +20,22 @@ export function BarItems({
     loginModalHandle,
     bar_items }) {
 
-    
+
 
     const
-        languages_data = languages(),
+        languages_data = languages,
         [showDrop, setShowDrop] = useState(false),
         [languagesTitle, setLanguagesTitle] = useState(languages_data[1]),
         changeLangTitle = (event) => {
             let lang_title_data = languages_data.filter(el => el.lang === event.target.className)
             setLanguagesTitle(lang_title_data[0])
             setShowDrop(false)
-        }
+        },
+        { t } = useTranslation('common'),
+        translationPath = 'header.lang.',
+        translate = (key) => t(`${translationPath}${key}`)
+
+        console.log(languagesTitle.contentOnTitle);
 
     return (
         <div className={`${styles.bar_item_container} ${bar_items}`}>
@@ -67,7 +74,7 @@ export function BarItems({
                 >
                     <span>
                         {
-                            languagesTitle.contentOnTitle
+                            translate(`${languagesTitle.contentOnTitle}`)
                         }
                     </span>
                     <img

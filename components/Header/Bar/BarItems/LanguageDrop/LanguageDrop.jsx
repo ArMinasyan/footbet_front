@@ -1,6 +1,8 @@
 // hooks and helpers
 import { useRouter } from 'next/dist/client/router';
 import { useEffect, useRef } from 'react';
+// translation 
+import useTranslation from 'next-translate/useTranslation'
 // componetns
 import Link from 'next/link'
 // styles 
@@ -24,7 +26,11 @@ export function LanguageDrop({ onClose, click, data }) {
                 if (e.target.parentNode) return
             }
             onClose()
-        }
+        },
+        { t } = useTranslation('common'),
+        translationPath = 'header.lang.',
+        translate = (key) => t(`${translationPath}${key}`)
+
 
 
     return (
@@ -46,7 +52,7 @@ export function LanguageDrop({ onClose, click, data }) {
                                         className={`${el.lang}`}
                                     >
                                         {
-                                            el.contentOnDrop
+                                            translate(el.contentOnDrop)
                                         }
                                     </span>
                                     <img
