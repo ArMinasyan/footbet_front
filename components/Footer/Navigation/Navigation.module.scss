@@ -1,0 +1,13 @@
+@import "/styles/scss/scssExports";
+
+$containerWidth: 716px;
+
+.container {
+    @include flex-start();
+    align-items: flex-start;
+    width: 50%;
+    .content {
+        @include flex-between();
+        width: get_percent(431px, $containerWidth);
+    }
+}
