@@ -1,16 +1,23 @@
 // components
+import { Testimonials } from '../common/Testimonials/Testimonials'
 import { Matches } from './Matches/Matches'
 import { News } from './News/News'
 import { Prediction } from './Prediction/Prediction'
-import { Testimonials } from './Testimonials/Testimonials'
+
 
 export default function Main() {
     return (
         <>
             <News />
-            <Matches />
+            <Matches 
+                gameRulesState={true}
+            />
             <Prediction />
-            <Testimonials />
+            <Testimonials 
+                page={'home'}
+                locationInPage={'testimonials'}
+                textPathName={'.title'}
+            />
         </>
     )
 }

@@ -1,7 +1,7 @@
 // components
 import { useState } from 'react'
 import Carousel from 'react-elastic-carousel'
-import { Title } from '../common/Title/Title'
+import { Title } from '../Title/Title'
 import { Arrow } from './Arrows/Arrow'
 import { FeedBack } from './FeedBack/FeedBack'
 import { feedback_data } from './feed_back_data'
@@ -11,7 +11,11 @@ import { Sorting } from './Sorting/Sorting'
 // styles
 import styles from './Testimonials.module.scss'
 
-export function Testimonials() {
+export function Testimonials({
+    page,
+    locationInPage,
+    textPathName
+}) {
 
     const
         // states
@@ -38,8 +42,9 @@ export function Testimonials() {
             {feedBacks &&
                 <div className={styles.container}>
                     <Title
-                        locationInMainPage='testimonials'
-                        textPathName='.title'
+                        page={page}
+                        textPathName={textPathName}
+                        locationInPage={locationInPage}
                     />
                     <div className={styles.feed_backs_container}>
                         <Sorting

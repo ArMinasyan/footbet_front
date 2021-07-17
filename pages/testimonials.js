@@ -1,6 +1,6 @@
-import Testimonials from '/components/Pages/Testimonials/Testimonials'
+import FeedBacks from '/components/Pages/FeedBacks/FeedBacks'
 
-const TestimonialsPage = () => <Testimonials />
+const TestimonialsPage = () => <FeedBacks />
 
 TestimonialsPage.layout = "withoutPhoto";
 

@@ -19,8 +19,8 @@ export function LeaveComment() {
         stars = [0, 1, 2, 3, 4],
         [simulator, setSimulator] = useState(0),
         // translation consfigs
-        { t } = useTranslation('home'),
-        translationPath = 'testimonials.textarea.',
+        { t } = useTranslation('common'),
+        translationPath = 'commons.',
         translate = key => t(`${translationPath}${key}`),
         // yup configs
         schema = yup.object().shape({
@@ -72,7 +72,7 @@ export function LeaveComment() {
                 <div className={styles.button_container}>
                     <button>
                         {
-                            translate('sendButton')
+                            translate('send')
                         }
                     </button>
                 </div>

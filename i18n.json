@@ -11,6 +11,12 @@
     ],
     "/": [
       "home"
+    ],
+    "/testimonials": [
+      "testimonials"
+    ],
+    "/matches":[
+      "home"
     ]
   }
 }

@@ -1,5 +1,5 @@
 // components
-import { Title } from "../../../common/Title/Title";
+import { Title } from "../../../../common/Title/Title";
 import { DayChangeButton } from './DayChangeButton/DayChangeButton';
 // styles
 import styles from './TMHeader.module.scss'
@@ -44,7 +44,8 @@ export function TMHeader({
         <div className={styles.container}>
             <div className={styles.content}>
                 <Title
-                    locationInMainPage={'matches'}
+                    page={'home'}
+                    locationInPage={'matches'}
                     textPathName={'.TM.headerTitle'}
                     textStyles={{
                         fontSize: '29px',

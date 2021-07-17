@@ -6,7 +6,7 @@ import { useState } from "react";
 // styles 
 import styles from './Matches.module.scss'
 
-export function Matches() {
+export function Matches({ gameRulesState }) {
 
     const
         // states
@@ -26,6 +26,7 @@ export function Matches() {
                         setShowGameRules(true)
                         setShowTodayMatches(false)
                     }}
+                    gameRulesState={gameRulesState}
                 />
                 {showTodayMatches && <TodayMatches />}
                 {showGameRules && <GameRules />}
