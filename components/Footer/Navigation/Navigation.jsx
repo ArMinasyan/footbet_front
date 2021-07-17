@@ -13,6 +13,7 @@ export function Navigation() {
                         <List
                             list_items={el}
                             bordersActive={i === 1 ? true : false}
+                            key={Math.random()}
                         />
                     ))
                 }

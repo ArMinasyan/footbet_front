@@ -1,6 +1,6 @@
 @import "/styles/scss/scssExports";
 
-$footerBAckColor: rgba(255, 255, 255, 0.09);
+$footerBackColor: rgba(255, 255, 255, 0.09);
 $contentWidth: 1432px;
 
 .container {
@@ -10,9 +10,11 @@ $contentWidth: 1432px;
     }
     @include flex-end();
     height: get-vw(235px);
-    background-color: $footerBAckColor;
+    background-color: $footerBackColor;
+    bottom: 0;
     .content {
         @include center();
         width: get_percent($contentWidth);
+        height: 100%;
     }
 }

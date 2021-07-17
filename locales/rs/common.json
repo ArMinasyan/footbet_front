@@ -1,6 +1,6 @@
 {
     "commons": {
-        "send":"Отправить"
+        "send": "Отправить"
     },
     "header": {
         "register": "Регистрация",
@@ -68,6 +68,16 @@
             "deu": {
                 "onTitle": "Deu.",
                 "onDrop": "Deutsche"
+            }
+        }
+    },
+    "footer": {
+        "social_media_paymants": {
+            "SM": {
+                "title": "Мы в соц. сетях"
+            },
+            "PS": {
+                "title": "Платежные системы"
             }
         }
     },

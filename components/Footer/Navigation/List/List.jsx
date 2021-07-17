@@ -10,7 +10,10 @@ export function List({
             <ul>
                 {
                     list_items.map(el => (
-                        <Link href={el.link}>
+                        <Link
+                            href={el.link}
+                            key={Math.random()}
+                        >
                             <li>
                                 {
                                     el.name
