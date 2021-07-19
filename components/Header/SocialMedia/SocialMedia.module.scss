@@ -1,0 +1,8 @@
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+$contentWidth: 1872px;
+
+.container {
+    width: get_percent(48px);
+    height: get-vw(314px, 1920px);
+}

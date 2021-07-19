@@ -1,0 +1,114 @@
+// <!----- flex -----> //
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+@mixin flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+@mixin align-start {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+@mixin align-end {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+@mixin flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@mixin column-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin column-start {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+@mixin column-end {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+@mixin column-between {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    flex-direction: column;
+}
+@mixin column-around {
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    flex-direction: column;
+}
+@mixin animation {
+    animation-name: transition;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+
+    @keyframes transition {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+@mixin animation-left-right {
+    animation-name: leftRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+
+    @keyframes leftRight {
+        from {
+            right: -35%;
+        }
+        to {
+            right: 33.5%;
+        }
+    }
+}
+@mixin animation-right-left {
+    animation-name: rightLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+
+    @keyframes rightLeft {
+        from {
+            right: 33.5%;
+        }
+        to {
+            right: -35%;
+        }
+    }
+}

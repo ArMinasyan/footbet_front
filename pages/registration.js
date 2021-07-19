@@ -2,6 +2,6 @@ import { Index } from '/components/Registration/Index'
 
 const RegistrationPage = () => <Index />;
 
-RegistrationPage.layout = "main";
+RegistrationPage.layout = "register";
 
 export default RegistrationPage;

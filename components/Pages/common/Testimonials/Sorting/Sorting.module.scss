@@ -1,0 +1,38 @@
+@import "/styles/scss/scssExports";
+
+$parentWidth: 1592px;
+$contentWidth: 492px;
+
+.container {
+    @include flex-between();
+    width: get_percent($contentWidth, $parentWidth);
+    margin-bottom: 2.83%;
+    .name {
+        span {
+            @include arsenal-font();
+            font-size: 27px;
+            line-height: 34px;
+            letter-spacing: 0.05em;
+        }
+    }
+    .bar {
+        @include flex-between();
+        width: get_percent(252px, $contentWidth);
+        p {
+            @include center();
+            width: 50%;
+            @include arsenal-font();
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 28px;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+        }
+        .byDate {
+            border-right: 2px solid #b00a47;
+        }
+        .active {
+            color: #b00a47;
+        }
+    }
+}

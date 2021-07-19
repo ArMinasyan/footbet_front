@@ -1,0 +1,7 @@
+@import '/styles/scss/scssExports';
+
+.container {
+    @include flex-around();
+    margin-top: 12px;
+    width: 100%;
+}

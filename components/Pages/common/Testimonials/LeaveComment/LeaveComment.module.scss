@@ -1,0 +1,65 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    width: 100%;
+    .stars_container {
+        width: 100%;
+        .stars_content {
+            width: 100%;
+            padding-left: 2.8%;
+            padding-bottom: 0.4%;
+            .stars_area {
+                width: 100%;
+                img {
+                    margin-right: 10px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    form {
+        @include column-center();
+        width: 100%;
+        .textarea_container {
+            @include center();
+            width: 100%;
+            textarea {
+                width: 100% !important;
+                height: auto !important;
+                padding: 25px 45px 25px 45px;
+                resize: none;
+                background: rgba(255, 255, 255, 0.11);
+                opacity: 0.5;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 23px;
+                color: rgba(255, 255, 255, 0.4);
+                @include arsenal-font();
+                font-size: 18px;
+                line-height: 23px;
+                letter-spacing: 0.15em;
+                box-sizing: border-box;
+                outline: none;
+            }
+        }
+        .button_container {
+            @include center();
+            width: 100%;
+            margin-top: 2.01%;
+            button {
+                padding: 0.945% 2.2%;
+                background: none;
+                color: #ffffff;
+                border: 1px solid #ffffff;
+                border-radius: 8px;
+                @include arimo-font();
+                font-size: 20px;
+                line-height: 23px;
+                letter-spacing: 0.1em;
+                cursor: pointer;
+                box-sizing: border-box;
+            }
+        }
+    }
+}

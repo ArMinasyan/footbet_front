@@ -1,0 +1,113 @@
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
+
+$modalHeight: 601px;
+$modalWidth: 634px;
+$contentWidth: 401px;
+$formWidth: 378px;
+$inputWidth: 47px;
+$backgroundColor: rgba(255, 255, 251, 0.09);
+$inputBackColor: rgba(196, 196, 196, 0.2);
+$inputBorderColor: rgba(255, 255, 255, 0.5);
+$errorInputBackColor: rgba(158, 9, 74, 0.13);
+$errorInputBorderColor: #9e094a21;
+
+@mixin input {
+    width: get-percent($inputWidth, $formWidth) !important;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 4.3% 4.8% !important;
+    color: rgba(255, 255, 255, 0.31) !important;
+    box-sizing: border-box;
+    border-radius: 8px;
+    outline: none;
+}
+
+@mixin success {
+    border: 1px solid $inputBorderColor;
+    background: $inputBackColor;
+}
+
+@mixin error {
+    border: 1px solid $errorInputBorderColor;
+    background: $errorInputBackColor;
+}
+
+@mixin successInput {
+    @include input();
+    @include success();
+}
+
+@mixin errorInput {
+    @include input();
+    @include error();
+}
+
+.container {
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arimo;
+    }
+
+    width: get-percent($contentWidth, $modalWidth);
+    margin: get-percent(162px, $modalWidth) 0;
+    @include column-center();
+
+    .title {
+        width: 100%;
+        p {
+            font-size: 30px;
+            line-height: 34px;
+            letter-spacing: 0.1em;
+        }
+    }
+    form {
+        width: get-percent($formWidth, $contentWidth);
+        margin-top: 39px;
+
+        .description {
+            @include center();
+            p {
+                font-family: Arimo;
+                font-size: 18px;
+                line-height: 21px;
+            }
+        }
+
+        .inputs {
+            width: 100%;
+            margin-top: 39px;
+            @include flex-around;
+
+            .error_input {
+                @include errorInput();
+            }
+
+            .success_input {
+                @include successInput();
+            }
+        }
+    }
+    .submit {
+        @include center();
+        width: 100%;
+        margin-top: 39px;
+        button {
+            width: 100%;
+            padding: 3.8%;
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: 0.14em;
+            color: #ffffff;
+            background: $buttonsColor;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}

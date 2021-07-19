@@ -1,0 +1,6 @@
+@import '/styles/scss/scssExports';
+
+.container{
+    @include column-center();
+    margin-top: 2.11%;
+}

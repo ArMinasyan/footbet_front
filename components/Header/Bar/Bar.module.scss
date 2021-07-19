@@ -1,8 +1,6 @@
-@use 'sass:math';
-
-@function get-width($px, $vw-context: 1920px) {
-    @return math.div($px * 100%, $vw-context);
-}
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
 
 @mixin center {
     display: flex;
@@ -13,5 +11,5 @@
 .bar_container {
     @include center();
     justify-content: space-between;
-    width: get-width(1740px, 1920px);
+    width: get_percent(1740px);
 }

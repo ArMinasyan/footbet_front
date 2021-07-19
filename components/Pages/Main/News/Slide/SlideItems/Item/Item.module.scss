@@ -1,0 +1,66 @@
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
+@import "/styles/scss/_fonts.scss";
+
+$borderColor: #9e094a;
+$containerWidth: 434px;
+$containerHeight: 366px;
+$contentWidth: 372px;
+$contentHeight: 323px;
+
+@mixin top-lines($width) {
+    width: $width;
+    margin-bottom: 8px;
+    border: 1px solid $borderColor;
+}
+
+@mixin bottom-lines($width) {
+    width: $width;
+    margin-top: 8px;
+    border: 1px solid $borderColor;
+}
+
+.container {
+    @include column-center();
+    width: get-vw($containerWidth);
+    height: get-vw($containerHeight);
+    .topLines {
+        @include column-center();
+        width: 100%;
+        .lineOne {
+            @include top-lines(80%);
+        }
+        .lineTwo {
+            @include top-lines(100%);
+        }
+    }
+    .content {
+        @include align-end();
+        width: get_percent($contentWidth, $containerWidth);
+        height: get_percent($contentHeight, $containerHeight);
+        border-radius: 8px;
+        cursor: pointer;
+        p {
+            @include arimo-font();
+            padding: 3px;
+            width: 100%;
+            font-size: 20px;
+            line-height: 134%;
+            letter-spacing: 0.02em;
+            text-align: left;
+            background:rgba(0, 0, 0, 0.6); 
+            border-radius: 0 0 8px 8px;
+        }
+    }
+    .bottomLines {
+        @include column-center();
+        width: 100%;
+        .lineOne {
+            @include bottom-lines(100%);
+        }
+        .lineTwo {
+            @include bottom-lines(80%);
+        }
+    }
+}

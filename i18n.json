@@ -1,7 +1,22 @@
 {
-  "locales": ["rs", "am", "en"],
+  "locales": [
+    "rs",
+    "am",
+    "en"
+  ],
   "defaultLocale": "rs",
   "pages": {
-    "*": ["common"]
+    "*": [
+      "common"
+    ],
+    "/": [
+      "home"
+    ],
+    "/testimonials": [
+      "testimonials"
+    ],
+    "/matches":[
+      "home"
+    ]
   }
 }

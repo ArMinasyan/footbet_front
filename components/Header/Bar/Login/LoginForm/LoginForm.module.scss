@@ -1,11 +1,90 @@
-.container {
-    width: 100%;
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
+$modalHeight: 601px;
 
-    input {
-        width: 100% !important;
-        color: rgba(255, 255, 255, 0.31) !important;
-        background-color: rgba(255, 255, 255, 0.12) !important;
+.container {
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arimo;
+    }
+    width: 100%;
+    margin-top: 39px;
+    @include column-center();
+
+    .title {
+        @include center();
+        width: 100%;
+        p {
+            font-size: 30px;
+            line-height: 34px;
+            letter-spacing: 0.1em;
+        }
     }
 
-    .form_title {}
+    form {
+        width: 100%;
+        margin-top: 18px;
+        .inputs {
+            width: 100%;
+            input {
+                margin-top: 21px;
+                font-size: 16px;
+                line-height: 18px;
+                padding: 3% 4.8% !important;
+                width: 100% !important;
+                color: rgba(255, 255, 255, 0.31) !important;
+                background-color: rgba(255, 255, 255, 0.12);
+            }
+        }
+
+        .reset_password {
+            @include flex-start();
+            width: 100%;
+            margin: 10px 0 0 7px;
+            span {
+                cursor: pointer;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.05em;
+                font-family: Arimo;
+            }
+        }
+        .submit {
+            @include center();
+            width: 100%;
+            margin-top: 44px;
+            button {
+                width: 100%;
+                padding: 2.7%;
+                font-size: 20px;
+                line-height: 23px;
+                letter-spacing: 0.14em;
+                color: #ffffff;
+                background: $buttonsColor;
+                border-radius: 8px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+    }
+    .to_register_container {
+        @include center();
+        width: 100%;
+        margin-top: 25px;
+        .to_register_content {
+            font-family: Arimo;
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 0.05em;
+
+            .to_register_text {
+                color: $buttonsColor;
+                cursor: pointer;
+            }
+        }
+    }
 }

@@ -1,0 +1,24 @@
+@import "/styles/scss/_scssExports.scss";
+
+$titleBackground: rgba(42, 64, 90, 0.2);
+$containerWidth: 1593px;
+$contentWidth: 1407px;
+
+.container {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    @include center();
+    width: 100%;
+    background-color: $titleBackground;
+    padding: 6px 0;
+    p {
+        width: 7.323917%;
+        @include arsenal-font();
+        text-align: center;
+        font-size: 19px;
+        line-height: 24px;
+        letter-spacing: 0.07em;
+    }
+}

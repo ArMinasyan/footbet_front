@@ -3,15 +3,23 @@ import styles from './Modal.module.scss'
 import { createPortal } from 'react-dom'
 
 
-export function Modal({ onClose, children }) {
+export function Modal({
+    onClose,
+    children,
+    containerStyles = null,
+    contentStyles = null,
+    otherStyles = null }) {
+
+
 
     const
-        [showModal, setShowModal] = useState(false)
-
+        [showModal, setShowModal] = useState(false),
+        [pageOverflow, setPageOverflow] = useState(false),
+        body = document.querySelector('body')
 
     useEffect(() => {
         setShowModal(true)
-
+        setPageOverflow(true)
         document.addEventListener("mousedown", handleClose);
         return () => {
             document.removeEventListener("mousedown", handleClose);
@@ -21,15 +29,28 @@ export function Modal({ onClose, children }) {
     const node = useRef()
 
     const handleClose = e => {
-        if (node.current.contains(e.target)) {
+        if (node?.current?.contains(e.target)) {
             return;
+        } else {
+            setPageOverflow(false)
+            onClose()
         }
-        onClose()
-    }
+    },
+        dinamicTop = window.scrollY
+
+    pageOverflow ? body.style.overflow = 'hidden' : body.style.overflow = 'visible'
 
     const modal = (
-        <div className={styles.modalConteiner}>
-            <div className={styles.modalContent} ref={node} >
+        <div
+            className={`${styles.modalConteiner} ${containerStyles}`}
+            style={{
+                top: dinamicTop + 'px'
+            }}>
+            <div
+                className={`${styles.modalContent} ${contentStyles}`}
+                style={otherStyles}
+                ref={node}
+            >
                 {
                     children
                 }
@@ -37,9 +58,11 @@ export function Modal({ onClose, children }) {
         </div>
     )
 
-    if (showModal) return createPortal(
-        modal,
-        document.getElementById('modal-conteiner')
-    )
+    if (showModal) {
+        return createPortal(
+            modal,
+            document.getElementById('modal-conteiner')
+        )
+    }
     else return null
 }

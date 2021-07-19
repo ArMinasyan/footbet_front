@@ -1,26 +1,18 @@
-$page_color:#12112C;
-
-@use 'sass:math';
-
-@function get_percent($px, $context: 1920px) {
-    @return math.div($px * 100%, $context);
-}
-
-@function get_vw($px, $context: 1920px) {
-    @return math.div($px * 100vw, $context);
-}
-
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
 
 .modalConteiner {
     position: absolute;
-    top: 0;
+    // top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(22, 23, 22, 0.4);
+    z-index: 1000;
 
     .modalContent {
         display: flex;
@@ -31,8 +23,9 @@ $page_color:#12112C;
         min-width: 300px;
         height: auto;
         border-radius: 22px;
-        background: $page_color;
+        background: $primaryBackground;
         z-index: 100;
         border-top: 20px;
     }
+    @include animation;
 }

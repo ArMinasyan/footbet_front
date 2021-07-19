@@ -14,7 +14,7 @@ export function FileInput({ id, type, other }) {
 
     return (
         <div className={styles.uploadImageConteiner}>
-            <label htmlFor="file">
+            <label htmlFor={id}>
                 <div className={styles.uploadImageContent}>
                     {imgInput ?
                         <span>{imgInput.name}</span>

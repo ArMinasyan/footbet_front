@@ -1,0 +1,15 @@
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
+
+.container{
+    width: 100%;
+    @include column-center();
+
+    .buttons{
+        @include flex-evenly();
+        width: 50%;
+        height: get_vw(57px);
+        margin-top: get_percent(60px);
+    }
+}

@@ -1,28 +1,22 @@
-@use "sass:math";
-
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
+$conteinerWidth: 752px;
 
 .conteiner {
     @include center();
-    padding-top: 1%;
     width: 100%;
+
     button {
-        width: get-vw(265px);
         cursor: pointer;
-        background: #9E094A;
-        outline: none;
+        background: #9e094a;
         border-radius: 8px;
-        padding: 2% 4%;
-        font-family: Arsenal;
-        font-style: normal;
-        font-weight: normal;
+        padding: 2.7% 4.7%;
         font-size: 18px;
         line-height: 23px;
         letter-spacing: 0.12em;
-        color: #FFFFFF;
+        color: #ffffff;
+        border: none;
+        outline: none;
     }
 }

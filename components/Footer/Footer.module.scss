@@ -1,0 +1,20 @@
+@import "/styles/scss/scssExports";
+
+$footerBackColor: rgba(255, 255, 255, 0.09);
+$contentWidth: 1432px;
+
+.container {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    @include flex-end();
+    height: get-vw(235px);
+    background-color: $footerBackColor;
+    bottom: 0;
+    .content {
+        @include center();
+        width: get_percent($contentWidth);
+        height: 100%;
+    }
+}

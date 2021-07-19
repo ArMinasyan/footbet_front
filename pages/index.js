@@ -1,4 +1,6 @@
-const IndexPage = () => <h1>Index page</h1>;
+import Main from '/components/Pages/Main/Main'
+
+const IndexPage = () => <Main />
 
 IndexPage.layout = "main";
 

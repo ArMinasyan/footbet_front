@@ -31,7 +31,7 @@ export function Form({ title }) {
             name: yup
                 .string()
                 .required()
-                .matches(/(^[A-Za-z]{1,16})([ ]{0,1})([A-Za-z]{1,16})?([ ]{0,1})?([A-Za-z]{1,16})?([ ]{0,1})?([A-Za-z]{1,16})/mg),
+                .matches(/(^[A-Za-z]{1,8})([ ]{0,1})([A-Za-z]{1,10})/mg),
             birthDate: yup
                 .string()
                 .required()
@@ -121,13 +121,13 @@ export function Form({ title }) {
         }
 
     return (
-        <div className={styles.conteiner}>
-            <div>
-                <h1>
+        <div className={styles.container}>
+            <div className={styles.title_container}>
+                <p>
                     {
                         title
                     }
-                </h1>
+                </p>
             </div>
             <form
                 onSubmit={(handleSubmit(submit))}
@@ -182,7 +182,7 @@ export function Form({ title }) {
                     other={register('password')}
                 />
                 <Button
-                    title={translate('buttonTitle')}
+                    content={translate('buttonTitle')}
                 />
             </form>
         </div>

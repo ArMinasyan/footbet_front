@@ -1,7 +1,12 @@
-import MainLayout from "./MainLayout";
+import Main from "./Main";
+import WithoutPhoto from "./WithoutPhoto";
+import Register from "./Register";
+import Error from "./Error"
 
 const layouts = {
-  main: MainLayout,
+  main: Main,
+  withoutPhoto: WithoutPhoto,
+  register: Register
 };
 
 const LayoutWrapper = (props) => {
@@ -12,7 +17,7 @@ const LayoutWrapper = (props) => {
     return <Layout {...props}>{props.children}</Layout>;
   }
   // if not render children with fragment
-  return <MainLayout {...props}>{props.children}</MainLayout>;
+  return <Error {...props}>{props.children}</Error>;
 };
 
 export default LayoutWrapper;

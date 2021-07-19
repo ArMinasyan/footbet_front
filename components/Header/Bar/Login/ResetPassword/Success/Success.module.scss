@@ -1,0 +1,33 @@
+@import "/styles/scss/_functions";
+@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/_variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
+$modalHeight: 601px;
+$modalWidth: 634px;
+
+.container {
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arimo;
+    }
+    width: get-percent(362px, $modalWidth);
+    margin: 183px 135px;
+    @include column_center();
+
+    .title {
+        width: 100%;
+        @include center();
+        p {
+            font-family: Arimo;
+            font-size: 30px;
+            line-height: 34px;
+            letter-spacing: 0.1em;
+        }
+    }
+    .icon_container {
+        margin-top: 67px;
+        img {
+        }
+    }
+}

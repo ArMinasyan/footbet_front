@@ -1,0 +1,14 @@
+@import "/styles//scss/scssExports";
+
+.container {
+    @include column-center();
+    margin-top: 2.102%;
+    margin-bottom: 11%;
+
+    .feed_backs_container {
+        width: get-vw(1592px);
+    }
+    .carousel {
+        position: relative;
+    }
+}
