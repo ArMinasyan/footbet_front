@@ -1,18 +1,19 @@
+import { useState } from 'react'
 import { ItemModal } from '../ItemModal/ItemModal'
 import styles from './Item.module.scss'
 
 
 export function Item({
     img_src,
-    description,
-    click,
-    showModal,
-    onModalClose }) {
+    title,
+    description }) {
 
-    const style = {
-        backgroundImage: "url(" + img_src + ")",
-        backgroundSize: "cover"
-    }
+    const
+        style = {
+            backgroundImage: "url(" + img_src + ")",
+            backgroundSize: "cover"
+        },
+        [showItemModal, setShowItemModal] = useState(false)
 
     return (
         <>
@@ -24,11 +25,11 @@ export function Item({
                 <div
                     className={styles.content}
                     style={style}
-                    onClick={click}
+                    onClick={() => setShowItemModal(true)}
                 >
                     <p>
                         {
-                            description
+                            title
                         }
                     </p>
                 </div>
@@ -38,7 +39,13 @@ export function Item({
                 </div>
 
             </div>
-            {showModal && <ItemModal onModalClose={onModalClose} />}
+            {showItemModal &&
+                <ItemModal
+                    onModalClose={() => setShowItemModal(false)}
+                    img={img_src}
+                    title={title}
+                    description={description}
+                />}
         </>
     )
 }

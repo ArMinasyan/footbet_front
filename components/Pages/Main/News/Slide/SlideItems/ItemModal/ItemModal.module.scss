@@ -1,0 +1,23 @@
+@import "/styles/scss/scssExports";
+
+.Mcontainer {
+    .Mcontent {
+        @include center();
+        background: none;
+        .container{
+            @include column-center();
+            .img_content{
+
+            }
+            .description_content{
+                @include column-center();
+                .title{
+
+                }
+                .description{
+
+                }
+            }
+        }
+    }
+}

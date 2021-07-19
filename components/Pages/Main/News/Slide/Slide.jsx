@@ -16,8 +16,8 @@ export function Slide() {
 
     const
         // consts and states 
-        slide_data = slide_show_data(),
-        [showItemModal, setShowItemModal] = useState(false)
+        slide_data = slide_show_data()
+
 
     return (
         <>
@@ -34,11 +34,9 @@ export function Slide() {
                         slide_data.map(el => (
                             <Item
                                 img_src={el.url}
+                                title={el.title}
                                 description={el.description}
                                 key={Math.random()}
-                                showModal={showItemModal}
-                                click={() => setShowItemModal(true)}
-                                onModalClose={() => setShowItemModal(false)}
                             />
                         ))
                     }
