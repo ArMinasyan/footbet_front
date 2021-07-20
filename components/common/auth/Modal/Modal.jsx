@@ -8,7 +8,8 @@ export function Modal({
     children,
     containerStyles = null,
     contentStyles = null,
-    otherStyles = null }) {
+    otherStyles = null,
+    portalLocation = 'modal-conteiner' }) {
 
 
 
@@ -61,7 +62,7 @@ export function Modal({
     if (showModal) {
         return createPortal(
             modal,
-            document.getElementById('modal-conteiner')
+            document.getElementById(portalLocation)
         )
     }
     else return null

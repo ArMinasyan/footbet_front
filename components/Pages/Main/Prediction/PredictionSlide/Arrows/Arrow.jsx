@@ -12,7 +12,8 @@ export function Arrow({ type, onClick, isEdge }) {
                 src={arrowLeft.src}
                 style={{
                     cursor: 'pointer',
-                    zIndex: 10
+                    zIndex: 10,
+                    height: '100%'
                 }}
                 alt="arrow-left"
             />
@@ -21,7 +22,8 @@ export function Arrow({ type, onClick, isEdge }) {
                 src={arrowRight.src}
                 style={{
                     cursor: 'pointer',
-                    zIndex: 10
+                    zIndex: 10,
+                    height: '100%'
                 }}
                 alt="arrow-right"
             />,
@@ -30,9 +32,10 @@ export function Arrow({ type, onClick, isEdge }) {
                 src={arrowRightVector.src}
                 style={{
                     cursor: 'pointer',
-                    position:'absolute',
-                    left:'35%',
-                    top:'50%',
+                    position: 'absolute',
+                    left: '35%',
+                    top: '50%'
+
                 }}
                 alt="arrow-left"
             />
@@ -41,16 +44,18 @@ export function Arrow({ type, onClick, isEdge }) {
                 src={arrowLeftVector.src}
                 style={{
                     cursor: 'pointer',
-                    position:'absolute',
-                    top:'50%',
-                    left:'35%'
+                    position: 'absolute',
+                    top: '50%',
+                    left: '35%'
+
                 }}
                 alt="arrow-right"
             />,
 
         styles = {
             position: 'relative',
-            bottom:0
+            height: '100%',
+            bottom: 0
         }
 
     return (

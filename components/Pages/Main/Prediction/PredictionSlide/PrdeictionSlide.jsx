@@ -27,8 +27,6 @@ export function PrdeictionSlide() {
                 pagination={false}
                 renderArrow={Arrow}
                 itemPadding={[115, 0, 43, 0]}
-                enableAutoPlay={true}
-                autoPlaySpeed={5000}
             >
                 {
                     pred_slide_data.map(el => (
@@ -41,6 +39,8 @@ export function PrdeictionSlide() {
                             buyButtonName={el.buyButtonName}
                             locationInMainPage={'prediction'}
                             expiryTimestamp={time}
+                            prediction={el.prediction}
+                            ordinar={el.ordinar}
                             key={Math.random()}
                         />
                     ))

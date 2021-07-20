@@ -1,0 +1,68 @@
+@import "/styles/scss/scssExports";
+
+$backColor: rgba(255, 255, 255, 0.13);
+$containerWidth: 501px;
+$parentWidth: 914px;
+
+.container {
+    width: $containerWidth;
+    margin: auto;
+    background-color: $backColor;
+    border-radius: 8px;
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    .content {
+        @include column-center();
+        .top {
+            @include center();
+            margin-top: 15px;
+            .team {
+                @include column-center();
+                img {
+                    width: 65px;
+                    height: 65px;
+                }
+                p {
+                    @include arsenal-font();
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 0.05em;
+                }
+            }
+            .vs {
+                margin: 0 23px;
+                p {
+                    @include arimo-font();
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+            }
+        }
+        .bottom {
+            margin-top: 17px;
+            margin-bottom: 6px;
+            height: 39px;
+            @include column-center();
+            justify-content: space-between;
+            .prediction {
+                @include arimo-font();
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 17px;
+                text-align: center;
+            }
+            .ordinar {
+                @include arimo-font();
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 17px;
+                text-align: center;
+                color: $buttonsColor;
+            }
+        }
+    }
+    @include animation();
+}
