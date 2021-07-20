@@ -1,0 +1,12 @@
+@import '/styles/scss/scssExports';
+
+
+
+.container{
+    width: 100%;
+    margin-top: 2.13%;
+    position: relative;
+    background-color: $silver;
+
+    @include animation();
+}

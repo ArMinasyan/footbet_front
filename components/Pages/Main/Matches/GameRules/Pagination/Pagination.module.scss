@@ -1,0 +1,20 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.07% 0;
+    .round {
+        width: 6px;
+        height: 6px;
+        margin-right: get_percent(8px) !important;
+        border-radius: 50%;
+        background-color: white;
+        cursor: pointer;
+    }
+    .active {
+        background-color: $buttonsColor;
+    }
+}

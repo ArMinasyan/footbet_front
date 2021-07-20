@@ -1,0 +1,19 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    width: 100%;
+    .title {
+        @include arsenal-font();
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 26px;
+        letter-spacing: 0.06em;
+    }
+    .body {
+        @include arsenal-font();
+        margin: 16px 0;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0.06em;
+    }
+}
