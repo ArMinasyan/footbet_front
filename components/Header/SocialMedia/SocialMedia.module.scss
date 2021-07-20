@@ -1,8 +1,10 @@
-@import "/styles/scss/_functions";
-@import "/styles/scss/_mixins.scss";
+@import '/styles/scss/scssExports';
 $contentWidth: 1872px;
 
 .container {
     width: get_percent(48px);
     height: get-vw(314px, 1920px);
+    @include noteBook{
+        display: none;
+    }
 }

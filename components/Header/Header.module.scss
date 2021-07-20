@@ -1,5 +1,4 @@
-@import "/styles/scss/_functions";
-@import "/styles/scss/_mixins.scss";
+@import "/styles/scss/scssExports";
 $bg-url: url("../../public/images/header/header_back.png");
 
 .header_container_big {
@@ -19,6 +18,9 @@ $bg-url: url("../../public/images/header/header_back.png");
             height: get-vw(666px);
             background-image: $bg-url;
             background-size: cover;
+            @include noteBook {
+                width: 100%;
+            }
 
             .bar_conteiner {
                 width: 100%;
