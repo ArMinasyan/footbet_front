@@ -1,5 +1,5 @@
 // hooks
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 //styles
 import styles from './Header.module.scss'
 // components
@@ -10,7 +10,6 @@ import { SocialMedia } from './SocialMedia/SocialMedia'
 import footballer from '/public/images/header/footballer.svg'
 
 export function Header({ mainsPages }) {
-   
 
     return (
         <>
@@ -37,6 +36,7 @@ export function Header({ mainsPages }) {
                 <div className={styles.header_container_small}>
                     <Bar />
                     <NavBar />
+                    <p>{name}</p>
                 </div>
             }
         </>

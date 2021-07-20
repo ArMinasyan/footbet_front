@@ -47,7 +47,8 @@ function LoginForm({ onModalClose, handleResetPassModal }) {
             console.log(data)
             dispatch(login({
                 email: data.email,
-                password : data.password
+                password: data.password,
+                logined: true
             }))
         };
 
@@ -97,4 +98,4 @@ function LoginForm({ onModalClose, handleResetPassModal }) {
     )
 }
 
-export default connect()(LoginForm)
+export default LoginForm

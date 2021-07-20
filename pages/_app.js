@@ -2,10 +2,10 @@ import './../styles/globals.css'
 import Head from 'next/head'
 import LayoutWrapper from './../layouts/layout-wrapper';
 import { Provider } from 'react-redux'
-import withRedux, { createWrapper } from 'next-redux-wrapper'
-import  store from '../redux/store'
+import store from '../redux/store'
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
+
   return (
     <Provider store={store}>
       <Head>
@@ -18,8 +18,3 @@ function MyApp({ Component, pageProps }) {
     </Provider>
   )
 }
-
-const makeStore = () => store
-const wrapper = createWrapper(makeStore);
-
-export default wrapper.withRedux(MyApp);
