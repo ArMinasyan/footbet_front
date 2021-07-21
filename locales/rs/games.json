@@ -1,0 +1,10 @@
+{
+    "header": {
+        "title": "Игры",
+        "barButtons": {
+            "express": "Эспресс",
+            "ordinar": "Ординар",
+            "bestStrategy": "Беспроигрышная стратегия"
+        }
+    }
+}

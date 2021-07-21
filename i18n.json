@@ -17,6 +17,9 @@
     ],
     "/matches":[
       "home"
+    ],
+    "/games":[
+      "games"
     ]
   }
 }
