@@ -23,7 +23,7 @@ export function NavBar() {
         // router
         router = useRouter(),
         // nav bar buttons configs
-        buttons = [
+        buttonsInHomePage = [
             {
                 key: Math.random(),
                 frstContent: translate('main'),
@@ -62,6 +62,40 @@ export function NavBar() {
                 href: '',
                 click: () => setShowContactsModal(true)
             },
+        ],
+        buttons = [
+            {
+                key: Math.random(),
+                frstContent: translate('main'),
+                href: '/'
+            },
+            {
+                key: Math.random(),
+                frstContent: translate('games'),
+                href: '/games'
+            },
+            {
+                key: Math.random(),
+                frstContent: translate('prediction.frs'),
+                secContent: translate('prediction.sec'),
+                href: '/prediction'
+            },
+            {
+                key: Math.random(),
+                frstContent: translate('testimonials'),
+                href: '/testimonials'
+            },
+            {
+                key: Math.random(),
+                frstContent: translate('aboutUs'),
+                href: '/aboutUs'
+            },
+            {
+                key: Math.random(),
+                frstContent: translate('contacts'),
+                href: '',
+                click: () => setShowContactsModal(true)
+            },
         ]
 
     return (
@@ -69,13 +103,13 @@ export function NavBar() {
             <div className={styles.container}>
                 <div className={styles.content}>
                     {
-                        buttons.map(el => (
+                        (router.pathname === '/' ? buttonsInHomePage : buttons).map(el => (
                             <Button
                                 contentFrstP={el.frstContent}
                                 contentSecP={el.secContent}
                                 href={el.href}
                                 key={el.key}
-                                active={router.pathname === el.href ? 'true' : null }
+                                active={router.pathname === el.href ? 'true' : null}
                                 click={el.click && el.click}
                             />
                         ))

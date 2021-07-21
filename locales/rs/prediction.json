@@ -1,0 +1,18 @@
+{
+    "header": {
+        "barButtons": {
+            "express": "Прогнозы",
+            "ordinar": "Оплата"
+        }
+    },
+    "tabs": {
+        "header": {
+            "prediction": "прогноз",
+            "type":"тип",
+            "date": "дата",
+            "time": "время",
+            "coeficent": "коэф.",
+            "price": "цена"
+        }
+    }
+}
