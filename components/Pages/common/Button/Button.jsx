@@ -18,8 +18,8 @@ export function Button({
         translate = key => t(`${translationPath}${key}`)
 
     return (
-        <div className={`${styles.container} ${active && styles.active}`}>
-            <div className={ `${styles.content} ${aditionalStyles}` }
+        <div className={`${styles.container} ${aditionalStyles} ${active ? styles.active : ''}`}>
+            <div className={ `${styles.content}` }
                 onClick={click}
             >
                 <pre>

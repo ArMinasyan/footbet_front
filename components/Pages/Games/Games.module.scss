@@ -1,10 +1,10 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
-.container{
+.container {
     margin-top: 52px;
     margin-bottom: 213px;
     @include center();
-    .content{
+    .content {
         width: get-vw(1425px);
     }
 }

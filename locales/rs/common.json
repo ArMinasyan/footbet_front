@@ -1,7 +1,8 @@
 {
     "commons": {
         "send": "Отправить",
-        "placeHolder":"оставить отзыв..."
+        "buy": "Купить",
+        "placeHolder": "оставить отзыв..."
     },
     "header": {
         "register": "Регистрация",

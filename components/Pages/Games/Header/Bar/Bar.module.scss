@@ -9,7 +9,12 @@ $parentWidth: 1425px;
         width: get_percent(923px, $parentWidth);
         @include flex-between();
         .button {
-            padding: 14px 52px;
+            width: auto;
+            div {
+                pre {
+                    padding: 17.5px 47px;
+                }
+            }
         }
     }
 }

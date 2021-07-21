@@ -19,14 +19,14 @@ export function Bar({
                     textPathName="header.barButtons.express"
                     aditionalStyles={styles.button}
                     click={expClick}
-                    active={expActive}
+                    active={expActive && expActive}
                 />
                 <Button
                     page='games'
                     textPathName="header.barButtons.ordinar"
                     aditionalStyles={styles.button}
                     click={ordClick}
-                    active={ordActive}
+                    active={ordActive && ordActive}
                 />
                 <Button
                     page='games'
@@ -34,7 +34,7 @@ export function Bar({
                     aditionalStyles={styles.button}
                     // bsSt => bestStrategy 
                     click={bsStClick}
-                    active={bsStActive}
+                    active={bsStActive && bsStActive}
                 />
             </div>
         </div>
