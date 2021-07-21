@@ -4,20 +4,22 @@ import useTranslation from 'next-translate/useTranslation'
 import styles from './Button.module.scss'
 
 export function Button({
+    page = 'common',
     textPathName = "You are dont put there text.",
+    locationInPage = "",
+    aditionalStyles = null,
     active,
-    click = null,
-    locationInMainPage = "Change translation location." }) {
+    click = null, }) {
 
     const
         // translation consfigs
-        { t } = useTranslation('home'),
-        translationPath = `${locationInMainPage}`,
+        { t } = useTranslation(page),
+        translationPath = `${locationInPage}`,
         translate = key => t(`${translationPath}${key}`)
 
     return (
-        <div className={`${styles.container} ${active && styles.active}`}>
-            <div className={styles.content}
+        <div className={`${styles.container} ${aditionalStyles} ${active ? styles.active : ''}`}>
+            <div className={ `${styles.content}` }
                 onClick={click}
             >
                 <pre>

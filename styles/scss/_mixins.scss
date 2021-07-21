@@ -70,16 +70,34 @@
     align-items: space-around;
     flex-direction: column;
 }
+@mixin scrollbar($size, $thumbColor, $trackColor) {
+    &::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $thumbColor;
+    }
+    &::-webkit-scrollbar-track {
+        background: $trackColor;
+    }
+}
 @mixin animation {
     animation-name: transition;
-    animation-duration: 0.2s;
+    animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
 
     @keyframes transition {
-        from {
+        0% {
+            opacity: -0.5;
+        }
+        40% {
             opacity: 0;
         }
-        to {
+        80% {
+            opacity: 0.5;
+        }
+        100% {
             opacity: 1;
         }
     }

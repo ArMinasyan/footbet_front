@@ -11,10 +11,13 @@ import { Submit } from '../common/Submit'
 import { ToRegister } from '../common/ToRegister'
 // styles 
 import styles from './LoginForm.module.scss'
+import { connect, useDispatch } from 'react-redux'
+import { login } from '../../../../../redux/features/userSlice'
 
 export function LoginForm({ onModalClose, handleResetPassModal }) {
 
     const
+        dispatch = useDispatch(),
         // translation consfigs
         { t } = useTranslation('common'),
         translationPath = 'registration.inputPlaceHolders.',
@@ -40,7 +43,14 @@ export function LoginForm({ onModalClose, handleResetPassModal }) {
             resolver: yupResolver(schema)
         }),
         // on form submit
-        submit = (data) => console.log(data);
+        submit = (data) => {
+            console.log(data)
+            dispatch(login({
+                email: data.email,
+                password: data.password,
+                logined: true
+            }))
+        };
 
     return (
         <div className={styles.container}>

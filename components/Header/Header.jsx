@@ -1,3 +1,5 @@
+// hooks
+import { useSelector } from 'react-redux'
 //styles
 import styles from './Header.module.scss'
 // components
@@ -8,6 +10,7 @@ import { SocialMedia } from './SocialMedia/SocialMedia'
 import footballer from '/public/images/header/footballer.svg'
 
 export function Header({ mainsPages }) {
+
     return (
         <>
             {mainsPages ?

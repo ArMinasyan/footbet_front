@@ -9,6 +9,9 @@ export const pred_slide_data = [
         teamTwoIcon: psjIcon.src,
         predictionButtonName: '.slide.pred_button',
         buyButtonName: '.slide.buy_button',
+        prediction: 'Фулхем тб 1,5 / коэф 3,5',
+        ordinar: 'Ординар / 1500руб.'
+
     },
     {
         teamOneName: '.slide.firstSlide.teamOne',
@@ -17,6 +20,9 @@ export const pred_slide_data = [
         teamTwoIcon: psjIcon.src,
         predictionButtonName: '.slide.pred_button',
         buyButtonName: '.slide.buy_button',
+        prediction: 'Фулхем тб 1,5 / коэф 3,5',
+        ordinar: 'Ординар / 1500руб.'
+
     },
     {
         teamOneName: '.slide.firstSlide.teamOne',
@@ -25,6 +31,9 @@ export const pred_slide_data = [
         teamTwoIcon: psjIcon.src,
         predictionButtonName: '.slide.pred_button',
         buyButtonName: '.slide.buy_button',
+        prediction: 'Фулхем тб 1,5 / коэф 3,5',
+        ordinar: 'Ординар / 1500руб.'
+
     },
     {
         teamOneName: '.slide.firstSlide.teamOne',
@@ -33,6 +42,9 @@ export const pred_slide_data = [
         teamTwoIcon: psjIcon.src,
         predictionButtonName: '.slide.pred_button',
         buyButtonName: '.slide.buy_button',
+        prediction: 'Фулхем тб 1,5 / коэф 3,5',
+        ordinar: 'Ординар / 1500руб.'
+
     },
     {
         teamOneName: '.slide.firstSlide.teamOne',
@@ -41,5 +53,8 @@ export const pred_slide_data = [
         teamTwoIcon: psjIcon.src,
         predictionButtonName: '.slide.pred_button',
         buyButtonName: '.slide.buy_button',
+        prediction: 'Фулхем тб 1,5 / коэф 3,5',
+        ordinar: 'Ординар / 1500руб.'
+
     },
 ]

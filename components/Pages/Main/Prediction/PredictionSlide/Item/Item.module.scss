@@ -21,11 +21,13 @@ $buyButtonHover: #a10b45;
         width: 100%;
         .top {
             width: 100%;
+            position: relative;
             @include flex-between();
-            .team1 {
+            .team {
                 @include column-center();
                 img {
                     width: 91.4%;
+                    min-width: 180px;
                 }
                 p {
                     @include arsenal-font();
@@ -54,25 +56,12 @@ $buyButtonHover: #a10b45;
                     }
                 }
             }
-
-            .team2 {
-                @include column-center();
-                img {
-                    width: 91.4%;
-                }
-                p {
-                    @include arsenal-font();
-                    font-weight: bold;
-                    font-size: 43px;
-                    line-height: 54px;
-                    letter-spacing: 0.05em;
-                }
-            }
         }
         .bottom {
             @include center();
             width: 100%;
             margin-top: 22.21%;
+            position: relative;
             .buttons {
                 @include column-center();
                 width: get_percent(102px, $contentWidth);

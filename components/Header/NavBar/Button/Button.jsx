@@ -11,11 +11,12 @@ export function Button({
     active,
     click = null }) {
     return (
-        <div className={`${styles.container} ${active && styles.active}`}>
-            <div className={styles.content}
-                onClick={click}
-            >
-                <Link href={href}>
+        <Link href={href}>
+            <div className={`${styles.container} ${active && styles.active}`}>
+                <div className={styles.content}
+                    onClick={click}
+                >
+
                     <pre>
                         {
                             contentFrstP
@@ -25,8 +26,8 @@ export function Button({
                             contentSecP
                         }
                     </pre>
-                </Link>
-            </div>
-        </div>
+                </div>
+            </div >
+        </Link>
     )
 }

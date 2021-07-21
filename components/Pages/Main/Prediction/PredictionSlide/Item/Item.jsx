@@ -1,9 +1,12 @@
+// hooks
+import { useState } from 'react'
 // translations
 import useTranslation from 'next-translate/useTranslation'
 // styles
 import styles from './Item.module.scss'
 //components
 import { Timer } from './Timer/Timer'
+import { PredictionModal } from './PredictionModal/PredictionModal'
 
 export function Item({
     teamOneName,
@@ -13,51 +16,68 @@ export function Item({
     predictionButtonName,
     buyButtonName,
     locationInMainPage,
-    expiryTimestamp
+    expiryTimestamp,
+    prediction,
+    ordinar
 }) {
 
     const
         // translation consfigs
         { t } = useTranslation('home'),
         translationPath = `${locationInMainPage}`,
-        translate = key => t(`${translationPath}${key}`)
-    
+        translate = key => t(`${translationPath}${key}`),
+        [showPrediction, setShowPrediction] = useState(false)
+
 
     return (
-        <div className={styles.container} >
-            <div className={styles.content}>
-                <div className={styles.top}>
-                    <div className={styles.team1}>
-                        <img src={teamOneIcon} alt="" />
-                        <p>{translate(teamOneName)}</p>
-                    </div>
-                    <div className={styles.timer_container}>
-                        <p>Игра начинается через</p>
-                        <Timer
-                            expiryTimestamp={expiryTimestamp}
-                            timeClass={styles.timer}
-                        />
-                    </div>
-                    <div className={styles.team2}>
-                        <img src={teamTwoIcon} alt="" />
-                        <p>{translate(teamTwoName)}</p>
-                    </div>
-                </div>
-                <div className={styles.bottom}>
-                    <div className={styles.buttons}>
-                        <div className={styles.prediction_button_container}>
-                            <div className={styles.prediction_button_content}>
-                                <p>{translate(predictionButtonName)}</p>
-                            </div>
+        <>
+            <div className={styles.container} >
+                <div className={styles.content}>
+                    <div className={styles.top}>
+                        <div className={styles.team}>
+                            <img src={teamOneIcon} alt="" />
+                            <p>{translate(teamOneName)}</p>
                         </div>
-                        <div className={styles.buy_button_container}>
-                            <div className={styles.buy_button_content}>
-                                <p>{translate(buyButtonName)}</p>
+                        <div className={styles.timer_container}>
+                            <p>Игра начинается через</p>
+                            <Timer
+                                expiryTimestamp={expiryTimestamp}
+                                timeClass={styles.timer}
+                            />
+                        </div>
+                        <div className={styles.team}>
+                            <img src={teamTwoIcon} alt="" />
+                            <p>{translate(teamTwoName)}</p>
+                        </div>
+                        {showPrediction && <PredictionModal
+                            teamOneName={translate(teamOneName)}
+                            teamTwoName={translate(teamTwoName)}
+                            teamOneIcon={teamOneIcon}
+                            teamTwoIcon={teamTwoIcon}
+                            prediction={prediction}
+                            ordinar={ordinar}
+
+                        />}
+                    </div>
+                    <div className={styles.bottom}>
+                        <div className={styles.buttons}>
+                            <div className={styles.prediction_button_container}>
+                                <div
+                                    className={styles.prediction_button_content}
+                                    onClick={() => setShowPrediction(!showPrediction)}
+                                >
+                                    <p>{translate(predictionButtonName)}</p>
+                                </div>
+                            </div>
+                            <div className={styles.buy_button_container}>
+                                <div className={styles.buy_button_content}>
+                                    <p>{translate(buyButtonName)}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }

@@ -4,6 +4,7 @@
 
 .container {
     background: none;
+    overflow: hidden;
     .content {
         position: absolute;
         @include animation-left-right;
