@@ -1,6 +1,4 @@
-@import "/styles/scss/_functions";
-@import "/styles/scss/_mixins.scss";
-@import "/styles/scss/_variables.scss";
+@import "/styles/scss/scssExports";
 @import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
 
 $parentWidth: 790px;
@@ -31,7 +29,7 @@ $contentBorderOnHover: 2px solid #12112c;
             height: 100%;
             margin: 0;
             padding: 0;
-            font-family: Arimo;
+            @include arimo-font();
             font-size: 19px;
             line-height: 22px;
         }

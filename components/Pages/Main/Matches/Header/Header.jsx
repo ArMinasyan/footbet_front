@@ -18,14 +18,16 @@ export function Header({
             />
             <div className={styles.buttons}>
                 <Button
-                    locationInMainPage={'matches'}
+                    page='home'
+                    locationInPage={'matches'}
                     textPathName={'.buttons.TodayMatches'}
                     active={buttonsActivity ? 'true' : null}
                     click={on_TM_click}
                 />
                 {gameRulesState &&
                     <Button
-                        locationInMainPage={'matches'}
+                        page='home'
+                        locationInPage={'matches'}
                         textPathName={'.buttons.GameRules'}
                         active={!buttonsActivity ? 'true' : null}
                         click={on_GM_click}
