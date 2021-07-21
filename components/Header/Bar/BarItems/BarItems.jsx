@@ -35,8 +35,6 @@ export function BarItems({
         translationPath = 'header.lang.',
         translate = (key) => t(`${translationPath}${key}`)
 
-        console.log(languagesTitle.contentOnTitle);
-
     return (
         <div className={`${styles.bar_item_container} ${bar_items}`}>
             <div className={styles.auth_container}>

@@ -36,7 +36,6 @@ export function Header({ mainsPages }) {
                 <div className={styles.header_container_small}>
                     <Bar />
                     <NavBar />
-                    <p>{name}</p>
                 </div>
             }
         </>

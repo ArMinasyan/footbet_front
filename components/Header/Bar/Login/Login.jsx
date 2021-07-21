@@ -24,8 +24,8 @@ export function Login({ onModalClose }) {
                         <LoginForm
                             onModalClose={onModalClose}
                             handleResetPassModal={() => {
-                                setShowLoginModal(false)
                                 showShowResetPasswordModal(true)
+                                setShowLoginModal(false)
                             }}
                         />
                     </div>

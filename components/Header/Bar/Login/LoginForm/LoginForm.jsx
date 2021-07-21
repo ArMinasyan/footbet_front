@@ -14,7 +14,7 @@ import styles from './LoginForm.module.scss'
 import { connect, useDispatch } from 'react-redux'
 import { login } from '../../../../../redux/features/userSlice'
 
-function LoginForm({ onModalClose, handleResetPassModal }) {
+export function LoginForm({ onModalClose, handleResetPassModal }) {
 
     const
         dispatch = useDispatch(),
@@ -97,5 +97,3 @@ function LoginForm({ onModalClose, handleResetPassModal }) {
         </div>
     )
 }
-
-export default LoginForm
