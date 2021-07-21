@@ -24,6 +24,7 @@ export function OrdinarGames() {
                                 prediction={el.prediction}
                                 coefficent={el.coefficent}
                                 price={el.price}
+                                key={Math.random()}
                             />
                         ))
                     }

@@ -22,6 +22,7 @@ export function ExpressGames() {
                             prediction={el.prediction}
                             coefficent={el.coefficent}
                             price={el.price}
+                            key={Math.random()}
                         />
                     ))
                 }
