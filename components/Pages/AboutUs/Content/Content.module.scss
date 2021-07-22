@@ -1,0 +1,18 @@
+@import "/styles/scss/scssExports";
+
+.container{
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    width: 100%;
+    position: relative;
+    @include center();
+    margin-top: 50px;
+    .content{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        width: get-vw(1663px);
+        max-height: 1203px;
+    }
+}
