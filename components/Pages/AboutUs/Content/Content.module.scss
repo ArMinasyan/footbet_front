@@ -8,10 +8,10 @@
     width: 100%;
     position: relative;
     @include center();
-    margin-top: 50px;
+    margin-top: 84px;
     .content{
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1.89fr;
         width: get-vw(1663px);
         max-height: 1203px;
     }

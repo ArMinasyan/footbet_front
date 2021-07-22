@@ -1,0 +1,48 @@
+@import "/styles/scss/scssExports";
+
+$yellow: #d8c622;
+
+@mixin text-font {
+    @include arsenal-font();
+    font-size: 20px;
+    line-height: 179.7%;
+    letter-spacing: 0.08em;
+}
+
+.conatiner {
+    .content {
+        background-color: rgba(255, 255, 255, 0.06);
+        position: relative;
+        .title {
+            width: 100%;
+            position: absolute;
+            top: -34px;
+            @include center();
+            p {
+                @include arsenal-font();
+                text-align: center;
+                font-weight: bold;
+                font-size: 42px;
+                line-height: 53px;
+                letter-spacing: 0.13em;
+                color: $yellow;
+            }
+        }
+        .paragraphs_container {
+            overflow: auto;
+            max-height: 1203px;
+            padding: 55px 51.5px;
+            .paragraph {
+                .paragraph_title {
+                    @include text-font();
+                    color: $yellow;
+                    font-weight: bold;
+                }
+                .paragraph_text {
+                    @include text-font();
+                }
+            }
+            @include scrollbar(11px, white, #1b1a30);
+        }
+    }
+}

@@ -1,7 +1,18 @@
 @import "/styles/scss/scssExports";
 
+$yellow: #d8c622;
+
 .container {
-    
+    width: 100%;
     .content {
+        width: 584px;
+        height: 708px;
+        background-color: $yellow;
+        position: relative;
+        img{
+            position: absolute;
+            right: -10px;
+            bottom: -10px;
+        }
     }
 }
