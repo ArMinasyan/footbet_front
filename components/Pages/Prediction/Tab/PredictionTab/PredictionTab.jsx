@@ -20,6 +20,7 @@ export function PredictionTab() {
                             date={el.date}
                             time={el.time}
                             prediction={el.prediction}
+                            type={el.type}
                             coefficent={el.coefficent}
                             price={el.price}
                             key={Math.random()}

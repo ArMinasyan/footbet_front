@@ -10,6 +10,7 @@ export function Row({
     teamTwoName,
     teamTwoIcon,
     prediction,
+    type,
     date,
     time,
     coefficent,
@@ -55,11 +56,11 @@ export function Row({
                             </div>
                         }
                     </div>
+                    <div className={styles.type}>
+                        <span>{type}</span>
+                    </div>
                     <div className={styles.date}>
                         <span>{date}</span>
-                    </div>
-                    <div className={styles.time}>
-                        <span>{time}</span>
                     </div>
                     <div className={styles.coefficent}>
                         <span>{coefficent}</span>

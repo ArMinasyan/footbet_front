@@ -3,36 +3,36 @@ import { useState } from 'react'
 import styles from './Prediction.module.scss'
 // components
 import { Header } from './Header/Header'
-import { Tabs } from './Tabs/Tabs'
+import { Tabs } from './Tab/Tabs'
 
 export default function Prediction() {
 
     const
         // states
-        [showExpressGames, setShowExpressGames] = useState(true),
-        [showOrdinarGames, setShowOrdinarGames] = useState(false)
+        [showPredictionTab, setShowPredictionTabs] = useState(true),
+        [showPaymentTab, setShowPaymentTab] = useState(false)
 
     return (
         <div className={styles.container}>
             <div className={styles.content}>
                 <Header
-                    expClick={() => {
-                        setShowExpressGames(true)
-                        setShowOrdinarGames(false)
-                        setShowBsStGames(false)
+                    predClick={() => {
+                        setShowPredictionTabs(true)
+                        setShowPaymentTab(false)
                     }}
-                    expActive={showExpressGames}
-                    ordClick={() => {
-                        setShowExpressGames(false)
-                        setShowOrdinarGames(true)
-                        setShowBsStGames(false)
+                    predActive={showPredictionTab}
+                    paymClick={() => {
+                        setShowPredictionTabs(false)
+                        setShowPaymentTab(true)
                     }}
+                    paymActive={showPaymentTab}
                 />
                 <Tabs
-                    expTab={showExpressGames}
-                    ordTab={showOrdinarGames}
+                    predictionTab={showPredictionTab}
+                    paymentTab={showPaymentTab}
                 />
             </div>
         </div>
     )
 }
+

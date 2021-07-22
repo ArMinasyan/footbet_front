@@ -6,7 +6,7 @@ $parentWidth: 1425px;
     margin-top: 50px;
     @include center();
     .content {
-        width: get_percent(923px, $parentWidth);
+        width: get_percent(454px, $parentWidth);
         @include flex-between();
         .button {
             width: auto;

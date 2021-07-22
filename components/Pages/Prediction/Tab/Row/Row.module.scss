@@ -1,7 +1,7 @@
 @import "/styles/scss/scssExports";
 
 $parentWidth: 1425px;
-$contentWidth: 774px;
+$contentWidth: 796px;
 $buyedButtonBackColor: rgba(255, 255, 255, 0.2);
 $buyedButtonColor: rgba(255, 255, 255, 0.3);
 $buyButtonHover: #a10b45;
@@ -9,23 +9,23 @@ $buyButtonHover: #a10b45;
 @mixin desription {
     display: grid;
     grid-template-columns:
-        get_percent(186px, $contentWidth)
-        get_percent(86px, $contentWidth)
-        get_percent(92px, $contentWidth)
-        get_percent(101px, $contentWidth)
-        get_percent(130px, $contentWidth)
+        get_percent(186px, $contentWidth - 11px)
+        get_percent(92px, $contentWidth - 11px)
+        get_percent(92px, $contentWidth - 11px)
+        get_percent(101px, $contentWidth - 11px)
+        get_percent(134px, $contentWidth - 11px)
         auto;
 }
 
 @mixin buyedButton {
-    padding: 6.1% 26%;
+    padding: 3.835% 12.62%;
     background-color: $buyedButtonBackColor;
     color: $buyedButtonBackColor;
     border-radius: 8px;
 }
 
 @mixin buyButton {
-    padding: 6.1% 26%;
+    padding: 3.835% 12.62%;
     border: 1px solid #ffffff;
     border-radius: 8px;
 }
@@ -48,7 +48,7 @@ $buyButtonHover: #a10b45;
     .content {
         display: grid;
         // 11 px is a scrolbar width
-        grid-template-columns: 1fr get_percent($contentWidth - 11px, $parentWidth);
+        grid-template-columns: 1fr get_percent($contentWidth - 16px, $parentWidth);
         overflow: auto;
         .left {
             display: grid;
@@ -82,7 +82,7 @@ $buyButtonHover: #a10b45;
                         font-size: 15px;
                         line-height: 17px;
                         text-align: center;
-                        white-space: nowrap
+                        white-space: nowrap;
                     }
                 }
             }
@@ -91,7 +91,7 @@ $buyButtonHover: #a10b45;
                     @include descriptionText();
                 }
             }
-            .time {
+            .type {
                 span {
                     @include descriptionText();
                 }
@@ -115,7 +115,6 @@ $buyButtonHover: #a10b45;
                     cursor: pointer;
                     // @include buyedButton();
                     @include buyButton();
-                    width: 58%;
                     p {
                         @include descriptionText();
                         font-weight: bold;

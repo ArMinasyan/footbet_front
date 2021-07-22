@@ -21,12 +21,12 @@ export function TabHeader() {
                 </div>
                 <div>
                     <p>
-                        {translate('date').toUpperCase()}
+                        {translate('type').toUpperCase()}
                     </p>
                 </div>
                 <div>
                     <p>
-                        {translate('time').toUpperCase()}
+                        {translate('date').toUpperCase()}
                     </p>
                 </div>
                 <div>
