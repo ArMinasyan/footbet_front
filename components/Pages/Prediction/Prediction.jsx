@@ -1,5 +1,6 @@
-// styles
+// hooks
 import { useState } from 'react'
+// styles
 import styles from './Prediction.module.scss'
 // components
 import { Header } from './Header/Header'

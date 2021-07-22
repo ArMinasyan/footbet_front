@@ -1,7 +1,7 @@
 @import "/styles/scss/scssExports";
 
 $parentWidth: 1425px;
-$contentWidth: 785px;
+$contentWidth: 832px + 11px;
 @mixin headers {
     display: grid;
     grid-template-columns:
@@ -9,7 +9,8 @@ $contentWidth: 785px;
         get_percent(86px, $contentWidth)
         get_percent(92px, $contentWidth)
         get_percent(101px, $contentWidth)
-        get_percent(130px, $contentWidth);
+        get_percent(130px, $contentWidth)
+        get_percent(90px, $contentWidth);
 }
 
 .container {

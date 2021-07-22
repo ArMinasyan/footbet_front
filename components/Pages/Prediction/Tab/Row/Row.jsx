@@ -62,6 +62,9 @@ export function Row({
                     <div className={styles.date}>
                         <span>{date}</span>
                     </div>
+                    <div>
+                        <span>{time}</span>
+                    </div>
                     <div className={styles.coefficent}>
                         <span>{coefficent}</span>
                     </div>

@@ -31,6 +31,11 @@ export function TabHeader() {
                 </div>
                 <div>
                     <p>
+                        {translate('time').toUpperCase()}
+                    </p>
+                </div>
+                <div>
+                    <p>
                         {translate('coeficent').toUpperCase()}
                     </p>
                 </div>

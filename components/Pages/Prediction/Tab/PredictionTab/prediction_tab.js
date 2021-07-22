@@ -17,8 +17,9 @@ export const prediction_tab = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
-        type:"Ординар",
+        type: "Ординар",
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -32,8 +33,9 @@ export const prediction_tab = [
             totalBet: '',
             coefficent: ''
         },
-        type:"Экспресс",
+        type: "Экспресс",
         date: '14.01',
+        time: '22:30',
         coefficent: '2.07',
         price: '2500 руб.'
     },
@@ -47,8 +49,9 @@ export const prediction_tab = [
             totalBet: '',
             coefficent: ''
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '2.07',
         price: '1800 руб. '
     },
@@ -62,8 +65,9 @@ export const prediction_tab = [
             totalBet: '',
             coefficent: ''
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -77,8 +81,9 @@ export const prediction_tab = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -92,8 +97,9 @@ export const prediction_tab = [
             totalBet: '',
             coefficent: ''
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -107,8 +113,9 @@ export const prediction_tab = [
             totalBet: '',
             coefficent: ''
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -122,8 +129,9 @@ export const prediction_tab = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -137,8 +145,9 @@ export const prediction_tab = [
             totalBet: '',
             coefficent: ''
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -152,8 +161,9 @@ export const prediction_tab = [
             totalBet: '',
             coefficent: ''
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -167,8 +177,9 @@ export const prediction_tab = [
             totalBet: '',
             coefficent: ''
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -182,8 +193,9 @@ export const prediction_tab = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -197,8 +209,9 @@ export const prediction_tab = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -212,8 +225,9 @@ export const prediction_tab = [
             totalBet: '',
             coefficent: ''
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -227,8 +241,9 @@ export const prediction_tab = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -242,8 +257,9 @@ export const prediction_tab = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -257,8 +273,9 @@ export const prediction_tab = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -272,8 +289,9 @@ export const prediction_tab = [
             totalBet: '',
             coefficent: ''
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },
@@ -287,8 +305,9 @@ export const prediction_tab = [
             totalBet: '',
             coefficent: ''
         },
-        type:'Экспресс',
+        type: 'Экспресс',
         date: '14.01',
+        time: '22:30',
         coefficent: '1.67',
         price: '1500 руб.'
     },

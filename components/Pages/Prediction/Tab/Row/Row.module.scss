@@ -1,7 +1,8 @@
 @import "/styles/scss/scssExports";
 
-$parentWidth: 1425px;
-$contentWidth: 796px;
+$parentWidth: 1414px;
+$rightContentWidth: 832px;
+$leftContentWidth: 582px;
 $buyedButtonBackColor: rgba(255, 255, 255, 0.2);
 $buyedButtonColor: rgba(255, 255, 255, 0.3);
 $buyButtonHover: #a10b45;
@@ -9,11 +10,12 @@ $buyButtonHover: #a10b45;
 @mixin desription {
     display: grid;
     grid-template-columns:
-        get_percent(186px, $contentWidth - 11px)
-        get_percent(92px, $contentWidth - 11px)
-        get_percent(92px, $contentWidth - 11px)
-        get_percent(101px, $contentWidth - 11px)
-        get_percent(134px, $contentWidth - 11px)
+        get_percent(186px, $rightContentWidth)
+        get_percent(86px, $rightContentWidth)
+        get_percent(92px, $rightContentWidth)
+        get_percent(101px, $rightContentWidth)
+        get_percent(130px, $rightContentWidth)
+        get_percent(100px, $rightContentWidth)
         auto;
 }
 
@@ -48,7 +50,9 @@ $buyButtonHover: #a10b45;
     .content {
         display: grid;
         // 11 px is a scrolbar width
-        grid-template-columns: 1fr get_percent($contentWidth - 16px, $parentWidth);
+        grid-template-columns:
+            get_percent($leftContentWidth, $parentWidth)
+            get_percent($rightContentWidth, $parentWidth);
         overflow: auto;
         .left {
             display: grid;
