@@ -2,6 +2,7 @@
     "commons": {
         "send": "Отправить",
         "buy": "Купить",
+        "logOut": "Выйти",
         "placeHolder": "оставить отзыв..."
     },
     "header": {

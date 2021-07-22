@@ -22,6 +22,7 @@ export function Bar({ bar_items, bar_items_cont }) {
         <div className={`${styles.bar_container} ${bar_items_cont}`}>
             <Logo />
             <BarItems
+                userLogged={true}
                 registration={translate('register')}
                 login={translate('login')}
                 registration_path='/registration'

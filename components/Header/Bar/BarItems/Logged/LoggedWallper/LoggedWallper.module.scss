@@ -1,0 +1,30 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    width: 100%;
+    
+    .content {
+        width: 100%;
+        @include flex-around();
+        padding-right: 10px;
+        .user_photo {
+            @include center();
+            img {
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+            }
+        }
+        .user_fullName {
+            span {
+                cursor: pointer;
+                white-space: nowrap;
+                margin-left: 2px;
+                @include arimo-font();
+                font-size: 13px;
+                line-height: 134%;
+                letter-spacing: 0.06em;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    width: 100%;
+    @include center();
+    span {
+        @include arimo-font();
+        font-size: 13px;
+        line-height: 134%;
+        letter-spacing: 0.06em;
+        cursor: pointer;
+    }
+    .content {
+        @include column-center();
+        position: absolute;
+        top: 0;
+        background-color: #0c0b22;
+        border: 1px solid #9E094A;;
+        padding: 8px 10px;
+        .user_photo_name {
+            @include flex-end();
+            span {
+                @include arimo-font();
+                font-size: 13px;
+                line-height: 134%;
+                letter-spacing: 0.06em;
+                margin-left: 6px;
+            }
+        }
+        .user_tel {
+            width: 100%;
+            @include flex-end();
+            margin-top: 6px;
+            span {
+                @include arimo-font();
+                font-size: 13px;
+                line-height: 134%;
+                letter-spacing: 0.06em;
+                margin-left: 6px;
+            }
+        }
+        .logOut {
+            width: 100%;
+            @include flex-end();
+            margin-top: 33px;
+            span {
+                @include arimo-font();
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+    }
+    @include animation()
+}
