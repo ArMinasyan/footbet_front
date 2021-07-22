@@ -1,0 +1,11 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 155px;
+    @include column-center();
+    .content {
+        @include flex-between();
+        width: get-vw(1640px);
+    }
+}

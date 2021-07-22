@@ -2,6 +2,7 @@
 
 $parentWidth: 236px;
 $contentWidth: 204px;
+
 .container {
     @include center();
     width: 75%;

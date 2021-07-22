@@ -29,6 +29,9 @@
     ],
     "/aboutUs": [
       "aboutUs"
+    ],
+    "/personal":[
+      "personal"
     ]
   }
 }
