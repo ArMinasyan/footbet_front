@@ -1,0 +1,49 @@
+@import "/styles/scss/scssExports";
+
+$parentWidth: 978px;
+$left: 397px;
+$right: 581px;
+
+@mixin headers {
+    display: grid;
+    grid-template-columns:
+        get_percent(207px, $right)
+        get_percent(132px, $right)
+        get_percent(121px, $right)
+        get_percent(108px, $right);
+}
+
+.container {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    width: 100%;
+    display: grid;
+    grid-template-columns:
+        get_percent($left, $parentWidth)
+        get_percent($right, $parentWidth);
+    background-color: $lightSilver;
+    .left {
+        padding: 22px 17px;
+        @include arimo-font();
+        font-size: 22px;
+        line-height: 25px;
+        letter-spacing: 0.1em;
+    }
+    .right {
+        @include center();
+        align-items: flex-end;
+        @include headers();
+        padding-bottom: 7px;
+        p {
+            @include center();
+            align-items: flex-end;
+            @include arimo-font();
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 0.1em;
+        }
+    }
+}

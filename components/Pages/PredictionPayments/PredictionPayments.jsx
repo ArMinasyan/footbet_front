@@ -1,17 +1,25 @@
 // hooks
 import { useState } from 'react'
+import { useRouter } from 'next/dist/client/router'
 // styles
-import styles from './Prediction.module.scss'
+import styles from './PredictionPayments.module.scss'
 // components
 import { Header } from './Header/Header'
 import { Tabs } from './Tab/Tabs'
 
-export default function Prediction() {
+
+export default function PredictionPayments() {
 
     const
+        router = useRouter(),
+        // review queries for understanding user want buy game (if ye, which game ) or not
+        openGamePaymentsPage = Object.keys(router.query).length === 0 ? false : true,
+        gameId = openGamePaymentsPage && router.query,
         // states
         [showPredictionTab, setShowPredictionTabs] = useState(true),
-        [showPaymentTab, setShowPaymentTab] = useState(false)
+        [showPaymentTab, setShowPaymentTab] = useState(openGamePaymentsPage)
+
+    console.log(router.query);
 
     return (
         <div className={styles.container}>
@@ -31,6 +39,7 @@ export default function Prediction() {
                 <Tabs
                     predictionTab={showPredictionTab}
                     paymentTab={showPaymentTab}
+                    gameId={gameId}
                 />
             </div>
         </div>

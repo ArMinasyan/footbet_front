@@ -6,7 +6,7 @@ import marcelIcon from '/public/images/main/matches/marcel.png'
 import psjIcon from '/public/images/main/matches/psj.png'
 import rennaisIcon from '/public/images/main/matches/rennais.png'
 
-export const statistics_tab = [
+export const PG_board = [
     {
         teamOneName: 'Атлетико',
         teamOneIcon: atleticoIcon.src,
@@ -18,9 +18,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'win'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Барселона',
@@ -33,9 +32,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'lose'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Марсель',
@@ -48,9 +46,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'return'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -63,9 +60,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'lose'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -78,9 +74,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'lose'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -93,9 +88,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'lose'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -108,9 +102,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'return'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -123,9 +116,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'lose'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -138,9 +130,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'win'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -153,9 +144,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'lose'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -168,9 +158,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'win'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -183,9 +172,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'win'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -198,9 +186,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'win'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -213,9 +200,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'win'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -228,9 +214,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'lose'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -243,9 +228,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'lose'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -258,9 +242,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'lose'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -273,9 +256,8 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'return'
+        price: '1500 руб.'
     },
     {
         teamOneName: 'Атлетико',
@@ -288,8 +270,7 @@ export const statistics_tab = [
             coefficent: 'коеф 3,5'
         },
         date: '14.01',
-        time: '22:30',
         score: '1:0',
-        gameResult: 'return'
+        price: '1500 руб.'
     },
 ]

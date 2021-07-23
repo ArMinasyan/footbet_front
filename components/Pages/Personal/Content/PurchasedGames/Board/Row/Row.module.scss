@@ -1,8 +1,8 @@
 @import "/styles/scss/scssExports";
 
-$parentWidth: 1414px;
-$rightContentWidth: 802px;
-$leftContentWidth: 612px;
+$parentWidth: 967px;
+$rightContentWidth: 570px;
+$leftContentWidth: 397px;
 $winColor: #0c7617;
 $loseColor: #b10000;
 $returnColor: #b4ac00;
@@ -10,11 +10,10 @@ $returnColor: #b4ac00;
 @mixin desription {
     display: grid;
     grid-template-columns:
-        get_percent(294px, $rightContentWidth)
-        get_percent(86px, $rightContentWidth)
-        get_percent(92px, $rightContentWidth)
-        get_percent(101px, $rightContentWidth)
-        1fr;
+        get_percent(207px, $rightContentWidth)
+        get_percent(132px, $rightContentWidth)
+        get_percent(121px, $rightContentWidth)
+        get_percent(108px, $rightContentWidth);
 }
 
 @mixin wallpersFont {
@@ -63,7 +62,7 @@ $returnColor: #b4ac00;
         .left {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            padding-top: 5px;
+            padding: 1.5px 0;
             div {
                 @include center();
                 span {
@@ -71,6 +70,9 @@ $returnColor: #b4ac00;
                     font-size: 21px;
                     line-height: 26px;
                     letter-spacing: 0.05em;
+                }
+                img {
+                    max-height: 47px;
                 }
             }
         }
@@ -83,8 +85,8 @@ $returnColor: #b4ac00;
                 width: 100%;
                 height: 100%;
                 .prediction_content {
-                    background-color: #6b6b6b;
-                    padding: 7px 35px;
+                    background-color: $buttonsColor;
+                    padding: 7px 38.5px;
                     @include center();
                     span {
                         @include arimo-font();
@@ -97,29 +99,21 @@ $returnColor: #b4ac00;
                 }
             }
             .date {
-                span {
-                    @include descriptionText();
-                }
-            }
-            .time {
+                border-left: 1px solid white;
                 span {
                     @include descriptionText();
                 }
             }
             .score {
+                border-left: 1px solid white;
                 span {
                     @include descriptionText();
                 }
             }
-            .statistic_wallper {
-                .win {
-                    @include winWallper();
-                }
-                .lose {
-                    @include loseWallper();
-                }
-                .return {
-                    @include returnWallper();
+            .price {
+                border-left: 1px solid white;
+                span {
+                    @include descriptionText();
                 }
             }
         }

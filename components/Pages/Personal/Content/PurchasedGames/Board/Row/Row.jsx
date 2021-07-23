@@ -11,30 +11,10 @@ export function Row({
     teamTwoIcon,
     prediction,
     date,
-    time,
     score,
-    gameResult /** it can be: "win", "lose", "return"  */
+    price
 }) {
 
-    const getResult = (res) => {
-        switch (res) {
-            case "win":
-                return {
-                    className: styles.win,
-                    translationText: 'win'
-                }
-            case "lose":
-                return {
-                    className: styles.lose,
-                    translationText: 'lose'
-                }
-            case "return":
-                return {
-                    className: styles.return,
-                    translationText: 'return'
-                }
-        }
-    }
 
     const
         // translation consfigs
@@ -78,18 +58,11 @@ export function Row({
                     <div className={styles.date}>
                         <span>{date}</span>
                     </div>
-                    <div className={styles.time}>
-                        <span>{time}</span>
-                    </div>
                     <div className={styles.score}>
                         <span>{score}</span>
                     </div>
-                    <div className={styles.statistic_wallper}>
-                        <div className={getResult(gameResult).className}>
-                            <span>
-                                {translate(getResult(gameResult).translationText)}
-                            </span>
-                        </div>
+                    <div className={styles.price}>
+                        <span>{price}</span>
                     </div>
                 </div>
             </div>

@@ -4,8 +4,8 @@
     margin-top: 50px;
     .board {
         display: grid;
-        grid-row-gap: 45px;
-        max-height: 720px;
+        grid-row-gap: 23px;
+        max-height: 463px;
         overflow: auto;
         @include scrollbar(11px, white, #1b1a30);
     }

@@ -3,7 +3,7 @@ import useTranslation from 'next-translate/useTranslation'
 // styles
 import styles from './PGSButton.module.scss'
 
-export function PGSButton({ }) {
+export function PGSButton({ active, click }) {
 
     const
         // translations
@@ -15,7 +15,10 @@ export function PGSButton({ }) {
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-                <span>
+                <span
+                    className={active && styles.active}
+                    onClick={click}
+                >
                     {translate('PGButton')}
                 </span>
             </div>

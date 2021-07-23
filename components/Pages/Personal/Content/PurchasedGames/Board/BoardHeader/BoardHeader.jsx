@@ -1,37 +1,40 @@
 // styles
-import styles from './TabHeader.module.scss'
+import styles from './BoardHeader.module.scss'
 // translations
 import useTranslation from 'next-translate/useTranslation'
 
-export function TabHeader() {
+export function BoardHeader() {
 
     const
         // translation consfigs
-        { t } = useTranslation('statistics'),
-        translationPath = 'tab.header.',
+        { t } = useTranslation('personal'),
+        translationPath = 'board.headers.',
         translate = key => t(`${translationPath}${key}`)
 
     return (
         <div className={styles.container}>
-            <div className={styles.content}>
+            <div className={styles.left}>
+                <p>{translate('gamesHistory')}</p>
+            </div>
+            <div className={styles.right}>
                 <div>
                     <p>
-                        {translate('prediction').toUpperCase()}
+                        {translate('prediction')}
                     </p>
                 </div>
                 <div>
                     <p>
-                        {translate('date').toUpperCase()}
+                        {translate('date')}
                     </p>
                 </div>
                 <div>
                     <p>
-                        {translate('time').toUpperCase()}
+                        {translate('score')}
                     </p>
                 </div>
                 <div>
                     <p>
-                        {translate('score').toUpperCase()}
+                        {translate('price')}
                     </p>
                 </div>
             </div>
