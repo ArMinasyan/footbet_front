@@ -19,6 +19,11 @@
         padding: 8px 10px;
         .user_photo_name {
             @include flex-end();
+            img{
+                border-radius: 100%;
+                max-width: 36px;
+                max-height: 36px
+            }
             span {
                 @include arimo-font();
                 font-size: 13px;

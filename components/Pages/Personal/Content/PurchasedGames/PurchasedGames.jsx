@@ -1,7 +1,11 @@
+import { PGSButton } from "./PGSButton/PGSButton";
+import { PGBoard } from "./Tab/PGBoard/PGBoard";
+
 export function PurchasedGames() {
     return (
         <div>
-            Games
+            <PGSButton />
+            {/* <PGBoard /> */}
         </div>
     )
 }
