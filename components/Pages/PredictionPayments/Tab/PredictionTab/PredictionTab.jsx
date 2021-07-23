@@ -1,6 +1,6 @@
 import { Row } from '../Row/Row'
 import { TabHeader } from '../TabHeader/TabHeader';
-import { prediction_tab } from './prediction_tab';
+import { predictions } from '/src/games_data/predictions/predictions'
 // styles 
 import styles from './PredictionTab.module.scss'
 
@@ -10,7 +10,7 @@ export function PredictionTab() {
             <TabHeader />
             <div className={styles.board}>
                 {
-                    prediction_tab.map((el, i) => (
+                    predictions.map((el, i) => (
                         <Row
                             order={i + 1}
                             teamOneName={el.teamOneName}

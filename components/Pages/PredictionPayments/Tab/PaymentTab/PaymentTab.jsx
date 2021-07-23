@@ -1,9 +1,12 @@
-export function PaymentTab({
-    gameId
-}) {
+import { useRouter } from "next/dist/client/router"
+
+export function PaymentTab() {
+
+    const router = useRouter()
+
     return (
         <div>
-            {gameId}
+            {router.query.game}
         </div>
     )
 }

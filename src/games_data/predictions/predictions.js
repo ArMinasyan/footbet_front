@@ -6,7 +6,7 @@ import marcelIcon from '/public/images/main/matches/marcel.png'
 import psjIcon from '/public/images/main/matches/psj.png'
 import rennaisIcon from '/public/images/main/matches/rennais.png'
 
-export const bsSt_games = [
+export const predictions = [
     {
         teamOneName: 'Атлетико',
         teamOneIcon: atleticoIcon.src,
@@ -17,6 +17,7 @@ export const bsSt_games = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
+        type: "Ординар",
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -32,8 +33,9 @@ export const bsSt_games = [
             totalBet: '',
             coefficent: ''
         },
+        type: "Экспресс",
         date: '14.01',
-        time: '23:00',
+        time: '22:30',
         coefficent: '2.07',
         price: '2500 руб.'
     },
@@ -47,8 +49,9 @@ export const bsSt_games = [
             totalBet: '',
             coefficent: ''
         },
+        type: 'Экспресс',
         date: '14.01',
-        time: '23:00',
+        time: '22:30',
         coefficent: '2.07',
         price: '1800 руб. '
     },
@@ -62,6 +65,7 @@ export const bsSt_games = [
             totalBet: '',
             coefficent: ''
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -77,6 +81,7 @@ export const bsSt_games = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -92,6 +97,7 @@ export const bsSt_games = [
             totalBet: '',
             coefficent: ''
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -107,6 +113,7 @@ export const bsSt_games = [
             totalBet: '',
             coefficent: ''
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -122,6 +129,7 @@ export const bsSt_games = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -137,6 +145,7 @@ export const bsSt_games = [
             totalBet: '',
             coefficent: ''
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -152,6 +161,7 @@ export const bsSt_games = [
             totalBet: '',
             coefficent: ''
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -167,6 +177,7 @@ export const bsSt_games = [
             totalBet: '',
             coefficent: ''
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -182,6 +193,7 @@ export const bsSt_games = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -197,6 +209,7 @@ export const bsSt_games = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -212,6 +225,7 @@ export const bsSt_games = [
             totalBet: '',
             coefficent: ''
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -227,6 +241,7 @@ export const bsSt_games = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -242,6 +257,7 @@ export const bsSt_games = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -257,6 +273,7 @@ export const bsSt_games = [
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -272,6 +289,7 @@ export const bsSt_games = [
             totalBet: '',
             coefficent: ''
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
@@ -287,6 +305,7 @@ export const bsSt_games = [
             totalBet: '',
             coefficent: ''
         },
+        type: 'Экспресс',
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',

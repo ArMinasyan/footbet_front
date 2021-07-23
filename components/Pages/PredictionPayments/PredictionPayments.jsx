@@ -14,9 +14,8 @@ export default function PredictionPayments() {
         router = useRouter(),
         // review queries for understanding user want buy game (if ye, which game ) or not
         openGamePaymentsPage = Object.keys(router.query).length === 0 ? false : true,
-        gameId = openGamePaymentsPage && router.query,
         // states
-        [showPredictionTab, setShowPredictionTabs] = useState(true),
+        [showPredictionTab, setShowPredictionTabs] = useState(!openGamePaymentsPage),
         [showPaymentTab, setShowPaymentTab] = useState(openGamePaymentsPage)
 
     console.log(router.query);
@@ -39,7 +38,6 @@ export default function PredictionPayments() {
                 <Tabs
                     predictionTab={showPredictionTab}
                     paymentTab={showPaymentTab}
-                    gameId={gameId}
                 />
             </div>
         </div>

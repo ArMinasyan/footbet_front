@@ -15,6 +15,7 @@ export function Row({
     teamTwoIcon,
     buyButtonName,
     titleName,
+    clickBuy
 }) {
     const
         trasnlationLocation = 'matches.TM.today'
@@ -34,6 +35,7 @@ export function Row({
                 teamTwoIcon={teamTwoIcon}
                 buyButtonName={buyButtonName}
                 locationInMainPage={trasnlationLocation}
+                clickBuy={clickBuy}
             />
         </div>
     )

@@ -1,18 +1,22 @@
 import { Row } from '../Row/Row'
 import { TabHeader } from '../TabHeader/TabHeader';
-import { ord_games } from './ord_games';
 // styles 
 import styles from '../boardsStyle.module.scss'
+import { ordinar } from '/src/games_data/ordinar/ordinar';
+import { useRouter } from 'next/dist/client/router';
 
 
 export function OrdinarGames() {
+
+    const router = useRouter()
+
     return (
         <div>
             <div className={styles.container}>
                 <TabHeader />
                 <div className={styles.board}>
                     {
-                        ord_games.map((el, i) => (
+                        ordinar.map((el, i) => (
                             <Row
                                 order={i + 1}
                                 teamOneName={el.teamOneName}
@@ -25,6 +29,10 @@ export function OrdinarGames() {
                                 coefficent={el.coefficent}
                                 price={el.price}
                                 key={Math.random()}
+                                clickBuy={() => router.push({
+                                    pathname: '/prediction',
+                                    query: { game: el.id }
+                                })}
                             />
                         ))
                     }
