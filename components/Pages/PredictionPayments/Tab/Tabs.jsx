@@ -12,7 +12,7 @@ export function Tabs({
     return (
         <>
             {predictionTab && <PredictionTab click={click} />}
-            {paymentTab && <PaymentTab gameId={gameIdForPayment} />}
+            {paymentTab && <PaymentTab gameId={gameIdForPayment} />}   
         </>
     )
 }

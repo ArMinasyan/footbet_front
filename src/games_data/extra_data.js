@@ -9,7 +9,7 @@ export const extra_data = {
     express: express,
     invinsibleStgy: invinsible_strategy,
     ordinar: ordinar,
-    matches: matches,
+    todayMatches: matches.todayMatches,
     predictionspage: predictions
 
 }

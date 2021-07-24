@@ -1,0 +1,53 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    width: 100%;
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .content {
+        @include center();
+        .teams {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            .teamOne {
+                @include column-center();
+            }
+            .teamTwo {
+                @include column-center();
+            }
+            p {
+                @include arsenal-font();
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 38px;
+                letter-spacing: 0.05em;
+            }
+            img {
+                min-width: 131px;
+                max-height: 125px;
+            }
+            span {
+                @include center();
+                @include arsenal-font();
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 38px;
+                letter-spacing: 0.05em;
+            }
+        }
+    }
+    .gameDetailes {
+        margin-top: 20px;
+        .gameDetContent {
+            p {
+               @include arsenal-font();
+                font-size: 22px;
+                line-height: 190%;
+                letter-spacing: 0.19em;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

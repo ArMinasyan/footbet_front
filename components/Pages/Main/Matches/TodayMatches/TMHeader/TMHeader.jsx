@@ -5,10 +5,8 @@ import { DayChangeButton } from './DayChangeButton/DayChangeButton';
 import styles from './TMHeader.module.scss'
 
 export function TMHeader({
-    clickYD,
     clickTD,
     clickTM,
-    YDBoardState,
     TDBoardState,
     TMBoardState }) {
 
@@ -23,9 +21,6 @@ export function TMHeader({
                 year = date.getFullYear()
 
             switch (value) {
-                case 'y_d':
-                    day = date.getDate() - 1
-                    break;
                 case 't_d':
                     day = date.getDate()
                     break;
@@ -54,13 +49,6 @@ export function TMHeader({
                     }}
                 />
                 <div className={styles.day_change_buttons}>
-                    <DayChangeButton
-                        name='.TM.headerButtons.yesterday'
-                        locationInMainPage={'matches'}
-                        date={get_date('y_d')}
-                        active={YDBoardState ? 'show' : null}
-                        click={clickYD}
-                    />
                     <DayChangeButton
                         name='.TM.headerButtons.today'
                         locationInMainPage={'matches'}

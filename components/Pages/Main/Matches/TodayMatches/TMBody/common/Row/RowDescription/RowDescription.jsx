@@ -44,7 +44,7 @@ export function RowDescription({
                 <div className={styles.teams}>
                     <div className={styles.teamOne}>
                         <p>
-                            {translate(teamOne)}
+                            {teamOne}
                         </p>
                         <img src={teamOneIcon} alt={teamOne} />
                     </div>
@@ -56,7 +56,7 @@ export function RowDescription({
                     <div className={styles.teamTwo}>
                         <img src={teamTwoIcon} alt={teamTwo} />
                         <p>
-                            {translate(teamTwo)}
+                            {teamTwo}
                         </p>
                     </div>
                 </div>

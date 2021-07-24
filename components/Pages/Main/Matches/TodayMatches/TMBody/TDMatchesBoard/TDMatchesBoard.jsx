@@ -32,17 +32,17 @@ export function TDMatchesBoard() {
                             <Row
                                 date={el.date}
                                 gameState={el.gameState}
-                                teamOne={el.teamOne}
+                                teamOne={el.teamOneName}
                                 teamOneIcon={el.teamOneIcon}
                                 score={el.score}
-                                teamTwo={el.teamTwo}
+                                teamTwo={el.teamTwoName}
                                 teamTwoIcon={el.teamTwoIcon}
                                 buyButtonName={el.buyButtonName}
                                 titleName={el.titleName}
                                 key={Math.random()}
                                 clickBuy={() => router.push({
                                     pathname: '/prediction',
-                                    query: { game: el.teamOne }
+                                    query: { game: el.id }
                                 })}
                             />
                         ) : null
@@ -57,17 +57,17 @@ export function TDMatchesBoard() {
                             <Row
                                 date={el.date}
                                 gameState={el.gameState}
-                                teamOne={el.teamOne}
+                                teamOne={el.teamOneName}
                                 teamOneIcon={el.teamOneIcon}
                                 score={el.score}
-                                teamTwo={el.teamTwo}
+                                teamTwo={el.teamTwoName}
                                 teamTwoIcon={el.teamTwoIcon}
                                 buyButtonName={el.buyButtonName}
                                 titleName={el.titleName}
                                 key={Math.random()}
                                 clickBuy={() => router.push({
                                     pathname: '/prediction',
-                                    query: { game: el.teamOne }
+                                    query: { game: el.id }
                                 })}
                             />
                         ) : null

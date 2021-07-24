@@ -2,6 +2,7 @@
 
 .container {
     margin-top: 50px;
+    width: get-vw(1425px);
     .board {
         display: grid;
         grid-row-gap: 45px;

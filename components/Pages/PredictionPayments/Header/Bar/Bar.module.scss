@@ -3,6 +3,7 @@
 $parentWidth: 1425px;
 
 .container {
+    width: get_percent(1425px);
     margin-top: 50px;
     @include center();
     .content {
