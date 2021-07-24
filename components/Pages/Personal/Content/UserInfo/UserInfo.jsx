@@ -1,14 +1,16 @@
-import { user_data } from './user'
+import { user_data } from '/src/user/user'
+import { useState } from 'react'
 // styles 
 import styles from './UserInfo.module.scss'
 // icons 
 import user from '/public/images/personal/user-input.svg'
-import unknown from '/public/images/personal/unknown.png'
+import unknown from '/public/images/personal/unknown.svg'
 import calendar from '/public/images/personal/calendar.svg'
 import email from '/public/images/personal/mail.svg'
 import phone from '/public/images/personal/phone.svg'
 import change from '/public/images/personal/change.png'
-import { useState } from 'react'
+import camera from '/public/images/personal/camera.svg'
+
 
 export function UserInfo() {
 
@@ -17,7 +19,8 @@ export function UserInfo() {
         [changeName, setChangeName] = useState(false),
         [changeDate, setChangeDate] = useState(false),
         [changePhone, setChangePhone] = useState(false),
-        [changeEmail, setChangeEmail] = useState(false)
+        [changeEmail, setChangeEmail] = useState(false),
+        [userPhoto, setUserPhoto] = useState(user_data.photo)
 
     return (
         <div className={styles.container}>
@@ -25,11 +28,18 @@ export function UserInfo() {
                 <div className={styles.user_photo_content}>
                     <label htmlFor='user_photo'>
                         <div>
-                            <img src={user_data.photo ? user_data.photo : unknown.src} className={styles.user_photo} alt='icon' />
+                            <img src={userPhoto ? userPhoto : unknown.src} className={styles.user_photo} alt='icon' />
                         </div>
-                        <img src="" alt="icon" className={styles.cameraIcon} />
+                        <img src={camera.src} alt="icon" className={styles.cameraIcon} />
                     </label>
-                    <input type='file' id='user_photo' style={{ display: 'none' }} />
+                    <input
+                        type='file'
+                        id='user_photo'
+                        style={{ display: 'none' }}
+                        onChange={(e) => {
+                            e.target.files.length !== 0 && setUserPhoto(URL.createObjectURL(e.target.files[0]))
+                        }}
+                    />
                 </div>
                 <div className={styles.inputs_content}>
                     <div className={styles.info_input}>

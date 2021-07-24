@@ -6,11 +6,12 @@ import { PredictionTab } from './PredictionTab/PredictionTab'
 export function Tabs({
     predictionTab,
     paymentTab,
-    gameIdForPayment
+    gameIdForPayment,
+    click
 }) {
     return (
         <>
-            {predictionTab && <PredictionTab />}
+            {predictionTab && <PredictionTab click={click} />}
             {paymentTab && <PaymentTab gameId={gameIdForPayment} />}
         </>
     )

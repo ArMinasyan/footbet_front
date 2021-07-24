@@ -1,7 +1,7 @@
 // hooks and helpers
 import { languages } from './LanguageDropConfigs/lang-configs'
-import { user_data } from './user'
 import { useState } from 'react'
+import { user_data } from '/src/user/user'
 // translation 
 import useTranslation from 'next-translate/useTranslation'
 // styles 
@@ -13,6 +13,7 @@ import { Logged } from './Logged/Logged'
 // icons
 import register_icon from '/public/images/header/register.png'
 import login_icon from '/public/images/header/login.png'
+
 
 
 

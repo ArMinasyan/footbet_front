@@ -1,10 +1,18 @@
+// hooks
+import { useRouter } from 'next/dist/client/router';
+// datas
+import { predictions } from '/src/games_data/predictions/predictions'
+// components
 import { Row } from '../Row/Row'
 import { TabHeader } from '../TabHeader/TabHeader';
-import { predictions } from '/src/games_data/predictions/predictions'
 // styles 
 import styles from './PredictionTab.module.scss'
 
-export function PredictionTab() {
+
+export function PredictionTab({ click }) {
+
+    const router = useRouter()
+
     return (
         <div className={styles.container}>
             <TabHeader />
@@ -24,6 +32,13 @@ export function PredictionTab() {
                             coefficent={el.coefficent}
                             price={el.price}
                             key={Math.random()}
+                            clickBuy={() =>
+                                router.push({
+                                    pathname: '/prediction',
+                                    query: { game: el.id }
+                                })
+                            }
+                            openPayments={click}
                         />
                     ))
                 }

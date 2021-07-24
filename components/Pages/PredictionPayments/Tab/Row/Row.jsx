@@ -14,7 +14,9 @@ export function Row({
     date,
     time,
     coefficent,
-    price
+    price,
+    clickBuy,
+    openPayments
 }) {
 
     const
@@ -72,7 +74,10 @@ export function Row({
                         <span>{price}</span>
                     </div>
                     <div className={styles.buyButton_container}>
-                        <div className={styles.button_content}>
+                        <div
+                            className={styles.button_content}
+                            onClick={() => { clickBuy(); openPayments()}}
+                        >
                             <span>
                                 {translate('buy')}
                             </span>

@@ -38,6 +38,10 @@ export default function PredictionPayments() {
                 <Tabs
                     predictionTab={showPredictionTab}
                     paymentTab={showPaymentTab}
+                    click={() => {
+                        setShowPredictionTabs(false)
+                        setShowPaymentTab(true)
+                    }}
                 />
             </div>
         </div>

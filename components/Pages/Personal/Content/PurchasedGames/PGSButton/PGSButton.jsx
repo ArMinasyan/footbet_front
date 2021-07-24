@@ -16,7 +16,7 @@ export function PGSButton({ active, click }) {
         <div className={styles.container}>
             <div className={styles.content}>
                 <span
-                    className={active && styles.active}
+                    className={active ? styles.active : undefined}
                     onClick={click}
                 >
                     {translate('PGButton')}
