@@ -2,6 +2,7 @@
 
 .container {
     width: 100%;
+    @include column-center();
     *{
         margin: 0;
         padding: 0;
@@ -39,6 +40,7 @@
         }
     }
     .gameDetailes {
+        width:get_percent(1600px);
         margin-top: 20px;
         .gameDetContent {
             p {
