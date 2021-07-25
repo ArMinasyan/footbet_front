@@ -1,16 +1,20 @@
 import { Row } from '../Row/Row'
 import { TabHeader } from '../TabHeader/TabHeader';
-import { bsSt_games } from './bsSt_games';
+import { useRouter } from 'next/dist/client/router';
 // styles 
 import styles from '../boardsStyle.module.scss'
+import { invinsible_strategy } from '/src/games_data/invinsible_strategy/invinsible_strategy';
 
 export function BsStGames() {
+
+    const router = useRouter()
+
     return (
         <div className={styles.container}>
             <TabHeader />
             <div className={styles.board}>
                 {
-                    bsSt_games.map((el, i) => (
+                    invinsible_strategy.map((el, i) => (
                         <Row
                             order={i + 1}
                             teamOneName={el.teamOneName}
@@ -22,6 +26,11 @@ export function BsStGames() {
                             prediction={el.prediction}
                             coefficent={el.coefficent}
                             price={el.price}
+                            key={Math.random()}
+                            clickBuy={() => router.push({
+                                pathname: '/prediction',
+                                query: { game: el.id }
+                            })}
                         />
                     ))
                 }

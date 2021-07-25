@@ -1,0 +1,55 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    margin-top: 40px;
+    background-color: $drliSilver;
+    .price {
+        @include center();
+        padding-top: 3.942%;
+        p {
+            @include arsenal-font();
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 35px;
+            letter-spacing: 0.1em;
+            color: #a70b47;
+        }
+    }
+    .choosePaySys {
+        @include center();
+        padding-top: 2.26%;
+        p {
+            @include arsenal-font();
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: 0.08em;
+            font-variant: small-caps;
+        }
+    }
+    .choosePaySys_content {
+        @include center();
+        padding: 2.05% 0 3.26% 0;
+        .button {
+            border-radius: 12px;
+            padding: 14.5px 17.5px;
+            background-color: $buttonsColor;
+            p {
+                cursor: pointer;
+                @include arsenal-font();
+                font-size: 23px;
+                line-height: 29px;
+                letter-spacing: 0.12em;
+            }
+        }
+        .paypall {
+            margin-left: get_percent(245px);
+            img {
+                cursor: pointer;
+            }
+        }
+    }
+}

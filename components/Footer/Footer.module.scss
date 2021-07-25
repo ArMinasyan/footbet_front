@@ -4,7 +4,7 @@ $footerBackColor: rgba(255, 255, 255, 0.09);
 $contentWidth: 1432px;
 
 .container {
-    *{
+    * {
         margin: 0;
         padding: 0;
     }
@@ -18,5 +18,12 @@ $contentWidth: 1432px;
         @include center();
         width: get_percent($contentWidth);
         height: 100%;
+    }
+    .ball {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+        z-index: -1;
     }
 }

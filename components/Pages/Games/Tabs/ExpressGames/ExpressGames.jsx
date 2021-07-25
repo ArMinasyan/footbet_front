@@ -1,16 +1,20 @@
 import { Row } from '../Row/Row'
 import { TabHeader } from '../TabHeader/TabHeader';
-import { exp_games } from './express_games';
+import { useRouter } from 'next/dist/client/router';
 // styles 
 import styles from '../boardsStyle.module.scss'
+import { express } from '/src/games_data/express/express';
 
 export function ExpressGames() {
+
+    const router = useRouter()
+
     return (
         <div className={styles.container}>
             <TabHeader />
             <div className={styles.board}>
                 {
-                    exp_games.map((el, i) => (
+                    express.map((el, i) => (
                         <Row
                             order={i + 1}
                             teamOneName={el.teamOneName}
@@ -22,6 +26,11 @@ export function ExpressGames() {
                             prediction={el.prediction}
                             coefficent={el.coefficent}
                             price={el.price}
+                            key={Math.random()}
+                            clickBuy={() => router.push({
+                                pathname: '/prediction',
+                                query: { game: el.id }
+                            })}
                         />
                     ))
                 }

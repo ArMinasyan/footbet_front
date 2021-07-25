@@ -1,0 +1,21 @@
+@import "/styles/scss/scssExports";
+
+$parentWidth: 1425px;
+
+.container {
+    width: get_percent(1425px);
+    margin-top: 50px;
+    @include center();
+    .content {
+        width: get_percent(454px, $parentWidth);
+        @include flex-between();
+        .button {
+            width: auto;
+            div {
+                pre {
+                    padding: 17.5px 47px;
+                }
+            }
+        }
+    }
+}

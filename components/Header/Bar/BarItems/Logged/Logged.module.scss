@@ -1,0 +1,15 @@
+@import "/styles/scss/scssExports";
+
+$parentWidth: 236px;
+$contentWidth: 204px;
+
+.container {
+    @include center();
+    width: 75%;
+    border-right: 2px solid white;
+    position: relative;
+    .content {
+        @include center();
+        width: get_percent($contentWidth, $parentWidth);
+    }
+}

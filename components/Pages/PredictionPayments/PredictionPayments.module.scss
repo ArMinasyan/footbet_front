@@ -1,0 +1,11 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    margin-top: 52px;
+    margin-bottom: 213px;
+    @include center();
+    .content {
+        @include column-center();
+        width: 100%;
+    }
+}

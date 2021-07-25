@@ -1,7 +1,8 @@
-import Prediction from '/components/Pages/Prediction/Prediction'
+import PredictionPayments from '../components/Pages/PredictionPayments/PredictionPayments';
 
-const PredictionPage = () => <Prediction />
 
-PredictionPage.layout = "withoutPhoto";
+const PredictionPaymentsPage = () => <PredictionPayments />
 
-export default PredictionPage;
+PredictionPaymentsPage.layout = "withoutPhoto";
+
+export default PredictionPaymentsPage;

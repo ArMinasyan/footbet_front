@@ -1,0 +1,110 @@
+@import "/styles/scss/scssExports";
+
+$backgroundColor: rgba(255, 255, 251, 0.09);
+$inputBackColor: rgba(196, 196, 196, 0.2);
+$inputBorderColor: rgba(255, 255, 255, 0.5);
+$errorInputBackColor: rgba(158, 9, 74, 0.13);
+$errorInputBorderColor: #9e094a21;
+$containerWidth: 767px;
+
+@mixin input {
+    @include arsenal-font();
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0.19em;
+    padding: 11px 18px !important;
+    color: rgba(255, 255, 255, 0.31) !important;
+    box-sizing: border-box;
+    border-radius: 8px;
+    outline: none;
+}
+
+@mixin success {
+    border: 1px solid $inputBorderColor;
+    background: $inputBackColor;
+}
+
+@mixin error {
+    border: 1px solid $errorInputBorderColor;
+    background: $errorInputBackColor;
+}
+
+@mixin successInput {
+    @include input();
+    @include success();
+}
+
+@mixin errorInput {
+    @include input();
+    @include error();
+}
+
+.container {
+    border: 1px solid #eeecec;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0 68px;
+    .content {
+        width: 100%;
+        form {
+            .input_success {
+                @include successInput();
+            }
+            .input_error {
+                @include errorInput();
+            }
+            .name {
+                margin-top: 29px;
+                input {
+                    width: 100%;
+                }
+            }
+            .card_number_content {
+                margin-top: 21px;
+                p {
+                    @include arsenal-font();
+                    font-size: 15px;
+                    line-height: 19px;
+                    letter-spacing: 0.12em;
+                }
+                .card_number_inputs {
+                    display: grid;
+                    grid-template-columns: 19.4% 19.4% 19.4% 19.4%;
+                    grid-column-gap: 5.6%;
+                    input {
+                        text-align: center;
+                    }
+                }
+            }
+            .cvv {
+                margin-top: 19px;
+                input {
+                    width: get_percent(157px, $containerWidth);
+                }
+            }
+            .active_untill {
+                margin-top: 19px;
+                input {
+                    width: get_percent(157px, $containerWidth);
+                }
+            }
+            .success {
+                @include center();
+                margin-top: 47px;
+                button {
+                    padding: 10px 64px;
+                    border-radius: 8px;
+                    background-color: $buttonsColor;
+                    color: white;
+                    @include arimo-font();
+                    font-size: 19px;
+                    line-height: 22px;
+                    letter-spacing: 0.14em;
+                    cursor: pointer;
+                    outline-style: none;
+                    border: none;
+                }
+            }
+        }
+    }
+}

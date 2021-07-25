@@ -1,14 +1,21 @@
+// hooks
+import { useRouter } from 'next/dist/client/router'
 // styles
 import styles from './TDMatchesBoard.module.scss'
 // components
 import Carousel from "react-elastic-carousel"
 import { Row } from "../common/Row/Row"
-import { rows_date } from "./rows_data"
 import { RowTitle } from '../common/Row/RowTitle/RowTitle'
 import { Arrow } from './Arrows/Arrow'
 import { Pagination } from './Pagination/Pagination'
+import { matches } from '/src/games_data/matches/matches'
+
 
 export function TDMatchesBoard() {
+
+    const
+        router = useRouter()
+
     return (
         <Carousel
             itemsToShow={1}
@@ -20,19 +27,23 @@ export function TDMatchesBoard() {
         >
             <div style={{ width: '100%' }}>
                 {
-                    rows_date.map((el, i) =>
+                    matches.todayMatches.map((el, i) =>
                         i < 4 ? (
                             <Row
                                 date={el.date}
                                 gameState={el.gameState}
-                                teamOne={el.teamOne}
+                                teamOne={el.teamOneName}
                                 teamOneIcon={el.teamOneIcon}
                                 score={el.score}
-                                teamTwo={el.teamTwo}
+                                teamTwo={el.teamTwoName}
                                 teamTwoIcon={el.teamTwoIcon}
                                 buyButtonName={el.buyButtonName}
                                 titleName={el.titleName}
                                 key={Math.random()}
+                                clickBuy={() => router.push({
+                                    pathname: '/prediction',
+                                    query: { game: el.id }
+                                })}
                             />
                         ) : null
                     )
@@ -41,19 +52,23 @@ export function TDMatchesBoard() {
             </div>
             <div style={{ width: '100%' }}>
                 {
-                    rows_date.map((el, i) =>
+                    matches.todayMatches.map((el, i) =>
                         i >= 4 ? (
                             <Row
                                 date={el.date}
                                 gameState={el.gameState}
-                                teamOne={el.teamOne}
+                                teamOne={el.teamOneName}
                                 teamOneIcon={el.teamOneIcon}
                                 score={el.score}
-                                teamTwo={el.teamTwo}
+                                teamTwo={el.teamTwoName}
                                 teamTwoIcon={el.teamTwoIcon}
                                 buyButtonName={el.buyButtonName}
                                 titleName={el.titleName}
                                 key={Math.random()}
+                                clickBuy={() => router.push({
+                                    pathname: '/prediction',
+                                    query: { game: el.id }
+                                })}
                             />
                         ) : null
                     )

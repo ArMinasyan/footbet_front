@@ -1,0 +1,13 @@
+{
+    "title": "Личный кабинет",
+    "board": {
+        "PGButton": "Купленные игры",
+        "headers": {
+            "gamesHistory": "История игр",
+            "prediction": "прогноз",
+            "date": "дата",
+            "score": "счет",
+            "price": "цена"
+        }
+    }
+}

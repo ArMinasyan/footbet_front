@@ -1,0 +1,127 @@
+@import "/styles/scss/scssExports";
+
+$parentWidth: 1414px;
+$rightContentWidth: 802px;
+$leftContentWidth: 612px;
+$winColor: #0c7617;
+$loseColor: #b10000;
+$returnColor: #b4ac00;
+
+@mixin desription {
+    display: grid;
+    grid-template-columns:
+        get_percent(294px, $rightContentWidth)
+        get_percent(86px, $rightContentWidth)
+        get_percent(92px, $rightContentWidth)
+        get_percent(101px, $rightContentWidth)
+        1fr;
+}
+
+@mixin wallpersFont {
+    @include arsenal-font();
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+}
+
+@mixin winWallper {
+    width: 44.55%;
+    padding: 3.835% 0;
+    background-color: $winColor;
+}
+
+@mixin loseWallper {
+    width: 44.55%;
+    padding: 3.835% 0;
+    background-color: $loseColor;
+}
+
+@mixin returnWallper {
+    width: 44.55%;
+    padding: 3.835% 0;
+    background-color: $returnColor;
+}
+
+@mixin descriptionText {
+    @include arsenal-font();
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+}
+
+.container {
+    width: 100%;
+    background-color: $darkedSilver;
+    .content {
+        display: grid;
+        // 11 px is a scrolbar width
+        grid-template-columns:
+            get_percent($leftContentWidth, $parentWidth)
+            get_percent($rightContentWidth, $parentWidth);
+        overflow: auto;
+        .left {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            padding-top: 5px;
+            div {
+                @include center();
+                span {
+                    @include arsenal-font();
+                    font-size: 21px;
+                    line-height: 26px;
+                    letter-spacing: 0.05em;
+                }
+            }
+        }
+        .right {
+            @include desription();
+            div {
+                @include center();
+            }
+            .prediction {
+                width: 100%;
+                height: 100%;
+                .prediction_content {
+                    background-color: #6b6b6b;
+                    padding: 7px 35px;
+                    @include center();
+                    span {
+                        @include arimo-font();
+                        font-weight: bold;
+                        font-size: 15px;
+                        line-height: 17px;
+                        text-align: center;
+                        white-space: nowrap;
+                    }
+                }
+            }
+            .date {
+                span {
+                    @include descriptionText();
+                }
+            }
+            .time {
+                span {
+                    @include descriptionText();
+                }
+            }
+            .score {
+                span {
+                    @include descriptionText();
+                }
+            }
+            .statistic_wallper {
+                .win {
+                    @include winWallper();
+                }
+                .lose {
+                    @include loseWallper();
+                }
+                .return {
+                    @include returnWallper();
+                }
+            }
+        }
+    }
+}

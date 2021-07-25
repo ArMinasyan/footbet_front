@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom'
 
 export function Modal({
     onClose,
+    closeWithVectore = null,
     children,
     containerStyles = null,
     contentStyles = null,
@@ -15,7 +16,7 @@ export function Modal({
 
     const
         [showModal, setShowModal] = useState(false),
-        [pageOverflow, setPageOverflow] = useState(false),
+        [pageOverflow, setPageOverflow] = useState(showModal),
         body = document.querySelector('body')
 
     useEffect(() => {

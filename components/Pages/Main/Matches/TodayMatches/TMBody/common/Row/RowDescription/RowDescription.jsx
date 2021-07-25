@@ -4,6 +4,7 @@ import useTranslation from 'next-translate/useTranslation'
 import styles from './RowDescription.module.scss'
 
 export function RowDescription({
+    clickBuy,
     date,
     gameState,
     teamOne,
@@ -43,7 +44,7 @@ export function RowDescription({
                 <div className={styles.teams}>
                     <div className={styles.teamOne}>
                         <p>
-                            {translate(teamOne)}
+                            {teamOne}
                         </p>
                         <img src={teamOneIcon} alt={teamOne} />
                     </div>
@@ -55,12 +56,12 @@ export function RowDescription({
                     <div className={styles.teamTwo}>
                         <img src={teamTwoIcon} alt={teamTwo} />
                         <p>
-                            {translate(teamTwo)}
+                            {teamTwo}
                         </p>
                     </div>
                 </div>
                 <div className={styles.buyButton_container}>
-                    <div className={styles.button_content}>
+                    <div className={styles.button_content} onClick={clickBuy}>
                         <p>
                             {translate(buyButtonName)}
                         </p>

@@ -7,12 +7,11 @@ import styles from './NavBar.module.scss'
 import useTranslation from 'next-translate/useTranslation'
 // componetns
 import { Button } from './Button/Button'
-import Contacts from '../../Pages/Contacts/Contacts'
+import ContactsModal from '../../Pages/Contacts/ContactsModal'
 
 
 
 export function NavBar() {
-
 
     const
         //states
@@ -23,7 +22,7 @@ export function NavBar() {
         // router
         router = useRouter(),
         // nav bar buttons configs
-        buttons = [
+        buttonsInHomePage = [
             {
                 key: Math.random(),
                 frstContent: translate('main'),
@@ -59,7 +58,41 @@ export function NavBar() {
             {
                 key: Math.random(),
                 frstContent: translate('contacts'),
-                href: '',
+                href: null,
+                click: () => setShowContactsModal(true)
+            },
+        ],
+        buttons = [
+            {
+                key: Math.random(),
+                frstContent: translate('main'),
+                href: '/'
+            },
+            {
+                key: Math.random(),
+                frstContent: translate('games'),
+                href: '/games'
+            },
+            {
+                key: Math.random(),
+                frstContent: translate('prediction.frs'),
+                secContent: translate('prediction.sec'),
+                href: '/prediction'
+            },
+            {
+                key: Math.random(),
+                frstContent: translate('testimonials'),
+                href: '/testimonials'
+            },
+            {
+                key: Math.random(),
+                frstContent: translate('aboutUs'),
+                href: '/aboutUs'
+            },
+            {
+                key: Math.random(),
+                frstContent: translate('contacts'),
+                href: null,
                 click: () => setShowContactsModal(true)
             },
         ]
@@ -69,23 +102,25 @@ export function NavBar() {
             <div className={styles.container}>
                 <div className={styles.content}>
                     {
-                        buttons.map(el => (
+                        (router.pathname === '/' ? buttonsInHomePage : buttons).map(el => (
                             <Button
                                 contentFrstP={el.frstContent}
                                 contentSecP={el.secContent}
                                 href={el.href}
                                 key={el.key}
-                                active={router.pathname === el.href ? 'true' : null }
+                                active={router.pathname === el.href ? 'true' : null}
                                 click={el.click && el.click}
                             />
                         ))
                     }
                 </div>
             </div>
-            {showContactsModal && <Contacts
-                opened={showContactsModal}
-                onModalClose={() => setShowContactsModal(false)}
-            />}
+            {showContactsModal &&
+                <ContactsModal
+                    opened={showContactsModal ? true : false}
+                    onModalClose={() => setShowContactsModal(false)}
+                />
+            }
         </>
 
     )

@@ -1,0 +1,37 @@
+@import "/styles/scss/scssExports";
+
+$parentWidth: 1425px;
+$contentWidth: 802px + 11px;
+@mixin headers {
+    display: grid;
+    grid-template-columns:
+        get_percent(294px, $contentWidth)
+        get_percent(86px, $contentWidth)
+        get_percent(92px, $contentWidth)
+        get_percent(101px, $contentWidth);
+}
+
+.container {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    width: 100%;
+    @include flex-end();
+    background-color: $lightSilver;
+    .content {
+        width: get_percent($contentWidth, $parentWidth);
+        @include headers();
+        padding: 13px 0;
+        p {
+            @include center();
+            @include arsenal-font();
+            font-weight: bold;
+            font-size: 19px;
+            line-height: 24px;
+            letter-spacing: 0.1em;
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.63);
+        }
+    }
+}

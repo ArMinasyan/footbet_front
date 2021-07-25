@@ -1,0 +1,13 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    margin-top: 50px;
+    .board {
+        display: grid;
+        grid-row-gap: 23px;
+        max-height: 463px;
+        overflow: auto;
+        @include scrollbar(11px, white, #1b1a30);
+    }
+    @include animation();
+}

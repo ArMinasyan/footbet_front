@@ -1,7 +1,17 @@
+// components
+import { Title } from '../common/Title/Title'
+import { Content } from './Content/Content'
+// styles
+import styles from './AboutUs.module.scss'
+
 export default function AboutUs() {
     return (
-        <div>
-            <h1 style={{textAlign:'center'}}>AboutUs page will be here</h1>
+        <div className={styles.container}>
+            <Title
+                page='aboutUs'
+                textPathName='header.title'
+            />
+            <Content />
         </div>
     )
 }

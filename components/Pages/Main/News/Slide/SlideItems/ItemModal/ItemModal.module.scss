@@ -14,10 +14,12 @@ $backGround: rgba(0, 0, 0, 0.6);
         width: get-vw($containerWidth);
         @include center();
         background: none;
+        
         .container {
             @include column-center();
             width: 100%;
             position: relative;
+            margin-bottom: 250px;
             .img_content {
                 width: 81.7%;
                 img {

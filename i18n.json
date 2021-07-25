@@ -15,11 +15,23 @@
     "/testimonials": [
       "testimonials"
     ],
-    "/matches":[
+    "/matches": [
       "home"
     ],
-    "/games":[
+    "/games": [
       "games"
+    ],
+    "/prediction": [
+      "prediction"
+    ],
+    "/statistics": [
+      "statistics"
+    ],
+    "/aboutUs": [
+      "aboutUs"
+    ],
+    "/personal":[
+      "personal"
     ]
   }
 }

@@ -1,12 +1,11 @@
-@import "/styles/scss/_functions";
-@import "/styles/scss/_mixins.scss";
-@import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
+@import "/styles/scss/scssExports";
 $conteinerWidth: 752px;
 
 .conteiner {
     @include center();
     width: 100%;
-
+    @include arsenal-font();
+    
     button {
         cursor: pointer;
         background: #9e094a;

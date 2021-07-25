@@ -1,6 +1,4 @@
-@import "/styles/scss/_functions";
-@import "/styles/scss/_mixins.scss";
-@import "/styles/scss/_variables.scss";
+@import '/styles/scss/scssExports';
 
 $backgroundColor: rgba(255, 255, 251, 0.09);
 $inputBackColor: rgba(196, 196, 196, 0.2);

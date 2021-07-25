@@ -1,0 +1,121 @@
+@import "/styles/scss/scssExports";
+
+$parentWidth: 967px;
+$rightContentWidth: 570px;
+$leftContentWidth: 397px;
+$winColor: #0c7617;
+$loseColor: #b10000;
+$returnColor: #b4ac00;
+
+@mixin desription {
+    display: grid;
+    grid-template-columns:
+        get_percent(207px, $rightContentWidth)
+        get_percent(132px, $rightContentWidth)
+        get_percent(121px, $rightContentWidth)
+        get_percent(108px, $rightContentWidth);
+}
+
+@mixin wallpersFont {
+    @include arsenal-font();
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+}
+
+@mixin winWallper {
+    width: 44.55%;
+    padding: 3.835% 0;
+    background-color: $winColor;
+}
+
+@mixin loseWallper {
+    width: 44.55%;
+    padding: 3.835% 0;
+    background-color: $loseColor;
+}
+
+@mixin returnWallper {
+    width: 44.55%;
+    padding: 3.835% 0;
+    background-color: $returnColor;
+}
+
+@mixin descriptionText {
+    @include arsenal-font();
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+}
+
+.container {
+    width: 100%;
+    background-color: $darkedSilver;
+    .content {
+        display: grid;
+        // 11 px is a scrolbar width
+        grid-template-columns:
+            get_percent($leftContentWidth, $parentWidth)
+            get_percent($rightContentWidth, $parentWidth);
+        overflow: auto;
+        .left {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            padding: 1.5px 0;
+            div {
+                @include center();
+                span {
+                    @include arsenal-font();
+                    font-size: 21px;
+                    line-height: 26px;
+                    letter-spacing: 0.05em;
+                }
+                img {
+                    max-height: 47px;
+                }
+            }
+        }
+        .right {
+            @include desription();
+            div {
+                @include center();
+            }
+            .prediction {
+                width: 100%;
+                height: 100%;
+                .prediction_content {
+                    background-color: $buttonsColor;
+                    padding: 7px 38.5px;
+                    @include center();
+                    span {
+                        @include arimo-font();
+                        font-weight: bold;
+                        font-size: 15px;
+                        line-height: 17px;
+                        text-align: center;
+                        white-space: nowrap;
+                    }
+                }
+            }
+            .date {
+                border-left: 1px solid white;
+                span {
+                    @include descriptionText();
+                }
+            }
+            .score {
+                border-left: 1px solid white;
+                span {
+                    @include descriptionText();
+                }
+            }
+            .price {
+                border-left: 1px solid white;
+                span {
+                    @include descriptionText();
+                }
+            }
+        }
+    }
+}

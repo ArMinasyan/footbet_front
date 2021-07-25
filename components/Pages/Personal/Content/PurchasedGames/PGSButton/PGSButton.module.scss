@@ -1,0 +1,27 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    .content {
+        @include flex-start();
+
+        span {
+            @include arimo-font();
+            font-size: 22px;
+            line-height: 134%;
+            letter-spacing: 0.13em;
+            padding: 13px 48px;
+            border: 1px solid white;
+            border-radius: 8px;
+            background: none;
+            cursor: pointer;
+            &:hover {
+                background-color: $buttonsColor;
+                border: 1px solid $buttonsColor;
+            }
+        }
+        .active {
+            background-color: $buttonsColor;
+            border: 1px solid $buttonsColor;
+        }
+    }
+}

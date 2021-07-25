@@ -1,7 +1,4 @@
-@import "/styles/scss/_functions";
-@import "/styles/scss/_mixins.scss";
-@import "/styles/scss/_variables.scss";
-@import "/styles/scss/_fonts.scss";
+@import '/styles/scss/scssExports';
 
 $containerWidth: 1593px;
 $contentWidth: 1407px;
@@ -12,13 +9,24 @@ $backColor: #0c0b22;
     @include column-center();
     background-color: $backColor;
     padding: 39px 0 27px 0;
+    position: relative;
     .content {
         @include column-center();
         width: get_percent($contentWidth, $containerWidth);
+        
         .day_change_buttons {
             @include flex-between();
             margin-top: 35px;
             width: get_percent($buttonsContentWidth, $contentWidth);
+        }
+        .calendar{
+            position: absolute;
+            top: 37px;
+            right: 125px;
+            cursor: pointer;
+            .calendar_body{
+                // position: relative;
+            }
         }
     }
 }
