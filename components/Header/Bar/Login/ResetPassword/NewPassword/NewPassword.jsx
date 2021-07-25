@@ -9,9 +9,15 @@ import { Title } from '../../common/Title'
 import { InputContainer } from '/components/common/auth/InputContainer/InputContainer'
 import { Submit } from '../../common/Submit'
 import { Modal } from '../../../../../common/auth/Modal/Modal'
+import { ToastContainer, toast } from 'react-toastify';
+
 // styles
 import styles from './NewPassword.module.scss'
 import { Success } from '../Success/Success'
+
+import { request, getCookie } from '/lib/er.lib';
+import { SET_NEW_PASSWORD } from '../../../../../../lib/request-destinations'
+
 
 export function NewPassword({ onModalClose }) {
     const
@@ -35,9 +41,21 @@ export function NewPassword({ onModalClose }) {
             resolver: yupResolver(schema)
         }),
         // on form submit
-        submit = (data) => {
-            setShowNewPassMl(false)
-            setShowSuccessMl(true)
+        submit = async ( data ) => {
+            try {
+                await request( SET_NEW_PASSWORD, { password: data.password }, {
+                    headers: {
+                        'Authorization': `Bearer ${getCookie(`reset-token`)}`
+                    }
+                })
+                setShowNewPassMl(false)
+                setShowSuccessMl(true)
+            }
+            catch ( err ) {
+                toast( err.response.data?.message || `unknown error`, {
+                    type: `error`
+                });
+            }
         }
 
     return (
@@ -65,6 +83,7 @@ export function NewPassword({ onModalClose }) {
                             />
                         </form>
                     </div>
+                    <ToastContainer />
                 </Modal>
             }
             {

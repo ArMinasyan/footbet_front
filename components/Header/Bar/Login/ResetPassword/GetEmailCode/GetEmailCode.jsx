@@ -13,6 +13,11 @@ import { NewPassword } from '../NewPassword/NewPassword'
 // styles
 import styles from './GetEmailCode.module.scss'
 
+import { request, getCookie } from '/lib/er.lib';
+
+import { ToastContainer, toast } from 'react-toastify';
+import { START_RESET_PASSWORD, VERIFY_PASSWORD_RESET } from '../../../../../../lib/request-destinations'
+
 
 export function GetEmailCode({ onModalClose }) {
 
@@ -57,13 +62,24 @@ export function GetEmailCode({ onModalClose }) {
             }
         },
         // on form submit
-        submit = (data) => {
-            data = Object.values(data).reduce((ac, el) => ac + el)
-            console.log(data);
-            setShowEmailCodeMl(false)
-            setShowNewPasswordMl(true)
+        submit = async (data) => {
+            try {
+                data = Object.values(data).reduce((ac, el) => ac + el)
+                console.log(data);
+                await request( VERIFY_PASSWORD_RESET, { code: data }, {
+                    headers: {
+                        'Authorization': `Bearer ${getCookie(`reset-token`)}`
+                    }
+                })
+                setShowEmailCodeMl(false)
+                setShowNewPasswordMl(true)
+            }
+            catch( err ) {
+                toast( err.response.data?.message || `unknown error`, {
+                    type: `error`
+                });
+            }
         }
-    console.log(errors);
 
     return (
         <>
@@ -110,6 +126,7 @@ export function GetEmailCode({ onModalClose }) {
                             />
                         </form>
                     </div>
+                    <ToastContainer />
                 </Modal >
             }
             {

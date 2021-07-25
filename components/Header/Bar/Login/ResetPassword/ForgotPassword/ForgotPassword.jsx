@@ -13,6 +13,10 @@ import { GetEmailCode } from '../GetEmailCode/GetEmailCode'
 // styles
 import styles from './ForgotPassword.module.scss'
 
+import { request, setCookie } from '/lib/er.lib';
+
+import { ToastContainer, toast } from 'react-toastify';
+import { START_RESET_PASSWORD } from '../../../../../../lib/request-destinations'
 
 
 export function ForgotPassword({ onModalClose }) {
@@ -38,10 +42,20 @@ export function ForgotPassword({ onModalClose }) {
             resolver: yupResolver(schema)
         }),
         // on form submit
-        submit = (data) => {
-            console.log(data)
-            setShowForgotPassMl(false)
-            setShowEmailCodeMl(true)
+        submit = async (data) => {
+            try {
+                const { data: response } = await request( START_RESET_PASSWORD( data.email ) );
+                const token = response.data.token;
+                console.log( token );
+                setCookie(`reset-token`, token, (1/24)*1);
+                setShowForgotPassMl(false)
+                setShowEmailCodeMl(true)
+            }
+            catch ( err ) {
+                toast( err.response.data?.message || `unknown error`, {
+                    type: `error`
+                });
+            }
         }
 
     return (
@@ -69,6 +83,7 @@ export function ForgotPassword({ onModalClose }) {
                             />
                         </form>
                     </div>
+                    <ToastContainer />
                 </Modal>
             }
             {

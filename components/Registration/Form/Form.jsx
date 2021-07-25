@@ -19,9 +19,11 @@ import { request } from '../../../lib/er.lib'
 import { REGISTER } from '../../../lib/request-destinations'
 
 import { ToastContainer, toast } from 'react-toastify';
+import { useRouter } from 'next/router'
 
 
 export function Form({ title }) {
+    const router = useRouter();
 
     const
         // translation consfigs
@@ -112,8 +114,11 @@ export function Form({ title }) {
         submit = async (data) => {
             const registerFormData = new FormData();
             Object.entries(data).forEach(([key, item]) => {
-                if ( key === `dateOfBirth` )
-                    item = item ? item.split(`-`).reverse().join(`.`) : `01.01.1970`
+                if ( key === `dateOfBirth` ) {
+                    item = item ? item.split(`-`).reverse().join(`.`) : `01.01.1970`;
+                    const dateParts = item.split(`.`);
+                    item = [dateParts[1], dateParts[0], dateParts[2]].join(`.`);
+                }
                 if (key !== `profile_img`)
                     registerFormData.append(key, item);
                 else if (item.length > 0)
@@ -123,6 +128,7 @@ export function Form({ title }) {
             try {
                 await request(REGISTER, registerFormData);
                 toast(`Successfully registered`);
+                router.push(`/`);
             } catch (error) {
                 toast(error.response?.data?.message || `unknown error`, {
                     type: `error`
