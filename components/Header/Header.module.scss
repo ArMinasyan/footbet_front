@@ -42,7 +42,7 @@ $bg-url: url("../../public/images/header/header_back.png");
             .footballer {
                 width: get_percent(662px, 1872px);
                 position: absolute;
-                bottom: -9.5%;
+                bottom: 0;
                 @include flex-end();
                 flex-direction: column;
                 img {
