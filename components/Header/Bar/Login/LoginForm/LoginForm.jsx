@@ -3,6 +3,7 @@ import useTranslation from 'next-translate/useTranslation'
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { request } from '../../../../../lib/er.lib';
 //components
 import { InputContainer } from '/components/common/auth/InputContainer/InputContainer'
 import { Title } from '../common/Title'
@@ -13,6 +14,10 @@ import { ToRegister } from '../common/ToRegister'
 import styles from './LoginForm.module.scss'
 import { useDispatch } from 'react-redux'
 import { login } from '../../../../../redux/features/userSlice'
+import { LOGIN } from '../../../../../lib/request-destinations';
+
+import { ToastContainer, toast } from 'react-toastify';
+
 
 export function LoginForm({ onModalClose, handleResetPassModal }) {
 
@@ -43,13 +48,16 @@ export function LoginForm({ onModalClose, handleResetPassModal }) {
             resolver: yupResolver(schema)
         }),
         // on form submit
-        submit = (data) => {
-            console.log(data)
-            dispatch(login({
-                email: data.email,
-                password: data.password,
-                logined: true
-            }))
+        submit = async (data) => {
+            try {
+                const user = await request( LOGIN, data )
+                dispatch(login(user))
+            }
+            catch( error ) {
+                toast( error.response.data?.message || `unknown error`, {
+                    type: `error`
+                });
+            }
             handle_to_register_click()
         };
 
@@ -95,6 +103,9 @@ export function LoginForm({ onModalClose, handleResetPassModal }) {
                 register_text_styles={styles.to_register_text}
                 content={t('header.loginModal.register')}
             />
+
+
+            <ToastContainer />
         </div>
     )
 }

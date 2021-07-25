@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 // components
-import {InputContainer} from '/components/common/auth/InputContainer/InputContainer'
+import { InputContainer } from '/components/common/auth/InputContainer/InputContainer'
 import { FileInput } from './FileInput/FileInput'
 import { Button } from './Button/Button'
 // styles
@@ -30,11 +30,11 @@ export function Form({ title }) {
         translate = key => t(`${translationPath}${key}`),
         // yup configs
         schema = yup.object().shape({
-            name: yup
+            username: yup
                 .string()
                 .required()
                 .matches(/(^[A-Za-z]{1,8})([ ]{0,1})([A-Za-z]{1,10})/mg),
-            birthDate: yup
+            dateOfBirth: yup
                 .string()
                 .required()
             ,
@@ -42,10 +42,10 @@ export function Form({ title }) {
                 .string()
                 .required()
                 .matches(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/),
-            number: yup
+            mobile: yup
                 .string()
                 .required()
-                .matches(/^[0-9]+$/mg),
+                .matches(/^[+]{1}[0-9]+$/mg),
             password: yup
                 .string()
                 .required()
@@ -109,20 +109,22 @@ export function Form({ title }) {
         //     }
         // ],
         // send form values
-        submit = async ( data ) => {
+        submit = async (data) => {
             const registerFormData = new FormData();
             Object.entries(data).forEach(([key, item]) => {
-                if ( key !== `file` )
+                if ( key === `dateOfBirth` )
+                    item = item ? item.split(`-`).reverse().join(`.`) : `01.01.1970`
+                if (key !== `profile_img`)
                     registerFormData.append(key, item);
-                else if ( item.length > 0 )
-                    registerFormData.append( key, item[0] )
+                else if (item.length > 0)
+                    registerFormData.append(key, item[0])
             })
-            
+
             try {
-                await request( REGISTER, registerFormData);
+                await request(REGISTER, registerFormData);
                 toast(`Successfully registered`);
             } catch (error) {
-                toast( error.response.data?.message || `unknown error`, {
+                toast(error.response?.data?.message || `unknown error`, {
                     type: `error`
                 });
             }
@@ -143,24 +145,24 @@ export function Form({ title }) {
                 <FileInput
                     id='upload_file_input'
                     type='file'
-                    other={register('file')}
+                    other={register('profile_img')}
                 />
                 <InputContainer
                     label={userIcon}
                     id='name'
                     type='text'
                     placeholder={translate('fullName')}
-                    errors={(!!errors.name)}
-                    other={register('name')}
+                    errors={(!!errors.username)}
+                    other={register('username')}
                 />
                 <InputContainer
                     label={calendar}
                     id='birth_date'
                     type='text'
                     placeholder={translate('birthDate')}
-                    errors={(!!errors.birthDate)}
+                    errors={(!!errors.dateOfBirth)}
                     other={{
-                        ...register('birthDate'),
+                        ...register('dateOfBirth'),
                         onFocus: (e) => e.target.type = 'date',
                         onBlur: (e) => e.target.type = 'text'
                     }}
@@ -178,8 +180,8 @@ export function Form({ title }) {
                     id='phone_number'
                     type='text'
                     placeholder={translate('phone')}
-                    errors={!!errors.number}
-                    other={register('number')}
+                    errors={!!errors.mobile}
+                    other={register('mobile')}
                 />
                 <InputContainer
                     label={key}
