@@ -12,6 +12,7 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         <title>FootBet</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <script type="text/javascript" src="//vk.com/js/api/openapi.js?152"></script>
       </Head>
       <LayoutWrapper {...pageProps}>
         <Component {...pageProps} />

@@ -5,26 +5,23 @@ import vk from '/public/images/header/login/vk.svg'
 import twitter from '/public/images/header/login/twitter.svg'
 // scss
 import styles from './SocialMediaIcons.module.scss'
+// components
 import ReactFacebookLogin from 'react-facebook-login'
-import { useRef } from 'react'
 import GoogleLogin from 'react-google-login'
+import { useEffect } from 'react'
 
 const icons = [
     {
         iconUrl: facebook.src,
-        link: "https://www.facebook.com/"
     },
     {
         iconUrl: gmail.src,
-        link: "https://accounts.google.com/signin"
     },
     {
         iconUrl: vk.src,
-        link: "https://vk.com/login"
     },
     {
         iconUrl: twitter.src,
-        link: "https://twitter.com/login"
     }]
 
 
@@ -40,6 +37,11 @@ const responseGoogle = (response) => {
 
 export function SocialMediaIcons() {
 
+
+    useEffect(()=>{                         
+     VK.init({apiId:'7911294'});
+    },[])
+    
     function onSocialMediaBtnClick(i) {
         if (i === 0) {
             const
@@ -53,7 +55,22 @@ export function SocialMediaIcons() {
             if (googleLoginBtn)
                 googleLoginBtn.click();
         }
+        else if ( i === 2 ) {            
+            VK.Auth.login(function(response){
+                if(response.session){
+                    /*User authorization succeeded*/
+                    console.log(response)
+                    if(response.status=='connected'){
+                        /*Selected user access settings, if they are requested*/
+                    }
+                } else {
+                    /*User clicks the cancel button in the authorization window*/
+                }
+            });
+        }
     }
+
+    
 
     return (
         <div className={styles.conteiner}>
@@ -93,8 +110,8 @@ export function SocialMediaIcons() {
                                                     onSuccess={responseGoogle}
                                                     onFailure={responseGoogle}
                                                 />
-                                            )
-
+                                            )                                       
+                                            
                                         }
                                     </div>
                                 </a>
