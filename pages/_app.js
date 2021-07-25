@@ -1,4 +1,5 @@
 import './../styles/globals.css'
+import './../styles/calendar.scss'
 import Head from 'next/head'
 import LayoutWrapper from './../layouts/layout-wrapper';
 import { Provider } from 'react-redux'

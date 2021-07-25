@@ -1,8 +1,16 @@
+// hooks
+import { useState } from "react";
 // components
 import { Title } from "../../../../common/Title/Title";
 import { DayChangeButton } from './DayChangeButton/DayChangeButton';
+import Calendar from 'react-calendar';
 // styles
 import styles from './TMHeader.module.scss'
+// icons
+import calendar from '/public/images/main/matches/Calendar.png'
+import arrowRight from '/public/images/main/matches/arrowRight.png'
+import arrowLeft from '/public/images/main/matches/arrowLeft.png'
+
 
 export function TMHeader({
     clickTD,
@@ -33,7 +41,9 @@ export function TMHeader({
             }
 
             return `${day}.${month < 10 ? "0" + month : month}.${year}`
-        }
+        },
+        // states
+        [showCalendar, setShowCalendar] = useState(false)
 
     return (
         <div className={styles.container}>
@@ -63,6 +73,23 @@ export function TMHeader({
                         active={TMBoardState ? 'show' : null}
                         click={clickTM}
                     />
+                </div>
+                <div className={styles.calendar}>
+                    <img
+                        src={calendar.src}
+                        alt="calendar-icon"
+                        onClick={() => setShowCalendar(!showCalendar)}
+                    />
+                </div>
+                <div className={styles.calendar_body}>
+                    {showCalendar &&
+                        <Calendar
+                            showNeighboringMonth={false}
+                            showWeekNumbers={false}
+                            nextLabel={<img src={arrowRight.src} />}
+                            prevLabel={<img src={arrowLeft.src} />}
+                        />
+                    }
                 </div>
             </div>
         </div>
