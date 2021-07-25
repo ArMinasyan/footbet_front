@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom'
 
 export function Modal({
     onClose,
+    closeWithVectore = null,
     children,
     containerStyles = null,
     contentStyles = null,

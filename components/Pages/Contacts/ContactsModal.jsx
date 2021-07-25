@@ -7,6 +7,7 @@ import closeVector from '/public/images/header/SocialMedia/closeVector.png'
 
 
 export default function ContactsModal({ onModalClose, opened = false }) {
+    
     return (
         <Modal
             onClose={onModalClose}
@@ -19,7 +20,10 @@ export default function ContactsModal({ onModalClose, opened = false }) {
                         <img
                             src={closeVector.src}
                             alt=""
-                            onClick={() => onModalClose()}
+                            onClick={() => {
+                                onModalClose()
+                                document.querySelector('body').style.overflow = 'visible'
+                            }}
                         />
                     </div>
                     <div className={styles.rows}>

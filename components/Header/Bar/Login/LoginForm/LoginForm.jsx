@@ -11,7 +11,7 @@ import { Submit } from '../common/Submit'
 import { ToRegister } from '../common/ToRegister'
 // styles 
 import styles from './LoginForm.module.scss'
-import { connect, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { login } from '../../../../../redux/features/userSlice'
 
 export function LoginForm({ onModalClose, handleResetPassModal }) {
@@ -50,6 +50,7 @@ export function LoginForm({ onModalClose, handleResetPassModal }) {
                 password: data.password,
                 logined: true
             }))
+            handle_to_register_click()
         };
 
     return (

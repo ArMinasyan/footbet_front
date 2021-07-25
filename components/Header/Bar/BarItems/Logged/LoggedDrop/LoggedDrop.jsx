@@ -1,6 +1,7 @@
 // hooks and helpers
 import { useRouter } from 'next/dist/client/router';
 import { useEffect, useRef } from 'react';
+import { useDispatch } from 'react-redux';
 // translation 
 import useTranslation from 'next-translate/useTranslation'
 // componetns
@@ -9,6 +10,7 @@ import Link from 'next/link'
 import styles from './LoggedDrop.module.scss'
 // icons
 import telIcon from '/public/images/common/phone.png'
+import { logout } from '/redux/features/userSlice';
 
 export function LoggedDrop({ onClose, user }) {
 
@@ -31,7 +33,9 @@ export function LoggedDrop({ onClose, user }) {
         },
         { t } = useTranslation('common'),
         translationPath = 'commons.',
-        translate = (key) => t(`${translationPath}${key}`)
+        translate = (key) => t(`${translationPath}${key}`),
+        dispatch = useDispatch()
+        
 
 
     return (
@@ -55,7 +59,9 @@ export function LoggedDrop({ onClose, user }) {
                     <span>{user.telephone}</span>
                 </div>
                 <div className={styles.logOut}>
-                    <span>{translate('logOut')}</span>
+                    <span
+                        onClick={() => dispatch(logout())}
+                    >{translate('logOut')}</span>
                 </div>
             </div>
         </div>
