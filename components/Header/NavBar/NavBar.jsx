@@ -7,12 +7,11 @@ import styles from './NavBar.module.scss'
 import useTranslation from 'next-translate/useTranslation'
 // componetns
 import { Button } from './Button/Button'
-import Contacts from '../../Pages/Contacts/Contacts'
+import ContactsModal from '../../Pages/Contacts/ContactsModal'
 
 
 
 export function NavBar() {
-
 
     const
         //states
@@ -59,7 +58,7 @@ export function NavBar() {
             {
                 key: Math.random(),
                 frstContent: translate('contacts'),
-                href: '',
+                href: null,
                 click: () => setShowContactsModal(true)
             },
         ],
@@ -93,7 +92,7 @@ export function NavBar() {
             {
                 key: Math.random(),
                 frstContent: translate('contacts'),
-                href: '',
+                href: null,
                 click: () => setShowContactsModal(true)
             },
         ]
@@ -116,10 +115,12 @@ export function NavBar() {
                     }
                 </div>
             </div>
-            {showContactsModal && <Contacts
-                opened={showContactsModal}
-                onModalClose={() => setShowContactsModal(false)}
-            />}
+            {showContactsModal &&
+                <ContactsModal
+                    opened={showContactsModal ? true : false}
+                    onModalClose={() => setShowContactsModal(false)}
+                />
+            }
         </>
 
     )

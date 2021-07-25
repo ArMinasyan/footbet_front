@@ -15,7 +15,7 @@ export function Modal({
 
     const
         [showModal, setShowModal] = useState(false),
-        [pageOverflow, setPageOverflow] = useState(false),
+        [pageOverflow, setPageOverflow] = useState(showModal),
         body = document.querySelector('body')
 
     useEffect(() => {

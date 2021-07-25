@@ -109,10 +109,12 @@
 
     @keyframes leftRight {
         from {
-            right: -35%;
+            z-index: 10;
+            right: -50%;
         }
         to {
-            right: 33.5%;
+            z-index: 10;
+            right: 42%;
         }
     }
 }
