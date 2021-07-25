@@ -3,7 +3,7 @@ import useTranslation from 'next-translate/useTranslation'
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { request } from '../../../../../lib/er.lib';
+import { request, setCookie } from '../../../../../lib/er.lib';
 //components
 import { InputContainer } from '/components/common/auth/InputContainer/InputContainer'
 import { Title } from '../common/Title'
@@ -50,8 +50,9 @@ export function LoginForm({ onModalClose, handleResetPassModal }) {
         // on form submit
         submit = async (data) => {
             try {
-                const user = await request( LOGIN, data )
-                dispatch(login(user))
+                const user = (await request( LOGIN, data )).data?.data;
+                setCookie( `access-token`, user.token, 1 );
+                dispatch(login(user));
             }
             catch( error ) {
                 toast( error.response.data?.message || `unknown error`, {
