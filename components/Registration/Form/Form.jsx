@@ -18,6 +18,8 @@ import key from '/public/images/register/key.svg'
 import { request } from '../../../lib/er.lib'
 import { REGISTER } from '../../../lib/request-destinations'
 
+import { ToastContainer, toast } from 'react-toastify';
+
 
 export function Form({ title }) {
 
@@ -107,17 +109,23 @@ export function Form({ title }) {
         //     }
         // ],
         // send form values
-        submit = (data) => {
-            console.log(data);
-            // const registerFormData = new FormData();
-            // Object.entries(data).forEach(([key, item]) => {
-            //     registerFormData.append(key, item);
-            // })
-            // try {
-            // request(REGISTER, registerFormData)
-            // } catch (error) {
-            //     console.log(error);
-            // }
+        submit = async ( data ) => {
+            const registerFormData = new FormData();
+            Object.entries(data).forEach(([key, item]) => {
+                if ( key !== `file` )
+                    registerFormData.append(key, item);
+                else if ( item.length > 0 )
+                    registerFormData.append( key, item[0] )
+            })
+            
+            try {
+                await request( REGISTER, registerFormData);
+                toast(`Successfully registered`);
+            } catch (error) {
+                toast( error.response.data?.message || `unknown error`, {
+                    type: `error`
+                });
+            }
         }
 
     return (
@@ -185,6 +193,7 @@ export function Form({ title }) {
                     content={translate('buttonTitle')}
                 />
             </form>
+            <ToastContainer />
         </div>
     )
 }

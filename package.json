@@ -25,8 +25,10 @@
     "react-hook-form": "^7.10.0",
     "react-redux": "^7.2.4",
     "react-timer-hook": "^3.0.4",
+    "react-toastify": "^7.0.4",
     "redux": "^4.1.0",
     "sass": "^1.35.1",
+    "styled-components": "^5.3.0",
     "yup": "^0.32.9"
   },
   "devDependencies": {
