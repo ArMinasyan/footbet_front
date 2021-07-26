@@ -18,8 +18,6 @@ export default function PredictionPayments() {
         [showPredictionTab, setShowPredictionTabs] = useState(!openGamePaymentsPage),
         [showPaymentTab, setShowPaymentTab] = useState(openGamePaymentsPage)
 
-    console.log(router.query);
-
     return (
         <div className={styles.container}>
             <div className={styles.content}>

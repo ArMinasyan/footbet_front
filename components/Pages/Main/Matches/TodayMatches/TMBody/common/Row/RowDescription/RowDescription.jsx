@@ -3,7 +3,9 @@ import useTranslation from 'next-translate/useTranslation'
 // styles
 import styles from './RowDescription.module.scss'
 
-export function RowDescription({
+export function 
+
+RowDescription({
     clickBuy,
     date,
     gameState,
