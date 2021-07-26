@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 // components
-import {InputContainer} from '/components/common/auth/InputContainer/InputContainer'
+import { InputContainer } from '/components/common/auth/InputContainer/InputContainer'
 import { FileInput } from './FileInput/FileInput'
 import { Button } from './Button/Button'
 // styles
@@ -17,6 +17,7 @@ import phone from '/public/images/register/phone.svg'
 import key from '/public/images/register/key.svg'
 import { request } from '../../../lib/er.lib'
 import { REGISTER } from '../../../lib/request-destinations'
+import { Ball } from '../../common/auth/BallRightCorner/Ball'
 
 
 export function Form({ title }) {
@@ -121,70 +122,76 @@ export function Form({ title }) {
         }
 
     return (
-        <div className={styles.container}>
-            <div className={styles.title_container}>
-                <p>
-                    {
-                        title
-                    }
-                </p>
+        <>
+            <div className={styles.container}>
+                <div className={styles.title_container}>
+                    <p>
+                        {
+                            title
+                        }
+                    </p>
+                </div>
+                <form
+                    onSubmit={(handleSubmit(submit))}
+                >
+                    <FileInput
+                        id='upload_file_input'
+                        type='file'
+                        other={register('file')}
+                    />
+                    <InputContainer
+                        label={userIcon}
+                        id='name'
+                        type='text'
+                        placeholder={translate('fullName')}
+                        errors={(!!errors.name)}
+                        other={register('name')}
+                    />
+                    <InputContainer
+                        label={calendar}
+                        id='birth_date'
+                        type='text'
+                        placeholder={translate('birthDate')}
+                        errors={(!!errors.birthDate)}
+                        other={{
+                            ...register('birthDate'),
+                            onFocus: (e) => e.target.type = 'date',
+                            onBlur: (e) => e.target.type = 'text'
+                        }}
+                    />
+                    <InputContainer
+                        label={email}
+                        id='email'
+                        type='text'
+                        placeholder={translate('email')}
+                        errors={!!errors.email}
+                        other={register('email')}
+                    />
+                    <InputContainer
+                        label={phone}
+                        id='phone_number'
+                        type='text'
+                        placeholder={translate('phone')}
+                        errors={!!errors.number}
+                        other={register('number')}
+                    />
+                    <InputContainer
+                        label={key}
+                        id='password'
+                        type='password'
+                        placeholder={translate('password')}
+                        errors={!!errors.password}
+                        other={register('password')}
+                    />
+                    <Button
+                        content={translate('buttonTitle')}
+                    />
+                </form>
+
             </div>
-            <form
-                onSubmit={(handleSubmit(submit))}
-            >
-                <FileInput
-                    id='upload_file_input'
-                    type='file'
-                    other={register('file')}
-                />
-                <InputContainer
-                    label={userIcon}
-                    id='name'
-                    type='text'
-                    placeholder={translate('fullName')}
-                    errors={(!!errors.name)}
-                    other={register('name')}
-                />
-                <InputContainer
-                    label={calendar}
-                    id='birth_date'
-                    type='text'
-                    placeholder={translate('birthDate')}
-                    errors={(!!errors.birthDate)}
-                    other={{
-                        ...register('birthDate'),
-                        onFocus: (e) => e.target.type = 'date',
-                        onBlur: (e) => e.target.type = 'text'
-                    }}
-                />
-                <InputContainer
-                    label={email}
-                    id='email'
-                    type='text'
-                    placeholder={translate('email')}
-                    errors={!!errors.email}
-                    other={register('email')}
-                />
-                <InputContainer
-                    label={phone}
-                    id='phone_number'
-                    type='text'
-                    placeholder={translate('phone')}
-                    errors={!!errors.number}
-                    other={register('number')}
-                />
-                <InputContainer
-                    label={key}
-                    id='password'
-                    type='password'
-                    placeholder={translate('password')}
-                    errors={!!errors.password}
-                    other={register('password')}
-                />
-                <Button
-                    content={translate('buttonTitle')}
-                />
-            </form>
-        </div>
+            <div className={styles.ball}>
+                <Ball />
+            </div>
+        </>
     )
 }

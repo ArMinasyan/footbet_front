@@ -5,7 +5,9 @@ $conteinerWidth: 752px;
     @include center();
     width: 100%;
     @include arsenal-font();
-    
+    @include mobile {
+        margin-top: 51px;
+    }
     button {
         cursor: pointer;
         background: #9e094a;
@@ -17,5 +19,11 @@ $conteinerWidth: 752px;
         color: #ffffff;
         border: none;
         outline: none;
+        @include mobile {
+            @include arsenal-font();
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 0.16em;
+        }
     }
 }

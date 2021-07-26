@@ -1,4 +1,4 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 @import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
 $modalHeight: 601px;
 
@@ -19,6 +19,12 @@ $modalHeight: 601px;
             font-size: 30px;
             line-height: 34px;
             letter-spacing: 0.1em;
+            @include mobile {
+                @include arimo-font();
+                font-size: 19px;
+                line-height: 25px;
+                letter-spacing: 0.1em;
+            }
         }
     }
 
@@ -35,6 +41,9 @@ $modalHeight: 601px;
                 width: 100% !important;
                 color: rgba(255, 255, 255, 0.31) !important;
                 background-color: rgba(255, 255, 255, 0.12);
+                @include mobile {
+                    padding: 5.2% 4.8% !important;
+                }
             }
         }
 
@@ -42,12 +51,21 @@ $modalHeight: 601px;
             @include flex-start();
             width: 100%;
             margin: 10px 0 0 7px;
+            @include mobile {
+                margin: 10px 0 0 20px;
+            }
             span {
                 cursor: pointer;
                 font-size: 14px;
                 line-height: 16px;
                 letter-spacing: 0.05em;
                 font-family: Arimo;
+                @include mobile {
+                    @include arimo-font();
+                    font-size: 13px;
+                    line-height: 17px;
+                    letter-spacing: 0.05em;
+                }
             }
         }
         .submit {
@@ -66,6 +84,12 @@ $modalHeight: 601px;
                 border: none;
                 outline: none;
                 cursor: pointer;
+                @include mobile {
+                    font-size: 13px;
+                    line-height: 15px;
+                    letter-spacing: 0.14em;
+                    padding: 4%;
+                }
             }
         }
     }
@@ -73,6 +97,11 @@ $modalHeight: 601px;
         @include center();
         width: 100%;
         margin-top: 25px;
+        @include mobile {
+            font-size: 13px;
+            line-height: 17px;
+            letter-spacing: 0.05em;
+        }
         .to_register_content {
             font-family: Arimo;
             font-size: 16px;

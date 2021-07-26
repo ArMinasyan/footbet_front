@@ -43,7 +43,7 @@ export function NewPassword({ onModalClose }) {
     return (
         <>
             {showNewPassMl &&
-                <Modal onClose={onModalClose}>
+                <Modal onClose={onModalClose} contentStyles={styles.m_content} containerStyles={styles.m_container}>
                     <div className={styles.container}>
                         <Title
                             styles={styles.title}
