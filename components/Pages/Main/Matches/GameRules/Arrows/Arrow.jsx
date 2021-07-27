@@ -2,29 +2,20 @@ import { consts } from 'react-elastic-carousel'
 // icons
 import arrowRight from '/public/images/main/news/arrowRight.png'
 import arrowLeft from '/public/images/main/news/arrowLeft.png'
+import arrowStyles from './Arrow.module.scss'
 
 export function Arrow({ type, onClick, isEdge }) {
     const
         pointer = type === consts.PREV ?
             <img
                 src={arrowLeft.src}
-                style={{
-                    position: 'absolute',
-                    left: '46.3%',
-                    cursor: 'pointer',
-                    zIndex: 10
-                }}
+                className={arrowStyles.arrowLeft}
                 alt="arrow-left"
             />
             :
             <img
                 src={arrowRight.src}
-                style={{
-                    position: 'absolute',
-                    left: '51.5%',
-                    cursor: 'pointer',
-                    zIndex: 10
-                }}
+                className={arrowStyles.arrowRight}
                 alt="arrow-right"
             />,
 

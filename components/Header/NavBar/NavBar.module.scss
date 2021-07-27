@@ -19,7 +19,7 @@ $contentWidth: 1460px;
       @include flex-end();
       height: 100%;
 
-      @include tablet {
+      @include noteBook {
         @include center();
         height: auto;
       }
@@ -33,7 +33,7 @@ $contentWidth: 1460px;
       @include flex-start();
       height: 100%;
 
-      @include tablet {
+      @include noteBook {
         @include flex-evenly();
         margin-top: 15px;
         height: auto;
@@ -49,7 +49,7 @@ $contentWidth: 1460px;
       max-width: 661px;
     }
   }
-  @include tablet {
+  @include noteBook {
     height: auto;
   }
   @include mobile {
@@ -57,7 +57,7 @@ $contentWidth: 1460px;
   }
 }
 .tablet {
-  @include tablet {
+  @include noteBook {
     display: none !important;
   }
 }

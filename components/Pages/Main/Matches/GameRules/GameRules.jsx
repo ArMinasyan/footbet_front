@@ -1,6 +1,7 @@
 // components
 import Carousel from 'react-elastic-carousel'
 import { Arrow } from './Arrows/Arrow'
+
 import { Pagination } from './Pagination/Pagination'
 // styles
 import styles from './GameRules.module.scss'

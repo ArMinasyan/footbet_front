@@ -15,6 +15,7 @@ export function Header({
                 locationInPage={'matches'}
                 textPathName={'.title'}
                 href='/matches'
+                classes={styles.title}
             />
             <div className={styles.buttons}>
                 <Button

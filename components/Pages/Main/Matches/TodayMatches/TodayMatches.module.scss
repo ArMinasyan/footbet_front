@@ -4,8 +4,13 @@
     width: 100%;
     margin-top: 1.71%;
     @include animation();
+
     @include tablet{
         margin-top: 31px;
+        width: 100vw;
     }
-    @include mobile{}
+    @include mobile{
+        margin-top: 0;
+        width: 100vw;
+    }
 }

@@ -29,9 +29,6 @@ $contentBorderOnHover: 2px solid #12112c;
     @include noteBook {
       min-height: 51px;
     }
-    @include tablet {
-      min-height: 51px;
-    }
 
     pre {
       @include center();
@@ -60,6 +57,7 @@ $contentBorderOnHover: 2px solid #12112c;
     min-height: 51px;
   }
   @include tablet {
+    max-width: 138px;
     margin: 0 25.5px;
     min-height: 51px;
   }
