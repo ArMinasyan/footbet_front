@@ -9,9 +9,9 @@ export const nav_data = [
             name: 'Игры'
         },
         {
-            link:'/news',
+            link:'/',
             name: 'Новости'
-        }
+        }   
     ],
     [
         {
@@ -19,25 +19,25 @@ export const nav_data = [
             name: 'О нас'
         },
         {
-            link:'',
+            link:'/prediction',
             name: 'Оплата'
         },
         {
-            link:'',
+            link:'/statistics',
             name: 'Статистика матчей'
         }
     ],
     [
         {
-            link:'',
+            link:'/registration',
             name: 'Регистрация'
         },
         {
-            link:'',
+            link:'/testimonials',
             name: 'Отзывы'
         },
         {
-            link:'',
+            link:'/',
             name: 'Контакты'
         }
     ],

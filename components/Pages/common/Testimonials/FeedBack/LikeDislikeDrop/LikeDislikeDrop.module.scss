@@ -1,0 +1,43 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    position: absolute;
+    bottom: 110%;
+    right: -3.4%;
+    z-index: 20;
+
+    .content {
+        display: grid;
+        padding: 17.5px 19px;
+        .row {
+            @include center();
+            padding-bottom: 17.5px;
+            .avatar {
+                margin: 0 !important;
+            }
+            .user_part {
+                @include center();
+                p {
+                    margin: 0 30px;
+                    @include arsenal-font();
+                    font-size: 22px;
+                    line-height: 28px;
+                    letter-spacing: 0.07em;
+                    white-space: nowrap;
+                }
+                img {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    background: #0c0b22;
+    border: 1px solid #9e094a;
+    box-sizing: border-box;
+    border-radius: 23px;
+    @include animation();
+}

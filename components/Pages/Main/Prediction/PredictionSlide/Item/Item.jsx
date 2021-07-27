@@ -18,7 +18,8 @@ export function Item({
     locationInMainPage,
     expiryTimestamp,
     prediction,
-    ordinar
+    ordinar,
+    clickBuy
 }) {
 
     const
@@ -36,7 +37,7 @@ export function Item({
                     <div className={styles.top}>
                         <div className={styles.team}>
                             <img src={teamOneIcon} alt="" />
-                            <p>{translate(teamOneName)}</p>
+                            <p>{teamOneName}</p>
                         </div>
                         <div className={styles.timer_container}>
                             <p>Игра начинается через</p>
@@ -47,11 +48,11 @@ export function Item({
                         </div>
                         <div className={styles.team}>
                             <img src={teamTwoIcon} alt="" />
-                            <p>{translate(teamTwoName)}</p>
+                            <p>{teamTwoName}</p>
                         </div>
                         {showPrediction && <PredictionModal
-                            teamOneName={translate(teamOneName)}
-                            teamTwoName={translate(teamTwoName)}
+                            teamOneName={teamOneName}
+                            teamTwoName={teamTwoName}
                             teamOneIcon={teamOneIcon}
                             teamTwoIcon={teamTwoIcon}
                             prediction={prediction}
@@ -70,7 +71,7 @@ export function Item({
                                 </div>
                             </div>
                             <div className={styles.buy_button_container}>
-                                <div className={styles.buy_button_content}>
+                                <div className={styles.buy_button_content} onClick={clickBuy}>
                                     <p>{translate(buyButtonName)}</p>
                                 </div>
                             </div>

@@ -57,11 +57,17 @@ $ratingContentWidth: 184px;
             width: 100%;
             @include flex-between();
             margin-top: 5.09%;
+            position: relative;
             .date {
                 @include arimo-font();
                 font-size: 20px;
                 line-height: 23px;
                 color: rgba(177, 11, 73, 0.5);
+            }
+            .vertical_border{
+                min-height: 32px;
+                cursor: pointer;
+                border-right:  3px solid #8D0B40;
             }
             .likes_dislikes {
                 width: get_percent(131.5px, 1495px);
@@ -69,7 +75,6 @@ $ratingContentWidth: 184px;
                 .like {
                     @include flex-start();
                     width: 50%;
-                    border-right:  2px solid #8D0B40;
                     img{
                         cursor: pointer;
                     }

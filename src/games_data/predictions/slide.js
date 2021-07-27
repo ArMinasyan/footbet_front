@@ -6,9 +6,9 @@ import atleticIcon from '/public/images/games/atletic.png'
 import marcelIcon from '/public/images/main/matches/marcel.png'
 import rennaisIcon from '/public/images/main/matches/rennais.png'
 
-export const pred_slide_data = [
+export const slide_data = [
     {
-        id: 'predictionspageGame1',
+        id: 'predictionslideGame1',
         teamOneName: 'Атлетико',
         teamOneIcon: psjIcon.src,
         teamTwoName: 'Атлетик',
@@ -33,7 +33,7 @@ export const pred_slide_data = [
         ordinarText: 'Ординар / 1500руб.'
     },
     {
-        id: 'predictionspageGame2',
+        id: 'predictionslideGame2',
         teamOneName: 'Барселона',
         teamOneIcon: atleticIcon.src,
         teamTwoName: 'ПСЖ',
@@ -54,7 +54,7 @@ export const pred_slide_data = [
         price: '2500 руб.'
     },
     {
-        id: 'predictionspageGame3',
+        id: 'predictionslideGame3',
         teamOneName: 'Марсель',
         teamOneIcon: barcaIcon.src,
         teamTwoName: 'Атлетик',
@@ -75,7 +75,7 @@ export const pred_slide_data = [
         price: '1800 руб. '
     },
     {
-        id: 'predictionspageGame4',
+        id: 'predictionslideGame4',
         teamOneName: 'Атлетико',
         teamOneIcon: atleticoIcon.src,
         teamTwoName: 'Атлетик',
@@ -100,7 +100,7 @@ export const pred_slide_data = [
         ordinarText: 'Ординар / 1500руб.'
     },
     {
-        id: 'predictionspageGame5',
+        id: 'predictionslideGame5',
         teamOneName: 'Атлетико',
         teamOneIcon: atleticoIcon.src,
         teamTwoName: 'Атлетик',
@@ -125,7 +125,7 @@ export const pred_slide_data = [
         ordinarText: 'Ординар / 1500руб.'
     },
     {
-        id: 'predictionspageGame6',
+        id: 'predictionslideGame6',
         teamOneName: 'Атлетико',
         teamOneIcon: atleticoIcon.src,
         teamTwoName: 'Атлетик',

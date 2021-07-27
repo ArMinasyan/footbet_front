@@ -1,11 +1,14 @@
-// styles
+// hooks and helpers
+import { useRouter } from 'next/dist/client/router'
+//components
 import Carousel from 'react-elastic-carousel'
 import { Arrow } from './Arrows/Arrow'
 import { Item } from './Item/Item'
+// styles
 import styles from './PrdeictionSlide.module.scss'
-import { pred_slide_data } from './pred_slide_data'
 // images, icons
 import predictionBackground from '/public/images/main/prediction/predBack.png'
+import { slide_data } from '../../../../../src/games_data/predictions/slide'
 
 export function PrdeictionSlide() {
 
@@ -14,7 +17,8 @@ export function PrdeictionSlide() {
             backgroundImage: "url(" + predictionBackground.src + ")",
             backgroundSize: "cover"
         },
-        time = new Date()
+        time = new Date(),
+        router = useRouter()
 
     time.setSeconds(time.getSeconds() + 10600);
 
@@ -29,7 +33,7 @@ export function PrdeictionSlide() {
                 itemPadding={[115, 0, 43, 0]}
             >
                 {
-                    pred_slide_data.map(el => (
+                    slide_data.map(el => (
                         <Item
                             teamOneName={el.teamOneName}
                             teamTwoName={el.teamTwoName}
@@ -39,9 +43,13 @@ export function PrdeictionSlide() {
                             buyButtonName={el.buyButtonName}
                             locationInMainPage={'prediction'}
                             expiryTimestamp={time}
-                            prediction={el.prediction}
-                            ordinar={el.ordinar}
+                            prediction={el.predictionText}
+                            ordinar={el.ordinarText}
                             key={Math.random()}
+                            clickBuy={() => router.push({
+                                pathname: '/prediction',
+                                query: { game: el.id }
+                            })}
                         />
                     ))
                 }

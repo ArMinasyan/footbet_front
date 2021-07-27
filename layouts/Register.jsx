@@ -1,5 +1,4 @@
 import { Header } from '../components/Header/Header'
-import { Footer } from '../components/Registration/Footer/Footer'
 
 export default function RegisterLayout({ children }) {
     return (
@@ -8,7 +7,6 @@ export default function RegisterLayout({ children }) {
             <main>
                 {children}
             </main>
-            <Footer />
         </>
     )
 }

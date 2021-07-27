@@ -29,12 +29,15 @@ export function PaymentTab() {
                     return db.todayMatches.filter(el => el.id === game_id)
                 case "predictionspage":
                     return db.predictionspage.filter(el => el.id === game_id)
+                case "predictionslide":
+                    return db.predictionslide.filter(el => el.id === game_id)
                 default:
                     return []
             }
         },
 
         game_data = get_game_data(game_path_in_extradata, extra_data)
+        console.log(game_data);
 
     return (
         <div className={styles.container}>
