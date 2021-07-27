@@ -1,4 +1,4 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
 $containerBorderColor: #9e094a;
 $containerWidth: 141px;
@@ -12,24 +12,60 @@ $contentWidth: 106px;
     right: -70px;
     border: 1px solid $containerBorderColor;
     background: $primaryBackground;
+
+    @include noteBook {
+        min-width: 141px;
+        left: -85px;
+    }
+    @include mobile {
+        min-width: 141px;
+        left: -85px;
+    }
     .content {
         width: get_percent($contentWidth, $containerWidth);
         @include column-center();
         margin-top: get_percent(10px, $containerWidth);
         // margin-top: 7.2%;
+
+        @include noteBook {
+
+        }
+        @include mobile {
+        }
         .row {
             @include flex-between();
             margin-bottom: get_percent(14px, $contentWidth);
             width: 100%;
+
+            @include noteBook {
+            }
+            @include mobile {
+            }
             span {
                 cursor: pointer;
                 font-family: Arial;
                 line-height: 18px;
                 letter-spacing: 0.08em;
+                @include noteBook {
+                    font-size: 16px;
+                    line-height: 18px;
+                    letter-spacing: 0.08em;
+                }
+                @include mobile {
+                    font-size: 16px;
+                    line-height: 18px;
+                    letter-spacing: 0.08em;
+                }
             }
             img {
                 cursor: pointer;
                 border-radius: 100%;
+                @include noteBook {
+                }
+                @include mobile {
+                    max-width: 24px;
+                    max-height: 21px;
+                }
             }
         }
     }

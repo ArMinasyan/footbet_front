@@ -21,14 +21,36 @@
       &_items {
         padding: 9px 0;
         border-bottom: 1px solid rgba(126, 26, 74, 0.19);
+        @include mobile {
+          padding: 4.9px;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.08em;
+        }
+      }
+      @include mobile {
+        padding: 10px;  
       }
     }
+    @include animation();
   }
   .dropdown_check {
     display: none;
+    
 
     @include tablet {
       @include center();
     }
+    img{
+      @include mobile {
+        max-width: 17px;
+        max-height: 12px;
+      }
+    }
   }
+  @include mobile {
+    max-height: 211px;
+    @include animation();
+  }
+  @include animation();
 }

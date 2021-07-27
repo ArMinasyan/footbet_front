@@ -5,7 +5,7 @@ $bg-url: url("../../public/images/header/header_back.png");
     @include column-start();
     min-height: 452px;
     justify-content: flex-start;
-    
+
     .bar {
         @include flex-end;
         width: 100%;
@@ -22,6 +22,9 @@ $bg-url: url("../../public/images/header/header_back.png");
                 width: 100%;
                 height: 44vw;
             }
+            @include mobile {
+                min-height: 285px;
+            }
 
             .bar_conteiner {
                 width: 100%;
@@ -37,7 +40,7 @@ $bg-url: url("../../public/images/header/header_back.png");
                         .bar_items {
                             padding-top: 1.1%;
 
-                            @include tablet{
+                            @include tablet {
                                 padding-top: 4.6%;
                             }
                         }
@@ -53,9 +56,24 @@ $bg-url: url("../../public/images/header/header_back.png");
                 img {
                     width: 100%;
                     height: 100%;
+                    @include mobile {
+                        min-width: 199px;
+                        min-height: 195px;
+                    }
+                }
+                @include mobile {
+                    min-width: 199px;
+                    min-height: 195px;
+                    right: 0;
                 }
             }
         }
+    }
+    @include tablet {
+        height: auto;
+    }
+    @include mobile {
+        min-height: auto;
     }
     @include animation();
 }
@@ -66,5 +84,11 @@ $bg-url: url("../../public/images/header/header_back.png");
     flex-direction: column;
     height: get-vh(383px);
 
+    @include tablet {
+        max-height: 138px;
+    }
+    @include mobile {
+        min-height: auto;
+    }
     @include animation();
 }

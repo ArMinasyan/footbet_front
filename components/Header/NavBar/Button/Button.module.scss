@@ -3,16 +3,8 @@
 
 $parentWidth: 1460px;
 $buttonWidth: 170px;
-$buttonBackground: linear-gradient(
-  80.04deg,
-  #040749 1.6%,
-  rgba(44, 44, 44, 0) 106.17%
-);
-$buttonBackgroundOnHover: linear-gradient(
-  80.04deg,
-  #d10a52 1.6%,
-  rgba(5, 5, 11, 0) 106.17%
-);
+$buttonBackground: linear-gradient(80.04deg, #040749 1.6%, rgba(44, 44, 44, 0) 106.17%);
+$buttonBackgroundOnHover: linear-gradient(80.04deg, #d10a52 1.6%, rgba(5, 5, 11, 0) 106.17%);
 $contentBorder: 1px solid #d10a52;
 $contentBorderOnHover: 2px solid #12112c;
 
@@ -22,22 +14,24 @@ $contentBorderOnHover: 2px solid #12112c;
   height: 100%;
   min-width: 121px;
   min-height: 39px;
-  width: get_percent($buttonWidth, $parentWidth);
+  width: 170px;
   cursor: pointer;
   background: $buttonBackground;
   transition: all 0.2s ease-in-out;
-
-  @include noteBook{
-    margin-bottom: 1%;
-    min-width: 138px;  
-    min-height: 51px
-  }
+  margin: 0 22.5px;
 
   .content {
     @include center();
     width: get_percent($buttonWidth - 10px, $buttonWidth);
     height: 100%;
     border-left: $contentBorder;
+
+    @include noteBook {
+      min-height: 51px;
+    }
+    @include tablet {
+      min-height: 51px;
+    }
 
     pre {
       @include center();
@@ -59,6 +53,15 @@ $contentBorderOnHover: 2px solid #12112c;
   }
   &:hover .content {
     border-left: $contentBorderOnHover;
+  }
+  @include noteBook {
+    margin-bottom: 1%;
+    max-width: 138px;
+    min-height: 51px;
+  }
+  @include tablet {
+    margin: 0 25.5px;
+    min-height: 51px;
   }
 }
 .active {
