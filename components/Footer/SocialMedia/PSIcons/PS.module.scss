@@ -1,7 +1,28 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
 .container {
     @include flex-around();
     margin-top: 12px;
     width: 100%;
+    @include mobile {
+        margin-top: 51px;
+    }
+    @include tablet {
+        margin: 14px 0;
+    }
+
+    .icons {
+        img {
+            @include tablet {
+                max-width: 80px;
+            }
+            @include mobile {
+                min-width: 35px;
+                border: none;
+            }
+        }
+        @include mobile {
+            border: none;
+        }
+    }
 }

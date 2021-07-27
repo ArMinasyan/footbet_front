@@ -17,11 +17,11 @@ export function Footer() {
                 <Navigation />
                 <SocialMedia />
             </div>
-           {router.pathname === '/personal' &&
+            {router.pathname === '/personal' &&
                 <div className={styles.ball}>
                     <img src={ballIcon.src} alt="ball-icon" />
                 </div>
-           }
+            }
         </div>
     )
 }

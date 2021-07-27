@@ -13,10 +13,16 @@ $contentWidth: 1432px;
     min-height: 230px;
     background-color: $footerBackColor;
     bottom: 0;
+
     .content {
         @include center();
         width: get_percent($contentWidth);
         height: 100%;
+        @include mobile {
+            padding: 10px;
+            @include column-end();
+            width: 100%;
+        }
     }
     .ball {
         position: absolute;
@@ -25,8 +31,11 @@ $contentWidth: 1432px;
         overflow: hidden;
         z-index: -1;
     }
-    @include tablet{
+    
+    @include tablet {
         min-height: 235px;
-
+    }
+    @include mobile {
+        min-height: 239px;
     }
 }

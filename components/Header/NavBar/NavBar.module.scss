@@ -4,6 +4,7 @@ $parentWidth: 1920px;
 $contentWidth: 1460px;
 
 .container {
+    display: none !important;
     @include center();
     width: 100%;
     height: get-vw(63px);

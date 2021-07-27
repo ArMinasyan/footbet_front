@@ -36,6 +36,7 @@ export function PS() {
                         <Icon
                             key={el.key}
                             src={el.src}
+                            classes={styles.icons}
                             lastElement={el.lastElement && el.lastElement}
                         />
                     ))
