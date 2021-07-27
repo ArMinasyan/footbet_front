@@ -17,6 +17,9 @@
     justify-content: space-between;
     width: 19.93%;
     min-width: 236px;
+    @include noteBook{
+        z-index: 1;
+    }
 
     .auth_container {
         width: 100%;
@@ -43,6 +46,10 @@
                 font-family: Arimo;
                 font-size: 18px;
                 line-height: 21px;
+                @include noteBook {
+                    font-size: 16px;
+                    padding-right: 8px;
+                }
             }
 
             img {
@@ -54,6 +61,9 @@
         width: 25%;
         margin-left: 20px;
         position: relative;
+        @include noteBook{
+            margin-left: 10px;
+        }
         .lang_button_content {
             @include center();
             width: 100%;
@@ -64,6 +74,9 @@
                 font-family: Arimo;
                 font-size: 18px;
                 line-height: 21px;
+                @include noteBook {
+                    font-size: 16px;
+                }
             }
             img {
                 cursor: pointer;

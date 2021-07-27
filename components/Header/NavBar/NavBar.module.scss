@@ -1,16 +1,18 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
 $parentWidth: 1920px;
 $contentWidth: 1460px;
 
 .container {
-    @include center();
-    width: 100%;
-    height: get-vw(63px);
-    z-index: 10;
-    .content {
-        @include flex-evenly();
-        width: get_percent($contentWidth, $parentWidth);
-        height: 100%;
-    }
+  @include center();
+  width: 100%;
+  height: get-vw(63px);
+  z-index: 10;
+
+  .content {
+    @include flex-evenly();
+    flex-wrap: wrap;
+    width: get_percent($contentWidth, $parentWidth);
+    height: 100%;
+  }
 }
