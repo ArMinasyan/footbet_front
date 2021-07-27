@@ -16,7 +16,12 @@ export function Slide() {
 
     const
         // consts and states 
-        slide_data = slide_show_data()
+        slide_data = slide_show_data(),
+        // breakpoints for slide 
+        breakpoints = [
+            { width: 375, itemsToShow: 2, itemsToScroll: 1 },
+            { width: 740, itemsToShow: 3, itemsToScroll: 1 }
+        ]
 
 
     return (
@@ -29,6 +34,7 @@ export function Slide() {
                     renderArrow={Arrow}
                     renderPagination={Pagination}
                     className={styles.carousel}
+                    breakPoints={breakpoints}
                 >
                     {
                         slide_data.map(el => (
