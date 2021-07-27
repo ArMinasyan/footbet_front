@@ -8,7 +8,7 @@ export function Button({
     textPathName = "You are dont put there text.",
     locationInPage = "",
     aditionalStyles = null,
-    active,
+    active =false,
     click = null, }) {
 
     const

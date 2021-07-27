@@ -1,13 +1,22 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
-.container{
+.container {
     width: 100%;
     @include column-center();
 
-    .buttons{
+    .buttons {
         @include flex-evenly();
         width: 50%;
         height: get_vw(57px);
         margin-top: get_percent(60px);
+        @include mobile {
+            width: 65%;
+            margin-top: 9px;
+            @include flex-between();
+        }
+    }
+    @include mobile {
+        @include column-around();
+        min-height: 60px;
     }
 }
