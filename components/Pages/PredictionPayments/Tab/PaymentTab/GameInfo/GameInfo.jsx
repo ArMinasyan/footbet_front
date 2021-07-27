@@ -10,18 +10,18 @@ export function GameInfo({ game }) {
         { t } = useTranslation('prediction'),
         translationPath = 'tabs.payments.',
         translate = key => t(`${translationPath}${key}`)
-
+    console.log(game);
     return (
         <div className={styles.container}>
             <div className={styles.content}>
                 <div className={styles.teams}>
                     <div className={styles.teamOne}>
-                        <img src={game.teamOneIcon} alt="" />
+                        <img src={game.teamOneIcon} alt="icon" />
                         <p>{game.teamOneName}</p>
                     </div>
                     <span>VS.</span>
                     <div className={styles.teamTwo}>
-                        <img src={game.teamTwoIcon} alt="" />
+                        <img src={game.teamTwoIcon} alt="icon" />
                         <p>{game.teamTwoName}</p>
                     </div>
                 </div>

@@ -18,7 +18,7 @@ export function Login({ onModalClose }) {
     return (
         <>
             {showLoginModal &&
-                <Modal onClose={onModalClose}>
+                <Modal onClose={onModalClose} contentStyles={styles.m_content} containerStyles={styles.m_container}>
                     <div className={styles.login_container}>
                         <SocialMediaIcons />
                         <LoginForm

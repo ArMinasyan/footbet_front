@@ -35,7 +35,21 @@ export function Testimonials({
             ))
             setFeedBacks([...sortedByRateFeedBacks])
             setDateActive(false)
-        }
+        },
+        reactions = [
+            {
+                username: "Lorem Ipsum",
+                reaction: true
+            },
+            {
+                username: "Lorem Ipsum",
+                reaction: false
+            },
+            {
+                username: "Lorem Ipsum",
+                reaction: true
+            }
+        ]
 
     return (
         <>
@@ -74,6 +88,7 @@ export function Testimonials({
                                             likes={el.likes}
                                             disLikes={el.disLikes}
                                             key={Math.random()}
+                                            reactionsForTesting={reactions}
                                         />
                                     ))
                                 }
@@ -90,6 +105,7 @@ export function Testimonials({
                                             likes={el.likes}
                                             disLikes={el.disLikes}
                                             key={Math.random()}
+                                            reactionsForTesting={reactions}
                                         />
                                     ))
                                 }

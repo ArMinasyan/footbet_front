@@ -1,3 +1,7 @@
+//hooks 
+import { useState } from 'react'
+// components
+import { LikeDislikeDrop } from './LikeDislikeDrop/LikeDislikeDrop'
 // styles
 import styles from './FeedBack.module.scss'
 // icons
@@ -14,10 +18,15 @@ export function FeedBack({
     description,
     date,
     likes,
-    disLikes
+    disLikes,
+    reactionsForTesting
 }) {
 
-    const stars = [0, 1, 2, 3, 4]
+    const
+        stars = [0, 1, 2, 3, 4],
+        [showReactions, setShowReactions] = useState(false)
+
+
 
     return (
         <div className={styles.container}>
@@ -56,10 +65,17 @@ export function FeedBack({
                                 <img src={likeIcon.src} alt="like" />
                                 <span>{likes}</span>
                             </div>
+                            <div
+                                className={styles.vertical_border}
+                                onClick={() => setShowReactions(!showReactions)}
+                            />
                             <div className={styles.disLike}>
                                 <img src={disLikeIcon.src} alt="dislike" />
                                 <span>{disLikes}</span>
                             </div>
+                            {showReactions &&
+                                <LikeDislikeDrop data={reactionsForTesting} />
+                            }
                         </div>
                     </div>
                 </div>

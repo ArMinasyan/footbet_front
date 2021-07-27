@@ -15,7 +15,7 @@ export function InputContainer({
                     <label htmlFor={id}>
                         <img
                             src={label.src}
-                            alt=""
+                            alt="icon"
                         />
                     </label>
                 </div>
