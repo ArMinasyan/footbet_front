@@ -9,6 +9,7 @@ import { Login } from './Login/Login'
 import { BarItems } from './BarItems/BarItems'
 import { Logo } from './Logo/Logo'
 import { useSelector } from 'react-redux'
+import Dropdown from './Dropdown/Dropdown'
 
 export function Bar({ bar_items, bar_items_cont }) {
 
@@ -23,7 +24,10 @@ export function Bar({ bar_items, bar_items_cont }) {
 
     return (
         <div className={`${styles.bar_container} ${bar_items_cont}`}>
-            <Logo />
+            <div>
+                <Logo />
+                <Dropdown />
+            </div>
             <BarItems
                 userLogged={user_info !== null ? true : false}
                 registration={translate('register')}
