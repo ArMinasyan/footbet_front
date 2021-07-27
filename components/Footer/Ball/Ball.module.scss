@@ -1,0 +1,115 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    @include flex-between;
+    z-index: -2;
+    .ball {
+        width: 103%;
+        transform: matrix(1, 0, 0, 1, 0, 5);
+        overflow: hidden;
+
+        @include tablet {
+            transform: matrix(0.9, 0, 0, 0.98, 0, 5);
+        }
+        @include mobile {
+            transform: matrix(1, 0, 0, 1.1, 17, 80);
+        }
+    }
+    .text_with_ball {
+        position: relative;
+        right: 132px;
+        top: 25px;
+        @include tablet {
+            right: 230px;
+            top: 80px;
+        }
+        @include noteBook {
+            right: 230px;
+            top: 80px;
+        }
+        .top {
+            position: absolute;
+            right: -23px;
+            top: 0;
+            @include arimo-font();
+            font-size: 50px;
+            line-height: 60px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            @include mobile {
+                @include arimo-font();
+                font-size: 18px;
+                line-height: 22px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+            }
+            @include tablet {
+                @include arimo-font();
+                font-size: 35px;
+                line-height: 42px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+            }
+
+            @include noteBook {
+                @include arimo-font();
+                font-size: 35px;
+                line-height: 42px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+            }
+        }
+        .bottom {
+            position: absolute;
+            top: 43px;
+            @include arimo-font();
+            font-style: normal;
+            font-weight: normal;
+            font-size: 33px;
+            line-height: 40px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #9e094a;
+            @include mobile {
+                top: 20px;
+                @include arimo-font();
+                font-size: 18px;
+                line-height: 22px;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: #9e094a;
+            }
+            @include tablet {
+                @include arimo-font();
+                font-size: 25px;
+                line-height: 30px;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                top: 30px;
+            }
+            @include noteBook {
+                @include arimo-font();
+                font-size: 33px;
+                line-height: 40px;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                top: 30px;
+            }
+        }
+    }
+    @include mobile {
+        min-height: 179px;
+    }
+    @include tablet {
+        min-height: 235px;
+        left: -120px;
+    }
+    @include noteBook {
+        min-height: 235px;
+        left: -120px;
+    }
+}

@@ -1,7 +1,14 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
 .container {
     @include flex-around();
     margin-top: 12px;
     width: 100%;
+
+    @include noteBook {
+        margin: 14px 0;
+    }
+    @include mobile {
+        margin: 19px 0 0;
+    }
 }

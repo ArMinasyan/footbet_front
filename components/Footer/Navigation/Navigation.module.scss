@@ -6,8 +6,27 @@ $containerWidth: 716px;
     @include flex-start();
     align-items: flex-start;
     width: 50%;
+    height: 100%;
     .content {
         @include flex-between();
         width: get_percent(431px, $containerWidth);
+        @include mobile{
+            width: 100%
+        }
+    }
+
+    @include noteBook {
+        @include flex-start();
+        align-items: flex-start;
+        padding-top: 44px;
+    }
+    @include tablet {
+        @include flex-start();
+        align-items: flex-start;
+        padding-top: 44px;
+    }
+    @include mobile {
+        width: 100%;
+        padding: 14px 0 0 0 ;
     }
 }
