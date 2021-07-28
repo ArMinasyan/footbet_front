@@ -59,10 +59,6 @@ $controlerWidth: 356px;
                     margin-top: 51px;
                 }
             }
-
-            @include noteBook {
-                width: 100%;
-            }
             @include tablet {
                 width: 100%;
             }
@@ -72,10 +68,7 @@ $controlerWidth: 356px;
                 width: 100%;
             }
         }
-        @include noteBook {
-            @include flex-end();
-            align-items: flex-start;
-        }
+        
 
         @include tablet {
             @include flex-end();
@@ -92,11 +85,6 @@ $controlerWidth: 356px;
         margin: 0;
     }
     @include tablet {
-        @include center();
-        padding: 0;
-        margin: 0;
-    }
-    @include noteBook {
         @include center();
         padding: 0;
         margin: 0;

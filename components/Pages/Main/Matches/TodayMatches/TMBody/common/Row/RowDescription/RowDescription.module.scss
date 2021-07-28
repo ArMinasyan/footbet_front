@@ -22,7 +22,8 @@ $buyButtonWidth: 102px;
     padding: 9% 26%;
     border: 1px solid #ffffff;
     border-radius: 8px;
-    @include tablet {
+
+    @include noteBook {
         padding: 5px 15px;
     }
 }
@@ -44,6 +45,7 @@ $buyButtonWidth: 102px;
         margin: 0;
         padding: 0;
     }
+
     @include center();
     width: 100%;
     background-color: $containerBacgroundColor;
@@ -53,44 +55,54 @@ $buyButtonWidth: 102px;
         width: get_percent($contentWidth, $containerWidth);
         height: 100%;
         padding: 6px 0;
+
         .date_gameNStarted_content {
             @include flex-between();
             width: get_percent($dateGameStateWidthWhenNotStarted, $contentWidth);
-            @include tablet {
+
+            @include noteBook {
                 min-width: 100px;
             }
+
             @include mobile {
                 @include column-center();
                 min-width: 60px;
             }
+
             span {
                 @include arsenal-font();
                 font-weight: bold;
                 font-size: 18px;
                 line-height: 23px;
                 color: rgba(255, 255, 255, 0.35);
-                @include tablet {
+
+                @include noteBook {
                     font-size: 14px;
                     line-height: 18px;
                 }
+
                 @include mobile {
                     font-size: 10px;
                     line-height: 13px;
                 }
             }
         }
+
         .date_gameStarted_content {
             span {
                 color: white;
             }
         }
+
         .teams {
             @include flex-between();
             width: get_percent($teamsContainerWidth, $contentWidth);
             padding-right: 3.2%;
-            @include tablet {
+
+            @include noteBook {
                 min-width: 320px;
             }
+
             @include mobile {
                 min-width: 152px;
             }
@@ -100,27 +112,32 @@ $buyButtonWidth: 102px;
                 min-width: get_percent(155px, $teamsContainerWidth);
                 @include flex-between();
 
-                @include tablet {
+                @include noteBook {
                     min-width: 110px;
                 }
+
                 @include mobile {
                     @include column-center();
                     min-width: 40px;
                     flex-direction: column-reverse;
                 }
+
                 img {
                     @include tablet {
                         max-width: 15.5px;
                         max-height: 21.35px;
                     }
                 }
+
                 p {
                     @include teamNames();
-                    @include tablet {
+
+                    @include noteBook {
                         font-size: 16px;
                         line-height: 20px;
                         letter-spacing: 0.05em;
                     }
+
                     @include mobile {
                         font-size: 10px;
                         line-height: 13px;
@@ -128,6 +145,7 @@ $buyButtonWidth: 102px;
                     }
                 }
             }
+
             .score {
                 width: 33%;
                 @include center();
@@ -140,11 +158,19 @@ $buyButtonWidth: 102px;
                     line-height: 53px;
                     letter-spacing: 0.05em;
                     color: #0bbe28;
+
+                    @include noteBook {
+                        font-size: 22px;
+                        line-height: 17px;
+                        letter-spacing: 0.05em;
+                    }
+
                     @include tablet {
                         font-size: 15px;
                         line-height: 17px;
                         letter-spacing: 0.05em;
                     }
+
                     @include mobile {
                         font-size: 16px;
                         line-height: 18px;
@@ -152,14 +178,16 @@ $buyButtonWidth: 102px;
                     }
                 }
             }
+
             .teamTwo {
                 @include flex-between();
                 width: 33%;
                 min-width: get_percent(155px, $teamsContainerWidth);
 
-                @include tablet {
+                @include noteBook {
                     min-width: 110px;
                 }
+
                 @include mobile {
                     @include column-center();
                     font-size: 10px;
@@ -167,19 +195,23 @@ $buyButtonWidth: 102px;
                     letter-spacing: 0.05em;
                     min-width: 40px;
                 }
+
                 img {
                     @include tablet {
                         max-width: 15.5px;
                         max-height: 21.35px;
                     }
                 }
+
                 p {
                     @include teamNames();
-                    @include tablet {
+
+                    @include noteBook {
                         font-size: 16px;
                         line-height: 20px;
                         letter-spacing: 0.05em;
                     }
+
                     @include mobile {
                         font-size: 10px;
                         line-height: 13px;
@@ -188,16 +220,20 @@ $buyButtonWidth: 102px;
                 }
             }
         }
+
         .buyButton_container {
             @include flex-between();
             width: get_percent($buyButtonWidth, $contentWidth);
             cursor: pointer;
-            @include tablet {
+
+            @include noteBook {
                 min-width: 79px;
             }
+
             @include mobile {
                 min-width: 49px;
             }
+
             .button_content {
                 @include center();
                 // @include buyedButton();
@@ -209,16 +245,19 @@ $buyButtonWidth: 102px;
                     font-size: 14px;
                     line-height: 18px;
                     letter-spacing: 0.1em;
-                    @include tablet {
+
+                    @include noteBook {
                         font-size: 14px;
                         letter-spacing: 0.1em;
                     }
+
                     @include mobile {
                         font-size: 10px;
                         line-height: 13px;
                         letter-spacing: 0.1em;
                     }
                 }
+
                 &:hover {
                     @include buyButtonHover();
                 }

@@ -13,6 +13,9 @@
 
     .icons {
         img {
+            @include noteBook{
+                max-width: 90px;
+            }
             @include tablet {
                 max-width: 80px;
             }
