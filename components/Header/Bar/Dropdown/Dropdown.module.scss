@@ -1,9 +1,13 @@
 @import "/styles/scss/scssExports";
 
 .dropdown {
+  display: none;
   z-index: 1;
   margin-top: 13px;
 
+  @include noteBook {
+    display: block;
+  }
   &_menu {
     margin-top: 20px;
     background: #12112c;
@@ -30,19 +34,18 @@
         }
       }
       @include mobile {
-        padding: 10px;  
+        padding: 10px;
       }
     }
     @include animation();
   }
   .dropdown_check {
     display: none;
-    
 
     @include tablet {
       @include center();
     }
-    img{
+    img {
       @include mobile {
         max-width: 17px;
         max-height: 12px;
