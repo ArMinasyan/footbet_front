@@ -2,6 +2,10 @@
 
 .container {
     width: 100%;
+    @include mobile {
+        margin-top: 10px;
+    }
+
     .stars_container {
         width: 100%;
         .stars_content {
@@ -14,6 +18,16 @@
                     margin-right: 10px;
                     &:hover {
                         cursor: pointer;
+                    }
+                    @include tablet {
+                        max-width: 21.36px;
+                        min-height: 21.54px;
+                        margin-left: 8px;
+                    }
+                    @include mobile {
+                        max-width: 14.5px;
+                        min-height: 14.5px;
+                        margin-left: 5.5px;
                     }
                 }
             }
@@ -28,7 +42,7 @@
             textarea {
                 width: 100% !important;
                 height: auto !important;
-                padding: 25px 45px 25px 45px;
+                padding: 25px 45px;
                 resize: none;
                 background: rgba(255, 255, 255, 0.11);
                 opacity: 0.5;
@@ -41,6 +55,19 @@
                 letter-spacing: 0.15em;
                 box-sizing: border-box;
                 outline: none;
+                @include tablet {
+                    padding: 25px 14px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 0.15em;
+                }
+                @include mobile {
+                    padding: 10px 10px;
+                    font-size: 9px;
+                    line-height: 11px;
+                    letter-spacing: 0.15em;
+                    max-height: 91px;
+                }
             }
         }
         .button_container {
@@ -59,6 +86,19 @@
                 letter-spacing: 0.1em;
                 cursor: pointer;
                 box-sizing: border-box;
+
+                @include tablet {
+                    padding: 9px 19.5px;
+                    font-size: 17px;
+                    line-height: 20px;
+                    letter-spacing: 0.1em;
+                }
+                @include mobile {
+                    padding: 4px 3px;
+                    font-size: 10px;
+                    line-height: 11px;
+                    letter-spacing: 0.1em;
+                }
             }
         }
     }

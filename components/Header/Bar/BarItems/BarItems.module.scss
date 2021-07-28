@@ -1,4 +1,4 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
 @mixin center {
     display: flex;
@@ -17,9 +17,15 @@
     justify-content: space-between;
     width: 19.93%;
     min-width: 236px;
-    @include noteBook{
+
+    @include noteBook {
         z-index: 1;
     }
+
+    @include mobile {
+        padding-top: 44px !important;
+    }
+    
 
     .auth_container {
         width: 100%;
@@ -50,10 +56,18 @@
                     font-size: 16px;
                     padding-right: 8px;
                 }
+                @include mobile {
+                    font-size: 11px;
+                    line-height: 13px;
+                }
             }
 
             img {
                 cursor: pointer;
+                @include mobile {
+                    max-width: 18px;
+                    max-height: 18px;
+                }
             }
         }
     }
@@ -61,7 +75,7 @@
         width: 25%;
         margin-left: 20px;
         position: relative;
-        @include noteBook{
+        @include noteBook {
             margin-left: 10px;
         }
         .lang_button_content {
@@ -77,10 +91,24 @@
                 @include noteBook {
                     font-size: 16px;
                 }
+                @include mobile {
+                    font-size: 11px;
+                    line-height: 13px;
+                }
             }
             img {
                 cursor: pointer;
+                @include mobile {
+                    max-width: 18px;
+                    max-height: 18px;
+                }
             }
         }
+    }
+}
+
+.for_mobile {
+    @include mobile {
+        padding-top: 0px !important;
     }
 }

@@ -8,16 +8,34 @@ $contentWidth: 492px;
     width: get_percent($contentWidth, $parentWidth);
     margin-bottom: 2.83%;
     .name {
+        @include center();
         span {
             @include arsenal-font();
             font-size: 27px;
             line-height: 34px;
             letter-spacing: 0.05em;
+            @include noteBook {
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0.05em;
+            }
+            @include mobile {
+                font-size: 10px;
+                line-height: 13px;
+                letter-spacing: 0.05em;
+            }
         }
     }
     .bar {
         @include flex-between();
         width: get_percent(252px, $contentWidth);
+
+        @include noteBook {
+            min-width: 170px;
+        }
+        @include mobile {
+            min-width: 120px;
+        }
         p {
             @include center();
             width: 50%;
@@ -27,9 +45,24 @@ $contentWidth: 492px;
             line-height: 28px;
             letter-spacing: 0.05em;
             cursor: pointer;
+            @include noteBook {
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0.05em;
+                font-weight: normal;
+            }
+            @include mobile {
+                font-size: 10px;
+                line-height: 13px;
+                letter-spacing: 0.05em;
+                font-weight: normal;
+            }
         }
         .byDate {
             border-right: 2px solid #b00a47;
+            @include mobile {
+                border-right: 1px solid #b00a47;
+            }
         }
         .active {
             color: #b00a47;

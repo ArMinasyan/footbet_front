@@ -48,8 +48,8 @@
 }
 @mixin column-start {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
 }
 @mixin column-end {
@@ -60,14 +60,14 @@
 }
 @mixin column-between {
     display: flex;
-    justify-content: center;
-    align-items: space-between;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
 }
 @mixin column-around {
     display: flex;
-    justify-content: center;
-    align-items: space-around;
+    justify-content: space-around;
+    align-items: center;
     flex-direction: column;
 }
 @mixin scrollbar($size, $thumbColor, $trackColor) {

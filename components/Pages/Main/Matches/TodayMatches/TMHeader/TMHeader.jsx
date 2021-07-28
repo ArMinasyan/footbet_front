@@ -52,11 +52,7 @@ export function TMHeader({
                     page={'home'}
                     locationInPage={'matches'}
                     textPathName={'.TM.headerTitle'}
-                    textStyles={{
-                        fontSize: '29px',
-                        lineHeight: '33px',
-                        letterSpacing: '0.18em'
-                    }}
+                    classes={styles.title}
                 />
                 <div className={styles.day_change_buttons}>
                     <DayChangeButton

@@ -65,7 +65,7 @@ export function Testimonials({
                             sortingText='Сортироавть:'
                             dateSortingText='по дате'
                             rateSorting='по оценке'
-                            sortByData={sortDataByDate}
+                            sortByDate={sortDataByDate}
                             sortByRate={sortDataByRate}
                             dateActive={dateActive}
                         />
@@ -76,40 +76,27 @@ export function Testimonials({
                             itemsToScroll={1}
                             className={styles.carousel}
                         >
-                            <div style={{ width: '100%' }}>
-                                {
-                                    feedBacks.map(el => (
-                                        <FeedBack
-                                            avatar={el.avatar}
-                                            nikName={el.nikName}
-                                            rateing={el.rateing}
-                                            description={el.description}
-                                            date={el.date.renderFormat}
-                                            likes={el.likes}
-                                            disLikes={el.disLikes}
-                                            key={Math.random()}
-                                            reactionsForTesting={reactions}
-                                        />
-                                    ))
-                                }
-                            </div>
-                            <div style={{ width: '100%' }}>
-                                {
-                                    feedBacks.map(el => (
-                                        <FeedBack
-                                            avatar={el.avatar}
-                                            nikName={el.nikName}
-                                            rateing={el.rateing}
-                                            description={el.description}
-                                            date={el.date.renderFormat}
-                                            likes={el.likes}
-                                            disLikes={el.disLikes}
-                                            key={Math.random()}
-                                            reactionsForTesting={reactions}
-                                        />
-                                    ))
-                                }
-                            </div>
+                            {
+                                feedBacks.map(page => (
+                                    <div style={{ width: '100%' }} key={Math.random()}>
+                                        {
+                                            page.map(el => (
+                                                <FeedBack
+                                                    avatar={el.avatar}
+                                                    nikName={el.nikName}
+                                                    rateing={el.rateing}
+                                                    description={el.description}
+                                                    date={el.date.renderFormat}
+                                                    likes={el.likes}
+                                                    disLikes={el.disLikes}
+                                                    key={Math.random()}
+                                                    reactionsForTesting={reactions}
+                                                />
+                                            ))
+                                        }
+                                    </div>
+                                ))
+                            }
                         </Carousel>
                         <LeaveComment />
                     </div>

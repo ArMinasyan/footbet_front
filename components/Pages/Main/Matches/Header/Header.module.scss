@@ -1,13 +1,31 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
-.container{
+.container {
     width: 100%;
     @include column-center();
-
-    .buttons{
+    .title{
+        @include mobile{
+            padding: 9px 0;
+        }
+    }
+    .buttons {
         @include flex-evenly();
         width: 50%;
         height: get_vw(57px);
         margin-top: get_percent(60px);
+        @include mobile {
+            width: 65%;
+            margin-top: 9px;
+            @include flex-between();
+        }
+    }
+    @include tablet{
+        width: 100vw;
+    }
+    @include mobile {
+        @include column-around();
+        padding-bottom: 31px;
+        background-color: #0c0b22;
+        min-height: 60px;
     }
 }

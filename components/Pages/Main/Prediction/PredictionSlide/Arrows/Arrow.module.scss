@@ -1,0 +1,50 @@
+@import "/styles/scss/scssExports";
+
+.arrowLeft {
+    cursor: pointer;
+    z-index: 10;
+    height: 100%;
+    @include noteBook {
+        min-width: 66px;
+    }
+    @include mobile {
+        width: 34px ;
+        min-width: 34px;
+    }
+}
+.arrowRight {
+    cursor: pointer;
+    z-index: 10;
+    height: 100%;
+    @include noteBook {
+        min-width: 66px;
+    }
+    @include mobile {
+        width: 34px ;
+        min-width: 34px;
+    }
+}
+.arrowRightVector {
+    cursor: pointer;
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    @include noteBook {
+        left: 20%;
+    }
+    @include mobile{
+        max-width: 17px;
+    }
+}
+.arrowLeftVector {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    @include noteBook {
+        left: 20%;  
+    }
+    @include mobile{
+        max-width: 17px;
+    }
+}

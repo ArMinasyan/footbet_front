@@ -99,23 +99,43 @@ export function NavBar() {
 
     return (
         <>
-            <div className={styles.container}>
+            <div className={`${styles.container} ${router.pathname !== '/' ? styles.tablet : null}`}>
                 <div className={styles.content}>
-                    {
-                        (router.pathname === '/' ? buttonsInHomePage : buttons).map(el => (
-                            <Button
-                                contentFrstP={el.frstContent}
-                                contentSecP={el.secContent}
-                                href={el.href}
-                                key={el.key}
-                                active={router.pathname === el.href ? 'true' : null}
-                                click={el.click && el.click}
-                            />
-                        ))
-                    }
+                    <div className={styles.top_on_tablet}>
+
+                        {
+                            (router.pathname === '/' ? buttonsInHomePage : buttons).map((el, i) =>
+                                i < 3 && (<Button
+                                    contentFrstP={el.frstContent}
+                                    contentSecP={el.secContent}
+                                    href={el.href}
+                                    key={el.key}
+                                    active={router.pathname === el.href ? 'true' : null}
+                                    click={el.click && el.click}
+                                />
+                                ))
+                        }
+                    </div>
+                    <div className={styles.bottom_on_tablet}>
+                        {
+                            (router.pathname === '/' ? buttonsInHomePage : buttons).map((el, i) =>
+                                i >= 3 && (<Button
+                                    contentFrstP={el.frstContent}
+                                    contentSecP={el.secContent}
+                                    href={el.href}
+                                    key={el.key}
+                                    active={router.pathname === el.href ? 'true' : null}
+                                    click={el.click && el.click}
+                                />
+                                ))
+                        }
+                    </div>
+
+
                 </div>
             </div>
-            {showContactsModal &&
+            {
+                showContactsModal &&
                 <ContactsModal
                     opened={showContactsModal ? true : false}
                     onModalClose={() => setShowContactsModal(false)}

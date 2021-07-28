@@ -15,13 +15,14 @@ export function Header({
                 locationInPage={'matches'}
                 textPathName={'.title'}
                 href='/matches'
+                classes={styles.title}
             />
             <div className={styles.buttons}>
                 <Button
                     page='home'
                     locationInPage={'matches'}
                     textPathName={'.buttons.TodayMatches'}
-                    active={buttonsActivity ? 'true' : null}
+                    active={buttonsActivity}
                     click={on_TM_click}
                 />
                 {gameRulesState &&
@@ -29,7 +30,7 @@ export function Header({
                         page='home'
                         locationInPage={'matches'}
                         textPathName={'.buttons.GameRules'}
-                        active={!buttonsActivity ? 'true' : null}
+                        active={!buttonsActivity}
                         click={on_GM_click}
                     />
                 }

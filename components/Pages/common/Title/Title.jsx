@@ -10,7 +10,8 @@ export function Title({
     textPathName = 'You are dont put there text.',
     locationInPage = '',
     textStyles = null,
-    href
+    href,
+    classes
 }) {
 
     const
@@ -24,14 +25,14 @@ export function Title({
             {
                 href ?
                     <Link href={href}>
-                        <p style={textStyles} style={{ cursor: 'pointer' }}>
+                        <p style={textStyles} style={{ cursor: 'pointer' }} className={classes}>
                             {
                                 translate(`${textPathName}`)
                             }
                         </p>
                     </Link>
                     :
-                    <p style={textStyles}>
+                    <p style={textStyles} classes={classes}>
                         {
                             translate(`${textPathName}`)
                         }

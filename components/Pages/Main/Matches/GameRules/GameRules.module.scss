@@ -7,6 +7,12 @@
     margin-top: 2.13%;
     position: relative;
     background-color: $silver;
-
+    @include tablet{
+        margin-top: 31px;
+        width: 100vw
+    }
+    @include mobile{
+        margin-top: 10px
+    }
     @include animation();
 }

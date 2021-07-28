@@ -6,7 +6,7 @@ export function Sorting({
     sortingText,
     dateSortingText,
     rateSorting,
-    sortByData,
+    sortByDate,
     sortByRate,
     dateActive
 }) {
@@ -23,7 +23,7 @@ export function Sorting({
             <div className={styles.bar}>
                 <p
                     className={`${styles.byDate} ${dateActive ? styles.active : null}`}
-                    onClick={sortByData}>
+                    onClick={sortByDate}>
                     {
                         dateSortingText
                     }

@@ -102,7 +102,7 @@ export default function Dropdown() {
     return (
         <div className={styles.dropdown}>
             <div className={styles.dropdown_check}>
-                <img src={dropdownLines.src} alt="" onClick={() => setShowDropdown(!showDropdown)} />
+                <img src={dropdownLines.src} alt="drop-check-icon" onClick={() => setShowDropdown(!showDropdown)} />
             </div>
             {showDropdown && (
                 <div className={styles.dropdown_menu}>

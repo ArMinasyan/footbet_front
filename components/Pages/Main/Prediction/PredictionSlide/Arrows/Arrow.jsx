@@ -4,51 +4,32 @@ import arrowRight from '/public/images/main/prediction/arrowRight.png'
 import arrowLeft from '/public/images/main/prediction/arrowLeft.png'
 import arrowLeftVector from '/public/images/main/prediction/arrowLeftVector.png'
 import arrowRightVector from '/public/images/main/prediction/arrowRightVector.png'
+import arrowStyles from './Arrow.module.scss'
 
 export function Arrow({ type, onClick, isEdge }) {
     const
         pointer = type === consts.PREV ?
             <img
                 src={arrowLeft.src}
-                style={{
-                    cursor: 'pointer',
-                    zIndex: 10,
-                    height: '100%'
-                }}
+                className={arrowStyles.arrowLeft}
                 alt="arrow-left"
             />
             :
             <img
                 src={arrowRight.src}
-                style={{
-                    cursor: 'pointer',
-                    zIndex: 10,
-                    height: '100%'
-                }}
+                className={arrowStyles.arrowRight}
                 alt="arrow-right"
             />,
         arrows = type === consts.PREV ?
             <img
                 src={arrowRightVector.src}
-                style={{
-                    cursor: 'pointer',
-                    position: 'absolute',
-                    left: '35%',
-                    top: '50%'
-
-                }}
+                className={arrowStyles.arrowRightVector}
                 alt="arrow-left"
             />
             :
             <img
                 src={arrowLeftVector.src}
-                style={{
-                    cursor: 'pointer',
-                    position: 'absolute',
-                    top: '50%',
-                    left: '35%'
-
-                }}
+                className={arrowStyles.arrowLeftVector}
                 alt="arrow-right"
             />,
 
