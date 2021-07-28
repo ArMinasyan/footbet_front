@@ -19,6 +19,7 @@ export function GameRules() {
                     game_rules.map(el => (
                         <SlidePages
                             pageData={el}
+                            key={Math.random()}
                         />
                     ))
                 }

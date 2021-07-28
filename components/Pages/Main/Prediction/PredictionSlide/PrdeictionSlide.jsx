@@ -18,7 +18,12 @@ export function PrdeictionSlide() {
             backgroundSize: "cover"
         },
         time = new Date(),
-        router = useRouter()
+        router = useRouter(),
+        breakpoints = [
+            { width: 375, itemPadding: [21, 0, 25, 0] },
+            { width: 616, itemPadding: [79, 0, 79, 0] },
+            { width: 1920, itemPadding: [115, 0, 43, 0] },
+        ]
 
     time.setSeconds(time.getSeconds() + 10600);
 
@@ -30,7 +35,8 @@ export function PrdeictionSlide() {
             <Carousel
                 pagination={false}
                 renderArrow={Arrow}
-                itemPadding={[115, 0, 43, 0]}
+                breakPoints={breakpoints}
+
             >
                 {
                     slide_data.map(el => (

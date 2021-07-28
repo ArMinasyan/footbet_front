@@ -13,6 +13,7 @@ export function SlidePages({
                     <PageParticles
                         title={el.title}
                         body={el.body}
+                        key={Math.random()}
                     />
                 ))
             }

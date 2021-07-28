@@ -19,8 +19,9 @@ export function Slide() {
         slide_data = slide_show_data(),
         // breakpoints for slide 
         breakpoints = [
-            { width: 375, itemsToShow: 2, itemsToScroll: 1 },
-            { width: 740, itemsToShow: 3, itemsToScroll: 1 }
+            { width: 375, itemsToShow: 2, itemsToScroll: 2 },
+            { width: 740, itemsToShow: 3, itemsToScroll: 3 },
+            { width: 1700, itemsToShow: 4, itemsToScroll: 4 }
         ]
 
 
@@ -28,8 +29,6 @@ export function Slide() {
         <>
             <div className={styles.container}>
                 <Carousel
-                    itemsToShow={4}
-                    itemsToScroll={2}
                     itemPadding={[35, 12]}
                     renderArrow={Arrow}
                     renderPagination={Pagination}

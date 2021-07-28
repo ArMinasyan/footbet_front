@@ -61,6 +61,7 @@ $buyButtonWidth: 102px;
             }
             @include mobile {
                 @include column-center();
+                min-width: 60px;
             }
             span {
                 @include arsenal-font();

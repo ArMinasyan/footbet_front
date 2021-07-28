@@ -1,4 +1,4 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
 .container {
     width: 100%;
@@ -6,6 +6,11 @@
     justify-content: center;
     align-items: center;
     padding: 2.07% 0;
+
+    @include tablet {
+        padding: 2.55% 0;
+        margin-top: 10px;
+    }
     .round {
         width: 6px;
         height: 6px;
@@ -13,6 +18,10 @@
         border-radius: 50%;
         background-color: white;
         cursor: pointer;
+        @include tablet {
+            width: 4px;
+            height: 4px;
+        }
     }
     .active {
         background-color: $buttonsColor;

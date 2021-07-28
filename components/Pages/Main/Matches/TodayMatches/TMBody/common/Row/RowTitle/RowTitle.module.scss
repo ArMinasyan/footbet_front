@@ -28,6 +28,10 @@ $contentWidth: 1407px;
         @include tablet {
             font-size: 13px;
             line-height: 16px;
+            width: auto;
+        }
+        @include mobile {
+            width: auto;
         }
     }
 }
