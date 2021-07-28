@@ -14,7 +14,7 @@ import dropdownLines from '/public/images/header/dropdown_lines.png';
 
 //components
 import Link from 'next/link'
-import ContactsModal  from '../../../Pages/Contacts/ContactsModal';
+import ContactsModal from '../../../Pages/Contacts/ContactsModal';
 
 
 export default function Dropdown() {
@@ -109,7 +109,16 @@ export default function Dropdown() {
                     <ul className={styles.dropdown_list}>
                         {
                             (router.pathname === '/' ? buttonsInHomePage : buttons).map(el => (
-                                <Link href={el.href ? el.href : ""}><li onClick={el.click && el.click} key={el.key} className={styles.dropdown_list_items}>{el.frstContent} {el.secContent}</li></Link>
+                                <Link
+                                    href={el.href ? el.href : ""}
+                                    key={el.key}>
+                                    <li
+                                        onClick={el.click && el.click}
+                                        className={styles.dropdown_list_items}
+                                    >
+                                        {el.frstContent} {el.secContent}
+                                    </li>
+                                </Link>
                             ))
                         }
                     </ul>
