@@ -20,36 +20,42 @@ export function Testimonials({
     const
         // states
         [feedBacks, setFeedBacks] = useState(feedback_data),
-        [dateActive, setDateActive] = useState(true),
-        // functions
-        sortDataByDate = () => {
-            const sortedByDataFeedBacks = feedBacks.sort((a, b) => (
-                b.date.sortFormat - a.date.sortFormat
-            ))
-            setFeedBacks([...sortedByDataFeedBacks])
-            setDateActive(true)
+        [dateActive, setDateActive] = useState(true)
+    // function for sorting
+    const sorting = (toSort, sortingBy, dateActive) => {
+        let
+            dataForSorting = toSort.reduce((ac, el) => ac.concat(el)),
+            sortedData = [],
+            sorted = []
+
+        if (sortingBy === "date") sorted = dataForSorting.sort((a, b) => (b.date.sortFormat - a.date.sortFormat))
+        else if (sortingBy === "rate") sorted = dataForSorting.sort((a, b) => (b.rateing - a.rateing))
+
+        for (let i = 1; i <= Math.ceil(dataForSorting.length / 3); i++) {
+            let sortedItems = []
+            sorted.forEach((el, x) => {
+                (x < i * 3) && (x >= ((i * 3) - 3)) && sortedItems.push(el)
+            })
+            sortedData.push(sortedItems)
+        }
+        setFeedBacks(sortedData)
+        setDateActive(dateActive)
+    }
+    // Artificial reactions data 
+    const reactions = [
+        {
+            username: "Lorem Ipsum",
+            reaction: true
         },
-        sortDataByRate = () => {
-            const sortedByRateFeedBacks = feedBacks.sort((a, b) => (
-                b.rateing - a.rateing
-            ))
-            setFeedBacks([...sortedByRateFeedBacks])
-            setDateActive(false)
+        {
+            username: "Lorem Ipsum",
+            reaction: false
         },
-        reactions = [
-            {
-                username: "Lorem Ipsum",
-                reaction: true
-            },
-            {
-                username: "Lorem Ipsum",
-                reaction: false
-            },
-            {
-                username: "Lorem Ipsum",
-                reaction: true
-            }
-        ]
+        {
+            username: "Lorem Ipsum",
+            reaction: true
+        }
+    ]
 
     return (
         <>
@@ -65,8 +71,8 @@ export function Testimonials({
                             sortingText='Сортироавть:'
                             dateSortingText='по дате'
                             rateSorting='по оценке'
-                            sortByDate={sortDataByDate}
-                            sortByRate={sortDataByRate}
+                            sortByDate={() => { sorting(feedBacks, "date", true) }}
+                            sortByRate={() => { sorting(feedBacks, "rate", false) }}
                             dateActive={dateActive}
                         />
                         <Carousel
