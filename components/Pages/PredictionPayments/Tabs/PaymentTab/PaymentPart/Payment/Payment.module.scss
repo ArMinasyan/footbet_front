@@ -1,7 +1,7 @@
 @import "/styles/scss/scssExports";
 
 $containerWidth: 1903px; // without scrollbar
-$contentWidth:1533px;
+$contentWidth: 1533px;
 $leftContentwidth: 691px;
 $rightContentWidth: 767px;
 
@@ -10,13 +10,39 @@ $rightContentWidth: 767px;
     position: relative;
     margin-top: 40px;
     @include center();
+
     .content {
         width: get_percent($contentWidth, $containerWidth);
         display: grid;
         grid-column-gap: 75px;
-        grid-template-columns: get_percent($leftContentwidth, $contentWidth) get_percent($rightContentWidth, $contentWidth);
+        grid-template-columns: get_percent($leftContentwidth, $contentWidth) get_percent(
+                $rightContentWidth,
+                $contentWidth
+            );
+        @include tablet {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            max-height: 656px;
+        }
+        @include mobile {
+            width: 100%;
+        }
         .img {
             position: relative;
+            @include tablet {
+                @include center();
+                margin-bottom: 18.5px;
+            }
+            @include mobile {
+                @include center();
+                margin-bottom: 27px;
+            }
+            img {
+                @include tablet {
+                    max-width: 332px;
+                    max-height: 181px;
+                }
+            }
         }
         .form {
             position: relative;

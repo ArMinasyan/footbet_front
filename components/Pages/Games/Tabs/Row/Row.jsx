@@ -54,14 +54,14 @@ export function Row({
                     <div className={styles.prediction}>
                         {
                             prediction.thereIs ?
-                            <div className={styles.prediction_content}>
-                                <span className={styles.prediction_title}>{translate('prediction')}</span>
-                                <span className={styles.prediction_body}>
-                                    <span>{prediction.totalBet}</span>
-                                    <span>{prediction.coefficent}</span>
-                                </span>
-                            </div>:
-                            <div className={styles.simulator}/>
+                                <div className={styles.prediction_content}>
+                                    <span className={styles.prediction_title}>{translate('prediction')}</span>
+                                    <span className={styles.prediction_body}>
+                                        <span>{prediction.totalBet}</span>
+                                        <span>{prediction.coefficent}</span>
+                                    </span>
+                                </div> :
+                                <div className={styles.simulator} />
                         }
                     </div>
                     <div className={styles.date_time}>

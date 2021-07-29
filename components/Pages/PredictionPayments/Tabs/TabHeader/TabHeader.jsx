@@ -13,6 +13,7 @@ export function TabHeader() {
 
     return (
         <div className={styles.container}>
+                <div className={styles.for_tablets} />
             <div className={styles.content}>
                 <div>
                     <p>

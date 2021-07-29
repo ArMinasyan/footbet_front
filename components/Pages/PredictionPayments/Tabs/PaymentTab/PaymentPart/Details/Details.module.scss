@@ -7,9 +7,16 @@
     }
     margin-top: 40px;
     background-color: $drliSilver;
+    @include tablet {
+        background: none;
+        margin-top: 32px;
+    }
     .price {
         @include center();
         padding-top: 3.942%;
+        @include tablet {
+            padding: 0;
+        }
         p {
             @include arsenal-font();
             font-weight: bold;
@@ -17,6 +24,14 @@
             line-height: 35px;
             letter-spacing: 0.1em;
             color: #a70b47;
+            @include tablet {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            @include mobile {
+                font-size: 15px;
+                line-height: 19px;
+            }
         }
     }
     .choosePaySys {
@@ -28,6 +43,18 @@
             line-height: 30px;
             letter-spacing: 0.08em;
             font-variant: small-caps;
+            @include tablet {
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0.1em;
+                font-variant: small-caps;
+            }
+            @include mobile {
+                font-size: 15px;
+                line-height: 19px;
+                letter-spacing: 0.08em;
+                font-variant: small-caps;
+            }
         }
     }
     .choosePaySys_content {
@@ -37,18 +64,38 @@
             border-radius: 12px;
             padding: 14.5px 17.5px;
             background-color: $buttonsColor;
+            @include tablet {
+                padding: 11px 21px;
+            }
             p {
                 cursor: pointer;
                 @include arsenal-font();
                 font-size: 23px;
                 line-height: 29px;
                 letter-spacing: 0.12em;
+                @include tablet {
+                    @include sergio-font();
+                    font-size: 16px;
+                    line-height: 21px;
+                    letter-spacing: 0.16em;
+                }
+                @include mobile {
+                    font-size: 12px;
+                    line-height: 16px;
+                    letter-spacing: 0.16em;
+                }
             }
         }
         .paypall {
             margin-left: get_percent(245px);
             img {
                 cursor: pointer;
+                @include tablet {
+                    max-width: 195px;
+                }
+                @include mobile {
+                    max-width: 133px;
+                }
             }
         }
     }

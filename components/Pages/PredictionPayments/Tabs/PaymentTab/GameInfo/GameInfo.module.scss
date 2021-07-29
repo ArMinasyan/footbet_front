@@ -3,7 +3,7 @@
 .container {
     width: 100%;
     @include column-center();
-    *{
+    * {
         margin: 0;
         padding: 0;
     }
@@ -24,10 +24,27 @@
                 font-size: 30px;
                 line-height: 38px;
                 letter-spacing: 0.05em;
+                @include tablet {
+                    @include sergio-font();
+                    font-size: 16px;
+                    line-height: 21px;
+                }
+                @include mobile {
+                    font-size: 15px;
+                    line-height: 20px;
+                }
             }
             img {
                 min-width: 131px;
                 max-height: 125px;
+                @include tablet {
+                    min-width: 60px;
+                    max-height: 68px;
+                }
+                @include mobile {
+                    min-width: 65px;
+                    max-height: 65px;
+                }
             }
             span {
                 @include center();
@@ -36,19 +53,40 @@
                 font-size: 30px;
                 line-height: 38px;
                 letter-spacing: 0.05em;
+                @include tablet {
+                    font-size: 16px;
+                    line-height: 21px;
+                }
+                @include mobile {
+                    font-size: 13px;
+                    line-height: 134%;
+                }
             }
         }
     }
     .gameDetailes {
-        width:get_percent(1600px);
+        width: get_percent(1600px);
         margin-top: 20px;
         .gameDetContent {
             p {
-               @include arsenal-font();
+                @include arsenal-font();
                 font-size: 22px;
                 line-height: 190%;
                 letter-spacing: 0.19em;
                 text-transform: uppercase;
+                @include tablet {
+                    @include sergio-font();
+                    font-size: 16px;
+                    line-height: 190%;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                }
+                @include mobile {
+                    @include sergio-font();
+                    font-size: 12px;
+                    line-height: 190%;
+                    letter-spacing: 0.1em;
+                }
             }
         }
     }

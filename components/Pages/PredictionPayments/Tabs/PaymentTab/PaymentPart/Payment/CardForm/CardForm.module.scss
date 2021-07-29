@@ -12,11 +12,17 @@ $containerWidth: 767px;
     font-size: 11px;
     line-height: 14px;
     letter-spacing: 0.19em;
-    padding: 11px 18px !important;
-    color: rgba(255, 255, 255, 0.31) !important;
+    padding: 11px 18px;
+    color: rgba(255, 255, 255, 0.31);
     box-sizing: border-box;
     border-radius: 8px;
     outline: none;
+    @include tablet {
+        padding: 20.5px 18px;
+    }
+    @include mobile {
+        padding: 13px 18px 12px 18px;
+    }
 }
 
 @mixin success {
@@ -44,8 +50,23 @@ $containerWidth: 767px;
     box-sizing: border-box;
     height: 100%;
     padding: 0 68px;
+    width: 100%;
+
+    @include tablet {
+        min-width: 637px;
+        padding: 0 33px;
+    }
+    @include mobile {
+        min-width: 349px;
+        padding: 0 24px;
+    }
     .content {
         width: 100%;
+
+        @include mobile {
+            max-width: 301px;
+        }
+
         form {
             .input_success {
                 @include successInput();
@@ -55,42 +76,138 @@ $containerWidth: 767px;
             }
             .name {
                 margin-top: 29px;
+
+                @include tablet {
+                    margin-top: 14px;
+                }
                 input {
                     width: 100%;
+                    @include tablet {
+                        @include arimo-font();
+                        font-size: 16px;
+                        line-height: 20px;
+                        letter-spacing: 0.19em;
+                    }
+                    @include mobile {
+                        @include arsenal-font();
+                        font-size: 10px;
+                        line-height: 13px;
+                        letter-spacing: 0.19em;
+                    }
                 }
             }
             .card_number_content {
                 margin-top: 21px;
+                @include tablet {
+                    margin-top: 10px;
+                }
+                @include mobile {
+                    margin-top: 8px;
+                }
                 p {
                     @include arsenal-font();
                     font-size: 15px;
                     line-height: 19px;
                     letter-spacing: 0.12em;
+
+                    @include mobile {
+                        font-size: 11px;
+                        line-height: 14px;
+                        letter-spacing: 0.12em;
+                    }
                 }
                 .card_number_inputs {
                     display: grid;
-                    grid-template-columns: 19.4% 19.4% 19.4% 19.4%;
-                    grid-column-gap: 5.6%;
+                    grid-template-columns: repeat(4, 19.4%);
+                    grid-column-gap: 4.6%;
+                    @include tablet {
+                        grid-template-columns: repeat(5, 1fr);
+                        grid-column-gap: 50px;
+                    }
+                    @include mobile {
+                        grid-template-columns: repeat(5, 1fr);
+                        grid-column-gap: 20px;
+                    }
+
                     input {
                         text-align: center;
+                        @include tablet {
+                            max-width: 82px;
+                            @include arimo-font();
+                            font-size: 16px;
+                            line-height: 20px;
+                            letter-spacing: 0.19em;
+                        }
+                        @include mobile {
+                            @include arsenal-font();
+                            max-width: 60px;
+                            font-size: 10px;
+                            line-height: 13px;
+                        }
                     }
                 }
             }
             .cvv {
-                margin-top: 19px;
+                margin-top: 33px;
+                @include tablet {
+                    margin-top: 14px;
+                }
+                @include mobile {
+                    margin-top: 13px;
+                }
                 input {
                     width: get_percent(157px, $containerWidth);
+                    @include tablet {
+                        min-width: 207px;
+                        @include arimo-font();
+                        font-size: 16px;
+                        line-height: 20px;
+                        letter-spacing: 0.19em;
+                    }
+                    @include mobile {
+                        @include arsenal-font();
+                        min-width: 84px;
+                        font-size: 10px;
+                        line-height: 13px;
+                    }
                 }
             }
             .active_untill {
-                margin-top: 19px;
+                margin-top: 33px;
+                @include tablet {
+                    margin-top: 14px;
+                }
+                @include mobile {
+                    margin-top: 13px;
+                }
                 input {
                     width: get_percent(157px, $containerWidth);
+                    @include tablet {
+                        min-width: 207px;
+                        @include arimo-font();
+                        font-size: 16px;
+                        line-height: 20px;
+                        letter-spacing: 0.19em;
+                    }
+                    @include mobile {
+                        @include arsenal-font();
+                        min-width: 84px;
+                        font-size: 10px;
+                        line-height: 13px;
+                    }
                 }
             }
             .success {
                 @include center();
                 margin-top: 47px;
+
+                @include tablet {
+                    margin-top: 45px;
+                    margin-bottom: 15px;
+                }
+                @include mobile {
+                    margin-top: 5px;
+                }
                 button {
                     padding: 10px 64px;
                     border-radius: 8px;
@@ -103,6 +220,16 @@ $containerWidth: 767px;
                     cursor: pointer;
                     outline-style: none;
                     border: none;
+                    @include tablet {
+                        font-size: 16px;
+                        line-height: 18px;
+                        padding: 12px 31px;
+                    }
+                    @include mobile {
+                        padding: 5px 17px;
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
                 }
             }
         }

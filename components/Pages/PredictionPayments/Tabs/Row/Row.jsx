@@ -21,8 +21,8 @@ export function Row({
 
     const
         // translation consfigs
-        { t } = useTranslation('common'),
-        translationPath = `commons.`,
+        { t } = useTranslation('prediction'),
+        translationPath = 'tabs.header.',
         translate = key => t(`${translationPath}${key}`)
 
     return (
@@ -32,40 +32,50 @@ export function Row({
                     <div className={styles.leftItems}>
                         <span>{order}.</span>
                     </div>
-                    <div className={styles.leftItems}>
-                        <span>{teamOneName}</span>
+                    <div className={styles.teamOne}>
+                        <div className={styles.leftItems}>
+                            <span>{teamOneName}</span>
+                        </div>
+                        <div className={styles.leftItems}>
+                            <img src={teamOneIcon} alt="" />
+                        </div>
                     </div>
                     <div className={styles.leftItems}>
-                        <img src={teamOneIcon} alt="" />
+                        <span className={styles.vs}>VS.</span>
                     </div>
-                    <div className={styles.leftItems}>
-                        <span>VS.</span>
-                    </div>
-                    <div className={styles.leftItems}>
-                        <span>{teamTwoName}</span>
-                    </div>
-                    <div className={styles.leftItems}>
-                        <img src={teamTwoIcon} alt="" />
+                    <div className={styles.teamTwo}>
+                        <div className={styles.leftItems}>
+                            <span>{teamTwoName}</span>
+                        </div>
+                        <div className={styles.leftItems}>
+                            <img src={teamTwoIcon} alt="" />
+                        </div>
                     </div>
                 </div>
                 <div className={styles.right}>
                     <div className={styles.prediction}>
                         {
-                            prediction.thereIs &&
-                            <div className={styles.prediction_content}>
-                                <span>{prediction.totalBet}</span>
-                                <span>{prediction.coefficent}</span>
-                            </div>
+                            prediction.thereIs ?
+                                <div className={styles.prediction_content}>
+                                    <span className={styles.prediction_title}>{translate('prediction')}</span>
+                                    <span className={styles.prediction_body}>
+                                        <span>{prediction.totalBet}</span>
+                                        <span>{prediction.coefficent}</span>
+                                    </span>
+                                </div> :
+                                <div className={styles.simulator} />
                         }
                     </div>
                     <div className={styles.type}>
                         <span>{type}</span>
                     </div>
-                    <div className={styles.date}>
-                        <span>{date}</span>
-                    </div>
-                    <div>
-                        <span>{time}</span>
+                    <div className={styles.date_time}>
+                        <div className={styles.date}>
+                            <span>{date}</span>
+                        </div>
+                        <div className={styles.time}>
+                            <span>{time}</span>
+                        </div>
                     </div>
                     <div className={styles.coefficent}>
                         <span>{coefficent}</span>
@@ -76,10 +86,10 @@ export function Row({
                     <div className={styles.buyButton_container}>
                         <div
                             className={styles.button_content}
-                            onClick={() => { clickBuy(); openPayments()}}
+                            onClick={() => { clickBuy(); openPayments() }}
                         >
                             <span>
-                                {translate('buy')}
+                                {t('common:commons.buy')}
                             </span>
                         </div>
                     </div>
