@@ -4,7 +4,7 @@ $contentWidth: 1872px;
 .container {
     width: get_percent(48px);
     height: get-vw(314px, 1920px);
-    @include noteBook{
+    @include tablet{
         display: none;
     }
 }

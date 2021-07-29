@@ -5,7 +5,6 @@ export function Instagram({ onModalClose, text }) {
     const get_top = (px, content = 1920) => {
         return px * 100 / content
     }
-
     return (
         <Modal
             onClose={onModalClose}

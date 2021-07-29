@@ -14,22 +14,40 @@ $parentWidth: 914px;
     left: 50%;
     transform: translate(-50%, 50%);
 
+    @include noteBook {
+        min-width: 145px
+    }
+    @include mobile {
+        width: $containerWidth - 400px;
+    }
     .content {
         @include column-center();
         .top {
             @include center();
             margin-top: 15px;
+            @include mobile{
+                margin-top: 5px;
+            }
             .team {
                 @include column-center();
                 img {
                     width: 65px;
                     height: 65px;
+                    @include mobile {
+                        width: 15px;
+                        height: 15px;
+                    }
                 }
                 p {
                     @include arsenal-font();
                     font-size: 16px;
                     line-height: 20px;
                     letter-spacing: 0.05em;
+                    @include mobile {
+                        font-size: 9px;
+                        line-height: 10px;
+                        letter-spacing: 0.05em;
+                    }
                 }
             }
             .vs {
@@ -38,6 +56,12 @@ $parentWidth: 914px;
                     @include arimo-font();
                     font-size: 18px;
                     line-height: 21px;
+                    @include mobile {
+                        font-size: 9px;
+                        line-height: 10px;
+                        letter-spacing: 0.05em;
+                    }
+                    
                 }
             }
         }
@@ -47,12 +71,21 @@ $parentWidth: 914px;
             height: 39px;
             @include column-center();
             justify-content: space-between;
+            @include mobile {
+                height: auto;
+                margin-top: 3px
+            }
             .prediction {
                 @include arimo-font();
                 font-weight: bold;
                 font-size: 15px;
                 line-height: 17px;
                 text-align: center;
+                @include mobile {
+                    font-size: 7px;
+                    line-height: 10px;
+                    letter-spacing: 0.05em;
+                }
             }
             .ordinar {
                 @include arimo-font();
@@ -61,6 +94,11 @@ $parentWidth: 914px;
                 line-height: 17px;
                 text-align: center;
                 color: $buttonsColor;
+                @include mobile {
+                    font-size: 7px;
+                    line-height: 10px;
+                    letter-spacing: 0.05em;
+                }
             }
         }
     }

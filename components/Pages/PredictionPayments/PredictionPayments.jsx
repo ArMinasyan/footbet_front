@@ -5,7 +5,7 @@ import { useRouter } from 'next/dist/client/router'
 import styles from './PredictionPayments.module.scss'
 // components
 import { Header } from './Header/Header'
-import { Tabs } from './Tab/Tabs'
+import { Tabs } from './Tabs/Tabs'
 
 
 export default function PredictionPayments() {

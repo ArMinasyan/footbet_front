@@ -1,6 +1,6 @@
 import styles from './Icon.module.scss'
 
-export function Icon({ src,click }) {
+export function Icon({ src, click}) {
     return (
         <div className={styles.container}>
             <img 
