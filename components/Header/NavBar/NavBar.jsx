@@ -24,78 +24,52 @@ export function NavBar() {
         // nav bar buttons configs
         buttonsInHomePage = [
             {
+                id: 'main',
                 key: Math.random(),
                 frstContent: translate('main'),
                 href: '/'
             },
             {
+                id: 'games',
                 key: Math.random(),
                 frstContent: translate('games'),
                 href: '/games'
             },
             {
+                id: 'statistics',
                 key: Math.random(),
                 frstContent: translate('statistics.frs'),
                 secContent: translate('statistics.sec'),
                 href: '/statistics'
             },
             {
+                id: 'prediction',
                 key: Math.random(),
                 frstContent: translate('prediction.frs'),
                 secContent: translate('prediction.sec'),
                 href: '/prediction'
             },
             {
+                id: 'testimonials',
                 key: Math.random(),
                 frstContent: translate('testimonials'),
                 href: '/testimonials'
             },
             {
+                id: 'aboutUs',
                 key: Math.random(),
                 frstContent: translate('aboutUs'),
                 href: '/aboutUs'
             },
             {
+                id: 'contacts',
                 key: Math.random(),
                 frstContent: translate('contacts'),
                 href: null,
                 click: () => setShowContactsModal(true)
             },
         ],
-        buttons = [
-            {
-                key: Math.random(),
-                frstContent: translate('main'),
-                href: '/'
-            },
-            {
-                key: Math.random(),
-                frstContent: translate('games'),
-                href: '/games'
-            },
-            {
-                key: Math.random(),
-                frstContent: translate('prediction.frs'),
-                secContent: translate('prediction.sec'),
-                href: '/prediction'
-            },
-            {
-                key: Math.random(),
-                frstContent: translate('testimonials'),
-                href: '/testimonials'
-            },
-            {
-                key: Math.random(),
-                frstContent: translate('aboutUs'),
-                href: '/aboutUs'
-            },
-            {
-                key: Math.random(),
-                frstContent: translate('contacts'),
-                href: null,
-                click: () => setShowContactsModal(true)
-            },
-        ]
+        buttons = buttonsInHomePage.filter(el => el.id !== "statistics")
 
     return (
         <>

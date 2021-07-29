@@ -34,17 +34,25 @@ export function Header({
     const customStyles = {
         option: (provided, state) => ({
             ...provided,
-            borderBottom: '1px solid #9f0b45',
+            borderBottom: '1px solid rgba(135, 12, 64, 0.34);',
             backgroundColor: "#12112c",
             color: state.isSelected ? '#9f0b45' : 'white',
+            width: 'auto',
             height: '100%',
             padding: 7,
+            whiteSpapcing: "nowrap",
+            fontSize: '12px',
+            lineHeight: '16px'
+
         }),
         control: () => ({
             display: 'flex',
             width: "100%",
             border: '1px solid rgba(135, 12, 64, 0.34)',
-            backgroundColor: 'none'
+            backgroundColor: 'none',
+            
+            fontSize: '12px',
+            lineHeight: '16px'
         }),
         menuList: () => ({
             padding: 0,

@@ -2,6 +2,13 @@
 
 .container {
     margin-top: 50px;
+
+    @include tablet{
+        margin-top: 35px;
+    }
+    @include mobile{
+        margin-top: 20px;
+    }
     .board {
         display: grid;
         grid-row-gap: 45px;

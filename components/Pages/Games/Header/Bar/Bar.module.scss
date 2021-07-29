@@ -4,8 +4,11 @@ $parentWidth: 1425px;
 
 .container {
     margin-top: 50px;
-    @include tablet{
-        display: none
+    @include noteBook {
+        margin-top: 40px;
+    }
+    @include tablet {
+        display: none;
     }
     @include center();
     .content {
@@ -13,9 +16,15 @@ $parentWidth: 1425px;
         @include flex-between();
         .button {
             width: auto;
+            @include noteBook {
+                margin-left: 25px;
+            }
             div {
                 pre {
                     padding: 17.5px 47px;
+                    @include noteBook {
+                        padding: 14px 35px;
+                    }
                 }
             }
         }

@@ -149,6 +149,10 @@ $leftContentWidth: 651px;
                     padding: 7px 35px;
                     @include center();
 
+                    @include noteBook{
+                        min-width: 120px;
+                    }
+
                     @include tablet {
                         @include column-center();
                         background: none;
