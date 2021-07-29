@@ -14,5 +14,9 @@
         grid-template-columns: 1fr 1.89fr;
         width: get-vw(1663px);
         max-height: 1203px;
+        @include tablet{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
     }
 }

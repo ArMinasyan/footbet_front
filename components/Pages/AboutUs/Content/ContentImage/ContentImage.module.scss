@@ -4,16 +4,31 @@ $yellow: #d8c622;
 
 .container {
     width: 100%;
+    @include tablet {
+        @include center();
+    }
     .content {
         width: 584px;
         height: 708px;
         background-color: $yellow;
         position: relative;
         top: -10px;
-        img{
+        @include tablet {
+            max-width: 304px;
+            max-height: 293px;
+            margin-bottom: 25px;
+        }
+
+        img {
             position: absolute;
             right: -10px;
             bottom: -10px;
+            @include tablet {
+                min-width: 304px;
+                max-height: 277px;
+                right: -5%;
+                bottom: 2%;
+            }
         }
     }
 }
