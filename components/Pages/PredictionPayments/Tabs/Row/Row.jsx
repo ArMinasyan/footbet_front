@@ -10,16 +10,18 @@ export function Row({
     teamTwoName,
     teamTwoIcon,
     prediction,
+    type,
     date,
     time,
     coefficent,
     price,
-    clickBuy
+    clickBuy,
+    openPayments
 }) {
 
     const
         // translation consfigs
-        { t } = useTranslation('games'),
+        { t } = useTranslation('prediction'),
         translationPath = 'tabs.header.',
         translate = key => t(`${translationPath}${key}`)
 
@@ -28,7 +30,7 @@ export function Row({
             <div className={styles.content}>
                 <div className={styles.left}>
                     <div className={styles.leftItems}>
-                        <span className={styles.order}>{order}.</span>
+                        <span>{order}.</span>
                     </div>
                     <div className={styles.teamOne}>
                         <div className={styles.leftItems}>
@@ -64,6 +66,9 @@ export function Row({
                                 <div className={styles.simulator} />
                         }
                     </div>
+                    <div className={styles.type}>
+                        <span>{type}</span>
+                    </div>
                     <div className={styles.date_time}>
                         <div className={styles.date}>
                             <span>{date}</span>
@@ -76,13 +81,12 @@ export function Row({
                         <span>{coefficent}</span>
                     </div>
                     <div className={styles.price}>
-                        <span className={styles.price_title}>{translate('price')}</span>
                         <span>{price}</span>
                     </div>
                     <div className={styles.buyButton_container}>
                         <div
                             className={styles.button_content}
-                            onClick={clickBuy}
+                            onClick={() => { clickBuy(); openPayments() }}
                         >
                             <span>
                                 {t('common:commons.buy')}

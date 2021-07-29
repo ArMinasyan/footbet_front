@@ -2,10 +2,13 @@
 
 .arrowLeft {
     position: absolute;
-    left: 46.3%;
+    left: 45.5%;
     cursor: pointer;
     z-index: 1;
-    @include noteBook {
+    @include noteBook{
+        left: 44.5%;
+    }
+    @include tablet {
         left: 44%;
         max-width: 29px;
         max-height: 25px;
@@ -20,10 +23,10 @@
 }
 .arrowRight {
     position: absolute;
-    left: 51.5%;
+    left: 52.5%;
     cursor: pointer;
     z-index: 1;
-    @include noteBook {
+    @include tablet {
         left: 52.2%;
         max-width: 29px;
         max-height: 25px;

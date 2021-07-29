@@ -11,7 +11,36 @@ export default function Games() {
         // states
         [showExpressGames, setShowExpressGames] = useState(true),
         [showOrdinarGames, setShowOrdinarGames] = useState(false),
-        [showBsStGames, setShowBsStGames] = useState(false)
+        [showBsStGames, setShowBsStGames] = useState(false),
+        // functions
+        handleChangingBySelect = (data) => {
+            switch (data.id) {
+                // can be express, ordinar, bestStrategy
+                case 'express':
+                    setShowExpressGames(true)
+                    setShowOrdinarGames(false)
+                    setShowBsStGames(false)
+                    break;
+
+                case 'ordinar':
+                    setShowExpressGames(false)
+                    setShowOrdinarGames(true)
+                    setShowBsStGames(false)
+                    break;
+
+                case 'bestStrategy':
+                    setShowExpressGames(false)
+                    setShowOrdinarGames(false)
+                    setShowBsStGames(true)
+                    break;
+
+                default:
+                    setShowExpressGames(true)
+                    setShowOrdinarGames(false)
+                    setShowBsStGames(false)
+                    break;
+            }
+        }
 
     return (
         <div className={styles.container}>
@@ -35,6 +64,7 @@ export default function Games() {
                         setShowBsStGames(true)
                     }}
                     bsStActive={showBsStGames}
+                    changeBySelect={(e) => handleChangingBySelect(e)}
                 />
                 <Tabs
                     expTab={showExpressGames}

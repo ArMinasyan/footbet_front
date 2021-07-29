@@ -4,7 +4,19 @@
     margin-top: 52px;
     margin-bottom: 213px;
     @include center();
+
+    @include tablet{
+        margin-top: 0;
+        margin-bottom: 202px;
+    }
+    @include mobile{
+        margin-bottom: 84px;
+    }
+
     .content {
         width: get-vw(1425px);
+        @include tablet{
+            width: 100vw
+        }
     }
 }

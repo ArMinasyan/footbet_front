@@ -59,7 +59,6 @@ export function Modal({
             </div>
         </div>
     )
-
     if (showModal) {
         return createPortal(
             modal,

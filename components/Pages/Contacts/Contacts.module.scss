@@ -1,4 +1,4 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
 .container {
     background: none;
@@ -7,7 +7,7 @@
     .content {
         width: get-vw(297px);
         border-radius: 0;
-        border: 1px solid #D10A52;
+        border: 1px solid #d10a52;
         .modal_content {
             width: 100%;
             .content_container {
@@ -16,8 +16,8 @@
                     @include flex-end();
                     position: relative;
                     padding: 9px;
-                    background-color: #D10A52;
-                    img{
+                    background-color: #d10a52;
+                    img {
                         cursor: pointer;
                     }
                 }
@@ -30,17 +30,17 @@
                         display: grid;
                         grid-template-columns: 1fr 5fr;
                         .img {
-                            border-bottom: 1px solid #D10A52;
+                            border-bottom: 1px solid #d10a52;
                             padding: 2px;
                             @include center();
                             background: #161124;
-                            img{
+                            img {
                                 cursor: pointer;
                             }
                         }
                         .text {
                             @include flex-start();
-                            p{
+                            p {
                                 margin-left: 18px;
                             }
                         }
@@ -52,9 +52,14 @@
 }
 .open {
     position: absolute;
-    @include animation-left-right();
+    @include animation-right-left(0, 42%);
+    @include tablet {
+        @include animation-right-left(0, 30%);
+    }
+    @include mobile {
+        @include animation-right-left(0, 10%);
+    }
 }
 .close {
     position: absolute;
-    @include animation-right-left();
 }

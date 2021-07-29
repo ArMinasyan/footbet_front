@@ -33,13 +33,16 @@ export function BarItems({
     const
         router = useRouter(),
         languages_data = languages,
+
         [showDrop, setShowDrop] = useState(false),
         [languagesTitle, setLanguagesTitle] = useState(languages_data[1]),
+
         changeLangTitle = (event) => {
             let lang_title_data = languages_data.filter(el => el.lang === event.target.className)
             setLanguagesTitle(lang_title_data[0])
             setShowDrop(false)
         },
+        
         { t } = useTranslation('common'),
         translationPath = 'header.lang.',
         translate = (key) => t(`${translationPath}${key}`)

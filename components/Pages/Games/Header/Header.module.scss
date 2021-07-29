@@ -1,0 +1,13 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    .select {
+        display: none;
+        @include tablet {
+            display: block;
+            width: 20%;
+            min-width: 114px;
+            margin-left: 3%;
+        }
+    }
+}

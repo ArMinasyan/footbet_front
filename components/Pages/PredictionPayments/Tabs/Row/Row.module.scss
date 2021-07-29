@@ -1,31 +1,32 @@
 @import "/styles/scss/scssExports";
 
 $parentWidth: 1414px;
+$rightContentWidth: 832px;
+$leftContentWidth: 582px;
 $buyedButtonBackColor: rgba(255, 255, 255, 0.2);
 $buyedButtonColor: rgba(255, 255, 255, 0.3);
 $buyButtonHover: #a10b45;
-$rightContentWidth: 763px;
-$leftContentWidth: 651px;
 
-@mixin description {
+@mixin desription {
     display: grid;
     grid-template-columns:
         get_percent(186px, $rightContentWidth)
-        get_percent(178px, $rightContentWidth)
-        get_percent(101px, $rightContentWidth)
+        get_percent(86px, $rightContentWidth)
+        get_percent(193px, $rightContentWidth)
         get_percent(130px, $rightContentWidth)
+        get_percent(100px, $rightContentWidth)
         auto;
 }
 
 @mixin buyedButton {
-    padding: 6.1% 26%;
+    padding: 3.835% 12.62%;
     background-color: $buyedButtonBackColor;
     color: $buyedButtonBackColor;
     border-radius: 8px;
 }
 
 @mixin buyButton {
-    padding: 6.1% 26%;
+    padding: 3.835% 12.62%;
     border: 1px solid #ffffff;
     border-radius: 8px;
 }
@@ -45,7 +46,6 @@ $leftContentWidth: 651px;
 .container {
     width: 100%;
     background-color: $darkedSilver;
-
     .content {
         display: grid;
         // 11 px is a scrolbar width
@@ -123,9 +123,14 @@ $leftContentWidth: 651px;
                     flex-direction: column-reverse;
                 }
             }
+            .vs {
+                @include tablet {
+                    display: none;
+                }
+            }
         }
         .right {
-            @include description();
+            @include desription();
 
             @include tablet {
                 @include flex-between();
@@ -147,10 +152,13 @@ $leftContentWidth: 651px;
                 .prediction_content {
                     background-color: $pink;
                     padding: 7px 35px;
+                    min-width: 186px;
+
                     @include center();
 
-                    @include noteBook{
+                    @include noteBook {
                         min-width: 120px;
+                        padding: 7px 2px;
                     }
 
                     @include tablet {
@@ -181,6 +189,9 @@ $leftContentWidth: 651px;
                             border: 1px solid white;
                             padding: 4px 2px;
                         }
+                        @include noteBook {
+                            padding: 4px 0px;
+                        }
                         span {
                             @include arimo-font();
                             font-weight: bold;
@@ -188,6 +199,9 @@ $leftContentWidth: 651px;
                             line-height: 17px;
                             text-align: center;
                             white-space: nowrap;
+                            @include noteBook {
+                                letter-spacing: 0px;
+                            }
                             @include tablet {
                                 @include sergio-font();
                                 font-size: 12px;
@@ -208,7 +222,7 @@ $leftContentWidth: 651px;
                 @include tablet {
                     min-width: 107px;
                 }
-                @include mobile{
+                @include mobile {
                     min-width: 100px;
                 }
             }
@@ -242,26 +256,17 @@ $leftContentWidth: 651px;
                         }
                     }
                 }
-                .time {
-                    span {
-                        @include descriptionText();
-                        @include tablet {
-                            @include sergio-font();
-                            font-size: 14px;
-                            line-height: 19px;
-                            letter-spacing: 0.1em;
-                        }
-                        @include mobile {
-                            font-size: 12px;
-                            line-height: 16px;
-                            letter-spacing: 0.05em;
-                        }
-                    }
+            }
+            .type {
+                @include tablet {
+                    display: none;
+                }
+                span {
+                    @include descriptionText();
                 }
             }
             .coefficent {
                 @include tablet {
-                    order: 2;
                     display: none;
                 }
                 span {
@@ -297,23 +302,6 @@ $leftContentWidth: 651px;
                         letter-spacing: 0.05em;
                         padding-left: 10%;
                     }
-
-                }
-                .price_title {
-                    display: none;
-                    @include tablet {
-                        display: block;
-                        @include arimo-font();
-                        text-align: center;
-                        font-size: 14px;
-                        line-height: 16px;
-                        letter-spacing: 0.1em;
-                    }
-                    @include mobile {
-                        font-size: 11px;
-                        line-height: 13px;
-                        letter-spacing: 0.1em;
-                    }
                 }
             }
             .buyButton_container {
@@ -325,7 +313,7 @@ $leftContentWidth: 651px;
                 }
                 @include mobile {
                     min-width: 100px;
-                    padding-left: 0
+                    padding-left: 0;
                 }
                 .button_content {
                     @include center();

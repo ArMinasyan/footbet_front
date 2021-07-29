@@ -57,7 +57,7 @@ $contentWidth: 1460px;
   }
 }
 .tablet {
-  @include noteBook {
+  @include tablet {
     display: none !important;
   }
 }

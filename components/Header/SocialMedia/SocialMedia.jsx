@@ -16,6 +16,7 @@ import telegram from '/public/images/header/SocialMedia/telegram.svg'
 import watsup from '/public/images/header/SocialMedia/watsup.svg'
 import instagram from '/public/images/header/SocialMedia/instagram.svg'
 import viber from '/public/images/header/SocialMedia/viber.svg'
+import { useRef } from 'react'
 
 
 export function SocialMedia() {
@@ -63,25 +64,24 @@ export function SocialMedia() {
         ],
         modal_contents = {
             phone: {
-                text: "+34 672 314 808"
+                text: "+34 672 314 808",
             },
             facebook: {
-                text: "Facbook"
+                text: "Facebook",
             },
             telegram: {
-                text: "+34 672 314 808"
+                text: "+34 672 314 808",
             },
             watsup: {
-                text: "+34 672 314 808"
+                text: "+34 672 314 808",
             },
             instagram: {
-                text: "Instagram"
+                text: "Instagram",
             },
             viber: {
-                text: "+34 672 314 808"
+                text: "+34 672 314 808",
             }
         }
-
     return (
         <>
             <div className={styles.container}>

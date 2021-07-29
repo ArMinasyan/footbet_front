@@ -13,7 +13,8 @@
             "date": "дата",
             "time": "время",
             "coeficent": "коэф.",
-            "price": "цена"
+            "price": "цена",
+            "gamesHistory":"История игр"
         }
     }
 }

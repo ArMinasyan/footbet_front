@@ -55,59 +55,7 @@ export function Form({ title }) {
             mode: 'onChange',
             resolver: yupResolver(schema)
         }),
-        // inputs
-        // inputs = [
-        //     {
-        //         label: userIcon,
-        //         id: 'name',
-        //         type: 'text',
-        //         key: Math.random(),
-        //         placeholder: translate('fullName'),
-        //         errors: (!!errors.name),
-        //         other: { ...register('name') }
-        //     },
-        //     {
-        //         label: calendar,
-        //         id: 'birth_date',
-        //         type: 'text',
-        //         key: Math.random(),
-        //         placeholder: translate('birthDate'),
-        //         errors: (!!errors.birthDate),
-        //         other: {
-        //             ...register('birthDate'),
-        //             onFocus: (e) => e.target.type = 'date',
-        //             onBlur: (e) => e.target.type = 'text'
-        //         }
-        //     },
-        //     {
-        //         label: email,
-        //         id: 'email',
-        //         type: 'text',
-        //         key: Math.random(),
-        //         placeholder: translate('email'),
-        //         errors: (!!errors.email),
-        //         other: { ...register('email') },
-        //     },
-        //     {
-        //         label: phone,
-        //         id: 'phone_number',
-        //         type: 'text',
-        //         key: Math.random(),
-        //         placeholder: translate('phone'),
-        //         errors: (!!errors.number),
-        //         other: { ...register('number') },
-        //     },
-        //     {
-        //         label: key,
-        //         id: 'password',
-        //         type: 'password',
-        //         key: Math.random(),
-        //         placeholder: translate('password'),
-        //         errors: (!!errors.password),
-        //         other: { ...register('password') },
-        //     }
-        // ],
-        // send form values
+
         submit = (data) => {
             console.log(data);
             // const registerFormData = new FormData();
