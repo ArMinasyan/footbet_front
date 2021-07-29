@@ -40,10 +40,15 @@ $yellow: #d8c622;
             overflow: auto;
             max-height: 1203px;
             padding: 55px 51.5px;
-            @include tablet{
+            @include tablet {
                 padding: 29px 35px;
                 margin-bottom: 209px;
-                max-height: 924px
+                max-height: 924px;
+            }
+            @include mobile {
+                padding: 14px 18px;
+                margin-bottom: 84px;
+                max-height: 375px;
             }
             .paragraph {
                 .paragraph_title {
@@ -58,9 +63,15 @@ $yellow: #d8c622;
                     }
                 }
                 .paragraph_text {
+                    @include sergio-font();
                     @include text-font();
                     @include tablet {
                         font-size: 14px;
+                        line-height: 157.7%;
+                        letter-spacing: 0.08em;
+                    }
+                    @include mobile {
+                        font-size: 11px;
                         line-height: 157.7%;
                         letter-spacing: 0.08em;
                     }

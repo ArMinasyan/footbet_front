@@ -9,14 +9,24 @@
     position: relative;
     @include center();
     margin-top: 84px;
+
+    @include mobile{
+        margin-top: 20px;
+    }
     .content{
         display: grid;
         grid-template-columns: 1fr 1.89fr;
         width: get-vw(1663px);
         max-height: 1203px;
+
         @include tablet{
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;
+        }
+
+        @include mobile{
+            width: 100vw;
+            max-height: 600px;
         }
     }
 }
