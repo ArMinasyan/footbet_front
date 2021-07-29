@@ -8,6 +8,9 @@
         max-height: 720px;
         overflow: auto;
         @include scrollbar(11px, white, #1b1a30);
+        @include tablet{
+            grid-row-gap: 15px;
+        }
     }
     @include animation();
 }

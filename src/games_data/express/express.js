@@ -21,7 +21,7 @@ export const express = [
         date: '14.01',
         time: '22:30',
         coefficent: '1.67',
-        price: '1500 руб.'
+        price: '1750 руб.'
     },
     {
         id:"expressGame2",

@@ -4,6 +4,9 @@ $parentWidth: 1425px;
 
 .container {
     margin-top: 50px;
+    @include tablet{
+        display: none
+    }
     @include center();
     .content {
         width: get_percent(923px, $parentWidth);

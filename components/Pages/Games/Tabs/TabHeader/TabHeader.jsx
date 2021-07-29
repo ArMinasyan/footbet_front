@@ -13,6 +13,11 @@ export function TabHeader() {
 
     return (
         <div className={styles.container}>
+            <div className={styles.for_tablets}>
+                <p>
+                    {translate('gamesHistory')}
+                </p>
+            </div>
             <div className={styles.content}>
                 <div>
                     <p>
