@@ -26,7 +26,7 @@ export function LoggedWallper({
                     className={styles.user_fullName}
                     onClick={click}
                 >
-                    <span>
+                    <span className={styles.fullname}>
                         {fullName}
                     </span>
                     <span style={{

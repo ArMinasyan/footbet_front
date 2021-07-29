@@ -2,11 +2,17 @@
 
 .container {
     width: 100%;
-    
+    @include tablet {
+        @include flex-end();
+    }
     .content {
         width: 100%;
         @include flex-around();
         padding-right: 10px;
+        @include tablet {
+            @include center();
+            width: auto
+        }
         .user_photo {
             @include center();
             max-width: 36px;
@@ -21,6 +27,14 @@
             }
         }
         .user_fullName {
+            @include tablet {
+                @include center();
+            }
+            .fullname {
+                @include tablet {
+                    display: none;
+                }
+            }
             span {
                 cursor: pointer;
                 white-space: nowrap;
@@ -29,6 +43,10 @@
                 font-size: 13px;
                 line-height: 134%;
                 letter-spacing: 0.06em;
+                @include tablet{
+                    font-size: 16px;
+                    margin-left: 12px;
+                }
             }
         }
     }

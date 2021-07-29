@@ -114,21 +114,21 @@
         }
         to {
             z-index: 10;
-            right: 42%;
+            right: 50%;
         }
     }
 }
-@mixin animation-right-left {
+@mixin animation-right-left($from: 0, $to) {
     animation-name: rightLeft;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
 
     @keyframes rightLeft {
         from {
-            right: 33.5%;
+            right: $from;
         }
         to {
-            right: -35%;
+            right: $to;
         }
     }
 }

@@ -35,7 +35,7 @@ export function LoggedDrop({ onClose, user }) {
         translationPath = 'commons.',
         translate = (key) => t(`${translationPath}${key}`),
         dispatch = useDispatch()
-        
+
 
 
     return (
@@ -50,7 +50,11 @@ export function LoggedDrop({ onClose, user }) {
                             <img src={user.photo} alt="" />
                         </Link>
                     </span>
-                    <span>{user.fullName}</span>
+                    <span>
+                        <Link href='/personal'>
+                            {user.fullName}
+                        </Link>
+                    </span>
                 </div>
                 <div className={styles.user_tel}>
                     <span>

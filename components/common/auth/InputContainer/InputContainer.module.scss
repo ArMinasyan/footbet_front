@@ -14,12 +14,15 @@ $conteinerWidth: 752px;
     box-sizing: border-box;
     border-radius: 10px;
     color: rgba(255, 255, 255, 0.5);
+
     @include mobile {
         padding: 5.2% 4.8%;
         @include arsenal-font();
         font-size: 11px;
         line-height: 14px;
         letter-spacing: 0.15em;
+        width: 95%;
+        margin-left: 5px;
     }
 }
 
@@ -49,7 +52,7 @@ $conteinerWidth: 752px;
     width: 100%;
     @include mobile {
         @include center();
-        margin: 0 0 4.7% 20px;
+        margin: 0 0 4.7% 5px;
     }
     .label_content {
         @include center();

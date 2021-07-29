@@ -11,6 +11,7 @@ $labelBackgroundColor: rgba(196, 196, 196, 0.2);
         @include flex-end();
         min-width: 289px;
         min-height: 183px;
+        padding-right: 2px;
     }
 
     label {

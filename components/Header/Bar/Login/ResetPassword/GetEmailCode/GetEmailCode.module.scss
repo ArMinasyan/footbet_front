@@ -163,6 +163,6 @@ $errorInputBorderColor: #9e094a21;
         }
     }
     @include mobile {
-        height: 100%;
+        height: 100vh;
     }
 }

@@ -1,6 +1,6 @@
 // hooks and helpers
 import { useRouter } from 'next/dist/client/router'
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 
 // styles
@@ -18,94 +18,92 @@ import ContactsModal from '../../../Pages/Contacts/ContactsModal';
 
 
 export default function Dropdown() {
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClose);
+        return () => {
+            document.removeEventListener("mousedown", handleClose);
+        }
+    }, [])
+
     const
         [showDropdown, setShowDropdown] = useState(false),
         [showContactsModal, setShowContactsModal] = useState(false),
+
         { t } = useTranslation('common'),
         translationPath = 'header.navBar.',
-        router = useRouter(),
         translate = (key) => t(`${translationPath}${key}`),
+
+        router = useRouter(),
+
+        node = useRef(),
+
+        handleClose = (e) => {
+            if (node?.current?.contains(e.target)) {
+                if (e.target.parentNode) return
+            }
+            setShowDropdown(false)
+        },
+
         buttonsInHomePage = [
             {
+                id: 'main',
                 key: Math.random(),
                 frstContent: translate('main'),
                 href: '/'
             },
             {
+                id: 'games',
                 key: Math.random(),
                 frstContent: translate('games'),
                 href: '/games'
             },
             {
+                id: 'statistics',
                 key: Math.random(),
                 frstContent: translate('statistics.frs'),
                 secContent: translate('statistics.sec'),
                 href: '/statistics'
             },
             {
+                id: 'prediction',
                 key: Math.random(),
                 frstContent: translate('prediction.frs'),
                 secContent: translate('prediction.sec'),
                 href: '/prediction'
             },
             {
+                id: 'testimonials',
                 key: Math.random(),
                 frstContent: translate('testimonials'),
                 href: '/testimonials'
             },
             {
+                id: 'aboutUs',
                 key: Math.random(),
                 frstContent: translate('aboutUs'),
                 href: '/aboutUs'
             },
             {
+                id: 'contacts',
                 key: Math.random(),
                 frstContent: translate('contacts'),
                 href: null,
-                click: () => setShowContactsModal(true)
+                click: () => {
+                    setShowDropdown(false)
+                    setShowContactsModal(true)
+                }
             },
         ],
-        buttons = [
-            {
-                key: Math.random(),
-                frstContent: translate('main'),
-                href: '/'
-            },
-            {
-                key: Math.random(),
-                frstContent: translate('games'),
-                href: '/games'
-            },
-            {
-                key: Math.random(),
-                frstContent: translate('prediction.frs'),
-                secContent: translate('prediction.sec'),
-                href: '/prediction'
-            },
-            {
-                key: Math.random(),
-                frstContent: translate('testimonials'),
-                href: '/testimonials'
-            },
-            {
-                key: Math.random(),
-                frstContent: translate('aboutUs'),
-                href: '/aboutUs'
-            },
-            {
-                key: Math.random(),
-                frstContent: translate('contacts'),
-                href: null,
-                click: () => setShowContactsModal(true)
-            },
-        ]
+        buttons = buttonsInHomePage.filter(el => el.id !== "statistics")
+
+
     return (
         <div className={styles.dropdown}>
             <div className={styles.dropdown_check}>
                 <img src={dropdownLines.src} alt="drop-check-icon" onClick={() => setShowDropdown(!showDropdown)} />
             </div>
             {showDropdown && (
-                <div className={styles.dropdown_menu}>
+                <div className={styles.dropdown_menu} ref={node}>
                     <ul className={styles.dropdown_list}>
                         {
                             (router.pathname === '/' ? buttonsInHomePage : buttons).map(el => (
