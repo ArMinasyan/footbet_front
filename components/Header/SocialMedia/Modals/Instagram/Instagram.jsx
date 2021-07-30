@@ -1,7 +1,7 @@
 import { Modal } from "../../../../common/auth/Modal/Modal"
 import styles from '../SocialMediaModal.module.scss'
 
-export function Instagram({ onModalClose, text }) {
+export function Instagram({ onModalClose, text, parentHeight }) {
     const get_top = (px, content = 1920) => {
         return px * 100 / content
     }

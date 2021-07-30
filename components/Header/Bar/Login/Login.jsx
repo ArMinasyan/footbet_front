@@ -13,8 +13,9 @@ export function Login({ onModalClose }) {
 
     const
         [showLoginModal, setShowLoginModal] = useState(true),
-        [showResetPasswordModal, showShowResetPasswordModal] = useState(false)
+        [showResetPasswordModal, setShowResetPasswordModal] = useState(false)
 
+    console.log(showResetPasswordModal);
     return (
         <>
             {showLoginModal &&
@@ -24,7 +25,7 @@ export function Login({ onModalClose }) {
                         <LoginForm
                             onModalClose={onModalClose}
                             handleResetPassModal={() => {
-                                showShowResetPasswordModal(true)
+                                setShowResetPasswordModal(true)
                                 setShowLoginModal(false)
                             }}
                         />

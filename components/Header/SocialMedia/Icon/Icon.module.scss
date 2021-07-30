@@ -1,10 +1,14 @@
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 16.7% 0;
-    border-bottom: 1px solid #D10A52;
-    img{
+    border-bottom: 1px solid #d10a52;
+    min-width: 100%;
+    min-height: 17%;
+    img {
         cursor: pointer;
+        max-width: 29px;
+        min-height: 37px;
     }
 }

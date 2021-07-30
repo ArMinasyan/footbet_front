@@ -25,7 +25,6 @@ export function Modal({
         document.addEventListener("mousedown", handleClose);
         return () => {
             document.removeEventListener("mousedown", handleClose);
-            onClose()
         };
     }, [])
 
