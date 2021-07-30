@@ -29,6 +29,7 @@ $rightContentWidth: 767px;
         }
         .img {
             position: relative;
+
             @include tablet {
                 @include center();
                 margin-bottom: 18.5px;
@@ -38,6 +39,9 @@ $rightContentWidth: 767px;
                 margin-bottom: 27px;
             }
             img {
+                @include noteBook {
+                    width: 100.435%;
+                }
                 @include tablet {
                     max-width: 332px;
                     max-height: 181px;

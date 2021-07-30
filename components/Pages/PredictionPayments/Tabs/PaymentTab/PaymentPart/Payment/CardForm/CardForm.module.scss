@@ -12,16 +12,16 @@ $containerWidth: 767px;
     font-size: 11px;
     line-height: 14px;
     letter-spacing: 0.19em;
-    padding: 11px 18px;
+    padding: 9.5px 18px 9.5px 18px;
     color: rgba(255, 255, 255, 0.31);
     box-sizing: border-box;
     border-radius: 8px;
     outline: none;
     @include tablet {
-        padding: 20.5px 18px;
+        padding: 20.5px 6px 20.5px 6px;
     }
     @include mobile {
-        padding: 13px 18px 12px 18px;
+        padding: 13px 6px 12px 6px;
     }
 }
 
@@ -49,13 +49,14 @@ $containerWidth: 767px;
     border: 1px solid #eeecec;
     box-sizing: border-box;
     height: 100%;
-    padding: 0 68px;
+    padding: 29px 68px;
     width: 100%;
 
     @include tablet {
         min-width: 637px;
-        padding: 0 33px;
+        padding: 14px 33px;
     }
+
     @include mobile {
         min-width: 349px;
         padding: 0 24px;
@@ -75,11 +76,6 @@ $containerWidth: 767px;
                 @include errorInput();
             }
             .name {
-                margin-top: 29px;
-
-                @include tablet {
-                    margin-top: 14px;
-                }
                 input {
                     width: 100%;
                     @include tablet {
@@ -148,7 +144,7 @@ $containerWidth: 767px;
                 }
             }
             .cvv {
-                margin-top: 33px;
+                margin-top: 19px;
                 @include tablet {
                     margin-top: 14px;
                 }
@@ -173,7 +169,7 @@ $containerWidth: 767px;
                 }
             }
             .active_untill {
-                margin-top: 33px;
+                margin-top: 19px;
                 @include tablet {
                     margin-top: 14px;
                 }

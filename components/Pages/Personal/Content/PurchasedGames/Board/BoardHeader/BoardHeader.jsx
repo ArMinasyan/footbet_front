@@ -13,8 +13,10 @@ export function BoardHeader() {
 
     return (
         <div className={styles.container}>
-            <div className={styles.left}>
-                <p>{translate('gamesHistory')}</p>
+            <div className={styles.for_tablets}>
+                <p>
+                    {translate('gamesHistory')}
+                </p>
             </div>
             <div className={styles.right}>
                 <div>

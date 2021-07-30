@@ -19,6 +19,7 @@ $backColor: #0c0b22;
         padding: 0;
         padding-bottom: 34px;
         @include column-start();
+        background-color: #12112C
     }
     .content {
         @include column-center();

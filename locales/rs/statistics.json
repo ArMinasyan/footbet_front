@@ -7,12 +7,14 @@
             "prediction": "прогноз",
             "date": "дата",
             "time": "время",
-            "score": "счет"
+            "score": "счет",
+            "gamesHistory": "История игр"
         },
         "wallpers": {
             "win": "Победа",
             "lose": "Поражение",
-            "return": "Возврат"
+            "return": "Возврат",
+            "prediction": "прогноз"
         }
     }
 }

@@ -9,6 +9,10 @@ $containerBacgroundColor: #0c0b22;
     align-items: center;
     background: $containerBacgroundColor;
     padding: 2.07% 0;
+
+    @include mobile{
+        background: #12112C;
+    }
     .round {
         width: 6px;
         height: 6px;

@@ -5,8 +5,9 @@
     left: 45.5%;
     cursor: pointer;
     z-index: 1;
-    @include noteBook{
+    @include noteBook {
         left: 44.5%;
+        bottom: -25px;
     }
     @include tablet {
         left: 44%;
@@ -26,6 +27,9 @@
     left: 52.5%;
     cursor: pointer;
     z-index: 1;
+    @include noteBook {
+        bottom: -25px;
+    }
     @include tablet {
         left: 52.2%;
         max-width: 29px;

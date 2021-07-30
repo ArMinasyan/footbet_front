@@ -6,8 +6,15 @@ $contentWidth: 785px;
 .container {
     width: 100%;
     height: 100%;
-    background: #12112C;
+    background: #12112c;
     @include center();
+
+    @include tablet {
+        top: 0;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+    }
     .content {
         @include column-center();
         p {
@@ -19,7 +26,7 @@ $contentWidth: 785px;
             padding: 0;
         }
         img {
-            margin-top: 47px
+            margin-top: 47px;
         }
     }
     @include animation();

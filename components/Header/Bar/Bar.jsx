@@ -9,7 +9,7 @@ import { Login } from './Login/Login'
 import { BarItems } from './BarItems/BarItems'
 import { Logo } from './Logo/Logo'
 import { useSelector } from 'react-redux'
-import Dropdown from './Dropdown/Dropdown'
+import Dropdown from './DropdownMenu/Dropdown'
 
 export function Bar({ bar_items, bar_items_cont }) {
 
