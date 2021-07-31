@@ -1,4 +1,4 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
 $backgroundColor: rgba(255, 255, 251, 0.09);
 $inputBackColor: rgba(196, 196, 196, 0.2);
@@ -14,6 +14,16 @@ $conteinerWidth: 752px;
     box-sizing: border-box;
     border-radius: 10px;
     color: rgba(255, 255, 255, 0.5);
+
+    @include mobile {
+        padding: 5.2% 4.8%;
+        @include arsenal-font();
+        font-size: 11px;
+        line-height: 14px;
+        letter-spacing: 0.15em;
+        width: 95%;
+        margin-left: 5px;
+    }
 }
 
 @mixin success {
@@ -38,18 +48,30 @@ $conteinerWidth: 752px;
 
 .container {
     @include flex-between;
-    margin-bottom:4.7% ;
+    margin-bottom: 4.7%;
     width: 100%;
-
+    @include mobile {
+        @include center();
+        margin: 0 0 4.7% 5px;
+    }
     .label_content {
         @include center();
         width: 7%;
+        @include mobile {
+            width: auto;
+        }
 
         label {
             @include center();
             padding: 15%;
             border-radius: 100%;
             background-color: $backgroundColor;
+            min-width: 30px;
+            min-height: 30px;
+            @include mobile {
+                min-width: 36px;
+                min-height: 35px;
+            }
 
             img {
                 width: 100%;
@@ -60,16 +82,26 @@ $conteinerWidth: 752px;
 
     .input_container {
         width: 100%;
-
+        @include mobile {
+            @include center();
+        }
         .input_success_content {
+            width: 100%;
             input {
                 @include successInput();
+            }
+            @include mobile {
+                min-width: 289px;
             }
         }
 
         .input_error_content {
+            width: 100%;
             input {
                 @include errorInput();
+            }
+            @include mobile {
+                min-width: 289px;
             }
         }
     }

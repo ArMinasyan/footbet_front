@@ -8,25 +8,72 @@ $ratingContentWidth: 184px;
     @include column-center();
     width: 100%;
     margin-top: 1.58%;
+    @include tablet {
+        margin-top: 20px;
+    }
     .top {
         width: get_percent($topContentWidth, $parentWidth);
         .avatar {
             width: get_percent(250px, $topContentWidth);
+
+            @include tablet {
+                min-width: 127px;
+            }
+            @include mobile {
+                min-width: 100px;
+            }
             @include flex-between();
             img {
                 width: 30%;
+                @include tablet {
+                    min-width: 38px;
+                    min-height: 38px;
+                }
+                @include mobile {
+                    min-width: 35px;
+                    min-height: 35px;
+                }
             }
             span {
                 @include arsenal-font();
                 font-size: 22px;
                 line-height: 28px;
                 letter-spacing: 0.07em;
+                white-space: nowrap;
+                @include noteBook{
+                    margin-left: 10px;
+                }
+                @include tablet {
+                    font-size: 14px;
+                    line-height: 18px;
+                    letter-spacing: 0.07em;
+                }
+
+                @include mobile {
+                    font-size: 10px;
+                    line-height: 13px;
+                    letter-spacing: 0.07em;
+                }
             }
         }
         .rateing {
             @include flex-between();
             width: get_percent($ratingContentWidth, $parentWidth);
             margin-top: 2.4%;
+            @include tablet {
+                margin-top: 5px;
+            }
+            img {
+                @include tablet {
+                    max-width: 21.36px;
+                    min-height: 21.54px;
+                    margin-left: 8px;
+                }
+                @include mobile {
+                    min-width: 9.69px;
+                    min-height: 9.79px;
+                }
+            }
         }
     }
     .bottom {
@@ -40,6 +87,14 @@ $ratingContentWidth: 184px;
         border-radius: 23px;
         padding: 34px 50px 21px 47px;
         margin-top: 7px;
+
+        @include noteBook {
+            padding: 19px 28px;
+        }
+        @include mobile {
+            padding: 7px 13px;
+        }
+
         .bottom_content {
             width: 100%;
             .description {
@@ -50,6 +105,16 @@ $ratingContentWidth: 184px;
                     font-size: 18px;
                     line-height: 181%;
                     letter-spacing: 0.07em;
+                    @include tablet {
+                        font-size: 14px;
+                        line-height: 154%;
+                        letter-spacing: 0.07em;
+                    }
+                    @include mobile {
+                        font-size: 9px;
+                        line-height: 16px;
+                        letter-spacing: 0.07em;
+                    }
                 }
             }
         }
@@ -57,36 +122,95 @@ $ratingContentWidth: 184px;
             width: 100%;
             @include flex-between();
             margin-top: 5.09%;
+            position: relative;
+
+            @include mobile {
+                margin-top: 3px;
+            }
             .date {
                 @include arimo-font();
                 font-size: 20px;
                 line-height: 23px;
                 color: rgba(177, 11, 73, 0.5);
+                @include tablet {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+                @include mobile {
+                    font-size: 10px;
+                    line-height: 11px;
+                }
+            }
+            .vertical_border {
+                min-height: 32px;
+                cursor: pointer;
+                border-right: 3px solid #8d0b40;
+                @include tablet {
+                    min-height: 15px;
+                    border-right: 2px solid #8d0b40;
+                }
+                @include mobile {
+                    min-height: 12px;
+                    border-right: 1px solid #8d0b40;
+                }
             }
             .likes_dislikes {
                 width: get_percent(131.5px, 1495px);
                 @include flex-between();
+
+                @include noteBook {
+                    min-width: 120px;
+                }
+                @include tablet {
+                    min-width: 75px;
+                }
+                @include mobile {
+                    min-width: 50px;
+                }
                 .like {
                     @include flex-start();
                     width: 50%;
-                    border-right:  2px solid #8D0B40;
-                    img{
+                    img {
                         cursor: pointer;
+                        @include tablet {
+                            max-width: 15px;
+                            min-height: 14px;
+                        }
+                        @include mobile {
+                            max-width: 10px;
+                            min-height: 10px;
+                        }
                     }
                 }
                 .disLike {
                     width: 50%;
                     @include flex-end();
-                    img{
+                    img {
                         cursor: pointer;
+                        @include tablet {
+                            max-width: 15px;
+                            min-height: 14px;
+                        }
+                        @include mobile {
+                            max-width: 10px;
+                            min-height: 10px;
+                        }
                     }
                 }
                 span {
                     @include arimo-font();
                     font-size: 25px;
                     line-height: 29px;
+                    @include tablet {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                    @include mobile {
+                        font-size: 9px;
+                        line-height: 12px;
+                    }
                 }
-                img{
+                img {
                     margin-right: 14%;
                 }
             }

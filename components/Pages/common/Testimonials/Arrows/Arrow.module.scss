@@ -1,0 +1,45 @@
+@import "/styles/scss/scssExports";
+
+.arrowLeft {
+    position: absolute;
+    left: 45.5%;
+    cursor: pointer;
+    z-index: 1;
+    @include noteBook {
+        left: 44.5%;
+        bottom: -25px;
+    }
+    @include tablet {
+        left: 44%;
+        max-width: 29px;
+        max-height: 25px;
+        bottom: -28px;
+    }
+    @include mobile {
+        left: 38.3%;
+        max-width: 19px;
+        max-height: 20px;
+        bottom: -34px;
+    }
+}
+.arrowRight {
+    position: absolute;
+    left: 52.5%;
+    cursor: pointer;
+    z-index: 1;
+    @include noteBook {
+        bottom: -25px;
+    }
+    @include tablet {
+        left: 52.2%;
+        max-width: 29px;
+        max-height: 25px;
+        bottom: -28px;
+    }
+    @include mobile {
+        left: 56.3%;
+        max-width: 19px;
+        max-height: 20px;
+        bottom: -34px;
+    }
+}

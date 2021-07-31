@@ -48,8 +48,8 @@
 }
 @mixin column-start {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
 }
 @mixin column-end {
@@ -60,14 +60,14 @@
 }
 @mixin column-between {
     display: flex;
-    justify-content: center;
-    align-items: space-between;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
 }
 @mixin column-around {
     display: flex;
-    justify-content: center;
-    align-items: space-around;
+    justify-content: space-around;
+    align-items: center;
     flex-direction: column;
 }
 @mixin scrollbar($size, $thumbColor, $trackColor) {
@@ -114,21 +114,21 @@
         }
         to {
             z-index: 10;
-            right: 42%;
+            right: 50%;
         }
     }
 }
-@mixin animation-right-left {
+@mixin animation-right-left($from: 0, $to) {
     animation-name: rightLeft;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
 
     @keyframes rightLeft {
         from {
-            right: 33.5%;
+            right: $from;
         }
         to {
-            right: -35%;
+            right: $to;
         }
     }
 }

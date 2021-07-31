@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom'
 
 export function Modal({
     onClose,
-    closeWithVectore = null,
+    // closeWithVectore = null,
     children,
     containerStyles = null,
     contentStyles = null,
@@ -23,12 +23,16 @@ export function Modal({
         setShowModal(true)
         setPageOverflow(true)
         document.addEventListener("mousedown", handleClose);
+        
         return () => {
             document.removeEventListener("mousedown", handleClose);
+            body.style.overflow = 'visible'
         };
     }, [])
 
     const node = useRef()
+
+
 
     const handleClose = e => {
         if (node?.current?.contains(e.target)) {
@@ -59,7 +63,6 @@ export function Modal({
             </div>
         </div>
     )
-
     if (showModal) {
         return createPortal(
             modal,

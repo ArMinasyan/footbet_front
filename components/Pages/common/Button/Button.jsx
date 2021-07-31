@@ -8,8 +8,9 @@ export function Button({
     textPathName = "You are dont put there text.",
     locationInPage = "",
     aditionalStyles = null,
-    active,
-    click = null, }) {
+    active = false,
+    click = null,
+    containerStyles = null }) {
 
     const
         // translation consfigs
@@ -18,8 +19,11 @@ export function Button({
         translate = key => t(`${translationPath}${key}`)
 
     return (
-        <div className={`${styles.container} ${aditionalStyles} ${active ? styles.active : ''}`}>
-            <div className={ `${styles.content}` }
+        <div
+            className={`${styles.container} ${aditionalStyles} ${active ? styles.active : ''}`}
+            style={containerStyles}
+        >
+            <div className={`${styles.content}`}
                 onClick={click}
             >
                 <pre>

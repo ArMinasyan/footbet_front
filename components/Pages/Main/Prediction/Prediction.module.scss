@@ -3,4 +3,8 @@
 .container{
     @include column-center();
     margin-top: 2.11%;
+
+    @include tablet{
+        margin-top: 25px;
+    }
 }

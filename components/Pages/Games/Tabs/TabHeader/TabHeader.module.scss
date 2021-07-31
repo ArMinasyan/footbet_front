@@ -20,10 +20,17 @@ $contentWidth: 774px;
     width: 100%;
     @include flex-end();
     background-color: $lightSilver;
+    @include tablet {
+        background-color: #1b1a30;
+        @include flex-start();
+    }
     .content {
         width: get_percent($contentWidth, $parentWidth);
         @include headers();
         padding: 13px 0;
+        @include tablet {
+            display: none;
+        }
         p {
             @include center();
             @include arsenal-font();
@@ -33,6 +40,20 @@ $contentWidth: 774px;
             letter-spacing: 0.1em;
             font-variant: small-caps;
             color: rgba(0, 0, 0, 0.63);
+        }
+    }
+    .for_tablets {
+        display: none;
+        width: 100%;
+        border-top: 1px solid white;
+        @include tablet {
+            display: block;
+            min-height: 34px;
+            padding: 8px 50px;
+            @include arimo-font();
+            font-size: 15px;
+            line-height: 17px;
+            letter-spacing: 0.1em;
         }
     }
 }

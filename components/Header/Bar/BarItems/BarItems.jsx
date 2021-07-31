@@ -2,6 +2,7 @@
 import { languages } from './LanguageDropConfigs/lang-configs'
 import { useState } from 'react'
 import { user_data } from '/src/user/user'
+import { useRouter } from 'next/dist/client/router'
 // translation 
 import useTranslation from 'next-translate/useTranslation'
 // styles 
@@ -30,14 +31,18 @@ export function BarItems({
 
 
     const
+        router = useRouter(),
         languages_data = languages,
+
         [showDrop, setShowDrop] = useState(false),
         [languagesTitle, setLanguagesTitle] = useState(languages_data[1]),
+
         changeLangTitle = (event) => {
             let lang_title_data = languages_data.filter(el => el.lang === event.target.className)
             setLanguagesTitle(lang_title_data[0])
             setShowDrop(false)
         },
+        
         { t } = useTranslation('common'),
         translationPath = 'header.lang.',
         translate = (key) => t(`${translationPath}${key}`)
@@ -45,8 +50,8 @@ export function BarItems({
     return (
         <>
             {
-                <div className={`${styles.bar_item_container} ${bar_items}`}>
-                    {userLogged ? <Logged data={user_data}/> :
+                <div className={`${styles.bar_item_container} ${bar_items} ${router.pathname !== '/' ? styles.for_mobile : null}`}>
+                    {userLogged ? <Logged data={user_data} /> :
                         <div className={styles.auth_container}>
                             <div className={styles.auth_buttons}>
                                 <div className={styles.sign_up_button}>

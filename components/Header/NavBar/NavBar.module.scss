@@ -1,16 +1,63 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
-$parentWidth: 1920px;
+$parentWidth: 1730px;
 $contentWidth: 1460px;
 
 .container {
+  @include center();
+  width: 100%;
+  height: get-vw(63px);
+  z-index: 10;
+
+  .content {
     @include center();
-    width: 100%;
-    height: get-vw(63px);
-    z-index: 10;
-    .content {
-        @include flex-evenly();
-        width: get_percent($contentWidth, $parentWidth);
-        height: 100%;
+    width: get_percent($contentWidth, $parentWidth);
+    height: 100%;
+
+    .top_on_tablet {
+      width: 100%;
+      @include flex-end();
+      height: 100%;
+
+      @include noteBook {
+        @include center();
+        height: auto;
+      }
+      @include mobile {
+        display: none;
+      }
     }
+
+    .bottom_on_tablet {
+      width: 100%;      
+      @include flex-start();
+      height: 100%;
+
+      @include noteBook {
+        @include flex-evenly();
+        margin-top: 15px;
+        height: auto;
+      }
+      @include mobile {
+        display: none;
+      }
+    }
+    @include noteBook {
+      height: auto;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      max-width: 661px;
+    }
+  }
+  @include noteBook {
+    height: auto;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+.tablet {
+  @include tablet {
+    display: none !important;
+  }
 }

@@ -17,5 +17,8 @@
     .content{
         @include column-center();
         width: get-vw(1593px);
+        @include tablet{
+            width: 100%;
+        }
     }
 }

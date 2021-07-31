@@ -16,14 +16,21 @@
         position: absolute;
         top: 0;
         background-color: #0c0b22;
-        border: 1px solid #9E094A;;
+        border: 1px solid #9e094a;
         padding: 8px 10px;
+        @include tablet {
+            padding: 5px 8px 6px 8px;
+        }
         .user_photo_name {
             @include flex-end();
-            img{
+            img {
                 border-radius: 100%;
                 max-width: 36px;
-                max-height: 36px
+                max-height: 36px;
+                @include tablet {
+                    min-width: 30px;
+                    min-height: 30px;
+                }
             }
             span {
                 @include arimo-font();
@@ -31,30 +38,51 @@
                 line-height: 134%;
                 letter-spacing: 0.06em;
                 margin-left: 6px;
+                @include tablet {
+                    font-size: 9px;
+                    line-height: 12px;
+                    letter-spacing: 0.06em;
+                    margin-left: 6px;
+                    white-space: nowrap;
+                }
             }
         }
         .user_tel {
             width: 100%;
             @include flex-end();
             margin-top: 6px;
+            @include tablet {
+                margin-top: 4px;
+            }
             span {
                 @include arimo-font();
                 font-size: 13px;
                 line-height: 134%;
                 letter-spacing: 0.06em;
                 margin-left: 6px;
+                @include tablet {
+                    font-size: 9px;
+                    line-height: 12px;
+                }
             }
         }
         .logOut {
             width: 100%;
             @include flex-end();
             margin-top: 33px;
+            @include tablet {
+                margin-top: 21px;
+            }
             span {
                 @include arimo-font();
                 font-size: 12px;
                 line-height: 14px;
+                @include tablet {
+                    font-size: 9px;
+                    line-height: 12px;
+                }
             }
         }
     }
-    @include animation()
+    @include animation();
 }

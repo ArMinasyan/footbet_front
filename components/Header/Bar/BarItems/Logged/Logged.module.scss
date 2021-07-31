@@ -8,8 +8,14 @@ $contentWidth: 204px;
     width: 75%;
     border-right: 2px solid white;
     position: relative;
+    @include mobile{
+        @include flex-end();
+    }
     .content {
         @include center();
         width: get_percent($contentWidth, $parentWidth);
+        @include mobile{
+            @include flex-end();
+        }
     }
 }

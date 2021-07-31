@@ -1,0 +1,97 @@
+@import "/styles/scss/scssExports";
+
+.container {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    position: absolute;
+    bottom: 110%;
+    right: -3.4%;
+    z-index: 20;
+    background: #0c0b22;
+    border: 1px solid #9e094a;
+    box-sizing: border-box;
+    border-radius: 23px;
+    @include noteBook {
+        right: -2%;
+    }
+
+    .content {
+        display: grid;
+        padding: 17.5px 19px;
+        @include noteBook {
+            padding: 10px 15px !important;
+        }
+        @include tablet {
+            padding: 17.5px 19px;
+        }
+        @include mobile {
+            padding: 10px 10px !important;
+        }
+        .row {
+            @include center();
+            padding-bottom: 17.5px;
+            @include noteBook {
+                padding-bottom: 17.5px;
+            }
+            @include tablet {
+                padding-bottom: 12px !important;
+            }
+            @include mobile {
+                padding-bottom: 10px !important;
+            }
+            .avatar {
+                margin: 0 !important;
+                @include noteBook {
+                    max-width: 50px;
+                    margin: 0 !important;
+                }
+                @include tablet {
+                    max-width: 30px;
+                    margin: 0 !important;
+                }
+                @include mobile {
+                    max-width: 20px;
+                    margin: 0 !important;
+                }
+            }
+            .user_part {
+                @include center();
+                p {
+                    margin: 0 30px;
+                    @include arsenal-font();
+                    font-size: 22px;
+                    line-height: 28px;
+                    letter-spacing: 0.07em;
+                    white-space: nowrap;
+                    @include tablet {
+                        margin: 0 20px;
+                        font-size: 16px;
+                        line-height: 28px;
+                        letter-spacing: 0.07em;
+                        white-space: nowrap;
+                    }
+                    @include mobile {
+                        margin: 0 10px;
+                        font-size: 10px;
+                        line-height: 20px;
+                        letter-spacing: 0.07em;
+                        white-space: nowrap;
+                    }
+                }
+                img {
+                    margin: 0;
+                    @include tablet {
+                        min-width: 25px;
+                    }
+                    @include mobile {
+                        min-width: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include animation();
+}

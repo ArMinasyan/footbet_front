@@ -1,5 +1,6 @@
 import { user_data } from '/src/user/user'
 import { useState } from 'react'
+import useTranslation from 'next-translate/useTranslation'
 // styles 
 import styles from './UserInfo.module.scss'
 // icons 
@@ -8,6 +9,7 @@ import unknown from '/public/images/personal/unknown.svg'
 import calendar from '/public/images/personal/calendar.svg'
 import email from '/public/images/personal/mail.svg'
 import phone from '/public/images/personal/phone.svg'
+import key from '/public/images/personal/key.svg'
 import change from '/public/images/personal/change.png'
 import camera from '/public/images/personal/camera.svg'
 
@@ -20,7 +22,8 @@ export function UserInfo() {
         [changeDate, setChangeDate] = useState(false),
         [changePhone, setChangePhone] = useState(false),
         [changeEmail, setChangeEmail] = useState(false),
-        [userPhoto, setUserPhoto] = useState(user_data.photo)
+        [userPhoto, setUserPhoto] = useState(user_data.photo),
+        { t } = useTranslation('personal')
 
     return (
         <div className={styles.container}>
@@ -106,7 +109,7 @@ export function UserInfo() {
                                 style={changePhone ?
                                     { display: 'block' } : { display: 'none' }
                                 }
-                                onChange={(e) => user_data.photo = e.target.value}
+                                onChange={(e) => user_data.telephone = e.target.value}
                             />
                         </div>
                         <span>
@@ -132,6 +135,25 @@ export function UserInfo() {
                                     { display: 'block' } : { display: 'none' }
                                 }
                                 onChange={(e) => user_data.email = e.target.value}
+                            />
+                        </div>
+                        <span>
+                            <img
+                                src={change.src}
+                                alt='icon'
+                                onClick={() => setChangeEmail(!changeEmail)}
+                            />
+                        </span>
+                    </div>
+                    <div className={styles.changePassword}>
+                        <span>
+                            <img src={key.src} alt='' />
+                        </span>
+                        <div>
+                            <input
+                                placeholder={t('board.headers.changePassword')}
+                                type='password'
+                                // onChange={(e) => user_data.email = e.target.value}
                             />
                         </div>
                         <span>

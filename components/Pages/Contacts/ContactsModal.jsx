@@ -7,7 +7,7 @@ import closeVector from '/public/images/header/SocialMedia/closeVector.png'
 
 
 export default function ContactsModal({ onModalClose, opened = false }) {
-    
+
     return (
         <Modal
             onClose={onModalClose}
@@ -29,7 +29,7 @@ export default function ContactsModal({ onModalClose, opened = false }) {
                     <div className={styles.rows}>
                         {
                             contacts_data.map(el => (
-                                <div className={styles.row}>
+                                <div className={styles.row} key={Math.random()}>
                                     <div className={styles.img}>
                                         <img src={el.icon} alt="contact-icon" />
                                     </div>

@@ -2,12 +2,21 @@
 
 .container {
     margin-top: 50px;
+
+    @include tablet {
+        margin-top: 25px;
+    }
+
     .board {
         display: grid;
         grid-row-gap: 45px;
         max-height: 720px;
         overflow: auto;
         @include scrollbar(11px, white, #1b1a30);
+
+        @include tablet {
+            grid-row-gap: 15px;
+        }
     }
     @include animation();
 }

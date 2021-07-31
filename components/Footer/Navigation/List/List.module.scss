@@ -1,22 +1,59 @@
 @import "/styles/scss/scssExports";
 
-$borders: 2px solid #7E1A4A;
+$borders: 2px solid #7e1a4a;
 
 .container {
     @include center();
+
+    @include tablet {
+        @include column-start();
+    }
     ul {
+        margin-right: 15px;
+        margin-left: 15px;
+        @include noteBook {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        @include tablet {
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
         li {
             list-style-type: none;
             @include arimo-font();
             font-size: 15px;
             line-height: 17px;
-            padding: 7.3px 0; 
+            padding: 7.3px 0 !important;
             cursor: pointer;
+            @include noteBook {
+                padding: 4px 0;
+                white-space: nowrap;
+            }
+            @include tablet {
+                font-size: 13px;
+                line-height: 22px;
+                padding: 2px 0 !important;
+                white-space: nowrap;
+            }
+            @include mobile {
+                padding: 0;
+                font-size: 10px;
+                line-height: 11px;
+                padding: 2px 0 !important;
+            }
+        }
+        @include tablet {
+            padding: 0 5px;
         }
     }
 }
-.borders{
-    border-left:$borders ;
-    border-right:$borders ; 
-    padding: 19px 23px 19px 29px;      
+.borders {
+    border-left: $borders;
+    border-right: $borders;
+    padding: 0 25px;
+    @include tablet {
+        padding: 0 5px;
+    }
 }

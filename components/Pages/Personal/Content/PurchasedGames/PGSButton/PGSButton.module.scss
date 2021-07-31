@@ -1,8 +1,16 @@
 @import "/styles/scss/scssExports";
 
 .container {
+    @include tablet {
+        margin-top: 32px;
+        max-height: 40px;
+    }
     .content {
         @include flex-start();
+
+        @include tablet {
+            @include center();
+        }
 
         span {
             @include arimo-font();
@@ -14,6 +22,14 @@
             border-radius: 8px;
             background: none;
             cursor: pointer;
+            @include tablet {
+                font-size: 13px;
+                padding: 11.5px 47px;
+                text-transform: uppercase;
+            }
+            @include mobile {
+                letter-spacing: 0.14em;
+            }
             &:hover {
                 background-color: $buttonsColor;
                 border: 1px solid $buttonsColor;

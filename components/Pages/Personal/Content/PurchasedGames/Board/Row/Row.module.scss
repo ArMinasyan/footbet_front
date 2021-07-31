@@ -7,7 +7,7 @@ $winColor: #0c7617;
 $loseColor: #b10000;
 $returnColor: #b4ac00;
 
-@mixin desription {
+@mixin description {
     display: grid;
     grid-template-columns:
         get_percent(207px, $rightContentWidth)
@@ -59,61 +59,284 @@ $returnColor: #b4ac00;
             get_percent($leftContentWidth, $parentWidth)
             get_percent($rightContentWidth, $parentWidth);
         overflow: auto;
+
+        @include tablet {
+            position: relative;
+        }
+
+        @include tablet {
+            @include column-center();
+        }
         .left {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            padding: 1.5px 0;
+            grid-template-columns: 1fr 2fr 1fr 2fr;
+            padding-top: 5px;
+            @include tablet {
+                width: 100%;
+                grid-template-columns: 0.3fr 39.6319% 0.7fr 43.6%;
+                padding-top: 20px;
+            }
             div {
                 @include center();
+                @include tablet {
+                    justify-content: flex-end;
+                    align-items: center;
+                    flex-direction: column-reverse;
+                }
+                img {
+                    @include tablet {
+                        min-width: 55.7px;
+                        min-height: 77.7px;
+                    }
+                    @include mobile {
+                        min-width: 28px;
+                        min-height: 39px;
+                    }
+                }
                 span {
-                    @include arsenal-font();
+                    @include sergio-font();
                     font-size: 21px;
                     line-height: 26px;
                     letter-spacing: 0.05em;
+                    @include tablet {
+                        font-size: 14px;
+                        line-height: 19px;
+                    }
+                    @include mobile {
+                        @include sergio-font();
+                        font-size: 12px;
+                        line-height: 16px;
+                        letter-spacing: 0.05em;
+                    }
                 }
-                img {
-                    max-height: 47px;
+                .vs {
+                    @include tablet {
+                        display: none;
+                    }
                 }
+            }
+            .teamOne {
+                @include flex-around();
+                @include tablet {
+                    flex-direction: column-reverse;
+                }
+            }
+            .teamTwo {
+                @include flex-around();
+                @include tablet {
+                    flex-direction: column-reverse;
+                }
+            }
+            .order {
+                position: absolute;
+                top: 20%;
+                left: 10%;
             }
         }
         .right {
-            @include desription();
+            @include description();
+
             div {
                 @include center();
+            }
+
+            @include tablet {
+                order: 2;
+                width: auto;
+                @include flex-between();
+                min-width: 100%;
+                padding: 23px 0 20.5px 0;
             }
             .prediction {
                 width: 100%;
                 height: 100%;
+
+                @include tablet {
+                    width: 50%;
+                }
+
                 .prediction_content {
-                    background-color: $buttonsColor;
-                    padding: 7px 38.5px;
+                    background-color: $pink;
+                    padding: 7px 35px;
                     @include center();
-                    span {
-                        @include arimo-font();
-                        font-weight: bold;
-                        font-size: 15px;
-                        line-height: 17px;
-                        text-align: center;
-                        white-space: nowrap;
+
+                    @include noteBook {
+                        min-width: 120px;
+                    }
+
+                    @include tablet {
+                        @include column-center();
+                        background: none;
+                        padding: 0;
+                        min-width: 107px;
+                    }
+
+                    .prediction_title {
+                        display: none;
+                        @include tablet {
+                            display: block;
+                            @include arimo-font();
+                            font-size: 14px;
+                            line-height: 16px;
+                            letter-spacing: 0.15em;
+                        }
+                        @include mobile {
+                            font-size: 11px;
+                            line-height: 13px;
+                            margin-bottom: 0;
+                        }
+                    }
+                    .prediction_body {
+                        background-color: #9e094a;
+                        @include tablet {
+                            padding: 10px 42px;
+                            margin-top: 12px;
+                        }
+                        @include mobile {
+                            padding: 3px 4px;
+                            margin-top: 5px;
+                        }
+                        span {
+                            @include arimo-font();
+                            font-weight: bold;
+                            font-size: 15px;
+                            line-height: 17px;
+                            text-align: center;
+                            white-space: nowrap;
+                            @include tablet {
+                                @include arimo-font();
+                                font-size: 14px;
+                                line-height: 16px;
+                                text-align: center;
+                                max-width: 180px;
+                            }
+                            @include mobile {
+                                font-weight: 350;
+                                font-size: 12px;
+                                line-height: 16px;
+                                letter-spacing: 0;
+                            }
+                        }
                     }
                 }
             }
-            .date {
-                border-left: 1px solid white;
-                span {
-                    @include descriptionText();
+            .simulator {
+                @include tablet {
+                    min-width: 107px;
+                }
+                @include mobile {
+                    min-width: 100px;
                 }
             }
+            .date_time {
+                @include flex-around();
+                @include tablet {
+                    flex-direction: column;
+                    justify-content: center;
+                    min-height: 113.5px;
+                    min-width: 117px;
+                    border-left: 1px solid white;
+                    border-right: 1px solid white;
+                    position: absolute;
+                    top: 8%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                @include mobile {
+                    top: 8%;
+                    min-height: 57px;
+                    min-width: 89px;
+                }
+                .date {
+                    span {
+                        @include descriptionText();
+                        @include tablet {
+                            @include sergio-font();
+                            font-size: 14px;
+                            line-height: 19px;
+                            letter-spacing: 0.1em;
+                        }
+                        @include mobile {
+                            font-size: 12px;
+                            line-height: 15px;
+                            letter-spacing: 0.05em;
+                        }
+                    }
+                }
+                .time {
+                    span {
+                        @include descriptionText();
+                        @include tablet {
+                            @include sergio-font();
+                            font-size: 14px;
+                            line-height: 19px;
+                            letter-spacing: 0.1em;
+                        }
+                        @include mobile {
+                            font-size: 12px;
+                            line-height: 16px;
+                            letter-spacing: 0.05em;
+                        }
+                    }
+                }
+            }
+            .tablet_score {
+                display: none;
+                @include tablet {
+                    display: block;
+                    @include arsenal-font();
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 18px;
+                    text-align: center;
+                    letter-spacing: 0.05em;
+                    color: #2bba28;
+                    margin-bottom: 27px;
+                }
+                @include mobile {
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 23px;
+                    margin-bottom: 0;
+                }
+            }
+
             .score {
                 border-left: 1px solid white;
+                @include tablet {
+                    display: none;
+                }
                 span {
                     @include descriptionText();
                 }
             }
             .price {
                 border-left: 1px solid white;
+                @include tablet {
+                    border: none;
+                    width: 50%;
+                    @include column-center();
+                    padding-left: 7%;
+                }
                 span {
                     @include descriptionText();
+                    @include mobile {
+                        @include sergio-font();
+                        font-size: 13px;
+                        line-height: 17px;
+                        letter-spacing: 0.05em;
+                    }
+                }
+                .price_title {
+                    display: none;
+                    @include tablet {
+                        display: block;
+                    }
+                    @include mobile {
+                        font-size: 11px;
+                        line-height: 13px;
+                        letter-spacing: 0.1em;
+                    }
                 }
             }
         }

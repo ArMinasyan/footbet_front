@@ -1,7 +1,15 @@
-.container{
+@import "/styles/scss/scssExports";
+
+.container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 2.19fr;
-    grid-column-gap:215px ;
+    grid-column-gap: 215px;
     margin-top: 37px;
+
+    @include tablet {
+        margin-top: 28px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
 }

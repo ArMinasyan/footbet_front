@@ -7,12 +7,11 @@ $buyButtonHover: #a10b45;
 $rightContentWidth: 763px;
 $leftContentWidth: 651px;
 
-@mixin desription {
+@mixin description {
     display: grid;
     grid-template-columns:
         get_percent(186px, $rightContentWidth)
-        get_percent(86px, $rightContentWidth)
-        get_percent(92px, $rightContentWidth)
+        get_percent(178px, $rightContentWidth)
         get_percent(101px, $rightContentWidth)
         get_percent(130px, $rightContentWidth)
         auto;
@@ -46,60 +45,225 @@ $leftContentWidth: 651px;
 .container {
     width: 100%;
     background-color: $darkedSilver;
+
     .content {
         display: grid;
         // 11 px is a scrolbar width
-        grid-template-columns: 
-         get_percent($leftContentWidth, $parentWidth)
-         get_percent($rightContentWidth, $parentWidth);
+        grid-template-columns:
+            get_percent($leftContentWidth, $parentWidth)
+            get_percent($rightContentWidth, $parentWidth);
         overflow: auto;
+        @include tablet {
+            position: relative;
+        }
+
+        @include tablet {
+            @include column-center();
+        }
         .left {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: 1fr 2fr 1fr 2fr;
             padding-top: 5px;
+            @include tablet {
+                width: 100%;
+                grid-template-columns: 0.3fr 39.6319% 0.7fr 43.6%;
+                padding-top: 20px;
+            }
             div {
                 @include center();
+                @include tablet {
+                    justify-content: flex-end;
+                    align-items: center;
+                    flex-direction: column-reverse;
+                }
+                img {
+                    @include tablet {
+                        min-width: 60px;
+                    }
+                    @include mobile {
+                        min-width: 28px;
+                        min-height: 39px;
+                    }
+                }
                 span {
                     @include arsenal-font();
                     font-size: 21px;
                     line-height: 26px;
                     letter-spacing: 0.05em;
+                    @include tablet {
+                        font-size: 16px;
+                        line-height: 21px;
+                        letter-spacing: 0.05em;
+                    }
+                    @include mobile {
+                        @include sergio-font();
+                        font-size: 12px;
+                        line-height: 16px;
+                        letter-spacing: 0.05em;
+                    }
+                }
+                .order {
+                    margin-left: 0;
+                }
+                .vs {
+                    @include tablet {
+                        display: none;
+                    }
+                }
+            }
+            .teamOne {
+                @include flex-around();
+                @include tablet {
+                    flex-direction: column-reverse;
+                }
+            }
+            .teamTwo {
+                @include flex-around();
+                @include tablet {
+                    flex-direction: column-reverse;
                 }
             }
         }
         .right {
-            @include desription();
+            @include description();
+
+            @include tablet {
+                @include flex-between();
+                padding-bottom: 19px;
+                margin-top: 22px;
+            }
             div {
                 @include center();
             }
             .prediction {
                 width: 100%;
                 height: 100%;
+
+                @include tablet {
+                    order: 2;
+                    width: auto;
+                }
+
                 .prediction_content {
                     background-color: $pink;
                     padding: 7px 35px;
                     @include center();
-                    span {
-                        @include arimo-font();
-                        font-weight: bold;
-                        font-size: 15px;
-                        line-height: 17px;
-                        text-align: center;
-                        white-space: nowrap
+
+                    @include noteBook{
+                        min-width: 120px;
+                    }
+
+                    @include tablet {
+                        @include column-center();
+                        background: none;
+                        padding: 7px 0;
+                        min-width: 107px;
+                    }
+
+                    .prediction_title {
+                        display: none;
+                        @include tablet {
+                            display: block;
+                            @include arimo-font();
+                            font-size: 14px;
+                            line-height: 16px;
+                            letter-spacing: 0.15em;
+                            margin-bottom: 4px;
+                        }
+                        @include mobile {
+                            font-size: 11px;
+                            line-height: 13px;
+                            letter-spacing: 0.15em;
+                        }
+                    }
+                    .prediction_body {
+                        @include tablet {
+                            border: 1px solid white;
+                            padding: 4px 2px;
+                        }
+                        span {
+                            @include arimo-font();
+                            font-weight: bold;
+                            font-size: 15px;
+                            line-height: 17px;
+                            text-align: center;
+                            white-space: nowrap;
+                            @include tablet {
+                                @include sergio-font();
+                                font-size: 12px;
+                                line-height: 16px;
+                                letter-spacing: 0.1em;
+                            }
+                            @include mobile {
+                                font-weight: 350;
+                                font-size: 12px;
+                                line-height: 16px;
+                                letter-spacing: 0;
+                            }
+                        }
                     }
                 }
             }
-            .date {
-                span {
-                    @include descriptionText();
+            .simulator {
+                @include tablet {
+                    min-width: 107px;
+                }
+                @include mobile{
+                    min-width: 100px;
                 }
             }
-            .time {
-                span {
-                    @include descriptionText();
+            .date_time {
+                @include flex-around();
+                @include tablet {
+                    flex-direction: column;
+                    justify-content: center;
+                    min-height: 109px;
+                    min-width: 107px;
+                    border-left: 1px solid white;
+                    border-right: 1px solid white;
+                    position: absolute;
+                    top: 0 !important;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                .date {
+                    span {
+                        @include descriptionText();
+                        @include tablet {
+                            @include sergio-font();
+                            font-size: 14px;
+                            line-height: 19px;
+                            letter-spacing: 0.1em;
+                        }
+                        @include mobile {
+                            font-size: 12px;
+                            line-height: 16px;
+                            letter-spacing: 0.05em;
+                        }
+                    }
+                }
+                .time {
+                    span {
+                        @include descriptionText();
+                        @include tablet {
+                            @include sergio-font();
+                            font-size: 14px;
+                            line-height: 19px;
+                            letter-spacing: 0.1em;
+                        }
+                        @include mobile {
+                            font-size: 12px;
+                            line-height: 16px;
+                            letter-spacing: 0.05em;
+                        }
+                    }
                 }
             }
             .coefficent {
+                @include tablet {
+                    order: 2;
+                    display: none;
+                }
                 span {
                     padding: 6px 10px;
                     background: rgba(27, 26, 48, 0.56);
@@ -108,20 +272,90 @@ $leftContentWidth: 651px;
                 }
             }
             .price {
+                @include tablet {
+                    width: 50%;
+                    min-width: 303px;
+                    order: 3;
+                    @include column-center();
+                    padding-left: 1%;
+                }
+                @include mobile {
+                    min-width: 95px;
+                }
                 span {
                     @include descriptionText();
+                    @include tablet {
+                        @include sergio-font();
+                        font-size: 14px;
+                        line-height: 19px;
+                        letter-spacing: 0.05em;
+                    }
+                    @include mobile {
+                        font-weight: 350;
+                        font-size: 13px;
+                        line-height: 17px;
+                        letter-spacing: 0.05em;
+                        padding-left: 10%;
+                    }
+
+                }
+                .price_title {
+                    display: none;
+                    @include tablet {
+                        display: block;
+                        @include arimo-font();
+                        text-align: center;
+                        font-size: 14px;
+                        line-height: 16px;
+                        letter-spacing: 0.1em;
+                    }
+                    @include mobile {
+                        font-size: 11px;
+                        line-height: 13px;
+                        letter-spacing: 0.1em;
+                    }
                 }
             }
             .buyButton_container {
+                @include tablet {
+                    width: 50%;
+                    order: 1;
+                    min-width: 300px;
+                    padding-left: 3%;
+                }
+                @include mobile {
+                    min-width: 100px;
+                    padding-left: 0
+                }
                 .button_content {
                     @include center();
                     cursor: pointer;
                     // @include buyedButton();
                     @include buyButton();
-                    width: 58%;
-                    p {
+                    width: 100%;
+                    max-width: 102px;
+                    max-height: 35px;
+                    @include tablet {
+                        max-width: 79px;
+                        padding: 4px 15px;
+                    }
+                    @include mobile {
+                        max-width: 49px;
+                        padding: 3.5px 6.5px;
+                    }
+                    span {
                         @include descriptionText();
                         font-weight: bold;
+                        @include tablet {
+                            font-size: 14px;
+                            line-height: 18px;
+                            letter-spacing: 0.1em;
+                        }
+                        @include mobile {
+                            font-size: 10px;
+                            line-height: 13px;
+                            letter-spacing: 0.1em;
+                        }
                     }
                     &:hover {
                         @include buyButtonHover();

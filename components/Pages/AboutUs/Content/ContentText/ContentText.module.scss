@@ -18,6 +18,9 @@ $yellow: #d8c622;
             position: absolute;
             top: -34px;
             @include center();
+            @include tablet {
+                top: -2%;
+            }
             p {
                 @include arsenal-font();
                 text-align: center;
@@ -26,20 +29,52 @@ $yellow: #d8c622;
                 line-height: 53px;
                 letter-spacing: 0.13em;
                 color: $yellow;
+                @include tablet {
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 0.13em;
+                }
             }
         }
         .paragraphs_container {
             overflow: auto;
             max-height: 1203px;
             padding: 55px 51.5px;
+            @include tablet {
+                padding: 29px 35px;
+                margin-bottom: 209px;
+                max-height: 924px;
+            }
+            @include mobile {
+                padding: 14px 18px;
+                margin-bottom: 84px;
+                max-height: 375px;
+            }
             .paragraph {
                 .paragraph_title {
                     @include text-font();
                     color: $yellow;
                     font-weight: bold;
+                    @include tablet {
+                        font-size: 14px;
+                        line-height: 157.7%;
+                        letter-spacing: 0.08em;
+                        font-weight: bold;
+                    }
                 }
                 .paragraph_text {
+                    @include sergio-font();
                     @include text-font();
+                    @include tablet {
+                        font-size: 14px;
+                        line-height: 157.7%;
+                        letter-spacing: 0.08em;
+                    }
+                    @include mobile {
+                        font-size: 11px;
+                        line-height: 157.7%;
+                        letter-spacing: 0.08em;
+                    }
                 }
             }
             @include scrollbar(11px, white, #1b1a30);

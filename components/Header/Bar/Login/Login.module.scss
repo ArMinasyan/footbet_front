@@ -1,15 +1,29 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
 $modal-width: 634px;
 
 @mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
-.login_container {
-    @include column-center();
-    margin: 61px 0;
-    width: get_percent(537px, $modal-width);
+.m_container {
+    .m_content {
+        @include column-center();
+        .login_container {
+            @include column-center();
+            margin: 61px 0;
+            width: get_percent(537px, $modal-width);
+        }
+        @include mobile {
+            @include center();
+            min-width: 100vw !important;
+            min-height: 100vh !important;
+            margin: 0;
+        }
+    }
+    @include mobile {
+        height: 100vh;
+    }
 }

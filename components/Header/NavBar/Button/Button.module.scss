@@ -1,4 +1,4 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 @import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
 
 $parentWidth: 1460px;
@@ -9,41 +9,62 @@ $contentBorder: 1px solid #d10a52;
 $contentBorderOnHover: 2px solid #12112c;
 
 .container {
-    @include flex-end();
-    align-items: center;
+  @include flex-end();
+  align-items: center;
+  height: 100%;
+  min-width: 121px;
+  min-height: 39px;
+  width: 170px;
+  cursor: pointer;
+  background: $buttonBackground;
+  transition: all 0.2s ease-in-out;
+  margin: 0 22.5px;
+
+  .content {
+    @include center();
+    width: get_percent($buttonWidth - 10px, $buttonWidth);
     height: 100%;
-    min-width: 121px;
-    min-height: 39px;
-    width: get_percent($buttonWidth, $parentWidth);
-    cursor: pointer;
-    background: $buttonBackground;
-    transition: all 0.2s ease-in-out;
-    .content {
-        @include center();
-        width: get_percent($buttonWidth - 10px, $buttonWidth);
-        height: 100%;
-        border-left: $contentBorder;
-        pre {
-            @include center();
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: Arimo;
-            font-size: 19px;
-            line-height: 22px;
-        }
+    border-left: $contentBorder;
+
+    @include noteBook {
+      min-height: 51px;
     }
-    // hovers
-    &:hover {
-        background: $buttonBackgroundOnHover;
+
+    pre {
+      @include center();
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arimo;
+      font-size: 19px;
+      line-height: 22px;
+
+      @include noteBook {
+        font-size: 16px;
+      }
     }
-    &:hover .content {
-        border-left: $contentBorderOnHover;
-    }
+  }
+  // hovers
+  &:hover {
+    background: $buttonBackgroundOnHover;
+  }
+  &:hover .content {
+    border-left: $contentBorderOnHover;
+  }
+  @include noteBook {
+    margin-bottom: 1%;
+    max-width: 138px;
+    min-height: 51px;
+  }
+  @include tablet {
+    max-width: 138px;
+    margin: 0 25.5px;
+    min-height: 51px;
+  }
 }
 .active {
-    background: $buttonBackgroundOnHover;
+  background: $buttonBackgroundOnHover;
 }
 .active .content {
-    border-left: $contentBorderOnHover;
+  border-left: $contentBorderOnHover;
 }

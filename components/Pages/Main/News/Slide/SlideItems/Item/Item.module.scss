@@ -1,4 +1,4 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
 $borderColor: #9e094a;
 $containerWidth: 434px;
@@ -22,6 +22,10 @@ $contentHeight: 323px;
     @include column-center();
     width: get-vw($containerWidth);
     height: get-vw($containerHeight);
+    @include mobile {
+        min-width: 152px;
+        min-height: 140px;
+    }
     .topLines {
         @include column-center();
         width: 100%;
@@ -38,6 +42,16 @@ $contentHeight: 323px;
         height: get_percent($contentHeight, $containerHeight);
         border-radius: 8px;
         cursor: pointer;
+
+        @include tablet {
+            min-width: 183px;
+            min-height: 159px;
+        }
+        @include mobile {
+            min-width: 152px;
+            min-height: 140px;
+        }
+
         p {
             @include arimo-font();
             padding: 3px;
@@ -46,8 +60,16 @@ $contentHeight: 323px;
             line-height: 134%;
             letter-spacing: 0.02em;
             text-align: left;
-            background:rgba(0, 0, 0, 0.6); 
+            background: rgba(0, 0, 0, 0.6);
             border-radius: 0 0 8px 8px;
+            @include tablet {
+                font-size: 13px;
+                line-height: 17px;
+            }
+            @include mobile {
+                font-size: 10px;
+                line-height: 12px;
+            }
         }
     }
     .bottomLines {
