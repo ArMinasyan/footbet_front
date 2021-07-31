@@ -1,23 +1,27 @@
 import { Modal } from "../../../../common/auth/Modal/Modal"
 import styles from '../SocialMediaModal.module.scss'
+import Link from 'next/link'
 
-export function Telegram({ onModalClose, text, parentHeight }) {
-    const get_top = (px, content = 1920) => {
-        return px * 100 / content
-    }
+export function Telegram({ onModalClose, data, parent }) {
+
+    const top = parent.current.children.telegram.offsetTop
 
     return (
         <Modal
             onClose={onModalClose}
             containerStyles={styles.container}
             contentStyles={styles.content}
-            otherStyles={{ top: get_top(267.7) + 'vw' }}
+            otherStyles={{ top: top + 'px' }}
         >
-            <p>
-                {
-                    text
-                }
-            </p>
+            <Link href={data.url}>
+                <a target="_blank">
+                    <p>
+                        {
+                            data.text
+                        }
+                    </p>
+                </a>
+            </Link>
         </Modal>
     )
 }

@@ -19,26 +19,32 @@ export function SM() {
             {
                 key: Math.random(),
                 src: phone.src,
+                url: "tel:+37498645457"
             },
             {
                 key: Math.random(),
                 src: facebook.src,
+                url: "https://www.facebook.com/%D0%9F%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7%D1%8B-%D0%BD%D0%B0-%D0%A4%D1%83%D1%82%D0%B1%D0%BE%D0%BB-104941347577913/"
             },
             {
                 key: Math.random(),
                 src: watsup.src,
+                url: "https://api.whatsapp.com/send?phone=+37498645457"
             },
             {
                 key: Math.random(),
                 src: instagram.src,
+                url: "https://www.instagram.com/prognozyna550/?utm_medium=copy_link"
             },
             {
                 key: Math.random(),
                 src: viber.src,
+                url: "viber://chat?number=+37498645457"
             },
             {
                 key: Math.random(),
                 src: telegram.src,
+                url: "https://telegram.me/ermaann",
                 lastElement: true
             },
         ]
@@ -51,6 +57,7 @@ export function SM() {
                         <Icon
                             key={el.key}
                             src={el.src}
+                            url={el.url}
                             elements={icons.length}
                             lastElement={el.lastElement && el.lastElement}
                         />

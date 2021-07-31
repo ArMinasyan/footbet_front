@@ -8,6 +8,8 @@ import { SocialMedia } from './SocialMedia/SocialMedia'
 // icon
 import ballIcon from '/public/images/personal/ball.png'
 
+// TODO click events on icons
+
 export function Footer() {
     const router = useRouter()
     return (

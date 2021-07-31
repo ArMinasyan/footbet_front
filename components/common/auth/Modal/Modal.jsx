@@ -23,12 +23,16 @@ export function Modal({
         setShowModal(true)
         setPageOverflow(true)
         document.addEventListener("mousedown", handleClose);
+        
         return () => {
             document.removeEventListener("mousedown", handleClose);
+            body.style.overflow = 'visible'
         };
     }, [])
 
     const node = useRef()
+
+
 
     const handleClose = e => {
         if (node?.current?.contains(e.target)) {
