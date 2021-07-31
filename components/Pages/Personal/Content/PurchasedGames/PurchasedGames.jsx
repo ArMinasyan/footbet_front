@@ -9,6 +9,7 @@ export function PurchasedGames() {
         [showboardState, setShowBoardState] = useState(false)
 
     return (
+        // container for grid right working
         <div>
             <PGSButton
                 active={showboardState}

@@ -13,6 +13,7 @@ export default function MyApp({ Component, pageProps }) {
         <title>FootBet</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <script type="text/javascript" src="//vk.com/js/api/openapi.js?152"></script>
+        <link rel="stylesheet" href="../static-empty.css" />
       </Head>
       <LayoutWrapper {...pageProps}>
         <Component {...pageProps} />
@@ -24,7 +25,7 @@ export default function MyApp({ Component, pageProps }) {
 export async function getServerSideProps(context) {
 
   resetServerContext()
-  
+
   return {
     props: {}, // will be passed to the page component as props
   }

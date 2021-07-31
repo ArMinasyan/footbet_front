@@ -109,7 +109,8 @@ export default function Dropdown() {
                             (router.pathname === '/' ? buttonsInHomePage : buttons).map(el => (
                                 <Link
                                     href={el.href ? el.href : ""}
-                                    key={el.key}>
+                                    key={el.key}
+                                >
                                     <li
                                         onClick={el.click && el.click}
                                         className={styles.dropdown_list_items}

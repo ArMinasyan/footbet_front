@@ -5,4 +5,5 @@ nextTranslate_i18nConfig.i18n.localeDetection = false;
 module.exports = {
     ...nextTranslate_i18nConfig,
     reactStrictMode: true,
+    eslint: { ignoreDuringBuilds: true },
 }

@@ -15,7 +15,7 @@ export function ContentText() {
                 <div className={styles.paragraphs_container}>
                     {
                         content_text.paragraphs.map(el => (
-                            <div className={styles.paragraph}>
+                            <div className={styles.paragraph} key={Math.random()}>
                                 <p className={styles.paragraph_title}>
                                     {el.title}
                                 </p>

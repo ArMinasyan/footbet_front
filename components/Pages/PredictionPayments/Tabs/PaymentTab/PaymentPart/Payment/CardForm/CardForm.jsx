@@ -59,7 +59,7 @@ export function CardForm() {
             mode: 'onChange',
             resolver: yupResolver(margedSchema)
         }),
-        submit = (data) => {
+        submit = data => {
             let
                 dataEntries = Object.entries(data),
                 cardNumbers = dataEntries.filter(el => el[0].indexOf('Quartet') > -1).reduce((ac, el) => (ac + el[1]), ""),

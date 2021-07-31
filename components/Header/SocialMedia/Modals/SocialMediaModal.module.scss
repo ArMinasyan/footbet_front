@@ -1,7 +1,7 @@
 @import '/styles/scss/scssExports';
 
 $contentWidth: 171px;
-$contentHeight: 40px;
+$contentHeight: 53px;
 
 .container {
     display: block;
@@ -9,11 +9,13 @@ $contentHeight: 40px;
         @include center();
         width: get-vw($contentWidth);
         height: get-vw($contentHeight);
+
         position: fixed;
         left: get-vw(47px);
         border-radius: 0;
         background: rgba(21, 17, 37, 0.63);
         p {
+            cursor: pointer;
             @include arimo-font();
             font-size: 19px;
             line-height: 22px;

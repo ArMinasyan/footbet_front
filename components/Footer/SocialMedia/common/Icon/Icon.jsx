@@ -1,4 +1,5 @@
 import styles from './Icon.module.scss'
+import Link from 'next/link'
 
 export function Icon({
     src,
@@ -6,17 +7,22 @@ export function Icon({
     lastElement = false,
     elements,
     otherStyles = null,
-    classes }) {
+    classes,
+    url = "" }) {
     return (
         <div
             style={elements ? { width: `${100 / elements}%` } : { padding: '0 8px' }}
             className={`${styles.container} ${lastElement ? styles.last_element : ""} ${classes}`}>
-            <img
-                src={src}
-                alt={`icons-${src}`}
-                onClick={click}
-                style={otherStyles}
-            />
+            <Link href={url} target="_blank">
+                <a target="_blank">
+                    <img
+                        src={src}
+                        alt={`icons-${src}`}
+                        onClick={click}
+                        style={otherStyles}
+                    />
+                </a>
+            </Link>
         </div >
     )
 }

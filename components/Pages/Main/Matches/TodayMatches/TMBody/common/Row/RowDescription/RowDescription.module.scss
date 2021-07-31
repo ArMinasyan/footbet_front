@@ -50,6 +50,10 @@ $buyButtonWidth: 102px;
     width: 100%;
     background-color: $containerBacgroundColor;
 
+    @include tablet {
+        background-color: #12112c;
+    }
+
     .content {
         @include flex-between();
         width: get_percent($contentWidth, $containerWidth);

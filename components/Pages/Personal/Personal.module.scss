@@ -7,6 +7,8 @@
     .content {
         @include flex-between();
         width: get-vw(1640px);
+        @include tablet {
+            width: 100vw;
+        }
     }
 }
-

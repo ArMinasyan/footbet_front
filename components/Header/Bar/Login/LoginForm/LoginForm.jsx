@@ -53,6 +53,8 @@ export function LoginForm({ onModalClose, handleResetPassModal }) {
             handle_to_register_click()
         };
 
+        
+
     return (
         <div className={styles.container}>
             <Title

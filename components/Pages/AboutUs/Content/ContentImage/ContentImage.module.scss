@@ -18,6 +18,12 @@ $yellow: #d8c622;
             max-height: 293px;
             margin-bottom: 25px;
         }
+        @include mobile {
+            max-width: 185px;
+            max-height: 185px;
+            right: -5%;
+            bottom: 10%;
+        }
 
         img {
             position: absolute;
@@ -26,6 +32,12 @@ $yellow: #d8c622;
             @include tablet {
                 min-width: 304px;
                 max-height: 277px;
+                right: -5%;
+                bottom: 2%;
+            }
+            @include mobile {
+                min-width: 185px;
+                max-height: 169px;
                 right: -5%;
                 bottom: 2%;
             }

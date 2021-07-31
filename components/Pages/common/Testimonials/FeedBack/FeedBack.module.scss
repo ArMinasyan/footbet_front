@@ -39,6 +39,10 @@ $ratingContentWidth: 184px;
                 font-size: 22px;
                 line-height: 28px;
                 letter-spacing: 0.07em;
+                white-space: nowrap;
+                @include noteBook{
+                    margin-left: 10px;
+                }
                 @include tablet {
                     font-size: 14px;
                     line-height: 18px;

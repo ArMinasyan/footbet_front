@@ -1,4 +1,4 @@
-@import '/styles/scss/scssExports';
+@import "/styles/scss/scssExports";
 
 $containerBacgroundColor: #0c0b22;
 
@@ -9,6 +9,11 @@ $containerBacgroundColor: #0c0b22;
     align-items: center;
     background: $containerBacgroundColor;
     padding: 2.07% 0;
+
+    @include tablet {
+        background: #12112c;
+    }
+
     .round {
         width: 6px;
         height: 6px;

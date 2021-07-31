@@ -8,6 +8,13 @@ $contentWidth: 785px;
     height: 100%;
     @include center();
     background: #12112C;
+
+    @include tablet{
+        top: 0;
+        position: absolute;
+        width: 100vw;
+        height: 100vh
+    }
     .content {
         @include column-center();
         p {

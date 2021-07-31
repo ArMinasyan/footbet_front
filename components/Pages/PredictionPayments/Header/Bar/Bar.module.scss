@@ -22,6 +22,10 @@ $parentWidth: 1425px;
         }
         .button {
             width: auto;
+            @include noteBook {
+                margin-left: 16px;
+                margin-right: 16px;
+            }
             @include tablet {
                 margin-left: 26px;
                 margin-right: 26px;

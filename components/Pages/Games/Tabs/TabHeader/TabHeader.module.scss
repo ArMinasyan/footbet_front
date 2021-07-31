@@ -44,6 +44,8 @@ $contentWidth: 774px;
     }
     .for_tablets {
         display: none;
+        width: 100%;
+        border-top: 1px solid white;
         @include tablet {
             display: block;
             min-height: 34px;

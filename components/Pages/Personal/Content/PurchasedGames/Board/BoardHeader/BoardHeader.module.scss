@@ -24,7 +24,14 @@ $right: 581px;
         get_percent($left, $parentWidth)
         get_percent($right, $parentWidth);
     background-color: $lightSilver;
+    @include tablet {
+        background-color: #1b1a30;
+        @include flex-start();
+    }
     .left {
+        @include tablet {
+            display: none;
+        }
         padding: 22px 17px;
         @include arimo-font();
         font-size: 22px;
@@ -32,6 +39,9 @@ $right: 581px;
         letter-spacing: 0.1em;
     }
     .right {
+        @include tablet {
+            display: none;
+        }
         @include center();
         align-items: flex-end;
         @include headers();
@@ -43,6 +53,20 @@ $right: 581px;
             font-weight: bold;
             font-size: 16px;
             line-height: 18px;
+            letter-spacing: 0.1em;
+        }
+    }
+    .for_tablets {
+        display: none;
+        width: 100%;
+        border-top: 1px solid white;
+        @include tablet {
+            display: block;
+            min-height: 34px;
+            padding: 8px 50px;
+            @include arimo-font();
+            font-size: 15px;
+            line-height: 17px;
             letter-spacing: 0.1em;
         }
     }
