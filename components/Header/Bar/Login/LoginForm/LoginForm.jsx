@@ -17,9 +17,11 @@ import { login } from '../../../../../redux/features/userSlice'
 import { LOGIN } from '../../../../../lib/request-destinations';
 
 import { ToastContainer, toast } from 'react-toastify';
+import { useRouter } from 'next/dist/client/router';
 
 
 export function LoginForm({ onModalClose, handleResetPassModal }) {
+    const router = useRouter();
 
     const
         dispatch = useDispatch(),
@@ -53,6 +55,7 @@ export function LoginForm({ onModalClose, handleResetPassModal }) {
                 const user = (await request( LOGIN, data )).data?.data;
                 setCookie( `access-token`, user.token, 1 );
                 dispatch(login(user));
+                router.push(`/`);
             }
             catch( error ) {
                 toast( error.response.data?.message || `unknown error`, {

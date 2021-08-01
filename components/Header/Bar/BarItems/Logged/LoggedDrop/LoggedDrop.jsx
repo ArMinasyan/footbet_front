@@ -36,6 +36,10 @@ export function LoggedDrop({ onClose, user }) {
         translate = (key) => t(`${translationPath}${key}`),
         dispatch = useDispatch()
 
+    function _logout() {
+        dispatch(logout());
+        router.push(`/`);
+    }    
 
 
     return (
@@ -64,7 +68,7 @@ export function LoggedDrop({ onClose, user }) {
                 </div>
                 <div className={styles.logOut}>
                     <span
-                        onClick={() => dispatch(logout())}
+                        onClick={() =>_logout() }
                     >{translate('logOut')}</span>
                 </div>
             </div>
