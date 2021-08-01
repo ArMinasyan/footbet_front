@@ -8,15 +8,29 @@ import { Pagination } from './SlideItems/Pagination/Pagination'
 import { ItemModal } from './SlideItems/ItemModal/ItemModal'
 // styles 
 import styles from './Slide.module.scss'
+import { useEffect } from 'react'
+import { request } from '../../../../../lib/er.lib'
+import { GET_NEWS } from '../../../../../lib/request-destinations'
 
 
 
 
 export function Slide() {
 
+    const [ slide_data, setSlideData ] = useState([]);
+    
+    useEffect(()=>{
+        request( GET_NEWS, {}, { auth: true })
+            .then( news => {
+                setSlideData( news.data.data );
+            })
+            .catch( err => {
+                console.log( err );
+            })
+    },[])
+
     const
         // consts and states 
-        slide_data = slide_show_data(),
         // breakpoints for slide 
         breakpoints = [
             { width: 375, itemsToShow: 2, itemsToScroll: 2 },
@@ -38,9 +52,9 @@ export function Slide() {
                     {
                         slide_data.map(el => (
                             <Item
-                                img_src={el.url}
+                                img_src={el.img_path}
                                 title={el.title}
-                                description={el.description}
+                                description={el.text}
                                 key={Math.random()}
                             />
                         ))
