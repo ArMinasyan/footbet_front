@@ -20,10 +20,12 @@ import { REGISTER } from '../../../lib/request-destinations'
 import { Ball } from '../../common/auth/BallRightCorner/Ball'
 
 import { ToastContainer, toast } from 'react-toastify';
-import { useRouter } from 'next/router'
+import { useRef } from 'react'
+import { useRouter } from 'next/dist/client/router'
 
 
 export function Form({ title }) {
+    const formRef = useRef();
     const router = useRouter();
 
     const
@@ -55,22 +57,30 @@ export function Form({ title }) {
                 .min(6)
         }),
         // form configs
-        { register, handleSubmit, formState: { errors } } = useForm({
+        { register, formState: { errors } } = useForm({
             mode: 'onChange',
             resolver: yupResolver(schema)
         }),
 
-        submit = (data) => {
-            console.log(data);
-            // const registerFormData = new FormData();
-            // Object.entries(data).forEach(([key, item]) => {
-            //     registerFormData.append(key, item);
-            // })
-            // try {
-            // request(REGISTER, registerFormData)
-            // } catch (error) {
-            //     console.log(error);
-            // }
+        submit = async ( e ) => {
+            e.preventDefault();
+            const registerFormData = new FormData( formRef.current );
+            const dateOfBirth = registerFormData.get(`dateOfBirth`) || "";
+            const [ year, month, date ] = dateOfBirth.split(`-`);
+            if ( year && month && date ) {
+                registerFormData.delete( `dateOfBirth` );
+                registerFormData.append( `dateOfBirth`, [ month, date, year ].join(`.`) );
+            }
+            
+           try {
+               await request( REGISTER, registerFormData);
+               toast(`Successfully registered`);
+               router.push(`/`)
+           } catch (error) {
+               toast( error.response.data?.message || `unknown error`, {
+                   type: `error`
+               });
+           }
         }
 
     return (
@@ -83,30 +93,28 @@ export function Form({ title }) {
                         }
                     </p>
                 </div>
-                <form
-                    onSubmit={(handleSubmit(submit))}
-                >
+                <form ref={formRef} >
                     <FileInput
                         id='upload_file_input'
                         type='file'
-                        other={register('file')}
+                        other={register('profile_img')}
                     />
                     <InputContainer
                         label={userIcon}
                         id='name'
                         type='text'
                         placeholder={translate('fullName')}
-                        errors={(!!errors.name)}
-                        other={register('name')}
+                        errors={(!!errors.username)}
+                        other={register('username')}
                     />
                     <InputContainer
                         label={calendar}
                         id='birth_date'
                         type='text'
                         placeholder={translate('birthDate')}
-                        errors={(!!errors.birthDate)}
+                        errors={(!!errors.dateOfBirth)}
                         other={{
-                            ...register('birthDate'),
+                            ...register('dateOfBirth'),
                             onFocus: (e) => e.target.type = 'date',
                             onBlur: (e) => e.target.type = 'text'
                         }}
@@ -124,8 +132,8 @@ export function Form({ title }) {
                         id='phone_number'
                         type='text'
                         placeholder={translate('phone')}
-                        errors={!!errors.number}
-                        other={register('number')}
+                        errors={!!errors.mobile}
+                        other={register('mobile')}
                     />
                     <InputContainer
                         label={key}
@@ -137,6 +145,7 @@ export function Form({ title }) {
                     />
                     <Button
                         content={translate('buttonTitle')}
+                        onClick={submit}
                     />
                 </form>
 
@@ -144,6 +153,7 @@ export function Form({ title }) {
             <div className={styles.ball}>
                 <Ball />
             </div>
+            <ToastContainer />
         </>
     )
 }
