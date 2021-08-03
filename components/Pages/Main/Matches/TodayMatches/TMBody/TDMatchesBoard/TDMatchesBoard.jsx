@@ -1,6 +1,5 @@
 // hooks
 import { useRouter } from 'next/dist/client/router'
-import { matches } from '/src/games_data/matches/matches'
 // styles
 import styles from './TDMatchesBoard.module.scss'
 // components
@@ -11,16 +10,37 @@ import { Arrow } from './Arrows/Arrow'
 import { Pagination } from './Pagination/Pagination'
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd'
 import { useState } from 'react'
+import { useEffect } from 'react'
+import { request } from '../../../../../../../lib/er.lib'
+import { GET_MATCHES } from '../../../../../../../lib/request-destinations'
 
 
 export function TDMatchesBoard() {
 
+    
+
     const
-        frstPage = matches.todayMatches.filter((el, i) => i < 4),
-        secondPage = matches.todayMatches.filter((el, i) => i >= 4),
+        [ firstPage, setFirstPage ] = useState([]),
+        [ secondPage, setSecondPage] = useState([]),
         router = useRouter(),
-        [firstPageItems, upDateFirstPageItems] = useState(frstPage),
-        [secondPageItems, upDateSecondPageItems] = useState(secondPage)
+        [firstPageItems, upDateFirstPageItems] = useState(firstPage),
+        [secondPageItems, upDateSecondPageItems] = useState(secondPage),
+        [ matches, setMatches ] = useState( [] );
+
+    useEffect( () => {
+        setFirstPage( matches.filter((el, i) => i < 4) );
+        setSecondPage( matches.filter((el, i) => i >= 4) );
+    }, [matches]);
+
+    useEffect( () => {        
+        request( GET_MATCHES, {}, { auth: true })
+            .then( matches => {
+                setMatches( matches.data.data );
+            })
+            .catch( err => {
+                console.log( err );
+            })
+    }, []);
 
     function handleOnDragEndFirstPage(result) {
         if (!result.destination) return;
