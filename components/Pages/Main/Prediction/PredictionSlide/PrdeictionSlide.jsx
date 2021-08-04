@@ -1,5 +1,6 @@
 // hooks and helpers
 import { useRouter } from 'next/dist/client/router'
+import { useState , useEffect} from 'react'
 //components
 import Carousel from 'react-elastic-carousel'
 import { Arrow } from './Arrows/Arrow'
@@ -9,8 +10,21 @@ import styles from './PrdeictionSlide.module.scss'
 // images, icons
 import predictionBackground from '/public/images/main/prediction/predBack.png'
 import { slide_data } from '../../../../../src/games_data/predictions/slide'
+import { request } from '../../../../../lib/er.lib'
+import { GET_PREDICTIONS } from '../../../../../lib/request-destinations'
 
 export function PrdeictionSlide() {
+
+    const [ slide_data, setSlideData ] = useState([]);
+
+    useEffect( ()=> {
+        request( GET_PREDICTIONS, {}, { auth: true } )
+            .then( rsp => {
+                // toast(`Successfully registered`)
+                console.log(  rsp);
+            })
+            .catch( error => {})
+    }, [] );
 
     const
         style = {
