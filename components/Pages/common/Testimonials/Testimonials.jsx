@@ -20,7 +20,7 @@ export function Testimonials({
 }) {    
 
     const
-        { t } = useTranslation(),
+        { t } = useTranslation(`home`),
         translationPath = 'testimonials.sorting.',
         translate = (key) => t(`${translationPath}${key}`)
     console.log( t("home:news.title") );

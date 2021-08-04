@@ -1,6 +1,6 @@
 // hooks and helpers
 import { languages } from './LanguageDropConfigs/lang-configs'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { user_data } from '/src/user/user'
 import { useRouter } from 'next/dist/client/router'
 // translation 
@@ -27,15 +27,21 @@ export function BarItems({
     loginModalHandle,
     bar_items,
     userLogged }) {
-
-
-
-    const
+        
+        const { t, lang } = useTranslation('common');
+        const [languagesTitle, setLanguagesTitle] = useState(languages[1]);
+        useEffect( ()=>{
+            const newLang = languages.find( el => el.lang === lang );
+            if ( newLang ) {
+                setLanguagesTitle( newLang );
+            }
+        }, [lang] ); 
+        
+        const
         router = useRouter(),
         languages_data = languages,
 
         [showDrop, setShowDrop] = useState(false),
-        [languagesTitle, setLanguagesTitle] = useState(languages_data[1]),
 
         changeLangTitle = (event) => {
             let lang_title_data = languages_data.filter(el => el.lang === event.target.className)
@@ -43,10 +49,10 @@ export function BarItems({
             setShowDrop(false)
         },
         
-        { t } = useTranslation('common'),
         translationPath = 'header.lang.',
         translate = (key) => t(`${translationPath}${key}`)
 
+    
     return (
         <>
             {
