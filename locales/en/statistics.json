@@ -1,20 +1,20 @@
 {
     "header": {
-        "title": "Статистика матчей"
+        "title": "Match statistics"
     },
     "tab": {
         "header": {
-            "prediction": "прогноз",
-            "date": "дата",
-            "time": "время",
-            "score": "счет",
-            "gamesHistory": "История игр"
+            "prediction": "predictions",
+            "date": "date",
+            "time": "time/period",
+            "score": "score/bill",
+            "gamesHistory": "History of game"
         },
         "wallpers": {
-            "win": "Победа",
-            "lose": "Поражение",
-            "return": "Возврат",
-            "prediction": "прогноз"
+            "win": "Victory",
+            "lose": "Defeat",
+            "return": "Refund/return",
+            "prediction": "prediction"
         }
     }
 }

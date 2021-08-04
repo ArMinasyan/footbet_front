@@ -31,7 +31,7 @@ export function LanguageDrop({ onClose, click, data }) {
         translationPath = 'header.lang.',
         translate = (key) => t(`${translationPath}${key}`)
 
-
+        console.log(router);
 
     return (
         <div

@@ -1,3 +1,21 @@
 {
-    "title": "Игры"
-}
+    "header": {
+      "title": "Games",
+      "barButtons": {
+        "express": "Express",
+        "ordinar": "Ordinary",
+        "bestStrategy": "Win-win strategy"
+      }
+    },
+    "tabs": {
+      "header": {
+        "prediction": "Prediction",
+        "date": "Date",
+        "time": "Time/Period",
+        "coeficent": "Coef.",
+        "price": "Price",
+        "gamesHistory": "History of games"
+      }
+    }
+  }
+  

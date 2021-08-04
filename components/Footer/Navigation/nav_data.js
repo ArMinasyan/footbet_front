@@ -2,43 +2,43 @@ export const nav_data = [
     [
         {
             link:'/prediction',
-            name: 'Прогнозы'
+            name: 'prediction'
         },
         {
             link:'/games',
-            name: 'Игры'
+            name: 'games'
         },
         {
             link:'/',
-            name: 'Новости'
+            name: 'news'
         }   
     ],
     [
         {
             link:'/aboutUs',
-            name: 'О нас'
+            name: 'aboutUs'
         },
         {
             link:'/prediction',
-            name: 'Оплата'
+            name: 'payment'
         },
         {
             link:'/statistics',
-            name: 'Статистика матчей'
+            name: 'matchStatistics'
         }
     ],
     [
         {
             link:'/registration',
-            name: 'Регистрация'
+            name: 'register'
         },
         {
             link:'/testimonials',
-            name: 'Отзывы'
+            name: 'feedbacks'
         },
         {
             link:'/',
-            name: 'Контакты'
+            name: 'contacts'
         }
     ],
 ]

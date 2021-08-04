@@ -1,86 +1,86 @@
 {
     "news": {
-        "title": "News",
+        "title": "Nachrichten",
         "sldes": {}
     },
     "matches": {
-        "title": "Matches",
+        "title": "Die Spiel",
         "buttons": {
-            "TodayMatches": "Matches of the day",
-            "GameRules": "Rules of the game"
+            "TodayMatches": "Spiele des Tages",
+            "GameRules": "Spiel regel"
         },
         "TM": {
-            "headerTitle": "Results",
+            "headerTitle": "Ergebnisse",
             "headerButtons": {
-                "yesterday": "Yesterday",
-                "today": "Today",
-                "tomorrow": "Tomorrow"
+                "yesterday": "Gestern",
+                "today": "Heute",
+                "tomorrow": "Morgen"
             },
             "today": {
                 "rowOne": {
                     "title": "Испания",
                     "gameState": {
-                        "dontStarted": "did not start",
-                        "started": "Started"
+                        "dontStarted": "nicht gestartet",
+                        "started": "hat begonnen"
                     },
                     "teamOne": "Атлетико",
                     "teamTwo": "Атлетико",
-                    "buyButton": "Buy"
+                    "buyButton": "Kaufen"
                 },
                 "rowTwo": {
                     "title": "Испания",
                     "gameState": {
-                        "dontStarted": "did not start",
-                        "started": "Started"
+                        "dontStarted": "nicht gestartet",
+                        "started": "hat begonnen"
                     },
                     "teamOne": "Барселона",
                     "teamTwo": "ПСЖ",
-                    "buyButton": "Buy"
+                    "buyButton": "Kaufen"
                 },
                 "rowThree": {
                     "title": "Испания",
                     "gameState": {
-                        "dontStarted": "did not start",
-                        "started": "Started"
+                        "dontStarted": "nicht gestartet",
+                        "started": "hat begonnen"
                     },
                     "teamOne": "Марсель",
                     "teamTwo": "Атлетик",
-                    "buyButton": "Buy"
+                    "buyButton": "Kaufen"
                 },
                 "rowFore": {
                     "title": "Испания",
                     "gameState": {
-                        "dontStarted": "did not started",
-                        "started": "Started"
+                        "dontStarted": "nicht gestartet",
+                        "started": "hat begonnen"
                     },
                     "teamOne": "Атлетик",
                     "teamTwo": "Атлетик",
-                    "buyButton": "Buy"
+                    "buyButton": "Kaufen"
                 }
             }
         }
     },
     "prediction": {
-        "title": "Predictions",
+        "title": "Prognosen",
         "slide": {
             "firstSlide": {
                 "teamOne": "Барселона",
                 "teamTwo": "ПСЖ"
             },
             "pred_button": "Prediction",
-            "buy_button": "Buy"
+            "buy_button": "Kaufen"
         }
     },
     "testimonials": {
-        "title": "Comments",
+        "title": "Bewertungen",
         "sorting": {
-            "sort": "Sort",
-            "byDate": "by date",
-            "byRate": "by rate"
+            "sort": "Sortieren",
+            "byDate": "nach Datum",
+            "byRate": "nach Einschätzung"
         },
         "textarea": {
-            "placeHolder": "Leave feedback...",
-            "sendButton": "Send"
+            "placeHolder": "Feedback geben...",
+            "sendButton": "Senden"
         }
     }
 }

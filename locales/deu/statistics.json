@@ -1,11 +1,11 @@
 {
     "header": {
-        "title": "Խաղերրի վիճակագրություն"
+        "title": "Spiel statistik"
     },
     "tab": {
         "header": {
-            "prediction": "Կանխատեսում",
-            "date": "ամսաթիվ",
+            "prediction": "Prognos",
+            "date": "datum",
             "time": "ժամանակ",
             "score": "հաշիվ",
             "gamesHistory": "Խաղերի պատմություն"
@@ -14,7 +14,7 @@
             "win": "Հաղթանակ",
             "lose": "Պարտություն",
             "return": "Վերադարձ",
-            "prediction": "կանխատեսում  "
+            "prediction": "Prognos"
         }
     }
 }

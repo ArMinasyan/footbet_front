@@ -74,6 +74,7 @@
     "testimonials": {
         "title": "Отзывы",
         "sorting": {
+            "sort": "Сортировать",
             "byDate": "по дате",
             "byRate": "по оценке"
         },

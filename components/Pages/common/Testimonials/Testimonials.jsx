@@ -1,5 +1,7 @@
-// components
+// hooks and helpers
 import { useState } from 'react'
+import useTranslation from 'next-translate/useTranslation'
+// components
 import Carousel from 'react-elastic-carousel'
 import { Title } from '../Title/Title'
 import { Arrow } from './Arrows/Arrow'
@@ -15,8 +17,13 @@ export function Testimonials({
     page,
     locationInPage,
     textPathName
-}) {
+}) {    
 
+    const
+        { t } = useTranslation(),
+        translationPath = 'testimonials.sorting.',
+        translate = (key) => t(`${translationPath}${key}`)
+    console.log( t("home:news.title") );
     const
         // states
         [feedBacks, setFeedBacks] = useState(feedback_data),
@@ -68,9 +75,9 @@ export function Testimonials({
                     />
                     <div className={styles.feed_backs_container}>
                         <Sorting
-                            sortingText='Сортироавть:'
-                            dateSortingText='по дате'
-                            rateSorting='по оценке'
+                            sortingText={translate("sort")}
+                            dateSortingText={translate("byDate")}
+                            rateSorting={translate("byRate")}
                             sortByDate={() => { sorting(feedBacks, "date", true) }}
                             sortByRate={() => { sorting(feedBacks, "rate", false) }}
                             dateActive={dateActive}

@@ -22,9 +22,10 @@ RowDescription({
         // translation consfigs
         { t } = useTranslation('home'),
         translationPath = `${locationInMainPage}`,
-        translate = key => t(`${translationPath}${key}`),
+        translate = key => {  console.log(`${translationPath}${key}`) ;return t(`${translationPath}${key}`) },
         gameStarted = gameState.slice(gameState.lastIndexOf(".") + 1) === 'started'
 
+        console.log();
 
 
     return (

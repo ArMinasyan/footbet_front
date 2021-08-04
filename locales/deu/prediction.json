@@ -1,13 +1,13 @@
 {
     "header": {
         "barButtons": {
-            "express": "Կանխատեսումներ",
-            "ordinar": "Վճարում"
+            "express": "Prognosen",
+            "ordinar": "Bezahlung"
         }
     },
     "tabs": {
         "header": {
-            "prediction": "կանխատեսում",
+            "prediction": "prognos",
             "type": "տեսակ",
             "date": "ամսաթիվ",
             "time": "ժամանակ",

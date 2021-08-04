@@ -2,7 +2,10 @@
   "locales": [
     "rs",
     "am",
-    "en"
+    "en",
+    "deu",
+    "fr",
+    "esp"
   ],
   "defaultLocale": "rs",
   "pages": {

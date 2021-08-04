@@ -1,34 +1,34 @@
 {
-    "header": {
-        "barButtons": {
-            "express": "Прогнозы",
-            "ordinar": "Оплата"
-        }
-    },
-    "tabs": {
-        "header": {
-            "prediction": "прогноз",
-            "type": "тип",
-            "date": "дата",
-            "time": "время",
-            "coeficent": "коэф.",
-            "price": "цена",
-            "gamesHistory": "История игр"
-        },
-        "payments": {
-            "coefficent": "Коэффициент",
-            "gameStartingDate": "Дата / Время начала события",
-            "bankCard": "Банковская карта",
-            "choosePaySys": "выбрать платежную систему",
-            "cardForm": {
-                "fullName": "имя, фамилия",
-                "cardNumber": "номер карты",
-                "codeCVV": "код CVV",
-                "activeUntill": "действует до",
-                "success": "Подтвердиить",
-                "thanks": "Благодарим Вас!",
-                "pending": "Оплату не удалось воспроизвести"
-            }
-        }
+  "header": {
+    "barButtons": {
+      "express": "Prediction",
+      "ordinar": "Payment"
     }
+  },
+  "tabs": {
+    "header": {
+      "prediction": "prediction",
+      "type": "type",
+      "date": "date",
+      "time": "time/period",
+      "coeficent": "coef.",
+      "price": "price",
+      "gamesHistory": "History of games"
+    },
+    "payments": {
+      "coefficent": "Coefficent",
+      "gameStartingDate": "Date  / Time of the event",
+      "bankCard": "Bank card",
+      "choosePaySys": "Choose the payment system",
+      "cardForm": {
+        "fullName": "name, surname",
+        "cardNumber": "card number",
+        "codeCVV": "code CVV",
+        "activeUntill": "valid untill",
+        "success": "Confirm",
+        "thanks": "Thank you!",
+        "pending": "Payment failed"
+      }
+    }
+  }
 }
