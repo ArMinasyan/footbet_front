@@ -27,10 +27,6 @@ export const slide_data = [
         predictionText: 'Фулхем тб 1,5 / коэф 3,5',
         ordinarText: 'Ординар / 1500руб.',
         price: '1500 руб.',
-        predictionButtonName: '.slide.pred_button',
-        buyButtonName: '.slide.buy_button',
-        predictionText: 'Фулхем тб 1,5 / коэф 3,5',
-        ordinarText: 'Ординар / 1500руб.'
     },
     {
         id: 'predictionslideGame2',

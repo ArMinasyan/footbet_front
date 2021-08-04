@@ -21,7 +21,29 @@ export function PrdeictionSlide() {
         request( GET_PREDICTIONS, {}, { auth: true } )
             .then( rsp => {
                 // toast(`Successfully registered`)
-                console.log(  rsp);
+                setSlideData( rsp.data.data.map( item => {
+                    return {
+                        id: item.id,
+                        teamOneName: 'Атлетико',
+                        teamOneIcon: item[`team1_img_path`],
+                        teamTwoName: 'Атлетик',
+                        teamTwoIcon: item[`team2_img_path`],
+                        prediction: {
+                            thereIs: true,
+                            totalBet: 'тб 1,5 / ',
+                            coefficent: 'коеф 3,5'
+                        },
+                        type: item.type,
+                        date: item.date,
+                        time: item.time,
+                        coefficent: item.factor,
+                        predictionButtonName: '.slide.pred_button',
+                        buyButtonName: '.slide.buy_button',
+                        predictionText: 'Фулхем тб 1,5 / коэф 3,5',
+                        ordinarText: `${item.type} / ${item.price}руб.`,
+                        price: item.price + ' руб.'
+                    }
+                }))
             })
             .catch( error => {})
     }, [] );

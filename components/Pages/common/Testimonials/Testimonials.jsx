@@ -1,5 +1,5 @@
 // hooks and helpers
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 // components
 import Carousel from 'react-elastic-carousel'
@@ -12,6 +12,8 @@ import { Pagination } from './Pagination/Pagination'
 import { Sorting } from './Sorting/Sorting'
 // styles
 import styles from './Testimonials.module.scss'
+import { request } from '../../../../lib/er.lib'
+import { GET_FEEDBACK } from '../../../../lib/request-destinations'
 
 export function Testimonials({
     page,
@@ -23,11 +25,18 @@ export function Testimonials({
         { t } = useTranslation(`home`),
         translationPath = 'testimonials.sorting.',
         translate = (key) => t(`${translationPath}${key}`)
-    console.log( t("home:news.title") );
     const
         // states
-        [feedBacks, setFeedBacks] = useState(feedback_data),
+        [feedBacks, setFeedBacks] = useState([]),
         [dateActive, setDateActive] = useState(true)
+
+    useEffect( ()=>{
+        request( GET_FEEDBACK )
+            .then( predictions => {
+                console.log( predictions.data.data );
+            })
+            .catch( err => {console.log(err)})
+    }, [] );
     // function for sorting
     const sorting = (toSort, sortingBy, dateActive) => {
         let
