@@ -127,6 +127,8 @@ $buyButtonWidth: 102px;
                 }
 
                 img {
+                    max-width: 40px;
+                    max-height: 45px;
                     @include tablet {
                         max-width: 15.5px;
                         max-height: 21.35px;
@@ -201,6 +203,8 @@ $buyButtonWidth: 102px;
                 }
 
                 img {
+                    max-width: 40px;
+                    max-height: 45px;
                     @include tablet {
                         max-width: 15.5px;
                         max-height: 21.35px;

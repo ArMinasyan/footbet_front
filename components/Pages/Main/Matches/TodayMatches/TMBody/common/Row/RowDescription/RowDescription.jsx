@@ -41,7 +41,7 @@ RowDescription({
                         {date}
                     </span>
                     <span >
-                        {translate(gameState)}
+                        &nbsp;{translate(gameState)}
                     </span>
                 </div>
                 <div className={styles.teams}>

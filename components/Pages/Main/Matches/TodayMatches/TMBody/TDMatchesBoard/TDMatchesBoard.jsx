@@ -17,8 +17,6 @@ import { GET_MATCHES } from '../../../../../../../lib/request-destinations'
 
 export function TDMatchesBoard() {
 
-    
-
     const
         [ firstPage, setFirstPage ] = useState([]),
         [ secondPage, setSecondPage] = useState([]),
@@ -28,19 +26,36 @@ export function TDMatchesBoard() {
         [ matches, setMatches ] = useState( [] );
 
     useEffect( () => {
-        setFirstPage( matches.filter((el, i) => i < 4) );
-        setSecondPage( matches.filter((el, i) => i >= 4) );
+        upDateFirstPageItems( matches.filter((el, i) => i < 4) );
+        upDateSecondPageItems( matches.filter((el, i) => i >= 4) );
     }, [matches]);
 
     useEffect( () => {        
         request( GET_MATCHES, {}, { auth: true })
             .then( matches => {
-                setMatches( matches.data.data );
+                setMatches( matches.data.data.map( match => ({
+                    id: match.id,
+                    date: match.date,
+                    time: match.time,
+                    gameState: '.rowOne.gameState.started',
+                    teamOneName: ``,
+                    teamOneIcon: match.team1_img_path,
+                    teamTwoName: '',
+                    teamTwoIcon: match.team2_img_path,
+                    score: match.score,
+                    buyButtonName: '.rowOne.buyButton',
+                    coefficent: '',
+                    titleName: '.rowOne.title'
+                })));
             })
             .catch( err => {
                 console.log( err );
             })
     }, []);
+
+    useEffect( () => {
+        console.log( firstPageItems );
+    }, [firstPageItems]);
 
     function handleOnDragEndFirstPage(result) {
         if (!result.destination) return;
