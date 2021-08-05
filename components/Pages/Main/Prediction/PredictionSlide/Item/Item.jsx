@@ -7,6 +7,7 @@ import styles from './Item.module.scss'
 //components
 import { Timer } from './Timer/Timer'
 import { PredictionModal } from './PredictionModal/PredictionModal'
+import { useRouter } from 'next/dist/client/router'
 
 export function Item({
     teamOneName,
@@ -21,6 +22,7 @@ export function Item({
     ordinar,
     clickBuy
 }) {
+    const router = useRouter();
 
     const
         // translation consfigs
@@ -29,6 +31,10 @@ export function Item({
         translate = key => t(`${translationPath}${key}`),
         [showPrediction, setShowPrediction] = useState(false)
 
+    function goToPredictions() {
+        // setShowPrediction(!showPrediction);
+        router.push(`/prediction`);
+    }    
 
     return (
         <>
@@ -65,7 +71,7 @@ export function Item({
                             <div className={styles.prediction_button_container}>
                                 <div
                                     className={styles.prediction_button_content}
-                                    onClick={() => setShowPrediction(!showPrediction)}
+                                    onClick={() => goToPredictions()}
                                 >
                                     <p>{translate(predictionButtonName)}</p>
                                 </div>

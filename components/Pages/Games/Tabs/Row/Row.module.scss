@@ -77,6 +77,8 @@ $leftContentWidth: 651px;
                     flex-direction: column-reverse;
                 }
                 img {
+                    max-width: 40px;
+                    max-height: 45px;
                     @include tablet {
                         min-width: 60px;
                     }

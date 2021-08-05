@@ -10,7 +10,9 @@ export function GameInfo({ game }) {
         { t } = useTranslation('prediction'),
         translationPath = 'tabs.payments.',
         translate = key => t(`${translationPath}${key}`)
-    console.log(game);
+    if (!game)
+        return <p></p>;
+
     return (
         <div className={styles.container}>
             <div className={styles.content}>

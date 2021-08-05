@@ -28,7 +28,12 @@ $buyButtonHover: #a10b45;
         .top {
             width: 100%;
             position: relative;
-            @include flex-between();
+            
+            display: grid;
+            grid-template-columns: min-content 400px min-content;
+            align-items: center;
+            justify-content: center;
+
             @include tablet {
                 @include flex-evenly();
             }
@@ -67,7 +72,9 @@ $buyButtonHover: #a10b45;
                     }
                 }
             }
-            .timer_container {
+            .timer_container { 
+                margin: 0 10px;
+                text-align: center;
                 p {
                     @include arimo-font();
                     font-size: 21px;

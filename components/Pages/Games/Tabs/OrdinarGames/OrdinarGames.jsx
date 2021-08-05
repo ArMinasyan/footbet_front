@@ -2,13 +2,41 @@ import { Row } from '../Row/Row'
 import { TabHeader } from '../TabHeader/TabHeader';
 // styles 
 import styles from '../boardsStyle.module.scss'
-import { ordinar } from '/src/games_data/ordinar/ordinar';
 import { useRouter } from 'next/dist/client/router';
+import { useEffect, useState } from 'react';
+import { request } from '../../../../../lib/er.lib'
+import { GET_MATCHES_BY_TYPE } from '../../../../../lib/request-destinations';
 
 
 export function OrdinarGames() {
 
     const router = useRouter()
+    const [ ordinar, setOrdinar ] = useState([]);
+
+    useEffect(()=>{
+        request( GET_MATCHES_BY_TYPE(2),{}, {auth:true} )
+        .then( rsp => {
+            setOrdinar( rsp.data.data.map( item => {
+                return {
+                    id: item.id,
+                    teamOneName: '',
+                    teamOneIcon: item[`team1_img_path`],
+                    teamTwoName: '',
+                    teamTwoIcon: item[`team2_img_path`],
+                    prediction: {
+                        thereIs: true,
+                        totalBet: 'тб 1,5 / ',
+                        coefficent: 'коеф 3,5'
+                    },
+                    date: item.date,
+                    time: item.time,
+                    coefficent: item.factor,
+                    price: item.price + ' руб.'
+                }
+            }))
+        })
+        .catch( error => {})
+    }, []);
 
     return (
         <div>
