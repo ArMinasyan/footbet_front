@@ -14,29 +14,52 @@ import { Sorting } from './Sorting/Sorting'
 import styles from './Testimonials.module.scss'
 import { request } from '../../../../lib/er.lib'
 import { GET_FEEDBACK } from '../../../../lib/request-destinations'
+import { useSelector } from 'react-redux'
+import { getMatchId } from '../../../../redux/features/matchSlice'
+
+import avatar from '/public/images/main/feedbacks/avatar.png'
 
 export function Testimonials({
     page,
     locationInPage,
     textPathName
 }) {    
-
-    const
-        { t } = useTranslation(`home`),
-        translationPath = 'testimonials.sorting.',
-        translate = (key) => t(`${translationPath}${key}`)
+    const matchId = useSelector(getMatchId);
     const
         // states
         [feedBacks, setFeedBacks] = useState([]),
         [dateActive, setDateActive] = useState(true)
 
-    useEffect( ()=>{
-        request( GET_FEEDBACK )
-            .then( predictions => {
-                console.log( predictions.data.data );
-            })
-            .catch( err => {console.log(err)})
-    }, [] );
+    useEffect(()=>{
+        if ( matchId !== null ) {
+            request( GET_FEEDBACK(matchId) )
+                .then( predictions => {
+                    setFeedBacks(
+                        predictions.data.data.map( feedBack => ({                            
+                            avatar: avatar.src,
+                            nikName: "Lorem ipsum",
+                            rateing: feedBack.stars,
+                            description: feedBack.comment,
+                            date: { 
+                                renderFormat: "13.07.2021",
+                                sortFormat: new Date("2021-07-13")
+                            },
+                            likes: +feedBack.likeCount,
+                            disLikes: +feedBack.dislikeCount
+                        }))
+
+                    );
+                })
+                .catch( err => {console.log(err)})
+        }
+    },[matchId])
+
+    const
+        { t } = useTranslation(`home`),
+        translationPath = 'testimonials.sorting.',
+        translate = (key) => t(`${translationPath}${key}`)
+
+        
     // function for sorting
     const sorting = (toSort, sortingBy, dateActive) => {
         let
@@ -99,10 +122,9 @@ export function Testimonials({
                             className={styles.carousel}
                         >
                             {
-                                feedBacks.map(page => (
+                                feedBacks.map(el => (
                                     <div style={{ width: '100%' }} key={Math.random()}>
                                         {
-                                            page.map(el => (
                                                 <FeedBack
                                                     avatar={el.avatar}
                                                     nikName={el.nikName}
@@ -114,7 +136,6 @@ export function Testimonials({
                                                     key={Math.random()}
                                                     reactionsForTesting={reactions}
                                                 />
-                                            ))
                                         }
                                     </div>
                                 ))

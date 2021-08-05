@@ -18,10 +18,12 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import userReducer from "./features/userSlice";
+import matchReducer from "./features/matchSlice";
 
 export default configureStore({
     reducer: {
-        user: userReducer
+        user: userReducer,
+        match: matchReducer
     }
 })
 

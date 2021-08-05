@@ -10,12 +10,16 @@ import styles from './PrdeictionSlide.module.scss'
 // images, icons
 import predictionBackground from '/public/images/main/prediction/predBack.png'
 import { slide_data } from '../../../../../src/games_data/predictions/slide'
+import { useDispatch } from 'react-redux'
 import { request } from '../../../../../lib/er.lib'
 import { GET_PREDICTIONS } from '../../../../../lib/request-destinations'
+import { setMatchId } from '../../../../../redux/features/matchSlice'
 
 export function PrdeictionSlide() {
 
     const [ slide_data, setSlideData ] = useState([]);
+    const [ currentMatchId, setCurrentMatchId ] = useState(null);
+    const dispatch = useDispatch();
 
     useEffect( ()=> {
         request( GET_PREDICTIONS, {}, { auth: true } )
@@ -24,9 +28,9 @@ export function PrdeictionSlide() {
                 setSlideData( rsp.data.data.map( item => {
                     return {
                         id: item.id,
-                        teamOneName: 'Атлетико',
+                        teamOneName: '',
                         teamOneIcon: item[`team1_img_path`],
-                        teamTwoName: 'Атлетик',
+                        teamTwoName: '',
                         teamTwoIcon: item[`team2_img_path`],
                         prediction: {
                             thereIs: true,
@@ -44,9 +48,19 @@ export function PrdeictionSlide() {
                         price: item.price + ' руб.'
                     }
                 }))
+
+                if ( rsp.data?.data.length > 0 ) {
+                    setCurrentMatchId(rsp.data.data[0].id);
+                }
             })
             .catch( error => {})
     }, [] );
+
+    useEffect( () => {
+        if ( currentMatchId !== null ) {
+            dispatch(setMatchId(currentMatchId));
+        } 
+    }, [currentMatchId ])
 
     const
         style = {
@@ -63,6 +77,10 @@ export function PrdeictionSlide() {
 
     time.setSeconds(time.getSeconds() + 10600);
 
+    function slideChange(p) {
+        setCurrentMatchId( p?.item?.id );
+    }
+
     return (
         <div
             className={styles.container}
@@ -72,11 +90,12 @@ export function PrdeictionSlide() {
                 pagination={false}
                 renderArrow={Arrow}
                 breakPoints={breakpoints}
-
+                onChange={slideChange}
             >
                 {
                     slide_data.map(el => (
                         <Item
+                            id={el.id}
                             teamOneName={el.teamOneName}
                             teamTwoName={el.teamTwoName}
                             teamOneIcon={el.teamOneIcon}
