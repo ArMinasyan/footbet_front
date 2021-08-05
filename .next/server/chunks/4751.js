@@ -99,7 +99,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./lib/constants.js
-const host = "http://localhost:1998/api";
+const host = "https://www.footbet24.com/api";
 ;// CONCATENATED MODULE: ./lib/request-destinations.js
 
 const AUTH_URL = host + `/auth`;
