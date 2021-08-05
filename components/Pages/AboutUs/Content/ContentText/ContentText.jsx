@@ -37,15 +37,6 @@ export function ContentText() {
                         </p>
                         <br/><br/>
                         <p className={styles.paragraph_text}>
-                            Цены для игр
-                            <ol>
-                                <li>Ординары - 500 рублей </li>
-                                <li>Экспрессы - 1500 рублей </li>
-                                <li>Беспроигрышная Стратегия - 100.000 рублей   </li>
-                            </ol>
-                        </p>
-                        <br/><br/>
-                        <p className={styles.paragraph_text}>
                             Как происходит оплата и покупка и что нужно для этого сделать. <br />
                             Для того чтобы купить игру или прогноз нужно:
                             <ol>
