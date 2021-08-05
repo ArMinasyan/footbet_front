@@ -8,6 +8,7 @@ import styles from './SocialMediaIcons.module.scss'
 // components
 import ReactFacebookLogin from 'react-facebook-login'
 import GoogleLogin from 'react-google-login'
+import TwitterLogin from "react-twitter-login";
 import { useEffect } from 'react'
 
 const icons = [
@@ -34,6 +35,8 @@ const responseGoogle = (response) => {
     console.log(response);
 }
 
+const TWITTER_CONSUMER_KEY = "";
+const TWITTER_CONSUMER_SECRET = "";
 
 export function SocialMediaIcons() {
 
@@ -44,8 +47,8 @@ export function SocialMediaIcons() {
     
     function onSocialMediaBtnClick(i) {
         if (i === 0) {
-            const
-                facebookLoginBtn = document.querySelector(`.facebook-login-btn`)
+            const facebookLoginBtn = document.querySelector(`.facebook-login-btn`);
+            console.log( facebookLoginBtn );
             if (facebookLoginBtn)
                 facebookLoginBtn.click();
         }
@@ -68,6 +71,13 @@ export function SocialMediaIcons() {
                 }
             });
         }
+        else if ( i === 3 ) {
+
+        }
+    }
+
+    const twitterAuthHandler = ( err, data ) => {
+        console.log( err, data );
     }
 
     
@@ -95,7 +105,9 @@ export function SocialMediaIcons() {
                                                     appId="118863770361683"
                                                     fields="name,email,picture"
                                                     callback={responseFacebook} />
-                                            ),
+                                            )
+                                        }
+                                        {
                                             (i === 1) && (
                                                 <GoogleLogin
                                                     clientId="1089618047943-r91su9qkc0c9npo1tfoff3sp8421bt5g.apps.googleusercontent.com"
@@ -110,8 +122,14 @@ export function SocialMediaIcons() {
                                                     onSuccess={responseGoogle}
                                                     onFailure={responseGoogle}
                                                 />
-                                            )                                       
-                                            
+                                            ) 
+                                        }
+                                        {                                            
+                                            <TwitterLogin
+                                                authCallback={twitterAuthHandler}
+                                                consumerKey={TWITTER_CONSUMER_KEY}
+                                                consumerSecret={TWITTER_CONSUMER_SECRET}
+                                            />
                                         }
                                     </div>
                                 </a>

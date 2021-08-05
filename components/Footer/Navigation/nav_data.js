@@ -39,6 +39,10 @@ export const nav_data = [
         {
             link:'/',
             name: 'contacts'
+        },
+        {
+            link:'/privacy-policy',
+            name: 'privacy-policy'
         }
     ],
 ]

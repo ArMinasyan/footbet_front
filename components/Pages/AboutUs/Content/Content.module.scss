@@ -15,7 +15,7 @@
     }
     .content{
         display: grid;
-        grid-template-columns: 1fr 1.89fr;
+        grid-template-columns: max-content auto;
         width: get-vw(1663px);
         max-height: 1203px;
 

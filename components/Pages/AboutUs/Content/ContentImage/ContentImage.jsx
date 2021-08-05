@@ -1,13 +1,15 @@
 // styles
 import styles from './ContentImage.module.scss'
 // icons 
-import footballerIcon from '/public/images/aboutUs/footballer.png'
+import logo from '/public/images/header/logo.svg'
 
 export function ContentImage() {
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-                <img src={footballerIcon.src} alt="" />
+                <div className={styles.imageContainer}>
+                    <img src={logo.src} alt="" />
+                </div>
             </div>
         </div>
     )
