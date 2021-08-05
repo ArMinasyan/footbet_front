@@ -1,13 +1,13 @@
 {
-    "title": "Личный кабинет",
+    "title": "Անձնական էջ",
     "board": {
-        "PGButton": "Купленные игры",
+        "PGButton": "Գնված խաղեր",
         "headers": {
-            "gamesHistory": "История игр",
-            "prediction": "прогноз",
-            "date": "дата",
-            "score": "счет",
-            "price": "цена"
+            "gamesHistory": "Խաղերի պատմություն",
+            "prediction": "Կանխատեսում",
+            "date": "Ամսաթիվ",
+            "score": "Հաշիվ",
+            "price": "Գին"
         }
 
     }
