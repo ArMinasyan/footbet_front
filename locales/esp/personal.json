@@ -1,0 +1,14 @@
+{
+    "title": "Cuenta personal",
+    "board": {
+        "PGButton": "Juegos comprados",
+        "headers": {
+            "gamesHistory": "Historia del juego",
+            "prediction": "Apuesta",
+            "date": "Fecha",
+            "score": "Cuenta",
+            "price": "Precio"
+        }
+
+    }
+}

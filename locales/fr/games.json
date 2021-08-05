@@ -1,0 +1,20 @@
+{
+  "header": {
+    "title": "Jeux",
+    "barButtons": {
+      "express": "Express",
+      "ordinar": "Ordinaire",
+      "bestStrategy": "Stratégie gagnant-gagnant"
+    }
+  },
+  "tabs": {
+    "header": {
+      "prediction": "Prédictions",
+      "date": "Date",
+      "time": "Temps",
+      "coeficent": "coef.",
+      "price": "Le prix",
+      "gamesHistory": "Histoire des jeux"
+    }
+  }
+}

@@ -1,86 +1,86 @@
 {
     "news": {
-        "title": "Նորություններ",
+        "title": "Novedad",
         "sldes": {}
     },
     "matches": {
-        "title": "Խաղեր",
+        "title": "Partidos",
         "buttons": {
-            "TodayMatches": "Օրվա խաղեր",
-            "GameRules": "Խաղի կանոններ"
+            "TodayMatches": "Partidos principales",
+            "GameRules": "Leyes del juego"
         },
         "TM": {
-            "headerTitle": "Արդյունքներ",
+            "headerTitle": "Resultados",
             "headerButtons": {
-                "yesterday": "Երեկ",
-                "today": "Այսօր",
-                "tomorrow": "Վաղը"
+                "yesterday": "Ayer",
+                "today": "Hoy",
+                "tomorrow": "Mañana"
             },
             "today": {
                 "rowOne": {
                     "title": "Испания",
                     "gameState": {
-                        "dontStarted": "Չի սկսվել",
-                        "started": "Սկսվել է"
+                        "dontStarted": "No Comenzó",
+                        "started": "Comence"
                     },
                     "teamOne": "Атлетико",
                     "teamTwo": "Атлетико",
-                    "buyButton": "Գնել"
+                    "buyButton": "Comprar"
                 },
                 "rowTwo": {
                     "title": "Испания",
                     "gameState": {
-                        "dontStarted": "Չի սկսվել",
-                        "started": "Սկսվել է"
+                        "dontStarted": "No Comenzó",
+                        "started": "Comence"
                     },
                     "teamOne": "Барселона",
                     "teamTwo": "ПСЖ",
-                    "buyButton": "Գնել"
+                    "buyButton": "Comprar"
                 },
                 "rowThree": {
                     "title": "Испания",
                     "gameState": {
-                        "dontStarted": "Չի սկսվել",
-                        "started": "Սկսվել է"
+                        "dontStarted": "No Comenzó",
+                        "started": "Comence"
                     },
                     "teamOne": "Марсель",
                     "teamTwo": "Атлетик",
-                    "buyButton": "Գնել"
+                    "buyButton": "Comprar"
                 },
                 "rowFore": {
                     "title": "Испания",
                     "gameState": {
-                        "dontStarted": "Չի սկսվել",
-                        "started": "Սկսվել է"
+                        "dontStarted": "No Comenzó",
+                        "started": "Comence"
                     },
                     "teamOne": "Атлетик",
                     "teamTwo": "Атлетик",
-                    "buyButton": "Գնել"
+                    "buyButton": "Comprar"
                 }
             }
         }
     },
     "prediction": {
-        "title": "Կանխատեսումներ",
+        "title": "Apuestas",
         "slide": {
             "firstSlide": {
                 "teamOne": "Барселона",
                 "teamTwo": "ПСЖ"
             },
-            "pred_button": "Կանխատեսում",
-            "buy_button": "Գնել"
+            "pred_button": "Apuesta",
+            "buy_button": "Comprar"
         }
     },
     "testimonials": {
-        "title": "Մեկնաբանություններ",
+        "title": "Comentarios",
         "sorting": {
-            "sort": "Տեսակավորել",
-            "byDate": "ըստ ամսաթվի",
-            "byRate": "ըստ գնահատականի"
+            "sort": "Clasificar",
+            "byDate": "por fecha",
+            "byRate": "Por evaluación"
         },
         "textarea": {
-            "placeHolder": "Թողնել մեկնաբանություն...",
-            "sendButton": "Ուղարկել"
+            "placeHolder": "Dejar comentarios...",
+            "sendButton": "Enviable"
         }
     }
 }

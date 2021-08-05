@@ -34,7 +34,7 @@ export const languages =
             icon: espFlag.src,
         },
         {
-            lang: "frc",
+            lang: "fr",
             contentOnTitle: 'frc.onTitle',
             contentOnDrop: 'frc.onDrop',
             icon: frcFlag.src,
