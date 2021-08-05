@@ -8,26 +8,26 @@
     "tabs": {
         "header": {
             "prediction": "prognos",
-            "type": "տեսակ",
-            "date": "ամսաթիվ",
-            "time": "ժամանակ",
-            "coeficent": "գործ.",
-            "price": "գին",
-            "gamesHistory": "Խաղերի պատմություն"
+            "type": "eine Art",
+            "date": "das Datum",
+            "time": "Zeit",
+            "coeficent": "coef.",
+            "price": "Preis",
+            "gamesHistory": "Spielverlauf"
         },
         "payments": {
-            "coefficent": "Գործակից",
-            "gameStartingDate": "Իրադարձության մեկնարկի ամսաթիվ / ժամ",
-            "bankCard": "Բանկային քարտ",
-            "choosePaySys": "Ընտրել վճարային համակարգ",
+            "coefficent": "Koeffizient",
+            "gameStartingDate": "Datum / Uhrzeit des Veranstaltungsbeginns",
+            "bankCard": "Bankkarte",
+            "choosePaySys": "wähle ein Zahlungssystem",
             "cardForm": {
-                "fullName": "անուն, ազգանուն",
-                "cardNumber": "քարտի համար",
-                "codeCVV": "կոդ CVV",
-                "activeUntill": "Վավեր է մինչև",
-                "success": "Հաստատել",
-                "thanks": "Շնորհալություն!",
-                "pending": "Վճարումը չի հաջողվել"
+                "fullName": "Vorname Nachname",
+                "cardNumber": "Kartennummer",
+                "codeCVV": "Code CVV",
+                "activeUntill": "Gültig bis",
+                "success": "Bestätigen Sie",
+                "thanks": "Danke!",
+                "pending": "Zahlung konnte nicht reproduziert werden"
             }
         }
     }

@@ -5,15 +5,15 @@
     "tab": {
         "header": {
             "prediction": "Prognos",
-            "date": "datum",
-            "time": "ժամանակ",
-            "score": "հաշիվ",
-            "gamesHistory": "Խաղերի պատմություն"
+            "date": "das Datum",
+            "time": "Zeit",
+            "score": "prüfen",
+            "gamesHistory": "Spielverluf"
         },
         "wallpers": {
-            "win": "Հաղթանակ",
-            "lose": "Պարտություն",
-            "return": "Վերադարձ",
+            "win": "Sieg",
+            "lose": "Verlust",
+            "return": "Zurückkehren",
             "prediction": "Prognos"
         }
     }

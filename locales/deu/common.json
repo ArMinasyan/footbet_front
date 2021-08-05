@@ -10,27 +10,27 @@
     "login": "Hereinkommen",
     "language": "Rus.",
     "loginModal": {
-      "title": "Լիազորություն / Թույլտվություն",
-      "resPassword": "Մոռացե՞լ եք գաղտնաբառը",
+      "title": "Genehmigung",
+      "resPassword": "Mot de passe oublié?",
       "submit": "Hereinkommen",
-      "or": "կամ",
-      "register": "Գրանցվել"
+      "or": "oder",
+      "register": "Jetzt registrieren"
     },
     "resetPasswordModal": {
-      "title": "Գաղտնաբառի վերականգնում",
+      "title": "Passwort Wiederherstellung",
       "send": "Senden"
     },
     "getEmailCodeModal": {
-      "title": "Գաղտնաբառի վերականգնում",
-      "description": "Կոդ",
+      "title": "Passwort Wiederherstellung",
+      "description": "Code",
       "send": "Senden"
     },
     "newPasswordModal": {
-      "title": "Նոր գաղտնաբառ",
-      "success": "Հաստատել"
+      "title": "Neues Passwort",
+      "success": "Bestätigen Sie"
     },
     "successModal": {
-      "title": "Գաղտնաբառը վերականգնված է"
+      "title": "Passwort wiederhergestellt"
     },
     "navBar": {
       "main": "Hauptsaechliche",
@@ -88,22 +88,22 @@
     },
     "social_media_paymants": {
       "SM": {
-        "title": "Մենք սոց․ կայքերում"
+        "title": "Wir sind sozial Netzwerke"
       },
       "PS": {
-        "title": "Վճարային համակարգ"
+        "title": "Zahlungs systeme"
       }
     }
   },
   "registration": {
     "title": "Eintragung",
     "inputPlaceHolders": {
-      "fullName": "Օգտագործողի անուն / Մուտքանուն",
-      "birthDate": "Ծննդյան թիվ",
-      "email": "Էլ․ փոստի հասցե",
-      "phone": "Հեռախոսահամար",
-      "password": "Գաղտնաբառ",
-      "buttonTitle": "Գրանցվել"
+      "fullName": "Benutzername",
+      "birthDate": "Geburtsdatum",
+      "email": "Mail Adresse",
+      "phone": "Telefonnummer",
+      "password": "Passwort",
+      "buttonTitle": "Jetzt registrieren"
     }
   }
 }

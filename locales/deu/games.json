@@ -2,19 +2,19 @@
   "header": {
     "title": "Die Spiele",
     "barButtons": {
-      "express": "էքսպրես",
-      "ordinar": "Սովորական",
-      "bestStrategy": "Անպարտելի ռազմավարություն (ստրատեգիա)"
+      "express": "Express",
+      "ordinar": "Ordinar",
+      "bestStrategy": "Win-Win-Strategie"
     }
   },
   "tabs": {
     "header": {
-      "prediction": "Կանխատեսում",
-      "date": "Ամսաթիվ",
-      "time": "Ժամանակ",
-      "coeficent": "գործ․",
-      "price": "գին",
-      "gamesHistory": "Խաղերի պատմություն"
+      "prediction": "Prognos",
+      "date": "das Datum",
+      "time": "Zeit",
+      "coeficent": "coef․",
+      "price": "Preis",
+      "gamesHistory": "Spielverlauf"
     }
   }
 }
