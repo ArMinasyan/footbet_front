@@ -1,9 +1,9 @@
 {
   "commons": {
-    "send": "Ուղարկել",
-    "buy": "Գնել",
+    "send": "Senden",
+    "buy": "Kaufen",
     "logOut": "Ելք",
-    "placeHolder": "Թողնել մեկնաբանություն․․․"
+    "placeHolder": "Feedback geben․․․"
   },
   "header": {
     "register": "Eintragung",
@@ -12,18 +12,18 @@
     "loginModal": {
       "title": "Լիազորություն / Թույլտվություն",
       "resPassword": "Մոռացե՞լ եք գաղտնաբառը",
-      "submit": "Մուտք",
+      "submit": "Hereinkommen",
       "or": "կամ",
       "register": "Գրանցվել"
     },
     "resetPasswordModal": {
       "title": "Գաղտնաբառի վերականգնում",
-      "send": "Ուղարկել"
+      "send": "Senden"
     },
     "getEmailCodeModal": {
       "title": "Գաղտնաբառի վերականգնում",
       "description": "Կոդ",
-      "send": "Ուղարկել"
+      "send": "Senden"
     },
     "newPasswordModal": {
       "title": "Նոր գաղտնաբառ",
