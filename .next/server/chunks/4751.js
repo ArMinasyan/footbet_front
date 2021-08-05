@@ -102,7 +102,7 @@ __webpack_require__.d(__webpack_exports__, {
 const host = "https://www.footbet24.com/api";
 ;// CONCATENATED MODULE: ./lib/request-destinations.js
 
-const AUTH_URL = host + `/auth`;
+const AUTH_URL = host + `auth`;
 const REGISTER = {
   url: AUTH_URL + '/registration',
   method: 'post'
@@ -124,27 +124,27 @@ const SET_NEW_PASSWORD = {
   method: 'put'
 };
 const GET_NEWS = {
-  url: host + `/admin/news`,
+  url: host + `admin/news`,
   method: `get`
 };
 const GET_MATCHES = {
-  url: host + `/admin/match-of-the-day`,
+  url: host + `admin/match-of-the-day`,
   method: `get`
 };
 const GET_MATCHES_OF_NEXT_DAY = {
-  url: host + `/admin/match-of-the-day?type=next_day`,
+  url: host + `admin/match-of-the-day?type=next_day`,
   method: `get`
 };
 const GET_PREDICTIONS = {
-  url: host + `/admin/prediction`,
+  url: host + `admin/prediction`,
   method: `get`
 };
 const GET_FEEDBACK = id => ({
-  url: host + `/feedback/${id}?sort_by=created_at&order_by=desc`,
+  url: host + `feedback/${id}?sort_by=created_at&order_by=desc`,
   method: `get`
 });
 const GET_MATCHES_BY_TYPE = type => ({
-  url: host + `/admin/game?type=${type}`,
+  url: host + `admin/game?type=${type}`,
   method: `get`
 });
 
