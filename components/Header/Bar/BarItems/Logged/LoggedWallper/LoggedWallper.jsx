@@ -1,5 +1,8 @@
 // components
 import Link from 'next/link'
+import { useEffect,useState } from 'react'
+import { useSelector } from 'react-redux'
+import { selectUser } from '../../../../../../redux/features/userSlice'
 // styles
 import styles from './LoggedWallper.module.scss'
 // icons
@@ -12,14 +15,22 @@ export function LoggedWallper({
     fullName,
     click
 }) {
+    const data = useSelector(selectUser);
+    const [ photo, setPhoto ] = useState(data.photo)
+    const [ fullname, setFullname ] = useState(data.username)
+    useEffect(()=>{
+        setPhoto( data.photo )
+        setFullname( data.username )
+    },[data])
+
     return (
         <div className={styles.container}>
             <div className={styles.content}>
                 <div className={styles.user_photo}>
                     <Link href='/personal'>
                         <img
-                            src={img ? img : userDefaultIcon.src}
-                            alt={`${fullName} icon`} />
+                            src={photo || userDefaultIcon.src}
+                            alt={`${fullname} icon`} />
                     </Link>
                 </div>
                 <div
@@ -27,7 +38,7 @@ export function LoggedWallper({
                     onClick={click}
                 >
                     <span className={styles.fullname}>
-                        {fullName}
+                        {fullname}
                     </span>
                     <span style={{
                         color: 'white',

@@ -54,13 +54,11 @@ export function BarItems({
         translationPath = 'header.lang.',
         translate = (key) => t(`${translationPath}${key}`)
 
-        const user_data = useSelector(selectUser);
-        console.log(user_data);
     return (
         <>
             {
                 <div className={`${styles.bar_item_container} ${bar_items} ${router.pathname !== '/' ? styles.for_mobile : null}`}>
-                    {userLogged ? <Logged data={user_data} /> :
+                    {userLogged ? <Logged /> :
                         <div className={styles.auth_container}>
                             <div className={styles.auth_buttons}>
                                 <div className={styles.sign_up_button}>
