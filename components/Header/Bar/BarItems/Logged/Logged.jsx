@@ -20,7 +20,7 @@ export function Logged({
                 {!showUserDrop ?
                     <LoggedWallper
                         img={data.photo}
-                        fullName={data.fullName}
+                        fullName={data.username}
                         click={() => setShowUserDrop(true)}
                     /> :
                     <LoggedDrop

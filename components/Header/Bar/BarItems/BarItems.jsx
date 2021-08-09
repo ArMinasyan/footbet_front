@@ -1,7 +1,7 @@
 // hooks and helpers
 import { languages } from './LanguageDropConfigs/lang-configs'
 import { useState, useEffect } from 'react'
-import { user_data } from '/src/user/user'
+// import { user_data } from '/src/user/user'
 import { useRouter } from 'next/dist/client/router'
 // translation 
 import useTranslation from 'next-translate/useTranslation'
@@ -14,6 +14,8 @@ import { Logged } from './Logged/Logged'
 // icons
 import register_icon from '/public/images/header/register.png'
 import login_icon from '/public/images/header/login.png'
+import { useSelector } from 'react-redux'
+import { selectUser } from '../../../../redux/features/userSlice'
 
 
 
@@ -52,7 +54,8 @@ export function BarItems({
         translationPath = 'header.lang.',
         translate = (key) => t(`${translationPath}${key}`)
 
-    
+        const user_data = useSelector(selectUser);
+        console.log(user_data);
     return (
         <>
             {
