@@ -2,6 +2,7 @@
 import { useRouter } from 'next/dist/client/router';
 import { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
+import userDefaultIcon from '/public/images/common/userDefault.png'
 // translation 
 import useTranslation from 'next-translate/useTranslation'
 // componetns
@@ -42,6 +43,10 @@ export function LoggedDrop({ onClose, user }) {
     }    
 
 
+    function goToPersonal () {
+        router.push(`/personal`);
+    }
+
     return (
         <div
             className={styles.container}
@@ -49,15 +54,15 @@ export function LoggedDrop({ onClose, user }) {
         >
             <div className={styles.content}>
                 <div className={styles.user_photo_name}>
-                    <span>
-                        <Link href='/personal'>
-                            <img src={user.photo} alt="" />
-                        </Link>
+                    <span onClick={goToPersonal}>
+                        {/* <Link href='/personal'> */}
+                            <img src={user.photo ?? userDefaultIcon.src} alt="" />
+                        {/* </Link> */}
                     </span>
-                    <span>
-                        <Link href='/personal'>
-                            {user.fullName}
-                        </Link>
+                    <span onClick={goToPersonal}>
+                        {/* <Link href='/personal'> */}
+                            {user.username}
+                        {/* </Link> */}
                     </span>
                 </div>
                 <div className={styles.user_tel}>
