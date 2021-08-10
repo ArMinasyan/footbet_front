@@ -2,7 +2,16 @@ exports.id = 1276;
 exports.ids = [1276];
 exports.modules = {
 
-/***/ 7422:
+/***/ 1272:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+exports.__esModule=true;exports.normalizePathSep=normalizePathSep;exports.denormalizePagePath=denormalizePagePath;function normalizePathSep(path){return path.replace(/\\/g,'/');}function denormalizePagePath(page){page=normalizePathSep(page);if(page.startsWith('/index/')){page=page.slice(6);}else if(page==='/index'){page='/';}return page;}
+//# sourceMappingURL=denormalize-page-path.js.map
+
+/***/ }),
+
+/***/ 9048:
 /***/ (function(module) {
 
 function _interopRequireDefault(obj) {
@@ -15,10 +24,10 @@ module.exports = _interopRequireDefault;
 
 /***/ }),
 
-/***/ 5141:
+/***/ 1344:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-var _typeof = __webpack_require__(1301);
+var _typeof = __webpack_require__(704);
 
 function _getRequireWildcardCache() {
   if (typeof WeakMap !== "function") return null;
@@ -76,7 +85,7 @@ module.exports = _interopRequireWildcard;
 
 /***/ }),
 
-/***/ 1301:
+/***/ 704:
 /***/ (function(module) {
 
 function _typeof(obj) {
@@ -96,15 +105,6 @@ function _typeof(obj) {
 }
 
 module.exports = _typeof;
-
-/***/ }),
-
-/***/ 1272:
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-exports.__esModule=true;exports.normalizePathSep=normalizePathSep;exports.denormalizePagePath=denormalizePagePath;function normalizePathSep(path){return path.replace(/\\/g,'/');}function denormalizePagePath(page){page=normalizePathSep(page);if(page.startsWith('/index/')){page=page.slice(6);}else if(page==='/index'){page='/';}return page;}
-//# sourceMappingURL=denormalize-page-path.js.map
 
 /***/ }),
 
@@ -172,7 +172,7 @@ exports.cancelIdleCallback = cancelIdleCallback;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(7422);
+var _interopRequireDefault = __webpack_require__(9048);
 
 exports.__esModule = true;
 exports.markAssetError = markAssetError;
@@ -457,9 +457,9 @@ exports.default = _default;
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__(5141);
+var _interopRequireWildcard = __webpack_require__(1344);
 
-var _interopRequireDefault = __webpack_require__(7422);
+var _interopRequireDefault = __webpack_require__(9048);
 
 exports.__esModule = true;
 exports.useRouter = useRouter;
@@ -609,7 +609,7 @@ function makePublicRouterInstance(router) {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(7422);
+var _interopRequireDefault = __webpack_require__(9048);
 
 exports.__esModule = true;
 exports.default = withRouter;
