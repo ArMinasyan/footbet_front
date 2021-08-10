@@ -522,7 +522,7 @@ __webpack_require__.d(__webpack_exports__, {
 const host = "https://www.footbet24.com/api/";
 ;// CONCATENATED MODULE: ./lib/request-destinations.js
 
-const AUTH_URL = host + `auth`;
+const AUTH_URL = host + `auth/`;
 const ACCOUNT_URL = host + `account`;
 const REGISTER = {
   url: AUTH_URL + 'registration',
