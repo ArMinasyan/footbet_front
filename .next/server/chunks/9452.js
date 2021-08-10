@@ -523,7 +523,7 @@ const host = "https://www.footbet24.com/api/";
 ;// CONCATENATED MODULE: ./lib/request-destinations.js
 
 const AUTH_URL = host + `auth/`;
-const ACCOUNT_URL = host + `account`;
+const ACCOUNT_URL = host + `account/`;
 const REGISTER = {
   url: AUTH_URL + 'registration',
   method: 'post'
