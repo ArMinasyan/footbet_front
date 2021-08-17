@@ -525,35 +525,35 @@ const host = "https://www.footbet24.com/api";
 const AUTH_URL = host + `auth`;
 const ACCOUNT_URL = host + `account`;
 const REGISTER = {
-  url: AUTH_URL + '/registration',
+  url: AUTH_URL + 'registration',
   method: 'post'
 };
 const LOGIN = {
-  url: AUTH_URL + '/login',
+  url: AUTH_URL + 'login',
   method: 'post'
 };
 const GET_ACCOUNT_INFO = {
-  url: ACCOUNT_URL + '/info',
+  url: ACCOUNT_URL + 'info',
   method: 'get'
 };
 const CHANGE_ACCOUNT_INFO = {
-  url: ACCOUNT_URL + '/info',
+  url: ACCOUNT_URL + 'info',
   method: 'put'
 };
 const CHANGE_ACCOUNT_IMAGE = {
-  url: ACCOUNT_URL + '/profile-image',
+  url: ACCOUNT_URL + 'profile-image',
   method: 'post'
 };
 const START_RESET_PASSWORD = email => ({
-  url: AUTH_URL + `/password/reset?email=${email}`,
+  url: AUTH_URL + `password/reset?email=${email}`,
   method: 'post'
 });
 const VERIFY_PASSWORD_RESET = {
-  url: AUTH_URL + `/password/verify_code`,
+  url: AUTH_URL + `password/verify_code`,
   method: 'put'
 };
 const SET_NEW_PASSWORD = {
-  url: AUTH_URL + `/password/new_password `,
+  url: AUTH_URL + `password/new_password `,
   method: 'put'
 };
 const GET_NEWS = {
