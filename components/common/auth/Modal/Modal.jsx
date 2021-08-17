@@ -3,6 +3,18 @@ import styles from './Modal.module.scss'
 import { createPortal } from 'react-dom'
 
 
+const
+    handle_overflow_on_open = () => {
+        document.body.style.overflowY = 'scroll'
+        document.body.style.position = 'fixed'
+        document.body.style.width = '100%'
+    },
+    handle_overflow_on_close = () => {
+        document.body.style.overflowY = 'scroll'
+        document.body.style.position = 'static'
+        document.body.style.width = 'auto'
+    }
+
 export function Modal({
     onClose,
     // closeWithVectore = null,
@@ -15,36 +27,30 @@ export function Modal({
 
 
     const
-        [showModal, setShowModal] = useState(false),
-        [pageOverflow, setPageOverflow] = useState(showModal),
-        body = document.querySelector('body')
+        [showModal, setShowModal] = useState(false)
 
     useEffect(() => {
         setShowModal(true)
-        setPageOverflow(true)
         document.addEventListener("mousedown", handleClose);
-        
+
         return () => {
+            handle_overflow_on_close();
             document.removeEventListener("mousedown", handleClose);
-            body.style.overflow = 'visible'
         };
-    }, [])
+    }, [handleClose])
 
     const node = useRef()
-
-
 
     const handleClose = e => {
         if (node?.current?.contains(e.target)) {
             return;
         } else {
-            setPageOverflow(false)
             onClose()
         }
     },
         dinamicTop = window.scrollY
 
-    pageOverflow ? body.style.overflow = 'hidden' : body.style.overflow = 'visible'
+    showModal ? handle_overflow_on_open() : handle_overflow_on_close()
 
     const modal = (
         <div

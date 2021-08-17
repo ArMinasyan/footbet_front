@@ -1,7 +1,7 @@
 // hooks and helpers
 import { languages } from './LanguageDropConfigs/lang-configs'
 import { useState, useEffect } from 'react'
-import { user_data } from '/src/user/user'
+// import { user_data } from '/src/user/user'
 import { useRouter } from 'next/dist/client/router'
 // translation 
 import useTranslation from 'next-translate/useTranslation'
@@ -14,6 +14,8 @@ import { Logged } from './Logged/Logged'
 // icons
 import register_icon from '/public/images/header/register.png'
 import login_icon from '/public/images/header/login.png'
+import { useSelector } from 'react-redux'
+import { selectUser } from '../../../../redux/features/userSlice'
 
 
 
@@ -52,12 +54,11 @@ export function BarItems({
         translationPath = 'header.lang.',
         translate = (key) => t(`${translationPath}${key}`)
 
-    
     return (
         <>
             {
                 <div className={`${styles.bar_item_container} ${bar_items} ${router.pathname !== '/' ? styles.for_mobile : null}`}>
-                    {userLogged ? <Logged data={user_data} /> :
+                    {userLogged ? <Logged /> :
                         <div className={styles.auth_container}>
                             <div className={styles.auth_buttons}>
                                 <div className={styles.sign_up_button}>

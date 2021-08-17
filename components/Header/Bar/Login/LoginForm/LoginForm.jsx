@@ -14,7 +14,7 @@ import { ToRegister } from '../common/ToRegister'
 import styles from './LoginForm.module.scss'
 import { useDispatch } from 'react-redux'
 import { login } from '../../../../../redux/features/userSlice'
-import { LOGIN } from '../../../../../lib/request-destinations';
+import { GET_ACCOUNT_INFO, LOGIN } from '../../../../../lib/request-destinations';
 
 import { ToastContainer, toast } from 'react-toastify';
 import { useRouter } from 'next/dist/client/router';
@@ -52,8 +52,9 @@ export function LoginForm({ onModalClose, handleResetPassModal }) {
         // on form submit
         submit = async (data) => {
             try {
-                const user = (await request( LOGIN, data )).data?.data;
-                setCookie( `access-token`, user.token, 1 );
+                const { token } = (await request( LOGIN, data )).data?.data;
+                setCookie( `access-token`, token, 1 );
+                const user = ( await request( GET_ACCOUNT_INFO, {}, {auth: true} ) ).data?.data;
                 dispatch(login(user));
                 router.push(`/`);
             }

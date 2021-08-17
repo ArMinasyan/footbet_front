@@ -32,7 +32,6 @@ $contentWidth: 774px;
             display: none;
         }
         p {
-            @include center();
             @include arsenal-font();
             font-weight: bold;
             font-size: 19px;
@@ -40,6 +39,10 @@ $contentWidth: 774px;
             letter-spacing: 0.1em;
             font-variant: small-caps;
             color: rgba(0, 0, 0, 0.63);
+            text-align: center;
+            white-space: pre;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
     }
     .for_tablets {

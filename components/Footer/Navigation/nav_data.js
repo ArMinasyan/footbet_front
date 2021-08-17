@@ -37,10 +37,6 @@ export const nav_data = [
             name: 'feedbacks'
         },
         {
-            link:'/',
-            name: 'contacts'
-        },
-        {
             link:'/privacy-policy',
             name: 'privacy-policy'
         }

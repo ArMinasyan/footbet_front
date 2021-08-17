@@ -368,6 +368,11 @@ $returnColor: #b4ac00;
                     padding: 0;
                     padding-right: 2%;
                 }
+                span {
+                    white-space: pre;
+                    text-overflow: ellipsis;
+                    overflow: hidden
+                }
                 .win {
                     @include winWallper();
                 }

@@ -31,9 +31,6 @@ export function Details({ game }) {
                         {translate('bankCard')}
                     </p>
                 </div>
-                <div className={styles.paypall}>
-                    <img src={paypallIcon.src} alt="" />
-                </div>
             </div>
         </div>
     )

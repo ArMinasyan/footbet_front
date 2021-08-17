@@ -34,7 +34,11 @@ export default function ContactsModal({ onModalClose, opened = false }) {
                                         <img src={el.icon} alt="contact-icon" />
                                     </div>
                                     <div className={styles.text}>
-                                        <p>{el.text}</p>
+                                        <a href={el.url} target="_blank">
+                                            {
+                                                el.text
+                                            }
+                                        </a>
                                     </div>
                                 </div>
                             ))

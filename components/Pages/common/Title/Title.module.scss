@@ -10,6 +10,11 @@
         @include arimo-font();
         font-size: 40px;
         line-height: 46px;
+        text-align: center;
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        
         @include tablet {
             font-size: 25px;
             line-height: 29px;

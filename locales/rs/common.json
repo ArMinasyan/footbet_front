@@ -75,17 +75,17 @@
     }
   },
   "footer": {
-    "navigation":{
-        "prediction":"Прогнозы",
-        "games": "Игры",
-        "news": "Новости",
-        "aboutUs":"О нас",
-        "payment": "Оплата",
-        "matchStatistics": "Статистика матчей",
-        "register": "Регистрация",
-        "feedbacks": "Отзывы",
-        "contacts": "Контакты",
-        "privacy-policy": "Политика Конфидециальности"
+    "navigation": {
+      "prediction": "Прогнозы",
+      "games": "Игры",
+      "news": "Новости",
+      "aboutUs": "О нас",
+      "payment": "Оплата",
+      "matchStatistics": "Статистика матчей",
+      "register": "Регистрация",
+      "feedbacks": "Отзывы",
+      "contacts": "Контакты",
+      "privacy-policy": "Политика Конфидециальности"
     },
     "social_media_paymants": {
       "SM": {

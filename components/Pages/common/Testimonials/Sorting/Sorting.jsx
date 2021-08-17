@@ -1,5 +1,6 @@
+// hooks
+import useTranslation from 'next-translate/useTranslation'
 // styles
-import { useState } from 'react'
 import styles from './Sorting.module.scss'
 
 export function Sorting({
@@ -11,12 +12,17 @@ export function Sorting({
     dateActive
 }) {
 
+    const
+        { t } = useTranslation(`home`),
+        translationPath = 'testimonials.sorting.',
+        translate = (key) => t(`${translationPath}${key}`)
+
     return (
         <div className={styles.container}>
             <div className={styles.name}>
                 <span>
                     {
-                        sortingText
+                        translate(sortingText)
                     }
                 </span>
             </div>
@@ -25,7 +31,7 @@ export function Sorting({
                     className={`${styles.byDate} ${dateActive ? styles.active : null}`}
                     onClick={sortByDate}>
                     {
-                        dateSortingText
+                        translate(dateSortingText)
                     }
                 </p>
                 <p
@@ -33,7 +39,7 @@ export function Sorting({
                     className={!dateActive ? styles.active : null}
                 >
                     {
-                        rateSorting
+                        translate(rateSorting)
                     }
                 </p>
             </div>

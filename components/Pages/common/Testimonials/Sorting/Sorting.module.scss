@@ -37,7 +37,7 @@ $contentWidth: 492px;
             min-width: 120px;
         }
         p {
-            @include center();
+            text-align: center;
             width: 50%;
             @include arsenal-font();
             font-weight: bold;
@@ -45,6 +45,9 @@ $contentWidth: 492px;
             line-height: 28px;
             letter-spacing: 0.05em;
             cursor: pointer;
+            white-space: pre;
+            text-overflow: ellipsis;
+            overflow: hidden;
             @include noteBook {
                 font-size: 16px;
                 line-height: 20px;

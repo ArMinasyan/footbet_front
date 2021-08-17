@@ -23,24 +23,24 @@ export function Testimonials({
     page,
     locationInPage,
     textPathName
-}) {    
+}) {
     const matchId = useSelector(getMatchId);
     const
         // states
         [feedBacks, setFeedBacks] = useState([]),
         [dateActive, setDateActive] = useState(true)
 
-    useEffect(()=>{
-        if ( matchId !== null ) {
-            request( GET_FEEDBACK(matchId) )
-                .then( predictions => {
+    useEffect(() => {
+        if (matchId !== null) {
+            request(GET_FEEDBACK(matchId))
+                .then(predictions => {
                     setFeedBacks(
-                        predictions.data.data.map( feedBack => ({                            
+                        predictions.data.data.map(feedBack => ({
                             avatar: avatar.src,
                             nikName: "Lorem ipsum",
                             rateing: feedBack.stars,
                             description: feedBack.comment,
-                            date: { 
+                            date: {
                                 renderFormat: "13.07.2021",
                                 sortFormat: new Date("2021-07-13")
                             },
@@ -50,35 +50,31 @@ export function Testimonials({
 
                     );
                 })
-                .catch( err => {console.log(err)})
+                .catch(err => { console.log(err) })
         }
-    },[matchId])
+    }, [matchId])
 
-    const
-        { t } = useTranslation(`home`),
-        translationPath = 'testimonials.sorting.',
-        translate = (key) => t(`${translationPath}${key}`)
-
-        
     // function for sorting
     const sorting = (toSort, sortingBy, dateActive) => {
-        let
-            dataForSorting = toSort.reduce((ac, el) => ac.concat(el)),
-            sortedData = [],
-            sorted = []
+        if (toSort.length > 0) {
+            let
+                dataForSorting = toSort.reduce((ac, el) => ac.concat(el)),
+                sortedData = [],
+                sorted = []
 
-        if (sortingBy === "date") sorted = dataForSorting.sort((a, b) => (b.date.sortFormat - a.date.sortFormat))
-        else if (sortingBy === "rate") sorted = dataForSorting.sort((a, b) => (b.rateing - a.rateing))
+            if (sortingBy === "date") sorted = dataForSorting.sort((a, b) => (b.date.sortFormat - a.date.sortFormat))
+            else if (sortingBy === "rate") sorted = dataForSorting.sort((a, b) => (b.rateing - a.rateing))
 
-        for (let i = 1; i <= Math.ceil(dataForSorting.length / 3); i++) {
-            let sortedItems = []
-            sorted.forEach((el, x) => {
-                (x < i * 3) && (x >= ((i * 3) - 3)) && sortedItems.push(el)
-            })
-            sortedData.push(sortedItems)
+            for (let i = 1; i <= Math.ceil(dataForSorting.length / 3); i++) {
+                let sortedItems = []
+                sorted.forEach((el, x) => {
+                    (x < i * 3) && (x >= ((i * 3) - 3)) && sortedItems.push(el)
+                })
+                sortedData.push(sortedItems)
+            }
+            setFeedBacks(sortedData)
+            setDateActive(dateActive)
         }
-        setFeedBacks(sortedData)
-        setDateActive(dateActive)
     }
     // Artificial reactions data 
     const reactions = [
@@ -107,9 +103,9 @@ export function Testimonials({
                     />
                     <div className={styles.feed_backs_container}>
                         <Sorting
-                            sortingText={translate("sort")}
-                            dateSortingText={translate("byDate")}
-                            rateSorting={translate("byRate")}
+                            sortingText={"sort"}
+                            dateSortingText={"byDate"}
+                            rateSorting={"byRate"}
                             sortByDate={() => { sorting(feedBacks, "date", true) }}
                             sortByRate={() => { sorting(feedBacks, "rate", false) }}
                             dateActive={dateActive}
@@ -125,17 +121,17 @@ export function Testimonials({
                                 feedBacks.map(el => (
                                     <div style={{ width: '100%' }} key={Math.random()}>
                                         {
-                                                <FeedBack
-                                                    avatar={el.avatar}
-                                                    nikName={el.nikName}
-                                                    rateing={el.rateing}
-                                                    description={el.description}
-                                                    date={el.date.renderFormat}
-                                                    likes={el.likes}
-                                                    disLikes={el.disLikes}
-                                                    key={Math.random()}
-                                                    reactionsForTesting={reactions}
-                                                />
+                                            <FeedBack
+                                                avatar={el.avatar}
+                                                nikName={el.nikName}
+                                                rateing={el.rateing}
+                                                description={el.description}
+                                                date={el.date.renderFormat}
+                                                likes={el.likes}
+                                                disLikes={el.disLikes}
+                                                key={Math.random()}
+                                                reactionsForTesting={reactions}
+                                            />
                                         }
                                     </div>
                                 ))

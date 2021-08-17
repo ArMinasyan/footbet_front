@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 1998",
     "lint": "next lint"
   },
   "dependencies": {
@@ -30,6 +30,7 @@
     "react-toastify": "^7.0.4",
     "react-twitter-login": "^1.4.0",
     "redux": "^4.1.0",
+    "redux-persist": "^6.0.0",
     "sass": "^1.35.1",
     "styled-components": "^5.3.0",
     "yup": "^0.32.9"
