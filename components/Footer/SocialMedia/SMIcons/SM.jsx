@@ -19,7 +19,7 @@ export function SM() {
             {
                 key: Math.random(),
                 src: phone.src,
-                url: "tel:+37498645457"
+                url: "tel:+34672314808"
             },
             {
                 key: Math.random(),
@@ -29,7 +29,7 @@ export function SM() {
             {
                 key: Math.random(),
                 src: watsup.src,
-                url: "https://api.whatsapp.com/send?phone=+37498645457"
+                url: "https://api.whatsapp.com/send?phone=+34672314808"
             },
             {
                 key: Math.random(),
@@ -39,12 +39,12 @@ export function SM() {
             {
                 key: Math.random(),
                 src: viber.src,
-                url: "viber://chat?number=+37498645457"
+                url: "viber://chat?number=+34672314808"
             },
             {
                 key: Math.random(),
                 src: telegram.src,
-                url: "https://telegram.me/ermaann",
+                url: "https://telegram.me/footbet24com",
                 lastElement: true
             },
         ]

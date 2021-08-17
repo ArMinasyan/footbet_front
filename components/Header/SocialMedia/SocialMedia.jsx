@@ -87,7 +87,7 @@ export function SocialMedia() {
     modal_contents = {
       phone: {
         text: "+34 672 314 808",
-        url: "tel:+37498645457",
+        url: "tel:+34672314808",
       },
       facebook: {
         text: "Facebook",
@@ -99,7 +99,7 @@ export function SocialMedia() {
       },
       watsup: {
         text: "+34 672 314 808",
-        url: "https://api.whatsapp.com/send?phone=+37498645457",
+        url: "https://api.whatsapp.com/send?phone=+34672314808",
       },
       instagram: {
         text: "Instagram",
@@ -107,7 +107,7 @@ export function SocialMedia() {
       },
       viber: {
         text: "+34 672 314 808",
-        url: "viber://chat?number=+37498645457",
+        url: "viber://chat?number=+34672314808",
       },
     };
   return (

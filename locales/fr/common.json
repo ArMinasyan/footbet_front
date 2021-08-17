@@ -85,7 +85,8 @@
             "register": "Enregistrement",
             "feedbacks": "Commentaires",
             "contacts": "Contacts",
-            "privacy-policy": "Politique de confidentialité"
+            "privacy-policy": "Politique de confidentialité",
+            "terms-of-use": "Conditions d'utilisation"
         },
         "social_media_paymants": {
             "SM": {
