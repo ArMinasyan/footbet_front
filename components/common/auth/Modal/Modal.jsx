@@ -56,7 +56,8 @@ export function Modal({
         <div
             className={`${styles.modalConteiner} ${containerStyles}`}
             style={{
-                top: dinamicTop + 'px'
+                top: '0px',
+                position: 'fixed !important'
             }}>
             <div
                 className={`${styles.modalContent} ${contentStyles}`}
