@@ -23,7 +23,7 @@ export function ExpressGames() {
                     teamTwoName: '',
                     teamTwoIcon: item[`team2_img_path`],
                     prediction: {
-                        thereIs: true,
+                        thereIs: false,
                         totalBet: 'тб 1,5 / ',
                         coefficent: 'коеф 3,5'
                     },

@@ -14,7 +14,7 @@ export const pred_slide_data = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: barcaIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -106,7 +106,7 @@ export const pred_slide_data = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },

@@ -8,6 +8,6 @@
     @return math.div($px * 100vw, $context);
 }
 
-@function get-vh($px, $context: 1080px) {
+@function get-vh($px, $context: 937px) {
     @return math.div($px * 100vh, $context);
 }
