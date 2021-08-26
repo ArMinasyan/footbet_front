@@ -23,7 +23,7 @@ export function Item({
     clickBuy
 }) {
     const router = useRouter();
-
+    console.log( expiryTimestamp );
     const
         // translation consfigs
         { t } = useTranslation('home'),

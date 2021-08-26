@@ -1,0 +1,9 @@
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/_error": "pages/_error.js",
+  "/statistics": "pages/statistics.js",
+  "/": "pages/index.js",
+  "/prediction": "pages/prediction.js",
+  "/games": "pages/games.js"
+}

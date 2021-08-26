@@ -31,7 +31,7 @@ export function Testimonials({
         [dateActive, setDateActive] = useState(true)
 
     useEffect(() => {
-        if (matchId !== null) {
+        if (matchId !== null  && matchId !== undefined) {
             request(GET_FEEDBACK(matchId))
                 .then(predictions => {
                     setFeedBacks(

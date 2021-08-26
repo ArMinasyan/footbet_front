@@ -33,7 +33,7 @@ export function PrdeictionSlide() {
                         teamTwoName: '',
                         teamTwoIcon: item[`team2_img_path`],
                         prediction: {
-                            thereIs: true,
+                            thereIs: false,
                             totalBet: 'тб 1,5 / ',
                             coefficent: 'коеф 3,5'
                         },
@@ -57,7 +57,7 @@ export function PrdeictionSlide() {
     }, [] );
 
     useEffect( () => {
-        if ( currentMatchId !== null ) {
+        if ( currentMatchId !== null && currentMatchId !== undefined ) {
             dispatch(setMatchId(currentMatchId));
         } 
     }, [currentMatchId ])
@@ -103,7 +103,7 @@ export function PrdeictionSlide() {
                             predictionButtonName={el.predictionButtonName}
                             buyButtonName={el.buyButtonName}
                             locationInMainPage={'prediction'}
-                            expiryTimestamp={time}
+                            expiryTimestamp={new Date( `${ el.date.split(`.`).reverse().join(`.`) } ${el.time}` )}
                             prediction={el.predictionText}
                             ordinar={el.ordinarText}
                             key={Math.random()}
