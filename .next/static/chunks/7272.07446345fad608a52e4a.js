@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[7272],{47272:function(e){"use strict";e.exports=JSON.parse('{"title":"Personal account / account","board":{"PGButton":"Purchased games","headers":{"gamesHistory":"History of games","prediction":"Prediction","date":"Date","score":"Score / bill","price":"Price"}}}')}}]);

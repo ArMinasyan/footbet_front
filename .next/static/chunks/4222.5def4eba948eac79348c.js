@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[4222],{14222:function(e){"use strict";e.exports=JSON.parse('{"commons":{},"title":"Bewertungen"}')}}]);
