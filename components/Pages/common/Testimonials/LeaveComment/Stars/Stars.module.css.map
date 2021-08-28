@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAA;EACV,KAAK,EAAE,IAAI;EACX,YAAY,EAAE,IAAI;EAClB,cAAc,EAAE,IAAI;CAUvB;;AAbD,AAII,cAJU,CAIV,WAAW,CAAA;EACP,KAAK,EAAE,IAAI;CAOd;;AAZL,AAMQ,cANM,CAIV,WAAW,CAEP,GAAG,CAAA;EACC,YAAY,EAAE,IAAI;CAIrB;;AAXT,AAQY,cARE,CAIV,WAAW,CAEP,GAAG,AAEE,MAAM,CAAA;EACH,MAAM,EAAE,OAAO;CAClB",
+    "sources": [
+        "Stars.module.scss"
+    ],
+    "names": [],
+    "file": "Stars.module.css"
+}
