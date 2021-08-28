@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[7160],{87160:function(e){"use strict";e.exports=JSON.parse('{"header":{"title":"\u041e \u043d\u0430\u0441"}}')}}]);

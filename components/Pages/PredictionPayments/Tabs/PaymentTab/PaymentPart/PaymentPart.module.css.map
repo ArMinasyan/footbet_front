@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,KAAK,EAAE,IAAI;EACX,QAAQ,EAAE,QAAQ;CACrB",
+    "sources": [
+        "PaymentPart.module.scss"
+    ],
+    "names": [],
+    "file": "PaymentPart.module.css"
+}
