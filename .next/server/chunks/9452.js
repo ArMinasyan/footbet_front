@@ -577,7 +577,7 @@ const GET_FEEDBACK = id => ({
   method: `get`
 });
 const GET_MATCHES_BY_TYPE = type => ({
-  url: host + `admin/game?type=${type}`,
+  url: host + `account/game?type=${type}`,
   method: `get`
 });
 
