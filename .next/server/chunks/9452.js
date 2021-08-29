@@ -557,19 +557,19 @@ const SET_NEW_PASSWORD = {
   method: 'put'
 };
 const GET_NEWS = {
-  url: host + `admin/news`,
+  url: ACCOUNT_URL + `news`,
   method: `get`
 };
 const GET_MATCHES = {
-  url: host + `admin/match-of-the-day`,
+  url: ACCOUNT_URL + `match-of-the-day`,
   method: `get`
 };
 const GET_MATCHES_OF_NEXT_DAY = {
-  url: host + `admin/match-of-the-day?type=next_day`,
+  url: ACCOUNT_URL + `match-of-the-day?type=next_day`,
   method: `get`
 };
 const GET_PREDICTIONS = {
-  url: host + `account/prediction`,
+  url: ACCOUNT_URL + `prediction`,
   method: `get`
 };
 const GET_FEEDBACK = id => ({
@@ -577,7 +577,7 @@ const GET_FEEDBACK = id => ({
   method: `get`
 });
 const GET_MATCHES_BY_TYPE = type => ({
-  url: host + `account/game?type=${type}`,
+  url: ACCOUNT_URL + `game?type=${type}`,
   method: `get`
 });
 
