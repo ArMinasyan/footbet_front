@@ -1,0 +1,16 @@
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/aboutUs": "pages/aboutUs.js",
+  "/games": "pages/games.js",
+  "/": "pages/index.js",
+  "/matches": "pages/matches.js",
+  "/personal": "pages/personal.js",
+  "/prediction": "pages/prediction.js",
+  "/privacy-policy": "pages/privacy-policy.js",
+  "/registration": "pages/registration.js",
+  "/statistics": "pages/statistics.js",
+  "/terms-of-use": "pages/terms-of-use.js",
+  "/testimonials": "pages/testimonials.js",
+  "/_error": "pages/_error.js"
+}
