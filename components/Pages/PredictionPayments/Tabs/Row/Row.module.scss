@@ -11,7 +11,7 @@ $buyButtonHover: #a10b45;
     display: grid;
     grid-template-columns:
         get_percent(186px, $rightContentWidth)
-        get_percent(86px, $rightContentWidth)
+        max-content
         get_percent(193px, $rightContentWidth)
         get_percent(130px, $rightContentWidth)
         get_percent(100px, $rightContentWidth)

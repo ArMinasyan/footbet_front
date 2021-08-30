@@ -3,6 +3,11 @@
 .container {
     margin-top: 50px;
     width: get-vw(1425px);
+
+    @media (max-width: 1400px) {
+      width: get-vw(1825px);
+    }
+
     @include tablet {
         margin-top: 35px;
         width: 100vw;
