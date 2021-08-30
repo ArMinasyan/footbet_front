@@ -5,7 +5,10 @@ $titleContentWidth: 548px;
 $backGround: rgba(0, 0, 0, 0.6);
 
 .Mcontainer {
-    background: rgba(18, 17, 44, 0.82);;
+    background: rgba(18, 17, 44, 0.82);
+    padding: 20px 0px;
+    height: calc(100vh - 40px);
+    overflow: auto;
 
     .Mcontent {
         * {

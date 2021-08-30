@@ -152,12 +152,12 @@ $buyButtonHover: #a10b45;
                 .prediction_content {
                     background-color: $pink;
                     padding: 7px 35px;
-                    min-width: 186px;
+                    max-width: 160px;
 
                     @include center();
 
                     @include noteBook {
-                        min-width: 120px;
+                        min-width: 95px;
                         padding: 7px 2px;
                     }
 
@@ -200,6 +200,7 @@ $buyButtonHover: #a10b45;
                             text-align: center;
                             white-space: nowrap;
                             @include noteBook {
+                                font-size: 12px;
                                 letter-spacing: 0px;
                             }
                             @include tablet {

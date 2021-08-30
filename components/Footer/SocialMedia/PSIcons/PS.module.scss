@@ -1,9 +1,10 @@
 @import "/styles/scss/scssExports";
 
 .container {
-    @include flex-around();
-    margin-top: 12px !important;
-    width: 100%;
+    @include flex-evenly();
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+
     @include mobile {
         margin-top: 51px !important;
     }
@@ -13,8 +14,11 @@
 
     .icons {
         img {
+          
             @include noteBook {
-                max-width: 90px;
+               
+                max-width: 85px;
+                min-height: 25px;
             }
             @include tablet {
                 max-width: 80px;

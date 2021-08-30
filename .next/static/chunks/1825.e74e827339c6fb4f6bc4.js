@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1825],{91825:function(e){"use strict";e.exports=JSON.parse('{"header":{"title":"Spiel statistik"},"tab":{"header":{"prediction":"Prognos","date":"das Datum","time":"Zeit","score":"pr\xfcfen","gamesHistory":"Spielverluf"},"wallpers":{"win":"Sieg","lose":"Verlust","return":"Zur\xfcckkehren","prediction":"Prognos"}}}')}}]);

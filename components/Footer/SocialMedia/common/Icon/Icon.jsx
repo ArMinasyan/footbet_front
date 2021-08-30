@@ -11,7 +11,7 @@ export function Icon({
     url = "" }) {
     return (
         <div
-            style={elements ? { width: `${100 / elements}%` } : { padding: '0 8px' }}
+            style={elements ? { width: `${100 / elements}%` } : { padding: '0 15px' }}
             className={`${styles.container} ${lastElement ? styles.last_element : ""} ${classes}`}>
             <Link href={url} target="_blank">
                 <a target="_blank">
