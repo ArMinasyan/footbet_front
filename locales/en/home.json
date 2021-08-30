@@ -21,7 +21,8 @@
                     "title": "Испания",
                     "gameState": {
                         "dontStarted": "did not start",
-                        "started": "Started"
+                        "started": "Started",
+                        "finished": "Finished"
                     },
                     "teamOne": "Атлетико",
                     "teamTwo": "Атлетико",

@@ -33,11 +33,15 @@ export function TMMatchesBoard() {
     useEffect( () => {        
         request( GET_MATCHES_OF_NEXT_DAY, {}, { auth: true })
             .then( matches => {
-                setMatches( matches.data.data.map( match => ({
+                const now = Date.now();
+                setMatches( matches.data.data.map( match => {                  
+                  const matchTime = (new Date(`${match.date.split(`.`).reverse().join(`.`)} ${match.time}`)).getTime();
+                  const gameState = now < matchTime  ? `dontStarted` : Math.abs(now-matchTime) < 9000000 ? 'started' : 'finished';
+                  return {
                     id: match.id,
                     date: match.date,
                     time: match.time,
-                    gameState: '.rowOne.gameState.started',
+                    gameState: `.rowOne.gameState.${gameState}`,
                     teamOneName: ``,
                     teamOneIcon: match.team1_img_path,
                     teamTwoName: '',
@@ -46,7 +50,7 @@ export function TMMatchesBoard() {
                     buyButtonName: '.rowOne.buyButton',
                     coefficent: '',
                     titleName: '.rowOne.title'
-                })));
+                }}));
             })
             .catch( err => {
                 console.log( err );

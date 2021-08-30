@@ -36,11 +36,12 @@ export function TDMatchesBoard() {
                 const now = Date.now();
                 setMatches( matches.data.data.map( match => {
                   const matchTime = (new Date(`${match.date.split(`.`).reverse().join(`.`)} ${match.time}`)).getTime();
+                  const gameState = now < matchTime  ? `dontStarted` : Math.abs(now-matchTime) < 9000000 ? 'started' : 'finished';
                   return ({
                     id: match.id,
                     date: match.date,
                     time: match.time,
-                    gameState: `.rowOne.gameState.${ now < matchTime ? 'started' : 'dontStarted'}`,
+                    gameState: `.rowOne.gameState.${gameState}`,
                     teamOneName: ``,
                     teamOneIcon: match.team1_img_path,
                     teamTwoName: '',
