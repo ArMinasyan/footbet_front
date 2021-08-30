@@ -1,0 +1,13 @@
+.container {
+  position: relative;
+  max-height: 560px;
+}
+
+.container * {
+  margin: 0 !important;
+}
+
+.container:first-child {
+  height: 0 !important;
+}
+/*# sourceMappingURL=TDMatchesBoard.module.css.map */

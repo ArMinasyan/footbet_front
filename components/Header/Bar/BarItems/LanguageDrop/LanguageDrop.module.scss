@@ -12,6 +12,7 @@ $contentWidth: 106px;
     right: -70px;
     border: 1px solid $containerBorderColor;
     background: $primaryBackground;
+    z-index: 1000;
 
     @include noteBook {
         min-width: 141px;

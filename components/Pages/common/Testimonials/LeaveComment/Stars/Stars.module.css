@@ -1,0 +1,18 @@
+.stars_content {
+  width: 100%;
+  padding-left: 2.8%;
+  padding-bottom: 0.4%;
+}
+
+.stars_content .stars_area {
+  width: 100%;
+}
+
+.stars_content .stars_area img {
+  margin-right: 10px;
+}
+
+.stars_content .stars_area img:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=Stars.module.css.map */

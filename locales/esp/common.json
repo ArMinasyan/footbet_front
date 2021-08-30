@@ -16,7 +16,7 @@
             "or": "O",
             "register": "Registrarse"
         },
-        "resetPasswordModal":  {
+        "resetPasswordModal": {
             "title": "Recuperación de contraseña",
             "send": "Enviable"
         },
@@ -75,16 +75,18 @@
         }
     },
     "footer": {
-        "navigation":{
-            "prediction":"Apuestas",
+        "navigation": {
+            "prediction": "Apuestas",
             "games": "Partidos",
             "news": "Novedad",
-            "aboutUs":"Sobre nosotros",
+            "aboutUs": "Sobre nosotros",
             "payment": "Pago",
             "matchStatistics": "Estadísticas de partidos",
             "register": "Registrate",
             "feedbacks": "Comentarios",
-            "contacts": "Contactos"
+            "contacts": "Contactos",
+            "privacy-policy": "Política de privacidad",
+            "terms-of-use": "Términos de Uso"
         },
         "social_media_paymants": {
             "SM": {

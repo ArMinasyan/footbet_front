@@ -86,17 +86,5 @@
                 }
             }
         }
-        .paypall {
-            margin-left: get_percent(245px);
-            img {
-                cursor: pointer;
-                @include tablet {
-                    max-width: 195px;
-                }
-                @include mobile {
-                    max-width: 133px;
-                }
-            }
-        }
     }
 }

@@ -84,7 +84,9 @@
             "matchStatistics": "Խաղերի վիճակագրություն",
             "register": "Գրանցում",
             "feedbacks": "Մեկնաբանություններ",
-            "contacts": "Հետադարձ կապ"
+            "contacts": "Հետադարձ կապ",
+            "privacy-policy":"Գաղտնիության քաղաքականություն",
+            "terms-of-use": "Օգտվելու կանոններ"
         },
         "social_media_paymants": {
             "SM": {

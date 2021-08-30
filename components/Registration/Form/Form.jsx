@@ -77,7 +77,7 @@ export function Form({ title }) {
                toast(`Successfully registered`);
                router.push(`/`)
            } catch (error) {
-               toast( error.response.data?.message || `unknown error`, {
+               toast( error.response.data?.message || `Не удалось зарегистрироватся`, {
                    type: `error`
                });
            }

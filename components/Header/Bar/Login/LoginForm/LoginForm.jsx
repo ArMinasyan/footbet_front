@@ -59,7 +59,7 @@ export function LoginForm({ onModalClose, handleResetPassModal }) {
                 router.push(`/`);
             }
             catch( error ) {
-                toast( error.response.data?.message || `unknown error`, {
+                toast( error.response.data?.message || `Проблемы с сетью`, {
                     type: `error`
                 });
             }

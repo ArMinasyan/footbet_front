@@ -27,6 +27,7 @@
                     grid-row-gap: 0;
                     .row {
                         width: 100%;
+                        min-height: 40px;
                         display: grid;
                         grid-template-columns: 1fr 5fr;
                         .img {
@@ -40,7 +41,7 @@
                         }
                         .text {
                             @include flex-start();
-                            p {
+                            a {
                                 margin-left: 18px;
                             }
                         }
@@ -53,6 +54,7 @@
 .open {
     position: absolute;
     @include animation-right-left(0, 42%);
+
     @include tablet {
         @include animation-right-left(0, 30%);
     }

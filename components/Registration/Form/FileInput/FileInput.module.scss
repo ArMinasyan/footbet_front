@@ -16,9 +16,8 @@ $labelBackgroundColor: rgba(196, 196, 196, 0.2);
 
     label {
         width: get-vw(325px);
-        height: get-vw(270px);
+        min-height: get-vw(270px);
         min-width: 150px;
-        min-height: 120px;
         @include center();
 
         @include mobile {
@@ -28,9 +27,10 @@ $labelBackgroundColor: rgba(196, 196, 196, 0.2);
         }
 
         .uploadImageContent {
+            min-height: get-vw(270px);
             @include center();
             width: 100%;
-            height: 100%;
+            // height: 100%;
             background: $labelBackgroundColor;
             border: 1px solid #ffffff;
             box-sizing: border-box;
@@ -43,5 +43,10 @@ $labelBackgroundColor: rgba(196, 196, 196, 0.2);
                 }
             }
         }
+    }
+
+    .image-preview {
+        width: 20vw;
+        
     }
 }

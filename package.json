@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev -p 1998",
     "build": "next build",
+    "start:dev": "NODE_ENV=production node server.js",
     "start": "next start -p 1998",
     "lint": "next lint"
   },

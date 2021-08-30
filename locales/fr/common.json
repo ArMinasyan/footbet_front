@@ -75,16 +75,18 @@
         }
     },
     "footer": {
-        "navigation":{
-            "prediction":"Prédictions",
+        "navigation": {
+            "prediction": "Prédictions",
             "games": "Jeux",
             "news": "Nouvelles",
-            "aboutUs":"À propos de nous",
+            "aboutUs": "À propos de nous",
             "payment": "Paiement",
             "matchStatistics": "Statistiques de match",
             "register": "Enregistrement",
             "feedbacks": "Commentaires",
-            "contacts": "Contacts"
+            "contacts": "Contacts",
+            "privacy-policy": "Politique de confidentialité",
+            "terms-of-use": "Conditions d'utilisation"
         },
         "social_media_paymants": {
             "SM": {

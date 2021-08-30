@@ -13,7 +13,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -28,7 +28,7 @@ export const statistics_tab = [
         teamTwoName: 'ПСЖ',
         teamTwoIcon: psjIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -43,7 +43,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: rennaisIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -58,7 +58,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -73,7 +73,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -88,7 +88,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -103,7 +103,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -118,7 +118,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -133,7 +133,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -148,7 +148,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -163,7 +163,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -178,7 +178,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -193,7 +193,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -208,7 +208,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -223,7 +223,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -238,7 +238,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -253,7 +253,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -268,7 +268,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },
@@ -283,7 +283,7 @@ export const statistics_tab = [
         teamTwoName: 'Атлетик',
         teamTwoIcon: atleticIcon.src,
         prediction: {
-            thereIs: true,
+            thereIs: false,
             totalBet: 'тб 1,5 / ',
             coefficent: 'коеф 3,5'
         },

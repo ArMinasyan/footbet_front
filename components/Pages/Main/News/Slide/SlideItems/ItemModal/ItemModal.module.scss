@@ -49,14 +49,22 @@ $backGround: rgba(0, 0, 0, 0.6);
                 bottom: -38%;
                 background: $backGround;
                 padding: 26px 56px;
+                max-height: get-vh(550px);
+                overflow: auto;
+                @include scrollbar(11px, white, #1b1a30);
+
                 @include noteBook {
                     padding: 20px 40px;
                 }
                 @include tablet {
                     padding: 10px 20px;
+                    max-height: get-vh(450px);
+                    bottom: -68%;
                 }
                 @include mobile {
                     padding: 5px 8px;
+                    max-height: get-vh(300px);
+                    bottom: -58%;
                 }
                 .title {
                     width: get_percent($titleContentWidth, $containerWidth);

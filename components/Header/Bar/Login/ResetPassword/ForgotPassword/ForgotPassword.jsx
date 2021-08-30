@@ -52,7 +52,7 @@ export function ForgotPassword({ onModalClose }) {
                 setShowEmailCodeMl(true)
             }
             catch ( err ) {
-                toast( err.response.data?.message || `unknown error`, {
+                toast( err.response.data?.message || `Не удалось востановить пароль`, {
                     type: `error`
                 });
             }

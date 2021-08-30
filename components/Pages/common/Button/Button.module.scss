@@ -24,14 +24,17 @@ $contentBorderOnHover: 2px solid #12112c;
         height: 100%;
         border-left: $contentBorder;
         pre {
-            @include center();
+            text-align: center;
             width: 100%;
-            height: 100%;
             margin: 0;
             padding: 0;
             @include arimo-font();
             font-size: 19px;
             line-height: 22px;
+            text-align: center;
+            white-space: pre;
+            text-overflow: ellipsis;
+            overflow: hidden;
             @include tablet {
                 font-size: 16px;
                 line-height: 18px;

@@ -33,11 +33,14 @@ export function TDMatchesBoard() {
     useEffect( () => {        
         request( GET_MATCHES, {}, { auth: true })
             .then( matches => {
-                setMatches( matches.data.data.map( match => ({
+                const now = Date.now();
+                setMatches( matches.data.data.map( match => {
+                  const matchTime = (new Date(`${match.date.split(`.`).reverse().join(`.`)} ${match.time}`)).getTime();
+                  return ({
                     id: match.id,
                     date: match.date,
                     time: match.time,
-                    gameState: '.rowOne.gameState.started',
+                    gameState: `.rowOne.gameState.${ now < matchTime ? 'started' : 'dontStarted'}`,
                     teamOneName: ``,
                     teamOneIcon: match.team1_img_path,
                     teamTwoName: '',
@@ -46,7 +49,8 @@ export function TDMatchesBoard() {
                     buyButtonName: '.rowOne.buyButton',
                     coefficent: '',
                     titleName: '.rowOne.title'
-                })));
+                  }) 
+                }));
             })
             .catch( err => {
                 console.log( err );
