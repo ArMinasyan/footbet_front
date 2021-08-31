@@ -6,7 +6,7 @@ import { predictions } from '/src/games_data/predictions/predictions'
 // components
 import { Row } from '../Row/Row'
 import { TabHeader } from '../TabHeader/TabHeader';
-// styles 
+// styles
 import styles from './PredictionTab.module.scss'
 import { GET_PREDICTIONS } from '/lib/request-destinations'
 import { request } from '/lib/er.lib'
@@ -28,11 +28,7 @@ export function PredictionTab({ click }) {
                         teamOneIcon: item[`team1_img_path`],
                         teamTwoName: '',
                         teamTwoIcon: item[`team2_img_path`],
-                        prediction: {
-                            thereIs: false,
-                            totalBet: 'тб 1,5 / ',
-                            coefficent: 'коеф 3,5'
-                        },
+                        prediction: item['prediction'],
                         type: item.type,
                         date: item.date,
                         time: item.time,

@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/X_kMvqcPxufR4cf8P3Kgb/_buildManifest.js",
-    "static/X_kMvqcPxufR4cf8P3Kgb/_ssgManifest.js"
+    "static/3HtdgdbioaE6kk7KD90DN/_buildManifest.js",
+    "static/3HtdgdbioaE6kk7KD90DN/_ssgManifest.js"
   ],
   "pages": {
     "/": [
@@ -74,7 +74,7 @@
       "static/chunks/framework-80b0c5b0d53053ffcc81.js",
       "static/chunks/main-c3750021857c83280196.js",
       "static/css/c7d3fe6d4b4688d693cc.css",
-      "static/chunks/pages/prediction-028bfe8adc0cad526c00.js"
+      "static/chunks/pages/prediction-643eabcca23e338970db.js"
     ],
     "/privacy-policy": [
       "static/chunks/webpack-63c8c023eb0f419e0516.js",

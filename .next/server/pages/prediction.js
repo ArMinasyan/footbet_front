@@ -2328,7 +2328,7 @@ var er_lib = __webpack_require__(955);
  // components
 
 
- // styles 
+ // styles
 
 
 
@@ -2353,11 +2353,7 @@ function PredictionTab({
           teamOneIcon: item[`team1_img_path`],
           teamTwoName: '',
           teamTwoIcon: item[`team2_img_path`],
-          prediction: {
-            thereIs: false,
-            totalBet: 'тб 1,5 / ',
-            coefficent: 'коеф 3,5'
-          },
+          prediction: item['prediction'],
           type: item.type,
           date: item.date,
           time: item.time,
