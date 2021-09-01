@@ -9,11 +9,18 @@ import styles from './LeaveComment.module.scss'
 // icons
 import filledStar from '/public/images/main/feedbacks/filledStar.png'
 import unfilledStar from '/public/images/main/feedbacks/unfilledStar.png'
+import { request } from '../../../../../lib/er.lib'
+import { ADD_FEEDBACK } from '../../../../../lib/request-destinations'
+import { toast, ToastContainer } from 'react-toastify'
+import LoadingButton from '../../../../common/LoadingButton'
+import { useRef } from 'react'
 
 
 
-export function LeaveComment() {
+export function LeaveComment( { matchId } ) {
 
+  const [ loading, setLoading ] = useState(false);
+  const commentBoxRef = useRef(null);
     const
         // states consts
         stars = [0, 1, 2, 3, 4],
@@ -31,8 +38,27 @@ export function LeaveComment() {
         { register, handleSubmit, formState: { errors } } = useForm({
             mode: 'onChange',
             resolver: yupResolver(schema)
-        }),
-        submit = (data) => console.log(data, { rate: simulator })
+        });
+        
+    const submit = async (data) => {
+      if ( matchId ) {
+        try {
+          setLoading(true);
+          await request(ADD_FEEDBACK, { comment: data.comment, stars: simulator, matchId }, {auth: true});
+          if ( commentBoxRef.current ) 
+            commentBoxRef.current.value = "";
+        }
+        catch ( err ) {
+          toast( err.response.data?.message || `Невозможно добавить отзыв`, {
+              type: `error`
+          });
+        }
+        finally{
+          setLoading(false);
+        }
+      }
+    }
+
 
     return (
         <div className={styles.container}>
@@ -66,17 +92,19 @@ export function LeaveComment() {
                         id='comment'
                         cols="30"
                         rows="7"
+                        ref={commentBoxRef}
                         placeholder={translate('placeHolder')}
                     ></textarea>
                 </div>
                 <div className={styles.button_container}>
-                    <button>
+                    <LoadingButton loading={loading}>
                         {
-                            translate('send')
+                          translate('send')
                         }
-                    </button>
+                    </LoadingButton>
                 </div>
             </form>
+            <ToastContainer />
         </div>
     )
 }

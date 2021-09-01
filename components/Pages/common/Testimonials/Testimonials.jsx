@@ -137,7 +137,7 @@ export function Testimonials({
                                 ))
                             }
                         </Carousel>
-                        <LeaveComment />
+                        <LeaveComment matchId={matchId} />
                     </div>
                 </div>
             }
