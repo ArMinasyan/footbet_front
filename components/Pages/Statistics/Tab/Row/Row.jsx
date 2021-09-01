@@ -21,18 +21,22 @@ export function Row({
             case "win":
                 return {
                     className: styles.win,
-                    translationText: 'win'
+                    translationText: 'Победа'
                 }
+            case "Возврат":
+              return {
+                  className: styles.return,
+                  translationText: 'return'
+              }
             case "lose":
                 return {
                     className: styles.lose,
                     translationText: 'lose'
                 }
-            case "return":
-                return {
-                    className: styles.return,
-                    translationText: 'return'
-                }
+        }
+        return {
+            className: styles.lose,
+            translationText: 'lose'
         }
     }
 
@@ -54,7 +58,7 @@ export function Row({
                             <span>{teamOneName}</span>
                         </div>
                         <div className={styles.leftItems}>
-                            <img src={teamOneIcon} alt="" />
+                            <img style={{ width:'50px', height:'50px' }} src={teamOneIcon} alt="" />
                         </div>
                     </div>
                     <div className={styles.leftItems}>
@@ -65,7 +69,7 @@ export function Row({
                             <span>{teamTwoName}</span>
                         </div>
                         <div className={styles.leftItems}>
-                            <img src={teamTwoIcon} alt="" />
+                            <img style={{ width:'50px', height:'50px' }} src={teamTwoIcon} alt="" />
                         </div>
                     </div>
                 </div>
