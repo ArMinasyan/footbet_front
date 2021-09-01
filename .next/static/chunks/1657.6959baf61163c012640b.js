@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1657],{1657:function(e){e.exports=JSON.parse('{"title":"Pers\xf6nliches B\xfcro","board":{"PGButton":"Gekaufte Spiele","headers":{"gamesHistory":"Spielverlauf","prediction":"Prognos","date":"das Datum","score":"pr\xfcfen","price":"Preis"}}}')}}]);

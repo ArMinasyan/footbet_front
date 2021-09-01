@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9829],{79829:function(e){e.exports=JSON.parse('{"title":"Compte","board":{"PGButton":"Jeu achet\xe9","headers":{"gamesHistory":"Histoire des jeux","prediction":"Pr\xe9diction","date":"Date","score":"score/facture","price":"le prix","changePassword":"r\xe9initialisez votre mot de passe"}}}')}}]);
