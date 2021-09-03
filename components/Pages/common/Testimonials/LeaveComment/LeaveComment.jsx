@@ -24,7 +24,7 @@ export function LeaveComment( { matchId } ) {
     const
         // states consts
         stars = [0, 1, 2, 3, 4],
-        [simulator, setSimulator] = useState(0),
+        [simulator, setSimulator] = useState(1),
         // translation consfigs
         { t } = useTranslation('common'),
         translationPath = 'commons.',

@@ -26,7 +26,6 @@ import { useEffect } from 'react'
 export function UserInfo() {
 
     const user_info = useSelector(selectUser)
-    console.log(user_info);
     const dispatch = useDispatch();
    
     useEffect(()=>{

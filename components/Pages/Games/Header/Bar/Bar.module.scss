@@ -13,7 +13,7 @@ $parentWidth: 1425px;
     @include center();
     .content {
         width: get_percent(923px, $parentWidth);
-        @include flex-between();
+        @include center();
         .button {
             width: auto;
             @include noteBook {

@@ -35,6 +35,7 @@ export function StatisticsTab() {
     catch ( err ) { }
   }
 
+  console.log(statistics);
     return (
         <div className={styles.container}>
             <TabHeader />

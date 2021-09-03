@@ -37,7 +37,6 @@ export function PaymentTab() {
         },
 
         game_data = get_game_data(game_path_in_extradata, extra_data)
-        console.log(game_data);
 
     return (
         <div className={styles.container}>

@@ -67,7 +67,6 @@ export function CardForm() {
             transformedData.push(["cardNumber", cardNumbers])
             setShowForm(false)
             setShowSuccess(true)
-            console.log(transformedData);
         }
     return (
         <>

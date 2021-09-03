@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,UAAU,EAAC,KAAK;CAOnB;;AATD,AAGI,UAHM,CAGN,CAAC,CAAC;EACE,MAAM,EAAE,YAAY;CACvB;;AALL,AAMI,UANM,AAML,YAAY,CAAC;EACV,MAAM,EAAE,YAAY;CACvB",
+    "sources": [
+        "TMMatchesBoard.module.scss"
+    ],
+    "names": [],
+    "file": "TMMatchesBoard.module.css"
+}

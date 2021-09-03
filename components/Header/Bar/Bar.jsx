@@ -21,7 +21,6 @@ export function Bar({ bar_items, bar_items_cont }) {
         [showLoginModal, setShowLoginModal] = useState(false),
         user_info = useSelector((state) => state.user.user)
 
-    console.log( user_info );
     return (
         <div className={`${styles.bar_container} ${bar_items_cont}`}>
             <div>

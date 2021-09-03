@@ -14,8 +14,7 @@ export function Title({
 }) {
   const // translation consfigs
     { t } = useTranslation(page),
-    translationPath = `${locationInPage}`,
-    translate = (key) => t(`${translationPath}${key}`);
+    translate = (key) => t(`${locationInPage}${key}`);
 
   return (
     <div className={styles.container}>

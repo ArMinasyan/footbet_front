@@ -15,7 +15,6 @@ export function Login({ onModalClose }) {
         [showLoginModal, setShowLoginModal] = useState(true),
         [showResetPasswordModal, setShowResetPasswordModal] = useState(false)
 
-    console.log(showResetPasswordModal);
     return (
         <>
             {showLoginModal &&

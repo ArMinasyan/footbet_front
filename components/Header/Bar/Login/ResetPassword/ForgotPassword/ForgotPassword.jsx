@@ -46,7 +46,6 @@ export function ForgotPassword({ onModalClose }) {
             try {
                 const { data: response } = await request( START_RESET_PASSWORD( data.email ) );
                 const token = response.data.token;
-                console.log( token );
                 setCookie(`reset-token`, token, (1/24)*1);
                 setShowForgotPassMl(false)
                 setShowEmailCodeMl(true)

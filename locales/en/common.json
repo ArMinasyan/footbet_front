@@ -34,7 +34,10 @@
     },
     "navBar": {
       "main": "Homepage",
-      "games": "Games",
+      "games": {
+        "frs": "Win-win",
+        "sec": "strategy"
+      },
       "statistics": {
         "frs": "Match",
         "sec": "statistics"

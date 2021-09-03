@@ -4,17 +4,17 @@ import { Button } from '../../../common/Button/Button'
 import styles from './Bar.module.scss'
 
 export function Bar({
-    expClick,
-    ordClick,
+    // expClick,
+    // ordClick,
+    // expActive,
+    // ordActive,
     bsStClick,
-    expActive,
-    ordActive,
     bsStActive
 }) {
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-                <Button
+                {/* <Button
                     page='games'
                     textPathName="header.barButtons.express"
                     aditionalStyles={styles.button}
@@ -27,7 +27,7 @@ export function Bar({
                     aditionalStyles={styles.button}
                     click={ordClick}
                     active={ordActive && ordActive}
-                />
+                /> */}
                 <Button
                     page='games'
                     textPathName="header.barButtons.bestStrategy"

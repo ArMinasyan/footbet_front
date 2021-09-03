@@ -65,7 +65,6 @@ export function GetEmailCode({ onModalClose }) {
         submit = async (data) => {
             try {
                 data = Object.values(data).reduce((ac, el) => ac + el)
-                console.log(data);
                 await request( VERIFY_PASSWORD_RESET, { code: data }, {
                     headers: {
                         'Authorization': `Bearer ${getCookie(`reset-token`)}`
