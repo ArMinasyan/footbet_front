@@ -1,637 +1,27 @@
-(function() {
+(() => {
 var exports = {};
-exports.id = "pages/statistics";
-exports.ids = ["pages/statistics"];
+exports.id = 6080;
+exports.ids = [6080];
 exports.modules = {
 
-/***/ "./i18n.json":
-/*!*******************!*\
-  !*** ./i18n.json ***!
-  \*******************/
-/***/ (function(module) {
+/***/ 31:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-module.exports = JSON.parse('{"locales":["rs","am","en","deu","fr","esp"],"defaultLocale":"rs","pages":{"*":["common"],"/":["home"],"/testimonials":["testimonials","home"],"/matches":["home"],"/games":["games"],"/prediction":["prediction"],"/statistics":["statistics"],"/aboutUs":["aboutUs"],"/personal":["personal"]}}');
-
-/***/ }),
-
-/***/ "./locales lazy recursive ^\\.\\/.*\\/.*$":
-/*!*****************************************************!*\
-  !*** ./locales/ lazy ^\.\/.*\/.*$ namespace object ***!
-  \*****************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-var map = {
-	"./am/aboutUs": [
-		"./locales/am/aboutUs.json",
-		"locales_am_aboutUs_json"
-	],
-	"./am/aboutUs.json": [
-		"./locales/am/aboutUs.json",
-		"locales_am_aboutUs_json"
-	],
-	"./am/common": [
-		"./locales/am/common.json",
-		"locales_am_common_json"
-	],
-	"./am/common.json": [
-		"./locales/am/common.json",
-		"locales_am_common_json"
-	],
-	"./am/games": [
-		"./locales/am/games.json",
-		"locales_am_games_json"
-	],
-	"./am/games.json": [
-		"./locales/am/games.json",
-		"locales_am_games_json"
-	],
-	"./am/home": [
-		"./locales/am/home.json",
-		"locales_am_home_json"
-	],
-	"./am/home.json": [
-		"./locales/am/home.json",
-		"locales_am_home_json"
-	],
-	"./am/personal": [
-		"./locales/am/personal.json",
-		"locales_am_personal_json"
-	],
-	"./am/personal.json": [
-		"./locales/am/personal.json",
-		"locales_am_personal_json"
-	],
-	"./am/prediction": [
-		"./locales/am/prediction.json",
-		"locales_am_prediction_json"
-	],
-	"./am/prediction.json": [
-		"./locales/am/prediction.json",
-		"locales_am_prediction_json"
-	],
-	"./am/statistics": [
-		"./locales/am/statistics.json",
-		"locales_am_statistics_json"
-	],
-	"./am/statistics.json": [
-		"./locales/am/statistics.json",
-		"locales_am_statistics_json"
-	],
-	"./am/testimonials": [
-		"./locales/am/testimonials.json",
-		"locales_am_testimonials_json"
-	],
-	"./am/testimonials.json": [
-		"./locales/am/testimonials.json",
-		"locales_am_testimonials_json"
-	],
-	"./deu/aboutUs": [
-		"./locales/deu/aboutUs.json",
-		"locales_deu_aboutUs_json"
-	],
-	"./deu/aboutUs.json": [
-		"./locales/deu/aboutUs.json",
-		"locales_deu_aboutUs_json"
-	],
-	"./deu/common": [
-		"./locales/deu/common.json",
-		"locales_deu_common_json"
-	],
-	"./deu/common.json": [
-		"./locales/deu/common.json",
-		"locales_deu_common_json"
-	],
-	"./deu/games": [
-		"./locales/deu/games.json",
-		"locales_deu_games_json"
-	],
-	"./deu/games.json": [
-		"./locales/deu/games.json",
-		"locales_deu_games_json"
-	],
-	"./deu/home": [
-		"./locales/deu/home.json",
-		"locales_deu_home_json"
-	],
-	"./deu/home.json": [
-		"./locales/deu/home.json",
-		"locales_deu_home_json"
-	],
-	"./deu/personal": [
-		"./locales/deu/personal.json",
-		"locales_deu_personal_json"
-	],
-	"./deu/personal.json": [
-		"./locales/deu/personal.json",
-		"locales_deu_personal_json"
-	],
-	"./deu/prediction": [
-		"./locales/deu/prediction.json",
-		"locales_deu_prediction_json"
-	],
-	"./deu/prediction.json": [
-		"./locales/deu/prediction.json",
-		"locales_deu_prediction_json"
-	],
-	"./deu/statistics": [
-		"./locales/deu/statistics.json",
-		"locales_deu_statistics_json"
-	],
-	"./deu/statistics.json": [
-		"./locales/deu/statistics.json",
-		"locales_deu_statistics_json"
-	],
-	"./deu/testimonials": [
-		"./locales/deu/testimonials.json",
-		"locales_deu_testimonials_json"
-	],
-	"./deu/testimonials.json": [
-		"./locales/deu/testimonials.json",
-		"locales_deu_testimonials_json"
-	],
-	"./en/aboutUs": [
-		"./locales/en/aboutUs.json",
-		"locales_en_aboutUs_json"
-	],
-	"./en/aboutUs.json": [
-		"./locales/en/aboutUs.json",
-		"locales_en_aboutUs_json"
-	],
-	"./en/common": [
-		"./locales/en/common.json",
-		"locales_en_common_json"
-	],
-	"./en/common.json": [
-		"./locales/en/common.json",
-		"locales_en_common_json"
-	],
-	"./en/games": [
-		"./locales/en/games.json",
-		"locales_en_games_json"
-	],
-	"./en/games.json": [
-		"./locales/en/games.json",
-		"locales_en_games_json"
-	],
-	"./en/home": [
-		"./locales/en/home.json",
-		"locales_en_home_json"
-	],
-	"./en/home.json": [
-		"./locales/en/home.json",
-		"locales_en_home_json"
-	],
-	"./en/personal": [
-		"./locales/en/personal.json",
-		"locales_en_personal_json"
-	],
-	"./en/personal.json": [
-		"./locales/en/personal.json",
-		"locales_en_personal_json"
-	],
-	"./en/prediction": [
-		"./locales/en/prediction.json",
-		"locales_en_prediction_json"
-	],
-	"./en/prediction.json": [
-		"./locales/en/prediction.json",
-		"locales_en_prediction_json"
-	],
-	"./en/statistics": [
-		"./locales/en/statistics.json",
-		"locales_en_statistics_json"
-	],
-	"./en/statistics.json": [
-		"./locales/en/statistics.json",
-		"locales_en_statistics_json"
-	],
-	"./en/testimonials": [
-		"./locales/en/testimonials.json",
-		"locales_en_testimonials_json"
-	],
-	"./en/testimonials.json": [
-		"./locales/en/testimonials.json",
-		"locales_en_testimonials_json"
-	],
-	"./esp/aboutUs": [
-		"./locales/esp/aboutUs.json",
-		"locales_esp_aboutUs_json"
-	],
-	"./esp/aboutUs.json": [
-		"./locales/esp/aboutUs.json",
-		"locales_esp_aboutUs_json"
-	],
-	"./esp/common": [
-		"./locales/esp/common.json",
-		"locales_esp_common_json"
-	],
-	"./esp/common.json": [
-		"./locales/esp/common.json",
-		"locales_esp_common_json"
-	],
-	"./esp/games": [
-		"./locales/esp/games.json",
-		"locales_esp_games_json"
-	],
-	"./esp/games.json": [
-		"./locales/esp/games.json",
-		"locales_esp_games_json"
-	],
-	"./esp/home": [
-		"./locales/esp/home.json",
-		"locales_esp_home_json"
-	],
-	"./esp/home.json": [
-		"./locales/esp/home.json",
-		"locales_esp_home_json"
-	],
-	"./esp/personal": [
-		"./locales/esp/personal.json",
-		"locales_esp_personal_json"
-	],
-	"./esp/personal.json": [
-		"./locales/esp/personal.json",
-		"locales_esp_personal_json"
-	],
-	"./esp/prediction": [
-		"./locales/esp/prediction.json",
-		"locales_esp_prediction_json"
-	],
-	"./esp/prediction.json": [
-		"./locales/esp/prediction.json",
-		"locales_esp_prediction_json"
-	],
-	"./esp/statistics": [
-		"./locales/esp/statistics.json",
-		"locales_esp_statistics_json"
-	],
-	"./esp/statistics.json": [
-		"./locales/esp/statistics.json",
-		"locales_esp_statistics_json"
-	],
-	"./esp/testimonials": [
-		"./locales/esp/testimonials.json",
-		"locales_esp_testimonials_json"
-	],
-	"./esp/testimonials.json": [
-		"./locales/esp/testimonials.json",
-		"locales_esp_testimonials_json"
-	],
-	"./fr/aboutUs": [
-		"./locales/fr/aboutUs.json",
-		"locales_fr_aboutUs_json"
-	],
-	"./fr/aboutUs.json": [
-		"./locales/fr/aboutUs.json",
-		"locales_fr_aboutUs_json"
-	],
-	"./fr/common": [
-		"./locales/fr/common.json",
-		"locales_fr_common_json"
-	],
-	"./fr/common.json": [
-		"./locales/fr/common.json",
-		"locales_fr_common_json"
-	],
-	"./fr/games": [
-		"./locales/fr/games.json",
-		"locales_fr_games_json"
-	],
-	"./fr/games.json": [
-		"./locales/fr/games.json",
-		"locales_fr_games_json"
-	],
-	"./fr/home": [
-		"./locales/fr/home.json",
-		"locales_fr_home_json"
-	],
-	"./fr/home.json": [
-		"./locales/fr/home.json",
-		"locales_fr_home_json"
-	],
-	"./fr/personal": [
-		"./locales/fr/personal.json",
-		"locales_fr_personal_json"
-	],
-	"./fr/personal.json": [
-		"./locales/fr/personal.json",
-		"locales_fr_personal_json"
-	],
-	"./fr/prediction": [
-		"./locales/fr/prediction.json",
-		"locales_fr_prediction_json"
-	],
-	"./fr/prediction.json": [
-		"./locales/fr/prediction.json",
-		"locales_fr_prediction_json"
-	],
-	"./fr/statistics": [
-		"./locales/fr/statistics.json",
-		"locales_fr_statistics_json"
-	],
-	"./fr/statistics.json": [
-		"./locales/fr/statistics.json",
-		"locales_fr_statistics_json"
-	],
-	"./fr/testimonials": [
-		"./locales/fr/testimonials.json",
-		"locales_fr_testimonials_json"
-	],
-	"./fr/testimonials.json": [
-		"./locales/fr/testimonials.json",
-		"locales_fr_testimonials_json"
-	],
-	"./rs/aboutUs": [
-		"./locales/rs/aboutUs.json",
-		"locales_rs_aboutUs_json"
-	],
-	"./rs/aboutUs.json": [
-		"./locales/rs/aboutUs.json",
-		"locales_rs_aboutUs_json"
-	],
-	"./rs/common": [
-		"./locales/rs/common.json",
-		"locales_rs_common_json"
-	],
-	"./rs/common.json": [
-		"./locales/rs/common.json",
-		"locales_rs_common_json"
-	],
-	"./rs/games": [
-		"./locales/rs/games.json",
-		"locales_rs_games_json"
-	],
-	"./rs/games.json": [
-		"./locales/rs/games.json",
-		"locales_rs_games_json"
-	],
-	"./rs/home": [
-		"./locales/rs/home.json",
-		"locales_rs_home_json"
-	],
-	"./rs/home.json": [
-		"./locales/rs/home.json",
-		"locales_rs_home_json"
-	],
-	"./rs/personal": [
-		"./locales/rs/personal.json",
-		"locales_rs_personal_json"
-	],
-	"./rs/personal.json": [
-		"./locales/rs/personal.json",
-		"locales_rs_personal_json"
-	],
-	"./rs/prediction": [
-		"./locales/rs/prediction.json",
-		"locales_rs_prediction_json"
-	],
-	"./rs/prediction.json": [
-		"./locales/rs/prediction.json",
-		"locales_rs_prediction_json"
-	],
-	"./rs/statistics": [
-		"./locales/rs/statistics.json",
-		"locales_rs_statistics_json"
-	],
-	"./rs/statistics.json": [
-		"./locales/rs/statistics.json",
-		"locales_rs_statistics_json"
-	],
-	"./rs/testimonials": [
-		"./locales/rs/testimonials.json",
-		"locales_rs_testimonials_json"
-	],
-	"./rs/testimonials.json": [
-		"./locales/rs/testimonials.json",
-		"locales_rs_testimonials_json"
-	]
-};
-function webpackAsyncContext(req) {
-	if(!__webpack_require__.o(map, req)) {
-		return Promise.resolve().then(function() {
-			var e = new Error("Cannot find module '" + req + "'");
-			e.code = 'MODULE_NOT_FOUND';
-			throw e;
-		});
-	}
-
-	var ids = map[req], id = ids[0];
-	return __webpack_require__.e(ids[1]).then(function() {
-		return __webpack_require__.t(id, 3 | 16);
-	});
-}
-webpackAsyncContext.keys = function() { return Object.keys(map); };
-webpackAsyncContext.id = "./locales lazy recursive ^\\.\\/.*\\/.*$";
-module.exports = webpackAsyncContext;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
-  \**********************************************************************/
-/***/ (function(module) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/interopRequireWildcard.js ***!
-  \***********************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js");
-
-function _getRequireWildcardCache() {
-  if (typeof WeakMap !== "function") return null;
-  var cache = new WeakMap();
-
-  _getRequireWildcardCache = function _getRequireWildcardCache() {
-    return cache;
-  };
-
-  return cache;
-}
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  }
-
-  if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") {
-    return {
-      "default": obj
-    };
-  }
-
-  var cache = _getRequireWildcardCache();
-
-  if (cache && cache.has(obj)) {
-    return cache.get(obj);
-  }
-
-  var newObj = {};
-  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-
-      if (desc && (desc.get || desc.set)) {
-        Object.defineProperty(newObj, key, desc);
-      } else {
-        newObj[key] = obj[key];
-      }
-    }
-  }
-
-  newObj["default"] = obj;
-
-  if (cache) {
-    cache.set(obj, newObj);
-  }
-
-  return newObj;
-}
-
-module.exports = _interopRequireWildcard;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/typeof.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
-  \*******************************************************/
-/***/ (function(module) {
-
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/server/denormalize-page-path.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/server/denormalize-page-path.js ***!
-  \****************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-exports.__esModule=true;exports.normalizePathSep=normalizePathSep;exports.denormalizePagePath=denormalizePagePath;function normalizePathSep(path){return path.replace(/\\/g,'/');}function denormalizePagePath(page){page=normalizePathSep(page);if(page.startsWith('/index/')){page=page.slice(6);}else if(page==='/index'){page='/';}return page;}
-//# sourceMappingURL=denormalize-page-path.js.map
-
-/***/ }),
-
-/***/ "./node_modules/next/link.js":
-/*!***********************************!*\
-  !*** ./node_modules/next/link.js ***!
-  \***********************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/next/dist/client/link.js")
-
-
-/***/ }),
-
-/***/ "./components/Pages/Statistics/Statistics.jsx":
-/*!****************************************************!*\
-  !*** ./components/Pages/Statistics/Statistics.jsx ***!
-  \****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ Statistics; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Statistics_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Statistics.module.scss */ "./components/Pages/Statistics/Statistics.module.scss");
-/* harmony import */ var _Statistics_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Statistics_module_scss__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _common_Title_Title__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/Title/Title */ "./components/Pages/common/Title/Title.jsx");
-/* harmony import */ var _Tab_StatisticsTab_StatisticsTab__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Tab/StatisticsTab/StatisticsTab */ "./components/Pages/Statistics/Tab/StatisticsTab/StatisticsTab.jsx");
 
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\Statistics\\Statistics.jsx";
-// styles
- // components
-
-
-
-function Statistics() {
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-    className: (_Statistics_module_scss__WEBPACK_IMPORTED_MODULE_3___default().container),
-    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-      className: (_Statistics_module_scss__WEBPACK_IMPORTED_MODULE_3___default().content),
-      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_common_Title_Title__WEBPACK_IMPORTED_MODULE_1__.Title, {
-        page: "statistics",
-        textPathName: "header.title"
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 11,
-        columnNumber: 17
-      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Tab_StatisticsTab_StatisticsTab__WEBPACK_IMPORTED_MODULE_2__.StatisticsTab, {}, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 15,
-        columnNumber: 17
-      }, this)]
-    }, void 0, true, {
-      fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 13
-    }, this)
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 9,
-    columnNumber: 9
-  }, this);
-}
-
-/***/ }),
-
-/***/ "./components/Pages/Statistics/Tab/Row/Row.jsx":
-/*!*****************************************************!*\
-  !*** ./components/Pages/Statistics/Tab/Row/Row.jsx ***!
-  \*****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Row": function() { return /* binding */ Row; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-translate/useTranslation */ "next-translate/useTranslation");
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Row_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Row.module.scss */ "./components/Pages/Statistics/Tab/Row/Row.module.scss");
-/* harmony import */ var _Row_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Row_module_scss__WEBPACK_IMPORTED_MODULE_2__);
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ statistics),
+  "getStaticProps": () => (/* binding */ getStaticProps)
+});
 
 var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\Statistics\\Tab\\Row\\Row.jsx";
 // translation
  // styles
+
+
 
 
 function Row({
@@ -682,16 +72,16 @@ function Row({
         translationPath = `tab.wallpers.`,
         translate = key => t(`${translationPath}${key}`);
 
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-    className: (_Row_module_scss__WEBPACK_IMPORTED_MODULE_2___default().container),
-    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-      className: (_Row_module_scss__WEBPACK_IMPORTED_MODULE_2___default().content),
-      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-        className: (_Row_module_scss__WEBPACK_IMPORTED_MODULE_2___default().left),
-        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-          className: (_Row_module_scss__WEBPACK_IMPORTED_MODULE_2___default().leftItems),
-          children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
-            className: (_Row_module_scss__WEBPACK_IMPORTED_MODULE_2___default().order),
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: (Row_module_default()).container,
+    children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: (Row_module_default()).content,
+      children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (Row_module_default()).left,
+        children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+          className: (Row_module_default()).leftItems,
+          children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("span", {
+            className: (Row_module_default()).order,
             children: [order, "."]
           }, void 0, true, {
             fileName: _jsxFileName,
@@ -896,7 +286,7 @@ function Row({
           className: (_Row_module_scss__WEBPACK_IMPORTED_MODULE_2___default().statistic_wallper),
           children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
             className: getResult(gameResult).className,
-            children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
+            children: /*#__PURE__*/jsx_runtime_.jsx("span", {
               children: translate(getResult(gameResult).translationText)
             }, void 0, false, {
               fileName: _jsxFileName,
@@ -929,73 +319,23 @@ function Row({
     columnNumber: 5
   }, this);
 }
-
-/***/ }),
-
-/***/ "./components/Pages/Statistics/Tab/StatisticsTab/StatisticsTab.jsx":
-/*!*************************************************************************!*\
-  !*** ./components/Pages/Statistics/Tab/StatisticsTab/StatisticsTab.jsx ***!
-  \*************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "StatisticsTab": function() { return /* binding */ StatisticsTab; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Row_Row__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Row/Row */ "./components/Pages/Statistics/Tab/Row/Row.jsx");
-/* harmony import */ var _TabHeader_TabHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../TabHeader/TabHeader */ "./components/Pages/Statistics/Tab/TabHeader/TabHeader.jsx");
-/* harmony import */ var _statistics_tab__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./statistics_tab */ "./components/Pages/Statistics/Tab/StatisticsTab/statistics_tab.js");
-/* harmony import */ var _StatisticsTab_module_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./StatisticsTab.module.scss */ "./components/Pages/Statistics/Tab/StatisticsTab/StatisticsTab.module.scss");
-/* harmony import */ var _StatisticsTab_module_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_StatisticsTab_module_scss__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _lib_er_lib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../lib/er.lib */ "./lib/er.lib.js");
-/* harmony import */ var _lib_request_destinations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../lib/request-destinations */ "./lib/request-destinations.js");
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\Statistics\\Tab\\StatisticsTab\\StatisticsTab.jsx";
-
-
- // styles 
+// EXTERNAL MODULE: ./components/Pages/Statistics/Tab/TabHeader/TabHeader.module.scss
+var TabHeader_module = __webpack_require__(4124);
+var TabHeader_module_default = /*#__PURE__*/__webpack_require__.n(TabHeader_module);
+;// CONCATENATED MODULE: ./components/Pages/Statistics/Tab/TabHeader/TabHeader.jsx
+// styles
+ // translations
 
 
 
 
-
-
-function StatisticsTab() {
-  const {
-    0: statistics,
-    1: setStatistics
-  } = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)([]);
-  (0,react__WEBPACK_IMPORTED_MODULE_4__.useEffect)(() => {
-    getHeapStatistics();
-  }, []);
-
-  async function getHeapStatistics() {
-    try {
-      var _statisticsRsp$data;
-
-      const statisticsRsp = await (0,_lib_er_lib__WEBPACK_IMPORTED_MODULE_5__.request)(_lib_request_destinations__WEBPACK_IMPORTED_MODULE_6__.GET_STATISTICS, {}, {
-        auth: true
-      });
-      setStatistics(((statisticsRsp === null || statisticsRsp === void 0 ? void 0 : (_statisticsRsp$data = statisticsRsp.data) === null || _statisticsRsp$data === void 0 ? void 0 : _statisticsRsp$data.data) || []).map(row => {
-        return {
-          teamOneName: ``,
-          teamOneIcon: row.team1_img_path,
-          teamTwoName: ``,
-          teamTwoIcon: row.team2_img_path,
-          date: row.date,
-          time: row.time,
-          prediction: row.prediction,
-          score: row.score,
-          gameResult: row.total
-        };
-      }));
-    } catch (err) {}
-  }
+function TabHeader() {
+  const // translation consfigs
+  {
+    t
+  } = useTranslation_default()('statistics'),
+        translationPath = 'tab.header.',
+        translate = key => t(`${translationPath}${key}`);
 
   console.log(statistics);
   return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
@@ -1033,26 +373,19 @@ function StatisticsTab() {
     columnNumber: 9
   }, this);
 }
-
-/***/ }),
-
-/***/ "./components/Pages/Statistics/Tab/StatisticsTab/statistics_tab.js":
-/*!*************************************************************************!*\
-  !*** ./components/Pages/Statistics/Tab/StatisticsTab/statistics_tab.js ***!
-  \*************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "statistics_tab": function() { return /* binding */ statistics_tab; }
-/* harmony export */ });
-/* harmony import */ var _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../public/images/games/atletico.png */ "./public/images/games/atletico.png");
-/* harmony import */ var _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../public/images/games/atletic.png */ "./public/images/games/atletic.png");
-/* harmony import */ var _public_images_main_matches_barca_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../public/images/main/matches/barca.png */ "./public/images/main/matches/barca.png");
-/* harmony import */ var _public_images_main_matches_marcel_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../public/images/main/matches/marcel.png */ "./public/images/main/matches/marcel.png");
-/* harmony import */ var _public_images_main_matches_psj_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../../public/images/main/matches/psj.png */ "./public/images/main/matches/psj.png");
-/* harmony import */ var _public_images_main_matches_rennais_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../public/images/main/matches/rennais.png */ "./public/images/main/matches/rennais.png");
+// EXTERNAL MODULE: ./public/images/games/atletico.png
+var atletico = __webpack_require__(7220);
+// EXTERNAL MODULE: ./public/images/games/atletic.png
+var atletic = __webpack_require__(9124);
+// EXTERNAL MODULE: ./public/images/main/matches/barca.png
+var barca = __webpack_require__(843);
+// EXTERNAL MODULE: ./public/images/main/matches/marcel.png
+var marcel = __webpack_require__(2974);
+// EXTERNAL MODULE: ./public/images/main/matches/psj.png
+var psj = __webpack_require__(7875);
+// EXTERNAL MODULE: ./public/images/main/matches/rennais.png
+var rennais = __webpack_require__(113);
+;// CONCATENATED MODULE: ./components/Pages/Statistics/Tab/StatisticsTab/statistics_tab.js
 // icons
 
 
@@ -1062,9 +395,9 @@ __webpack_require__.r(__webpack_exports__);
 
 const statistics_tab = [{
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1076,9 +409,9 @@ const statistics_tab = [{
   gameResult: 'win'
 }, {
   teamOneName: 'Барселона',
-  teamOneIcon: _public_images_main_matches_barca_png__WEBPACK_IMPORTED_MODULE_2__.default.src,
+  teamOneIcon: barca/* default.src */.Z.src,
   teamTwoName: 'ПСЖ',
-  teamTwoIcon: _public_images_main_matches_psj_png__WEBPACK_IMPORTED_MODULE_4__.default.src,
+  teamTwoIcon: psj/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1090,9 +423,9 @@ const statistics_tab = [{
   gameResult: 'lose'
 }, {
   teamOneName: 'Марсель',
-  teamOneIcon: _public_images_main_matches_marcel_png__WEBPACK_IMPORTED_MODULE_3__.default.src,
+  teamOneIcon: marcel/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_main_matches_rennais_png__WEBPACK_IMPORTED_MODULE_5__.default.src,
+  teamTwoIcon: rennais/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1104,9 +437,9 @@ const statistics_tab = [{
   gameResult: 'return'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1118,9 +451,9 @@ const statistics_tab = [{
   gameResult: 'lose'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1132,9 +465,9 @@ const statistics_tab = [{
   gameResult: 'lose'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1146,9 +479,9 @@ const statistics_tab = [{
   gameResult: 'lose'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1160,9 +493,9 @@ const statistics_tab = [{
   gameResult: 'return'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1174,9 +507,9 @@ const statistics_tab = [{
   gameResult: 'lose'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1188,9 +521,9 @@ const statistics_tab = [{
   gameResult: 'win'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1202,9 +535,9 @@ const statistics_tab = [{
   gameResult: 'lose'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1216,9 +549,9 @@ const statistics_tab = [{
   gameResult: 'win'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1230,9 +563,9 @@ const statistics_tab = [{
   gameResult: 'win'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1244,9 +577,9 @@ const statistics_tab = [{
   gameResult: 'win'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1258,9 +591,9 @@ const statistics_tab = [{
   gameResult: 'win'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1272,9 +605,9 @@ const statistics_tab = [{
   gameResult: 'lose'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1286,9 +619,9 @@ const statistics_tab = [{
   gameResult: 'lose'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1300,9 +633,9 @@ const statistics_tab = [{
   gameResult: 'lose'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1314,9 +647,9 @@ const statistics_tab = [{
   gameResult: 'return'
 }, {
   teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
+  teamOneIcon: atletico/* default.src */.Z.src,
   teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
+  teamTwoIcon: atletic/* default.src */.Z.src,
   prediction: {
     thereIs: false,
     totalBet: 'тб 1,5 / ',
@@ -1327,145 +660,39 @@ const statistics_tab = [{
   score: '1:0',
   gameResult: 'return'
 }];
-
-/***/ }),
-
-/***/ "./components/Pages/Statistics/Tab/TabHeader/TabHeader.jsx":
-/*!*****************************************************************!*\
-  !*** ./components/Pages/Statistics/Tab/TabHeader/TabHeader.jsx ***!
-  \*****************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TabHeader": function() { return /* binding */ TabHeader; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _TabHeader_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TabHeader.module.scss */ "./components/Pages/Statistics/Tab/TabHeader/TabHeader.module.scss");
-/* harmony import */ var _TabHeader_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_TabHeader_module_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-translate/useTranslation */ "next-translate/useTranslation");
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1__);
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\Statistics\\Tab\\TabHeader\\TabHeader.jsx";
-// styles
- // translations
+// EXTERNAL MODULE: ./components/Pages/Statistics/Tab/StatisticsTab/StatisticsTab.module.scss
+var StatisticsTab_module = __webpack_require__(8081);
+var StatisticsTab_module_default = /*#__PURE__*/__webpack_require__.n(StatisticsTab_module);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(9297);
+// EXTERNAL MODULE: ./lib/er.lib.js
+var er_lib = __webpack_require__(1863);
+// EXTERNAL MODULE: ./lib/request-destinations.js + 1 modules
+var request_destinations = __webpack_require__(8955);
+;// CONCATENATED MODULE: ./components/Pages/Statistics/Tab/StatisticsTab/StatisticsTab.jsx
 
 
-function TabHeader() {
-  const // translation consfigs
-  {
-    t
-  } = next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1___default()('statistics'),
-        translationPath = 'tab.header.',
-        translate = key => t(`${translationPath}${key}`);
+ // styles 
 
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-    className: (_TabHeader_module_scss__WEBPACK_IMPORTED_MODULE_2___default().container),
-    children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-      className: (_TabHeader_module_scss__WEBPACK_IMPORTED_MODULE_2___default().for_tablets),
-      children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("p", {
-        children: translate('gamesHistory')
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 17,
-        columnNumber: 17
-      }, this)
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 13
-    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-      className: (_TabHeader_module_scss__WEBPACK_IMPORTED_MODULE_2___default().content),
-      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-        children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("p", {
-          children: translate('prediction').toUpperCase()
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 23,
-          columnNumber: 21
-        }, this)
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 22,
-        columnNumber: 17
-      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-        children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("p", {
-          children: translate('date').toUpperCase()
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 28,
-          columnNumber: 21
-        }, this)
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 27,
-        columnNumber: 17
-      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-        children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("p", {
-          children: translate('time').toUpperCase()
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 33,
-          columnNumber: 21
-        }, this)
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 32,
-        columnNumber: 17
-      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-        children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("p", {
-          children: translate('score').toUpperCase()
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 38,
-          columnNumber: 21
-        }, this)
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 37,
-        columnNumber: 17
-      }, this)]
-    }, void 0, true, {
-      fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 13
-    }, this)]
-  }, void 0, true, {
-    fileName: _jsxFileName,
-    lineNumber: 15,
-    columnNumber: 9
-  }, this);
-}
 
-/***/ }),
 
-/***/ "./components/Pages/common/Title/Title.jsx":
-/*!*************************************************!*\
-  !*** ./components/Pages/common/Title/Title.jsx ***!
-  \*************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Title": function() { return /* binding */ Title; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-translate/useTranslation */ "next-translate/useTranslation");
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Title_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Title.module.scss */ "./components/Pages/common/Title/Title.module.scss");
-/* harmony import */ var _Title_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Title_module_scss__WEBPACK_IMPORTED_MODULE_3__);
 
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\common\\Title\\Title.jsx";
-// hooks and helpers
 
- // styles
 
+
+function StatisticsTab() {
+  const {
+    0: statistics,
+    1: setStatistics
+  } = (0,external_react_.useState)([]);
+  (0,external_react_.useEffect)(() => {
+    getHeapStatistics();
+  }, []);
+
+  async function getHeapStatistics() {
+    try {
+      var _statisticsRsp$data;
 
 function Title({
   page = "common",
@@ -1516,84 +743,54 @@ function Title({
     columnNumber: 5
   }, this);
 }
+;// CONCATENATED MODULE: ./components/Pages/Statistics/Statistics.jsx
+// styles
+ // components
 
-/***/ }),
 
-/***/ "./lib/constants.js":
-/*!**************************!*\
-  !*** ./lib/constants.js ***!
-  \**************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "host": function() { return /* binding */ host; }
-/* harmony export */ });
-const host = "https://www.footbet24.com/api";
 
-/***/ }),
 
-/***/ "./lib/er.lib.js":
-/*!***********************!*\
-  !*** ./lib/er.lib.js ***!
-  \***********************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "request": function() { return /* binding */ request; },
-/* harmony export */   "getCookie": function() { return /* binding */ getCookie; },
-/* harmony export */   "removeCookie": function() { return /* binding */ removeCookie; },
-/* harmony export */   "setCookie": function() { return /* binding */ setCookie; }
-/* harmony export */ });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function Statistics() {
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: (Statistics_module_default()).container,
+    children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: (Statistics_module_default()).content,
+      children: [/*#__PURE__*/jsx_runtime_.jsx(Title/* Title */.D, {
+        page: "statistics",
+        textPathName: "header.title"
+      }), /*#__PURE__*/jsx_runtime_.jsx(StatisticsTab, {})]
+    })
+  });
+}
+;// CONCATENATED MODULE: ./pages/statistics.js
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-const request = (destination, payload = null, options = null) => new Promise((rslv, rjct) => {
-  let headers = {};
 
-  if (options) {
-    if (options.auth === true) {
-      headers = _objectSpread(_objectSpread({}, headers), {}, {
-        Authorization: `Bearer ${getCookie(`access-token`)}` || `` // for most of requests
 
-      });
-    }
 
-    if (`headers` in options && options.headers instanceof Object) {
-      headers = _objectSpread(_objectSpread({}, headers), options.headers);
-    }
-  }
 
-  console.log(`start loading`);
-  axios__WEBPACK_IMPORTED_MODULE_0___default()({
-    method: destination.method,
-    url: destination.url,
-    headers,
-    data: payload || {}
-  }).then(rslv).catch(rjct).finally(() => console.log(`end loading`));
-});
-const getCookie = name => {
-  var nameEQ = name + "=";
-  var ca = document.cookie.split(';');
+const StatisticsPage = () => /*#__PURE__*/jsx_runtime_.jsx(Statistics, {});
 
-  for (var i = 0; i < ca.length; i++) {
-    var c = ca[i];
+StatisticsPage.layout = "withoutPhoto";
+/* harmony default export */ const statistics = (StatisticsPage);
+async function getStaticProps(ctx) {
+  return {
+    props: _objectSpread({}, await loadNamespaces_default()(_objectSpread(_objectSpread(_objectSpread({}, ctx), {}, {
+      pathname: '/statistics',
+      loaderName: 'getStaticProps'
+    }, i18n), {}, {
+      loadLocaleFrom: (l, n) => __webpack_require__(7655)(`./${l}/${n}`).then(m => m.default)
+    })))
+  };
+}
 
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1, c.length);
-    }
-
-    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-  }
+/***/ }),
 
   return null;
 };
@@ -4700,11 +3897,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/Statistics/Tab/Row/Row.module.scss":
-/*!*************************************************************!*\
-  !*** ./components/Pages/Statistics/Tab/Row/Row.module.scss ***!
-  \*************************************************************/
-/***/ (function(module) {
+/***/ 9172:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -4735,11 +3929,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/Statistics/Tab/StatisticsTab/StatisticsTab.module.scss":
-/*!*********************************************************************************!*\
-  !*** ./components/Pages/Statistics/Tab/StatisticsTab/StatisticsTab.module.scss ***!
-  \*********************************************************************************/
-/***/ (function(module) {
+/***/ 8081:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -4751,11 +3942,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/Statistics/Tab/TabHeader/TabHeader.module.scss":
-/*!*************************************************************************!*\
-  !*** ./components/Pages/Statistics/Tab/TabHeader/TabHeader.module.scss ***!
-  \*************************************************************************/
-/***/ (function(module) {
+/***/ 4124:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -4767,115 +3955,139 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/common/Title/Title.module.scss":
-/*!*********************************************************!*\
-  !*** ./components/Pages/common/Title/Title.module.scss ***!
-  \*********************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "Title_container__1g3-g"
-};
-
-
-/***/ }),
-
-/***/ "axios":
-/*!************************!*\
-  !*** external "axios" ***!
-  \************************/
-/***/ (function(module) {
+/***/ 2376:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("axios");;
+module.exports = require("axios");
 
 /***/ }),
 
-/***/ "next-translate/loadNamespaces":
-/*!************************************************!*\
-  !*** external "next-translate/loadNamespaces" ***!
-  \************************************************/
-/***/ (function(module) {
+/***/ 8404:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/loadNamespaces");;
+module.exports = require("next-translate/loadNamespaces");
 
 /***/ }),
 
-/***/ "next-translate/useTranslation":
-/*!************************************************!*\
-  !*** external "next-translate/useTranslation" ***!
-  \************************************************/
-/***/ (function(module) {
+/***/ 8841:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/useTranslation");;
+module.exports = require("next-translate/useTranslation");
 
 /***/ }),
 
-/***/ "../next-server/lib/router-context":
-/*!**************************************************************!*\
-  !*** external "next/dist/next-server/lib/router-context.js" ***!
-  \**************************************************************/
-/***/ (function(module) {
+/***/ 9325:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router-context.js");;
+module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
 
-/***/ "../next-server/lib/router/utils/get-asset-path-from-route":
-/*!**************************************************************************************!*\
-  !*** external "next/dist/next-server/lib/router/utils/get-asset-path-from-route.js" ***!
-  \**************************************************************************************/
-/***/ (function(module) {
+/***/ 8300:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router/utils/get-asset-path-from-route.js");;
+module.exports = require("next/dist/shared/lib/i18n/detect-domain-locale.js");
 
 /***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
-/***/ (function(module) {
+/***/ 5378:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react");;
+module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 
 /***/ }),
 
-/***/ "react-is":
-/*!***************************!*\
-  !*** external "react-is" ***!
-  \***************************/
-/***/ (function(module) {
+/***/ 7162:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-is");;
+module.exports = require("next/dist/shared/lib/mitt.js");
 
 /***/ }),
 
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
-/***/ (function(module) {
+/***/ 8773:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react/jsx-dev-runtime");;
+module.exports = require("next/dist/shared/lib/router-context.js");
 
 /***/ }),
 
-/***/ "?ca47":
-/*!******************************************!*\
-  !*** ./utils/resolve-rewrites (ignored) ***!
-  \******************************************/
-/***/ (function() {
+/***/ 2248:
+/***/ ((module) => {
 
-/* (ignored) */
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
+
+/***/ }),
+
+/***/ 9372:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
+
+/***/ }),
+
+/***/ 665:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
+
+/***/ }),
+
+/***/ 2747:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
+
+/***/ }),
+
+/***/ 333:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
+
+/***/ }),
+
+/***/ 3456:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
+
+/***/ }),
+
+/***/ 7620:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 9297:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react");
+
+/***/ }),
+
+/***/ 5282:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react/jsx-runtime");
 
 /***/ })
 
@@ -4885,8 +4097,8 @@ module.exports = require("react/jsx-dev-runtime");;
 // load runtime
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
-var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = (__webpack_exec__("./pages/statistics.js"));
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [1694,543,8402,7023,4587,3404,844], () => (__webpack_exec__(31)));
 module.exports = __webpack_exports__;
 
 })();

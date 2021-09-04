@@ -1,639 +1,245 @@
-(function() {
+(() => {
 var exports = {};
-exports.id = "pages/index";
-exports.ids = ["pages/index"];
+exports.id = 5405;
+exports.ids = [5405];
 exports.modules = {
 
-/***/ "./i18n.json":
-/*!*******************!*\
-  !*** ./i18n.json ***!
-  \*******************/
-/***/ (function(module) {
+/***/ 9774:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-module.exports = JSON.parse('{"locales":["rs","am","en","deu","fr","esp"],"defaultLocale":"rs","pages":{"*":["common"],"/":["home"],"/testimonials":["testimonials","home"],"/matches":["home"],"/games":["games"],"/prediction":["prediction"],"/statistics":["statistics"],"/aboutUs":["aboutUs"],"/personal":["personal"]}}');
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
 
-/***/ }),
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ pages),
+  "getStaticProps": () => (/* binding */ getStaticProps)
+});
 
-/***/ "./locales lazy recursive ^\\.\\/.*\\/.*$":
-/*!*****************************************************!*\
-  !*** ./locales/ lazy ^\.\/.*\/.*$ namespace object ***!
-  \*****************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+// EXTERNAL MODULE: ./i18n.json
+var i18n = __webpack_require__(608);
+// EXTERNAL MODULE: external "next-translate/loadNamespaces"
+var loadNamespaces_ = __webpack_require__(8404);
+var loadNamespaces_default = /*#__PURE__*/__webpack_require__.n(loadNamespaces_);
+// EXTERNAL MODULE: ./components/Pages/common/Testimonials/Testimonials.jsx + 13 modules
+var Testimonials = __webpack_require__(3173);
+// EXTERNAL MODULE: ./components/Pages/Main/Matches/Matches.jsx + 20 modules
+var Matches = __webpack_require__(3468);
+// EXTERNAL MODULE: ./components/Pages/Main/News/News.module.scss
+var News_module = __webpack_require__(1930);
+var News_module_default = /*#__PURE__*/__webpack_require__.n(News_module);
+// EXTERNAL MODULE: ./components/Pages/common/Title/Title.jsx
+var Title = __webpack_require__(4587);
+// EXTERNAL MODULE: external "next-translate/useTranslation"
+var useTranslation_ = __webpack_require__(8841);
+var useTranslation_default = /*#__PURE__*/__webpack_require__.n(useTranslation_);
+;// CONCATENATED MODULE: ./public/images/main/news/secBack.png
+/* harmony default export */ const news_secBack = ({"src":"/_next/static/image/public/images/main/news/secBack.0ced895860560a903a1c6bc33f835af3.png","height":324,"width":372,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAA40lEQVR4nA3MvUrDUBiA4fezTdLBdmhNQEonBRcdxKUEBxcn8S5c3d1EvAHdvQGvoYir2KC4dLKjBBKtpCXNz0nOafaHR06fXt4vT1xpbcFvZQhLw1+pSXIhns2Q2+fXwD/0SPMKRU3WwJ8a5iX8N1AeJx/Tz3nCV5gz3OlyPLLxd5tBwySykPHVzfSt6HA33sc/6FHVCq1KFmGHTK+Ri7O9wDiuGQw93G4CSshLRRxp7PYKuX4YBZZdmKWOxGR9WnXPFGst/fzILGJH5Py+FRSqbXS5jV46pKlF/J0wwGNVZGwALRBr5bNZ+TkAAAAASUVORK5CYII="});
+;// CONCATENATED MODULE: ./public/images/main/news/trdBack.png
+/* harmony default export */ const news_trdBack = ({"src":"/_next/static/image/public/images/main/news/trdBack.163bd395eaaf0c9d5d253ead99babcfd.png","height":324,"width":372,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAA2UlEQVR42g3NsU6DUBQG4P/AgVvopRAWa0y0wUQHu5uYODr4wDUOOjp1NUbHJqYxpNBSxNJeLsd+L/DR0+x5bruOhlEsLnuwvUAPfDAzrao/4bfXGa2rRkIG1ZtasskYVlzqKBBWTE6+XMjDeUWeaWV8cYNM97ikL/n+/KBs+yLO7b1CEORyfXeCq2mG1nPRpArTx1gWvwZOUTaYHzSC5BRpYlB075DREFEq8Cdn4AP5pJMBymKJrVPCMqNXLvZVDx2H4Lze2HVLx2YFpUYIowR1s8PeGMjPDv819lzNSMO9gAAAAABJRU5ErkJggg=="});
+;// CONCATENATED MODULE: ./public/images/main/news/fortBack.png
+/* harmony default export */ const news_fortBack = ({"src":"/_next/static/image/public/images/main/news/fortBack.2fac4a53f06e0d7b508d03958d6c11af.png","height":324,"width":372,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAA8klEQVR4nAHnABj/AWmNVcqXBMgBaQo8APXT8gALFAgABQgHANDO4QAuKywAAWOCUMz0DA4A3N3dAM3i1gBELDYAFP39AO7m9gA1MUQAAXyNZ8slGgwA3qaNACRCZADe3tcA8xQqACAmNQDy8+4AAVZvOsvP5tgAnGKbAD4dAQDSpKAAnOsWAOsN8ADr89QAAVxvWcsjFx8AUTxGAOy8pAC+p7sAIygDAIgABgAS/QcAAVxkW8zn9u8AgT8nANu+xwCjqcgAHyoTAJ/8CQAa/PoAAUpZMMkB/foADv/zABH2BgCWzeoAAPcAAAsAAAD5BQIAW7FWDmq1I3sAAAAASUVORK5CYII="});
+;// CONCATENATED MODULE: ./public/images/main/slideBack.png
+/* harmony default export */ const slideBack = ({"src":"/_next/static/image/public/images/main/slideBack.b09b5b243f277d8fa71421f7f1324528.png","height":324,"width":372,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAA1klEQVR42g3Fv07CQBzA8e/vvBZszsSgRUUT4p/BycTdJ3D3gXwXFxNNjIvPoKMDCwMhJCKIAdrScoXewWf5yP3j09fpvpG7aI4O4fqiSes4ZrXMKJ3ySkSrn2JbPZDvzw+ZJLnYlZMs+Rcd7irdGaS+hyOaDrhq3/L89g6qonl4QjJ5RfdmKZiQdDikP/ojarTYqdUY2QobHKHbnRd+x5a9hxvOLs+phxECeIQiD9DxwVhi47Fhl+68jzgQBeuyxOYl2jRMZbMK5YT1wuO348EWwnLh2QDFKldZn6yA1gAAAABJRU5ErkJggg=="});
+;// CONCATENATED MODULE: ./components/Pages/Main/News/Slide/slide_show_data.js
+// hooks and helpers
+ // img
 
-var map = {
-	"./am/aboutUs": [
-		"./locales/am/aboutUs.json",
-		"locales_am_aboutUs_json"
-	],
-	"./am/aboutUs.json": [
-		"./locales/am/aboutUs.json",
-		"locales_am_aboutUs_json"
-	],
-	"./am/common": [
-		"./locales/am/common.json",
-		"locales_am_common_json"
-	],
-	"./am/common.json": [
-		"./locales/am/common.json",
-		"locales_am_common_json"
-	],
-	"./am/games": [
-		"./locales/am/games.json",
-		"locales_am_games_json"
-	],
-	"./am/games.json": [
-		"./locales/am/games.json",
-		"locales_am_games_json"
-	],
-	"./am/home": [
-		"./locales/am/home.json",
-		"locales_am_home_json"
-	],
-	"./am/home.json": [
-		"./locales/am/home.json",
-		"locales_am_home_json"
-	],
-	"./am/personal": [
-		"./locales/am/personal.json",
-		"locales_am_personal_json"
-	],
-	"./am/personal.json": [
-		"./locales/am/personal.json",
-		"locales_am_personal_json"
-	],
-	"./am/prediction": [
-		"./locales/am/prediction.json",
-		"locales_am_prediction_json"
-	],
-	"./am/prediction.json": [
-		"./locales/am/prediction.json",
-		"locales_am_prediction_json"
-	],
-	"./am/statistics": [
-		"./locales/am/statistics.json",
-		"locales_am_statistics_json"
-	],
-	"./am/statistics.json": [
-		"./locales/am/statistics.json",
-		"locales_am_statistics_json"
-	],
-	"./am/testimonials": [
-		"./locales/am/testimonials.json",
-		"locales_am_testimonials_json"
-	],
-	"./am/testimonials.json": [
-		"./locales/am/testimonials.json",
-		"locales_am_testimonials_json"
-	],
-	"./deu/aboutUs": [
-		"./locales/deu/aboutUs.json",
-		"locales_deu_aboutUs_json"
-	],
-	"./deu/aboutUs.json": [
-		"./locales/deu/aboutUs.json",
-		"locales_deu_aboutUs_json"
-	],
-	"./deu/common": [
-		"./locales/deu/common.json",
-		"locales_deu_common_json"
-	],
-	"./deu/common.json": [
-		"./locales/deu/common.json",
-		"locales_deu_common_json"
-	],
-	"./deu/games": [
-		"./locales/deu/games.json",
-		"locales_deu_games_json"
-	],
-	"./deu/games.json": [
-		"./locales/deu/games.json",
-		"locales_deu_games_json"
-	],
-	"./deu/home": [
-		"./locales/deu/home.json",
-		"locales_deu_home_json"
-	],
-	"./deu/home.json": [
-		"./locales/deu/home.json",
-		"locales_deu_home_json"
-	],
-	"./deu/personal": [
-		"./locales/deu/personal.json",
-		"locales_deu_personal_json"
-	],
-	"./deu/personal.json": [
-		"./locales/deu/personal.json",
-		"locales_deu_personal_json"
-	],
-	"./deu/prediction": [
-		"./locales/deu/prediction.json",
-		"locales_deu_prediction_json"
-	],
-	"./deu/prediction.json": [
-		"./locales/deu/prediction.json",
-		"locales_deu_prediction_json"
-	],
-	"./deu/statistics": [
-		"./locales/deu/statistics.json",
-		"locales_deu_statistics_json"
-	],
-	"./deu/statistics.json": [
-		"./locales/deu/statistics.json",
-		"locales_deu_statistics_json"
-	],
-	"./deu/testimonials": [
-		"./locales/deu/testimonials.json",
-		"locales_deu_testimonials_json"
-	],
-	"./deu/testimonials.json": [
-		"./locales/deu/testimonials.json",
-		"locales_deu_testimonials_json"
-	],
-	"./en/aboutUs": [
-		"./locales/en/aboutUs.json",
-		"locales_en_aboutUs_json"
-	],
-	"./en/aboutUs.json": [
-		"./locales/en/aboutUs.json",
-		"locales_en_aboutUs_json"
-	],
-	"./en/common": [
-		"./locales/en/common.json",
-		"locales_en_common_json"
-	],
-	"./en/common.json": [
-		"./locales/en/common.json",
-		"locales_en_common_json"
-	],
-	"./en/games": [
-		"./locales/en/games.json",
-		"locales_en_games_json"
-	],
-	"./en/games.json": [
-		"./locales/en/games.json",
-		"locales_en_games_json"
-	],
-	"./en/home": [
-		"./locales/en/home.json",
-		"locales_en_home_json"
-	],
-	"./en/home.json": [
-		"./locales/en/home.json",
-		"locales_en_home_json"
-	],
-	"./en/personal": [
-		"./locales/en/personal.json",
-		"locales_en_personal_json"
-	],
-	"./en/personal.json": [
-		"./locales/en/personal.json",
-		"locales_en_personal_json"
-	],
-	"./en/prediction": [
-		"./locales/en/prediction.json",
-		"locales_en_prediction_json"
-	],
-	"./en/prediction.json": [
-		"./locales/en/prediction.json",
-		"locales_en_prediction_json"
-	],
-	"./en/statistics": [
-		"./locales/en/statistics.json",
-		"locales_en_statistics_json"
-	],
-	"./en/statistics.json": [
-		"./locales/en/statistics.json",
-		"locales_en_statistics_json"
-	],
-	"./en/testimonials": [
-		"./locales/en/testimonials.json",
-		"locales_en_testimonials_json"
-	],
-	"./en/testimonials.json": [
-		"./locales/en/testimonials.json",
-		"locales_en_testimonials_json"
-	],
-	"./esp/aboutUs": [
-		"./locales/esp/aboutUs.json",
-		"locales_esp_aboutUs_json"
-	],
-	"./esp/aboutUs.json": [
-		"./locales/esp/aboutUs.json",
-		"locales_esp_aboutUs_json"
-	],
-	"./esp/common": [
-		"./locales/esp/common.json",
-		"locales_esp_common_json"
-	],
-	"./esp/common.json": [
-		"./locales/esp/common.json",
-		"locales_esp_common_json"
-	],
-	"./esp/games": [
-		"./locales/esp/games.json",
-		"locales_esp_games_json"
-	],
-	"./esp/games.json": [
-		"./locales/esp/games.json",
-		"locales_esp_games_json"
-	],
-	"./esp/home": [
-		"./locales/esp/home.json",
-		"locales_esp_home_json"
-	],
-	"./esp/home.json": [
-		"./locales/esp/home.json",
-		"locales_esp_home_json"
-	],
-	"./esp/personal": [
-		"./locales/esp/personal.json",
-		"locales_esp_personal_json"
-	],
-	"./esp/personal.json": [
-		"./locales/esp/personal.json",
-		"locales_esp_personal_json"
-	],
-	"./esp/prediction": [
-		"./locales/esp/prediction.json",
-		"locales_esp_prediction_json"
-	],
-	"./esp/prediction.json": [
-		"./locales/esp/prediction.json",
-		"locales_esp_prediction_json"
-	],
-	"./esp/statistics": [
-		"./locales/esp/statistics.json",
-		"locales_esp_statistics_json"
-	],
-	"./esp/statistics.json": [
-		"./locales/esp/statistics.json",
-		"locales_esp_statistics_json"
-	],
-	"./esp/testimonials": [
-		"./locales/esp/testimonials.json",
-		"locales_esp_testimonials_json"
-	],
-	"./esp/testimonials.json": [
-		"./locales/esp/testimonials.json",
-		"locales_esp_testimonials_json"
-	],
-	"./fr/aboutUs": [
-		"./locales/fr/aboutUs.json",
-		"locales_fr_aboutUs_json"
-	],
-	"./fr/aboutUs.json": [
-		"./locales/fr/aboutUs.json",
-		"locales_fr_aboutUs_json"
-	],
-	"./fr/common": [
-		"./locales/fr/common.json",
-		"locales_fr_common_json"
-	],
-	"./fr/common.json": [
-		"./locales/fr/common.json",
-		"locales_fr_common_json"
-	],
-	"./fr/games": [
-		"./locales/fr/games.json",
-		"locales_fr_games_json"
-	],
-	"./fr/games.json": [
-		"./locales/fr/games.json",
-		"locales_fr_games_json"
-	],
-	"./fr/home": [
-		"./locales/fr/home.json",
-		"locales_fr_home_json"
-	],
-	"./fr/home.json": [
-		"./locales/fr/home.json",
-		"locales_fr_home_json"
-	],
-	"./fr/personal": [
-		"./locales/fr/personal.json",
-		"locales_fr_personal_json"
-	],
-	"./fr/personal.json": [
-		"./locales/fr/personal.json",
-		"locales_fr_personal_json"
-	],
-	"./fr/prediction": [
-		"./locales/fr/prediction.json",
-		"locales_fr_prediction_json"
-	],
-	"./fr/prediction.json": [
-		"./locales/fr/prediction.json",
-		"locales_fr_prediction_json"
-	],
-	"./fr/statistics": [
-		"./locales/fr/statistics.json",
-		"locales_fr_statistics_json"
-	],
-	"./fr/statistics.json": [
-		"./locales/fr/statistics.json",
-		"locales_fr_statistics_json"
-	],
-	"./fr/testimonials": [
-		"./locales/fr/testimonials.json",
-		"locales_fr_testimonials_json"
-	],
-	"./fr/testimonials.json": [
-		"./locales/fr/testimonials.json",
-		"locales_fr_testimonials_json"
-	],
-	"./rs/aboutUs": [
-		"./locales/rs/aboutUs.json",
-		"locales_rs_aboutUs_json"
-	],
-	"./rs/aboutUs.json": [
-		"./locales/rs/aboutUs.json",
-		"locales_rs_aboutUs_json"
-	],
-	"./rs/common": [
-		"./locales/rs/common.json",
-		"locales_rs_common_json"
-	],
-	"./rs/common.json": [
-		"./locales/rs/common.json",
-		"locales_rs_common_json"
-	],
-	"./rs/games": [
-		"./locales/rs/games.json",
-		"locales_rs_games_json"
-	],
-	"./rs/games.json": [
-		"./locales/rs/games.json",
-		"locales_rs_games_json"
-	],
-	"./rs/home": [
-		"./locales/rs/home.json",
-		"locales_rs_home_json"
-	],
-	"./rs/home.json": [
-		"./locales/rs/home.json",
-		"locales_rs_home_json"
-	],
-	"./rs/personal": [
-		"./locales/rs/personal.json",
-		"locales_rs_personal_json"
-	],
-	"./rs/personal.json": [
-		"./locales/rs/personal.json",
-		"locales_rs_personal_json"
-	],
-	"./rs/prediction": [
-		"./locales/rs/prediction.json",
-		"locales_rs_prediction_json"
-	],
-	"./rs/prediction.json": [
-		"./locales/rs/prediction.json",
-		"locales_rs_prediction_json"
-	],
-	"./rs/statistics": [
-		"./locales/rs/statistics.json",
-		"locales_rs_statistics_json"
-	],
-	"./rs/statistics.json": [
-		"./locales/rs/statistics.json",
-		"locales_rs_statistics_json"
-	],
-	"./rs/testimonials": [
-		"./locales/rs/testimonials.json",
-		"locales_rs_testimonials_json"
-	],
-	"./rs/testimonials.json": [
-		"./locales/rs/testimonials.json",
-		"locales_rs_testimonials_json"
-	]
+
+
+
+
+const slide_show_data = () => {
+  const // translation consfigs
+  {
+    t
+  } = useTranslation('home'),
+        translationPath = 'news.',
+        translate = key => t(`${translationPath}${key}`);
+
+  return [{
+    url: backIcon.src,
+    title: "«Реал» долго мучился с «Аталантой»: 70 минут взламывал соперника в большинстве.",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: secBack.src,
+    title: "Мы не поверили в пенальти «Барсы» – а зря. Он был из-за мимолетного касания в штрафной",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: trdBack.src,
+    title: "«Атлетико» контролировал первый тайм дерби благодаря смелому плану Симеоне.",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: fortBack.src,
+    title: "Гол Зидана «Байеру» – неповторимая классика ЛЧ. Как это вообще получилось?",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: backIcon.src,
+    title: "«Реал» долго мучился с «Аталантой»: 70 минут взламывал соперника в большинстве.",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: secBack.src,
+    title: "Мы не поверили в пенальти «Барсы» – а зря. Он был из-за мимолетного касания в штрафной",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: trdBack.src,
+    title: "«Атлетико» контролировал первый тайм дерби благодаря смелому плану Симеоне.",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: fortBack.src,
+    title: "Гол Зидана «Байеру» – неповторимая классика ЛЧ. Как это вообще получилось?",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: backIcon.src,
+    title: "«Реал» долго мучился с «Аталантой»: 70 минут взламывал соперника в большинстве.",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: secBack.src,
+    title: "Мы не поверили в пенальти «Барсы» – а зря. Он был из-за мимолетного касания в штрафной",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: trdBack.src,
+    title: "«Атлетико» контролировал первый тайм дерби благодаря смелому плану Симеоне.",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: fortBack.src,
+    title: "Гол Зидана «Байеру» – неповторимая классика ЛЧ. Как это вообще получилось?",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: backIcon.src,
+    title: "«Реал» долго мучился с «Аталантой»: 70 минут взламывал соперника в большинстве.",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: secBack.src,
+    title: "Мы не поверили в пенальти «Барсы» – а зря. Он был из-за мимолетного касания в штрафной",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: trdBack.src,
+    title: "«Атлетико» контролировал первый тайм дерби благодаря смелому плану Симеоне.",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }, {
+    url: fortBack.src,
+    title: "Гол Зидана «Байеру» – неповторимая классика ЛЧ. Как это вообще получилось?",
+    description: 'Из-за гибкости нынешнего «Атлетико» сюрпризы касались внутренностей схемы. В таком составе футболисты могли расположиться и в 4-4-2, и в 4-3-3 (4-1-4-1), и в 3-5-2, и даже в 6-3-1. На практике схема «Атлетико» определялась стадией игры (в среднем блоке – одна, при прессинге – другая, а в глубокой обороне – третья). Ниже разберем эти перестроения. В остальн ом состав угадывался, за исключением одной фланговой позиции. Зидан недавно назвал Асенсио железным игроком старта, поэтому речь шла об игроке на другой край. Им мог стать и Родриго, и Винисиус (тогда поменялся бы фланг Асенсио), и даже Иско (выходил слева против «Сосьедада»). Зидан выбрал Родриго. '
+  }];
 };
-function webpackAsyncContext(req) {
-	if(!__webpack_require__.o(map, req)) {
-		return Promise.resolve().then(function() {
-			var e = new Error("Cannot find module '" + req + "'");
-			e.code = 'MODULE_NOT_FOUND';
-			throw e;
-		});
-	}
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(9297);
+// EXTERNAL MODULE: external "react-elastic-carousel"
+var external_react_elastic_carousel_ = __webpack_require__(3983);
+var external_react_elastic_carousel_default = /*#__PURE__*/__webpack_require__.n(external_react_elastic_carousel_);
+// EXTERNAL MODULE: ./components/common/auth/Modal/Modal.jsx
+var Modal = __webpack_require__(2361);
+// EXTERNAL MODULE: ./components/Pages/Main/News/Slide/SlideItems/ItemModal/ItemModal.module.scss
+var ItemModal_module = __webpack_require__(5716);
+var ItemModal_module_default = /*#__PURE__*/__webpack_require__.n(ItemModal_module);
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(5282);
+;// CONCATENATED MODULE: ./components/Pages/Main/News/Slide/SlideItems/ItemModal/ItemModal.jsx
 
-	var ids = map[req], id = ids[0];
-	return __webpack_require__.e(ids[1]).then(function() {
-		return __webpack_require__.t(id, 3 | 16);
-	});
+
+
+
+function ItemModal({
+  onModalClose,
+  img,
+  title,
+  description
+}) {
+  return /*#__PURE__*/jsx_runtime_.jsx(Modal/* Modal */.u, {
+    onClose: onModalClose,
+    containerStyles: (ItemModal_module_default()).Mcontainer,
+    contentStyles: (ItemModal_module_default()).Mcontent,
+    children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: (ItemModal_module_default()).container,
+      children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+        className: (ItemModal_module_default()).img_content,
+        children: /*#__PURE__*/jsx_runtime_.jsx("img", {
+          src: img,
+          alt: ""
+        })
+      }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (ItemModal_module_default()).description_content,
+        children: [/*#__PURE__*/jsx_runtime_.jsx("p", {
+          className: (ItemModal_module_default()).title,
+          children: title
+        }), /*#__PURE__*/jsx_runtime_.jsx("p", {
+          className: (ItemModal_module_default()).description,
+          children: description
+        })]
+      })]
+    })
+  });
 }
-webpackAsyncContext.keys = function() { return Object.keys(map); };
-webpackAsyncContext.id = "./locales lazy recursive ^\\.\\/.*\\/.*$";
-module.exports = webpackAsyncContext;
+// EXTERNAL MODULE: ./components/Pages/Main/News/Slide/SlideItems/Item/Item.module.scss
+var Item_module = __webpack_require__(5519);
+var Item_module_default = /*#__PURE__*/__webpack_require__.n(Item_module);
+;// CONCATENATED MODULE: ./components/Pages/Main/News/Slide/SlideItems/Item/Item.jsx
 
-/***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
-  \**********************************************************************/
-/***/ (function(module) {
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
+
+
+
+function Item({
+  img_src,
+  title,
+  description
+}) {
+  const style = {
+    backgroundImage: "url(" + img_src + ")",
+    backgroundSize: "cover"
+  },
+        {
+    0: showItemModal,
+    1: setShowItemModal
+  } = (0,external_react_.useState)(false);
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+    children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: (Item_module_default()).container,
+      children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (Item_module_default()).topLines,
+        children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+          className: (Item_module_default()).lineOne
+        }), /*#__PURE__*/jsx_runtime_.jsx("div", {
+          className: (Item_module_default()).lineTwo
+        })]
+      }), /*#__PURE__*/jsx_runtime_.jsx("div", {
+        className: (Item_module_default()).content,
+        style: style,
+        onClick: () => setShowItemModal(true),
+        children: /*#__PURE__*/jsx_runtime_.jsx("p", {
+          children: title
+        })
+      }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (Item_module_default()).bottomLines,
+        children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+          className: (Item_module_default()).lineOne
+        }), /*#__PURE__*/jsx_runtime_.jsx("div", {
+          className: (Item_module_default()).lineTwo
+        })]
+      })]
+    }), showItemModal && /*#__PURE__*/jsx_runtime_.jsx(ItemModal, {
+      onModalClose: () => setShowItemModal(false),
+      img: img_src,
+      title: title,
+      description: description
+    })]
+  });
 }
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/interopRequireWildcard.js ***!
-  \***********************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js");
-
-function _getRequireWildcardCache() {
-  if (typeof WeakMap !== "function") return null;
-  var cache = new WeakMap();
-
-  _getRequireWildcardCache = function _getRequireWildcardCache() {
-    return cache;
-  };
-
-  return cache;
-}
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  }
-
-  if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") {
-    return {
-      "default": obj
-    };
-  }
-
-  var cache = _getRequireWildcardCache();
-
-  if (cache && cache.has(obj)) {
-    return cache.get(obj);
-  }
-
-  var newObj = {};
-  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-
-      if (desc && (desc.get || desc.set)) {
-        Object.defineProperty(newObj, key, desc);
-      } else {
-        newObj[key] = obj[key];
-      }
-    }
-  }
-
-  newObj["default"] = obj;
-
-  if (cache) {
-    cache.set(obj, newObj);
-  }
-
-  return newObj;
-}
-
-module.exports = _interopRequireWildcard;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/typeof.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
-  \*******************************************************/
-/***/ (function(module) {
-
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/server/denormalize-page-path.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/server/denormalize-page-path.js ***!
-  \****************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-exports.__esModule=true;exports.normalizePathSep=normalizePathSep;exports.denormalizePagePath=denormalizePagePath;function normalizePathSep(path){return path.replace(/\\/g,'/');}function denormalizePagePath(page){page=normalizePathSep(page);if(page.startsWith('/index/')){page=page.slice(6);}else if(page==='/index'){page='/';}return page;}
-//# sourceMappingURL=denormalize-page-path.js.map
-
-/***/ }),
-
-/***/ "./node_modules/next/link.js":
-/*!***********************************!*\
-  !*** ./node_modules/next/link.js ***!
-  \***********************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/next/dist/client/link.js")
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Main.jsx":
-/*!****************************************!*\
-  !*** ./components/Pages/Main/Main.jsx ***!
-  \****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ Main; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _common_Testimonials_Testimonials__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/Testimonials/Testimonials */ "./components/Pages/common/Testimonials/Testimonials.jsx");
-/* harmony import */ var _Matches_Matches__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Matches/Matches */ "./components/Pages/Main/Matches/Matches.jsx");
-/* harmony import */ var _News_News__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./News/News */ "./components/Pages/Main/News/News.jsx");
-/* harmony import */ var _Prediction_Prediction__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Prediction/Prediction */ "./components/Pages/Main/Prediction/Prediction.jsx");
-
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\Main\\Main.jsx";
-// components
-
-
-
-
-function Main() {
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_News_News__WEBPACK_IMPORTED_MODULE_3__.News, {}, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 13
-    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Matches_Matches__WEBPACK_IMPORTED_MODULE_2__.Matches, {
-      gameRulesState: true
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 12,
-      columnNumber: 13
-    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Prediction_Prediction__WEBPACK_IMPORTED_MODULE_4__.Prediction, {}, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 15,
-      columnNumber: 13
-    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_common_Testimonials_Testimonials__WEBPACK_IMPORTED_MODULE_1__.Testimonials, {
-      page: 'home',
-      locationInPage: 'testimonials',
-      textPathName: '.title'
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 13
-    }, this)]
-  }, void 0, true);
-}
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/GameRules/Arrows/Arrow.jsx":
-/*!******************************************************************!*\
-  !*** ./components/Pages/Main/Matches/GameRules/Arrows/Arrow.jsx ***!
-  \******************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Arrow": function() { return /* binding */ Arrow; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_elastic_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-elastic-carousel */ "react-elastic-carousel");
-/* harmony import */ var react_elastic_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_elastic_carousel__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _public_images_main_news_arrowRight_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../public/images/main/news/arrowRight.png */ "./public/images/main/news/arrowRight.png");
-/* harmony import */ var _public_images_main_news_arrowLeft_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../public/images/main/news/arrowLeft.png */ "./public/images/main/news/arrowLeft.png");
-/* harmony import */ var _Arrow_module_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Arrow.module.scss */ "./components/Pages/Main/Matches/GameRules/Arrows/Arrow.module.scss");
-/* harmony import */ var _Arrow_module_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Arrow_module_scss__WEBPACK_IMPORTED_MODULE_4__);
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\Main\\Matches\\GameRules\\Arrows\\Arrow.jsx";
+// EXTERNAL MODULE: ./public/images/main/news/arrowRight.png
+var arrowRight = __webpack_require__(366);
+// EXTERNAL MODULE: ./public/images/main/news/arrowLeft.png
+var arrowLeft = __webpack_require__(4782);
+// EXTERNAL MODULE: ./components/Pages/Main/News/Slide/SlideItems/Arrows/Arrow.module.scss
+var Arrow_module = __webpack_require__(4319);
+var Arrow_module_default = /*#__PURE__*/__webpack_require__.n(Arrow_module);
+;// CONCATENATED MODULE: ./components/Pages/Main/News/Slide/SlideItems/Arrows/Arrow.jsx
  // icons
 
+
+ // styles 
 
 
 
@@ -642,301 +248,169 @@ function Arrow({
   onClick,
   isEdge
 }) {
-  const pointer = type === react_elastic_carousel__WEBPACK_IMPORTED_MODULE_1__.consts.PREV ? /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("img", {
-    src: _public_images_main_news_arrowLeft_png__WEBPACK_IMPORTED_MODULE_3__.default.src,
-    className: (_Arrow_module_scss__WEBPACK_IMPORTED_MODULE_4___default().arrowLeft),
+  const pointer = type === external_react_elastic_carousel_.consts.PREV ? /*#__PURE__*/jsx_runtime_.jsx("img", {
+    src: arrowLeft/* default.src */.Z.src,
+    className: (Arrow_module_default()).arrowLeft,
     alt: "arrow-left"
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 10,
-    columnNumber: 13
-  }, this) : /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("img", {
-    src: _public_images_main_news_arrowRight_png__WEBPACK_IMPORTED_MODULE_2__.default.src,
-    className: (_Arrow_module_scss__WEBPACK_IMPORTED_MODULE_4___default().arrowRight),
+  }) : /*#__PURE__*/jsx_runtime_.jsx("img", {
+    src: arrowRight/* default.src */.Z.src,
+    className: (Arrow_module_default()).arrowRight,
     alt: "arrow-right"
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 16,
-    columnNumber: 13
-  }, this),
+  }),
         styles = {
-    width: '100%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    position: 'absolute',
-    bottom: '35px' // padding: '10%'
-
+    position: 'relative'
   };
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
     onClick: onClick,
     disabled: isEdge,
     style: styles,
     children: pointer
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 33,
-    columnNumber: 9
-  }, this);
+  });
 }
+// EXTERNAL MODULE: ./components/Pages/Main/News/Slide/SlideItems/Pagination/Pagination.module.scss
+var Pagination_module = __webpack_require__(8427);
+var Pagination_module_default = /*#__PURE__*/__webpack_require__.n(Pagination_module);
+;// CONCATENATED MODULE: ./components/Pages/Main/News/Slide/SlideItems/Pagination/Pagination.jsx
 
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/GameRules/GameRules.jsx":
-/*!***************************************************************!*\
-  !*** ./components/Pages/Main/Matches/GameRules/GameRules.jsx ***!
-  \***************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "GameRules": function() { return /* binding */ GameRules; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_elastic_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-elastic-carousel */ "react-elastic-carousel");
-/* harmony import */ var react_elastic_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_elastic_carousel__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Arrows_Arrow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Arrows/Arrow */ "./components/Pages/Main/Matches/GameRules/Arrows/Arrow.jsx");
-/* harmony import */ var _Pagination_Pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Pagination/Pagination */ "./components/Pages/Main/Matches/GameRules/Pagination/Pagination.jsx");
-/* harmony import */ var _GameRules_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./GameRules.module.scss */ "./components/Pages/Main/Matches/GameRules/GameRules.module.scss");
-/* harmony import */ var _GameRules_module_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_GameRules_module_scss__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _game_rules__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./game_rules */ "./components/Pages/Main/Matches/GameRules/game_rules.js");
-/* harmony import */ var _SlidePage_SlidePages__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SlidePage/SlidePages */ "./components/Pages/Main/Matches/GameRules/SlidePage/SlidePages.jsx");
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\Main\\Matches\\GameRules\\GameRules.jsx";
-// components
-
-
- // styles
-
-
-
-
-function GameRules() {
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-    className: (_GameRules_module_scss__WEBPACK_IMPORTED_MODULE_6___default().container),
-    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((react_elastic_carousel__WEBPACK_IMPORTED_MODULE_1___default()), {
-      renderArrow: _Arrows_Arrow__WEBPACK_IMPORTED_MODULE_2__.Arrow,
-      renderPagination: _Pagination_Pagination__WEBPACK_IMPORTED_MODULE_3__.Pagination,
-      children: _game_rules__WEBPACK_IMPORTED_MODULE_4__.game_rules.map(el => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_SlidePage_SlidePages__WEBPACK_IMPORTED_MODULE_5__.SlidePages, {
-        pageData: el
-      }, Math.random(), false, {
-        fileName: _jsxFileName,
-        lineNumber: 20,
-        columnNumber: 25
-      }, this))
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 14,
-      columnNumber: 13
-    }, this)
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 13,
-    columnNumber: 9
-  }, this);
-}
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/GameRules/Pagination/Pagination.jsx":
-/*!***************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/GameRules/Pagination/Pagination.jsx ***!
-  \***************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Pagination": function() { return /* binding */ Pagination; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Pagination_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pagination.module.scss */ "./components/Pages/Main/Matches/GameRules/Pagination/Pagination.module.scss");
-/* harmony import */ var _Pagination_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Pagination_module_scss__WEBPACK_IMPORTED_MODULE_1__);
-
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\Main\\Matches\\GameRules\\Pagination\\Pagination.jsx";
 
 function Pagination({
   pages,
   activePage,
   onClick
 }) {
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-      className: (_Pagination_module_scss__WEBPACK_IMPORTED_MODULE_1___default().container),
-      children: pages.map(el => {
-        const isActivePage = activePage === el;
-        return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-          onClick: () => onClick(el),
-          active: isActivePage ? 'true' : 'false',
-          className: `${(_Pagination_module_scss__WEBPACK_IMPORTED_MODULE_1___default().round)} ${isActivePage && (_Pagination_module_scss__WEBPACK_IMPORTED_MODULE_1___default().active)}`
-        }, el, false, {
-          fileName: _jsxFileName,
-          lineNumber: 13,
-          columnNumber: 29
-        }, this);
-      })
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 6,
-      columnNumber: 13
-    }, this)
-  }, void 0, false);
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: (Pagination_module_default()).container,
+    children: pages.map(el => {
+      const isActivePage = activePage === el;
+      return /*#__PURE__*/jsx_runtime_.jsx("div", {
+        onClick: () => onClick(el),
+        active: isActivePage ? 'true' : 'false',
+        className: `${(Pagination_module_default()).round} ${isActivePage && (Pagination_module_default()).active}`
+      }, el);
+    })
+  });
 }
+// EXTERNAL MODULE: ./components/Pages/Main/News/Slide/Slide.module.scss
+var Slide_module = __webpack_require__(6356);
+var Slide_module_default = /*#__PURE__*/__webpack_require__.n(Slide_module);
+// EXTERNAL MODULE: ./lib/er.lib.js
+var er_lib = __webpack_require__(1863);
+// EXTERNAL MODULE: ./lib/request-destinations.js + 1 modules
+var request_destinations = __webpack_require__(8955);
+;// CONCATENATED MODULE: ./components/Pages/Main/News/Slide/Slide.jsx
 
-/***/ }),
+ // components
 
-/***/ "./components/Pages/Main/Matches/GameRules/SlidePage/PagePareticles/PagePareticles.jsx":
-/*!*********************************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/GameRules/SlidePage/PagePareticles/PagePareticles.jsx ***!
-  \*********************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PageParticles": function() { return /* binding */ PageParticles; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _PageParticales_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PageParticales.module.scss */ "./components/Pages/Main/Matches/GameRules/SlidePage/PagePareticles/PageParticales.module.scss");
-/* harmony import */ var _PageParticales_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_PageParticales_module_scss__WEBPACK_IMPORTED_MODULE_1__);
 
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\Main\\Matches\\GameRules\\SlidePage\\PagePareticles\\PagePareticles.jsx";
-// styles 
 
-function PageParticles({
-  title,
-  body
-}) {
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-    className: (_PageParticales_module_scss__WEBPACK_IMPORTED_MODULE_1___default().container),
-    children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("p", {
-      className: (_PageParticales_module_scss__WEBPACK_IMPORTED_MODULE_1___default().title),
-      children: title
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 13
-    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("p", {
-      className: (_PageParticales_module_scss__WEBPACK_IMPORTED_MODULE_1___default().body),
-      children: body
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 13
-    }, this)]
-  }, void 0, true, {
-    fileName: _jsxFileName,
-    lineNumber: 9,
-    columnNumber: 9
-  }, this);
-}
 
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/GameRules/SlidePage/SlidePages.jsx":
-/*!**************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/GameRules/SlidePage/SlidePages.jsx ***!
-  \**************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SlidePages": function() { return /* binding */ SlidePages; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _PagePareticles_PagePareticles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PagePareticles/PagePareticles */ "./components/Pages/Main/Matches/GameRules/SlidePage/PagePareticles/PagePareticles.jsx");
-/* harmony import */ var _SlidePages_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SlidePages.module.scss */ "./components/Pages/Main/Matches/GameRules/SlidePage/SlidePages.module.scss");
-/* harmony import */ var _SlidePages_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_SlidePages_module_scss__WEBPACK_IMPORTED_MODULE_2__);
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\Main\\Matches\\GameRules\\SlidePage\\SlidePages.jsx";
  // styles 
 
 
-function SlidePages({
-  pageData
-}) {
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-    className: (_SlidePages_module_scss__WEBPACK_IMPORTED_MODULE_2___default().container),
-    children: pageData.map(el => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_PagePareticles_PagePareticles__WEBPACK_IMPORTED_MODULE_1__.PageParticles, {
-      title: el.title,
-      body: el.body
-    }, Math.random(), false, {
-      fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 21
-    }, this))
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 10,
-    columnNumber: 9
-  }, this);
+
+
+
+
+
+function Slide() {
+  const {
+    0: slide_data,
+    1: setSlideData
+  } = (0,external_react_.useState)([]);
+  (0,external_react_.useEffect)(() => {
+    (0,er_lib/* request */.WY)(request_destinations/* GET_NEWS */.uA, {}, {
+      auth: true
+    }).then(news => {
+      setSlideData(news.data.data);
+    }).catch(err => {
+      console.log(err);
+    });
+  }, []);
+  const // consts and states 
+  // breakpoints for slide 
+  breakpoints = [{
+    width: 375,
+    itemsToShow: 2,
+    itemsToScroll: 2
+  }, {
+    width: 740,
+    itemsToShow: 3,
+    itemsToScroll: 3
+  }, {
+    width: 1700,
+    itemsToShow: 4,
+    itemsToScroll: 4
+  }];
+  return /*#__PURE__*/jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+    children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (Slide_module_default()).container,
+      children: /*#__PURE__*/jsx_runtime_.jsx((external_react_elastic_carousel_default()), {
+        itemPadding: [35, 12],
+        renderArrow: Arrow,
+        renderPagination: Pagination,
+        className: (Slide_module_default()).carousel,
+        breakPoints: breakpoints,
+        children: slide_data.map(el => /*#__PURE__*/jsx_runtime_.jsx(Item, {
+          img_src: el.img_path,
+          title: el.title,
+          description: el.text
+        }, Math.random()))
+      })
+    })
+  });
 }
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/GameRules/game_rules.js":
-/*!***************************************************************!*\
-  !*** ./components/Pages/Main/Matches/GameRules/game_rules.js ***!
-  \***************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "game_rules": function() { return /* binding */ game_rules; }
-/* harmony export */ });
-const game_rules = [// each array are page data
-[{
-  title: 'Футбол: команда и запасные игроки.',
-  body: `
-                Здравствуйте! Что нужно делать чтобы всегда выходить с плюсом ☝️
-                1. На каждый матч ставим по 10% из банка ( если у вас на счету есть 10000 рублей, то на каждый матч нужно ставить по 1000 рублей, не важно насколько банк поднимается или снижается, нужно ставить по 1000 рублей в любом случаи ) 
-                2. Самое важное играть по правилам ( во основном игроки 99% проигрывают, почему? Потому что они не соблюдают правила игры , начинают сами делать свои прогнозы, что и разрушает всю систему прогнозов! Соблюдайте за правилами и поднимайте Ваш банк! Удачных вам ставок🤝
-            `
-}, {
-  title: ' Футбол: «Положение вне игры».',
-  body: 'Правило «вне игры» запрещает игрокам атакующей команды находиться к линии ворот соперника ближе, чем защитники соперника.Если в момент передачи мяча между игроком и линией ворот соперника находится менее двух игроков команды соперника, включая вратаря, то такой игрок будет в положении «вне игры». При положении «вне игры» назначается свободный удар.Положение «вне игры» не фиксируется при аналогичной ситуации на своей половине поля, при выполнении ударов от ворот, угловых ударов, при вбрасывании из - за боковой линии и при спорном вбрасывании.'
-}]];
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/Header/Header.jsx":
-/*!*********************************************************!*\
-  !*** ./components/Pages/Main/Matches/Header/Header.jsx ***!
-  \*********************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Header": function() { return /* binding */ Header; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Header_module_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Header.module.scss */ "./components/Pages/Main/Matches/Header/Header.module.scss");
-/* harmony import */ var _Header_module_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Header_module_scss__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _common_Title_Title__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../common/Title/Title */ "./components/Pages/common/Title/Title.jsx");
-/* harmony import */ var _common_Button_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../common/Button/Button */ "./components/Pages/common/Button/Button.jsx");
-/* harmony import */ var next_dist_client_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/dist/client/router */ "./node_modules/next/dist/client/router.js");
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\Main\\Matches\\Header\\Header.jsx";
- // componetns 
+;// CONCATENATED MODULE: ./components/Pages/Main/News/News.jsx
+// styles 
+ // components 
 
 
 
 
-function Header({
-  buttonsActivity,
-  on_TM_click,
-  on_GM_click,
-  gameRulesState
+
+function News() {
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+    className: (News_module_default()).container,
+    children: [/*#__PURE__*/jsx_runtime_.jsx(Title/* Title */.D, {
+      page: "home",
+      locationInPage: 'news',
+      textPathName: '.title'
+    }), /*#__PURE__*/jsx_runtime_.jsx(Slide, {})]
+  });
+}
+// EXTERNAL MODULE: ./components/Pages/Main/Prediction/Prediction.module.scss
+var Prediction_module = __webpack_require__(6064);
+var Prediction_module_default = /*#__PURE__*/__webpack_require__.n(Prediction_module);
+// EXTERNAL MODULE: ./node_modules/next/dist/client/router.js
+var client_router = __webpack_require__(7890);
+;// CONCATENATED MODULE: ./public/images/main/prediction/arrowRight.png
+/* harmony default export */ const prediction_arrowRight = ({"src":"/_next/static/image/public/images/main/prediction/arrowRight.e9dba785747491acb7998cbbb746f4c6.png","height":704,"width":130,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAICAYAAAA4GpVBAAAAF0lEQVR4nGP89++fIIgQAhEIFphAcAUB8zEYZYJ8YIEAAAAASUVORK5CYII="});
+;// CONCATENATED MODULE: ./public/images/main/prediction/arrowLeft.png
+/* harmony default export */ const prediction_arrowLeft = ({"src":"/_next/static/image/public/images/main/prediction/arrowLeft.ad78976e6333778a207c8b4640c029eb.png","height":704,"width":129,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAICAYAAAA4GpVBAAAAF0lEQVR4nGP89++fIIgQAhFgFhoBkQAA8wwYY8hVOxAAAAAASUVORK5CYII="});
+;// CONCATENATED MODULE: ./public/images/main/prediction/arrowLeftVector.png
+/* harmony default export */ const arrowLeftVector = ({"src":"/_next/static/image/public/images/main/prediction/arrowLeftVector.d8458dada367d8155e70f31f33e7f51f.png","height":38,"width":42,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAj0lEQVR42mPYyOnOvInTnZ0BCDZyeiwA4q9ALM8ABJs4PVgZkMFGLvcQIP4PVPAMiJUggpzubkCViUAcD2T7AvHmTQhFZgxAgT9ASaAAUBBIQ9nfwIq4PG4zAI1UB3JsgbQ1kNYF4k2buDxAiq8CxWQZYADqqHyo5CUgFoQ5jAnoCzaoe1qB+DxQkh/qKxYAhDFDlixaijoAAAAASUVORK5CYII="});
+;// CONCATENATED MODULE: ./public/images/main/prediction/arrowRightVector.png
+/* harmony default export */ const arrowRightVector = ({"src":"/_next/static/image/public/images/main/prediction/arrowRightVector.06d8a51874c183ecd9157b1e40cc000b.png","height":38,"width":42,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAmElEQVR42k2OPQoCQQyFg78wKcQDiGBjZW0h1kljaS2ewFt4Di+QKfQkCnbWewPtZPxkd2EfPCa874WJRLKhoFCbM7/xRVBOPs7J+tLABaAK9RLJ99IVYE2hYqPw3rLaLqsf2D6SmRC+augfYPkb2PorgBmlZxNcKa/INny1JV+2N0zxA0jJTtIVYFC/PmG+47Mg7hiFWu8HwXBDICPPO3kAAAAASUVORK5CYII="});
+// EXTERNAL MODULE: ./components/Pages/Main/Prediction/PredictionSlide/Arrows/Arrow.module.scss
+var Arrows_Arrow_module = __webpack_require__(7941);
+var Arrows_Arrow_module_default = /*#__PURE__*/__webpack_require__.n(Arrows_Arrow_module);
+;// CONCATENATED MODULE: ./components/Pages/Main/Prediction/PredictionSlide/Arrows/Arrow.jsx
+ // icons
+
+
+
+
+
+
+
+
+function Arrow_Arrow({
+  type,
+  onClick,
+  isEdge
 }) {
   const router = (0,next_dist_client_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();
   return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
@@ -1428,65 +902,36 @@ function Arrow({
     src: _public_images_main_news_arrowLeft_png__WEBPACK_IMPORTED_MODULE_3__.default.src,
     className: (_Arrow_module_scss__WEBPACK_IMPORTED_MODULE_4___default().arrowLeft),
     alt: "arrow-left"
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 10,
-    columnNumber: 13
-  }, this) : /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("img", {
-    src: _public_images_main_news_arrowRight_png__WEBPACK_IMPORTED_MODULE_2__.default.src,
-    className: (_Arrow_module_scss__WEBPACK_IMPORTED_MODULE_4___default().arrowRight),
+  }) : /*#__PURE__*/jsx_runtime_.jsx("img", {
+    src: arrowLeftVector.src,
+    className: (Arrows_Arrow_module_default()).arrowLeftVector,
     alt: "arrow-right"
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 16,
-    columnNumber: 13
-  }, this),
+  }),
         styles = {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    position: 'absolute',
-    bottom: '35px' // padding: '10%'
-
+    position: 'relative',
+    height: '100%',
+    bottom: 0
   };
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
     onClick: onClick,
     disabled: isEdge,
     style: styles,
-    children: pointer
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 33,
-    columnNumber: 9
-  }, this);
+    children: [pointer, arrows]
+  });
 }
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/TodayMatches/TMBody/TDMatchesBoard/Pagination/Pagination.jsx":
-/*!****************************************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/TodayMatches/TMBody/TDMatchesBoard/Pagination/Pagination.jsx ***!
-  \****************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Pagination": function() { return /* binding */ Pagination; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Pagination_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pagination.module.scss */ "./components/Pages/Main/Matches/TodayMatches/TMBody/TDMatchesBoard/Pagination/Pagination.module.scss");
-/* harmony import */ var _Pagination_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Pagination_module_scss__WEBPACK_IMPORTED_MODULE_1__);
+// EXTERNAL MODULE: ./components/Pages/Main/Prediction/PredictionSlide/Item/Item.module.scss
+var Item_Item_module = __webpack_require__(5043);
+var Item_Item_module_default = /*#__PURE__*/__webpack_require__.n(Item_Item_module);
+;// CONCATENATED MODULE: external "react-timer-hook"
+const external_react_timer_hook_namespaceObject = require("react-timer-hook");
+;// CONCATENATED MODULE: ./components/Pages/Main/Prediction/PredictionSlide/Item/Timer/Timer.jsx
 
 
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\Main\\Matches\\TodayMatches\\TMBody\\TDMatchesBoard\\Pagination\\Pagination.jsx";
 
-function Pagination({
-  pages,
-  activePage,
-  onClick
+
+function Timer({
+  expiryTimestamp,
+  timeClass
 }) {
   return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
@@ -2186,43 +1631,20 @@ function Row({
     columnNumber: 9
   }, this);
 }
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/TodayMatches/TMBody/common/Row/RowDescription/RowDescription.jsx":
-/*!********************************************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/TodayMatches/TMBody/common/Row/RowDescription/RowDescription.jsx ***!
-  \********************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "RowDescription": function() { return /* binding */ RowDescription; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-translate/useTranslation */ "next-translate/useTranslation");
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _RowDescription_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RowDescription.module.scss */ "./components/Pages/Main/Matches/TodayMatches/TMBody/common/Row/RowDescription/RowDescription.module.scss");
-/* harmony import */ var _RowDescription_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_RowDescription_module_scss__WEBPACK_IMPORTED_MODULE_2__);
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\Main\\Matches\\TodayMatches\\TMBody\\common\\Row\\RowDescription\\RowDescription.jsx";
-// translations
- // styles
+// EXTERNAL MODULE: ./components/Pages/Main/Prediction/PredictionSlide/Item/PredictionModal/PredictionModal.module.scss
+var PredictionModal_module = __webpack_require__(5418);
+var PredictionModal_module_default = /*#__PURE__*/__webpack_require__.n(PredictionModal_module);
+;// CONCATENATED MODULE: ./components/Pages/Main/Prediction/PredictionSlide/Item/PredictionModal/PredictionModal.jsx
 
 
-function RowDescription({
-  clickBuy,
-  date,
-  gameState,
-  teamOne,
+
+function PredictionModal({
+  teamOneName,
+  teamTwoName,
   teamOneIcon,
-  score,
-  teamTwo,
   teamTwoIcon,
-  buyButtonName,
-  locationInMainPage
+  prediction,
+  ordinar
 }) {
   const // translation consfigs
   {
@@ -2478,43 +1900,13 @@ function DayChangeButton({
     columnNumber: 9
   }, this);
 }
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/TodayMatches/TMHeader/TMHeader.jsx":
-/*!**************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/TodayMatches/TMHeader/TMHeader.jsx ***!
-  \**************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TMHeader": function() { return /* binding */ TMHeader; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _common_Title_Title__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../common/Title/Title */ "./components/Pages/common/Title/Title.jsx");
-/* harmony import */ var _DayChangeButton_DayChangeButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./DayChangeButton/DayChangeButton */ "./components/Pages/Main/Matches/TodayMatches/TMHeader/DayChangeButton/DayChangeButton.jsx");
-/* harmony import */ var react_calendar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-calendar */ "react-calendar");
-/* harmony import */ var react_calendar__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_calendar__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _TMHeader_module_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./TMHeader.module.scss */ "./components/Pages/Main/Matches/TodayMatches/TMHeader/TMHeader.module.scss");
-/* harmony import */ var _TMHeader_module_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_TMHeader_module_scss__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _public_images_main_matches_Calendar_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../public/images/main/matches/Calendar.png */ "./public/images/main/matches/Calendar.png");
-/* harmony import */ var _public_images_main_matches_arrowRight_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../../public/images/main/matches/arrowRight.png */ "./public/images/main/matches/arrowRight.png");
-/* harmony import */ var _public_images_main_matches_arrowLeft_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../../public/images/main/matches/arrowLeft.png */ "./public/images/main/matches/arrowLeft.png");
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Pages\\Main\\Matches\\TodayMatches\\TMHeader\\TMHeader.jsx";
+;// CONCATENATED MODULE: ./components/Pages/Main/Prediction/PredictionSlide/Item/Item.jsx
 // hooks
- // components
-
-
+ // translations
 
  // styles
 
- // icons
+ //components
 
 
 
@@ -8512,639 +7904,119 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\pages\\index.js";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function Item_Item({
+  teamOneName,
+  teamTwoName,
+  teamOneIcon,
+  teamTwoIcon,
+  predictionButtonName,
+  buyButtonName,
+  locationInMainPage,
+  expiryTimestamp,
+  prediction,
+  ordinar,
+  clickBuy
+}) {
+  const router = (0,client_router.useRouter)();
+  console.log(expiryTimestamp);
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+  const // translation consfigs
+  {
+    t
+  } = useTranslation_default()('home'),
+        translationPath = `${locationInMainPage}`,
+        translate = key => t(`${translationPath}${key}`),
+        {
+    0: showPrediction,
+    1: setShowPrediction
+  } = (0,external_react_.useState)(false);
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-
-const IndexPage = () => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_Pages_Main_Main__WEBPACK_IMPORTED_MODULE_3__.default, {}, void 0, false, {
-  fileName: _jsxFileName,
-  lineNumber: 7,
-  columnNumber: 25
-}, undefined);
-
-IndexPage.layout = "main";
-/* harmony default export */ __webpack_exports__["default"] = (IndexPage);
-async function getStaticProps(ctx) {
-  return {
-    props: _objectSpread({}, await next_translate_loadNamespaces__WEBPACK_IMPORTED_MODULE_2___default()(_objectSpread(_objectSpread(_objectSpread({}, ctx), {}, {
-      pathname: '/index',
-      loaderName: 'getStaticProps'
-    }, _next_translate_root_i18n__WEBPACK_IMPORTED_MODULE_1__), {}, {
-      loadLocaleFrom: (l, n) => __webpack_require__("./locales lazy recursive ^\\.\\/.*\\/.*$")(`./${l}/${n}`).then(m => m.default)
-    })))
-  };
-}
-
-/***/ }),
-
-/***/ "./redux/features/matchSlice.js":
-/*!**************************************!*\
-  !*** ./redux/features/matchSlice.js ***!
-  \**************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "matchSlice": function() { return /* binding */ matchSlice; },
-/* harmony export */   "setMatchId": function() { return /* binding */ setMatchId; },
-/* harmony export */   "getMatchId": function() { return /* binding */ getMatchId; }
-/* harmony export */ });
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "@reduxjs/toolkit");
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__);
-
-const matchSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({
-  name: "user",
-  initialState: {
-    matchId: null
-  },
-  reducers: {
-    setMatchId: (state, action) => {
-      state.matchId = action.payload;
-    }
+  function goToPredictions() {
+    // setShowPrediction(!showPrediction);
+    router.push(`/prediction`);
   }
-});
-const {
-  setMatchId
-} = matchSlice.actions;
-const getMatchId = state => state.match.matchId;
-/* harmony default export */ __webpack_exports__["default"] = (matchSlice.reducer);
 
-/***/ }),
-
-/***/ "./src/games_data/predictions/slide.js":
-/*!*********************************************!*\
-  !*** ./src/games_data/predictions/slide.js ***!
-  \*********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "slide_data": function() { return /* binding */ slide_data; }
-/* harmony export */ });
-/* harmony import */ var _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../public/images/games/atletico.png */ "./public/images/games/atletico.png");
-/* harmony import */ var _public_images_main_prediction_barca_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../public/images/main/prediction/barca.png */ "./public/images/main/prediction/barca.png");
-/* harmony import */ var _public_images_main_prediction_psj_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../public/images/main/prediction/psj.png */ "./public/images/main/prediction/psj.png");
-/* harmony import */ var _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../public/images/games/atletic.png */ "./public/images/games/atletic.png");
-/* harmony import */ var _public_images_main_matches_marcel_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../../public/images/main/matches/marcel.png */ "./public/images/main/matches/marcel.png");
-/* harmony import */ var _public_images_main_matches_rennais_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../public/images/main/matches/rennais.png */ "./public/images/main/matches/rennais.png");
-// icons
-
-
-
-
-
-
-const slide_data = [{
-  id: 'predictionslideGame1',
-  teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_main_prediction_psj_png__WEBPACK_IMPORTED_MODULE_2__.default.src,
-  teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_main_prediction_barca_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
-  prediction: {
-    thereIs: false,
-    totalBet: 'тб 1,5 / ',
-    coefficent: 'коеф 3,5'
-  },
-  type: "Ординар",
-  date: '14.01',
-  time: '22:30',
-  coefficent: '1.67',
-  predictionButtonName: '.slide.pred_button',
-  buyButtonName: '.slide.buy_button',
-  predictionText: 'Фулхем тб 1,5 / коэф 3,5',
-  ordinarText: 'Ординар / 1500руб.',
-  price: '1500 руб.'
-}, {
-  id: 'predictionslideGame2',
-  teamOneName: 'Барселона',
-  teamOneIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_3__.default.src,
-  teamTwoName: 'ПСЖ',
-  teamTwoIcon: _public_images_main_prediction_psj_png__WEBPACK_IMPORTED_MODULE_2__.default.src,
-  prediction: {
-    thereIs: false,
-    totalBet: '',
-    coefficent: ''
-  },
-  type: "Экспресс",
-  date: '14.01',
-  time: '22:30',
-  coefficent: '2.07',
-  predictionButtonName: '.slide.pred_button',
-  buyButtonName: '.slide.buy_button',
-  predictionText: 'Фулхем тб 1,5 / коэф 3,5',
-  ordinarText: 'Ординар / 1500руб.',
-  price: '2500 руб.'
-}, {
-  id: 'predictionslideGame3',
-  teamOneName: 'Марсель',
-  teamOneIcon: _public_images_main_prediction_barca_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
-  teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_main_matches_rennais_png__WEBPACK_IMPORTED_MODULE_5__.default.src,
-  prediction: {
-    thereIs: false,
-    totalBet: '',
-    coefficent: ''
-  },
-  type: 'Экспресс',
-  date: '14.01',
-  time: '22:30',
-  coefficent: '2.07',
-  predictionButtonName: '.slide.pred_button',
-  buyButtonName: '.slide.buy_button',
-  predictionText: 'Фулхем тб 1,5 / коэф 3,5',
-  ordinarText: 'Ординар / 1500руб.',
-  price: '1800 руб. '
-}, {
-  id: 'predictionslideGame4',
-  teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
-  teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_3__.default.src,
-  prediction: {
-    thereIs: false,
-    totalBet: '',
-    coefficent: ''
-  },
-  type: 'Экспресс',
-  date: '14.01',
-  time: '22:30',
-  coefficent: '1.67',
-  predictionButtonName: '.slide.pred_button',
-  buyButtonName: '.slide.buy_button',
-  predictionText: 'Фулхем тб 1,5 / коэф 3,5',
-  ordinarText: 'Ординар / 1500руб.',
-  price: '1500 руб.',
-  buyButtonName: '.slide.buy_button',
-  buyButtonName: '.slide.buy_button',
-  predictionText: 'Фулхем тб 1,5 / коэф 3,5',
-  ordinarText: 'Ординар / 1500руб.'
-}, {
-  id: 'predictionslideGame5',
-  teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
-  teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_3__.default.src,
-  prediction: {
-    thereIs: false,
-    totalBet: 'тб 1,5 / ',
-    coefficent: 'коеф 3,5'
-  },
-  type: 'Экспресс',
-  date: '14.01',
-  time: '22:30',
-  coefficent: '1.67',
-  predictionButtonName: '.slide.pred_button',
-  buyButtonName: '.slide.buy_button',
-  predictionText: 'Фулхем тб 1,5 / коэф 3,5',
-  ordinarText: 'Ординар / 1500руб.',
-  price: '1500 руб.',
-  predictionText: 'Фулхем тб 1,5 / коэф 3,5',
-  buyButtonName: '.slide.buy_button',
-  predictionText: 'Фулхем тб 1,5 / коэф 3,5',
-  ordinarText: 'Ординар / 1500руб.'
-}, {
-  id: 'predictionslideGame6',
-  teamOneName: 'Атлетико',
-  teamOneIcon: _public_images_games_atletico_png__WEBPACK_IMPORTED_MODULE_0__.default.src,
-  teamTwoName: 'Атлетик',
-  teamTwoIcon: _public_images_games_atletic_png__WEBPACK_IMPORTED_MODULE_3__.default.src,
-  prediction: {
-    thereIs: false,
-    totalBet: '',
-    coefficent: ''
-  },
-  type: 'Экспресс',
-  date: '14.01',
-  time: '22:30',
-  coefficent: '1.67',
-  predictionButtonName: '.slide.pred_button',
-  buyButtonName: '.slide.buy_button',
-  predictionText: 'Фулхем тб 1,5 / коэф 3,5',
-  ordinarText: 'Ординар / 1500руб.',
-  price: '1500 руб.',
-  ordinarText: 'Ординар / 1500руб.',
-  buyButtonName: '.slide.buy_button',
-  predictionText: 'Фулхем тб 1,5 / коэф 3,5',
-  ordinarText: 'Ординар / 1500руб.'
-}];
-
-/***/ }),
-
-/***/ "./public/images/games/atletic.png":
-/*!*****************************************!*\
-  !*** ./public/images/games/atletic.png ***!
-  \*****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/games/atletic.283820fd26ae308542c4998747f6f150.png","height":63,"width":58,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAA6UlEQVR42jXKv2rCUBgF8Dv4MoW+R4fOhT5L7RgXN6FLC5EUHBpq0g4XGkWw4o25XNAhEC5JMLmKUfDPoKAI0e/TDP6WwzkcEsdx7vs+cs5BCAFBEIAYjfC6AVFK7ZIkwSgMwfU8kFKCaxio0nRPGGOxruv4qmlnq9GA9Y99nlCKTqeTkMV8bl4P+FWtnjbNbzja9imLIhwrZRFPiKfZdIqrj/cce/+4rNfzRZbhgPNnUhinqZD9Pm4/jUPQ7aIMwyG50SqVO6fdPjDLwl9Kjy/l8j0pMNctFdk0zQfaauVvtdpj0f8cp3QBWfybj50+cosAAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/games/atletico.png":
-/*!******************************************!*\
-  !*** ./public/images/games/atletico.png ***!
-  \******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/games/atletico.2ce75e21162e2e6dc48b99e6018107e0.png","height":62,"width":47,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAYAAADaxo44AAAA00lEQVR4nAHIADf/AWxthsTe3+cx8vP6CgwKBAAGBwX2BhAOzwGDhJb/NzYuANzc4f8EBwcAyMfSARDi4QABj5Cg/BEQDQL7//8BvKq+AHt8Xv/jr6v/AWhpgv319vkCMDEl/y/87AAyS0gBw6Wq/wFeaIP/JwH2/VlWRAP++voACBMT/dCwswMBnoWO9U5QRQrt4N/8/v7/ABEdHQTFsLb3AY2ToTAoBv6mJSAYKQAAAADc4ejYyv4KWwFqI0YAlt26BrmssrsAAAABR1RORVUoUfl+lVtrSTCy4QAAAABJRU5ErkJggg=="});
-
-/***/ }),
-
-/***/ "./public/images/main/feedbacks/avatar.png":
-/*!*************************************************!*\
-  !*** ./public/images/main/feedbacks/avatar.png ***!
-  \*************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/feedbacks/avatar.be06bdc05430f5cdcfb84f7a9e542113.png","height":75,"width":76,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAcElEQVR42h2GvQnCABQGv0n8I06g8+gYOo222lgIWoqkExEbcYZokeS+AfLyCAd3J4vCJZHcmVnyxH+CFet0xUicHTwsxDPvJFpHzs77obWA4MKGLVeCRpR8LJL0l5uY8uPAgqWPVIyFmPOmS14UqAdtymH3TfFz0QAAAABJRU5ErkJggg=="});
-
-/***/ }),
-
-/***/ "./public/images/main/feedbacks/dislike.png":
-/*!**************************************************!*\
-  !*** ./public/images/main/feedbacks/dislike.png ***!
-  \**************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/feedbacks/dislike.83cc76247dd473ab2bb375fce25b931f.png","height":32,"width":30,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAZklEQVR42j3LsQsBAQCF8ae4FLOwmGQQmUyXQclww4nhJkphtPvnf5HhXm/4vuGLQuXirHZ3dYtSbWBsap6o4mWUdvbxaGWm0MTT2kbfwsfJMSZWGjuVXltaOigTXZ38HkNv2/z5C9U+N2z0rGAnAAAAAElFTkSuQmCC"});
-
-/***/ }),
-
-/***/ "./public/images/main/feedbacks/filledStar.png":
-/*!*****************************************************!*\
-  !*** ./public/images/main/feedbacks/filledStar.png ***!
-  \*****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/feedbacks/filledStar.b44aa812dcbf9eb14e64af6c8e7279b3.png","height":26,"width":28,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAhUlEQVR42mP4d9qIEYhZGYDg3xljPSA2ZwACoBgbEDMxIAOgQCsQz0EXNADiTCAOAuLb/84YvQHSoUCcAcQWIAVCQDwbiP//O238H2jFHxAbiFcCsRSySX1ASaACsOQyVGtO6DMBBW8A8QogngnEz4AKeeEKgBxtoGAukmmpQGzJwMDAAAAUDl1k5bO5eAAAAABJRU5ErkJggg=="});
-
-/***/ }),
-
-/***/ "./public/images/main/feedbacks/like.png":
-/*!***********************************************!*\
-  !*** ./public/images/main/feedbacks/like.png ***!
-  \***********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/feedbacks/like.1432d8d4c07437b9467c5259eb94b1dc.png","height":31,"width":29,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAQAAACfDS2NAAAAXElEQVR42jXLrQrCAABG0U+H1SA2w6JWsYk/yWYQBJVhWdjCGOz9y2Fh7OR7MzG4JYpYJtae7pk5uKoclfHw0Vs5OWvibaucKq/Mj0Wijktio0js/KLz1av8tfYj64EumOLFM3wAAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/main/feedbacks/unfilledStar.png":
-/*!*******************************************************!*\
-  !*** ./public/images/main/feedbacks/unfilledStar.png ***!
-  \*******************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/feedbacks/unfilledStar.26105c5d4e7834de797ed734505ee2bf.png","height":26,"width":28,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAfklEQVR42l2NsQqDQBBENyF6TVIGUqZNFxCLEwWxUBHB3kYL8Tc9f2zx2S0uPGZnuJsVDe6mIX4IoyH6s3thlAzuYodggPESuoSw1s3l7AVkusUlWoE/f31gwZSmyeNX9Gvre3jqHjm0u95+wQQtNDDT8LYPfgSz8SM+FRE5AIwvR0qDJC/mAAAAAElFTkSuQmCC"});
-
-/***/ }),
-
-/***/ "./public/images/main/matches/Calendar.png":
-/*!*************************************************!*\
-  !*** ./public/images/main/matches/Calendar.png ***!
-  \*************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/matches/Calendar.e618df3387ed123b651d4ef2af917fe2.png","height":34,"width":34,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAa0lEQVR42g3LuwqCABQA0PsL/UFLc1MQFYRiIj0sehA1mYoNEfb/wyE58wkTvavWy93PJJTOMkcHuYsyNNJBZiOx1oVc56FRe/pKQurtplZp7dVhrVfp7IyNfEIhMWxzJzN5yCwsrUwVtuZ/Ti5S0Ko2P9EAAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/main/matches/arrowLeft.png":
-/*!**************************************************!*\
-  !*** ./public/images/main/matches/arrowLeft.png ***!
-  \**************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/matches/arrowLeft.e2372a0c78d8c6b246bdee3ffab40f7b.png","height":35,"width":31,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAA40lEQVR42mNYsGCB2IL5843mz51nsmDhQqP58+cbA8X0gJiXASQBZBgvWLVCd/60GRbzZ88xmT9vvhlQTJ0BpHLhnu2q8+xjZ8xLL4td/Pq+BNAE4/nz5mkxLNi6SX2uZdSyeVzeH+Y5xE2fZxW1aH5Du9eCNatUGBZsWKs1Lzijai6vz6N5AZll8+IK0uf3TnRYsGypGsP8OXNNF54+ojAvLLt4Xk5l5KKb52Ugxs7XZgC5DOgIiwUb12kDVRvOnzXbfP78+eZAcWWQJC/IZUAFOvPnztUCsrUWzJ+vsmDBAjYAjTVxRM3en78AAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/main/matches/arrowRight.png":
-/*!***************************************************!*\
-  !*** ./public/images/main/matches/arrowRight.png ***!
-  \***************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/matches/arrowRight.c6d6d9e1222c418f60fbb8194d08a823.png","height":35,"width":31,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAA4ElEQVR42hWOvUoDQRSFz70zs+vKJqYRwVgKQsTCh7AzhbXVoq9g4ZNYaLGNIPZWAatUadOFQAKBFEmKhM0Pm2TuzaT44HD4io/yPD8HUA/QEfXekDElgAEDuFIRp9udUy9Mtco6CAmASw6HoSQubfY00L/Og3z/N/n2enqULdXSjbS7DflqZSh9rO1Z5qNfNa+PPwxRwLFHNV4gYqGUC5yGXW4No1id8P1N336+f+Ci2sNz4828NFs6nqQUau9UJMFuz3RW2cCy6LxIybmZBTAkorpGzuhyDQBE1k5JMToAcRNcEex0l0gAAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/main/matches/marcel.png":
-/*!***********************************************!*\
-  !*** ./public/images/main/matches/marcel.png ***!
-  \***********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/matches/marcel.eb4604864ce2401aa24fb4ed271f6e83.png","height":53,"width":41,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAYAAADaxo44AAAAtUlEQVR42mOon7OFlQEI7i5n0H24gkEdxG6cswkoBgLTbrjazLgQazH9YgKQbQ8RnH6dn3n6tf1AgU6GadenANnbgTQXUPW1biBeDxRYwTTt+lqgwjVAiVYGoOB2IF4ExBeBAucZpl9bAmRvZhCafm2D4PRri/mmX5sBZPcKTL+2DogXAHXcaWGYdruXYeqdUIapdwOB7MlAXMewYn5f9t5FmR4rF3Q7r13Q5rV3UZbTovlTYgAFZVfAeuZWPQAAAABJRU5ErkJggg=="});
-
-/***/ }),
-
-/***/ "./public/images/main/matches/rennais.png":
-/*!************************************************!*\
-  !*** ./public/images/main/matches/rennais.png ***!
-  \************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/matches/rennais.d7f597304947400fb20f05e2dae6b5fb.png","height":51,"width":47,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAA6klEQVR42mPY3cGjkeHPeTfEguHcVgOG/c+DxK+9SFY9+22DgADDujY9c3UGhv9Hq6v/H1+65P/apLT/T2wYPv7Y4CzB0Faq5p/IwPD/18H9vx9du/pn9apV/27rMfz8M9NNl6E6XqqXgYHh/62+rt+7erv/L6uu/vNQmuH/6wqDVIZcf4Etysbm/91MDH5v8PP8/zjY89fTYO//zzNU+hgaE3gmOJkZ/WewdPi/I8jn99uo8P+Pw93/vy6TzWD4f46BozWGoV/agOHLRh2B/6/9ZF8/y2aoZEAGu6aIq52ukOn5f0BfGCYGANZKZsFc21vHAAAAAElFTkSuQmCC"});
-
-/***/ }),
-
-/***/ "./public/images/main/news/arrowLeft.png":
-/*!***********************************************!*\
-  !*** ./public/images/main/news/arrowLeft.png ***!
-  \***********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/news/arrowLeft.d6d50fface3220cacee88cd5e555601a.png","height":35,"width":31,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAAzUlEQVR42mP4//+/8L9///R///xlBGQbANmGQFoHSHMzAAmDv3/+mIIEfn3/Yfrz23fTv3//mgH56gx/fv82BjKUthW1dZ6avzoJyBYHYiOgBh0GIENtU3b99HkMnh82p9dN3JRSPeXBiXNeQHFVkKTGntbJdQsE/J/tqult2N85vfz5tVsuIE0Mv3/+NAUyFPa1T6s4v3JzNJAtCTVWmwHIALr0pzmQ1gZiw5/fvpn/+/sXxFcFuZYfyND69eOH3p/ff3Sg3lD/9+8fBwBj9qPPj+47kgAAAABJRU5ErkJggg=="});
-
-/***/ }),
-
-/***/ "./public/images/main/news/arrowRight.png":
-/*!************************************************!*\
-  !*** ./public/images/main/news/arrowRight.png ***!
-  \************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/news/arrowRight.911fc9e84e04463780a3b75918a655a7.png","height":35,"width":31,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAAyUlEQVR42mP49++fMBDr/f//3+Df378Gv3/9MgKydYBi3Awgwb9//pj++PrNDMg2Bkn8/vnLAkirMfz5/dsEyADpFN3fNq30yOSF2UC2ElCxLkin9tVdB8J2NPR2bi1pnTifzeft8VnLQAoUwJJXdu0P29nY174xu3bOfEbvDyfnr0oHiiuCjAXZowvEYocnzMs7vXhtApCt/PPbdz2QTj2gg8y+f/liAXIcSOHvnz8tgbQqA9DJ/ECsBXblr18gCZDj1P/9+8cBAJy9o+jCXWdCAAAAAElFTkSuQmCC"});
-
-/***/ }),
-
-/***/ "./public/images/main/news/fortBack.png":
-/*!**********************************************!*\
-  !*** ./public/images/main/news/fortBack.png ***!
-  \**********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/news/fortBack.2fac4a53f06e0d7b508d03958d6c11af.png","height":324,"width":372,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAA8klEQVR4nAHnABj/AWmNVcqXBMgBaQo8APXT8gALFAgABQgHANDO4QAuKywAAWOCUMz0DA4A3N3dAM3i1gBELDYAFP39AO7m9gA1MUQAAXyNZ8slGgwA3qaNACRCZADe3tcA8xQqACAmNQDy8+4AAVZvOsvP5tgAnGKbAD4dAQDSpKAAnOsWAOsN8ADr89QAAVxvWcsjFx8AUTxGAOy8pAC+p7sAIygDAIgABgAS/QcAAVxkW8zn9u8AgT8nANu+xwCjqcgAHyoTAJ/8CQAa/PoAAUpZMMkB/foADv/zABH2BgCWzeoAAPcAAAsAAAD5BQIAW7FWDmq1I3sAAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/main/news/secBack.png":
-/*!*********************************************!*\
-  !*** ./public/images/main/news/secBack.png ***!
-  \*********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/news/secBack.0ced895860560a903a1c6bc33f835af3.png","height":324,"width":372,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAA40lEQVR4nA3MvUrDUBiA4fezTdLBdmhNQEonBRcdxKUEBxcn8S5c3d1EvAHdvQGvoYir2KC4dLKjBBKtpCXNz0nOafaHR06fXt4vT1xpbcFvZQhLw1+pSXIhns2Q2+fXwD/0SPMKRU3WwJ8a5iX8N1AeJx/Tz3nCV5gz3OlyPLLxd5tBwySykPHVzfSt6HA33sc/6FHVCq1KFmGHTK+Ri7O9wDiuGQw93G4CSshLRRxp7PYKuX4YBZZdmKWOxGR9WnXPFGst/fzILGJH5Py+FRSqbXS5jV46pKlF/J0wwGNVZGwALRBr5bNZ+TkAAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/main/news/trdBack.png":
-/*!*********************************************!*\
-  !*** ./public/images/main/news/trdBack.png ***!
-  \*********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/news/trdBack.163bd395eaaf0c9d5d253ead99babcfd.png","height":324,"width":372,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAA2UlEQVR42g3NsU6DUBQG4P/AgVvopRAWa0y0wUQHu5uYODr4wDUOOjp1NUbHJqYxpNBSxNJeLsd+L/DR0+x5bruOhlEsLnuwvUAPfDAzrao/4bfXGa2rRkIG1ZtasskYVlzqKBBWTE6+XMjDeUWeaWV8cYNM97ikL/n+/KBs+yLO7b1CEORyfXeCq2mG1nPRpArTx1gWvwZOUTaYHzSC5BRpYlB075DREFEq8Cdn4AP5pJMBymKJrVPCMqNXLvZVDx2H4Lze2HVLx2YFpUYIowR1s8PeGMjPDv819lzNSMO9gAAAAABJRU5ErkJggg=="});
-
-/***/ }),
-
-/***/ "./public/images/main/prediction/arrowLeft.png":
-/*!*****************************************************!*\
-  !*** ./public/images/main/prediction/arrowLeft.png ***!
-  \*****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/prediction/arrowLeft.ad78976e6333778a207c8b4640c029eb.png","height":704,"width":129,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAICAYAAAA4GpVBAAAAF0lEQVR4nGP89++fIIgQAhFgFhoBkQAA8wwYY8hVOxAAAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/main/prediction/arrowLeftVector.png":
-/*!***********************************************************!*\
-  !*** ./public/images/main/prediction/arrowLeftVector.png ***!
-  \***********************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/prediction/arrowLeftVector.d8458dada367d8155e70f31f33e7f51f.png","height":38,"width":42,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAj0lEQVR42mPYyOnOvInTnZ0BCDZyeiwA4q9ALM8ABJs4PVgZkMFGLvcQIP4PVPAMiJUggpzubkCViUAcD2T7AvHmTQhFZgxAgT9ASaAAUBBIQ9nfwIq4PG4zAI1UB3JsgbQ1kNYF4k2buDxAiq8CxWQZYADqqHyo5CUgFoQ5jAnoCzaoe1qB+DxQkh/qKxYAhDFDlixaijoAAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/main/prediction/arrowRight.png":
-/*!******************************************************!*\
-  !*** ./public/images/main/prediction/arrowRight.png ***!
-  \******************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/prediction/arrowRight.e9dba785747491acb7998cbbb746f4c6.png","height":704,"width":130,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAICAYAAAA4GpVBAAAAF0lEQVR4nGP89++fIIgQAhEIFphAcAUB8zEYZYJ8YIEAAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/main/prediction/arrowRightVector.png":
-/*!************************************************************!*\
-  !*** ./public/images/main/prediction/arrowRightVector.png ***!
-  \************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/prediction/arrowRightVector.06d8a51874c183ecd9157b1e40cc000b.png","height":38,"width":42,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAmElEQVR42k2OPQoCQQyFg78wKcQDiGBjZW0h1kljaS2ewFt4Di+QKfQkCnbWewPtZPxkd2EfPCa874WJRLKhoFCbM7/xRVBOPs7J+tLABaAK9RLJ99IVYE2hYqPw3rLaLqsf2D6SmRC+augfYPkb2PorgBmlZxNcKa/INny1JV+2N0zxA0jJTtIVYFC/PmG+47Mg7hiFWu8HwXBDICPPO3kAAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/main/prediction/barca.png":
-/*!*************************************************!*\
-  !*** ./public/images/main/prediction/barca.png ***!
-  \*************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/prediction/barca.75f9e230beb79e282d7a0f369a6e666e.png","height":223,"width":206,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAA80lEQVR4nAHoABf/AZ+FQDMSGRwpBffwGfEAANcM9c0t+AIR3fn8H84Bsp5abCsOPJMC3vIAASzzAAfphQDxBSgAz/c5QAGYmFw2RQA5yQfV9vwISfUBBe2AA+r7Muwl9mMmAcukMaQhI0Rb5+P1/fcB+wIH8Zv/GBsAAtTkP3QBpIxWsvXWAk39BAD7CxHwBO3mH/sOFwEGEiT3gwGNh15r97kOlAEQBwBDVtL+sXstAhE5+AAhTww7AQD/AAG0gy+Q5fI0XxAH8g/y+g3pJR7hhu9tvZIBnqYuAB7G0gAVSgAY8OpDNjFOOr3NjIP144YAALmzYkTO5qjQAAAAAElFTkSuQmCC"});
-
-/***/ }),
-
-/***/ "./public/images/main/prediction/predBack.png":
-/*!****************************************************!*\
-  !*** ./public/images/main/prediction/predBack.png ***!
-  \****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/prediction/predBack.32a89693e564b68ca4a7ab1d7e21d24a.png","height":704,"width":1919,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAYAAACuyE5IAAAAbklEQVR4nAFjAJz/ATk+Vv4UGQsA9/jtAPv6+wADA/4AFxkiAPHu9wC6raYAATM8VP8nMS4A/Pr9AO/q5wD18O8AHSklAOTa1wDMvMMAATczPv4pNh0AGzAQAB4ZCgDs7e4AxLPvANfQ6ADx8/EAQA8rdSvvJKoAAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/main/prediction/psj.png":
-/*!***********************************************!*\
-  !*** ./public/images/main/prediction/psj.png ***!
-  \***********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/prediction/psj.ce4ac3196b901280cddb9b7e17c485fe.png","height":225,"width":224,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAABA0lEQVR42mOAgeLJuyKb5+xf0rHw4Kz8CTtsQWKd8w8wgiUnrTo+d+baE//nbjz9f/qaE/8nrTj6v2/Z0RywZMOc/Sk57Rv/F0zf+3tj/5rfcydv/lU+Y+//9NaN/5ftvqTDUDxxx2afvCX/GSrX/3lZ3vH/QPm0/wxla39HlCz/37/saAlD9eSda+Xylv8/tmDr79sNPf8f9c74v3Da1l8mBcv/z1x9PJ9hwtIjAWGNG/7Pn7D5f/HEdb+nzNz8q61l3f+U7q3fDpy+o8AAdu3CgzWx3dv+xzRs+J/Yte1/7uRd3+esOxnIgAzmrjlu2rlgf1XfooNFm/deAuvM79rMBAA4BIm6HGniAwAAAABJRU5ErkJggg=="});
-
-/***/ }),
-
-/***/ "./public/images/main/slideBack.png":
-/*!******************************************!*\
-  !*** ./public/images/main/slideBack.png ***!
-  \******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/main/slideBack.b09b5b243f277d8fa71421f7f1324528.png","height":324,"width":372,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAA1klEQVR42g3Fv07CQBzA8e/vvBZszsSgRUUT4p/BycTdJ3D3gXwXFxNNjIvPoKMDCwMhJCKIAdrScoXewWf5yP3j09fpvpG7aI4O4fqiSes4ZrXMKJ3ySkSrn2JbPZDvzw+ZJLnYlZMs+Rcd7irdGaS+hyOaDrhq3/L89g6qonl4QjJ5RfdmKZiQdDikP/ojarTYqdUY2QobHKHbnRd+x5a9hxvOLs+phxECeIQiD9DxwVhi47Fhl+68jzgQBeuyxOYl2jRMZbMK5YT1wuO348EWwnLh2QDFKldZn6yA1gAAAABJRU5ErkJggg=="});
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/GameRules/Arrows/Arrow.module.scss":
-/*!**************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/GameRules/Arrows/Arrow.module.scss ***!
-  \**************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"arrowLeft": "Arrow_arrowLeft__1Hvij",
-	"arrowRight": "Arrow_arrowRight__10rNu"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/GameRules/GameRules.module.scss":
-/*!***********************************************************************!*\
-  !*** ./components/Pages/Main/Matches/GameRules/GameRules.module.scss ***!
-  \***********************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "GameRules_container__38ele",
-	"transition": "GameRules_transition__3RLZS"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/GameRules/Pagination/Pagination.module.scss":
-/*!***********************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/GameRules/Pagination/Pagination.module.scss ***!
-  \***********************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "Pagination_container__3icXg",
-	"round": "Pagination_round__36yfy",
-	"active": "Pagination_active__2MiRN"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/GameRules/SlidePage/PagePareticles/PageParticales.module.scss":
-/*!*****************************************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/GameRules/SlidePage/PagePareticles/PageParticales.module.scss ***!
-  \*****************************************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "PageParticales_container__3epss",
-	"title": "PageParticales_title__UpEyN",
-	"body": "PageParticales_body__1hNAF"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/GameRules/SlidePage/SlidePages.module.scss":
-/*!**********************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/GameRules/SlidePage/SlidePages.module.scss ***!
-  \**********************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "SlidePages_container__3Zi1E"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/Header/Header.module.scss":
-/*!*****************************************************************!*\
-  !*** ./components/Pages/Main/Matches/Header/Header.module.scss ***!
-  \*****************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "Header_container__3Zdmc",
-	"title": "Header_title__ZRJ89",
-	"buttons": "Header_buttons__17vfb"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/Matches.module.scss":
-/*!***********************************************************!*\
-  !*** ./components/Pages/Main/Matches/Matches.module.scss ***!
-  \***********************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "Matches_container__2Ka2z",
-	"content": "Matches_content__1PQ_E",
-	"in_seperete_page": "Matches_in_seperete_page__2-_Fp"
-};
-
-
-/***/ }),
+  return /*#__PURE__*/jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+    children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (Item_Item_module_default()).container,
+      children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (Item_Item_module_default()).content,
+        children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+          className: (Item_Item_module_default()).top,
+          children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+            className: (Item_Item_module_default()).team,
+            children: [/*#__PURE__*/jsx_runtime_.jsx("img", {
+              src: teamOneIcon,
+              alt: ""
+            }), /*#__PURE__*/jsx_runtime_.jsx("p", {
+              children: teamOneName
+            })]
+          }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+            className: (Item_Item_module_default()).timer_container,
+            children: [/*#__PURE__*/jsx_runtime_.jsx("p", {
+              children: "\u0418\u0433\u0440\u0430 \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442\u0441\u044F \u0447\u0435\u0440\u0435\u0437"
+            }), /*#__PURE__*/jsx_runtime_.jsx(Timer, {
+              expiryTimestamp: expiryTimestamp,
+              timeClass: (Item_Item_module_default()).timer
+            })]
+          }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+            className: (Item_Item_module_default()).team,
+            children: [/*#__PURE__*/jsx_runtime_.jsx("img", {
+              src: teamTwoIcon,
+              alt: ""
+            }), /*#__PURE__*/jsx_runtime_.jsx("p", {
+              children: teamTwoName
+            })]
+          }), showPrediction && /*#__PURE__*/jsx_runtime_.jsx(PredictionModal, {
+            teamOneName: teamOneName,
+            teamTwoName: teamTwoName,
+            teamOneIcon: teamOneIcon,
+            teamTwoIcon: teamTwoIcon,
+            prediction: prediction,
+            ordinar: ordinar
+          })]
+        }), /*#__PURE__*/jsx_runtime_.jsx("div", {
+          className: (Item_Item_module_default()).bottom,
+          children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+            className: (Item_Item_module_default()).buttons,
+            children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+              className: (Item_Item_module_default()).prediction_button_container,
+              children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+                className: (Item_Item_module_default()).prediction_button_content,
+                onClick: () => goToPredictions(),
+                children: /*#__PURE__*/jsx_runtime_.jsx("p", {
+                  children: translate(predictionButtonName)
+                })
+              })
+            }), /*#__PURE__*/jsx_runtime_.jsx("div", {
+              className: (Item_Item_module_default()).buy_button_container,
+              children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+                className: (Item_Item_module_default()).buy_button_content,
+                onClick: clickBuy,
+                children: /*#__PURE__*/jsx_runtime_.jsx("p", {
+                  children: translate(buyButtonName)
+                })
+              })
+            })]
+          })
+        })]
+      })
+    })
+  });
+}
+// EXTERNAL MODULE: ./components/Pages/Main/Prediction/PredictionSlide/PrdeictionSlide.module.scss
+var PrdeictionSlide_module = __webpack_require__(97);
+var PrdeictionSlide_module_default = /*#__PURE__*/__webpack_require__.n(PrdeictionSlide_module);
+;// CONCATENATED MODULE: ./public/images/main/prediction/predBack.png
+/* harmony default export */ const predBack = ({"src":"/_next/static/image/public/images/main/prediction/predBack.32a89693e564b68ca4a7ab1d7e21d24a.png","height":704,"width":1919,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAYAAACuyE5IAAAAbklEQVR4nAFjAJz/ATk+Vv4UGQsA9/jtAPv6+wADA/4AFxkiAPHu9wC6raYAATM8VP8nMS4A/Pr9AO/q5wD18O8AHSklAOTa1wDMvMMAATczPv4pNh0AGzAQAB4ZCgDs7e4AxLPvANfQ6ADx8/EAQA8rdSvvJKoAAAAASUVORK5CYII="});
+// EXTERNAL MODULE: ./src/games_data/predictions/slide.js + 2 modules
+var slide = __webpack_require__(5589);
+// EXTERNAL MODULE: external "react-redux"
+var external_react_redux_ = __webpack_require__(79);
+// EXTERNAL MODULE: ./redux/features/matchSlice.js
+var matchSlice = __webpack_require__(6834);
+;// CONCATENATED MODULE: ./components/Pages/Main/Prediction/PredictionSlide/PrdeictionSlide.jsx
+// hooks and helpers
 
 /***/ "./components/Pages/Main/Matches/TodayMatches/TMBody/SpecificDayMatchesBoard/SpecificDayMatchesBoard.module.scss":
 /*!***********************************************************************************************************************!*\
@@ -9166,167 +8038,193 @@ module.exports = {
   \***************************************************************************************************/
 /***/ (function(module) {
 
-// Exports
-module.exports = {
-	"arrowLeft": "Arrow_arrowLeft__3GtA4",
-	"arrowRight": "Arrow_arrowRight__3329l"
-};
 
+
+ // styles
+
+ // images, icons
+
+
+
+
+
+
+
+
+function PrdeictionSlide() {
+  const {
+    0: slide_data,
+    1: setSlideData
+  } = (0,external_react_.useState)([]);
+  const {
+    0: currentMatchId,
+    1: setCurrentMatchId
+  } = (0,external_react_.useState)(null);
+  const dispatch = (0,external_react_redux_.useDispatch)();
+  (0,external_react_.useEffect)(() => {
+    (0,er_lib/* request */.WY)(request_destinations/* GET_PREDICTIONS */.s2, {}, {
+      auth: true
+    }).then(rsp => {
+      var _rsp$data;
+
+      // toast(`Successfully registered`)
+      setSlideData(rsp.data.data.map(item => {
+        return {
+          id: item.id,
+          teamOneName: '',
+          teamOneIcon: item[`team1_img_path`],
+          teamTwoName: '',
+          teamTwoIcon: item[`team2_img_path`],
+          prediction: {
+            thereIs: false,
+            totalBet: 'тб 1,5 / ',
+            coefficent: 'коеф 3,5'
+          },
+          type: item.type,
+          date: item.date,
+          time: item.time,
+          coefficent: item.factor,
+          predictionButtonName: '.slide.pred_button',
+          buyButtonName: '.slide.buy_button',
+          predictionText: 'Фулхем тб 1,5 / коэф 3,5',
+          ordinarText: `${item.type} / ${item.price}руб.`,
+          price: item.price + ' руб.'
+        };
+      }));
+
+      if (((_rsp$data = rsp.data) === null || _rsp$data === void 0 ? void 0 : _rsp$data.data.length) > 0) {
+        setCurrentMatchId(rsp.data.data[0].id);
+      }
+    }).catch(error => {});
+  }, []);
+  (0,external_react_.useEffect)(() => {
+    if (currentMatchId !== null && currentMatchId !== undefined) {
+      dispatch((0,matchSlice/* setMatchId */.vs)(currentMatchId));
+    }
+  }, [currentMatchId]);
+  const style = {
+    backgroundImage: "url(" + predBack.src + ")",
+    backgroundSize: "cover"
+  },
+        time = new Date(),
+        router = (0,client_router.useRouter)(),
+        breakpoints = [{
+    width: 375,
+    itemPadding: [21, 0, 25, 0]
+  }, {
+    width: 616,
+    itemPadding: [79, 0, 79, 0]
+  }, {
+    width: 1920,
+    itemPadding: [115, 0, 43, 0]
+  }];
+  time.setSeconds(time.getSeconds() + 10600);
+
+  function slideChange(p) {
+    var _p$item;
+
+    setCurrentMatchId(p === null || p === void 0 ? void 0 : (_p$item = p.item) === null || _p$item === void 0 ? void 0 : _p$item.id);
+  }
+
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: (PrdeictionSlide_module_default()).container,
+    style: style,
+    children: /*#__PURE__*/jsx_runtime_.jsx((external_react_elastic_carousel_default()), {
+      pagination: false,
+      renderArrow: Arrow_Arrow,
+      breakPoints: breakpoints,
+      onChange: slideChange,
+      children: slide_data.map(el => /*#__PURE__*/jsx_runtime_.jsx(Item_Item, {
+        id: el.id,
+        teamOneName: el.teamOneName,
+        teamTwoName: el.teamTwoName,
+        teamOneIcon: el.teamOneIcon,
+        teamTwoIcon: el.teamTwoIcon,
+        predictionButtonName: el.predictionButtonName,
+        buyButtonName: el.buyButtonName,
+        locationInMainPage: 'prediction',
+        expiryTimestamp: new Date(`${el.date.split(`.`).reverse().join(`.`)} ${el.time}`),
+        prediction: el.predictionText,
+        ordinar: el.ordinarText,
+        clickBuy: () => router.push({
+          pathname: '/prediction',
+          query: {
+            game: el.id
+          }
+        })
+      }, Math.random()))
+    })
+  });
+}
+;// CONCATENATED MODULE: ./components/Pages/Main/Prediction/Prediction.jsx
+// styles
+ // components
+
+
+
+
+
+function Prediction() {
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+    className: (Prediction_module_default()).container,
+    children: [/*#__PURE__*/jsx_runtime_.jsx(Title/* Title */.D, {
+      page: "home",
+      locationInPage: "prediction",
+      textPathName: ".title"
+    }), /*#__PURE__*/jsx_runtime_.jsx(PrdeictionSlide, {})]
+  });
+}
+;// CONCATENATED MODULE: ./components/Pages/Main/Main.jsx
+// components
+
+
+
+
+
+
+
+function Main() {
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+    children: [/*#__PURE__*/jsx_runtime_.jsx(News, {}), /*#__PURE__*/jsx_runtime_.jsx(Matches/* Matches */.R, {
+      gameRulesState: true
+    }), /*#__PURE__*/jsx_runtime_.jsx(Prediction, {}), /*#__PURE__*/jsx_runtime_.jsx(Testimonials/* Testimonials */.H, {
+      page: 'home',
+      locationInPage: 'testimonials',
+      textPathName: '.title'
+    })]
+  });
+}
+;// CONCATENATED MODULE: ./pages/index.js
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+const IndexPage = () => /*#__PURE__*/jsx_runtime_.jsx(Main, {});
+
+IndexPage.layout = "main";
+/* harmony default export */ const pages = (IndexPage);
+async function getStaticProps(ctx) {
+  return {
+    props: _objectSpread({}, await loadNamespaces_default()(_objectSpread(_objectSpread(_objectSpread({}, ctx), {}, {
+      pathname: '/index',
+      loaderName: 'getStaticProps'
+    }, i18n), {}, {
+      loadLocaleFrom: (l, n) => __webpack_require__(7655)(`./${l}/${n}`).then(m => m.default)
+    })))
+  };
+}
 
 /***/ }),
 
-/***/ "./components/Pages/Main/Matches/TodayMatches/TMBody/TDMatchesBoard/Pagination/Pagination.module.scss":
-/*!************************************************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/TodayMatches/TMBody/TDMatchesBoard/Pagination/Pagination.module.scss ***!
-  \************************************************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "Pagination_container__2sxLx",
-	"round": "Pagination_round__1dIlR",
-	"active": "Pagination_active__3XISs"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/TodayMatches/TMBody/TDMatchesBoard/TDMatchesBoard.module.scss":
-/*!*****************************************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/TodayMatches/TMBody/TDMatchesBoard/TDMatchesBoard.module.scss ***!
-  \*****************************************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "TDMatchesBoard_container__2PJra"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/TodayMatches/TMBody/TMMatchesBoard/TMMatchesBoard.module.scss":
-/*!*****************************************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/TodayMatches/TMBody/TMMatchesBoard/TMMatchesBoard.module.scss ***!
-  \*****************************************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "TMMatchesBoard_container__2dsHH"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/TodayMatches/TMBody/common/Row/Row.module.scss":
-/*!**************************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/TodayMatches/TMBody/common/Row/Row.module.scss ***!
-  \**************************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "Row_container__1WBOh"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/TodayMatches/TMBody/common/Row/RowDescription/RowDescription.module.scss":
-/*!****************************************************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/TodayMatches/TMBody/common/Row/RowDescription/RowDescription.module.scss ***!
-  \****************************************************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "RowDescription_container__219t-",
-	"content": "RowDescription_content__2SeXU",
-	"date_gameNStarted_content": "RowDescription_date_gameNStarted_content__1MqEJ",
-	"date_gameStarted_content": "RowDescription_date_gameStarted_content__3G_Z2",
-	"teams": "RowDescription_teams__27VPO",
-	"teamOne": "RowDescription_teamOne__TPIka",
-	"score": "RowDescription_score__38SVF",
-	"teamTwo": "RowDescription_teamTwo__3mad2",
-	"buyButton_container": "RowDescription_buyButton_container__3rCNk",
-	"button_content": "RowDescription_button_content__12wUP"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/TodayMatches/TMBody/common/Row/RowTitle/RowTitle.module.scss":
-/*!****************************************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/TodayMatches/TMBody/common/Row/RowTitle/RowTitle.module.scss ***!
-  \****************************************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "RowTitle_container__DWZ5L"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/TodayMatches/TMHeader/DayChangeButton/DayChangeButton.module.scss":
-/*!*********************************************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/TodayMatches/TMHeader/DayChangeButton/DayChangeButton.module.scss ***!
-  \*********************************************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "DayChangeButton_container__2dAqe",
-	"name": "DayChangeButton_name__2nSnI",
-	"date": "DayChangeButton_date__3-MW8",
-	"active_name": "DayChangeButton_active_name__315sP",
-	"transition": "DayChangeButton_transition__1TFg3",
-	"active_date": "DayChangeButton_active_date__OBeaD"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/TodayMatches/TMHeader/TMHeader.module.scss":
-/*!**********************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/TodayMatches/TMHeader/TMHeader.module.scss ***!
-  \**********************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "TMHeader_container__2sf8K",
-	"content": "TMHeader_content__23QuY",
-	"title": "TMHeader_title__3u9zG",
-	"day_change_buttons": "TMHeader_day_change_buttons__3qoYp",
-	"calendar": "TMHeader_calendar__2WAh_"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/Matches/TodayMatches/TodayMatches.module.scss":
-/*!*****************************************************************************!*\
-  !*** ./components/Pages/Main/Matches/TodayMatches/TodayMatches.module.scss ***!
-  \*****************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "TodayMatches_container__3xcfT",
-	"transition": "TodayMatches_transition__1divr"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/Main/News/News.module.scss":
-/*!*****************************************************!*\
-  !*** ./components/Pages/Main/News/News.module.scss ***!
-  \*****************************************************/
-/***/ (function(module) {
+/***/ 1930:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9336,11 +8234,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/Main/News/Slide/Slide.module.scss":
-/*!************************************************************!*\
-  !*** ./components/Pages/Main/News/Slide/Slide.module.scss ***!
-  \************************************************************/
-/***/ (function(module) {
+/***/ 6356:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9350,11 +8245,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/Main/News/Slide/SlideItems/Arrows/Arrow.module.scss":
-/*!******************************************************************************!*\
-  !*** ./components/Pages/Main/News/Slide/SlideItems/Arrows/Arrow.module.scss ***!
-  \******************************************************************************/
-/***/ (function(module) {
+/***/ 4319:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9365,11 +8257,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/Main/News/Slide/SlideItems/ItemModal/ItemModal.module.scss":
-/*!*************************************************************************************!*\
-  !*** ./components/Pages/Main/News/Slide/SlideItems/ItemModal/ItemModal.module.scss ***!
-  \*************************************************************************************/
-/***/ (function(module) {
+/***/ 5716:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9385,11 +8274,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/Main/News/Slide/SlideItems/Item/Item.module.scss":
-/*!***************************************************************************!*\
-  !*** ./components/Pages/Main/News/Slide/SlideItems/Item/Item.module.scss ***!
-  \***************************************************************************/
-/***/ (function(module) {
+/***/ 5519:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9404,11 +8290,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/Main/News/Slide/SlideItems/Pagination/Pagination.module.scss":
-/*!***************************************************************************************!*\
-  !*** ./components/Pages/Main/News/Slide/SlideItems/Pagination/Pagination.module.scss ***!
-  \***************************************************************************************/
-/***/ (function(module) {
+/***/ 8427:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9420,11 +8303,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/Main/Prediction/Prediction.module.scss":
-/*!*****************************************************************!*\
-  !*** ./components/Pages/Main/Prediction/Prediction.module.scss ***!
-  \*****************************************************************/
-/***/ (function(module) {
+/***/ 6064:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9434,11 +8314,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/Main/Prediction/PredictionSlide/Arrows/Arrow.module.scss":
-/*!***********************************************************************************!*\
-  !*** ./components/Pages/Main/Prediction/PredictionSlide/Arrows/Arrow.module.scss ***!
-  \***********************************************************************************/
-/***/ (function(module) {
+/***/ 7941:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9451,11 +8328,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/Main/Prediction/PredictionSlide/Item/Item.module.scss":
-/*!********************************************************************************!*\
-  !*** ./components/Pages/Main/Prediction/PredictionSlide/Item/Item.module.scss ***!
-  \********************************************************************************/
-/***/ (function(module) {
+/***/ 5043:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9476,11 +8350,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/Main/Prediction/PredictionSlide/Item/PredictionModal/PredictionModal.module.scss":
-/*!***********************************************************************************************************!*\
-  !*** ./components/Pages/Main/Prediction/PredictionSlide/Item/PredictionModal/PredictionModal.module.scss ***!
-  \***********************************************************************************************************/
-/***/ (function(module) {
+/***/ 5418:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9498,11 +8369,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/Main/Prediction/PredictionSlide/PrdeictionSlide.module.scss":
-/*!**************************************************************************************!*\
-  !*** ./components/Pages/Main/Prediction/PredictionSlide/PrdeictionSlide.module.scss ***!
-  \**************************************************************************************/
-/***/ (function(module) {
+/***/ 97:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9512,408 +8380,227 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/common/Button/Button.module.scss":
-/*!***********************************************************!*\
-  !*** ./components/Pages/common/Button/Button.module.scss ***!
-  \***********************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "Button_container__45KyD",
-	"content": "Button_content__14FlU",
-	"active": "Button_active__1MDg5"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/common/Testimonials/Arrows/Arrow.module.scss":
-/*!***********************************************************************!*\
-  !*** ./components/Pages/common/Testimonials/Arrows/Arrow.module.scss ***!
-  \***********************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"arrowLeft": "Arrow_arrowLeft__1XzbJ",
-	"arrowRight": "Arrow_arrowRight__20aI5"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/common/Testimonials/FeedBack/FeedBack.module.scss":
-/*!****************************************************************************!*\
-  !*** ./components/Pages/common/Testimonials/FeedBack/FeedBack.module.scss ***!
-  \****************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "FeedBack_container__2cCLW",
-	"top": "FeedBack_top__2Ihqj",
-	"avatar": "FeedBack_avatar__3C00c",
-	"rateing": "FeedBack_rateing__1viHO",
-	"bottom": "FeedBack_bottom__3Lkrj",
-	"bottom_content": "FeedBack_bottom_content__3uJoo",
-	"description": "FeedBack_description__13_Hn",
-	"date_likes_container": "FeedBack_date_likes_container__PXkdx",
-	"date": "FeedBack_date__28cgU",
-	"vertical_border": "FeedBack_vertical_border__4JLbW",
-	"likes_dislikes": "FeedBack_likes_dislikes__3TA_D",
-	"like": "FeedBack_like___TiIr",
-	"disLike": "FeedBack_disLike__dTh0f"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/common/Testimonials/FeedBack/LikeDislikeDrop/LikeDislikeDrop.module.scss":
-/*!***************************************************************************************************!*\
-  !*** ./components/Pages/common/Testimonials/FeedBack/LikeDislikeDrop/LikeDislikeDrop.module.scss ***!
-  \***************************************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "LikeDislikeDrop_container__1CW76",
-	"transition": "LikeDislikeDrop_transition__lxZtS",
-	"content": "LikeDislikeDrop_content__9Y_1e",
-	"row": "LikeDislikeDrop_row__1IL4A",
-	"avatar": "LikeDislikeDrop_avatar__8Iz4z",
-	"user_part": "LikeDislikeDrop_user_part__2cy98"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/common/Testimonials/LeaveComment/LeaveComment.module.scss":
-/*!************************************************************************************!*\
-  !*** ./components/Pages/common/Testimonials/LeaveComment/LeaveComment.module.scss ***!
-  \************************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "LeaveComment_container__2is6f",
-	"stars_container": "LeaveComment_stars_container__3oukj",
-	"stars_content": "LeaveComment_stars_content__25vFA",
-	"stars_area": "LeaveComment_stars_area__XNaIN",
-	"textarea_container": "LeaveComment_textarea_container__38wG3",
-	"button_container": "LeaveComment_button_container__2mOnf"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/common/Testimonials/Pagination/Pagination.module.scss":
-/*!********************************************************************************!*\
-  !*** ./components/Pages/common/Testimonials/Pagination/Pagination.module.scss ***!
-  \********************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "Pagination_container__OU_ZR",
-	"round": "Pagination_round__3bheV",
-	"active": "Pagination_active__2Cfbv"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/common/Testimonials/Sorting/Sorting.module.scss":
-/*!**************************************************************************!*\
-  !*** ./components/Pages/common/Testimonials/Sorting/Sorting.module.scss ***!
-  \**************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "Sorting_container__2Lhv8",
-	"name": "Sorting_name__3soQ8",
-	"bar": "Sorting_bar__1mbHD",
-	"byDate": "Sorting_byDate__3_Bz-",
-	"active": "Sorting_active__3a1aL"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/common/Testimonials/Testimonials.module.scss":
-/*!***********************************************************************!*\
-  !*** ./components/Pages/common/Testimonials/Testimonials.module.scss ***!
-  \***********************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "Testimonials_container__3LArP",
-	"feed_backs_container": "Testimonials_feed_backs_container__395hk",
-	"carousel": "Testimonials_carousel__2rrVV"
-};
-
-
-/***/ }),
-
-/***/ "./components/Pages/common/Title/Title.module.scss":
-/*!*********************************************************!*\
-  !*** ./components/Pages/common/Title/Title.module.scss ***!
-  \*********************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "Title_container__1g3-g"
-};
-
-
-/***/ }),
-
-/***/ "./components/common/auth/Modal/Modal.module.scss":
-/*!********************************************************!*\
-  !*** ./components/common/auth/Modal/Modal.module.scss ***!
-  \********************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"modalConteiner": "Modal_modalConteiner__3g8If",
-	"transition": "Modal_transition__1kfv9",
-	"modalContent": "Modal_modalContent__1-O47"
-};
-
-
-/***/ }),
-
-/***/ "@hookform/resolvers/yup":
-/*!******************************************!*\
-  !*** external "@hookform/resolvers/yup" ***!
-  \******************************************/
-/***/ (function(module) {
+/***/ 2166:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("@hookform/resolvers/yup");;
+module.exports = require("@hookform/resolvers/yup");
 
 /***/ }),
 
-/***/ "@reduxjs/toolkit":
-/*!***********************************!*\
-  !*** external "@reduxjs/toolkit" ***!
-  \***********************************/
-/***/ (function(module) {
+/***/ 6139:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("@reduxjs/toolkit");;
+module.exports = require("@reduxjs/toolkit");
 
 /***/ }),
 
-/***/ "axios":
-/*!************************!*\
-  !*** external "axios" ***!
-  \************************/
-/***/ (function(module) {
+/***/ 2376:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("axios");;
+module.exports = require("axios");
 
 /***/ }),
 
-/***/ "next-translate/loadNamespaces":
-/*!************************************************!*\
-  !*** external "next-translate/loadNamespaces" ***!
-  \************************************************/
-/***/ (function(module) {
+/***/ 8404:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/loadNamespaces");;
+module.exports = require("next-translate/loadNamespaces");
 
 /***/ }),
 
-/***/ "next-translate/useTranslation":
-/*!************************************************!*\
-  !*** external "next-translate/useTranslation" ***!
-  \************************************************/
-/***/ (function(module) {
+/***/ 8841:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/useTranslation");;
+module.exports = require("next-translate/useTranslation");
 
 /***/ }),
 
-/***/ "../next-server/lib/router-context":
-/*!**************************************************************!*\
-  !*** external "next/dist/next-server/lib/router-context.js" ***!
-  \**************************************************************/
-/***/ (function(module) {
+/***/ 9325:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router-context.js");;
+module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
 
-/***/ "../next-server/lib/router/utils/get-asset-path-from-route":
-/*!**************************************************************************************!*\
-  !*** external "next/dist/next-server/lib/router/utils/get-asset-path-from-route.js" ***!
-  \**************************************************************************************/
-/***/ (function(module) {
+/***/ 8300:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router/utils/get-asset-path-from-route.js");;
+module.exports = require("next/dist/shared/lib/i18n/detect-domain-locale.js");
 
 /***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
-/***/ (function(module) {
+/***/ 5378:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react");;
+module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 
 /***/ }),
 
-/***/ "react-beautiful-dnd":
-/*!**************************************!*\
-  !*** external "react-beautiful-dnd" ***!
-  \**************************************/
-/***/ (function(module) {
+/***/ 7162:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-beautiful-dnd");;
+module.exports = require("next/dist/shared/lib/mitt.js");
 
 /***/ }),
 
-/***/ "react-calendar":
-/*!*********************************!*\
-  !*** external "react-calendar" ***!
-  \*********************************/
-/***/ (function(module) {
+/***/ 8773:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-calendar");;
+module.exports = require("next/dist/shared/lib/router-context.js");
 
 /***/ }),
 
-/***/ "react-dom":
-/*!****************************!*\
-  !*** external "react-dom" ***!
-  \****************************/
-/***/ (function(module) {
+/***/ 2248:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-dom");;
+module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
 
 /***/ }),
 
-/***/ "react-elastic-carousel":
-/*!*****************************************!*\
-  !*** external "react-elastic-carousel" ***!
-  \*****************************************/
-/***/ (function(module) {
+/***/ 9372:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-elastic-carousel");;
+module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
 
 /***/ }),
 
-/***/ "react-hook-form":
-/*!**********************************!*\
-  !*** external "react-hook-form" ***!
-  \**********************************/
-/***/ (function(module) {
+/***/ 665:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-hook-form");;
+module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
 
 /***/ }),
 
-/***/ "react-is":
-/*!***************************!*\
-  !*** external "react-is" ***!
-  \***************************/
-/***/ (function(module) {
+/***/ 2747:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-is");;
+module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
 
 /***/ }),
 
-/***/ "react-loader-spinner":
-/*!***************************************!*\
-  !*** external "react-loader-spinner" ***!
-  \***************************************/
-/***/ (function(module) {
+/***/ 333:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-loader-spinner");;
+module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
 
 /***/ }),
 
-/***/ "react-redux":
-/*!******************************!*\
-  !*** external "react-redux" ***!
-  \******************************/
-/***/ (function(module) {
+/***/ 3456:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-redux");;
+module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 /***/ }),
 
-/***/ "react-timer-hook":
-/*!***********************************!*\
-  !*** external "react-timer-hook" ***!
-  \***********************************/
-/***/ (function(module) {
+/***/ 7620:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-timer-hook");;
+module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
-/***/ "react-toastify":
-/*!*********************************!*\
-  !*** external "react-toastify" ***!
-  \*********************************/
-/***/ (function(module) {
+/***/ 9297:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-toastify");;
+module.exports = require("react");
 
 /***/ }),
 
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
-/***/ (function(module) {
+/***/ 2640:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react/jsx-dev-runtime");;
+module.exports = require("react-beautiful-dnd");
 
 /***/ }),
 
-/***/ "yup":
-/*!**********************!*\
-  !*** external "yup" ***!
-  \**********************/
-/***/ (function(module) {
+/***/ 2668:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("yup");;
+module.exports = require("react-calendar");
 
 /***/ }),
 
-/***/ "?ca47":
-/*!******************************************!*\
-  !*** ./utils/resolve-rewrites (ignored) ***!
-  \******************************************/
-/***/ (function() {
+/***/ 2268:
+/***/ ((module) => {
 
-/* (ignored) */
+"use strict";
+module.exports = require("react-dom");
+
+/***/ }),
+
+/***/ 3983:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-elastic-carousel");
+
+/***/ }),
+
+/***/ 2662:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-hook-form");
+
+/***/ }),
+
+/***/ 1683:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-loader-spinner");
+
+/***/ }),
+
+/***/ 79:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-redux");
+
+/***/ }),
+
+/***/ 2034:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-toastify");
+
+/***/ }),
+
+/***/ 5282:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ 9440:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("yup");
 
 /***/ })
 
@@ -9923,8 +8610,8 @@ module.exports = require("yup");;
 // load runtime
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
-var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = (__webpack_exec__("./pages/index.js"));
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [1694,543,8402,7023,4587,3404,8857,2361,6734,3468,3173,5589], () => (__webpack_exec__(9774)));
 module.exports = __webpack_exports__;
 
 })();

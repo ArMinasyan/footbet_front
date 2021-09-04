@@ -1,723 +1,78 @@
-(function() {
+(() => {
 var exports = {};
-exports.id = "pages/_app";
-exports.ids = ["pages/_app"];
+exports.id = 2888;
+exports.ids = [2888];
 exports.modules = {
 
-/***/ "./i18n.json":
-/*!*******************!*\
-  !*** ./i18n.json ***!
-  \*******************/
-/***/ (function(module) {
+/***/ 9056:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-module.exports = JSON.parse('{"locales":["rs","am","en","deu","fr","esp"],"defaultLocale":"rs","pages":{"*":["common"],"/":["home"],"/testimonials":["testimonials","home"],"/matches":["home"],"/games":["games"],"/prediction":["prediction"],"/statistics":["statistics"],"/aboutUs":["aboutUs"],"/personal":["personal"]}}');
-
-/***/ }),
-
-/***/ "./locales lazy recursive ^\\.\\/.*\\/.*$":
-/*!*****************************************************!*\
-  !*** ./locales/ lazy ^\.\/.*\/.*$ namespace object ***!
-  \*****************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-var map = {
-	"./am/aboutUs": [
-		"./locales/am/aboutUs.json",
-		"locales_am_aboutUs_json"
-	],
-	"./am/aboutUs.json": [
-		"./locales/am/aboutUs.json",
-		"locales_am_aboutUs_json"
-	],
-	"./am/common": [
-		"./locales/am/common.json",
-		"locales_am_common_json"
-	],
-	"./am/common.json": [
-		"./locales/am/common.json",
-		"locales_am_common_json"
-	],
-	"./am/games": [
-		"./locales/am/games.json",
-		"locales_am_games_json"
-	],
-	"./am/games.json": [
-		"./locales/am/games.json",
-		"locales_am_games_json"
-	],
-	"./am/home": [
-		"./locales/am/home.json",
-		"locales_am_home_json"
-	],
-	"./am/home.json": [
-		"./locales/am/home.json",
-		"locales_am_home_json"
-	],
-	"./am/personal": [
-		"./locales/am/personal.json",
-		"locales_am_personal_json"
-	],
-	"./am/personal.json": [
-		"./locales/am/personal.json",
-		"locales_am_personal_json"
-	],
-	"./am/prediction": [
-		"./locales/am/prediction.json",
-		"locales_am_prediction_json"
-	],
-	"./am/prediction.json": [
-		"./locales/am/prediction.json",
-		"locales_am_prediction_json"
-	],
-	"./am/statistics": [
-		"./locales/am/statistics.json",
-		"locales_am_statistics_json"
-	],
-	"./am/statistics.json": [
-		"./locales/am/statistics.json",
-		"locales_am_statistics_json"
-	],
-	"./am/testimonials": [
-		"./locales/am/testimonials.json",
-		"locales_am_testimonials_json"
-	],
-	"./am/testimonials.json": [
-		"./locales/am/testimonials.json",
-		"locales_am_testimonials_json"
-	],
-	"./deu/aboutUs": [
-		"./locales/deu/aboutUs.json",
-		"locales_deu_aboutUs_json"
-	],
-	"./deu/aboutUs.json": [
-		"./locales/deu/aboutUs.json",
-		"locales_deu_aboutUs_json"
-	],
-	"./deu/common": [
-		"./locales/deu/common.json",
-		"locales_deu_common_json"
-	],
-	"./deu/common.json": [
-		"./locales/deu/common.json",
-		"locales_deu_common_json"
-	],
-	"./deu/games": [
-		"./locales/deu/games.json",
-		"locales_deu_games_json"
-	],
-	"./deu/games.json": [
-		"./locales/deu/games.json",
-		"locales_deu_games_json"
-	],
-	"./deu/home": [
-		"./locales/deu/home.json",
-		"locales_deu_home_json"
-	],
-	"./deu/home.json": [
-		"./locales/deu/home.json",
-		"locales_deu_home_json"
-	],
-	"./deu/personal": [
-		"./locales/deu/personal.json",
-		"locales_deu_personal_json"
-	],
-	"./deu/personal.json": [
-		"./locales/deu/personal.json",
-		"locales_deu_personal_json"
-	],
-	"./deu/prediction": [
-		"./locales/deu/prediction.json",
-		"locales_deu_prediction_json"
-	],
-	"./deu/prediction.json": [
-		"./locales/deu/prediction.json",
-		"locales_deu_prediction_json"
-	],
-	"./deu/statistics": [
-		"./locales/deu/statistics.json",
-		"locales_deu_statistics_json"
-	],
-	"./deu/statistics.json": [
-		"./locales/deu/statistics.json",
-		"locales_deu_statistics_json"
-	],
-	"./deu/testimonials": [
-		"./locales/deu/testimonials.json",
-		"locales_deu_testimonials_json"
-	],
-	"./deu/testimonials.json": [
-		"./locales/deu/testimonials.json",
-		"locales_deu_testimonials_json"
-	],
-	"./en/aboutUs": [
-		"./locales/en/aboutUs.json",
-		"locales_en_aboutUs_json"
-	],
-	"./en/aboutUs.json": [
-		"./locales/en/aboutUs.json",
-		"locales_en_aboutUs_json"
-	],
-	"./en/common": [
-		"./locales/en/common.json",
-		"locales_en_common_json"
-	],
-	"./en/common.json": [
-		"./locales/en/common.json",
-		"locales_en_common_json"
-	],
-	"./en/games": [
-		"./locales/en/games.json",
-		"locales_en_games_json"
-	],
-	"./en/games.json": [
-		"./locales/en/games.json",
-		"locales_en_games_json"
-	],
-	"./en/home": [
-		"./locales/en/home.json",
-		"locales_en_home_json"
-	],
-	"./en/home.json": [
-		"./locales/en/home.json",
-		"locales_en_home_json"
-	],
-	"./en/personal": [
-		"./locales/en/personal.json",
-		"locales_en_personal_json"
-	],
-	"./en/personal.json": [
-		"./locales/en/personal.json",
-		"locales_en_personal_json"
-	],
-	"./en/prediction": [
-		"./locales/en/prediction.json",
-		"locales_en_prediction_json"
-	],
-	"./en/prediction.json": [
-		"./locales/en/prediction.json",
-		"locales_en_prediction_json"
-	],
-	"./en/statistics": [
-		"./locales/en/statistics.json",
-		"locales_en_statistics_json"
-	],
-	"./en/statistics.json": [
-		"./locales/en/statistics.json",
-		"locales_en_statistics_json"
-	],
-	"./en/testimonials": [
-		"./locales/en/testimonials.json",
-		"locales_en_testimonials_json"
-	],
-	"./en/testimonials.json": [
-		"./locales/en/testimonials.json",
-		"locales_en_testimonials_json"
-	],
-	"./esp/aboutUs": [
-		"./locales/esp/aboutUs.json",
-		"locales_esp_aboutUs_json"
-	],
-	"./esp/aboutUs.json": [
-		"./locales/esp/aboutUs.json",
-		"locales_esp_aboutUs_json"
-	],
-	"./esp/common": [
-		"./locales/esp/common.json",
-		"locales_esp_common_json"
-	],
-	"./esp/common.json": [
-		"./locales/esp/common.json",
-		"locales_esp_common_json"
-	],
-	"./esp/games": [
-		"./locales/esp/games.json",
-		"locales_esp_games_json"
-	],
-	"./esp/games.json": [
-		"./locales/esp/games.json",
-		"locales_esp_games_json"
-	],
-	"./esp/home": [
-		"./locales/esp/home.json",
-		"locales_esp_home_json"
-	],
-	"./esp/home.json": [
-		"./locales/esp/home.json",
-		"locales_esp_home_json"
-	],
-	"./esp/personal": [
-		"./locales/esp/personal.json",
-		"locales_esp_personal_json"
-	],
-	"./esp/personal.json": [
-		"./locales/esp/personal.json",
-		"locales_esp_personal_json"
-	],
-	"./esp/prediction": [
-		"./locales/esp/prediction.json",
-		"locales_esp_prediction_json"
-	],
-	"./esp/prediction.json": [
-		"./locales/esp/prediction.json",
-		"locales_esp_prediction_json"
-	],
-	"./esp/statistics": [
-		"./locales/esp/statistics.json",
-		"locales_esp_statistics_json"
-	],
-	"./esp/statistics.json": [
-		"./locales/esp/statistics.json",
-		"locales_esp_statistics_json"
-	],
-	"./esp/testimonials": [
-		"./locales/esp/testimonials.json",
-		"locales_esp_testimonials_json"
-	],
-	"./esp/testimonials.json": [
-		"./locales/esp/testimonials.json",
-		"locales_esp_testimonials_json"
-	],
-	"./fr/aboutUs": [
-		"./locales/fr/aboutUs.json",
-		"locales_fr_aboutUs_json"
-	],
-	"./fr/aboutUs.json": [
-		"./locales/fr/aboutUs.json",
-		"locales_fr_aboutUs_json"
-	],
-	"./fr/common": [
-		"./locales/fr/common.json",
-		"locales_fr_common_json"
-	],
-	"./fr/common.json": [
-		"./locales/fr/common.json",
-		"locales_fr_common_json"
-	],
-	"./fr/games": [
-		"./locales/fr/games.json",
-		"locales_fr_games_json"
-	],
-	"./fr/games.json": [
-		"./locales/fr/games.json",
-		"locales_fr_games_json"
-	],
-	"./fr/home": [
-		"./locales/fr/home.json",
-		"locales_fr_home_json"
-	],
-	"./fr/home.json": [
-		"./locales/fr/home.json",
-		"locales_fr_home_json"
-	],
-	"./fr/personal": [
-		"./locales/fr/personal.json",
-		"locales_fr_personal_json"
-	],
-	"./fr/personal.json": [
-		"./locales/fr/personal.json",
-		"locales_fr_personal_json"
-	],
-	"./fr/prediction": [
-		"./locales/fr/prediction.json",
-		"locales_fr_prediction_json"
-	],
-	"./fr/prediction.json": [
-		"./locales/fr/prediction.json",
-		"locales_fr_prediction_json"
-	],
-	"./fr/statistics": [
-		"./locales/fr/statistics.json",
-		"locales_fr_statistics_json"
-	],
-	"./fr/statistics.json": [
-		"./locales/fr/statistics.json",
-		"locales_fr_statistics_json"
-	],
-	"./fr/testimonials": [
-		"./locales/fr/testimonials.json",
-		"locales_fr_testimonials_json"
-	],
-	"./fr/testimonials.json": [
-		"./locales/fr/testimonials.json",
-		"locales_fr_testimonials_json"
-	],
-	"./rs/aboutUs": [
-		"./locales/rs/aboutUs.json",
-		"locales_rs_aboutUs_json"
-	],
-	"./rs/aboutUs.json": [
-		"./locales/rs/aboutUs.json",
-		"locales_rs_aboutUs_json"
-	],
-	"./rs/common": [
-		"./locales/rs/common.json",
-		"locales_rs_common_json"
-	],
-	"./rs/common.json": [
-		"./locales/rs/common.json",
-		"locales_rs_common_json"
-	],
-	"./rs/games": [
-		"./locales/rs/games.json",
-		"locales_rs_games_json"
-	],
-	"./rs/games.json": [
-		"./locales/rs/games.json",
-		"locales_rs_games_json"
-	],
-	"./rs/home": [
-		"./locales/rs/home.json",
-		"locales_rs_home_json"
-	],
-	"./rs/home.json": [
-		"./locales/rs/home.json",
-		"locales_rs_home_json"
-	],
-	"./rs/personal": [
-		"./locales/rs/personal.json",
-		"locales_rs_personal_json"
-	],
-	"./rs/personal.json": [
-		"./locales/rs/personal.json",
-		"locales_rs_personal_json"
-	],
-	"./rs/prediction": [
-		"./locales/rs/prediction.json",
-		"locales_rs_prediction_json"
-	],
-	"./rs/prediction.json": [
-		"./locales/rs/prediction.json",
-		"locales_rs_prediction_json"
-	],
-	"./rs/statistics": [
-		"./locales/rs/statistics.json",
-		"locales_rs_statistics_json"
-	],
-	"./rs/statistics.json": [
-		"./locales/rs/statistics.json",
-		"locales_rs_statistics_json"
-	],
-	"./rs/testimonials": [
-		"./locales/rs/testimonials.json",
-		"locales_rs_testimonials_json"
-	],
-	"./rs/testimonials.json": [
-		"./locales/rs/testimonials.json",
-		"locales_rs_testimonials_json"
-	]
-};
-function webpackAsyncContext(req) {
-	if(!__webpack_require__.o(map, req)) {
-		return Promise.resolve().then(function() {
-			var e = new Error("Cannot find module '" + req + "'");
-			e.code = 'MODULE_NOT_FOUND';
-			throw e;
-		});
-	}
-
-	var ids = map[req], id = ids[0];
-	return __webpack_require__.e(ids[1]).then(function() {
-		return __webpack_require__.t(id, 3 | 16);
-	});
-}
-webpackAsyncContext.keys = function() { return Object.keys(map); };
-webpackAsyncContext.id = "./locales lazy recursive ^\\.\\/.*\\/.*$";
-module.exports = webpackAsyncContext;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
-  \**********************************************************************/
-/***/ (function(module) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/interopRequireWildcard.js ***!
-  \***********************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js");
-
-function _getRequireWildcardCache() {
-  if (typeof WeakMap !== "function") return null;
-  var cache = new WeakMap();
-
-  _getRequireWildcardCache = function _getRequireWildcardCache() {
-    return cache;
-  };
-
-  return cache;
-}
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  }
-
-  if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") {
-    return {
-      "default": obj
-    };
-  }
-
-  var cache = _getRequireWildcardCache();
-
-  if (cache && cache.has(obj)) {
-    return cache.get(obj);
-  }
-
-  var newObj = {};
-  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-
-      if (desc && (desc.get || desc.set)) {
-        Object.defineProperty(newObj, key, desc);
-      } else {
-        newObj[key] = obj[key];
-      }
-    }
-  }
-
-  newObj["default"] = obj;
-
-  if (cache) {
-    cache.set(obj, newObj);
-  }
-
-  return newObj;
-}
-
-module.exports = _interopRequireWildcard;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/typeof.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
-  \*******************************************************/
-/***/ (function(module) {
-
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/server/denormalize-page-path.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/server/denormalize-page-path.js ***!
-  \****************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-exports.__esModule=true;exports.normalizePathSep=normalizePathSep;exports.denormalizePagePath=denormalizePagePath;function normalizePathSep(path){return path.replace(/\\/g,'/');}function denormalizePagePath(page){page=normalizePathSep(page);if(page.startsWith('/index/')){page=page.slice(6);}else if(page==='/index'){page='/';}return page;}
-//# sourceMappingURL=denormalize-page-path.js.map
-
-/***/ }),
-
-/***/ "./node_modules/next/link.js":
-/*!***********************************!*\
-  !*** ./node_modules/next/link.js ***!
-  \***********************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/next/dist/client/link.js")
-
-
-/***/ }),
-
-/***/ "./components/Footer/Ball/Ball.jsx":
-/*!*****************************************!*\
-  !*** ./components/Footer/Ball/Ball.jsx ***!
-  \*****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Ball": function() { return /* binding */ Ball; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _public_images_footer_leftBall_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../public/images/footer/leftBall.png */ "./public/images/footer/leftBall.png");
-/* harmony import */ var _Ball_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Ball.module.scss */ "./components/Footer/Ball/Ball.module.scss");
-/* harmony import */ var _Ball_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Ball_module_scss__WEBPACK_IMPORTED_MODULE_2__);
 
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Footer\\Ball\\Ball.jsx";
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ _app),
+  "getServerSideProps": () => (/* binding */ getServerSideProps)
+});
+
+// EXTERNAL MODULE: ./i18n.json
+var i18n = __webpack_require__(608);
+;// CONCATENATED MODULE: external "next-translate/appWithI18n"
+const appWithI18n_namespaceObject = require("next-translate/appWithI18n");
+var appWithI18n_default = /*#__PURE__*/__webpack_require__.n(appWithI18n_namespaceObject);
+// EXTERNAL MODULE: ./node_modules/react-toastify/dist/ReactToastify.css
+var ReactToastify = __webpack_require__(8819);
+;// CONCATENATED MODULE: external "next/head"
+const head_namespaceObject = require("next/head");
+var head_default = /*#__PURE__*/__webpack_require__.n(head_namespaceObject);
+// EXTERNAL MODULE: ./node_modules/next/dist/client/router.js
+var client_router = __webpack_require__(7890);
+;// CONCATENATED MODULE: ./public/images/footer/leftBall.png
+/* harmony default export */ const leftBall = ({"src":"/_next/static/image/public/images/footer/leftBall.9d913458e610693dcce7d9b191755ef2.png","height":358,"width":452,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAY0lEQVR42mMgCNavW6f64f1HKZwKvnz5Ev/////4+/ceuAO57BgKfv38GQ5UEPby5avElNQ0OwwFgX5eEWtWr474+/df5OXL10N9w7MwTIloaW6KePf2fdSp0xeC6lomoSgAAAh6Lj9+IpgnAAAAAElFTkSuQmCC"});
+// EXTERNAL MODULE: ./components/Footer/Ball/Ball.module.scss
+var Ball_module = __webpack_require__(5338);
+var Ball_module_default = /*#__PURE__*/__webpack_require__.n(Ball_module);
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(5282);
+;// CONCATENATED MODULE: ./components/Footer/Ball/Ball.jsx
+
+
 
 
 function Ball() {
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-    className: (_Ball_module_scss__WEBPACK_IMPORTED_MODULE_2___default().container),
-    children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("img", {
-      src: _public_images_footer_leftBall_png__WEBPACK_IMPORTED_MODULE_1__.default.src,
-      className: (_Ball_module_scss__WEBPACK_IMPORTED_MODULE_2___default().ball),
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+    className: (Ball_module_default()).container,
+    children: [/*#__PURE__*/jsx_runtime_.jsx("img", {
+      src: leftBall.src,
+      className: (Ball_module_default()).ball,
       alt: "ball-png"
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 13
-    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-      className: (_Ball_module_scss__WEBPACK_IMPORTED_MODULE_2___default().text_with_ball),
-      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("p", {
-        className: (_Ball_module_scss__WEBPACK_IMPORTED_MODULE_2___default().top),
+    }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: (Ball_module_default()).text_with_ball,
+      children: [/*#__PURE__*/jsx_runtime_.jsx("p", {
+        className: (Ball_module_default()).top,
         children: "FOOT"
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 13,
-        columnNumber: 17
-      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("p", {
-        className: (_Ball_module_scss__WEBPACK_IMPORTED_MODULE_2___default().bottom),
+      }), /*#__PURE__*/jsx_runtime_.jsx("p", {
+        className: (Ball_module_default()).bottom,
         children: "BET"
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 14,
-        columnNumber: 17
-      }, this)]
-    }, void 0, true, {
-      fileName: _jsxFileName,
-      lineNumber: 12,
-      columnNumber: 13
-    }, this)]
-  }, void 0, true, {
-    fileName: _jsxFileName,
-    lineNumber: 6,
-    columnNumber: 9
-  }, this);
+      })]
+    })]
+  });
 }
+// EXTERNAL MODULE: ./components/Footer/Footer.module.scss
+var Footer_module = __webpack_require__(905);
+var Footer_module_default = /*#__PURE__*/__webpack_require__.n(Footer_module);
+// EXTERNAL MODULE: external "next-translate/useTranslation"
+var useTranslation_ = __webpack_require__(8841);
+var useTranslation_default = /*#__PURE__*/__webpack_require__.n(useTranslation_);
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__(543);
+// EXTERNAL MODULE: ./components/Footer/Navigation/List/List.module.scss
+var List_module = __webpack_require__(1854);
+var List_module_default = /*#__PURE__*/__webpack_require__.n(List_module);
+;// CONCATENATED MODULE: ./components/Footer/Navigation/List/List.jsx
 
-/***/ }),
-
-/***/ "./components/Footer/Footer.jsx":
-/*!**************************************!*\
-  !*** ./components/Footer/Footer.jsx ***!
-  \**************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Footer": function() { return /* binding */ Footer; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_dist_client_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/dist/client/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var _Ball_Ball__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Ball/Ball */ "./components/Footer/Ball/Ball.jsx");
-/* harmony import */ var _Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Footer.module.scss */ "./components/Footer/Footer.module.scss");
-/* harmony import */ var _Footer_module_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _Navigation_Navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Navigation/Navigation */ "./components/Footer/Navigation/Navigation.jsx");
-/* harmony import */ var _SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./SocialMedia/SocialMedia */ "./components/Footer/SocialMedia/SocialMedia.jsx");
-/* harmony import */ var _public_images_personal_ball_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../public/images/personal/ball.png */ "./public/images/personal/ball.png");
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Footer\\Footer.jsx";
-//
-
- // styles
-
-
-
- // icon
-
- // TODO click events on icons
-
-function Footer() {
-  const router = (0,next_dist_client_router__WEBPACK_IMPORTED_MODULE_1__.useRouter)();
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-    className: (_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6___default().container),
-    children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Ball_Ball__WEBPACK_IMPORTED_MODULE_2__.Ball, {}, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 13
-    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-      className: (_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6___default().content),
-      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Navigation_Navigation__WEBPACK_IMPORTED_MODULE_3__.Navigation, {}, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 19,
-        columnNumber: 17
-      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_4__.SocialMedia, {}, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 20,
-        columnNumber: 17
-      }, this)]
-    }, void 0, true, {
-      fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 13
-    }, this), router.pathname === '/personal' && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-      className: (_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6___default().ball),
-      children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("img", {
-        src: _public_images_personal_ball_png__WEBPACK_IMPORTED_MODULE_5__.default.src,
-        alt: "ball-icon"
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 24,
-        columnNumber: 21
-      }, this)
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 17
-    }, this)]
-  }, void 0, true, {
-    fileName: _jsxFileName,
-    lineNumber: 16,
-    columnNumber: 9
-  }, this);
-}
-
-/***/ }),
-
-/***/ "./components/Footer/Navigation/List/List.jsx":
-/*!****************************************************!*\
-  !*** ./components/Footer/Navigation/List/List.jsx ***!
-  \****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "List": function() { return /* binding */ List; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-translate/useTranslation */ "next-translate/useTranslation");
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _List_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./List.module.scss */ "./components/Footer/Navigation/List/List.module.scss");
-/* harmony import */ var _List_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_List_module_scss__WEBPACK_IMPORTED_MODULE_3__);
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Footer\\Navigation\\List\\List.jsx";
 
 
 
@@ -727,103 +82,26 @@ function List({
 }) {
   const {
     t
-  } = next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_1___default()("common"),
+  } = useTranslation_default()("common"),
         translationPath = "footer.navigation.",
         translate = key => t(`${translationPath}${key}`);
 
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-    className: `${(_List_module_scss__WEBPACK_IMPORTED_MODULE_3___default().container)} ${bordersActive && (_List_module_scss__WEBPACK_IMPORTED_MODULE_3___default().borders)}`,
-    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("ul", {
-      children: list_items.map(el => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: `${(List_module_default()).container} ${bordersActive && (List_module_default()).borders}`,
+    children: /*#__PURE__*/jsx_runtime_.jsx("ul", {
+      children: list_items.map(el => /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
         href: el.link,
-        children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("li", {
+        children: /*#__PURE__*/jsx_runtime_.jsx("li", {
           children: translate(el.name)
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 15,
-          columnNumber: 13
-        }, this)
-      }, Math.random(), false, {
-        fileName: _jsxFileName,
-        lineNumber: 14,
-        columnNumber: 11
-      }, this))
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 12,
-      columnNumber: 7
-    }, this)
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 11,
-    columnNumber: 5
-  }, this);
+        })
+      }, Math.random()))
+    })
+  });
 }
-
-/***/ }),
-
-/***/ "./components/Footer/Navigation/Navigation.jsx":
-/*!*****************************************************!*\
-  !*** ./components/Footer/Navigation/Navigation.jsx ***!
-  \*****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Navigation": function() { return /* binding */ Navigation; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _List_List__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./List/List */ "./components/Footer/Navigation/List/List.jsx");
-/* harmony import */ var _Navigation_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Navigation.module.scss */ "./components/Footer/Navigation/Navigation.module.scss");
-/* harmony import */ var _Navigation_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Navigation_module_scss__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _nav_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav_data */ "./components/Footer/Navigation/nav_data.js");
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Footer\\Navigation\\Navigation.jsx";
-// styles
-
- // datas
-
-
-function Navigation() {
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-    className: (_Navigation_module_scss__WEBPACK_IMPORTED_MODULE_3___default().container),
-    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-      className: (_Navigation_module_scss__WEBPACK_IMPORTED_MODULE_3___default().content),
-      children: _nav_data__WEBPACK_IMPORTED_MODULE_2__.nav_data.map((el, i) => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_List_List__WEBPACK_IMPORTED_MODULE_1__.List, {
-        list_items: el,
-        bordersActive: i === 1 ? true : false
-      }, Math.random(), false, {
-        fileName: _jsxFileName,
-        lineNumber: 13,
-        columnNumber: 25
-      }, this))
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 13
-    }, this)
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 9,
-    columnNumber: 9
-  }, this);
-}
-
-/***/ }),
-
-/***/ "./components/Footer/Navigation/nav_data.js":
-/*!**************************************************!*\
-  !*** ./components/Footer/Navigation/nav_data.js ***!
-  \**************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "nav_data": function() { return /* binding */ nav_data; }
-/* harmony export */ });
+// EXTERNAL MODULE: ./components/Footer/Navigation/Navigation.module.scss
+var Navigation_module = __webpack_require__(2617);
+var Navigation_module_default = /*#__PURE__*/__webpack_require__.n(Navigation_module);
+;// CONCATENATED MODULE: ./components/Footer/Navigation/nav_data.js
 const nav_data = [[{
   link: '/prediction',
   name: 'prediction'
@@ -855,271 +133,45 @@ const nav_data = [[{
   link: '/privacy-policy',
   name: 'privacy-policy'
 }]];
-
-/***/ }),
-
-/***/ "./components/Footer/SocialMedia/PSIcons/PS.jsx":
-/*!******************************************************!*\
-  !*** ./components/Footer/SocialMedia/PSIcons/PS.jsx ***!
-  \******************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PS": function() { return /* binding */ PS; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _PS_module_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PS.module.scss */ "./components/Footer/SocialMedia/PSIcons/PS.module.scss");
-/* harmony import */ var _PS_module_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_PS_module_scss__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _public_images_footer_visa_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../public/images/footer/visa.png */ "./public/images/footer/visa.png");
-/* harmony import */ var _public_images_footer_masterCard_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../public/images/footer/masterCard.png */ "./public/images/footer/masterCard.png");
-/* harmony import */ var _common_Icon_Icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/Icon/Icon */ "./components/Footer/SocialMedia/common/Icon/Icon.jsx");
-
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Footer\\SocialMedia\\PSIcons\\PS.jsx";
+;// CONCATENATED MODULE: ./components/Footer/Navigation/Navigation.jsx
 // styles
- // icons
+
+ // datas
 
 
- // components
 
-
-function PS() {
-  const // config
-  icons = [{
-    key: Math.random(),
-    src: _public_images_footer_visa_png__WEBPACK_IMPORTED_MODULE_1__.default.src
-  }, {
-    key: Math.random(),
-    src: _public_images_footer_masterCard_png__WEBPACK_IMPORTED_MODULE_2__.default.src,
-    lastElement: true
-  }];
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-      className: (_PS_module_scss__WEBPACK_IMPORTED_MODULE_4___default().container),
-      children: icons.map(el => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_common_Icon_Icon__WEBPACK_IMPORTED_MODULE_3__.Icon, {
-        src: el.src,
-        classes: (_PS_module_scss__WEBPACK_IMPORTED_MODULE_4___default().icons),
-        lastElement: el.lastElement && el.lastElement
-      }, el.key, false, {
-        fileName: _jsxFileName,
-        lineNumber: 27,
-        columnNumber: 11
-      }, this))
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 7
-    }, this)
-  }, void 0, false);
+function Navigation() {
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: (Navigation_module_default()).container,
+    children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (Navigation_module_default()).content,
+      children: nav_data.map((el, i) => /*#__PURE__*/jsx_runtime_.jsx(List, {
+        list_items: el,
+        bordersActive: i === 1 ? true : false
+      }, Math.random()))
+    })
+  });
 }
+// EXTERNAL MODULE: ./components/Footer/SocialMedia/SMIcons/SM.module.scss
+var SM_module = __webpack_require__(445);
+var SM_module_default = /*#__PURE__*/__webpack_require__.n(SM_module);
+;// CONCATENATED MODULE: ./public/images/header/SocialMedia/phone.svg
+/* harmony default export */ const phone = ({"src":"/_next/static/image/public/images/header/SocialMedia/phone.55ee8819e254093aa33fdb4782b35cd4.svg","height":25,"width":24});
+;// CONCATENATED MODULE: ./public/images/header/SocialMedia/facebook.svg
+/* harmony default export */ const facebook = ({"src":"/_next/static/image/public/images/header/SocialMedia/facebook.85f524e32ad377e7424a5d8712a6664a.svg","height":34,"width":28});
+;// CONCATENATED MODULE: ./public/images/header/SocialMedia/telegram.svg
+/* harmony default export */ const telegram = ({"src":"/_next/static/image/public/images/header/SocialMedia/telegram.aff9e3d95d74ff6112927acf1640e6a3.svg","height":37,"width":29});
+;// CONCATENATED MODULE: ./public/images/header/SocialMedia/watsup.svg
+/* harmony default export */ const watsup = ({"src":"/_next/static/image/public/images/header/SocialMedia/watsup.e5c1d0468ecb4c80731a67e461e19253.svg","height":37,"width":29});
+;// CONCATENATED MODULE: ./public/images/header/SocialMedia/instagram.svg
+/* harmony default export */ const instagram = ({"src":"/_next/static/image/public/images/header/SocialMedia/instagram.f5ffd20055aeb8be2e2a6a66e757274e.svg","height":30,"width":31});
+;// CONCATENATED MODULE: ./public/images/header/SocialMedia/viber.svg
+/* harmony default export */ const viber = ({"src":"/_next/static/image/public/images/header/SocialMedia/viber.92d118c26760f796dc3278147251dffe.svg","height":39,"width":30});
+// EXTERNAL MODULE: ./components/Footer/SocialMedia/common/Icon/Icon.module.scss
+var Icon_module = __webpack_require__(7618);
+var Icon_module_default = /*#__PURE__*/__webpack_require__.n(Icon_module);
+;// CONCATENATED MODULE: ./components/Footer/SocialMedia/common/Icon/Icon.jsx
 
-/***/ }),
-
-/***/ "./components/Footer/SocialMedia/SMIcons/SM.jsx":
-/*!******************************************************!*\
-  !*** ./components/Footer/SocialMedia/SMIcons/SM.jsx ***!
-  \******************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SM": function() { return /* binding */ SM; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _SM_module_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./SM.module.scss */ "./components/Footer/SocialMedia/SMIcons/SM.module.scss");
-/* harmony import */ var _SM_module_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_SM_module_scss__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _public_images_header_SocialMedia_phone_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../public/images/header/SocialMedia/phone.svg */ "./public/images/header/SocialMedia/phone.svg");
-/* harmony import */ var _public_images_header_SocialMedia_facebook_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../public/images/header/SocialMedia/facebook.svg */ "./public/images/header/SocialMedia/facebook.svg");
-/* harmony import */ var _public_images_header_SocialMedia_telegram_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../public/images/header/SocialMedia/telegram.svg */ "./public/images/header/SocialMedia/telegram.svg");
-/* harmony import */ var _public_images_header_SocialMedia_watsup_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../../public/images/header/SocialMedia/watsup.svg */ "./public/images/header/SocialMedia/watsup.svg");
-/* harmony import */ var _public_images_header_SocialMedia_instagram_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../public/images/header/SocialMedia/instagram.svg */ "./public/images/header/SocialMedia/instagram.svg");
-/* harmony import */ var _public_images_header_SocialMedia_viber_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../../public/images/header/SocialMedia/viber.svg */ "./public/images/header/SocialMedia/viber.svg");
-/* harmony import */ var _common_Icon_Icon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../common/Icon/Icon */ "./components/Footer/SocialMedia/common/Icon/Icon.jsx");
-
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Footer\\SocialMedia\\SMIcons\\SM.jsx";
-// styles
- // icons
-
-
-
-
-
-
- // components
-
-
-function SM() {
-  const // config
-  icons = [{
-    key: Math.random(),
-    src: _public_images_header_SocialMedia_phone_svg__WEBPACK_IMPORTED_MODULE_1__.default.src,
-    url: "tel:+34672314808"
-  }, {
-    key: Math.random(),
-    src: _public_images_header_SocialMedia_facebook_svg__WEBPACK_IMPORTED_MODULE_2__.default.src,
-    url: "https://www.facebook.com/%D0%9F%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7%D1%8B-%D0%BD%D0%B0-%D0%A4%D1%83%D1%82%D0%B1%D0%BE%D0%BB-104941347577913/"
-  }, {
-    key: Math.random(),
-    src: _public_images_header_SocialMedia_watsup_svg__WEBPACK_IMPORTED_MODULE_4__.default.src,
-    url: "https://api.whatsapp.com/send?phone=+34672314808"
-  }, {
-    key: Math.random(),
-    src: _public_images_header_SocialMedia_instagram_svg__WEBPACK_IMPORTED_MODULE_5__.default.src,
-    url: "https://www.instagram.com/prognozyna550/?utm_medium=copy_link"
-  }, {
-    key: Math.random(),
-    src: _public_images_header_SocialMedia_viber_svg__WEBPACK_IMPORTED_MODULE_6__.default.src,
-    url: "viber://chat?number=+34672314808"
-  }, {
-    key: Math.random(),
-    src: _public_images_header_SocialMedia_telegram_svg__WEBPACK_IMPORTED_MODULE_3__.default.src,
-    url: "https://telegram.me/footbet24com",
-    lastElement: true
-  }];
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-      className: (_SM_module_scss__WEBPACK_IMPORTED_MODULE_8___default().container),
-      children: icons.map(el => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_common_Icon_Icon__WEBPACK_IMPORTED_MODULE_7__.Icon, {
-        src: el.src,
-        url: el.url,
-        elements: icons.length,
-        lastElement: el.lastElement && el.lastElement
-      }, el.key, false, {
-        fileName: _jsxFileName,
-        lineNumber: 57,
-        columnNumber: 25
-      }, this))
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 54,
-      columnNumber: 13
-    }, this)
-  }, void 0, false);
-}
-
-/***/ }),
-
-/***/ "./components/Footer/SocialMedia/SocialMedia.jsx":
-/*!*******************************************************!*\
-  !*** ./components/Footer/SocialMedia/SocialMedia.jsx ***!
-  \*******************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SocialMedia": function() { return /* binding */ SocialMedia; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _SMIcons_SM__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SMIcons/SM */ "./components/Footer/SocialMedia/SMIcons/SM.jsx");
-/* harmony import */ var _PSIcons_PS__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PSIcons/PS */ "./components/Footer/SocialMedia/PSIcons/PS.jsx");
-/* harmony import */ var _SocialMedia_module_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./SocialMedia.module.scss */ "./components/Footer/SocialMedia/SocialMedia.module.scss");
-/* harmony import */ var _SocialMedia_module_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_SocialMedia_module_scss__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next-translate/useTranslation */ "next-translate/useTranslation");
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3__);
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Footer\\SocialMedia\\SocialMedia.jsx";
-// components
-
- // styles
-
- // translation 
-
-
-function SocialMedia() {
-  const // translation
-  {
-    t
-  } = next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3___default()('common'),
-        translationPath = 'footer.social_media_paymants',
-        translate = key => t(`${translationPath}${key}`);
-
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-    className: (_SocialMedia_module_scss__WEBPACK_IMPORTED_MODULE_4___default().container),
-    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-      className: (_SocialMedia_module_scss__WEBPACK_IMPORTED_MODULE_4___default().content),
-      children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-        className: (_SocialMedia_module_scss__WEBPACK_IMPORTED_MODULE_4___default().controler),
-        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-          className: (_SocialMedia_module_scss__WEBPACK_IMPORTED_MODULE_4___default().social_medias),
-          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("p", {
-            children: translate('.SM.title')
-          }, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 23,
-            columnNumber: 25
-          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_SMIcons_SM__WEBPACK_IMPORTED_MODULE_1__.SM, {}, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 28,
-            columnNumber: 25
-          }, this)]
-        }, void 0, true, {
-          fileName: _jsxFileName,
-          lineNumber: 22,
-          columnNumber: 21
-        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-          className: (_SocialMedia_module_scss__WEBPACK_IMPORTED_MODULE_4___default().payment_systems),
-          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("p", {
-            children: translate('.PS.title')
-          }, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 31,
-            columnNumber: 25
-          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_PSIcons_PS__WEBPACK_IMPORTED_MODULE_2__.PS, {}, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 36,
-            columnNumber: 25
-          }, this)]
-        }, void 0, true, {
-          fileName: _jsxFileName,
-          lineNumber: 30,
-          columnNumber: 21
-        }, this)]
-      }, void 0, true, {
-        fileName: _jsxFileName,
-        lineNumber: 21,
-        columnNumber: 17
-      }, this)
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 20,
-      columnNumber: 13
-    }, this)
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 19,
-    columnNumber: 9
-  }, this);
-}
-
-/***/ }),
-
-/***/ "./components/Footer/SocialMedia/common/Icon/Icon.jsx":
-/*!************************************************************!*\
-  !*** ./components/Footer/SocialMedia/common/Icon/Icon.jsx ***!
-  \************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Icon": function() { return /* binding */ Icon; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Icon_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Icon.module.scss */ "./components/Footer/SocialMedia/common/Icon/Icon.module.scss");
-/* harmony import */ var _Icon_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Icon_module_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Footer\\SocialMedia\\common\\Icon\\Icon.jsx";
 
 
 function Icon({
@@ -1131,78 +183,229 @@ function Icon({
   classes,
   url = ""
 }) {
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
     style: elements ? {
       width: `${100 / elements}%`
     } : {
       padding: '0 15px'
     },
-    className: `${(_Icon_module_scss__WEBPACK_IMPORTED_MODULE_2___default().container)} ${lastElement ? (_Icon_module_scss__WEBPACK_IMPORTED_MODULE_2___default().last_element) : ""} ${classes}`,
-    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {
+    className: `${(Icon_module_default()).container} ${lastElement ? (Icon_module_default()).last_element : ""} ${classes}`,
+    children: /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
       href: url,
       target: "_blank",
-      children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("a", {
+      children: /*#__PURE__*/jsx_runtime_.jsx("a", {
         target: "_blank",
-        children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("img", {
+        children: /*#__PURE__*/jsx_runtime_.jsx("img", {
           src: src,
           alt: `icons-${src}`,
           onClick: click,
           style: otherStyles
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 18,
-          columnNumber: 21
-        }, this)
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 17,
-        columnNumber: 17
-      }, this)
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 13
-    }, this)
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 13,
-    columnNumber: 9
-  }, this);
+        })
+      })
+    })
+  });
 }
+;// CONCATENATED MODULE: ./components/Footer/SocialMedia/SMIcons/SM.jsx
+// styles
+ // icons
 
-/***/ }),
 
-/***/ "./components/Header/Bar/Bar.jsx":
-/*!***************************************!*\
-  !*** ./components/Header/Bar/Bar.jsx ***!
-  \***************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Bar": function() { return /* binding */ Bar; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Bar_module_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Bar.module.scss */ "./components/Header/Bar/Bar.module.scss");
-/* harmony import */ var _Bar_module_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_Bar_module_scss__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next-translate/useTranslation */ "next-translate/useTranslation");
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Login_Login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Login/Login */ "./components/Header/Bar/Login/Login.jsx");
-/* harmony import */ var _BarItems_BarItems__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./BarItems/BarItems */ "./components/Header/Bar/BarItems/BarItems.jsx");
-/* harmony import */ var _Logo_Logo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Logo/Logo */ "./components/Header/Bar/Logo/Logo.jsx");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _DropdownMenu_Dropdown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./DropdownMenu/Dropdown */ "./components/Header/Bar/DropdownMenu/Dropdown.jsx");
 
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Header\\Bar\\Bar.jsx";
-// hooks and helpers
+
+
+ // components
+
+
+
+
+function SM() {
+  const // config
+  icons = [{
+    key: Math.random(),
+    src: phone.src,
+    url: "tel:+34672314808"
+  }, {
+    key: Math.random(),
+    src: facebook.src,
+    url: "https://www.facebook.com/%D0%9F%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7%D1%8B-%D0%BD%D0%B0-%D0%A4%D1%83%D1%82%D0%B1%D0%BE%D0%BB-104941347577913/"
+  }, {
+    key: Math.random(),
+    src: watsup.src,
+    url: "https://api.whatsapp.com/send?phone=+34672314808"
+  }, {
+    key: Math.random(),
+    src: instagram.src,
+    url: "https://www.instagram.com/prognozyna550/?utm_medium=copy_link"
+  }, {
+    key: Math.random(),
+    src: viber.src,
+    url: "viber://chat?number=+34672314808"
+  }, {
+    key: Math.random(),
+    src: telegram.src,
+    url: "https://telegram.me/footbet24com",
+    lastElement: true
+  }];
+  return /*#__PURE__*/jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+    children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (SM_module_default()).container,
+      children: icons.map(el => /*#__PURE__*/jsx_runtime_.jsx(Icon, {
+        src: el.src,
+        url: el.url,
+        elements: icons.length,
+        lastElement: el.lastElement && el.lastElement
+      }, el.key))
+    })
+  });
+}
+// EXTERNAL MODULE: ./components/Footer/SocialMedia/PSIcons/PS.module.scss
+var PS_module = __webpack_require__(655);
+var PS_module_default = /*#__PURE__*/__webpack_require__.n(PS_module);
+;// CONCATENATED MODULE: ./public/images/footer/visa.png
+/* harmony default export */ const visa = ({"src":"/_next/static/image/public/images/footer/visa.56e9f851457af83605186a394484e11d.png","height":31,"width":104,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAARUlEQVR4nGM82J0d/uCTiH38RdW/Mly/fz35xyDOwMCwH4jVgFiVkYHhCRtD6J69Ysz/V7z6xyjCwPD/L1BCH4j/ADEPADD6FU4jYQWmAAAAAElFTkSuQmCC"});
+;// CONCATENATED MODULE: ./public/images/footer/masterCard.png
+/* harmony default export */ const masterCard = ({"src":"/_next/static/image/public/images/footer/masterCard.29493d522d0e854efc9f102ad8f0a87f.png","height":42,"width":69,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAoElEQVR4nBWOPQrCQBgF50uMqKRRjCKYwlrsxJ9GuyAeQOy9mI2BeACPIIhgEdQT6AFMICAbdl2L96aYZkTDEEigZ1meiAtw1RqCB+q9FT1bpGT5iGeqWbUcoiYMfC3fm2O88V10nBiCjiL/VKi7CnKkrzzT6JaSvTzRy+hMvTanWoO29ZMMQh/RLsYU139DaBv2wNTuyMG+w8aKiynY/QDkXDVqE0ykJwAAAABJRU5ErkJggg=="});
+;// CONCATENATED MODULE: ./components/Footer/SocialMedia/PSIcons/PS.jsx
+// styles
+ // icons
+
+
+ // components
+
+
+
+
+function PS() {
+  const // config
+  icons = [{
+    key: Math.random(),
+    src: visa.src
+  }, {
+    key: Math.random(),
+    src: masterCard.src,
+    lastElement: true
+  }];
+  return /*#__PURE__*/jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+    children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (PS_module_default()).container,
+      children: icons.map(el => /*#__PURE__*/jsx_runtime_.jsx(Icon, {
+        src: el.src,
+        classes: (PS_module_default()).icons,
+        lastElement: el.lastElement && el.lastElement
+      }, el.key))
+    })
+  });
+}
+// EXTERNAL MODULE: ./components/Footer/SocialMedia/SocialMedia.module.scss
+var SocialMedia_module = __webpack_require__(5839);
+var SocialMedia_module_default = /*#__PURE__*/__webpack_require__.n(SocialMedia_module);
+;// CONCATENATED MODULE: ./components/Footer/SocialMedia/SocialMedia.jsx
+// components
+
  // styles
 
  // translation 
+
+
+
+
+function SocialMedia() {
+  const // translation
+  {
+    t
+  } = useTranslation_default()('common'),
+        translationPath = 'footer.social_media_paymants',
+        translate = key => t(`${translationPath}${key}`);
+
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: (SocialMedia_module_default()).container,
+    children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (SocialMedia_module_default()).content,
+      children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (SocialMedia_module_default()).controler,
+        children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+          className: (SocialMedia_module_default()).social_medias,
+          children: [/*#__PURE__*/jsx_runtime_.jsx("p", {
+            children: translate('.SM.title')
+          }), /*#__PURE__*/jsx_runtime_.jsx(SM, {})]
+        }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+          className: (SocialMedia_module_default()).payment_systems,
+          children: [/*#__PURE__*/jsx_runtime_.jsx("p", {
+            children: translate('.PS.title')
+          }), /*#__PURE__*/jsx_runtime_.jsx(PS, {})]
+        })]
+      })
+    })
+  });
+}
+;// CONCATENATED MODULE: ./public/images/personal/ball.png
+/* harmony default export */ const ball = ({"src":"/_next/static/image/public/images/personal/ball.7a4217860e3b0be644a2c0534df6e64d.png","height":882,"width":950,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAkElEQVR42mPABlavWMYEpFiSEpOYMSTfvX7K9vnzJ66bN29yPX/+ggtFsjg3j/XD68fc////54RhFAWzZ0zl+PT2JdfxY4c4U1OTuBYsmI+q4OC+XRwvnj7kWr1yOUiCq7ysFFXB5In9LFs3reM6e+o4597duzjPnz3Hhe5GxgB/P/aJ/b1ca1ev5Fy2dBknAFcnP3eusvtcAAAAAElFTkSuQmCC"});
+;// CONCATENATED MODULE: ./components/Footer/Footer.jsx
+//
+
+ // styles
+
+
+
+ // icon
+
+ // TODO click events on icons
+
+
+
+function Footer() {
+  const router = (0,client_router.useRouter)();
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+    className: (Footer_module_default()).container,
+    children: [/*#__PURE__*/jsx_runtime_.jsx(Ball, {}), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: (Footer_module_default()).content,
+      children: [/*#__PURE__*/jsx_runtime_.jsx(Navigation, {}), /*#__PURE__*/jsx_runtime_.jsx(SocialMedia, {})]
+    }), router.pathname === '/personal' && /*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (Footer_module_default()).ball,
+      children: /*#__PURE__*/jsx_runtime_.jsx("img", {
+        src: ball.src,
+        alt: "ball-icon"
+      })
+    })]
+  });
+}
+// EXTERNAL MODULE: external "react-redux"
+var external_react_redux_ = __webpack_require__(79);
+// EXTERNAL MODULE: ./components/Header/Header.module.scss
+var Header_module = __webpack_require__(1258);
+var Header_module_default = /*#__PURE__*/__webpack_require__.n(Header_module);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(9297);
+// EXTERNAL MODULE: ./components/Header/Bar/Bar.module.scss
+var Bar_module = __webpack_require__(9711);
+var Bar_module_default = /*#__PURE__*/__webpack_require__.n(Bar_module);
+// EXTERNAL MODULE: ./components/common/auth/Modal/Modal.jsx
+var Modal = __webpack_require__(2361);
+;// CONCATENATED MODULE: ./public/images/header/login/facebook.svg
+/* harmony default export */ const login_facebook = ({"src":"/_next/static/image/public/images/header/login/facebook.50193220c705167c0e8524982908a4ee.svg","height":76,"width":76});
+;// CONCATENATED MODULE: ./public/images/header/login/gmail.svg
+/* harmony default export */ const gmail = ({"src":"/_next/static/image/public/images/header/login/gmail.b78b335d7b71ec5b3b9033065412a0f8.svg","height":76,"width":76});
+;// CONCATENATED MODULE: ./public/images/header/login/vk.svg
+/* harmony default export */ const vk = ({"src":"/_next/static/image/public/images/header/login/vk.f9a321d3db5de3a706483d7309582330.svg","height":76,"width":76});
+;// CONCATENATED MODULE: ./public/images/header/login/twitter.svg
+/* harmony default export */ const twitter = ({"src":"/_next/static/image/public/images/header/login/twitter.372f6f68ac46a0b5a2cbf106f608e4c2.svg","height":76,"width":76});
+// EXTERNAL MODULE: ./components/Header/Bar/Login/SocialMediaIcons/SocialMediaIcons.module.scss
+var SocialMediaIcons_module = __webpack_require__(8510);
+var SocialMediaIcons_module_default = /*#__PURE__*/__webpack_require__.n(SocialMediaIcons_module);
+;// CONCATENATED MODULE: external "react-facebook-login"
+const external_react_facebook_login_namespaceObject = require("react-facebook-login");
+var external_react_facebook_login_default = /*#__PURE__*/__webpack_require__.n(external_react_facebook_login_namespaceObject);
+;// CONCATENATED MODULE: external "react-google-login"
+const external_react_google_login_namespaceObject = require("react-google-login");
+var external_react_google_login_default = /*#__PURE__*/__webpack_require__.n(external_react_google_login_namespaceObject);
+;// CONCATENATED MODULE: external "react-twitter-login"
+const external_react_twitter_login_namespaceObject = require("react-twitter-login");
+var external_react_twitter_login_default = /*#__PURE__*/__webpack_require__.n(external_react_twitter_login_namespaceObject);
+;// CONCATENATED MODULE: ./components/Header/Bar/Login/SocialMediaIcons/SocialMediaIcons.jsx
+// Icons
+
+
 
  //components
 
@@ -1315,344 +518,140 @@ var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\H
 
 
 
- // icons
 
 
 
 
-
-function BarItems({
-  registration,
-  login,
-  registration_path,
-  loginModalHandle,
-  bar_items,
-  userLogged
-}) {
-  const {
-    t,
-    lang
-  } = next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_4___default()('common');
-  const {
-    0: languagesTitle,
-    1: setLanguagesTitle
-  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(_LanguageDropConfigs_lang_configs__WEBPACK_IMPORTED_MODULE_1__.languages[1]);
-  (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
-    const newLang = _LanguageDropConfigs_lang_configs__WEBPACK_IMPORTED_MODULE_1__.languages.find(el => el.lang === lang);
-
-    if (newLang) {
-      setLanguagesTitle(newLang);
-    }
-  }, [lang]);
-
-  const router = (0,next_dist_client_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)(),
-        languages_data = _LanguageDropConfigs_lang_configs__WEBPACK_IMPORTED_MODULE_1__.languages,
-        {
-    0: showDrop,
-    1: setShowDrop
-  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
-        changeLangTitle = event => {
-    let lang_title_data = languages_data.filter(el => el.lang === event.target.className);
-    setLanguagesTitle(lang_title_data[0]);
-    setShowDrop(false);
-  },
-        translationPath = 'header.lang.',
-        translate = key => t(`${translationPath}${key}`);
-
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-      className: `${(_BarItems_module_scss__WEBPACK_IMPORTED_MODULE_12___default().bar_item_container)} ${bar_items} ${router.pathname !== '/' ? (_BarItems_module_scss__WEBPACK_IMPORTED_MODULE_12___default().for_mobile) : null}`,
-      children: [userLogged ? /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Logged_Logged__WEBPACK_IMPORTED_MODULE_7__.Logged, {}, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 61,
-        columnNumber: 35
-      }, this) : /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-        className: (_BarItems_module_scss__WEBPACK_IMPORTED_MODULE_12___default().auth_container),
-        children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-          className: (_BarItems_module_scss__WEBPACK_IMPORTED_MODULE_12___default().auth_buttons),
-          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-            className: (_BarItems_module_scss__WEBPACK_IMPORTED_MODULE_12___default().sign_up_button),
-            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_5___default()), {
-              href: registration_path,
-              children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("img", {
-                src: _public_images_header_register_png__WEBPACK_IMPORTED_MODULE_8__.default.src,
-                alt: ""
-              }, void 0, false, {
-                fileName: _jsxFileName,
-                lineNumber: 66,
-                columnNumber: 41
-              }, this)
-            }, void 0, false, {
-              fileName: _jsxFileName,
-              lineNumber: 65,
-              columnNumber: 37
-            }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_5___default()), {
-              href: registration_path,
-              children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
-                children: registration
-              }, void 0, false, {
-                fileName: _jsxFileName,
-                lineNumber: 69,
-                columnNumber: 41
-              }, this)
-            }, void 0, false, {
-              fileName: _jsxFileName,
-              lineNumber: 68,
-              columnNumber: 37
-            }, this)]
-          }, void 0, true, {
-            fileName: _jsxFileName,
-            lineNumber: 64,
-            columnNumber: 33
-          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-            className: (_BarItems_module_scss__WEBPACK_IMPORTED_MODULE_12___default().sign_in_button),
-            onClick: loginModalHandle,
-            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("img", {
-              src: _public_images_header_login_png__WEBPACK_IMPORTED_MODULE_9__.default.src,
-              alt: ""
-            }, void 0, false, {
-              fileName: _jsxFileName,
-              lineNumber: 80,
-              columnNumber: 37
-            }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
-              children: login
-            }, void 0, false, {
-              fileName: _jsxFileName,
-              lineNumber: 81,
-              columnNumber: 37
-            }, this)]
-          }, void 0, true, {
-            fileName: _jsxFileName,
-            lineNumber: 76,
-            columnNumber: 33
-          }, this)]
-        }, void 0, true, {
-          fileName: _jsxFileName,
-          lineNumber: 63,
-          columnNumber: 29
-        }, this)
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 62,
-        columnNumber: 25
-      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-        className: (_BarItems_module_scss__WEBPACK_IMPORTED_MODULE_12___default().lang_button),
-        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-          className: (_BarItems_module_scss__WEBPACK_IMPORTED_MODULE_12___default().lang_button_content),
-          style: showDrop ? {
-            display: 'none'
-          } : null,
-          onClick: () => setShowDrop(true),
-          children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
-            children: translate(`${languagesTitle.contentOnTitle}`)
-          }, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 96,
-            columnNumber: 29
-          }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("img", {
-            src: languagesTitle.icon,
-            alt: "lang-flag"
-          }, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 101,
-            columnNumber: 29
-          }, this)]
-        }, void 0, true, {
-          fileName: _jsxFileName,
-          lineNumber: 91,
-          columnNumber: 25
-        }, this), showDrop && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_LanguageDrop_LanguageDrop__WEBPACK_IMPORTED_MODULE_6__.LanguageDrop, {
-          click: changeLangTitle,
-          onClose: () => setShowDrop(false),
-          data: languages_data
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 106,
-          columnNumber: 38
-        }, this)]
-      }, void 0, true, {
-        fileName: _jsxFileName,
-        lineNumber: 90,
-        columnNumber: 21
-      }, this)]
-    }, void 0, true, {
-      fileName: _jsxFileName,
-      lineNumber: 60,
-      columnNumber: 17
-    }, this)
-  }, void 0, false);
-}
-
-/***/ }),
-
-/***/ "./components/Header/Bar/BarItems/LanguageDropConfigs/lang-configs.js":
-/*!****************************************************************************!*\
-  !*** ./components/Header/Bar/BarItems/LanguageDropConfigs/lang-configs.js ***!
-  \****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "languages": function() { return /* binding */ languages; }
-/* harmony export */ });
-/* harmony import */ var _public_images_header_flags_rus_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../public/images/header/flags/rus.png */ "./public/images/header/flags/rus.png");
-/* harmony import */ var _public_images_header_flags_arm_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../public/images/header/flags/arm.svg */ "./public/images/header/flags/arm.svg");
-/* harmony import */ var _public_images_header_flags_en_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../public/images/header/flags/en.svg */ "./public/images/header/flags/en.svg");
-/* harmony import */ var _public_images_header_flags_esp_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../public/images/header/flags/esp.svg */ "./public/images/header/flags/esp.svg");
-/* harmony import */ var _public_images_header_flags_frc_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../../public/images/header/flags/frc.svg */ "./public/images/header/flags/frc.svg");
-/* harmony import */ var _public_images_header_flags_deu_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../public/images/header/flags/deu.svg */ "./public/images/header/flags/deu.svg");
-// flag icons
-
-
-
-
-
-
-const languages = [{
-  lang: "am",
-  contentOnTitle: 'am.onTitle',
-  contentOnDrop: 'am.onDrop',
-  icon: _public_images_header_flags_arm_svg__WEBPACK_IMPORTED_MODULE_1__.default.src
+const icons = [{
+  iconUrl: login_facebook.src
 }, {
-  lang: "rs",
-  contentOnTitle: 'rs.onTitle',
-  contentOnDrop: 'rs.onDrop',
-  icon: _public_images_header_flags_rus_png__WEBPACK_IMPORTED_MODULE_0__.default.src
+  iconUrl: gmail.src
 }, {
-  lang: "en",
-  contentOnTitle: 'en.onTitle',
-  contentOnDrop: 'en.onDrop',
-  icon: _public_images_header_flags_en_svg__WEBPACK_IMPORTED_MODULE_2__.default.src
+  iconUrl: vk.src
 }, {
-  lang: "esp",
-  contentOnTitle: 'esp.onTitle',
-  contentOnDrop: 'esp.onDrop',
-  icon: _public_images_header_flags_esp_svg__WEBPACK_IMPORTED_MODULE_3__.default.src
-}, {
-  lang: "fr",
-  contentOnTitle: 'frc.onTitle',
-  contentOnDrop: 'frc.onDrop',
-  icon: _public_images_header_flags_frc_svg__WEBPACK_IMPORTED_MODULE_4__.default.src
-}, {
-  lang: "deu",
-  contentOnTitle: 'deu.onTitle',
-  contentOnDrop: 'deu.onDrop',
-  icon: _public_images_header_flags_deu_svg__WEBPACK_IMPORTED_MODULE_5__.default.src
+  iconUrl: twitter.src
 }];
 
-/***/ }),
+const responseFacebook = response => {
+  console.log(response);
+};
 
-/***/ "./components/Header/Bar/BarItems/LanguageDrop/LanguageDrop.jsx":
-/*!**********************************************************************!*\
-  !*** ./components/Header/Bar/BarItems/LanguageDrop/LanguageDrop.jsx ***!
-  \**********************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+const responseGoogle = response => {
+  console.log(response);
+};
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "LanguageDrop": function() { return /* binding */ LanguageDrop; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_dist_client_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/dist/client/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next-translate/useTranslation */ "next-translate/useTranslation");
-/* harmony import */ var next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _LanguageDrop_module_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./LanguageDrop.module.scss */ "./components/Header/Bar/BarItems/LanguageDrop/LanguageDrop.module.scss");
-/* harmony import */ var _LanguageDrop_module_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_LanguageDrop_module_scss__WEBPACK_IMPORTED_MODULE_5__);
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\components\\Header\\Bar\\BarItems\\LanguageDrop\\LanguageDrop.jsx";
-// hooks and helpers
-
- // translation 
-
- // componetns
-
- // styles 
-
-
-function LanguageDrop({
-  onClose,
-  click,
-  data
-}) {
-  (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
-    document.addEventListener("mousedown", handleClose);
-    return () => {
-      document.removeEventListener("mousedown", handleClose);
-    };
+const TWITTER_CONSUMER_KEY = "";
+const TWITTER_CONSUMER_SECRET = "";
+function SocialMediaIcons() {
+  (0,external_react_.useEffect)(() => {
+    VK.init({
+      apiId: '7911294'
+    });
   }, []);
 
-  const node = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(),
-        router = (0,next_dist_client_router__WEBPACK_IMPORTED_MODULE_1__.useRouter)(),
-        handleClose = e => {
-    if (node.current.contains(e.target)) {
-      if (e.target.parentNode) return;
-    }
+  function onSocialMediaBtnClick(i) {
+    if (i === 0) {
+      const facebookLoginBtn = document.querySelector(`.facebook-login-btn`);
+      console.log(facebookLoginBtn);
+      if (facebookLoginBtn) facebookLoginBtn.click();
+    } else if (i === 1) {
+      const googleLoginBtn = document.querySelector(`.google-login-btn`);
+      if (googleLoginBtn) googleLoginBtn.click();
+    } else if (i === 2) {
+      VK.Auth.login(function (response) {
+        if (response.session) {
+          /*User authorization succeeded*/
+          console.log(response);
 
-    onClose();
-  },
-        {
-    t
-  } = next_translate_useTranslation__WEBPACK_IMPORTED_MODULE_3___default()('common'),
-        translationPath = 'header.lang.',
-        translate = key => t(`${translationPath}${key}`);
+          if (response.status == 'connected') {
+            /*Selected user access settings, if they are requested*/
+          }
+        } else {
+          /*User clicks the cancel button in the authorization window*/
+        }
+      });
+    } else if (i === 3) {}
+  }
 
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-    className: (_LanguageDrop_module_scss__WEBPACK_IMPORTED_MODULE_5___default().container),
-    ref: node,
-    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-      className: (_LanguageDrop_module_scss__WEBPACK_IMPORTED_MODULE_5___default().content),
-      children: data.map(el => {
-        return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
-          href: `${router.pathname}`,
-          locale: el.lang,
-          children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-            className: (_LanguageDrop_module_scss__WEBPACK_IMPORTED_MODULE_5___default().row),
-            children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
-              onClick: click,
-              className: `${el.lang}`,
-              children: translate(el.contentOnDrop)
-            }, void 0, false, {
-              fileName: _jsxFileName,
-              lineNumber: 49,
-              columnNumber: 37
-            }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("img", {
-              onClick: click,
-              src: el.icon,
-              className: `${el.lang}`
-            }, void 0, false, {
-              fileName: _jsxFileName,
-              lineNumber: 57,
-              columnNumber: 37
-            }, this)]
-          }, void 0, true, {
-            fileName: _jsxFileName,
-            lineNumber: 48,
-            columnNumber: 33
-          }, this)
-        }, `change-lang-${el.lang}`, false, {
-          fileName: _jsxFileName,
-          lineNumber: 44,
-          columnNumber: 29
-        }, this);
+  const twitterAuthHandler = (err, data) => {
+    console.log(err, data);
+  };
+
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: (SocialMediaIcons_module_default()).conteiner,
+    children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (SocialMediaIcons_module_default()).content,
+      children: icons.map((el, i) => {
+        return /*#__PURE__*/jsx_runtime_.jsx("div", {
+          className: (SocialMediaIcons_module_default()).iconContent,
+          children: /*#__PURE__*/jsx_runtime_.jsx("a", {
+            target: "_blank",
+            children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+              className: (SocialMediaIcons_module_default()).iconBody,
+              children: [/*#__PURE__*/jsx_runtime_.jsx("img", {
+                src: el.iconUrl,
+                alt: "",
+                onClick: () => onSocialMediaBtnClick(i),
+                className: (SocialMediaIcons_module_default()).icon,
+                style: {
+                  cursor: 'pointer'
+                }
+              }), i === 0 && /*#__PURE__*/jsx_runtime_.jsx((external_react_facebook_login_default()), {
+                containerStyle: {
+                  display: `none`
+                },
+                cssClass: "facebook-login-btn",
+                appId: "118863770361683",
+                fields: "name,email,picture",
+                callback: responseFacebook
+              }), i === 1 && /*#__PURE__*/jsx_runtime_.jsx((external_react_google_login_default()), {
+                clientId: "1089618047943-r91su9qkc0c9npo1tfoff3sp8421bt5g.apps.googleusercontent.com",
+                render: renderProps => /*#__PURE__*/jsx_runtime_.jsx("button", {
+                  onClick: renderProps.onClick,
+                  disabled: renderProps.disabled,
+                  style: {
+                    display: 'none'
+                  },
+                  className: "google-login-btn"
+                }),
+                cookiePolicy: 'single_host_origin',
+                onSuccess: responseGoogle,
+                onFailure: responseGoogle
+              }), /*#__PURE__*/jsx_runtime_.jsx((external_react_twitter_login_default()), {
+                authCallback: twitterAuthHandler,
+                consumerKey: TWITTER_CONSUMER_KEY,
+                consumerSecret: TWITTER_CONSUMER_SECRET
+              })]
+            })
+          })
+        }, Math.random() * 10);
       })
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 40,
-      columnNumber: 13
-    }, this)
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 36,
-    columnNumber: 9
-  }, this);
+    })
+  });
+} // TODO
+// add foot footbet domain in google develpors account
+// EXTERNAL MODULE: external "react-hook-form"
+var external_react_hook_form_ = __webpack_require__(2662);
+// EXTERNAL MODULE: external "yup"
+var external_yup_ = __webpack_require__(9440);
+// EXTERNAL MODULE: external "@hookform/resolvers/yup"
+var yup_ = __webpack_require__(2166);
+;// CONCATENATED MODULE: ./components/Header/Bar/Login/common/Title.jsx
+
+function Title({
+  styles,
+  content
+}) {
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: styles,
+    children: /*#__PURE__*/jsx_runtime_.jsx("p", {
+      children: content
+    })
+  });
 }
+// EXTERNAL MODULE: ./components/common/auth/InputContainer/InputContainer.jsx
+var InputContainer = __webpack_require__(4720);
+;// CONCATENATED MODULE: ./components/Header/Bar/Login/common/Submit.jsx
 
 /***/ }),
 
@@ -6252,2100 +5251,237 @@ function useIntersection({
   rootMargin,
   disabled
 }) {
-  const isDisabled = disabled || !hasIntersectionObserver;
-  const unobserve = (0, _react.useRef)();
-  const [visible, setVisible] = (0, _react.useState)(false);
-  const setRef = (0, _react.useCallback)(el => {
-    if (unobserve.current) {
-      unobserve.current();
-      unobserve.current = undefined;
-    }
-
-    if (isDisabled || visible) return;
-
-    if (el && el.tagName) {
-      unobserve.current = observe(el, isVisible => isVisible && setVisible(isVisible), {
-        rootMargin
-      });
-    }
-  }, [isDisabled, rootMargin, visible]);
-  (0, _react.useEffect)(() => {
-    if (!hasIntersectionObserver) {
-      if (!visible) {
-        const idleCallback = (0, _requestIdleCallback.requestIdleCallback)(() => setVisible(true));
-        return () => (0, _requestIdleCallback.cancelIdleCallback)(idleCallback);
-      }
-    }
-  }, [visible]);
-  return [setRef, visible];
-}
-
-function observe(element, callback, options) {
-  const {
-    id,
-    observer,
-    elements
-  } = createObserver(options);
-  elements.set(element, callback);
-  observer.observe(element);
-  return function unobserve() {
-    elements.delete(element);
-    observer.unobserve(element); // Destroy observer when there's nothing left to watch:
-
-    if (elements.size === 0) {
-      observer.disconnect();
-      observers.delete(id);
-    }
-  };
-}
-
-const observers = new Map();
-
-function createObserver(options) {
-  const id = options.rootMargin || '';
-  let instance = observers.get(id);
-
-  if (instance) {
-    return instance;
-  }
-
-  const elements = new Map();
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const callback = elements.get(entry.target);
-      const isVisible = entry.isIntersecting || entry.intersectionRatio > 0;
-
-      if (callback && isVisible) {
-        callback(isVisible);
-      }
-    });
-  }, options);
-  observers.set(id, instance = {
-    id,
-    observer,
-    elements
-  });
-  return instance;
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/client/with-router.js":
-/*!******************************************************!*\
-  !*** ./node_modules/next/dist/client/with-router.js ***!
-  \******************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-exports.__esModule = true;
-exports.default = withRouter;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
-var _router = __webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js");
-
-function withRouter(ComposedComponent) {
-  function WithRouterWrapper(props) {
-    return /*#__PURE__*/_react.default.createElement(ComposedComponent, Object.assign({
-      router: (0, _router.useRouter)()
-    }, props));
-  }
-
-  WithRouterWrapper.getInitialProps = ComposedComponent.getInitialProps // This is needed to allow checking for custom getInitialProps in _app
-  ;
-  WithRouterWrapper.origGetInitialProps = ComposedComponent.origGetInitialProps;
-
-  if (true) {
-    const name = ComposedComponent.displayName || ComposedComponent.name || 'Unknown';
-    WithRouterWrapper.displayName = `withRouter(${name})`;
-  }
-
-  return WithRouterWrapper;
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/i18n/detect-domain-locale.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/i18n/detect-domain-locale.js ***!
-  \*****************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.detectDomainLocale = detectDomainLocale;
-
-function detectDomainLocale(domainItems, hostname, detectedLocale) {
-  let domainItem;
-
-  if (domainItems) {
-    if (detectedLocale) {
-      detectedLocale = detectedLocale.toLowerCase();
-    }
-
-    for (const item of domainItems) {
-      var _item$domain, _item$locales; // remove port if present
-
-
-      const domainHostname = (_item$domain = item.domain) == null ? void 0 : _item$domain.split(':')[0].toLowerCase();
-
-      if (hostname === domainHostname || detectedLocale === item.defaultLocale.toLowerCase() || (_item$locales = item.locales) != null && _item$locales.some(locale => locale.toLowerCase() === detectedLocale)) {
-        domainItem = item;
-        break;
-      }
-    }
-  }
-
-  return domainItem;
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/i18n/normalize-locale-path.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/i18n/normalize-locale-path.js ***!
-  \******************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.normalizeLocalePath = normalizeLocalePath;
-
-function normalizeLocalePath(pathname, locales) {
-  let detectedLocale; // first item will be empty string from splitting at first char
-
-  const pathnameParts = pathname.split('/');
-  (locales || []).some(locale => {
-    if (pathnameParts[1].toLowerCase() === locale.toLowerCase()) {
-      detectedLocale = locale;
-      pathnameParts.splice(1, 1);
-      pathname = pathnameParts.join('/') || '/';
-      return true;
-    }
-
-    return false;
-  });
-  return {
-    pathname,
-    detectedLocale
-  };
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/mitt.js":
-/*!********************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/mitt.js ***!
-  \********************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.default = mitt;
-/*
-MIT License
-Copyright (c) Jason Miller (https://jasonformat.com/)
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
-// This file is based on https://github.com/developit/mitt/blob/v1.1.3/src/index.js
-// It's been edited for the needs of this script
-// See the LICENSE at the top of the file
-
-function mitt() {
-  const all = Object.create(null);
-  return {
-    on(type, handler) {
-      ;
-      (all[type] || (all[type] = [])).push(handler);
-    },
-
-    off(type, handler) {
-      if (all[type]) {
-        all[type].splice(all[type].indexOf(handler) >>> 0, 1);
-      }
-    },
-
-    emit(type, ...evts) {
-      // eslint-disable-next-line array-callback-return
-      ;
-      (all[type] || []).slice().map(handler => {
-        handler(...evts);
-      });
-    }
-
-  };
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/router/router.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/router.js ***!
-  \*****************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.getDomainLocale = getDomainLocale;
-exports.addLocale = addLocale;
-exports.delLocale = delLocale;
-exports.hasBasePath = hasBasePath;
-exports.addBasePath = addBasePath;
-exports.delBasePath = delBasePath;
-exports.isLocalURL = isLocalURL;
-exports.interpolateAs = interpolateAs;
-exports.resolveHref = resolveHref;
-exports.default = void 0;
-
-var _normalizeTrailingSlash = __webpack_require__(/*! ../../../client/normalize-trailing-slash */ "./node_modules/next/dist/client/normalize-trailing-slash.js");
-
-var _routeLoader = __webpack_require__(/*! ../../../client/route-loader */ "./node_modules/next/dist/client/route-loader.js");
-
-var _denormalizePagePath = __webpack_require__(/*! ../../server/denormalize-page-path */ "./node_modules/next/dist/next-server/server/denormalize-page-path.js");
-
-var _normalizeLocalePath = __webpack_require__(/*! ../i18n/normalize-locale-path */ "./node_modules/next/dist/next-server/lib/i18n/normalize-locale-path.js");
-
-var _mitt = _interopRequireDefault(__webpack_require__(/*! ../mitt */ "./node_modules/next/dist/next-server/lib/mitt.js"));
-
-var _utils = __webpack_require__(/*! ../utils */ "./node_modules/next/dist/next-server/lib/utils.js");
-
-var _isDynamic = __webpack_require__(/*! ./utils/is-dynamic */ "./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js");
-
-var _parseRelativeUrl = __webpack_require__(/*! ./utils/parse-relative-url */ "./node_modules/next/dist/next-server/lib/router/utils/parse-relative-url.js");
-
-var _querystring = __webpack_require__(/*! ./utils/querystring */ "./node_modules/next/dist/next-server/lib/router/utils/querystring.js");
-
-var _resolveRewrites = _interopRequireDefault(__webpack_require__(/*! ./utils/resolve-rewrites */ "?ca47"));
-
-var _routeMatcher = __webpack_require__(/*! ./utils/route-matcher */ "./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js");
-
-var _routeRegex = __webpack_require__(/*! ./utils/route-regex */ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js");
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-} // tslint:disable:no-console
-
-
-let detectDomainLocale;
-
-if (true) {
-  detectDomainLocale = __webpack_require__(/*! ../i18n/detect-domain-locale */ "./node_modules/next/dist/next-server/lib/i18n/detect-domain-locale.js").detectDomainLocale;
-}
-
-const basePath =  false || '';
-
-function buildCancellationError() {
-  return Object.assign(new Error('Route Cancelled'), {
-    cancelled: true
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: styles,
+    children: /*#__PURE__*/jsx_runtime_.jsx("button", {
+      type: "submit",
+      children: content
+    })
   });
 }
-
-function addPathPrefix(path, prefix) {
-  return prefix && path.startsWith('/') ? path === '/' ? (0, _normalizeTrailingSlash.normalizePathTrailingSlash)(prefix) : `${prefix}${pathNoQueryHash(path) === '/' ? path.substring(1) : path}` : path;
-}
-
-function getDomainLocale(path, locale, locales, domainLocales) {
-  if (true) {
-    locale = locale || (0, _normalizeLocalePath.normalizeLocalePath)(path, locales).detectedLocale;
-    const detectedDomain = detectDomainLocale(domainLocales, undefined, locale);
-
-    if (detectedDomain) {
-      return `http${detectedDomain.http ? '' : 's'}://${detectedDomain.domain}${basePath || ''}${locale === detectedDomain.defaultLocale ? '' : `/${locale}`}${path}`;
-    }
-
-    return false;
-  }
-
-  return false;
-}
-
-function addLocale(path, locale, defaultLocale) {
-  if (true) {
-    const pathname = pathNoQueryHash(path);
-    const pathLower = pathname.toLowerCase();
-    const localeLower = locale && locale.toLowerCase();
-    return locale && locale !== defaultLocale && !pathLower.startsWith('/' + localeLower + '/') && pathLower !== '/' + localeLower ? addPathPrefix(path, '/' + locale) : path;
-  }
-
-  return path;
-}
-
-function delLocale(path, locale) {
-  if (true) {
-    const pathname = pathNoQueryHash(path);
-    const pathLower = pathname.toLowerCase();
-    const localeLower = locale && locale.toLowerCase();
-    return locale && (pathLower.startsWith('/' + localeLower + '/') || pathLower === '/' + localeLower) ? (pathname.length === locale.length + 1 ? '/' : '') + path.substr(locale.length + 1) : path;
-  }
-
-  return path;
-}
-
-function pathNoQueryHash(path) {
-  const queryIndex = path.indexOf('?');
-  const hashIndex = path.indexOf('#');
-
-  if (queryIndex > -1 || hashIndex > -1) {
-    path = path.substring(0, queryIndex > -1 ? queryIndex : hashIndex);
-  }
-
-  return path;
-}
-
-function hasBasePath(path) {
-  path = pathNoQueryHash(path);
-  return path === basePath || path.startsWith(basePath + '/');
-}
-
-function addBasePath(path) {
-  // we only add the basepath on relative urls
-  return addPathPrefix(path, basePath);
-}
-
-function delBasePath(path) {
-  path = path.slice(basePath.length);
-  if (!path.startsWith('/')) path = `/${path}`;
-  return path;
-}
-/**
-* Detects whether a given url is routable by the Next.js router (browser only).
-*/
+;// CONCATENATED MODULE: ./components/Header/Bar/Login/ResetPassword/GetEmailCode/input_configs.js
+const // input configs
+inputs = [{
+  id: 'first',
+  type: 'text',
+  class: 'move',
+  key: Math.random(),
+  maxLength: "1"
+}, {
+  id: 'second',
+  type: 'text',
+  class: 'move',
+  key: Math.random(),
+  maxLength: '1'
+}, {
+  id: 'third',
+  type: 'text',
+  class: 'move',
+  key: Math.random(),
+  maxLength: '1'
+}, {
+  id: 'fourth',
+  type: 'text',
+  class: 'move',
+  key: Math.random(),
+  maxLength: '1'
+}, {
+  id: 'fifth',
+  type: 'text',
+  class: 'move',
+  key: Math.random(),
+  maxLength: '1'
+}, {
+  id: 'sixth',
+  type: 'text',
+  class: 'move',
+  key: Math.random(),
+  maxLength: '1'
+}];
+// EXTERNAL MODULE: external "react-toastify"
+var external_react_toastify_ = __webpack_require__(2034);
+// EXTERNAL MODULE: ./components/Header/Bar/Login/ResetPassword/NewPassword/NewPassword.module.scss
+var NewPassword_module = __webpack_require__(2436);
+var NewPassword_module_default = /*#__PURE__*/__webpack_require__.n(NewPassword_module);
+// EXTERNAL MODULE: ./components/Header/Bar/Login/ResetPassword/Success/Success.module.scss
+var Success_module = __webpack_require__(3949);
+var Success_module_default = /*#__PURE__*/__webpack_require__.n(Success_module);
+;// CONCATENATED MODULE: ./public/images/header/login/success.png
+/* harmony default export */ const success = ({"src":"/_next/static/image/public/images/header/login/success.b2f639f6971931b9d4939c59119e7859.png","height":132,"width":141,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAA8klEQVR4nAHnABj/ARm+LgAJAQY+7v/2jgUAAi/r/tT+Ygtq1X0YdeHkIdxYARa+LUrq/uS1BgEUABoBDf/g/c4BqRitAPfj9QBg8F5TAQC9HuFHCDUe1fvf++T6zgVpEHH/XQBX/WXhcATVFt7gAQC6AP+iD6b9BAgEA1rqVv+6Gb0A1NvUAXILb/4fBDECAQC/GuA37ygfiReA+/IV9AQH5wQAR+xk/A4TCwUA/QDgATK/P0fO/8G2WvJhAnIUawCk6KgAkBGMABsBL/7t//hJASnCNwAE/wQ60/vNjTLnNzDTE+cACQoD0Pf8/XMCAQHGNDBlOPg+WCUAAAAASUVORK5CYII="});
+;// CONCATENATED MODULE: ./components/Header/Bar/Login/ResetPassword/Success/Success.jsx
+// hooks helpers
+ // components
 
 
-function isLocalURL(url) {
-  // prevent a hydration mismatch on href for url with anchor refs
-  if (url.startsWith('/') || url.startsWith('#') || url.startsWith('?')) return true;
+ // styles
 
-  try {
-    // absolute urls can be local if they are on the same origin
-    const locationOrigin = (0, _utils.getLocationOrigin)();
-    const resolved = new URL(url, locationOrigin);
-    return resolved.origin === locationOrigin && hasBasePath(resolved.pathname);
-  } catch (_) {
-    return false;
-  }
-}
-
-function interpolateAs(route, asPathname, query) {
-  let interpolatedRoute = '';
-  const dynamicRegex = (0, _routeRegex.getRouteRegex)(route);
-  const dynamicGroups = dynamicRegex.groups;
-  const dynamicMatches = // Try to match the dynamic route against the asPath
-  (asPathname !== route ? (0, _routeMatcher.getRouteMatcher)(dynamicRegex)(asPathname) : '') || // Fall back to reading the values from the href
-  // TODO: should this take priority; also need to change in the router.
-  query;
-  interpolatedRoute = route;
-  const params = Object.keys(dynamicGroups);
-
-  if (!params.every(param => {
-    let value = dynamicMatches[param] || '';
-    const {
-      repeat,
-      optional
-    } = dynamicGroups[param]; // support single-level catch-all
-    // TODO: more robust handling for user-error (passing `/`)
-
-    let replaced = `[${repeat ? '...' : ''}${param}]`;
-
-    if (optional) {
-      replaced = `${!value ? '/' : ''}[${replaced}]`;
-    }
-
-    if (repeat && !Array.isArray(value)) value = [value];
-    return (optional || param in dynamicMatches) && ( // Interpolate group into data URL if present
-    interpolatedRoute = interpolatedRoute.replace(replaced, repeat ? value.map( // these values should be fully encoded instead of just
-    // path delimiter escaped since they are being inserted
-    // into the URL and we expect URL encoded segments
-    // when parsing dynamic route params
-    segment => encodeURIComponent(segment)).join('/') : encodeURIComponent(value)) || '/');
-  })) {
-    interpolatedRoute = ''; // did not satisfy all requirements
-    // n.b. We ignore this error because we handle warning for this case in
-    // development in the `<Link>` component directly.
-  }
-
-  return {
-    params,
-    result: interpolatedRoute
-  };
-}
-
-function omitParmsFromQuery(query, params) {
-  const filteredQuery = {};
-  Object.keys(query).forEach(key => {
-    if (!params.includes(key)) {
-      filteredQuery[key] = query[key];
-    }
-  });
-  return filteredQuery;
-}
-/**
-* Resolves a given hyperlink with a certain router state (basePath not included).
-* Preserves absolute urls.
-*/
+ // icons
 
 
-function resolveHref(router, href, resolveAs) {
-  // we use a dummy base url for relative urls
-  let base;
-  const urlAsString = typeof href === 'string' ? href : (0, _utils.formatWithValidation)(href);
-
-  try {
-    base = new URL(urlAsString.startsWith('#') ? router.asPath : router.pathname, 'http://n');
-  } catch (_) {
-    // fallback to / for invalid asPath values e.g. //
-    base = new URL('/', 'http://n');
-  } // Return because it cannot be routed by the Next.js router
 
 
-  if (!isLocalURL(urlAsString)) {
-    return resolveAs ? [urlAsString] : urlAsString;
-  }
+function Success({
+  onModalClose
+}) {
+  const // translation    
+  {
+    t
+  } = useTranslation_default()('common'),
+        translationPath = 'header.successModal.',
+        translate = key => t(`${translationPath}${key}`);
 
-  try {
-    const finalUrl = new URL(urlAsString, base);
-    finalUrl.pathname = (0, _normalizeTrailingSlash.normalizePathTrailingSlash)(finalUrl.pathname);
-    let interpolatedAs = '';
-
-    if ((0, _isDynamic.isDynamicRoute)(finalUrl.pathname) && finalUrl.searchParams && resolveAs) {
-      const query = (0, _querystring.searchParamsToUrlQuery)(finalUrl.searchParams);
-      const {
-        result,
-        params
-      } = interpolateAs(finalUrl.pathname, finalUrl.pathname, query);
-
-      if (result) {
-        interpolatedAs = (0, _utils.formatWithValidation)({
-          pathname: result,
-          hash: finalUrl.hash,
-          query: omitParmsFromQuery(query, params)
-        });
-      }
-    } // if the origin didn't change, it means we received a relative href
-
-
-    const resolvedHref = finalUrl.origin === base.origin ? finalUrl.href.slice(finalUrl.origin.length) : finalUrl.href;
-    return resolveAs ? [resolvedHref, interpolatedAs || resolvedHref] : resolvedHref;
-  } catch (_) {
-    return resolveAs ? [urlAsString] : urlAsString;
-  }
-}
-
-function stripOrigin(url) {
-  const origin = (0, _utils.getLocationOrigin)();
-  return url.startsWith(origin) ? url.substring(origin.length) : url;
-}
-
-function prepareUrlAs(router, url, as) {
-  // If url and as provided as an object representation,
-  // we'll format them into the string version here.
-  let [resolvedHref, resolvedAs] = resolveHref(router, url, true);
-  const origin = (0, _utils.getLocationOrigin)();
-  const hrefHadOrigin = resolvedHref.startsWith(origin);
-  const asHadOrigin = resolvedAs && resolvedAs.startsWith(origin);
-  resolvedHref = stripOrigin(resolvedHref);
-  resolvedAs = resolvedAs ? stripOrigin(resolvedAs) : resolvedAs;
-  const preparedUrl = hrefHadOrigin ? resolvedHref : addBasePath(resolvedHref);
-  const preparedAs = as ? stripOrigin(resolveHref(router, as)) : resolvedAs || resolvedHref;
-  return {
-    url: preparedUrl,
-    as: asHadOrigin ? preparedAs : addBasePath(preparedAs)
-  };
-}
-
-function resolveDynamicRoute(pathname, pages) {
-  const cleanPathname = (0, _normalizeTrailingSlash.removePathTrailingSlash)((0, _denormalizePagePath.denormalizePagePath)(pathname));
-
-  if (cleanPathname === '/404' || cleanPathname === '/_error') {
-    return pathname;
-  } // handle resolving href for dynamic routes
-
-
-  if (!pages.includes(cleanPathname)) {
-    // eslint-disable-next-line array-callback-return
-    pages.some(page => {
-      if ((0, _isDynamic.isDynamicRoute)(page) && (0, _routeRegex.getRouteRegex)(page).re.test(cleanPathname)) {
-        pathname = page;
-        return true;
-      }
-    });
-  }
-
-  return (0, _normalizeTrailingSlash.removePathTrailingSlash)(pathname);
-}
-
-const manualScrollRestoration =  false && 0;
-const SSG_DATA_NOT_FOUND = Symbol('SSG_DATA_NOT_FOUND');
-
-function fetchRetry(url, attempts) {
-  return fetch(url, {
-    // Cookies are required to be present for Next.js' SSG "Preview Mode".
-    // Cookies may also be required for `getServerSideProps`.
-    //
-    // > `fetch` won’t send cookies, unless you set the credentials init
-    // > option.
-    // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-    //
-    // > For maximum browser compatibility when it comes to sending &
-    // > receiving cookies, always supply the `credentials: 'same-origin'`
-    // > option instead of relying on the default.
-    // https://github.com/github/fetch#caveats
-    credentials: 'same-origin'
-  }).then(res => {
-    if (!res.ok) {
-      if (attempts > 1 && res.status >= 500) {
-        return fetchRetry(url, attempts - 1);
-      }
-
-      if (res.status === 404) {
-        return res.json().then(data => {
-          if (data.notFound) {
-            return {
-              notFound: SSG_DATA_NOT_FOUND
-            };
-          }
-
-          throw new Error(`Failed to load static props`);
-        });
-      }
-
-      throw new Error(`Failed to load static props`);
-    }
-
-    return res.json();
+  return /*#__PURE__*/jsx_runtime_.jsx(Modal/* Modal */.u, {
+    onClose: onModalClose,
+    contentStyles: (Success_module_default()).m_content,
+    containerStyles: (Success_module_default()).m_container,
+    children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: (Success_module_default()).container,
+      children: [/*#__PURE__*/jsx_runtime_.jsx(Title, {
+        styles: (Success_module_default()).title,
+        content: translate('title')
+      }), /*#__PURE__*/jsx_runtime_.jsx("div", {
+        className: (Success_module_default()).icon_container,
+        children: /*#__PURE__*/jsx_runtime_.jsx("img", {
+          src: success.src,
+          alt: "Success img"
+        })
+      })]
+    })
   });
 }
+// EXTERNAL MODULE: ./lib/er.lib.js
+var er_lib = __webpack_require__(1863);
+// EXTERNAL MODULE: ./lib/request-destinations.js + 1 modules
+var request_destinations = __webpack_require__(8955);
+;// CONCATENATED MODULE: ./components/Header/Bar/Login/ResetPassword/NewPassword/NewPassword.jsx
+// hooks and helpers
 
-function fetchNextData(dataHref, isServerRender) {
-  return fetchRetry(dataHref, isServerRender ? 3 : 1).catch(err => {
-    // We should only trigger a server-side transition if this was caused
-    // on a client-side transition. Otherwise, we'd get into an infinite
-    // loop.
-    if (!isServerRender) {
-      (0, _routeLoader.markAssetError)(err);
+
+
+
+ //components
+
+
+
+
+
+ // styles
+
+
+
+
+
+
+
+
+function NewPassword({
+  onModalClose
+}) {
+  const // modal states pass => password Ml => Modal
+  {
+    0: showNewPassMl,
+    1: setShowNewPassMl
+  } = (0,external_react_.useState)(true),
+        {
+    0: showSuccessMl,
+    1: setShowSuccessMl
+  } = (0,external_react_.useState)(false),
+        // translation consfigs
+  {
+    t
+  } = useTranslation_default()('common'),
+        translationPath = 'header.newPasswordModal.',
+        translate = key => t(`${translationPath}${key}`),
+        // yup configs
+  schema = external_yup_.object().shape({
+    password: external_yup_.string().required().min(6)
+  }),
+        // form configs
+  {
+    register,
+    handleSubmit,
+    formState: {
+      errors
     }
-
-    throw err;
-  });
-}
-
-class Router {
-  /**
-  * Map of all components loaded in `Router`
-  */
-  // Static Data Cache
-  // In-flight Server Data Requests, for deduping
-  constructor(_pathname, _query, _as, {
-    initialProps,
-    pageLoader,
-    App,
-    wrapApp,
-    Component,
-    err,
-    subscription,
-    isFallback,
-    locale,
-    locales,
-    defaultLocale,
-    domainLocales,
-    isPreview
-  }) {
-    this.route = void 0;
-    this.pathname = void 0;
-    this.query = void 0;
-    this.asPath = void 0;
-    this.basePath = void 0;
-    this.components = void 0;
-    this.sdc = {};
-    this.sdr = {};
-    this.sub = void 0;
-    this.clc = void 0;
-    this.pageLoader = void 0;
-    this._bps = void 0;
-    this.events = void 0;
-    this._wrapApp = void 0;
-    this.isSsr = void 0;
-    this.isFallback = void 0;
-    this._inFlightRoute = void 0;
-    this._shallow = void 0;
-    this.locale = void 0;
-    this.locales = void 0;
-    this.defaultLocale = void 0;
-    this.domainLocales = void 0;
-    this.isReady = void 0;
-    this.isPreview = void 0;
-    this.isLocaleDomain = void 0;
-    this._idx = 0;
-
-    this.onPopState = e => {
-      const state = e.state;
-
-      if (!state) {
-        // We get state as undefined for two reasons.
-        //  1. With older safari (< 8) and older chrome (< 34)
-        //  2. When the URL changed with #
-        //
-        // In the both cases, we don't need to proceed and change the route.
-        // (as it's already changed)
-        // But we can simply replace the state with the new changes.
-        // Actually, for (1) we don't need to nothing. But it's hard to detect that event.
-        // So, doing the following for (1) does no harm.
-        const {
-          pathname,
-          query
-        } = this;
-        this.changeState('replaceState', (0, _utils.formatWithValidation)({
-          pathname: addBasePath(pathname),
-          query
-        }), (0, _utils.getURL)());
-        return;
-      }
-
-      if (!state.__N) {
-        return;
-      }
-
-      let forcedScroll;
-      const {
-        url,
-        as,
-        options,
-        idx
-      } = state;
-
-      if (false) {}
-
-      this._idx = idx;
-      const {
-        pathname
-      } = (0, _parseRelativeUrl.parseRelativeUrl)(url); // Make sure we don't re-render on initial load,
-      // can be caused by navigating back from an external site
-
-      if (this.isSsr && as === this.asPath && pathname === this.pathname) {
-        return;
-      } // If the downstream application returns falsy, return.
-      // They will then be responsible for handling the event.
-
-
-      if (this._bps && !this._bps(state)) {
-        return;
-      }
-
-      this.change('replaceState', url, as, Object.assign({}, options, {
-        shallow: options.shallow && this._shallow,
-        locale: options.locale || this.defaultLocale
-      }), forcedScroll);
-    }; // represents the current component key
-
-
-    this.route = (0, _normalizeTrailingSlash.removePathTrailingSlash)(_pathname); // set up the component cache (by route keys)
-
-    this.components = {}; // We should not keep the cache, if there's an error
-    // Otherwise, this cause issues when when going back and
-    // come again to the errored page.
-
-    if (_pathname !== '/_error') {
-      this.components[this.route] = {
-        Component,
-        initial: true,
-        props: initialProps,
-        err,
-        __N_SSG: initialProps && initialProps.__N_SSG,
-        __N_SSP: initialProps && initialProps.__N_SSP
-      };
-    }
-
-    this.components['/_app'] = {
-      Component: App,
-      styleSheets: [
-        /* /_app does not need its stylesheets managed */
-      ]
-    }; // Backwards compat for Router.router.events
-    // TODO: Should be remove the following major version as it was never documented
-
-    this.events = Router.events;
-    this.pageLoader = pageLoader;
-    this.pathname = _pathname;
-    this.query = _query; // if auto prerendered and dynamic route wait to update asPath
-    // until after mount to prevent hydration mismatch
-
-    const autoExportDynamic = (0, _isDynamic.isDynamicRoute)(_pathname) && self.__NEXT_DATA__.autoExport;
-
-    this.asPath = autoExportDynamic ? _pathname : _as;
-    this.basePath = basePath;
-    this.sub = subscription;
-    this.clc = null;
-    this._wrapApp = wrapApp; // make sure to ignore extra popState in safari on navigating
-    // back from external site
-
-    this.isSsr = true;
-    this.isFallback = isFallback;
-    this.isReady = !!(self.__NEXT_DATA__.gssp || self.__NEXT_DATA__.gip || !autoExportDynamic && !self.location.search && !false);
-    this.isPreview = !!isPreview;
-    this.isLocaleDomain = false;
-
-    if (true) {
-      this.locale = locale;
-      this.locales = locales;
-      this.defaultLocale = defaultLocale;
-      this.domainLocales = domainLocales;
-      this.isLocaleDomain = !!detectDomainLocale(domainLocales, self.location.hostname);
-    }
-
-    if (false) {}
-  }
-
-  reload() {
-    window.location.reload();
-  }
-  /**
-  * Go back in history
-  */
-
-
-  back() {
-    window.history.back();
-  }
-  /**
-  * Performs a `pushState` with arguments
-  * @param url of the route
-  * @param as masks `url` for the browser
-  * @param options object you can define `shallow` and other options
-  */
-
-
-  push(url, as, options = {}) {
-    if (false) {}
-
-    ;
-    ({
-      url,
-      as
-    } = prepareUrlAs(this, url, as));
-    return this.change('pushState', url, as, options);
-  }
-  /**
-  * Performs a `replaceState` with arguments
-  * @param url of the route
-  * @param as masks `url` for the browser
-  * @param options object you can define `shallow` and other options
-  */
-
-
-  replace(url, as, options = {}) {
-    ;
-    ({
-      url,
-      as
-    } = prepareUrlAs(this, url, as));
-    return this.change('replaceState', url, as, options);
-  }
-
-  async change(method, url, as, options, forcedScroll) {
-    if (!isLocalURL(url)) {
-      window.location.href = url;
-      return false;
-    }
-
-    const shouldResolveHref = url === as || options._h || options._shouldResolveHref; // for static pages with query params in the URL we delay
-    // marking the router ready until after the query is updated
-
-    if (options._h) {
-      this.isReady = true;
-    }
-
-    let localeChange = options.locale !== this.locale;
-
-    if (true) {
-      this.locale = options.locale === false ? this.defaultLocale : options.locale || this.locale;
-
-      if (typeof options.locale === 'undefined') {
-        options.locale = this.locale;
-      }
-
-      const parsedAs = (0, _parseRelativeUrl.parseRelativeUrl)(hasBasePath(as) ? delBasePath(as) : as);
-      const localePathResult = (0, _normalizeLocalePath.normalizeLocalePath)(parsedAs.pathname, this.locales);
-
-      if (localePathResult.detectedLocale) {
-        this.locale = localePathResult.detectedLocale;
-        parsedAs.pathname = addBasePath(parsedAs.pathname);
-        as = (0, _utils.formatWithValidation)(parsedAs);
-        url = addBasePath((0, _normalizeLocalePath.normalizeLocalePath)(hasBasePath(url) ? delBasePath(url) : url, this.locales).pathname);
-      }
-
-      let didNavigate = false; // we need to wrap this in the env check again since regenerator runtime
-      // moves this on its own due to the return
-
-      if (true) {
-        var _this$locales; // if the locale isn't configured hard navigate to show 404 page
-
-
-        if (!((_this$locales = this.locales) != null && _this$locales.includes(this.locale))) {
-          parsedAs.pathname = addLocale(parsedAs.pathname, this.locale);
-          window.location.href = (0, _utils.formatWithValidation)(parsedAs); // this was previously a return but was removed in favor
-          // of better dead code elimination with regenerator runtime
-
-          didNavigate = true;
-        }
-      }
-
-      const detectedDomain = detectDomainLocale(this.domainLocales, undefined, this.locale); // we need to wrap this in the env check again since regenerator runtime
-      // moves this on its own due to the return
-
-      if (true) {
-        // if we are navigating to a domain locale ensure we redirect to the
-        // correct domain
-        if (!didNavigate && detectedDomain && this.isLocaleDomain && self.location.hostname !== detectedDomain.domain) {
-          const asNoBasePath = delBasePath(as);
-          window.location.href = `http${detectedDomain.http ? '' : 's'}://${detectedDomain.domain}${addBasePath(`${this.locale === detectedDomain.defaultLocale ? '' : `/${this.locale}`}${asNoBasePath === '/' ? '' : asNoBasePath}` || '/')}`; // this was previously a return but was removed in favor
-          // of better dead code elimination with regenerator runtime
-
-          didNavigate = true;
-        }
-      }
-
-      if (didNavigate) {
-        return new Promise(() => {});
-      }
-    }
-
-    if (!options._h) {
-      this.isSsr = false;
-    } // marking route changes as a navigation start entry
-
-
-    if (_utils.ST) {
-      performance.mark('routeChange');
-    }
-
-    const {
-      shallow = false
-    } = options;
-    const routeProps = {
-      shallow
-    };
-
-    if (this._inFlightRoute) {
-      this.abortComponentLoad(this._inFlightRoute, routeProps);
-    }
-
-    as = addBasePath(addLocale(hasBasePath(as) ? delBasePath(as) : as, options.locale, this.defaultLocale));
-    const cleanedAs = delLocale(hasBasePath(as) ? delBasePath(as) : as, this.locale);
-    this._inFlightRoute = as; // If the url change is only related to a hash change
-    // We should not proceed. We should only change the state.
-    // WARNING: `_h` is an internal option for handing Next.js client-side
-    // hydration. Your app should _never_ use this property. It may change at
-    // any time without notice.
-
-    if (!options._h && this.onlyAHashChange(cleanedAs)) {
-      this.asPath = cleanedAs;
-      Router.events.emit('hashChangeStart', as, routeProps); // TODO: do we need the resolved href when only a hash change?
-
-      this.changeState(method, url, as, options);
-      this.scrollToHash(cleanedAs);
-      this.notify(this.components[this.route], null);
-      Router.events.emit('hashChangeComplete', as, routeProps);
-      return true;
-    }
-
-    let parsed = (0, _parseRelativeUrl.parseRelativeUrl)(url);
-    let {
-      pathname,
-      query
-    } = parsed; // The build manifest needs to be loaded before auto-static dynamic pages
-    // get their query parameters to allow ensuring they can be parsed properly
-    // when rewritten to
-
-    let pages, rewrites;
-
+  } = (0,external_react_hook_form_.useForm)({
+    mode: 'onChange',
+    resolver: (0,yup_.yupResolver)(schema)
+  }),
+        // on form submit
+  submit = async data => {
     try {
-      pages = await this.pageLoader.getPageList();
-      ({
-        __rewrites: rewrites
-      } = await (0, _routeLoader.getClientBuildManifest)());
+      await (0,er_lib/* request */.WY)(request_destinations/* SET_NEW_PASSWORD */.MC, {
+        password: data.password
+      }, {
+        headers: {
+          'Authorization': `Bearer ${(0,er_lib/* getCookie */.ej)(`reset-token`)}`
+        }
+      });
+      setShowNewPassMl(false);
+      setShowSuccessMl(true);
     } catch (err) {
-      // If we fail to resolve the page list or client-build manifest, we must
-      // do a server-side transition:
-      window.location.href = as;
-      return false;
-    } // If asked to change the current URL we should reload the current page
-    // (not location.reload() but reload getInitialProps and other Next.js stuffs)
-    // We also need to set the method = replaceState always
-    // as this should not go into the history (That's how browsers work)
-    // We should compare the new asPath to the current asPath, not the url
+      var _err$response$data;
 
-
-    if (!this.urlIsNew(cleanedAs) && !localeChange) {
-      method = 'replaceState';
-    } // we need to resolve the as value using rewrites for dynamic SSG
-    // pages to allow building the data URL correctly
-
-
-    let resolvedAs = as; // url and as should always be prefixed with basePath by this
-    // point by either next/link or router.push/replace so strip the
-    // basePath from the pathname to match the pages dir 1-to-1
-
-    pathname = pathname ? (0, _normalizeTrailingSlash.removePathTrailingSlash)(delBasePath(pathname)) : pathname;
-
-    if (shouldResolveHref && pathname !== '/_error') {
-      ;
-      options._shouldResolveHref = true;
-
-      if (false) {} else {
-        parsed.pathname = resolveDynamicRoute(pathname, pages);
-
-        if (parsed.pathname !== pathname) {
-          pathname = parsed.pathname;
-          parsed.pathname = addBasePath(pathname);
-          url = (0, _utils.formatWithValidation)(parsed);
-        }
-      }
-    }
-
-    const route = (0, _normalizeTrailingSlash.removePathTrailingSlash)(pathname);
-
-    if (!isLocalURL(as)) {
-      if (true) {
-        throw new Error(`Invalid href: "${url}" and as: "${as}", received relative href and external as` + `\nSee more info: https://nextjs.org/docs/messages/invalid-relative-url-external-as`);
-      }
-
-      window.location.href = as;
-      return false;
-    }
-
-    resolvedAs = delLocale(delBasePath(resolvedAs), this.locale);
-
-    if ((0, _isDynamic.isDynamicRoute)(route)) {
-      const parsedAs = (0, _parseRelativeUrl.parseRelativeUrl)(resolvedAs);
-      const asPathname = parsedAs.pathname;
-      const routeRegex = (0, _routeRegex.getRouteRegex)(route);
-      const routeMatch = (0, _routeMatcher.getRouteMatcher)(routeRegex)(asPathname);
-      const shouldInterpolate = route === asPathname;
-      const interpolatedAs = shouldInterpolate ? interpolateAs(route, asPathname, query) : {};
-
-      if (!routeMatch || shouldInterpolate && !interpolatedAs.result) {
-        const missingParams = Object.keys(routeRegex.groups).filter(param => !query[param]);
-
-        if (missingParams.length > 0) {
-          if (true) {
-            console.warn(`${shouldInterpolate ? `Interpolating href` : `Mismatching \`as\` and \`href\``} failed to manually provide ` + `the params: ${missingParams.join(', ')} in the \`href\`'s \`query\``);
-          }
-
-          throw new Error((shouldInterpolate ? `The provided \`href\` (${url}) value is missing query values (${missingParams.join(', ')}) to be interpolated properly. ` : `The provided \`as\` value (${asPathname}) is incompatible with the \`href\` value (${route}). `) + `Read more: https://nextjs.org/docs/messages/${shouldInterpolate ? 'href-interpolation-failed' : 'incompatible-href-as'}`);
-        }
-      } else if (shouldInterpolate) {
-        as = (0, _utils.formatWithValidation)(Object.assign({}, parsedAs, {
-          pathname: interpolatedAs.result,
-          query: omitParmsFromQuery(query, interpolatedAs.params)
-        }));
-      } else {
-        // Merge params into `query`, overwriting any specified in search
-        Object.assign(query, routeMatch);
-      }
-    }
-
-    Router.events.emit('routeChangeStart', as, routeProps);
-
-    try {
-      var _self$__NEXT_DATA__$p, _self$__NEXT_DATA__$p2, _options$scroll;
-
-      let routeInfo = await this.getRouteInfo(route, pathname, query, as, resolvedAs, routeProps);
-      let {
-        error,
-        props,
-        __N_SSG,
-        __N_SSP
-      } = routeInfo; // handle redirect on client-transition
-
-      if ((__N_SSG || __N_SSP) && props) {
-        if (props.pageProps && props.pageProps.__N_REDIRECT) {
-          const destination = props.pageProps.__N_REDIRECT; // check if destination is internal (resolves to a page) and attempt
-          // client-navigation if it is falling back to hard navigation if
-          // it's not
-
-          if (destination.startsWith('/')) {
-            const parsedHref = (0, _parseRelativeUrl.parseRelativeUrl)(destination);
-            parsedHref.pathname = resolveDynamicRoute(parsedHref.pathname, pages);
-            const {
-              url: newUrl,
-              as: newAs
-            } = prepareUrlAs(this, destination, destination);
-            return this.change(method, newUrl, newAs, options);
-          }
-
-          window.location.href = destination;
-          return new Promise(() => {});
-        }
-
-        this.isPreview = !!props.__N_PREVIEW; // handle SSG data 404
-
-        if (props.notFound === SSG_DATA_NOT_FOUND) {
-          let notFoundRoute;
-
-          try {
-            await this.fetchComponent('/404');
-            notFoundRoute = '/404';
-          } catch (_) {
-            notFoundRoute = '/_error';
-          }
-
-          routeInfo = await this.getRouteInfo(notFoundRoute, notFoundRoute, query, as, resolvedAs, {
-            shallow: false
-          });
-        }
-      }
-
-      Router.events.emit('beforeHistoryChange', as, routeProps);
-      this.changeState(method, url, as, options);
-
-      if (true) {
-        const appComp = this.components['/_app'].Component;
-        window.next.isPrerendered = appComp.getInitialProps === appComp.origGetInitialProps && !routeInfo.Component.getInitialProps;
-      }
-
-      if (options._h && pathname === '/_error' && ((_self$__NEXT_DATA__$p = self.__NEXT_DATA__.props) == null ? void 0 : (_self$__NEXT_DATA__$p2 = _self$__NEXT_DATA__$p.pageProps) == null ? void 0 : _self$__NEXT_DATA__$p2.statusCode) === 500 && props != null && props.pageProps) {
-        // ensure statusCode is still correct for static 500 page
-        // when updating query information
-        props.pageProps.statusCode = 500;
-      } // shallow routing is only allowed for same page URL changes.
-
-
-      const isValidShallowRoute = options.shallow && this.route === route;
-      const shouldScroll = (_options$scroll = options.scroll) != null ? _options$scroll : !isValidShallowRoute;
-      const resetScroll = shouldScroll ? {
-        x: 0,
-        y: 0
-      } : null;
-      await this.set(route, pathname, query, cleanedAs, routeInfo, forcedScroll != null ? forcedScroll : resetScroll).catch(e => {
-        if (e.cancelled) error = error || e;else throw e;
-      });
-
-      if (error) {
-        Router.events.emit('routeChangeError', error, cleanedAs, routeProps);
-        throw error;
-      }
-
-      if (true) {
-        if (this.locale) {
-          document.documentElement.lang = this.locale;
-        }
-      }
-
-      Router.events.emit('routeChangeComplete', as, routeProps);
-      return true;
-    } catch (err) {
-      if (err.cancelled) {
-        return false;
-      }
-
-      throw err;
-    }
-  }
-
-  changeState(method, url, as, options = {}) {
-    if (true) {
-      if (typeof window.history === 'undefined') {
-        console.error(`Warning: window.history is not available.`);
-        return;
-      }
-
-      if (typeof window.history[method] === 'undefined') {
-        console.error(`Warning: window.history.${method} is not available`);
-        return;
-      }
-    }
-
-    if (method !== 'pushState' || (0, _utils.getURL)() !== as) {
-      this._shallow = options.shallow;
-      window.history[method]({
-        url,
-        as,
-        options,
-        __N: true,
-        idx: this._idx = method !== 'pushState' ? this._idx : this._idx + 1
-      }, // Most browsers currently ignores this parameter, although they may use it in the future.
-      // Passing the empty string here should be safe against future changes to the method.
-      // https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
-      '', as);
-    }
-  }
-
-  async handleRouteInfoError(err, pathname, query, as, routeProps, loadErrorFail) {
-    if (err.cancelled) {
-      // bubble up cancellation errors
-      throw err;
-    }
-
-    if ((0, _routeLoader.isAssetError)(err) || loadErrorFail) {
-      Router.events.emit('routeChangeError', err, as, routeProps); // If we can't load the page it could be one of following reasons
-      //  1. Page doesn't exists
-      //  2. Page does exist in a different zone
-      //  3. Internal error while loading the page
-      // So, doing a hard reload is the proper way to deal with this.
-
-      window.location.href = as; // Changing the URL doesn't block executing the current code path.
-      // So let's throw a cancellation error stop the routing logic.
-
-      throw buildCancellationError();
-    }
-
-    try {
-      let Component;
-      let styleSheets;
-      let props;
-
-      if (typeof Component === 'undefined' || typeof styleSheets === 'undefined') {
-        ;
-        ({
-          page: Component,
-          styleSheets
-        } = await this.fetchComponent('/_error'));
-      }
-
-      const routeInfo = {
-        props,
-        Component,
-        styleSheets,
-        err,
-        error: err
-      };
-
-      if (!routeInfo.props) {
-        try {
-          routeInfo.props = await this.getInitialProps(Component, {
-            err,
-            pathname,
-            query
-          });
-        } catch (gipErr) {
-          console.error('Error in error page `getInitialProps`: ', gipErr);
-          routeInfo.props = {};
-        }
-      }
-
-      return routeInfo;
-    } catch (routeInfoErr) {
-      return this.handleRouteInfoError(routeInfoErr, pathname, query, as, routeProps, true);
-    }
-  }
-
-  async getRouteInfo(route, pathname, query, as, resolvedAs, routeProps) {
-    try {
-      const existingRouteInfo = this.components[route];
-
-      if (routeProps.shallow && existingRouteInfo && this.route === route) {
-        return existingRouteInfo;
-      }
-
-      const cachedRouteInfo = existingRouteInfo && 'initial' in existingRouteInfo ? undefined : existingRouteInfo;
-      const routeInfo = cachedRouteInfo ? cachedRouteInfo : await this.fetchComponent(route).then(res => ({
-        Component: res.page,
-        styleSheets: res.styleSheets,
-        __N_SSG: res.mod.__N_SSG,
-        __N_SSP: res.mod.__N_SSP
-      }));
-      const {
-        Component,
-        __N_SSG,
-        __N_SSP
-      } = routeInfo;
-
-      if (true) {
-        const {
-          isValidElementType
-        } = __webpack_require__(/*! react-is */ "react-is");
-
-        if (!isValidElementType(Component)) {
-          throw new Error(`The default export is not a React Component in page: "${pathname}"`);
-        }
-      }
-
-      let dataHref;
-
-      if (__N_SSG || __N_SSP) {
-        dataHref = this.pageLoader.getDataHref((0, _utils.formatWithValidation)({
-          pathname,
-          query
-        }), resolvedAs, __N_SSG, this.locale);
-      }
-
-      const props = await this._getData(() => __N_SSG ? this._getStaticData(dataHref) : __N_SSP ? this._getServerData(dataHref) : this.getInitialProps(Component, // we provide AppTree later so this needs to be `any`
-      {
-        pathname,
-        query,
-        asPath: as,
-        locale: this.locale,
-        locales: this.locales,
-        defaultLocale: this.defaultLocale
-      }));
-      routeInfo.props = props;
-      this.components[route] = routeInfo;
-      return routeInfo;
-    } catch (err) {
-      return this.handleRouteInfoError(err, pathname, query, as, routeProps);
-    }
-  }
-
-  set(route, pathname, query, as, data, resetScroll) {
-    this.isFallback = false;
-    this.route = route;
-    this.pathname = pathname;
-    this.query = query;
-    this.asPath = as;
-    return this.notify(data, resetScroll);
-  }
-  /**
-  * Callback to execute before replacing router state
-  * @param cb callback to be executed
-  */
-
-
-  beforePopState(cb) {
-    this._bps = cb;
-  }
-
-  onlyAHashChange(as) {
-    if (!this.asPath) return false;
-    const [oldUrlNoHash, oldHash] = this.asPath.split('#');
-    const [newUrlNoHash, newHash] = as.split('#'); // Makes sure we scroll to the provided hash if the url/hash are the same
-
-    if (newHash && oldUrlNoHash === newUrlNoHash && oldHash === newHash) {
-      return true;
-    } // If the urls are change, there's more than a hash change
-
-
-    if (oldUrlNoHash !== newUrlNoHash) {
-      return false;
-    } // If the hash has changed, then it's a hash only change.
-    // This check is necessary to handle both the enter and
-    // leave hash === '' cases. The identity case falls through
-    // and is treated as a next reload.
-
-
-    return oldHash !== newHash;
-  }
-
-  scrollToHash(as) {
-    const [, hash] = as.split('#'); // Scroll to top if the hash is just `#` with no value or `#top`
-    // To mirror browsers
-
-    if (hash === '' || hash === 'top') {
-      window.scrollTo(0, 0);
-      return;
-    } // First we check if the element by id is found
-
-
-    const idEl = document.getElementById(hash);
-
-    if (idEl) {
-      idEl.scrollIntoView();
-      return;
-    } // If there's no element with the id, we check the `name` property
-    // To mirror browsers
-
-
-    const nameEl = document.getElementsByName(hash)[0];
-
-    if (nameEl) {
-      nameEl.scrollIntoView();
-    }
-  }
-
-  urlIsNew(asPath) {
-    return this.asPath !== asPath;
-  }
-  /**
-  * Prefetch page code, you may wait for the data during page rendering.
-  * This feature only works in production!
-  * @param url the href of prefetched page
-  * @param asPath the as path of the prefetched page
-  */
-
-
-  async prefetch(url, asPath = url, options = {}) {
-    let parsed = (0, _parseRelativeUrl.parseRelativeUrl)(url);
-    let {
-      pathname
-    } = parsed;
-
-    if (true) {
-      if (options.locale === false) {
-        pathname = (0, _normalizeLocalePath.normalizeLocalePath)(pathname, this.locales).pathname;
-        parsed.pathname = pathname;
-        url = (0, _utils.formatWithValidation)(parsed);
-        let parsedAs = (0, _parseRelativeUrl.parseRelativeUrl)(asPath);
-        const localePathResult = (0, _normalizeLocalePath.normalizeLocalePath)(parsedAs.pathname, this.locales);
-        parsedAs.pathname = localePathResult.pathname;
-        options.locale = localePathResult.detectedLocale || this.defaultLocale;
-        asPath = (0, _utils.formatWithValidation)(parsedAs);
-      }
-    }
-
-    const pages = await this.pageLoader.getPageList();
-    let resolvedAs = asPath;
-
-    if (false) {} else {
-      parsed.pathname = resolveDynamicRoute(parsed.pathname, pages);
-
-      if (parsed.pathname !== pathname) {
-        pathname = parsed.pathname;
-        parsed.pathname = pathname;
-        url = (0, _utils.formatWithValidation)(parsed);
-      }
-    }
-
-    const route = (0, _normalizeTrailingSlash.removePathTrailingSlash)(pathname); // Prefetch is not supported in development mode because it would trigger on-demand-entries
-
-    if (true) {
-      return;
-    }
-
-    await Promise.all([this.pageLoader._isSsg(route).then(isSsg => {
-      return isSsg ? this._getStaticData(this.pageLoader.getDataHref(url, resolvedAs, true, typeof options.locale !== 'undefined' ? options.locale : this.locale)) : false;
-    }), this.pageLoader[options.priority ? 'loadPage' : 'prefetch'](route)]);
-  }
-
-  async fetchComponent(route) {
-    let cancelled = false;
-
-    const cancel = this.clc = () => {
-      cancelled = true;
-    };
-
-    const componentResult = await this.pageLoader.loadPage(route);
-
-    if (cancelled) {
-      const error = new Error(`Abort fetching component for route: "${route}"`);
-      error.cancelled = true;
-      throw error;
-    }
-
-    if (cancel === this.clc) {
-      this.clc = null;
-    }
-
-    return componentResult;
-  }
-
-  _getData(fn) {
-    let cancelled = false;
-
-    const cancel = () => {
-      cancelled = true;
-    };
-
-    this.clc = cancel;
-    return fn().then(data => {
-      if (cancel === this.clc) {
-        this.clc = null;
-      }
-
-      if (cancelled) {
-        const err = new Error('Loading initial props cancelled');
-        err.cancelled = true;
-        throw err;
-      }
-
-      return data;
-    });
-  }
-
-  _getStaticData(dataHref) {
-    const {
-      href: cacheKey
-    } = new URL(dataHref, window.location.href);
-
-    if (false) {}
-
-    return fetchNextData(dataHref, this.isSsr).then(data => {
-      this.sdc[cacheKey] = data;
-      return data;
-    });
-  }
-
-  _getServerData(dataHref) {
-    const {
-      href: resourceKey
-    } = new URL(dataHref, window.location.href);
-
-    if (this.sdr[resourceKey]) {
-      return this.sdr[resourceKey];
-    }
-
-    return this.sdr[resourceKey] = fetchNextData(dataHref, this.isSsr).then(data => {
-      delete this.sdr[resourceKey];
-      return data;
-    }).catch(err => {
-      delete this.sdr[resourceKey];
-      throw err;
-    });
-  }
-
-  getInitialProps(Component, ctx) {
-    const {
-      Component: App
-    } = this.components['/_app'];
-
-    const AppTree = this._wrapApp(App);
-
-    ctx.AppTree = AppTree;
-    return (0, _utils.loadGetInitialProps)(App, {
-      AppTree,
-      Component,
-      router: this,
-      ctx
-    });
-  }
-
-  abortComponentLoad(as, routeProps) {
-    if (this.clc) {
-      Router.events.emit('routeChangeError', buildCancellationError(), as, routeProps);
-      this.clc();
-      this.clc = null;
-    }
-  }
-
-  notify(data, resetScroll) {
-    return this.sub(data, this.components['/_app'].Component, resetScroll);
-  }
-
-}
-
-exports.default = Router;
-Router.events = (0, _mitt.default)();
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/format-url.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/format-url.js ***!
-  \***************************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.formatUrl = formatUrl;
-
-var querystring = _interopRequireWildcard(__webpack_require__(/*! ./querystring */ "./node_modules/next/dist/next-server/lib/router/utils/querystring.js"));
-
-function _getRequireWildcardCache() {
-  if (typeof WeakMap !== "function") return null;
-  var cache = new WeakMap();
-
-  _getRequireWildcardCache = function () {
-    return cache;
-  };
-
-  return cache;
-}
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  }
-
-  if (obj === null || typeof obj !== "object" && typeof obj !== "function") {
-    return {
-      default: obj
-    };
-  }
-
-  var cache = _getRequireWildcardCache();
-
-  if (cache && cache.has(obj)) {
-    return cache.get(obj);
-  }
-
-  var newObj = {};
-  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-
-      if (desc && (desc.get || desc.set)) {
-        Object.defineProperty(newObj, key, desc);
-      } else {
-        newObj[key] = obj[key];
-      }
-    }
-  }
-
-  newObj.default = obj;
-
-  if (cache) {
-    cache.set(obj, newObj);
-  }
-
-  return newObj;
-} // Format function modified from nodejs
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-const slashedProtocols = /https?|ftp|gopher|file/;
-
-function formatUrl(urlObj) {
-  let {
-    auth,
-    hostname
-  } = urlObj;
-  let protocol = urlObj.protocol || '';
-  let pathname = urlObj.pathname || '';
-  let hash = urlObj.hash || '';
-  let query = urlObj.query || '';
-  let host = false;
-  auth = auth ? encodeURIComponent(auth).replace(/%3A/i, ':') + '@' : '';
-
-  if (urlObj.host) {
-    host = auth + urlObj.host;
-  } else if (hostname) {
-    host = auth + (~hostname.indexOf(':') ? `[${hostname}]` : hostname);
-
-    if (urlObj.port) {
-      host += ':' + urlObj.port;
-    }
-  }
-
-  if (query && typeof query === 'object') {
-    query = String(querystring.urlQueryToSearchParams(query));
-  }
-
-  let search = urlObj.search || query && `?${query}` || '';
-  if (protocol && protocol.substr(-1) !== ':') protocol += ':';
-
-  if (urlObj.slashes || (!protocol || slashedProtocols.test(protocol)) && host !== false) {
-    host = '//' + (host || '');
-    if (pathname && pathname[0] !== '/') pathname = '/' + pathname;
-  } else if (!host) {
-    host = '';
-  }
-
-  if (hash && hash[0] !== '#') hash = '#' + hash;
-  if (search && search[0] !== '?') search = '?' + search;
-  pathname = pathname.replace(/[?#]/g, encodeURIComponent);
-  search = search.replace('#', '%23');
-  return `${protocol}${host}${pathname}${search}${hash}`;
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js ***!
-  \***************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.isDynamicRoute = isDynamicRoute; // Identify /[param]/ in route string
-
-const TEST_ROUTE = /\/\[[^/]+?\](?=\/|$)/;
-
-function isDynamicRoute(route) {
-  return TEST_ROUTE.test(route);
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/parse-relative-url.js":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/parse-relative-url.js ***!
-  \***********************************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.parseRelativeUrl = parseRelativeUrl;
-
-var _utils = __webpack_require__(/*! ../../utils */ "./node_modules/next/dist/next-server/lib/utils.js");
-
-var _querystring = __webpack_require__(/*! ./querystring */ "./node_modules/next/dist/next-server/lib/router/utils/querystring.js");
-/**
-* Parses path-relative urls (e.g. `/hello/world?foo=bar`). If url isn't path-relative
-* (e.g. `./hello`) then at least base must be.
-* Absolute urls are rejected with one exception, in the browser, absolute urls that are on
-* the current origin will be parsed as relative
-*/
-
-
-function parseRelativeUrl(url, base) {
-  const globalBase = new URL( true ? 'http://n' : 0);
-  const resolvedBase = base ? new URL(base, globalBase) : globalBase;
-  const {
-    pathname,
-    searchParams,
-    search,
-    hash,
-    href,
-    origin
-  } = new URL(url, resolvedBase);
-
-  if (origin !== globalBase.origin) {
-    throw new Error(`invariant: invalid relative URL, router received ${url}`);
-  }
-
-  return {
-    pathname,
-    query: (0, _querystring.searchParamsToUrlQuery)(searchParams),
-    search,
-    hash,
-    href: href.slice(globalBase.origin.length)
-  };
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/querystring.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/querystring.js ***!
-  \****************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.searchParamsToUrlQuery = searchParamsToUrlQuery;
-exports.urlQueryToSearchParams = urlQueryToSearchParams;
-exports.assign = assign;
-
-function searchParamsToUrlQuery(searchParams) {
-  const query = {};
-  searchParams.forEach((value, key) => {
-    if (typeof query[key] === 'undefined') {
-      query[key] = value;
-    } else if (Array.isArray(query[key])) {
-      ;
-      query[key].push(value);
-    } else {
-      query[key] = [query[key], value];
-    }
-  });
-  return query;
-}
-
-function stringifyUrlQueryParam(param) {
-  if (typeof param === 'string' || typeof param === 'number' && !isNaN(param) || typeof param === 'boolean') {
-    return String(param);
-  } else {
-    return '';
-  }
-}
-
-function urlQueryToSearchParams(urlQuery) {
-  const result = new URLSearchParams();
-  Object.entries(urlQuery).forEach(([key, value]) => {
-    if (Array.isArray(value)) {
-      value.forEach(item => result.append(key, stringifyUrlQueryParam(item)));
-    } else {
-      result.set(key, stringifyUrlQueryParam(value));
-    }
-  });
-  return result;
-}
-
-function assign(target, ...searchParamsList) {
-  searchParamsList.forEach(searchParams => {
-    Array.from(searchParams.keys()).forEach(key => target.delete(key));
-    searchParams.forEach((value, key) => target.append(key, value));
-  });
-  return target;
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js ***!
-  \******************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.getRouteMatcher = getRouteMatcher;
-
-function getRouteMatcher(routeRegex) {
-  const {
-    re,
-    groups
-  } = routeRegex;
-  return pathname => {
-    const routeMatch = re.exec(pathname);
-
-    if (!routeMatch) {
-      return false;
-    }
-
-    const decode = param => {
-      try {
-        return decodeURIComponent(param);
-      } catch (_) {
-        const err = new Error('failed to decode param');
-        err.code = 'DECODE_FAILED';
-        throw err;
-      }
-    };
-
-    const params = {};
-    Object.keys(groups).forEach(slugName => {
-      const g = groups[slugName];
-      const m = routeMatch[g.pos];
-
-      if (m !== undefined) {
-        params[slugName] = ~m.indexOf('/') ? m.split('/').map(entry => decode(entry)) : g.repeat ? [decode(m)] : decode(m);
-      }
-    });
-    return params;
-  };
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/route-regex.js ***!
-  \****************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.getRouteRegex = getRouteRegex; // this isn't importing the escape-string-regex module
-// to reduce bytes
-
-function escapeRegex(str) {
-  return str.replace(/[|\\{}()[\]^$+*?.-]/g, '\\$&');
-}
-
-function parseParameter(param) {
-  const optional = param.startsWith('[') && param.endsWith(']');
-
-  if (optional) {
-    param = param.slice(1, -1);
-  }
-
-  const repeat = param.startsWith('...');
-
-  if (repeat) {
-    param = param.slice(3);
-  }
-
-  return {
-    key: param,
-    repeat,
-    optional
-  };
-}
-
-function getRouteRegex(normalizedRoute) {
-  const segments = (normalizedRoute.replace(/\/$/, '') || '/').slice(1).split('/');
-  const groups = {};
-  let groupIndex = 1;
-  const parameterizedRoute = segments.map(segment => {
-    if (segment.startsWith('[') && segment.endsWith(']')) {
-      const {
-        key,
-        optional,
-        repeat
-      } = parseParameter(segment.slice(1, -1));
-      groups[key] = {
-        pos: groupIndex++,
-        repeat,
-        optional
-      };
-      return repeat ? optional ? '(?:/(.+?))?' : '/(.+?)' : '/([^/]+?)';
-    } else {
-      return `/${escapeRegex(segment)}`;
-    }
-  }).join(''); // dead code eliminate for browser since it's only needed
-  // while generating routes-manifest
-
-  if (true) {
-    let routeKeyCharCode = 97;
-    let routeKeyCharLength = 1; // builds a minimal routeKey using only a-z and minimal number of characters
-
-    const getSafeRouteKey = () => {
-      let routeKey = '';
-
-      for (let i = 0; i < routeKeyCharLength; i++) {
-        routeKey += String.fromCharCode(routeKeyCharCode);
-        routeKeyCharCode++;
-
-        if (routeKeyCharCode > 122) {
-          routeKeyCharLength++;
-          routeKeyCharCode = 97;
-        }
-      }
-
-      return routeKey;
-    };
-
-    const routeKeys = {};
-    let namedParameterizedRoute = segments.map(segment => {
-      if (segment.startsWith('[') && segment.endsWith(']')) {
-        const {
-          key,
-          optional,
-          repeat
-        } = parseParameter(segment.slice(1, -1)); // replace any non-word characters since they can break
-        // the named regex
-
-        let cleanedKey = key.replace(/\W/g, '');
-        let invalidKey = false; // check if the key is still invalid and fallback to using a known
-        // safe key
-
-        if (cleanedKey.length === 0 || cleanedKey.length > 30) {
-          invalidKey = true;
-        }
-
-        if (!isNaN(parseInt(cleanedKey.substr(0, 1)))) {
-          invalidKey = true;
-        }
-
-        if (invalidKey) {
-          cleanedKey = getSafeRouteKey();
-        }
-
-        routeKeys[cleanedKey] = key;
-        return repeat ? optional ? `(?:/(?<${cleanedKey}>.+?))?` : `/(?<${cleanedKey}>.+?)` : `/(?<${cleanedKey}>[^/]+?)`;
-      } else {
-        return `/${escapeRegex(segment)}`;
-      }
-    }).join('');
-    return {
-      re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
-      groups,
-      routeKeys,
-      namedRegex: `^${namedParameterizedRoute}(?:/)?$`
-    };
-  }
-
-  return {
-    re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
-    groups
-  };
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/utils.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/utils.js ***!
-  \*********************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.execOnce = execOnce;
-exports.getLocationOrigin = getLocationOrigin;
-exports.getURL = getURL;
-exports.getDisplayName = getDisplayName;
-exports.isResSent = isResSent;
-exports.loadGetInitialProps = loadGetInitialProps;
-exports.formatWithValidation = formatWithValidation;
-exports.ST = exports.SP = exports.urlObjectKeys = void 0;
-
-var _formatUrl = __webpack_require__(/*! ./router/utils/format-url */ "./node_modules/next/dist/next-server/lib/router/utils/format-url.js");
-/**
-* Utils
-*/
-
-
-function execOnce(fn) {
-  let used = false;
-  let result;
-  return (...args) => {
-    if (!used) {
-      used = true;
-      result = fn(...args);
-    }
-
-    return result;
-  };
-}
-
-function getLocationOrigin() {
-  const {
-    protocol,
-    hostname,
-    port
-  } = window.location;
-  return `${protocol}//${hostname}${port ? ':' + port : ''}`;
-}
-
-function getURL() {
-  const {
-    href
-  } = window.location;
-  const origin = getLocationOrigin();
-  return href.substring(origin.length);
-}
-
-function getDisplayName(Component) {
-  return typeof Component === 'string' ? Component : Component.displayName || Component.name || 'Unknown';
-}
-
-function isResSent(res) {
-  return res.finished || res.headersSent;
-}
-
-async function loadGetInitialProps(App, ctx) {
-  if (true) {
-    var _App$prototype;
-
-    if ((_App$prototype = App.prototype) != null && _App$prototype.getInitialProps) {
-      const message = `"${getDisplayName(App)}.getInitialProps()" is defined as an instance method - visit https://nextjs.org/docs/messages/get-initial-props-as-an-instance-method for more information.`;
-      throw new Error(message);
-    }
-  } // when called from _app `ctx` is nested in `ctx`
-
-
-  const res = ctx.res || ctx.ctx && ctx.ctx.res;
-
-  if (!App.getInitialProps) {
-    if (ctx.ctx && ctx.Component) {
-      // @ts-ignore pageProps default
-      return {
-        pageProps: await loadGetInitialProps(ctx.Component, ctx.ctx)
-      };
-    }
-
-    return {};
-  }
-
-  const props = await App.getInitialProps(ctx);
-
-  if (res && isResSent(res)) {
-    return props;
-  }
-
-  if (!props) {
-    const message = `"${getDisplayName(App)}.getInitialProps()" should resolve to an object. But found "${props}" instead.`;
-    throw new Error(message);
-  }
-
-  if (true) {
-    if (Object.keys(props).length === 0 && !ctx.ctx) {
-      console.warn(`${getDisplayName(App)} returned an empty object from \`getInitialProps\`. This de-optimizes and prevents automatic static optimization. https://nextjs.org/docs/messages/empty-object-getInitialProps`);
-    }
-  }
-
-  return props;
-}
-
-const urlObjectKeys = ['auth', 'hash', 'host', 'hostname', 'href', 'path', 'pathname', 'port', 'protocol', 'query', 'search', 'slashes'];
-exports.urlObjectKeys = urlObjectKeys;
-
-function formatWithValidation(url) {
-  if (true) {
-    if (url !== null && typeof url === 'object') {
-      Object.keys(url).forEach(key => {
-        if (urlObjectKeys.indexOf(key) === -1) {
-          console.warn(`Unknown key passed via urlObject into url.format: ${key}`);
-        }
+      (0,external_react_toastify_.toast)(((_err$response$data = err.response.data) === null || _err$response$data === void 0 ? void 0 : _err$response$data.message) || `Не удалось востановить пароль`, {
+        type: `error`
       });
     }
-  }
+  };
 
-  return (0, _formatUrl.formatUrl)(url);
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+    children: [showNewPassMl && /*#__PURE__*/(0,jsx_runtime_.jsxs)(Modal/* Modal */.u, {
+      onClose: onModalClose,
+      contentStyles: (NewPassword_module_default()).m_content,
+      containerStyles: (NewPassword_module_default()).m_container,
+      children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (NewPassword_module_default()).container,
+        children: [/*#__PURE__*/jsx_runtime_.jsx(Title, {
+          styles: (NewPassword_module_default()).title,
+          content: translate('title')
+        }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("form", {
+          onSubmit: handleSubmit(submit),
+          children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+            className: (NewPassword_module_default()).inputs,
+            children: /*#__PURE__*/jsx_runtime_.jsx(InputContainer/* InputContainer */.f, {
+              id: "password",
+              type: "password",
+              placeholder: t('registration.inputPlaceHolders.password'),
+              errors: !!errors.password,
+              other: register('password')
+            })
+          }), /*#__PURE__*/jsx_runtime_.jsx(Submit, {
+            styles: (NewPassword_module_default()).submit,
+            content: translate('success')
+          })]
+        })]
+      }), /*#__PURE__*/jsx_runtime_.jsx(external_react_toastify_.ToastContainer, {})]
+    }), showSuccessMl && /*#__PURE__*/jsx_runtime_.jsx(Success, {
+      onModalClose: onModalClose
+    })]
+  });
 }
-
-const SP = typeof performance !== 'undefined';
-exports.SP = SP;
-const ST = SP && typeof performance.mark === 'function' && typeof performance.measure === 'function';
-exports.ST = ST;
-
-/***/ }),
-
-/***/ "./pages/_app.js":
-/*!***********************!*\
-  !*** ./pages/_app.js ***!
-  \***********************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getServerSideProps": function() { return /* binding */ getServerSideProps; }
-/* harmony export */ });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _next_translate_root_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @next-translate-root/i18n */ "./i18n.json");
-/* harmony import */ var next_translate_appWithI18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next-translate/appWithI18n */ "next-translate/appWithI18n");
-/* harmony import */ var next_translate_appWithI18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_translate_appWithI18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../styles/globals.css */ "./styles/globals.css");
-/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _styles_calendar_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../styles/calendar.scss */ "./styles/calendar.scss");
-/* harmony import */ var _styles_calendar_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_calendar_scss__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_toastify_dist_ReactToastify_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-toastify/dist/ReactToastify.css */ "./node_modules/react-toastify/dist/ReactToastify.css");
-/* harmony import */ var react_toastify_dist_ReactToastify_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_toastify_dist_ReactToastify_css__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _layouts_layout_wrapper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../layouts/layout-wrapper */ "./layouts/layout-wrapper.jsx");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _redux_store__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../redux/store */ "./redux/store.js");
-/* harmony import */ var redux_persist_integration_react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! redux-persist/integration/react */ "redux-persist/integration/react");
-/* harmony import */ var redux_persist_integration_react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(redux_persist_integration_react__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-beautiful-dnd */ "react-beautiful-dnd");
-/* harmony import */ var react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _styles_static_empty_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../styles/static-empty.css */ "./styles/static-empty.css");
-/* harmony import */ var _styles_static_empty_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_styles_static_empty_css__WEBPACK_IMPORTED_MODULE_12__);
-
-var _jsxFileName = "C:\\Users\\Admin\\Desktop\\projects\\foot-bet\\pages\\_app.js";
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+// EXTERNAL MODULE: ./components/Header/Bar/Login/ResetPassword/GetEmailCode/GetEmailCode.module.scss
+var GetEmailCode_module = __webpack_require__(4389);
+var GetEmailCode_module_default = /*#__PURE__*/__webpack_require__.n(GetEmailCode_module);
+;// CONCATENATED MODULE: ./components/Header/Bar/Login/ResetPassword/GetEmailCode/GetEmailCode.jsx
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+// hooks and helpers
+
+
+
+
+
+ //components
+
+
+
+
+ // styles
 
 
 
@@ -8354,179 +5490,1865 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
-
-
-
-
-const __Page_Next_Translate__ = function MyApp({
-  Component,
-  pageProps
+function GetEmailCode({
+  onModalClose
 }) {
-  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_redux__WEBPACK_IMPORTED_MODULE_8__.Provider, {
-    store: _redux_store__WEBPACK_IMPORTED_MODULE_9__.store,
-    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(redux_persist_integration_react__WEBPACK_IMPORTED_MODULE_10__.PersistGate, {
-      loading: null,
-      persistor: _redux_store__WEBPACK_IMPORTED_MODULE_9__.persistor,
-      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_head__WEBPACK_IMPORTED_MODULE_6___default()), {
-        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("title", {
-          children: "FootBet"
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 24,
-          columnNumber: 11
-        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("meta", {
-          name: "viewport",
-          content: "initial-scale=1.0, width=device-width"
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 25,
-          columnNumber: 11
-        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("script", {
-          type: "text/javascript",
-          src: "//vk.com/js/api/openapi.js?152"
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 26,
-          columnNumber: 11
-        }, this)]
-      }, void 0, true, {
-        fileName: _jsxFileName,
-        lineNumber: 23,
-        columnNumber: 9
-      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_layouts_layout_wrapper__WEBPACK_IMPORTED_MODULE_7__.default, _objectSpread(_objectSpread({}, pageProps), {}, {
-        children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, _objectSpread({}, pageProps), void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 29,
-          columnNumber: 11
-        }, this)
-      }), void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 28,
-        columnNumber: 9
-      }, this)]
-    }, void 0, true, {
-      fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 7
-    }, this)
-  }, void 0, false, {
-    fileName: _jsxFileName,
-    lineNumber: 21,
-    columnNumber: 5
-  }, this);
+  const // modal states pass => password Ml => Modal
+  {
+    0: showGetEmailCodeMl,
+    1: setShowEmailCodeMl
+  } = (0,external_react_.useState)(true),
+        {
+    0: showNewPasswordMl,
+    1: setShowNewPasswordMl
+  } = (0,external_react_.useState)(false),
+        // translation consfigs
+  {
+    t
+  } = useTranslation_default()('common'),
+        translationPath = 'header.getEmailCodeModal.',
+        translate = key => t(`${translationPath}${key}`),
+        // yup configs
+  schema = external_yup_.object().shape({
+    num1: external_yup_.string().required().matches(/[0-9]/mg),
+    num2: external_yup_.string().required().matches(/[0-9]/mg),
+    num3: external_yup_.string().required().matches(/[0-9]/mg),
+    num4: external_yup_.string().required().matches(/[0-9]/mg),
+    num5: external_yup_.string().required().matches(/[0-9]/mg),
+    num6: external_yup_.string().required().matches(/[0-9]/mg)
+  }),
+        // form configs
+  {
+    register,
+    handleSubmit,
+    formState: {
+      errors
+    }
+  } = (0,external_react_hook_form_.useForm)({
+    mode: 'onChange',
+    resolver: (0,yup_.yupResolver)(schema)
+  }),
+        // input jumps 
+  jump = x => {
+    if (x.value.length) {
+      x = x.nextSibling;
+
+      if (x && /text/.test(x.type)) {
+        x.focus();
+      }
+    }
+  },
+        jumpBack = x => {
+    if (x.target.value.length == 0) {
+      if (x.code === 'Backspace') {
+        if (document.querySelector(".move:focus").previousSibling) {
+          document.querySelector(".move:focus").previousSibling.focus();
+        }
+      }
+    }
+  },
+        // on form submit
+  submit = async data => {
+    try {
+      data = Object.values(data).reduce((ac, el) => ac + el);
+      console.log(data);
+      await (0,er_lib/* request */.WY)(request_destinations/* VERIFY_PASSWORD_RESET */.cq, {
+        code: data
+      }, {
+        headers: {
+          'Authorization': `Bearer ${(0,er_lib/* getCookie */.ej)(`reset-token`)}`
+        }
+      });
+      setShowEmailCodeMl(false);
+      setShowNewPasswordMl(true);
+    } catch (err) {
+      var _err$response$data;
+
+      (0,external_react_toastify_.toast)(((_err$response$data = err.response.data) === null || _err$response$data === void 0 ? void 0 : _err$response$data.message) || `Не удалось востановить пароль`, {
+        type: `error`
+      });
+    }
+  };
+
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+    children: [showGetEmailCodeMl && /*#__PURE__*/(0,jsx_runtime_.jsxs)(Modal/* Modal */.u, {
+      onClose: onModalClose,
+      contentStyles: (GetEmailCode_module_default()).m_content,
+      containerStyles: (GetEmailCode_module_default()).m_container,
+      children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (GetEmailCode_module_default()).container,
+        children: [/*#__PURE__*/jsx_runtime_.jsx(Title, {
+          styles: (GetEmailCode_module_default()).title,
+          content: translate('title')
+        }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("form", {
+          onSubmit: handleSubmit(submit),
+          children: [/*#__PURE__*/jsx_runtime_.jsx(Title, {
+            styles: (GetEmailCode_module_default()).description,
+            content: translate('description')
+          }), /*#__PURE__*/jsx_runtime_.jsx("div", {
+            className: (GetEmailCode_module_default()).inputs,
+            children: inputs.map((el, i) => /*#__PURE__*/jsx_runtime_.jsx("input", _objectSpread({
+              id: el.id,
+              className: `${el.class} 
+                                                ${errors.num1 || errors.num2 || errors.num3 || errors.num4 || errors.num5 || errors.num6 ? (GetEmailCode_module_default()).error_input : (GetEmailCode_module_default()).success_input}`.trim(),
+              type: el.type,
+              maxLength: el.maxLength,
+              onInput: e => jump(e.target),
+              onKeyDown: e => jumpBack(e)
+            }, register('num' + (i + 1))), el.key))
+          }), /*#__PURE__*/jsx_runtime_.jsx(Submit, {
+            styles: (GetEmailCode_module_default()).submit,
+            content: translate('send')
+          })]
+        })]
+      }), /*#__PURE__*/jsx_runtime_.jsx(external_react_toastify_.ToastContainer, {})]
+    }), showNewPasswordMl && /*#__PURE__*/jsx_runtime_.jsx(NewPassword, {
+      onModalClose: onModalClose
+    })]
+  });
+}
+// EXTERNAL MODULE: ./components/Header/Bar/Login/ResetPassword/ForgotPassword/ForgotPassword.module.scss
+var ForgotPassword_module = __webpack_require__(4696);
+var ForgotPassword_module_default = /*#__PURE__*/__webpack_require__.n(ForgotPassword_module);
+;// CONCATENATED MODULE: ./components/Header/Bar/Login/ResetPassword/ForgotPassword/ForgotPassword.jsx
+// hooks and helpers
+
+
+
+
+ //components
+
+
+
+
+
+ // styles
+
+
+
+
+
+
+
+
+function ForgotPassword({
+  onModalClose
+}) {
+  const // modal states pass => password Ml => Modal
+  {
+    0: showForgotPassMl,
+    1: setShowForgotPassMl
+  } = (0,external_react_.useState)(true),
+        {
+    0: showGetEmailCodeMl,
+    1: setShowEmailCodeMl
+  } = (0,external_react_.useState)(false),
+        // translation consfigs
+  {
+    t
+  } = useTranslation_default()('common'),
+        translationPath = 'header.resetPasswordModal.',
+        translate = key => t(`${translationPath}${key}`),
+        // yup configs
+  schema = external_yup_.object().shape({
+    email: external_yup_.string().required().matches(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+  }),
+        // form configs
+  {
+    register,
+    handleSubmit,
+    formState: {
+      errors
+    }
+  } = (0,external_react_hook_form_.useForm)({
+    mode: 'onChange',
+    resolver: (0,yup_.yupResolver)(schema)
+  }),
+        // on form submit
+  submit = async data => {
+    try {
+      const {
+        data: response
+      } = await (0,er_lib/* request */.WY)((0,request_destinations/* START_RESET_PASSWORD */.Cl)(data.email));
+      const token = response.data.token;
+      console.log(token);
+      (0,er_lib/* setCookie */.d8)(`reset-token`, token, 1 / 24 * 1);
+      setShowForgotPassMl(false);
+      setShowEmailCodeMl(true);
+    } catch (err) {
+      var _err$response$data;
+
+      (0,external_react_toastify_.toast)(((_err$response$data = err.response.data) === null || _err$response$data === void 0 ? void 0 : _err$response$data.message) || `Не удалось востановить пароль`, {
+        type: `error`
+      });
+    }
+  };
+
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+    children: [showForgotPassMl && /*#__PURE__*/(0,jsx_runtime_.jsxs)(Modal/* Modal */.u, {
+      onClose: onModalClose,
+      contentStyles: (ForgotPassword_module_default()).m_content,
+      containerStyles: (ForgotPassword_module_default()).m_container,
+      children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (ForgotPassword_module_default()).container,
+        children: [/*#__PURE__*/jsx_runtime_.jsx(Title, {
+          styles: (ForgotPassword_module_default()).title,
+          content: translate('title')
+        }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("form", {
+          onSubmit: handleSubmit(submit),
+          children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+            className: (ForgotPassword_module_default()).inputs,
+            children: /*#__PURE__*/jsx_runtime_.jsx(InputContainer/* InputContainer */.f, {
+              id: "name",
+              type: "text",
+              placeholder: t('registration.inputPlaceHolders.email'),
+              errors: !!errors.email,
+              other: register('email')
+            })
+          }), /*#__PURE__*/jsx_runtime_.jsx(Submit, {
+            styles: (ForgotPassword_module_default()).submit,
+            content: translate('send')
+          })]
+        })]
+      }), /*#__PURE__*/jsx_runtime_.jsx(external_react_toastify_.ToastContainer, {})]
+    }), showGetEmailCodeMl && /*#__PURE__*/jsx_runtime_.jsx(GetEmailCode, {
+      onModalClose: onModalClose
+    })]
+  });
+}
+;// CONCATENATED MODULE: ./components/Header/Bar/Login/common/ResetPasswordLink.jsx
+
+function ResetPasswordLink({
+  styles,
+  content,
+  click
+}) {
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: styles,
+    children: /*#__PURE__*/jsx_runtime_.jsx("span", {
+      onClick: click,
+      children: content
+    })
+  });
+}
+;// CONCATENATED MODULE: ./components/Header/Bar/Login/common/ToRegister.jsx
+
+
+
+function ToRegister({
+  container_styles,
+  content_styles,
+  or,
+  register_text_styles,
+  content,
+  href,
+  click
+}) {
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: container_styles,
+    onClick: click,
+    children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: content_styles,
+      children: [/*#__PURE__*/jsx_runtime_.jsx("span", {
+        children: or + " "
+      }), /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+        href: href,
+        children: /*#__PURE__*/jsx_runtime_.jsx("span", {
+          className: register_text_styles,
+          children: content
+        })
+      })]
+    })
+  });
+}
+// EXTERNAL MODULE: ./components/Header/Bar/Login/LoginForm/LoginForm.module.scss
+var LoginForm_module = __webpack_require__(3157);
+var LoginForm_module_default = /*#__PURE__*/__webpack_require__.n(LoginForm_module);
+// EXTERNAL MODULE: ./redux/features/userSlice.js
+var userSlice = __webpack_require__(6562);
+;// CONCATENATED MODULE: ./components/Header/Bar/Login/LoginForm/LoginForm.jsx
+// hooks and helpers
+
+
+
+
+ //components
+
+
+
+
+
+ // styles 
+
+
+
+
+
+
+
+
+
+function LoginForm({
+  onModalClose,
+  handleResetPassModal
+}) {
+  const router = (0,client_router.useRouter)();
+
+  const dispatch = (0,external_react_redux_.useDispatch)(),
+        // translation consfigs
+  {
+    t
+  } = useTranslation_default()('common'),
+        translationPath = 'registration.inputPlaceHolders.',
+        translate = key => t(`${translationPath}${key}`),
+        handle_to_register_click = () => {
+    document.querySelector('body').style.overflow = 'visible';
+    onModalClose();
+  },
+        // yup configs
+  schema = external_yup_.object().shape({
+    email: external_yup_.string().required().matches(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/),
+    password: external_yup_.string().required().min(6)
+  }),
+        // form configs
+  {
+    register,
+    handleSubmit,
+    formState: {
+      errors
+    }
+  } = (0,external_react_hook_form_.useForm)({
+    mode: 'onChange',
+    resolver: (0,yup_.yupResolver)(schema)
+  }),
+        // on form submit
+  submit = async data => {
+    try {
+      var _await$request$data, _await$request$data2;
+
+      const {
+        token
+      } = (_await$request$data = (await (0,er_lib/* request */.WY)(request_destinations/* LOGIN */.ym, data)).data) === null || _await$request$data === void 0 ? void 0 : _await$request$data.data;
+      (0,er_lib/* setCookie */.d8)(`access-token`, token, 1);
+      const user = (_await$request$data2 = (await (0,er_lib/* request */.WY)(request_destinations/* GET_ACCOUNT_INFO */.uy, {}, {
+        auth: true
+      })).data) === null || _await$request$data2 === void 0 ? void 0 : _await$request$data2.data;
+      dispatch((0,userSlice/* login */.x4)(user));
+      router.push(`/`);
+    } catch (error) {
+      var _error$response$data;
+
+      (0,external_react_toastify_.toast)(((_error$response$data = error.response.data) === null || _error$response$data === void 0 ? void 0 : _error$response$data.message) || `Проблемы с сетью`, {
+        type: `error`
+      });
+    }
+
+    handle_to_register_click();
+  };
+
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+    className: (LoginForm_module_default()).container,
+    children: [/*#__PURE__*/jsx_runtime_.jsx(Title, {
+      styles: (LoginForm_module_default()).title,
+      content: t('header.loginModal.title')
+    }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("form", {
+      onSubmit: handleSubmit(submit),
+      children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (LoginForm_module_default()).inputs,
+        children: [/*#__PURE__*/jsx_runtime_.jsx(InputContainer/* InputContainer */.f, {
+          id: "name",
+          type: "text",
+          placeholder: translate('email'),
+          errors: !!errors.email,
+          other: register('email')
+        }), /*#__PURE__*/jsx_runtime_.jsx(InputContainer/* InputContainer */.f, {
+          id: "password",
+          type: "password",
+          placeholder: translate('password'),
+          errors: !!errors.password,
+          other: register('password')
+        })]
+      }), /*#__PURE__*/jsx_runtime_.jsx(ResetPasswordLink, {
+        click: handleResetPassModal,
+        styles: (LoginForm_module_default()).reset_password,
+        content: t('header.loginModal.resPassword')
+      }), /*#__PURE__*/jsx_runtime_.jsx(Submit, {
+        styles: (LoginForm_module_default()).submit,
+        content: t('header.loginModal.submit')
+      })]
+    }), /*#__PURE__*/jsx_runtime_.jsx(ToRegister, {
+      href: "/registration",
+      click: handle_to_register_click,
+      container_styles: (LoginForm_module_default()).to_register_container,
+      content_styles: (LoginForm_module_default()).to_register_content,
+      or: t('header.loginModal.or'),
+      register_text_styles: (LoginForm_module_default()).to_register_text,
+      content: t('header.loginModal.register')
+    }), /*#__PURE__*/jsx_runtime_.jsx(external_react_toastify_.ToastContainer, {})]
+  });
+}
+// EXTERNAL MODULE: ./components/Header/Bar/Login/Login.module.scss
+var Login_module = __webpack_require__(9592);
+var Login_module_default = /*#__PURE__*/__webpack_require__.n(Login_module);
+;// CONCATENATED MODULE: ./components/Header/Bar/Login/Login.jsx
+// components
+
+
+
+ // styles
+
+
+
+
+
+
+function Login({
+  onModalClose
+}) {
+  const {
+    0: showLoginModal,
+    1: setShowLoginModal
+  } = (0,external_react_.useState)(true),
+        {
+    0: showResetPasswordModal,
+    1: setShowResetPasswordModal
+  } = (0,external_react_.useState)(false);
+  console.log(showResetPasswordModal);
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+    children: [showLoginModal && /*#__PURE__*/jsx_runtime_.jsx(Modal/* Modal */.u, {
+      onClose: onModalClose,
+      contentStyles: (Login_module_default()).m_content,
+      containerStyles: (Login_module_default()).m_container,
+      children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (Login_module_default()).login_container,
+        children: [/*#__PURE__*/jsx_runtime_.jsx(SocialMediaIcons, {}), /*#__PURE__*/jsx_runtime_.jsx(LoginForm, {
+          onModalClose: onModalClose,
+          handleResetPassModal: () => {
+            setShowResetPasswordModal(true);
+            setShowLoginModal(false);
+          }
+        })]
+      })
+    }), showResetPasswordModal && /*#__PURE__*/jsx_runtime_.jsx(ForgotPassword, {
+      onModalClose: onModalClose
+    })]
+  });
+}
+;// CONCATENATED MODULE: ./public/images/header/flags/rus.png
+/* harmony default export */ const rus = ({"src":"/_next/static/image/public/images/header/flags/rus.6eb4cb14c6727094ffbdc706f51360a0.png","height":22,"width":21,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAuUlEQVR42k3JTwqCUBgE8LlMZekq1xXUnSLCAo9RgfuwjUEUKG48gJD0xxtoO5HQh/Je3wcuGvjBMANOWVZG07RR27YVEdT9ovhq4CilDJITjuxwMqLB9e7hxX8p7/oQ59tTMu680RcAcASwk8BBAXtJuBPenBqYHmssThJz95/ijT6BpWkH9nitLHMjtmNLMu68rUw7xKePYTpE9h5BpSNI1vU878MAJ9ZnWqIP/ETvCVJTj2Jjwid+tCCScAJCN9gAAAAASUVORK5CYII="});
+;// CONCATENATED MODULE: ./public/images/header/flags/arm.svg
+/* harmony default export */ const arm = ({"src":"/_next/static/image/public/images/header/flags/arm.94fdfa9a621438c57153ac07b079c412.svg","height":21,"width":21});
+;// CONCATENATED MODULE: ./public/images/header/flags/en.svg
+/* harmony default export */ const en = ({"src":"/_next/static/image/public/images/header/flags/en.1c85630df414717081ea8657eeca7e2c.svg","height":21,"width":21});
+;// CONCATENATED MODULE: ./public/images/header/flags/esp.svg
+/* harmony default export */ const esp = ({"src":"/_next/static/image/public/images/header/flags/esp.43788d57514706de9ea42c424cb8792f.svg","height":21,"width":21});
+;// CONCATENATED MODULE: ./public/images/header/flags/frc.svg
+/* harmony default export */ const frc = ({"src":"/_next/static/image/public/images/header/flags/frc.c32b391317fb03718355dd8a684f5541.svg","height":21,"width":21});
+;// CONCATENATED MODULE: ./public/images/header/flags/deu.svg
+/* harmony default export */ const deu = ({"src":"/_next/static/image/public/images/header/flags/deu.db91936c209d8e0d41810eac31428b8d.svg","height":21,"width":21});
+;// CONCATENATED MODULE: ./components/Header/Bar/BarItems/LanguageDropConfigs/lang-configs.js
+// flag icons
+
+
+
+
+
+
+const languages = [{
+  lang: "am",
+  contentOnTitle: 'am.onTitle',
+  contentOnDrop: 'am.onDrop',
+  icon: arm.src
+}, {
+  lang: "rs",
+  contentOnTitle: 'rs.onTitle',
+  contentOnDrop: 'rs.onDrop',
+  icon: rus.src
+}, {
+  lang: "en",
+  contentOnTitle: 'en.onTitle',
+  contentOnDrop: 'en.onDrop',
+  icon: en.src
+}, {
+  lang: "esp",
+  contentOnTitle: 'esp.onTitle',
+  contentOnDrop: 'esp.onDrop',
+  icon: esp.src
+}, {
+  lang: "fr",
+  contentOnTitle: 'frc.onTitle',
+  contentOnDrop: 'frc.onDrop',
+  icon: frc.src
+}, {
+  lang: "deu",
+  contentOnTitle: 'deu.onTitle',
+  contentOnDrop: 'deu.onDrop',
+  icon: deu.src
+}];
+// EXTERNAL MODULE: ./components/Header/Bar/BarItems/BarItems.module.scss
+var BarItems_module = __webpack_require__(1403);
+var BarItems_module_default = /*#__PURE__*/__webpack_require__.n(BarItems_module);
+// EXTERNAL MODULE: ./components/Header/Bar/BarItems/LanguageDrop/LanguageDrop.module.scss
+var LanguageDrop_module = __webpack_require__(6633);
+var LanguageDrop_module_default = /*#__PURE__*/__webpack_require__.n(LanguageDrop_module);
+;// CONCATENATED MODULE: ./components/Header/Bar/BarItems/LanguageDrop/LanguageDrop.jsx
+// hooks and helpers
+
+ // translation 
+
+ // componetns
+
+ // styles 
+
+
+
+
+function LanguageDrop({
+  onClose,
+  click,
+  data
+}) {
+  (0,external_react_.useEffect)(() => {
+    document.addEventListener("mousedown", handleClose);
+    return () => {
+      document.removeEventListener("mousedown", handleClose);
+    };
+  }, []);
+
+  const node = (0,external_react_.useRef)(),
+        router = (0,client_router.useRouter)(),
+        handleClose = e => {
+    if (node.current.contains(e.target)) {
+      if (e.target.parentNode) return;
+    }
+
+    onClose();
+  },
+        {
+    t
+  } = useTranslation_default()('common'),
+        translationPath = 'header.lang.',
+        translate = key => t(`${translationPath}${key}`);
+
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: (LanguageDrop_module_default()).container,
+    ref: node,
+    children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (LanguageDrop_module_default()).content,
+      children: data.map(el => {
+        return /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+          href: `${router.pathname}`,
+          locale: el.lang,
+          children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+            className: (LanguageDrop_module_default()).row,
+            children: [/*#__PURE__*/jsx_runtime_.jsx("span", {
+              onClick: click,
+              className: `${el.lang}`,
+              children: translate(el.contentOnDrop)
+            }), /*#__PURE__*/jsx_runtime_.jsx("img", {
+              onClick: click,
+              src: el.icon,
+              className: `${el.lang}`
+            })]
+          })
+        }, `change-lang-${el.lang}`);
+      })
+    })
+  });
+}
+// EXTERNAL MODULE: ./components/Header/Bar/BarItems/Logged/Logged.module.scss
+var Logged_module = __webpack_require__(4149);
+var Logged_module_default = /*#__PURE__*/__webpack_require__.n(Logged_module);
+// EXTERNAL MODULE: ./public/images/common/userDefault.png
+var userDefault = __webpack_require__(7513);
+// EXTERNAL MODULE: ./components/Header/Bar/BarItems/Logged/LoggedDrop/LoggedDrop.module.scss
+var LoggedDrop_module = __webpack_require__(8566);
+var LoggedDrop_module_default = /*#__PURE__*/__webpack_require__.n(LoggedDrop_module);
+;// CONCATENATED MODULE: ./public/images/common/phone.png
+/* harmony default export */ const common_phone = ({"src":"/_next/static/image/public/images/common/phone.302160191980cf3febb1ea4ef445194b.png","height":16,"width":16,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAA50lEQVR42mP4//8/w9f3H1g+v3sv/Of3b3EgX/Dvnz8C3z9/YQHJMXx5+x7EEAJibiAWubxupxaQFgViYZAiBiCD9+7+k6pLNKKm7m2e7LRCM756Q1BxHFBc7N/fv4IgBfzHJy0xnsvg8n9XZY/HkbbZ5quMkwuvb92nDjKZ4cfXrxIg45eYRM9bahY7d0/DJNd9zVMcQVb8/vVLnOHnt++CIDvf33sivdQ0Zt5cBtf/S7SipgLFeD6/fy8MsoL51/cfYiBFIMGTU5YaPT51SQnsyI+fwY4EKwKZBLWOH4j5vn34CPYmAGzlq1wESHWGAAAAAElFTkSuQmCC"});
+;// CONCATENATED MODULE: ./components/Header/Bar/BarItems/Logged/LoggedDrop/LoggedDrop.jsx
+// hooks and helpers
+
+
+
+ // translation 
+
+ // componetns
+
+ // styles 
+
+ // icons
+
+
+
+
+
+function LoggedDrop({
+  onClose,
+  user
+}) {
+  var _user$photo;
+
+  (0,external_react_.useEffect)(() => {
+    document.addEventListener("mousedown", handleClose);
+    return () => {
+      document.removeEventListener("mousedown", handleClose);
+    };
+  }, []);
+
+  const node = (0,external_react_.useRef)(),
+        router = (0,client_router.useRouter)(),
+        handleClose = e => {
+    if (node.current.contains(e.target)) {
+      if (e.target.parentNode) return;
+    }
+
+    onClose();
+  },
+        {
+    t
+  } = useTranslation_default()('common'),
+        translationPath = 'commons.',
+        translate = key => t(`${translationPath}${key}`),
+        dispatch = (0,external_react_redux_.useDispatch)();
+
+  function _logout() {
+    dispatch((0,userSlice/* logout */.kS)());
+    router.push(`/`);
+  }
+
+  function goToPersonal() {
+    router.push(`/personal`);
+  }
+
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: (LoggedDrop_module_default()).container,
+    ref: node,
+    children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: (LoggedDrop_module_default()).content,
+      children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (LoggedDrop_module_default()).user_photo_name,
+        children: [/*#__PURE__*/jsx_runtime_.jsx("span", {
+          onClick: goToPersonal,
+          children: /*#__PURE__*/jsx_runtime_.jsx("img", {
+            src: (_user$photo = user.photo) !== null && _user$photo !== void 0 ? _user$photo : userDefault/* default.src */.Z.src,
+            alt: ""
+          })
+        }), /*#__PURE__*/jsx_runtime_.jsx("span", {
+          onClick: goToPersonal,
+          children: user.username
+        })]
+      }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (LoggedDrop_module_default()).user_tel,
+        children: [/*#__PURE__*/jsx_runtime_.jsx("span", {
+          children: /*#__PURE__*/jsx_runtime_.jsx("img", {
+            src: common_phone.src,
+            alt: ""
+          })
+        }), /*#__PURE__*/jsx_runtime_.jsx("span", {
+          children: user.telephone
+        })]
+      }), /*#__PURE__*/jsx_runtime_.jsx("div", {
+        className: (LoggedDrop_module_default()).logOut,
+        children: /*#__PURE__*/jsx_runtime_.jsx("span", {
+          onClick: () => _logout(),
+          children: translate('logOut')
+        })
+      })]
+    })
+  });
+}
+// EXTERNAL MODULE: ./components/Header/Bar/BarItems/Logged/LoggedWallper/LoggedWallper.module.scss
+var LoggedWallper_module = __webpack_require__(8060);
+var LoggedWallper_module_default = /*#__PURE__*/__webpack_require__.n(LoggedWallper_module);
+;// CONCATENATED MODULE: ./public/images/common/triangle.png
+/* harmony default export */ const triangle = ({"src":"/_next/static/image/public/images/common/triangle.54ba395b147d6d1d132a896a0fcf5807.png","height":7,"width":10,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAhElEQVR42k3LsY0CQAxE0dFefAGiAUQhhFRATBGAhEQL9EAn9EBKSg0k2GMvP2Slp7HsHVXV2vYl7QN5MpiP5JnbStG9zO6Hu2fiJ+/V/a+oErZZFSyTnHhH5kbizTkHC+FmjqaNK3thiPbobmHB4cXH5ydiGRHCUNrCn0nsmPdFAUOSvsPqmwLEyLqSAAAAAElFTkSuQmCC"});
+;// CONCATENATED MODULE: ./components/Header/Bar/BarItems/Logged/LoggedWallper/LoggedWallper.jsx
+// components
+
+
+
+ // styles
+
+ // icons
+
+
+
+
+
+function LoggedWallper({
+  img,
+  fullName,
+  click
+}) {
+  const data = (0,external_react_redux_.useSelector)(userSlice/* selectUser */.dy);
+  const {
+    0: photo,
+    1: setPhoto
+  } = (0,external_react_.useState)(data.photo);
+  const {
+    0: fullname,
+    1: setFullname
+  } = (0,external_react_.useState)(data.username);
+  (0,external_react_.useEffect)(() => {
+    setPhoto(data.photo);
+    setFullname(data.username);
+  }, [data]);
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: (LoggedWallper_module_default()).container,
+    children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: (LoggedWallper_module_default()).content,
+      children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+        className: (LoggedWallper_module_default()).user_photo,
+        children: /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+          href: "/personal",
+          children: /*#__PURE__*/jsx_runtime_.jsx("img", {
+            src: photo || userDefault/* default.src */.Z.src,
+            alt: `${fullname} icon`
+          })
+        })
+      }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (LoggedWallper_module_default()).user_fullName,
+        onClick: click,
+        children: [/*#__PURE__*/jsx_runtime_.jsx("span", {
+          className: (LoggedWallper_module_default()).fullname,
+          children: fullname
+        }), /*#__PURE__*/jsx_runtime_.jsx("span", {
+          style: {
+            color: 'white'
+          },
+          children: /*#__PURE__*/jsx_runtime_.jsx("img", {
+            src: triangle.src,
+            alt: "triangle"
+          })
+        })]
+      })]
+    })
+  });
+}
+;// CONCATENATED MODULE: ./components/Header/Bar/BarItems/Logged/Logged.jsx
+// styles
+
+
+
+
+
+
+
+function Logged() {
+  const // states
+  //change user dropdown
+  {
+    0: showUserDrop,
+    1: setShowUserDrop
+  } = (0,external_react_.useState)(false);
+  const data = (0,external_react_redux_.useSelector)(userSlice/* selectUser */.dy);
+  const {
+    0: photo,
+    1: setPhoto
+  } = (0,external_react_.useState)(data.photo);
+  (0,external_react_.useEffect)(() => {
+    setPhoto(data.photo);
+  }, [data]);
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: (Logged_module_default()).container,
+    style: showUserDrop ? {
+      padding: '17.5px 0'
+    } : null,
+    children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (Logged_module_default()).content,
+      children: !showUserDrop ? /*#__PURE__*/jsx_runtime_.jsx(LoggedWallper, {
+        img: photo,
+        fullName: data.username,
+        click: () => setShowUserDrop(true)
+      }) : /*#__PURE__*/jsx_runtime_.jsx(LoggedDrop, {
+        onClose: () => setShowUserDrop(false),
+        user: data
+      })
+    })
+  });
+}
+;// CONCATENATED MODULE: ./public/images/header/register.png
+/* harmony default export */ const register = ({"src":"/_next/static/image/public/images/header/register.47403b998ce2c53617bfb46dbf914bda.png","height":23,"width":23,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAbUlEQVR42g3EQQvBABiA4U8iJ2eXHbSTbIoaKQdprSwns6w4OPgBDu7++ZP19L4hpF4qE6EXOj+Ft6+lMAhnGw83mVIYhtpBayd1lIhw6TUWfbnaNpyMjZQyH7k2PO0VGmuVlXuYSsz6X1U68z9hvUzPNC77RgAAAABJRU5ErkJggg=="});
+;// CONCATENATED MODULE: ./public/images/header/login.png
+/* harmony default export */ const header_login = ({"src":"/_next/static/image/public/images/header/login.2b90f4f21c830dc3851cb3fc3f1618b3.png","height":21,"width":19,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAQAAACfDS2NAAAAZ0lEQVR42jXNKwoCARhF4esDETfgDmwGmzYXYLEpGhTGZDUJFpPZBZjNLsJlfQx/GG463AMneuLm7ufvE7WFgavYFWytjFzEuXDoa+koToUbB2NN9040ZkreR1+svT1NvSIqVbGHeQtEukRdrLnb8QAAAABJRU5ErkJggg=="});
+;// CONCATENATED MODULE: ./components/Header/Bar/BarItems/BarItems.jsx
+// hooks and helpers
+
+ // import { user_data } from '/src/user/user'
+
+ // translation 
+
+ // styles 
+
+ // components
+
+
+
+ // icons
+
+
+
+
+
+
+
+
+function BarItems({
+  registration,
+  login,
+  registration_path,
+  loginModalHandle,
+  bar_items,
+  userLogged
+}) {
+  const {
+    t,
+    lang
+  } = useTranslation_default()('common');
+  const {
+    0: languagesTitle,
+    1: setLanguagesTitle
+  } = (0,external_react_.useState)(languages[1]);
+  (0,external_react_.useEffect)(() => {
+    const newLang = languages.find(el => el.lang === lang);
+
+    if (newLang) {
+      setLanguagesTitle(newLang);
+    }
+  }, [lang]);
+
+  const router = (0,client_router.useRouter)(),
+        languages_data = languages,
+        {
+    0: showDrop,
+    1: setShowDrop
+  } = (0,external_react_.useState)(false),
+        changeLangTitle = event => {
+    let lang_title_data = languages_data.filter(el => el.lang === event.target.className);
+    setLanguagesTitle(lang_title_data[0]);
+    setShowDrop(false);
+  },
+        translationPath = 'header.lang.',
+        translate = key => t(`${translationPath}${key}`);
+
+  return /*#__PURE__*/jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+    children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: `${(BarItems_module_default()).bar_item_container} ${bar_items} ${router.pathname !== '/' ? (BarItems_module_default()).for_mobile : null}`,
+      children: [userLogged ? /*#__PURE__*/jsx_runtime_.jsx(Logged, {}) : /*#__PURE__*/jsx_runtime_.jsx("div", {
+        className: (BarItems_module_default()).auth_container,
+        children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+          className: (BarItems_module_default()).auth_buttons,
+          children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+            className: (BarItems_module_default()).sign_up_button,
+            children: [/*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+              href: registration_path,
+              children: /*#__PURE__*/jsx_runtime_.jsx("img", {
+                src: register.src,
+                alt: ""
+              })
+            }), /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+              href: registration_path,
+              children: /*#__PURE__*/jsx_runtime_.jsx("span", {
+                children: registration
+              })
+            })]
+          }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+            className: (BarItems_module_default()).sign_in_button,
+            onClick: loginModalHandle,
+            children: [/*#__PURE__*/jsx_runtime_.jsx("img", {
+              src: header_login.src,
+              alt: ""
+            }), /*#__PURE__*/jsx_runtime_.jsx("span", {
+              children: login
+            })]
+          })]
+        })
+      }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (BarItems_module_default()).lang_button,
+        children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+          className: (BarItems_module_default()).lang_button_content,
+          style: showDrop ? {
+            display: 'none'
+          } : null,
+          onClick: () => setShowDrop(true),
+          children: [/*#__PURE__*/jsx_runtime_.jsx("span", {
+            children: translate(`${languagesTitle.contentOnTitle}`)
+          }), /*#__PURE__*/jsx_runtime_.jsx("img", {
+            src: languagesTitle.icon,
+            alt: "lang-flag"
+          })]
+        }), showDrop && /*#__PURE__*/jsx_runtime_.jsx(LanguageDrop, {
+          click: changeLangTitle,
+          onClose: () => setShowDrop(false),
+          data: languages_data
+        })]
+      })]
+    })
+  });
+}
+// EXTERNAL MODULE: ./components/Header/Bar/Logo/Logo.module.scss
+var Logo_module = __webpack_require__(8216);
+var Logo_module_default = /*#__PURE__*/__webpack_require__.n(Logo_module);
+// EXTERNAL MODULE: ./public/images/header/logo.svg
+var logo = __webpack_require__(4567);
+;// CONCATENATED MODULE: ./components/Header/Bar/Logo/Logo.jsx
+// styles
+ // components
+
+ // images and icons
+
+
+
+function Logo() {
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: (Logo_module_default()).logo_conatiner,
+    children: /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+      href: "/",
+      children: /*#__PURE__*/jsx_runtime_.jsx("img", {
+        src: logo/* default.src */.Z.src,
+        alt: "FootBet Logo"
+      })
+    })
+  });
+}
+// EXTERNAL MODULE: ./components/Header/Bar/DropdownMenu/Dropdown.module.scss
+var Dropdown_module = __webpack_require__(3871);
+var Dropdown_module_default = /*#__PURE__*/__webpack_require__.n(Dropdown_module);
+;// CONCATENATED MODULE: ./public/images/header/dropdown_lines.png
+/* harmony default export */ const dropdown_lines = ({"src":"/_next/static/image/public/images/header/dropdown_lines.3026094b1449e1420839b89cea855e19.png","height":17,"width":27,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAQAAADSmGXeAAAAO0lEQVR42l3GsQmAMBAAwC9sdCBB5xPUwmBio8sewpfhmguXpqbbawmdUDxaqj5rGE1Sbgib05F2xfwDyUs0V/V0c6UAAAAASUVORK5CYII="});
+// EXTERNAL MODULE: ./components/Pages/Contacts/Contacts.module.scss
+var Contacts_module = __webpack_require__(937);
+var Contacts_module_default = /*#__PURE__*/__webpack_require__.n(Contacts_module);
+;// CONCATENATED MODULE: ./public/images/header/SocialMedia/email.svg
+/* harmony default export */ const email = ({"src":"/_next/static/image/public/images/header/SocialMedia/email.2986d0c4bb65fe3a1f58b6c9bbe1597a.svg","height":20,"width":25});
+;// CONCATENATED MODULE: ./components/Pages/Contacts/contacts_data.js
+
+
+
+
+
+
+
+const contacts_data = [{
+  icon: phone.src,
+  url: "tel:+34672314808",
+  text: "+34 672 314 808"
+}, {
+  icon: facebook.src,
+  url: "https://www.facebook.com/%D0%9F%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7%D1%8B-%D0%BD%D0%B0-%D0%A4%D1%83%D1%82%D0%B1%D0%BE%D0%BB-104941347577913/",
+  text: "Facebook"
+}, {
+  icon: telegram.src,
+  url: "https://telegram.me/footbet24com",
+  text: "@footbet24com"
+}, {
+  icon: watsup.src,
+  url: "https://api.whatsapp.com/send?phone=+34672314808",
+  text: "+34 672 314 808"
+}, {
+  icon: instagram.src,
+  url: "https://www.instagram.com/prognozyna550/?utm_medium=copy_link",
+  text: "Instagram"
+}, {
+  icon: viber.src,
+  url: "viber://chat?number=+34672314808",
+  text: "+34 672 314 808"
+}, {
+  icon: email.src,
+  url: "mailto:n.xach1987@mail.ru",
+  text: "n.xach1987@mail.ru"
+}];
+;// CONCATENATED MODULE: ./public/images/header/SocialMedia/closeVector.png
+/* harmony default export */ const closeVector = ({"src":"/_next/static/image/public/images/header/SocialMedia/closeVector.d1faada7c5dce7c8f1fbd1ffde6c99d9.png","height":13,"width":13,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAQUlEQVR42mWNwQ0AIQzD0v0HOYkBykqwhI/kiVA+rqs2YtEUcsq0xORnEDFMMz7wOVmUcDJEhl/xnvT1tMW+avcBZRFfWZXKot0AAAAASUVORK5CYII="});
+;// CONCATENATED MODULE: ./components/Pages/Contacts/ContactsModal.jsx
+ // styles 
+
+
+ // icons
+
+
+
+
+function ContactsModal({
+  onModalClose,
+  opened = false
+}) {
+  return /*#__PURE__*/jsx_runtime_.jsx(Modal/* Modal */.u, {
+    onClose: onModalClose,
+    containerStyles: `${(Contacts_module_default()).container} `,
+    contentStyles: `${(Contacts_module_default()).content} ${opened ? (Contacts_module_default()).open : (Contacts_module_default()).close}`,
+    children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (Contacts_module_default()).modal_content,
+      children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (Contacts_module_default()).content_container,
+        children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+          className: (Contacts_module_default()).top,
+          children: /*#__PURE__*/jsx_runtime_.jsx("img", {
+            src: closeVector.src,
+            alt: "",
+            onClick: () => {
+              onModalClose();
+              document.querySelector('body').style.overflow = 'visible';
+            }
+          })
+        }), /*#__PURE__*/jsx_runtime_.jsx("div", {
+          className: (Contacts_module_default()).rows,
+          children: contacts_data.map(el => /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+            className: (Contacts_module_default()).row,
+            children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+              className: (Contacts_module_default()).img,
+              children: /*#__PURE__*/jsx_runtime_.jsx("img", {
+                src: el.icon,
+                alt: "contact-icon"
+              })
+            }), /*#__PURE__*/jsx_runtime_.jsx("div", {
+              className: (Contacts_module_default()).text,
+              children: /*#__PURE__*/jsx_runtime_.jsx("a", {
+                href: el.url,
+                target: "_blank",
+                children: el.text
+              })
+            })]
+          }, Math.random()))
+        })]
+      })
+    })
+  });
+}
+;// CONCATENATED MODULE: ./components/Header/Bar/DropdownMenu/Dropdown.jsx
+// hooks and helpers
+
+ // styles
+
+ // translation 
+
+ //imgs
+
+ //components
+
+
+
+
+
+function Dropdown() {
+  (0,external_react_.useEffect)(() => {
+    document.addEventListener("mousedown", handleClose);
+    return () => {
+      document.removeEventListener("mousedown", handleClose);
+    };
+  }, []);
+
+  const {
+    0: showDropdown,
+    1: setShowDropdown
+  } = (0,external_react_.useState)(false),
+        {
+    0: showContactsModal,
+    1: setShowContactsModal
+  } = (0,external_react_.useState)(false),
+        {
+    t
+  } = useTranslation_default()('common'),
+        translationPath = 'header.navBar.',
+        translate = key => t(`${translationPath}${key}`),
+        router = (0,client_router.useRouter)(),
+        node = (0,external_react_.useRef)(),
+        handleClose = e => {
+    var _node$current;
+
+    if (node !== null && node !== void 0 && (_node$current = node.current) !== null && _node$current !== void 0 && _node$current.contains(e.target)) {
+      if (e.target.parentNode) return;
+    }
+
+    setShowDropdown(false);
+  },
+        buttonsInHomePage = [{
+    id: 'main',
+    key: Math.random(),
+    frstContent: translate('main'),
+    href: '/'
+  }, {
+    id: 'games',
+    key: Math.random(),
+    frstContent: translate('games'),
+    href: '/games'
+  }, {
+    id: 'statistics',
+    key: Math.random(),
+    frstContent: translate('statistics.frs'),
+    secContent: translate('statistics.sec'),
+    href: '/statistics'
+  }, {
+    id: 'prediction',
+    key: Math.random(),
+    frstContent: translate('prediction.frs'),
+    secContent: translate('prediction.sec'),
+    href: '/prediction'
+  }, {
+    id: 'testimonials',
+    key: Math.random(),
+    frstContent: translate('testimonials'),
+    href: '/testimonials'
+  }, {
+    id: 'aboutUs',
+    key: Math.random(),
+    frstContent: translate('aboutUs'),
+    href: '/aboutUs'
+  }, {
+    id: 'contacts',
+    key: Math.random(),
+    frstContent: translate('contacts'),
+    href: null,
+    click: () => {
+      setShowDropdown(false);
+      setShowContactsModal(true);
+    }
+  }],
+        buttons = buttonsInHomePage.filter(el => el.id !== "statistics");
+
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+    className: (Dropdown_module_default()).dropdown,
+    children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (Dropdown_module_default()).dropdown_check,
+      children: /*#__PURE__*/jsx_runtime_.jsx("img", {
+        src: dropdown_lines.src,
+        alt: "drop-check-icon",
+        onClick: () => setShowDropdown(!showDropdown)
+      })
+    }), showDropdown && /*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (Dropdown_module_default()).dropdown_menu,
+      ref: node,
+      children: /*#__PURE__*/jsx_runtime_.jsx("ul", {
+        className: (Dropdown_module_default()).dropdown_list,
+        children: (router.pathname === '/' ? buttonsInHomePage : buttons).map(el => /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+          href: el.href ? el.href : "",
+          children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("li", {
+            onClick: el.click && el.click,
+            className: (Dropdown_module_default()).dropdown_list_items,
+            children: [el.frstContent, " ", el.secContent]
+          })
+        }, el.key))
+      })
+    }), showContactsModal && /*#__PURE__*/jsx_runtime_.jsx(ContactsModal, {
+      opened: showContactsModal ? true : false,
+      onModalClose: () => setShowContactsModal(false)
+    })]
+  });
+}
+;// CONCATENATED MODULE: ./components/Header/Bar/Bar.jsx
+// hooks and helpers
+ // styles
+
+ // translation 
+
+ //components
+
+
+
+
+
+
+
+
+function Bar({
+  bar_items,
+  bar_items_cont
+}) {
+  const {
+    t
+  } = useTranslation_default()('common'),
+        translationPath = 'header.',
+        translate = key => t(`${translationPath}${key}`),
+        // login modal configs
+  {
+    0: showLoginModal,
+    1: setShowLoginModal
+  } = (0,external_react_.useState)(false),
+        user_info = (0,external_react_redux_.useSelector)(state => state.user.user);
+
+  console.log(user_info);
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+    className: `${(Bar_module_default()).bar_container} ${bar_items_cont}`,
+    children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      children: [/*#__PURE__*/jsx_runtime_.jsx(Logo, {}), /*#__PURE__*/jsx_runtime_.jsx(Dropdown, {})]
+    }), /*#__PURE__*/jsx_runtime_.jsx(BarItems, {
+      userLogged: user_info !== null ? true : false,
+      registration: translate('register'),
+      login: translate('login'),
+      registration_path: "/registration",
+      loginModalHandle: () => setShowLoginModal(true),
+      bar_items: bar_items
+    }), showLoginModal && /*#__PURE__*/jsx_runtime_.jsx(Login, {
+      onModalClose: () => setShowLoginModal(false)
+    })]
+  });
+}
+// EXTERNAL MODULE: ./components/Header/NavBar/NavBar.module.scss
+var NavBar_module = __webpack_require__(8565);
+var NavBar_module_default = /*#__PURE__*/__webpack_require__.n(NavBar_module);
+// EXTERNAL MODULE: ./components/Header/NavBar/Button/Button.module.scss
+var Button_module = __webpack_require__(2908);
+var Button_module_default = /*#__PURE__*/__webpack_require__.n(Button_module);
+;// CONCATENATED MODULE: ./components/Header/NavBar/Button/Button.jsx
+ // styles
+
+
+
+
+
+function Button({
+  href,
+  contentFrstP,
+  contentSecP = null,
+  active,
+  click = null
+}) {
+  return /*#__PURE__*/jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+    children: href !== null ? /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+      href: href,
+      children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+        className: `${(Button_module_default()).container} ${active && (Button_module_default()).active}`,
+        children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+          className: (Button_module_default()).content,
+          onClick: click,
+          children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("pre", {
+            children: [contentFrstP, /*#__PURE__*/jsx_runtime_.jsx("br", {}), contentSecP]
+          })
+        })
+      })
+    }) : /*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: `${(Button_module_default()).container} ${active && (Button_module_default()).active}`,
+      children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+        className: (Button_module_default()).content,
+        onClick: click,
+        children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("pre", {
+          children: [contentFrstP, /*#__PURE__*/jsx_runtime_.jsx("br", {}), contentSecP]
+        })
+      })
+    })
+  });
+}
+;// CONCATENATED MODULE: ./components/Header/NavBar/NavBar.jsx
+// hooks and helpers
+
+ // styles
+
+ // translation 
+
+ // componetns
+
+
+
+
+
+
+function NavBar() {
+  const //states
+  {
+    0: showContactsModal,
+    1: setShowContactsModal
+  } = (0,external_react_.useState)(false),
+        {
+    t
+  } = useTranslation_default()('common'),
+        translationPath = 'header.navBar.',
+        translate = key => t(`${translationPath}${key}`),
+        // router
+  router = (0,client_router.useRouter)(),
+        // nav bar buttons configs
+  buttonsInHomePage = [{
+    id: 'main',
+    key: Math.random(),
+    frstContent: translate('main'),
+    href: '/'
+  }, {
+    id: 'games',
+    key: Math.random(),
+    frstContent: translate('games'),
+    href: '/games'
+  }, {
+    id: 'statistics',
+    key: Math.random(),
+    frstContent: translate('statistics.frs'),
+    secContent: translate('statistics.sec'),
+    href: '/statistics'
+  }, {
+    id: 'prediction',
+    key: Math.random(),
+    frstContent: translate('prediction.frs'),
+    secContent: translate('prediction.sec'),
+    href: '/prediction'
+  }, {
+    id: 'testimonials',
+    key: Math.random(),
+    frstContent: translate('testimonials'),
+    href: '/testimonials'
+  }, {
+    id: 'aboutUs',
+    key: Math.random(),
+    frstContent: translate('aboutUs'),
+    href: '/aboutUs'
+  }, {
+    id: 'contacts',
+    key: Math.random(),
+    frstContent: translate('contacts'),
+    href: null,
+    click: () => setShowContactsModal(true)
+  }],
+        buttons = buttonsInHomePage.filter(el => el.id !== "statistics");
+
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+    children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: `${(NavBar_module_default()).container} ${router.pathname !== '/' ? (NavBar_module_default()).tablet : null}`,
+      children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (NavBar_module_default()).content,
+        children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+          className: (NavBar_module_default()).top_on_tablet,
+          children: (router.pathname === '/' ? buttonsInHomePage : buttons).map((el, i) => i < 3 && /*#__PURE__*/jsx_runtime_.jsx(Button, {
+            contentFrstP: el.frstContent,
+            contentSecP: el.secContent,
+            href: el.href,
+            active: router.pathname === el.href ? 'true' : null,
+            click: el.click && el.click
+          }, el.key))
+        }), /*#__PURE__*/jsx_runtime_.jsx("div", {
+          className: (NavBar_module_default()).bottom_on_tablet,
+          children: (router.pathname === '/' ? buttonsInHomePage : buttons).map((el, i) => i >= 3 && /*#__PURE__*/jsx_runtime_.jsx(Button, {
+            contentFrstP: el.frstContent,
+            contentSecP: el.secContent,
+            href: el.href,
+            active: router.pathname === el.href ? 'true' : null,
+            click: el.click && el.click
+          }, el.key))
+        })]
+      })
+    }), showContactsModal && /*#__PURE__*/jsx_runtime_.jsx(ContactsModal, {
+      opened: showContactsModal ? true : false,
+      onModalClose: () => setShowContactsModal(false)
+    })]
+  });
+}
+// EXTERNAL MODULE: ./components/Header/SocialMedia/SocialMedia.module.scss
+var SocialMedia_SocialMedia_module = __webpack_require__(6847);
+var SocialMedia_SocialMedia_module_default = /*#__PURE__*/__webpack_require__.n(SocialMedia_SocialMedia_module);
+// EXTERNAL MODULE: ./components/Header/SocialMedia/Icon/Icon.module.scss
+var Icon_Icon_module = __webpack_require__(6294);
+var Icon_Icon_module_default = /*#__PURE__*/__webpack_require__.n(Icon_Icon_module);
+;// CONCATENATED MODULE: ./components/Header/SocialMedia/Icon/Icon.jsx
+
+
+function Icon_Icon({
+  src,
+  click,
+  id
+}) {
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: (Icon_Icon_module_default()).container,
+    id: id,
+    children: /*#__PURE__*/jsx_runtime_.jsx("img", {
+      src: src,
+      alt: `icons-${src}`,
+      onClick: click
+    })
+  });
+}
+// EXTERNAL MODULE: ./components/Header/SocialMedia/Modals/SocialMediaModal.module.scss
+var SocialMediaModal_module = __webpack_require__(5812);
+var SocialMediaModal_module_default = /*#__PURE__*/__webpack_require__.n(SocialMediaModal_module);
+;// CONCATENATED MODULE: ./components/Header/SocialMedia/Modals/Phone/Phone.jsx
+
+
+
+
+function Phone({
+  onModalClose,
+  data,
+  parent
+}) {
+  const top = parent.current.children.phone.offsetTop;
+  return /*#__PURE__*/jsx_runtime_.jsx(Modal/* Modal */.u, {
+    onClose: onModalClose,
+    containerStyles: (SocialMediaModal_module_default()).container,
+    contentStyles: (SocialMediaModal_module_default()).content,
+    otherStyles: {
+      top: top + 'px'
+    },
+    children: /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+      href: data.url,
+      children: /*#__PURE__*/jsx_runtime_.jsx("a", {
+        target: "_blank",
+        children: /*#__PURE__*/jsx_runtime_.jsx("p", {
+          children: data.text
+        })
+      })
+    })
+  });
+}
+;// CONCATENATED MODULE: ./components/Header/SocialMedia/Modals/Facebook/Facebook.jsx
+
+
+
+
+function Facebook({
+  onModalClose,
+  data,
+  parent
+}) {
+  const top = parent.current.children.facebook.offsetTop;
+  return /*#__PURE__*/jsx_runtime_.jsx(Modal/* Modal */.u, {
+    onClose: onModalClose,
+    containerStyles: (SocialMediaModal_module_default()).container,
+    contentStyles: (SocialMediaModal_module_default()).content,
+    otherStyles: {
+      top: top + 'px'
+    },
+    children: /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+      href: data.url,
+      children: /*#__PURE__*/jsx_runtime_.jsx("a", {
+        target: "_blank",
+        children: /*#__PURE__*/jsx_runtime_.jsx("p", {
+          children: data.text
+        })
+      })
+    })
+  });
+}
+;// CONCATENATED MODULE: ./components/Header/SocialMedia/Modals/Telegram/Telegram.jsx
+
+
+
+
+function Telegram({
+  onModalClose,
+  data,
+  parent
+}) {
+  const top = parent.current.children.telegram.offsetTop;
+  return /*#__PURE__*/jsx_runtime_.jsx(Modal/* Modal */.u, {
+    onClose: onModalClose,
+    containerStyles: (SocialMediaModal_module_default()).container,
+    contentStyles: (SocialMediaModal_module_default()).content,
+    otherStyles: {
+      top: top + 'px'
+    },
+    children: /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+      href: data.url,
+      children: /*#__PURE__*/jsx_runtime_.jsx("a", {
+        target: "_blank",
+        children: /*#__PURE__*/jsx_runtime_.jsx("p", {
+          children: data.text
+        })
+      })
+    })
+  });
+}
+;// CONCATENATED MODULE: ./components/Header/SocialMedia/Modals/WatsUp/WatsUp.jsx
+
+
+
+
+function WatsUp({
+  onModalClose,
+  data,
+  parent
+}) {
+  const top = parent.current.children.watsup.offsetTop;
+  return /*#__PURE__*/jsx_runtime_.jsx(Modal/* Modal */.u, {
+    onClose: onModalClose,
+    containerStyles: (SocialMediaModal_module_default()).container,
+    contentStyles: (SocialMediaModal_module_default()).content,
+    otherStyles: {
+      top: top + 'px'
+    },
+    children: /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+      href: data.url,
+      children: /*#__PURE__*/jsx_runtime_.jsx("a", {
+        target: "_blank",
+        children: /*#__PURE__*/jsx_runtime_.jsx("p", {
+          children: data.text
+        })
+      })
+    })
+  });
+}
+;// CONCATENATED MODULE: ./components/Header/SocialMedia/Modals/Instagram/Instagram.jsx
+
+
+
+
+function Instagram({
+  onModalClose,
+  data,
+  parent
+}) {
+  const top = parent.current.children.instagram.offsetTop;
+  return /*#__PURE__*/jsx_runtime_.jsx(Modal/* Modal */.u, {
+    onClose: onModalClose,
+    containerStyles: (SocialMediaModal_module_default()).container,
+    contentStyles: (SocialMediaModal_module_default()).content,
+    otherStyles: {
+      top: top + 'px'
+    },
+    children: /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+      href: data.url,
+      children: /*#__PURE__*/jsx_runtime_.jsx("a", {
+        target: "_blank",
+        children: /*#__PURE__*/jsx_runtime_.jsx("p", {
+          children: data.text
+        })
+      })
+    })
+  });
+}
+;// CONCATENATED MODULE: ./components/Header/SocialMedia/Modals/Viber/Viber.jsx
+
+
+
+
+function Viber({
+  onModalClose,
+  data,
+  parent
+}) {
+  const top = parent.current.children.viber.offsetTop;
+  return /*#__PURE__*/jsx_runtime_.jsx(Modal/* Modal */.u, {
+    onClose: onModalClose,
+    containerStyles: (SocialMediaModal_module_default()).container,
+    contentStyles: (SocialMediaModal_module_default()).content,
+    otherStyles: {
+      top: top + 'px'
+    },
+    children: /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
+      href: data.url,
+      children: /*#__PURE__*/jsx_runtime_.jsx("a", {
+        target: "_blank",
+        children: /*#__PURE__*/jsx_runtime_.jsx("p", {
+          children: data.text
+        })
+      })
+    })
+  });
+}
+;// CONCATENATED MODULE: ./components/Header/SocialMedia/SocialMedia.jsx
+ // styles
+
+ // components
+
+
+
+
+
+
+
+
+ // icons
+
+
+
+
+
+
+
+
+
+
+function SocialMedia_SocialMedia() {
+  const // states
+  {
+    0: showPhoneModal,
+    1: setShowPhoneModal
+  } = (0,external_react_.useState)(false),
+        {
+    0: showFacbookModal,
+    1: setShowFacbookModal
+  } = (0,external_react_.useState)(false),
+        {
+    0: showTelegramModal,
+    1: setShowTelegramModal
+  } = (0,external_react_.useState)(false),
+        {
+    0: showWatsUpModal,
+    1: setShowWatsUpModal
+  } = (0,external_react_.useState)(false),
+        {
+    0: showInstagramModal,
+    1: setShowInstagramModal
+  } = (0,external_react_.useState)(false),
+        {
+    0: showViberModal,
+    1: setShowViberModal
+  } = (0,external_react_.useState)(false),
+        socialMediasRef = (0,external_react_.useRef)(),
+        // config
+  icons = [{
+    id: "phone",
+    key: Math.random(),
+    src: phone.src,
+    click: () => {
+      window.scrollTo(0, 0);
+      setShowPhoneModal(true);
+    }
+  }, {
+    id: "facebook",
+    key: Math.random(),
+    src: facebook.src,
+    click: () => {
+      window.scrollTo(0, 0);
+      setShowFacbookModal(true);
+    }
+  }, {
+    id: "telegram",
+    key: Math.random(),
+    src: telegram.src,
+    click: () => {
+      window.scrollTo(0, 0);
+      setShowTelegramModal(true);
+    }
+  }, {
+    id: "watsup",
+    key: Math.random(),
+    src: watsup.src,
+    click: () => {
+      window.scrollTo(0, 0);
+      setShowWatsUpModal(true);
+    }
+  }, {
+    id: "instagram",
+    key: Math.random(),
+    src: instagram.src,
+    click: () => {
+      window.scrollTo(0, 0);
+      setShowInstagramModal(true);
+    }
+  }, {
+    id: "viber",
+    key: Math.random(),
+    src: viber.src,
+    click: () => {
+      window.scrollTo(0, 0);
+      setShowViberModal(true);
+    }
+  }],
+        modal_contents = {
+    phone: {
+      text: "+34 672 314 808",
+      url: "tel:+34672314808"
+    },
+    facebook: {
+      text: "Facebook",
+      url: "https://www.facebook.com/%D0%9F%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7%D1%8B-%D0%BD%D0%B0-%D0%A4%D1%83%D1%82%D0%B1%D0%BE%D0%BB-104941347577913/"
+    },
+    telegram: {
+      text: "+34 672 314 808",
+      url: "https://telegram.me/footbet24com"
+    },
+    watsup: {
+      text: "+34 672 314 808",
+      url: "https://api.whatsapp.com/send?phone=+34672314808"
+    },
+    instagram: {
+      text: "Instagram",
+      url: "https://www.instagram.com/prognozyna550/?utm_medium=copy_link"
+    },
+    viber: {
+      text: "+34 672 314 808",
+      url: "viber://chat?number=+34672314808"
+    }
+  };
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+    children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (SocialMedia_SocialMedia_module_default()).container,
+      ref: socialMediasRef,
+      children: icons.map(el => /*#__PURE__*/jsx_runtime_.jsx(Icon_Icon, {
+        id: el.id,
+        src: el.src,
+        click: el.click
+      }, el.key))
+    }), showPhoneModal && /*#__PURE__*/jsx_runtime_.jsx(Phone, {
+      onModalClose: () => setShowPhoneModal(false),
+      data: modal_contents.phone,
+      parent: socialMediasRef
+    }), showFacbookModal && /*#__PURE__*/jsx_runtime_.jsx(Facebook, {
+      onModalClose: () => setShowFacbookModal(false),
+      data: modal_contents.facebook,
+      parent: socialMediasRef
+    }), showTelegramModal && /*#__PURE__*/jsx_runtime_.jsx(Telegram, {
+      onModalClose: () => setShowTelegramModal(false),
+      data: modal_contents.telegram,
+      parent: socialMediasRef
+    }), showWatsUpModal && /*#__PURE__*/jsx_runtime_.jsx(WatsUp, {
+      onModalClose: () => setShowWatsUpModal(false),
+      data: modal_contents.watsup,
+      parent: socialMediasRef
+    }), showInstagramModal && /*#__PURE__*/jsx_runtime_.jsx(Instagram, {
+      onModalClose: () => setShowInstagramModal(false),
+      data: modal_contents.instagram,
+      parent: socialMediasRef
+    }), showViberModal && /*#__PURE__*/jsx_runtime_.jsx(Viber, {
+      onModalClose: () => setShowViberModal(false),
+      data: modal_contents.viber,
+      parent: socialMediasRef
+    })]
+  });
+}
+;// CONCATENATED MODULE: ./public/images/header/footballer.svg
+/* harmony default export */ const footballer = ({"src":"/_next/static/image/public/images/header/footballer.7505db6ff2334082e65f57b15504691c.svg","height":600,"width":662});
+;// CONCATENATED MODULE: ./components/Header/Header.jsx
+// hooks
+ //styles
+
+ // components
+
+
+
+ // imges
+
+
+
+
+
+function Header({
+  mainsPages
+}) {
+  return /*#__PURE__*/jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+    children: mainsPages ? /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: (Header_module_default()).header_container_big,
+      children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (Header_module_default()).bar,
+        children: [/*#__PURE__*/jsx_runtime_.jsx(SocialMedia_SocialMedia, {}), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+          className: (Header_module_default()).bar_controler,
+          children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+            className: (Header_module_default()).bar_conteiner,
+            children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+              className: (Header_module_default()).bar_content,
+              children: /*#__PURE__*/jsx_runtime_.jsx(Bar, {
+                bar_items_cont: (Header_module_default()).bar_items_cont,
+                bar_items: (Header_module_default()).bar_items
+              })
+            })
+          }), /*#__PURE__*/jsx_runtime_.jsx("div", {
+            className: (Header_module_default()).footballer,
+            children: /*#__PURE__*/jsx_runtime_.jsx("img", {
+              src: footballer.src,
+              alt: ""
+            })
+          })]
+        })]
+      }), /*#__PURE__*/jsx_runtime_.jsx(NavBar, {})]
+    }) : /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: (Header_module_default()).header_container_small,
+      children: [/*#__PURE__*/jsx_runtime_.jsx(Bar, {}), /*#__PURE__*/jsx_runtime_.jsx(NavBar, {})]
+    })
+  });
+}
+;// CONCATENATED MODULE: ./layouts/Main.jsx
+
+
+
+
+
+function Main({
+  children
+}) {
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+    children: [/*#__PURE__*/jsx_runtime_.jsx(Header, {
+      mainsPages: true
+    }), /*#__PURE__*/jsx_runtime_.jsx("main", {
+      children: children
+    }), /*#__PURE__*/jsx_runtime_.jsx(Footer, {})]
+  });
+}
+;// CONCATENATED MODULE: ./layouts/WithoutPhoto.jsx
+
+
+
+
+
+function WithoutPhoto_Main({
+  children
+}) {
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+    children: [/*#__PURE__*/jsx_runtime_.jsx(Header, {
+      mainsPages: false
+    }), /*#__PURE__*/jsx_runtime_.jsx("main", {
+      children: children
+    }), /*#__PURE__*/jsx_runtime_.jsx(Footer, {})]
+  });
+}
+;// CONCATENATED MODULE: ./layouts/Register.jsx
+
+
+
+
+function RegisterLayout({
+  children
+}) {
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+    children: [/*#__PURE__*/jsx_runtime_.jsx(Header, {
+      mainsPages: false
+    }), /*#__PURE__*/jsx_runtime_.jsx("main", {
+      children: children
+    })]
+  });
+}
+;// CONCATENATED MODULE: ./layouts/Error.jsx
+
+
+function Error({
+  children
+}) {
+  return /*#__PURE__*/jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+    children: /*#__PURE__*/jsx_runtime_.jsx("main", {
+      children: children
+    })
+  });
+}
+;// CONCATENATED MODULE: ./layouts/layout-wrapper.jsx
+function layout_wrapper_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function layout_wrapper_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { layout_wrapper_ownKeys(Object(source), true).forEach(function (key) { layout_wrapper_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { layout_wrapper_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function layout_wrapper_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+const layouts = {
+  main: Main,
+  withoutPhoto: WithoutPhoto_Main,
+  register: RegisterLayout
 };
 
-async function getServerSideProps(context) {
-  (0,react_beautiful_dnd__WEBPACK_IMPORTED_MODULE_11__.resetServerContext)();
-  return {
-    props: {} // will be passed to the page component as props
+const LayoutWrapper = props => {
+  // to get the text value of the assigned layout of each component
+  const Layout = layouts[props.children.type.layout]; // if we have a registered layout render children with said layout
 
-  };
-}
-/* harmony default export */ __webpack_exports__["default"] = (next_translate_appWithI18n__WEBPACK_IMPORTED_MODULE_2___default()(__Page_Next_Translate__, _objectSpread(_objectSpread({}, _next_translate_root_i18n__WEBPACK_IMPORTED_MODULE_1__), {}, {
-  isLoader: true,
-  skipInitialProps: true,
-  loadLocaleFrom: (l, n) => __webpack_require__("./locales lazy recursive ^\\.\\/.*\\/.*$")(`./${l}/${n}`).then(m => m.default)
-})));
+  if (Layout != null) {
+    return /*#__PURE__*/jsx_runtime_.jsx(Layout, layout_wrapper_objectSpread(layout_wrapper_objectSpread({}, props), {}, {
+      children: props.children
+    }));
+  } // if not render children with fragment
 
-/***/ }),
 
-/***/ "./redux/features/matchSlice.js":
-/*!**************************************!*\
-  !*** ./redux/features/matchSlice.js ***!
-  \**************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+  return /*#__PURE__*/jsx_runtime_.jsx(Error, layout_wrapper_objectSpread(layout_wrapper_objectSpread({}, props), {}, {
+    children: props.children
+  }));
+};
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "matchSlice": function() { return /* binding */ matchSlice; },
-/* harmony export */   "setMatchId": function() { return /* binding */ setMatchId; },
-/* harmony export */   "getMatchId": function() { return /* binding */ getMatchId; }
-/* harmony export */ });
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "@reduxjs/toolkit");
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__);
-
-const matchSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({
-  name: "user",
-  initialState: {
-    matchId: null
-  },
-  reducers: {
-    setMatchId: (state, action) => {
-      state.matchId = action.payload;
-    }
-  }
-});
-const {
-  setMatchId
-} = matchSlice.actions;
-const getMatchId = state => state.match.matchId;
-/* harmony default export */ __webpack_exports__["default"] = (matchSlice.reducer);
-
-/***/ }),
-
-/***/ "./redux/features/userSlice.js":
-/*!*************************************!*\
-  !*** ./redux/features/userSlice.js ***!
-  \*************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "userSlice": function() { return /* binding */ userSlice; },
-/* harmony export */   "login": function() { return /* binding */ login; },
-/* harmony export */   "logout": function() { return /* binding */ logout; },
-/* harmony export */   "selectUser": function() { return /* binding */ selectUser; }
-/* harmony export */ });
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "@reduxjs/toolkit");
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__);
-
-const userSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({
-  name: "user",
-  initialState: {
-    user: null
-  },
-  reducers: {
-    login: (state, action) => {
-      state.user = action.payload;
-    },
-    logout: state => {
-      state.user = null;
-    }
-  }
-});
-const {
-  login,
-  logout
-} = userSlice.actions;
-const selectUser = state => state.user.user;
-/* harmony default export */ __webpack_exports__["default"] = (userSlice.reducer);
-
-/***/ }),
-
-/***/ "./redux/store.js":
-/*!************************!*\
-  !*** ./redux/store.js ***!
-  \************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "store": function() { return /* binding */ store; },
-/* harmony export */   "persistor": function() { return /* binding */ persistor; }
-/* harmony export */ });
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "@reduxjs/toolkit");
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _features_userSlice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./features/userSlice */ "./redux/features/userSlice.js");
-/* harmony import */ var _features_matchSlice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./features/matchSlice */ "./redux/features/matchSlice.js");
-/* harmony import */ var redux_persist__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-persist */ "redux-persist");
-/* harmony import */ var redux_persist__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_persist__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var redux_persist_lib_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux-persist/lib/storage */ "redux-persist/lib/storage");
-/* harmony import */ var redux_persist_lib_storage__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(redux_persist_lib_storage__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony default export */ const layout_wrapper = (LayoutWrapper);
+// EXTERNAL MODULE: external "@reduxjs/toolkit"
+var toolkit_ = __webpack_require__(6139);
+// EXTERNAL MODULE: ./redux/features/matchSlice.js
+var matchSlice = __webpack_require__(6834);
+;// CONCATENATED MODULE: external "redux-persist"
+const external_redux_persist_namespaceObject = require("redux-persist");
+;// CONCATENATED MODULE: external "redux-persist/lib/storage"
+const storage_namespaceObject = require("redux-persist/lib/storage");
+var storage_default = /*#__PURE__*/__webpack_require__.n(storage_namespaceObject);
+;// CONCATENATED MODULE: ./redux/store.js
 // import { createStore } from 'redux'
 // export const store = createStore(/*reducer function*/(state, action) => {
 //     if (action.type === "login") {
@@ -8551,401 +7373,133 @@ __webpack_require__.r(__webpack_exports__);
 const persistConfig = {
   key: 'root',
   version: 1,
-  storage: (redux_persist_lib_storage__WEBPACK_IMPORTED_MODULE_4___default())
+  storage: (storage_default())
 };
-const persistedReducer = (0,redux_persist__WEBPACK_IMPORTED_MODULE_3__.persistReducer)(persistConfig, (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
-  user: _features_userSlice__WEBPACK_IMPORTED_MODULE_1__.default,
-  match: _features_matchSlice__WEBPACK_IMPORTED_MODULE_2__.default
+const persistedReducer = (0,external_redux_persist_namespaceObject.persistReducer)(persistConfig, (0,toolkit_.combineReducers)({
+  user: userSlice/* default */.ZP,
+  match: matchSlice/* default */.ZP
 }));
-const store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.configureStore)({
+const store = (0,toolkit_.configureStore)({
   reducer: persistedReducer,
   middleware: getDefaultMiddleware => getDefaultMiddleware({
     serializableCheck: {
-      ignoredActions: [redux_persist__WEBPACK_IMPORTED_MODULE_3__.FLUSH, redux_persist__WEBPACK_IMPORTED_MODULE_3__.REHYDRATE, redux_persist__WEBPACK_IMPORTED_MODULE_3__.PAUSE, redux_persist__WEBPACK_IMPORTED_MODULE_3__.PERSIST, redux_persist__WEBPACK_IMPORTED_MODULE_3__.PURGE, redux_persist__WEBPACK_IMPORTED_MODULE_3__.REGISTER]
+      ignoredActions: [external_redux_persist_namespaceObject.FLUSH, external_redux_persist_namespaceObject.REHYDRATE, external_redux_persist_namespaceObject.PAUSE, external_redux_persist_namespaceObject.PERSIST, external_redux_persist_namespaceObject.PURGE, external_redux_persist_namespaceObject.REGISTER]
     }
   })
 });
-const persistor = (0,redux_persist__WEBPACK_IMPORTED_MODULE_3__.persistStore)(store);
+const persistor = (0,external_redux_persist_namespaceObject.persistStore)(store);
+;// CONCATENATED MODULE: external "redux-persist/integration/react"
+const react_namespaceObject = require("redux-persist/integration/react");
+// EXTERNAL MODULE: external "react-beautiful-dnd"
+var external_react_beautiful_dnd_ = __webpack_require__(2640);
+;// CONCATENATED MODULE: ./pages/_app.js
+function _app_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _app_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { _app_ownKeys(Object(source), true).forEach(function (key) { _app_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { _app_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _app_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const __Page_Next_Translate__ = function MyApp({
+  Component,
+  pageProps
+}) {
+  return /*#__PURE__*/jsx_runtime_.jsx(external_react_redux_.Provider, {
+    store: store,
+    children: /*#__PURE__*/(0,jsx_runtime_.jsxs)(react_namespaceObject.PersistGate, {
+      loading: null,
+      persistor: persistor,
+      children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)((head_default()), {
+        children: [/*#__PURE__*/jsx_runtime_.jsx("title", {
+          children: "FootBet"
+        }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
+          name: "viewport",
+          content: "initial-scale=1.0, width=device-width"
+        }), /*#__PURE__*/jsx_runtime_.jsx("script", {
+          type: "text/javascript",
+          src: "//vk.com/js/api/openapi.js?152"
+        })]
+      }), /*#__PURE__*/jsx_runtime_.jsx(layout_wrapper, _app_objectSpread(_app_objectSpread({}, pageProps), {}, {
+        children: /*#__PURE__*/jsx_runtime_.jsx(Component, _app_objectSpread({}, pageProps))
+      }))]
+    })
+  });
+};
+
+async function getServerSideProps(context) {
+  (0,external_react_beautiful_dnd_.resetServerContext)();
+  return {
+    props: {} // will be passed to the page component as props
+
+  };
+}
+/* harmony default export */ const _app = (appWithI18n_default()(__Page_Next_Translate__, _app_objectSpread(_app_objectSpread({}, i18n), {}, {
+  isLoader: true,
+  skipInitialProps: true,
+  loadLocaleFrom: (l, n) => __webpack_require__(7655)(`./${l}/${n}`).then(m => m.default)
+})));
 
 /***/ }),
 
-/***/ "./public/images/common/phone.png":
-/*!****************************************!*\
-  !*** ./public/images/common/phone.png ***!
-  \****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ 6834:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/common/phone.302160191980cf3febb1ea4ef445194b.png","height":16,"width":16,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAA50lEQVR42mP4//8/w9f3H1g+v3sv/Of3b3EgX/Dvnz8C3z9/YQHJMXx5+x7EEAJibiAWubxupxaQFgViYZAiBiCD9+7+k6pLNKKm7m2e7LRCM756Q1BxHFBc7N/fv4IgBfzHJy0xnsvg8n9XZY/HkbbZ5quMkwuvb92nDjKZ4cfXrxIg45eYRM9bahY7d0/DJNd9zVMcQVb8/vVLnOHnt++CIDvf33sivdQ0Zt5cBtf/S7SipgLFeD6/fy8MsoL51/cfYiBFIMGTU5YaPT51SQnsyI+fwY4EKwKZBLWOH4j5vn34CPYmAGzlq1wESHWGAAAAAElFTkSuQmCC"});
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "vs": () => (/* binding */ setMatchId),
+/* harmony export */   "zG": () => (/* binding */ getMatchId),
+/* harmony export */   "ZP": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* unused harmony export matchSlice */
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6139);
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__);
+
+const matchSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({
+  name: "user",
+  initialState: {
+    matchId: null
+  },
+  reducers: {
+    setMatchId: (state, action) => {
+      state.matchId = action.payload;
+    }
+  }
+});
+const {
+  setMatchId
+} = matchSlice.actions;
+const getMatchId = state => state.match.matchId;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (matchSlice.reducer);
 
 /***/ }),
 
-/***/ "./public/images/common/triangle.png":
-/*!*******************************************!*\
-  !*** ./public/images/common/triangle.png ***!
-  \*******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ 4567:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/common/triangle.54ba395b147d6d1d132a896a0fcf5807.png","height":7,"width":10,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAhElEQVR42k3LsY0CQAxE0dFefAGiAUQhhFRATBGAhEQL9EAn9EBKSg0k2GMvP2Slp7HsHVXV2vYl7QN5MpiP5JnbStG9zO6Hu2fiJ+/V/a+oErZZFSyTnHhH5kbizTkHC+FmjqaNK3thiPbobmHB4cXH5ydiGRHCUNrCn0nsmPdFAUOSvsPqmwLEyLqSAAAAAElFTkSuQmCC"});
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/image/public/images/header/logo.6cdf91faf3ca12a076c5f9628145fc04.svg","height":221,"width":221});
 
 /***/ }),
 
-/***/ "./public/images/common/userDefault.png":
-/*!**********************************************!*\
-  !*** ./public/images/common/userDefault.png ***!
-  \**********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/common/userDefault.0814c24b239138a8175fadd2554278a0.png","height":35,"width":36,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAr0lEQVR42jWMMQrCUBBE9xKCWHgEC8HCk2gaPVICSiCghVWittYmpdgk2mnhFQQlJBrdzQwkC+//YWYYMTNR1TH+DPxABc7whswYjkBhuPiYaBwnSg3vBQYsnGgURfkVEQPUn6aUsFBRA3PdhXrekrpdeUs7HwQrnU5m6jhz9f2ABd5T8BzyPOd0Cf6Emh5uz0IfK480vVgU7SwMt5ZlV87fkHVZID2wAfeGNeiYmdRQANET+GpmcAAAAABJRU5ErkJggg=="});
-
-/***/ }),
-
-/***/ "./public/images/footer/leftBall.png":
-/*!*******************************************!*\
-  !*** ./public/images/footer/leftBall.png ***!
-  \*******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/footer/leftBall.9d913458e610693dcce7d9b191755ef2.png","height":358,"width":452,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAY0lEQVR42mMgCNavW6f64f1HKZwKvnz5Ev/////4+/ceuAO57BgKfv38GQ5UEPby5avElNQ0OwwFgX5eEWtWr474+/df5OXL10N9w7MwTIloaW6KePf2fdSp0xeC6lomoSgAAAh6Lj9+IpgnAAAAAElFTkSuQmCC"});
-
-/***/ }),
-
-/***/ "./public/images/footer/masterCard.png":
-/*!*********************************************!*\
-  !*** ./public/images/footer/masterCard.png ***!
-  \*********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/footer/masterCard.29493d522d0e854efc9f102ad8f0a87f.png","height":42,"width":69,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAoElEQVR4nBWOPQrCQBgF50uMqKRRjCKYwlrsxJ9GuyAeQOy9mI2BeACPIIhgEdQT6AFMICAbdl2L96aYZkTDEEigZ1meiAtw1RqCB+q9FT1bpGT5iGeqWbUcoiYMfC3fm2O88V10nBiCjiL/VKi7CnKkrzzT6JaSvTzRy+hMvTanWoO29ZMMQh/RLsYU139DaBv2wNTuyMG+w8aKiynY/QDkXDVqE0ykJwAAAABJRU5ErkJggg=="});
-
-/***/ }),
-
-/***/ "./public/images/footer/visa.png":
-/*!***************************************!*\
-  !*** ./public/images/footer/visa.png ***!
-  \***************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/footer/visa.56e9f851457af83605186a394484e11d.png","height":31,"width":104,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAARUlEQVR4nGM82J0d/uCTiH38RdW/Mly/fz35xyDOwMCwH4jVgFiVkYHhCRtD6J69Ysz/V7z6xyjCwPD/L1BCH4j/ADEPADD6FU4jYQWmAAAAAElFTkSuQmCC"});
-
-/***/ }),
-
-/***/ "./public/images/header/SocialMedia/closeVector.png":
-/*!**********************************************************!*\
-  !*** ./public/images/header/SocialMedia/closeVector.png ***!
-  \**********************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/SocialMedia/closeVector.d1faada7c5dce7c8f1fbd1ffde6c99d9.png","height":13,"width":13,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAQUlEQVR42mWNwQ0AIQzD0v0HOYkBykqwhI/kiVA+rqs2YtEUcsq0xORnEDFMMz7wOVmUcDJEhl/xnvT1tMW+avcBZRFfWZXKot0AAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/header/SocialMedia/email.svg":
-/*!****************************************************!*\
-  !*** ./public/images/header/SocialMedia/email.svg ***!
-  \****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/SocialMedia/email.2986d0c4bb65fe3a1f58b6c9bbe1597a.svg","height":20,"width":25});
-
-/***/ }),
-
-/***/ "./public/images/header/SocialMedia/facebook.svg":
-/*!*******************************************************!*\
-  !*** ./public/images/header/SocialMedia/facebook.svg ***!
-  \*******************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/SocialMedia/facebook.85f524e32ad377e7424a5d8712a6664a.svg","height":34,"width":28});
-
-/***/ }),
-
-/***/ "./public/images/header/SocialMedia/instagram.svg":
-/*!********************************************************!*\
-  !*** ./public/images/header/SocialMedia/instagram.svg ***!
-  \********************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/SocialMedia/instagram.f5ffd20055aeb8be2e2a6a66e757274e.svg","height":30,"width":31});
-
-/***/ }),
-
-/***/ "./public/images/header/SocialMedia/phone.svg":
-/*!****************************************************!*\
-  !*** ./public/images/header/SocialMedia/phone.svg ***!
-  \****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/SocialMedia/phone.55ee8819e254093aa33fdb4782b35cd4.svg","height":25,"width":24});
-
-/***/ }),
-
-/***/ "./public/images/header/SocialMedia/telegram.svg":
-/*!*******************************************************!*\
-  !*** ./public/images/header/SocialMedia/telegram.svg ***!
-  \*******************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/SocialMedia/telegram.aff9e3d95d74ff6112927acf1640e6a3.svg","height":37,"width":29});
-
-/***/ }),
-
-/***/ "./public/images/header/SocialMedia/viber.svg":
-/*!****************************************************!*\
-  !*** ./public/images/header/SocialMedia/viber.svg ***!
-  \****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/SocialMedia/viber.92d118c26760f796dc3278147251dffe.svg","height":39,"width":30});
-
-/***/ }),
-
-/***/ "./public/images/header/SocialMedia/watsup.svg":
-/*!*****************************************************!*\
-  !*** ./public/images/header/SocialMedia/watsup.svg ***!
-  \*****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/SocialMedia/watsup.e5c1d0468ecb4c80731a67e461e19253.svg","height":37,"width":29});
-
-/***/ }),
-
-/***/ "./public/images/header/dropdown_lines.png":
-/*!*************************************************!*\
-  !*** ./public/images/header/dropdown_lines.png ***!
-  \*************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/dropdown_lines.3026094b1449e1420839b89cea855e19.png","height":17,"width":27,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAQAAADSmGXeAAAAO0lEQVR42l3GsQmAMBAAwC9sdCBB5xPUwmBio8sewpfhmguXpqbbawmdUDxaqj5rGE1Sbgib05F2xfwDyUs0V/V0c6UAAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/header/flags/arm.svg":
-/*!********************************************!*\
-  !*** ./public/images/header/flags/arm.svg ***!
-  \********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/flags/arm.94fdfa9a621438c57153ac07b079c412.svg","height":21,"width":21});
-
-/***/ }),
-
-/***/ "./public/images/header/flags/deu.svg":
-/*!********************************************!*\
-  !*** ./public/images/header/flags/deu.svg ***!
-  \********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/flags/deu.db91936c209d8e0d41810eac31428b8d.svg","height":21,"width":21});
-
-/***/ }),
-
-/***/ "./public/images/header/flags/en.svg":
-/*!*******************************************!*\
-  !*** ./public/images/header/flags/en.svg ***!
-  \*******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/flags/en.1c85630df414717081ea8657eeca7e2c.svg","height":21,"width":21});
-
-/***/ }),
-
-/***/ "./public/images/header/flags/esp.svg":
-/*!********************************************!*\
-  !*** ./public/images/header/flags/esp.svg ***!
-  \********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/flags/esp.43788d57514706de9ea42c424cb8792f.svg","height":21,"width":21});
-
-/***/ }),
-
-/***/ "./public/images/header/flags/frc.svg":
-/*!********************************************!*\
-  !*** ./public/images/header/flags/frc.svg ***!
-  \********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/flags/frc.c32b391317fb03718355dd8a684f5541.svg","height":21,"width":21});
-
-/***/ }),
-
-/***/ "./public/images/header/flags/rus.png":
-/*!********************************************!*\
-  !*** ./public/images/header/flags/rus.png ***!
-  \********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/flags/rus.6eb4cb14c6727094ffbdc706f51360a0.png","height":22,"width":21,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAuUlEQVR42k3JTwqCUBgE8LlMZekq1xXUnSLCAo9RgfuwjUEUKG48gJD0xxtoO5HQh/Je3wcuGvjBMANOWVZG07RR27YVEdT9ovhq4CilDJITjuxwMqLB9e7hxX8p7/oQ59tTMu680RcAcASwk8BBAXtJuBPenBqYHmssThJz95/ijT6BpWkH9nitLHMjtmNLMu68rUw7xKePYTpE9h5BpSNI1vU878MAJ9ZnWqIP/ETvCVJTj2Jjwid+tCCScAJCN9gAAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/header/footballer.svg":
-/*!*********************************************!*\
-  !*** ./public/images/header/footballer.svg ***!
-  \*********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/footballer.7505db6ff2334082e65f57b15504691c.svg","height":600,"width":662});
-
-/***/ }),
-
-/***/ "./public/images/header/login.png":
-/*!****************************************!*\
-  !*** ./public/images/header/login.png ***!
-  \****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/login.2b90f4f21c830dc3851cb3fc3f1618b3.png","height":21,"width":19,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAQAAACfDS2NAAAAZ0lEQVR42jXNKwoCARhF4esDETfgDmwGmzYXYLEpGhTGZDUJFpPZBZjNLsJlfQx/GG463AMneuLm7ufvE7WFgavYFWytjFzEuXDoa+koToUbB2NN9040ZkreR1+svT1NvSIqVbGHeQtEukRdrLnb8QAAAABJRU5ErkJggg=="});
-
-/***/ }),
-
-/***/ "./public/images/header/login/facebook.svg":
-/*!*************************************************!*\
-  !*** ./public/images/header/login/facebook.svg ***!
-  \*************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/login/facebook.50193220c705167c0e8524982908a4ee.svg","height":76,"width":76});
-
-/***/ }),
-
-/***/ "./public/images/header/login/gmail.svg":
-/*!**********************************************!*\
-  !*** ./public/images/header/login/gmail.svg ***!
-  \**********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/login/gmail.b78b335d7b71ec5b3b9033065412a0f8.svg","height":76,"width":76});
-
-/***/ }),
-
-/***/ "./public/images/header/login/success.png":
-/*!************************************************!*\
-  !*** ./public/images/header/login/success.png ***!
-  \************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/login/success.b2f639f6971931b9d4939c59119e7859.png","height":132,"width":141,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAA8klEQVR4nAHnABj/ARm+LgAJAQY+7v/2jgUAAi/r/tT+Ygtq1X0YdeHkIdxYARa+LUrq/uS1BgEUABoBDf/g/c4BqRitAPfj9QBg8F5TAQC9HuFHCDUe1fvf++T6zgVpEHH/XQBX/WXhcATVFt7gAQC6AP+iD6b9BAgEA1rqVv+6Gb0A1NvUAXILb/4fBDECAQC/GuA37ygfiReA+/IV9AQH5wQAR+xk/A4TCwUA/QDgATK/P0fO/8G2WvJhAnIUawCk6KgAkBGMABsBL/7t//hJASnCNwAE/wQ60/vNjTLnNzDTE+cACQoD0Pf8/XMCAQHGNDBlOPg+WCUAAAAASUVORK5CYII="});
-
-/***/ }),
-
-/***/ "./public/images/header/login/twitter.svg":
-/*!************************************************!*\
-  !*** ./public/images/header/login/twitter.svg ***!
-  \************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/login/twitter.372f6f68ac46a0b5a2cbf106f608e4c2.svg","height":76,"width":76});
-
-/***/ }),
-
-/***/ "./public/images/header/login/vk.svg":
-/*!*******************************************!*\
-  !*** ./public/images/header/login/vk.svg ***!
-  \*******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/login/vk.f9a321d3db5de3a706483d7309582330.svg","height":76,"width":76});
-
-/***/ }),
-
-/***/ "./public/images/header/logo.svg":
-/*!***************************************!*\
-  !*** ./public/images/header/logo.svg ***!
-  \***************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/logo.6cdf91faf3ca12a076c5f9628145fc04.svg","height":221,"width":221});
-
-/***/ }),
-
-/***/ "./public/images/header/register.png":
-/*!*******************************************!*\
-  !*** ./public/images/header/register.png ***!
-  \*******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/header/register.47403b998ce2c53617bfb46dbf914bda.png","height":23,"width":23,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAbUlEQVR42g3EQQvBABiA4U8iJ2eXHbSTbIoaKQdprSwns6w4OPgBDu7++ZP19L4hpF4qE6EXOj+Ft6+lMAhnGw83mVIYhtpBayd1lIhw6TUWfbnaNpyMjZQyH7k2PO0VGmuVlXuYSsz6X1U68z9hvUzPNC77RgAAAABJRU5ErkJggg=="});
-
-/***/ }),
-
-/***/ "./public/images/personal/ball.png":
-/*!*****************************************!*\
-  !*** ./public/images/personal/ball.png ***!
-  \*****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({"src":"/_next/static/image/public/images/personal/ball.7a4217860e3b0be644a2c0534df6e64d.png","height":882,"width":950,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAkElEQVR42mPABlavWMYEpFiSEpOYMSTfvX7K9vnzJ66bN29yPX/+ggtFsjg3j/XD68fc////54RhFAWzZ0zl+PT2JdfxY4c4U1OTuBYsmI+q4OC+XRwvnj7kWr1yOUiCq7ysFFXB5In9LFs3reM6e+o4597duzjPnz3Hhe5GxgB/P/aJ/b1ca1ev5Fy2dBknAFcnP3eusvtcAAAAAElFTkSuQmCC"});
-
-/***/ }),
-
-/***/ "./components/Footer/Ball/Ball.module.scss":
-/*!*************************************************!*\
-  !*** ./components/Footer/Ball/Ball.module.scss ***!
-  \*************************************************/
-/***/ (function(module) {
+/***/ 5338:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -8959,11 +7513,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Footer/Footer.module.scss":
-/*!**********************************************!*\
-  !*** ./components/Footer/Footer.module.scss ***!
-  \**********************************************/
-/***/ (function(module) {
+/***/ 905:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -8975,11 +7526,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Footer/Navigation/List/List.module.scss":
-/*!************************************************************!*\
-  !*** ./components/Footer/Navigation/List/List.module.scss ***!
-  \************************************************************/
-/***/ (function(module) {
+/***/ 1854:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -8990,11 +7538,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Footer/Navigation/Navigation.module.scss":
-/*!*************************************************************!*\
-  !*** ./components/Footer/Navigation/Navigation.module.scss ***!
-  \*************************************************************/
-/***/ (function(module) {
+/***/ 2617:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9005,11 +7550,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Footer/SocialMedia/PSIcons/PS.module.scss":
-/*!**************************************************************!*\
-  !*** ./components/Footer/SocialMedia/PSIcons/PS.module.scss ***!
-  \**************************************************************/
-/***/ (function(module) {
+/***/ 655:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9020,11 +7562,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Footer/SocialMedia/SMIcons/SM.module.scss":
-/*!**************************************************************!*\
-  !*** ./components/Footer/SocialMedia/SMIcons/SM.module.scss ***!
-  \**************************************************************/
-/***/ (function(module) {
+/***/ 445:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9034,11 +7573,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Footer/SocialMedia/SocialMedia.module.scss":
-/*!***************************************************************!*\
-  !*** ./components/Footer/SocialMedia/SocialMedia.module.scss ***!
-  \***************************************************************/
-/***/ (function(module) {
+/***/ 5839:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9052,11 +7588,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Footer/SocialMedia/common/Icon/Icon.module.scss":
-/*!********************************************************************!*\
-  !*** ./components/Footer/SocialMedia/common/Icon/Icon.module.scss ***!
-  \********************************************************************/
-/***/ (function(module) {
+/***/ 7618:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9067,11 +7600,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/Bar.module.scss":
-/*!***********************************************!*\
-  !*** ./components/Header/Bar/Bar.module.scss ***!
-  \***********************************************/
-/***/ (function(module) {
+/***/ 9711:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9081,11 +7611,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/BarItems/BarItems.module.scss":
-/*!*************************************************************!*\
-  !*** ./components/Header/Bar/BarItems/BarItems.module.scss ***!
-  \*************************************************************/
-/***/ (function(module) {
+/***/ 1403:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9102,11 +7629,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/BarItems/LanguageDrop/LanguageDrop.module.scss":
-/*!******************************************************************************!*\
-  !*** ./components/Header/Bar/BarItems/LanguageDrop/LanguageDrop.module.scss ***!
-  \******************************************************************************/
-/***/ (function(module) {
+/***/ 6633:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9119,11 +7643,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/BarItems/Logged/Logged.module.scss":
-/*!******************************************************************!*\
-  !*** ./components/Header/Bar/BarItems/Logged/Logged.module.scss ***!
-  \******************************************************************/
-/***/ (function(module) {
+/***/ 4149:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9134,11 +7655,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/BarItems/Logged/LoggedDrop/LoggedDrop.module.scss":
-/*!*********************************************************************************!*\
-  !*** ./components/Header/Bar/BarItems/Logged/LoggedDrop/LoggedDrop.module.scss ***!
-  \*********************************************************************************/
-/***/ (function(module) {
+/***/ 8566:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9153,11 +7671,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/BarItems/Logged/LoggedWallper/LoggedWallper.module.scss":
-/*!***************************************************************************************!*\
-  !*** ./components/Header/Bar/BarItems/Logged/LoggedWallper/LoggedWallper.module.scss ***!
-  \***************************************************************************************/
-/***/ (function(module) {
+/***/ 8060:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9171,11 +7686,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/DropdownMenu/Dropdown.module.scss":
-/*!*****************************************************************!*\
-  !*** ./components/Header/Bar/DropdownMenu/Dropdown.module.scss ***!
-  \*****************************************************************/
-/***/ (function(module) {
+/***/ 3871:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9190,11 +7702,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/Login/Login.module.scss":
-/*!*******************************************************!*\
-  !*** ./components/Header/Bar/Login/Login.module.scss ***!
-  \*******************************************************/
-/***/ (function(module) {
+/***/ 9592:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9206,11 +7715,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/Login/LoginForm/LoginForm.module.scss":
-/*!*********************************************************************!*\
-  !*** ./components/Header/Bar/Login/LoginForm/LoginForm.module.scss ***!
-  \*********************************************************************/
-/***/ (function(module) {
+/***/ 3157:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9227,11 +7733,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/Login/ResetPassword/ForgotPassword/ForgotPassword.module.scss":
-/*!*********************************************************************************************!*\
-  !*** ./components/Header/Bar/Login/ResetPassword/ForgotPassword/ForgotPassword.module.scss ***!
-  \*********************************************************************************************/
-/***/ (function(module) {
+/***/ 4696:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9246,11 +7749,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/Login/ResetPassword/GetEmailCode/GetEmailCode.module.scss":
-/*!*****************************************************************************************!*\
-  !*** ./components/Header/Bar/Login/ResetPassword/GetEmailCode/GetEmailCode.module.scss ***!
-  \*****************************************************************************************/
-/***/ (function(module) {
+/***/ 4389:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9268,11 +7768,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/Login/ResetPassword/NewPassword/NewPassword.module.scss":
-/*!***************************************************************************************!*\
-  !*** ./components/Header/Bar/Login/ResetPassword/NewPassword/NewPassword.module.scss ***!
-  \***************************************************************************************/
-/***/ (function(module) {
+/***/ 2436:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9287,11 +7784,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/Login/ResetPassword/Success/Success.module.scss":
-/*!*******************************************************************************!*\
-  !*** ./components/Header/Bar/Login/ResetPassword/Success/Success.module.scss ***!
-  \*******************************************************************************/
-/***/ (function(module) {
+/***/ 3949:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9305,11 +7799,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/Login/SocialMediaIcons/SocialMediaIcons.module.scss":
-/*!***********************************************************************************!*\
-  !*** ./components/Header/Bar/Login/SocialMediaIcons/SocialMediaIcons.module.scss ***!
-  \***********************************************************************************/
-/***/ (function(module) {
+/***/ 8510:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9323,11 +7814,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Bar/Logo/Logo.module.scss":
-/*!*****************************************************!*\
-  !*** ./components/Header/Bar/Logo/Logo.module.scss ***!
-  \*****************************************************/
-/***/ (function(module) {
+/***/ 8216:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9337,11 +7825,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/Header.module.scss":
-/*!**********************************************!*\
-  !*** ./components/Header/Header.module.scss ***!
-  \**********************************************/
-/***/ (function(module) {
+/***/ 1258:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9360,11 +7845,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/NavBar/Button/Button.module.scss":
-/*!************************************************************!*\
-  !*** ./components/Header/NavBar/Button/Button.module.scss ***!
-  \************************************************************/
-/***/ (function(module) {
+/***/ 2908:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9376,11 +7858,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/NavBar/NavBar.module.scss":
-/*!*****************************************************!*\
-  !*** ./components/Header/NavBar/NavBar.module.scss ***!
-  \*****************************************************/
-/***/ (function(module) {
+/***/ 8565:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9394,11 +7873,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/SocialMedia/Icon/Icon.module.scss":
-/*!*************************************************************!*\
-  !*** ./components/Header/SocialMedia/Icon/Icon.module.scss ***!
-  \*************************************************************/
-/***/ (function(module) {
+/***/ 6294:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9408,11 +7884,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/SocialMedia/Modals/SocialMediaModal.module.scss":
-/*!***************************************************************************!*\
-  !*** ./components/Header/SocialMedia/Modals/SocialMediaModal.module.scss ***!
-  \***************************************************************************/
-/***/ (function(module) {
+/***/ 5812:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9423,11 +7896,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Header/SocialMedia/SocialMedia.module.scss":
-/*!***************************************************************!*\
-  !*** ./components/Header/SocialMedia/SocialMedia.module.scss ***!
-  \***************************************************************/
-/***/ (function(module) {
+/***/ 6847:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9437,11 +7907,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/Pages/Contacts/Contacts.module.scss":
-/*!********************************************************!*\
-  !*** ./components/Pages/Contacts/Contacts.module.scss ***!
-  \********************************************************/
-/***/ (function(module) {
+/***/ 937:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -9462,340 +7929,202 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./components/common/auth/InputContainer/InputContainer.module.scss":
-/*!**************************************************************************!*\
-  !*** ./components/common/auth/InputContainer/InputContainer.module.scss ***!
-  \**************************************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"container": "InputContainer_container__1KzvS",
-	"label_content": "InputContainer_label_content__2_yAQ",
-	"input_container": "InputContainer_input_container__1bTRJ",
-	"input_success_content": "InputContainer_input_success_content__1yOZD",
-	"input_error_content": "InputContainer_input_error_content__3-W2W"
-};
-
-
-/***/ }),
-
-/***/ "./components/common/auth/Modal/Modal.module.scss":
-/*!********************************************************!*\
-  !*** ./components/common/auth/Modal/Modal.module.scss ***!
-  \********************************************************/
-/***/ (function(module) {
-
-// Exports
-module.exports = {
-	"modalConteiner": "Modal_modalConteiner__3g8If",
-	"transition": "Modal_transition__1kfv9",
-	"modalContent": "Modal_modalContent__1-O47"
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/react-toastify/dist/ReactToastify.css":
-/*!************************************************************!*\
-  !*** ./node_modules/react-toastify/dist/ReactToastify.css ***!
-  \************************************************************/
-/***/ (function() {
+/***/ 8819:
+/***/ (() => {
 
 
 
 /***/ }),
 
-/***/ "./styles/calendar.scss":
-/*!******************************!*\
-  !*** ./styles/calendar.scss ***!
-  \******************************/
-/***/ (function() {
-
-
-
-/***/ }),
-
-/***/ "./styles/globals.css":
-/*!****************************!*\
-  !*** ./styles/globals.css ***!
-  \****************************/
-/***/ (function() {
-
-
-
-/***/ }),
-
-/***/ "./styles/static-empty.css":
-/*!*********************************!*\
-  !*** ./styles/static-empty.css ***!
-  \*********************************/
-/***/ (function() {
-
-
-
-/***/ }),
-
-/***/ "@hookform/resolvers/yup":
-/*!******************************************!*\
-  !*** external "@hookform/resolvers/yup" ***!
-  \******************************************/
-/***/ (function(module) {
+/***/ 2166:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("@hookform/resolvers/yup");;
+module.exports = require("@hookform/resolvers/yup");
 
 /***/ }),
 
-/***/ "@reduxjs/toolkit":
-/*!***********************************!*\
-  !*** external "@reduxjs/toolkit" ***!
-  \***********************************/
-/***/ (function(module) {
+/***/ 6139:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("@reduxjs/toolkit");;
+module.exports = require("@reduxjs/toolkit");
 
 /***/ }),
 
-/***/ "axios":
-/*!************************!*\
-  !*** external "axios" ***!
-  \************************/
-/***/ (function(module) {
+/***/ 2376:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("axios");;
+module.exports = require("axios");
 
 /***/ }),
 
-/***/ "next-translate/appWithI18n":
-/*!*********************************************!*\
-  !*** external "next-translate/appWithI18n" ***!
-  \*********************************************/
-/***/ (function(module) {
+/***/ 8841:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/appWithI18n");;
+module.exports = require("next-translate/useTranslation");
 
 /***/ }),
 
-/***/ "next-translate/useTranslation":
-/*!************************************************!*\
-  !*** external "next-translate/useTranslation" ***!
-  \************************************************/
-/***/ (function(module) {
+/***/ 9325:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/useTranslation");;
+module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
 
-/***/ "../next-server/lib/router-context":
-/*!**************************************************************!*\
-  !*** external "next/dist/next-server/lib/router-context.js" ***!
-  \**************************************************************/
-/***/ (function(module) {
+/***/ 8300:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router-context.js");;
+module.exports = require("next/dist/shared/lib/i18n/detect-domain-locale.js");
 
 /***/ }),
 
-/***/ "../next-server/lib/router/utils/get-asset-path-from-route":
-/*!**************************************************************************************!*\
-  !*** external "next/dist/next-server/lib/router/utils/get-asset-path-from-route.js" ***!
-  \**************************************************************************************/
-/***/ (function(module) {
+/***/ 5378:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router/utils/get-asset-path-from-route.js");;
+module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 
 /***/ }),
 
-/***/ "next/head":
-/*!****************************!*\
-  !*** external "next/head" ***!
-  \****************************/
-/***/ (function(module) {
+/***/ 7162:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/head");;
+module.exports = require("next/dist/shared/lib/mitt.js");
 
 /***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
-/***/ (function(module) {
+/***/ 8773:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react");;
+module.exports = require("next/dist/shared/lib/router-context.js");
 
 /***/ }),
 
-/***/ "react-beautiful-dnd":
-/*!**************************************!*\
-  !*** external "react-beautiful-dnd" ***!
-  \**************************************/
-/***/ (function(module) {
+/***/ 2248:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-beautiful-dnd");;
+module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
 
 /***/ }),
 
-/***/ "react-dom":
-/*!****************************!*\
-  !*** external "react-dom" ***!
-  \****************************/
-/***/ (function(module) {
+/***/ 9372:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-dom");;
+module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
 
 /***/ }),
 
-/***/ "react-facebook-login":
-/*!***************************************!*\
-  !*** external "react-facebook-login" ***!
-  \***************************************/
-/***/ (function(module) {
+/***/ 665:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-facebook-login");;
+module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
 
 /***/ }),
 
-/***/ "react-google-login":
-/*!*************************************!*\
-  !*** external "react-google-login" ***!
-  \*************************************/
-/***/ (function(module) {
+/***/ 2747:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-google-login");;
+module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
 
 /***/ }),
 
-/***/ "react-hook-form":
-/*!**********************************!*\
-  !*** external "react-hook-form" ***!
-  \**********************************/
-/***/ (function(module) {
+/***/ 333:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-hook-form");;
+module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
 
 /***/ }),
 
-/***/ "react-is":
-/*!***************************!*\
-  !*** external "react-is" ***!
-  \***************************/
-/***/ (function(module) {
+/***/ 3456:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-is");;
+module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 /***/ }),
 
-/***/ "react-redux":
-/*!******************************!*\
-  !*** external "react-redux" ***!
-  \******************************/
-/***/ (function(module) {
+/***/ 7620:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-redux");;
+module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
-/***/ "react-toastify":
-/*!*********************************!*\
-  !*** external "react-toastify" ***!
-  \*********************************/
-/***/ (function(module) {
+/***/ 9297:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-toastify");;
+module.exports = require("react");
 
 /***/ }),
 
-/***/ "react-twitter-login":
-/*!**************************************!*\
-  !*** external "react-twitter-login" ***!
-  \**************************************/
-/***/ (function(module) {
+/***/ 2640:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-twitter-login");;
+module.exports = require("react-beautiful-dnd");
 
 /***/ }),
 
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
-/***/ (function(module) {
+/***/ 2268:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react/jsx-dev-runtime");;
+module.exports = require("react-dom");
 
 /***/ }),
 
-/***/ "redux-persist":
-/*!********************************!*\
-  !*** external "redux-persist" ***!
-  \********************************/
-/***/ (function(module) {
+/***/ 2662:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("redux-persist");;
+module.exports = require("react-hook-form");
 
 /***/ }),
 
-/***/ "redux-persist/integration/react":
-/*!**************************************************!*\
-  !*** external "redux-persist/integration/react" ***!
-  \**************************************************/
-/***/ (function(module) {
+/***/ 79:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("redux-persist/integration/react");;
+module.exports = require("react-redux");
 
 /***/ }),
 
-/***/ "redux-persist/lib/storage":
-/*!********************************************!*\
-  !*** external "redux-persist/lib/storage" ***!
-  \********************************************/
-/***/ (function(module) {
+/***/ 2034:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("redux-persist/lib/storage");;
+module.exports = require("react-toastify");
 
 /***/ }),
 
-/***/ "yup":
-/*!**********************!*\
-  !*** external "yup" ***!
-  \**********************/
-/***/ (function(module) {
+/***/ 5282:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("yup");;
+module.exports = require("react/jsx-runtime");
 
 /***/ }),
 
-/***/ "?ca47":
-/*!******************************************!*\
-  !*** ./utils/resolve-rewrites (ignored) ***!
-  \******************************************/
-/***/ (function() {
+/***/ 9440:
+/***/ ((module) => {
 
-/* (ignored) */
+"use strict";
+module.exports = require("yup");
 
 /***/ })
 
@@ -9805,8 +8134,8 @@ module.exports = require("yup");;
 // load runtime
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
-var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = (__webpack_exec__("./pages/_app.js"));
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [1694,543,8402,7023,2361,4720,2835], () => (__webpack_exec__(9056)));
 module.exports = __webpack_exports__;
 
 })();
