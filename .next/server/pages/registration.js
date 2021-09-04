@@ -1,11 +1,11 @@
-(function() {
+(() => {
 var exports = {};
 exports.id = 5907;
 exports.ids = [5907];
 exports.modules = {
 
-/***/ 727:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ 8055:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 // ESM COMPAT FLAG
@@ -13,14 +13,12 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": function() { return /* binding */ registration; },
-  "getStaticProps": function() { return /* binding */ getStaticProps; }
+  "default": () => (/* binding */ registration),
+  "getStaticProps": () => (/* binding */ getStaticProps)
 });
 
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(5282);
 // EXTERNAL MODULE: ./i18n.json
-var i18n = __webpack_require__(1900);
+var i18n = __webpack_require__(608);
 // EXTERNAL MODULE: external "next-translate/loadNamespaces"
 var loadNamespaces_ = __webpack_require__(8404);
 var loadNamespaces_default = /*#__PURE__*/__webpack_require__.n(loadNamespaces_);
@@ -34,19 +32,18 @@ var external_yup_ = __webpack_require__(9440);
 // EXTERNAL MODULE: external "@hookform/resolvers/yup"
 var yup_ = __webpack_require__(2166);
 // EXTERNAL MODULE: ./components/common/auth/InputContainer/InputContainer.jsx
-var InputContainer = __webpack_require__(7152);
+var InputContainer = __webpack_require__(4720);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(9297);
 // EXTERNAL MODULE: ./components/Registration/Form/FileInput/FileInput.module.scss
-var FileInput_module = __webpack_require__(8543);
+var FileInput_module = __webpack_require__(3383);
 var FileInput_module_default = /*#__PURE__*/__webpack_require__.n(FileInput_module);
 ;// CONCATENATED MODULE: ./public/images/register/plus.svg
-/* harmony default export */ var plus = ({"src":"/_next/static/image/public/images/register/plus.8ac9397ebd63d0e0257990f9621fbad9.svg","height":56,"width":54});
+/* harmony default export */ const plus = ({"src":"/_next/static/image/public/images/register/plus.8ac9397ebd63d0e0257990f9621fbad9.svg","height":56,"width":54});
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(5282);
 ;// CONCATENATED MODULE: ./components/Registration/Form/FileInput/FileInput.jsx
-
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -57,6 +54,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  // styles
 
  // icons
+
+
 
 
 function FileInput({
@@ -94,7 +93,7 @@ function FileInput({
   });
 }
 // EXTERNAL MODULE: ./components/Registration/Form/Button/Button.module.scss
-var Button_module = __webpack_require__(510);
+var Button_module = __webpack_require__(3328);
 var Button_module_default = /*#__PURE__*/__webpack_require__.n(Button_module);
 ;// CONCATENATED MODULE: ./components/Registration/Form/Button/Button.jsx
 
@@ -114,27 +113,27 @@ function Button({
   });
 }
 // EXTERNAL MODULE: ./components/Registration/Form/Form.module.scss
-var Form_module = __webpack_require__(4218);
+var Form_module = __webpack_require__(2561);
 var Form_module_default = /*#__PURE__*/__webpack_require__.n(Form_module);
 ;// CONCATENATED MODULE: ./public/images/register/user-input.svg
-/* harmony default export */ var user_input = ({"src":"/_next/static/image/public/images/register/user-input.78cd19986bdf768c5e6b2a72a25861d4.svg","height":21,"width":21});
+/* harmony default export */ const user_input = ({"src":"/_next/static/image/public/images/register/user-input.78cd19986bdf768c5e6b2a72a25861d4.svg","height":21,"width":21});
 ;// CONCATENATED MODULE: ./public/images/register/calendar.svg
-/* harmony default export */ var calendar = ({"src":"/_next/static/image/public/images/register/calendar.76d310249474f3f1532a00dee4810e89.svg","height":21,"width":21});
+/* harmony default export */ const calendar = ({"src":"/_next/static/image/public/images/register/calendar.76d310249474f3f1532a00dee4810e89.svg","height":21,"width":21});
 ;// CONCATENATED MODULE: ./public/images/register/mail.svg
-/* harmony default export */ var mail = ({"src":"/_next/static/image/public/images/register/mail.95674d359da6f55de23aa98bb5034693.svg","height":21,"width":21});
+/* harmony default export */ const mail = ({"src":"/_next/static/image/public/images/register/mail.95674d359da6f55de23aa98bb5034693.svg","height":21,"width":21});
 ;// CONCATENATED MODULE: ./public/images/register/phone.svg
-/* harmony default export */ var phone = ({"src":"/_next/static/image/public/images/register/phone.21e8ac669fcc3f0aa6b9729926cd7795.svg","height":21,"width":21});
+/* harmony default export */ const phone = ({"src":"/_next/static/image/public/images/register/phone.21e8ac669fcc3f0aa6b9729926cd7795.svg","height":21,"width":21});
 ;// CONCATENATED MODULE: ./public/images/register/key.svg
-/* harmony default export */ var key = ({"src":"/_next/static/image/public/images/register/key.d04e7cec61dc5a55afd8b940b2b6a8c0.svg","height":21,"width":21});
+/* harmony default export */ const key = ({"src":"/_next/static/image/public/images/register/key.d04e7cec61dc5a55afd8b940b2b6a8c0.svg","height":21,"width":21});
 // EXTERNAL MODULE: ./lib/er.lib.js
-var er_lib = __webpack_require__(955);
+var er_lib = __webpack_require__(1863);
 // EXTERNAL MODULE: ./lib/request-destinations.js + 1 modules
-var request_destinations = __webpack_require__(9541);
+var request_destinations = __webpack_require__(8955);
 // EXTERNAL MODULE: ./components/common/auth/BallRightCorner/Ball.module.scss
-var Ball_module = __webpack_require__(3887);
+var Ball_module = __webpack_require__(7732);
 var Ball_module_default = /*#__PURE__*/__webpack_require__.n(Ball_module);
 ;// CONCATENATED MODULE: ./public/images/footer/ball.png
-/* harmony default export */ var ball = ({"src":"/_next/static/image/public/images/footer/ball.a66c304ca74089ab0e5ee9d5783878a8.png","height":452,"width":643,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAfUlEQVR42mPABl6/eCpy+OB+herqKjkMyfNnT0r+/PpJ8/+/32q/f/9WR5fn3r9np+b///9U//35rfrt6xdVFNn4mGixm1cvarx99Vy1r6dLLT0lAVXBquWLxe7cuKJx//YNkAQMI0BtVQXftk3rNG5du6y6YN4c1dqaGlUAsu85qa2EjbsAAAAASUVORK5CYII="});
+/* harmony default export */ const ball = ({"src":"/_next/static/image/public/images/footer/ball.a66c304ca74089ab0e5ee9d5783878a8.png","height":452,"width":643,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAfUlEQVR42mPABl6/eCpy+OB+herqKjkMyfNnT0r+/PpJ8/+/32q/f/9WR5fn3r9np+b///9U//35rfrt6xdVFNn4mGixm1cvarx99Vy1r6dLLT0lAVXBquWLxe7cuKJx//YNkAQMI0BtVQXftk3rNG5du6y6YN4c1dqaGlUAsu85qa2EjbsAAAAASUVORK5CYII="});
 ;// CONCATENATED MODULE: ./components/common/auth/BallRightCorner/Ball.jsx
 
 
@@ -151,13 +150,9 @@ function Ball() {
 // EXTERNAL MODULE: external "react-toastify"
 var external_react_toastify_ = __webpack_require__(2034);
 // EXTERNAL MODULE: ./node_modules/next/dist/client/router.js
-var client_router = __webpack_require__(8294);
+var client_router = __webpack_require__(7890);
 ;// CONCATENATED MODULE: ./components/Registration/Form/Form.jsx
-
-
-
-
-function Form_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function Form_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function Form_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { Form_ownKeys(Object(source), true).forEach(function (key) { Form_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { Form_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -174,6 +169,9 @@ function Form_defineProperty(obj, key, value) { if (key in obj) { Object.defineP
  // styles
 
  // icons 
+
+
+
 
 
 
@@ -304,10 +302,10 @@ function Form({
   });
 }
 ;// CONCATENATED MODULE: ./components/Registration/Index.jsx
-
-
 // hooks and helpers
  // components
+
+
 
 
 function Index() {
@@ -325,9 +323,7 @@ function Index() {
   });
 }
 ;// CONCATENATED MODULE: ./pages/registration.js
-
-
-function registration_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function registration_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function registration_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { registration_ownKeys(Object(source), true).forEach(function (key) { registration_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { registration_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -337,10 +333,11 @@ function registration_defineProperty(obj, key, value) { if (key in obj) { Object
 
 
 
+
 const RegistrationPage = () => /*#__PURE__*/jsx_runtime_.jsx(Index, {});
 
 RegistrationPage.layout = "register";
-/* harmony default export */ var registration = (RegistrationPage);
+/* harmony default export */ const registration = (RegistrationPage);
 async function getStaticProps(ctx) {
   return {
     props: registration_objectSpread({}, await loadNamespaces_default()(registration_objectSpread(registration_objectSpread(registration_objectSpread({}, ctx), {}, {
@@ -354,8 +351,8 @@ async function getStaticProps(ctx) {
 
 /***/ }),
 
-/***/ 510:
-/***/ (function(module) {
+/***/ 3328:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -365,8 +362,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8543:
-/***/ (function(module) {
+/***/ 3383:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -378,8 +375,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4218:
-/***/ (function(module) {
+/***/ 2561:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -392,8 +389,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3887:
-/***/ (function(module) {
+/***/ 7732:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -404,90 +401,170 @@ module.exports = {
 /***/ }),
 
 /***/ 2166:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("@hookform/resolvers/yup");;
+module.exports = require("@hookform/resolvers/yup");
 
 /***/ }),
 
 /***/ 2376:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("axios");;
+module.exports = require("axios");
 
 /***/ }),
 
 /***/ 8404:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/loadNamespaces");;
+module.exports = require("next-translate/loadNamespaces");
 
 /***/ }),
 
 /***/ 8841:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/useTranslation");;
+module.exports = require("next-translate/useTranslation");
 
 /***/ }),
 
-/***/ 8417:
-/***/ (function(module) {
+/***/ 9325:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router-context.js");;
+module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
 
-/***/ 2238:
-/***/ (function(module) {
+/***/ 8300:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router/utils/get-asset-path-from-route.js");;
+module.exports = require("next/dist/shared/lib/i18n/detect-domain-locale.js");
+
+/***/ }),
+
+/***/ 5378:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
+
+/***/ }),
+
+/***/ 7162:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/mitt.js");
+
+/***/ }),
+
+/***/ 8773:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router-context.js");
+
+/***/ }),
+
+/***/ 2248:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
+
+/***/ }),
+
+/***/ 9372:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
+
+/***/ }),
+
+/***/ 665:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
+
+/***/ }),
+
+/***/ 2747:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
+
+/***/ }),
+
+/***/ 333:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
+
+/***/ }),
+
+/***/ 3456:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
+
+/***/ }),
+
+/***/ 7620:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
 /***/ 9297:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react");;
+module.exports = require("react");
 
 /***/ }),
 
 /***/ 2662:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-hook-form");;
+module.exports = require("react-hook-form");
 
 /***/ }),
 
 /***/ 2034:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-toastify");;
+module.exports = require("react-toastify");
 
 /***/ }),
 
 /***/ 5282:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react/jsx-runtime");;
+module.exports = require("react/jsx-runtime");
 
 /***/ }),
 
 /***/ 9440:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("yup");;
+module.exports = require("yup");
 
 /***/ })
 
@@ -497,8 +574,8 @@ module.exports = require("yup");;
 // load runtime
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
-var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = __webpack_require__.X(0, [1276,9452,7152], function() { return __webpack_exec__(727); });
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [1694,8402,7023,4720], () => (__webpack_exec__(8055)));
 module.exports = __webpack_exports__;
 
 })();

@@ -1,11 +1,11 @@
-(function() {
+(() => {
 var exports = {};
 exports.id = 4122;
 exports.ids = [4122];
 exports.modules = {
 
-/***/ 712:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ 9133:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 // ESM COMPAT FLAG
@@ -13,21 +13,19 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": function() { return /* binding */ personal; },
-  "getStaticProps": function() { return /* binding */ getStaticProps; }
+  "default": () => (/* binding */ personal),
+  "getStaticProps": () => (/* binding */ getStaticProps)
 });
 
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(5282);
 // EXTERNAL MODULE: ./i18n.json
-var i18n = __webpack_require__(1900);
+var i18n = __webpack_require__(608);
 // EXTERNAL MODULE: external "next-translate/loadNamespaces"
 var loadNamespaces_ = __webpack_require__(8404);
 var loadNamespaces_default = /*#__PURE__*/__webpack_require__.n(loadNamespaces_);
 // EXTERNAL MODULE: ./components/Pages/common/Title/Title.jsx
-var Title = __webpack_require__(7061);
+var Title = __webpack_require__(4587);
 // EXTERNAL MODULE: ./components/Pages/Personal/Content/Content.module.scss
-var Content_module = __webpack_require__(6814);
+var Content_module = __webpack_require__(686);
 var Content_module_default = /*#__PURE__*/__webpack_require__.n(Content_module);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(9297);
@@ -35,12 +33,14 @@ var external_react_ = __webpack_require__(9297);
 var useTranslation_ = __webpack_require__(8841);
 var useTranslation_default = /*#__PURE__*/__webpack_require__.n(useTranslation_);
 // EXTERNAL MODULE: ./components/Pages/Personal/Content/PurchasedGames/PGSButton/PGSButton.module.scss
-var PGSButton_module = __webpack_require__(1053);
+var PGSButton_module = __webpack_require__(3768);
 var PGSButton_module_default = /*#__PURE__*/__webpack_require__.n(PGSButton_module);
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(5282);
 ;// CONCATENATED MODULE: ./components/Pages/Personal/Content/PurchasedGames/PGSButton/PGSButton.jsx
-
 // hooks and helpers
  // styles
+
 
 
 function PGSButton({
@@ -67,13 +67,13 @@ function PGSButton({
   });
 }
 // EXTERNAL MODULE: ./components/Pages/Personal/Content/PurchasedGames/Board/Row/Row.module.scss
-var Row_module = __webpack_require__(8968);
+var Row_module = __webpack_require__(2184);
 var Row_module_default = /*#__PURE__*/__webpack_require__.n(Row_module);
 ;// CONCATENATED MODULE: ./components/Pages/Personal/Content/PurchasedGames/Board/Row/Row.jsx
-
-
 // translation 
  // styles 
+
+
 
 
 function Row({
@@ -191,13 +191,13 @@ function Row({
   });
 }
 // EXTERNAL MODULE: ./components/Pages/Personal/Content/PurchasedGames/Board/BoardHeader/BoardHeader.module.scss
-var BoardHeader_module = __webpack_require__(3368);
+var BoardHeader_module = __webpack_require__(3302);
 var BoardHeader_module_default = /*#__PURE__*/__webpack_require__.n(BoardHeader_module);
 ;// CONCATENATED MODULE: ./components/Pages/Personal/Content/PurchasedGames/Board/BoardHeader/BoardHeader.jsx
-
-
 // styles
  // translations
+
+
 
 
 function BoardHeader() {
@@ -238,17 +238,17 @@ function BoardHeader() {
   });
 }
 // EXTERNAL MODULE: ./public/images/games/atletico.png
-var atletico = __webpack_require__(6271);
+var atletico = __webpack_require__(7220);
 // EXTERNAL MODULE: ./public/images/games/atletic.png
-var atletic = __webpack_require__(7711);
+var atletic = __webpack_require__(9124);
 // EXTERNAL MODULE: ./public/images/main/matches/barca.png
-var barca = __webpack_require__(7115);
+var barca = __webpack_require__(843);
 // EXTERNAL MODULE: ./public/images/main/matches/marcel.png
-var marcel = __webpack_require__(5589);
+var marcel = __webpack_require__(2974);
 // EXTERNAL MODULE: ./public/images/main/matches/psj.png
-var psj = __webpack_require__(9570);
+var psj = __webpack_require__(7875);
 // EXTERNAL MODULE: ./public/images/main/matches/rennais.png
-var rennais = __webpack_require__(7199);
+var rennais = __webpack_require__(113);
 ;// CONCATENATED MODULE: ./components/Pages/Personal/Content/PurchasedGames/Board/PGBoard/PG_board.js
 // icons
 
@@ -506,15 +506,15 @@ const PG_board = [{
   price: '1500 руб.'
 }];
 // EXTERNAL MODULE: ./components/Pages/Personal/Content/PurchasedGames/Board/PGBoard/PGBoard.module.scss
-var PGBoard_module = __webpack_require__(7248);
+var PGBoard_module = __webpack_require__(2773);
 var PGBoard_module_default = /*#__PURE__*/__webpack_require__.n(PGBoard_module);
 ;// CONCATENATED MODULE: ./components/Pages/Personal/Content/PurchasedGames/Board/PGBoard/PGBoard.jsx
 
 
-
-
-
  // styles 
+
+
+
 
 
 function PGBoard({
@@ -566,7 +566,7 @@ function PurchasedGames() {
   );
 }
 ;// CONCATENATED MODULE: ./public/images/common/userphoto.png
-/* harmony default export */ var userphoto = ({"src":"/_next/static/image/public/images/common/userphoto.0847c5b7c13e4093107a1154a84d2352.png","height":426,"width":445,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAA6UlEQVR42iWMu0oDURRF97lz52EhYqoQ8BEs7K38Bitb8f8sBQs/QLAVA4GkUCxEZ8bMZMhoEif3cU64pNqbvRcLX9Wcq/aX19ZyPqv48eFemkXLLMLGe1aKiCCCKNI0eX1B+3yHtv4hAhB2FSJ0Fsj56QBJmiHN9gTYPcp5Hxy0XK1psdGkji9gVUxOABaBds6L94zPssF70WF4eY3JWwknMY76h1DeexjrQGxwdiD4m1cUicVs9IRVnUMbayhJU1FdQ4P/qfQ4RpGXtFkW8pHpAFiYroPe72E8aqj5nmJcJ7i6uUV/eIItlIqC+ZYXuQEAAAAASUVORK5CYII="});
+/* harmony default export */ const userphoto = ({"src":"/_next/static/image/public/images/common/userphoto.0847c5b7c13e4093107a1154a84d2352.png","height":426,"width":445,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAA6UlEQVR42iWMu0oDURRF97lz52EhYqoQ8BEs7K38Bitb8f8sBQs/QLAVA4GkUCxEZ8bMZMhoEif3cU64pNqbvRcLX9Wcq/aX19ZyPqv48eFemkXLLMLGe1aKiCCCKNI0eX1B+3yHtv4hAhB2FSJ0Fsj56QBJmiHN9gTYPcp5Hxy0XK1psdGkji9gVUxOABaBds6L94zPssF70WF4eY3JWwknMY76h1DeexjrQGxwdiD4m1cUicVs9IRVnUMbayhJU1FdQ4P/qfQ4RpGXtFkW8pHpAFiYroPe72E8aqj5nmJcJ7i6uUV/eIItlIqC+ZYXuQEAAAAASUVORK5CYII="});
 ;// CONCATENATED MODULE: ./src/user/user.js
 
 const user_data = {
@@ -577,41 +577,38 @@ const user_data = {
   email: ' alex.mikhaeva.19@mail.ru'
 };
 // EXTERNAL MODULE: ./components/Pages/Personal/Content/UserInfo/UserInfo.module.scss
-var UserInfo_module = __webpack_require__(5347);
+var UserInfo_module = __webpack_require__(9913);
 var UserInfo_module_default = /*#__PURE__*/__webpack_require__.n(UserInfo_module);
 ;// CONCATENATED MODULE: ./public/images/personal/user-input.svg
-/* harmony default export */ var user_input = ({"src":"/_next/static/image/public/images/personal/user-input.9b699033c74d21ed0f90599aa152d6c2.svg","height":35,"width":35});
+/* harmony default export */ const user_input = ({"src":"/_next/static/image/public/images/personal/user-input.9b699033c74d21ed0f90599aa152d6c2.svg","height":35,"width":35});
 ;// CONCATENATED MODULE: ./public/images/personal/unknown.svg
-/* harmony default export */ var unknown = ({"src":"/_next/static/image/public/images/personal/unknown.4899a9c93341e88f18d51aca60dbdac6.svg","height":426,"width":445});
+/* harmony default export */ const unknown = ({"src":"/_next/static/image/public/images/personal/unknown.4899a9c93341e88f18d51aca60dbdac6.svg","height":426,"width":445});
 ;// CONCATENATED MODULE: ./public/images/personal/calendar.svg
-/* harmony default export */ var calendar = ({"src":"/_next/static/image/public/images/personal/calendar.92390daa8d9361efe10e85d7274103a9.svg","height":35,"width":35});
+/* harmony default export */ const calendar = ({"src":"/_next/static/image/public/images/personal/calendar.92390daa8d9361efe10e85d7274103a9.svg","height":35,"width":35});
 ;// CONCATENATED MODULE: ./public/images/personal/mail.svg
-/* harmony default export */ var mail = ({"src":"/_next/static/image/public/images/personal/mail.ca8d4b73aa518e4f4279d93e1f0f4c54.svg","height":35,"width":35});
+/* harmony default export */ const mail = ({"src":"/_next/static/image/public/images/personal/mail.ca8d4b73aa518e4f4279d93e1f0f4c54.svg","height":35,"width":35});
 ;// CONCATENATED MODULE: ./public/images/personal/phone.svg
-/* harmony default export */ var phone = ({"src":"/_next/static/image/public/images/personal/phone.2992b0c1f9b3241a195eaeff4c0bbfbe.svg","height":35,"width":35});
+/* harmony default export */ const phone = ({"src":"/_next/static/image/public/images/personal/phone.2992b0c1f9b3241a195eaeff4c0bbfbe.svg","height":35,"width":35});
 ;// CONCATENATED MODULE: ./public/images/personal/key.svg
-/* harmony default export */ var key = ({"src":"/_next/static/image/public/images/personal/key.35e68c9e4a7b59981796ce2b7ea8101b.svg","height":17,"width":17});
+/* harmony default export */ const key = ({"src":"/_next/static/image/public/images/personal/key.35e68c9e4a7b59981796ce2b7ea8101b.svg","height":17,"width":17});
 ;// CONCATENATED MODULE: ./public/images/personal/change.png
-/* harmony default export */ var change = ({"src":"/_next/static/image/public/images/personal/change.36d328d1215223956a73f4e6d3961939.png","height":35,"width":35,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAA2UlEQVR42mMAgY+v3rB8//xZ5O+fPxKf376T+f//PxcDDHwCSgIFRIBY6N///5JAmuPojMWOZ5atN2QAAaAA390TZzXXBOaVbM9vDdpe1hG+SCVk55HpixyBcpwgBTx72if77KjqDgZKhs1lcP2/raw9HGQSyDqQAt69nVO9TyxYabmnc4ovUDJsG9AkoLgEyE0MIJVHpi90WROWX3liwSrLHdXdwSDrQG76/vmLCEgB84/PXyQPT1vosrdzmjfQOt87R09pgxz+8dVrFphDmUEmgdwDxXwwSQDbTpYoqRWuLQAAAABJRU5ErkJggg=="});
+/* harmony default export */ const change = ({"src":"/_next/static/image/public/images/personal/change.36d328d1215223956a73f4e6d3961939.png","height":35,"width":35,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAA2UlEQVR42mMAgY+v3rB8//xZ5O+fPxKf376T+f//PxcDDHwCSgIFRIBY6N///5JAmuPojMWOZ5atN2QAAaAA390TZzXXBOaVbM9vDdpe1hG+SCVk55HpixyBcpwgBTx72if77KjqDgZKhs1lcP2/raw9HGQSyDqQAt69nVO9TyxYabmnc4ovUDJsG9AkoLgEyE0MIJVHpi90WROWX3liwSrLHdXdwSDrQG76/vmLCEgB84/PXyQPT1vosrdzmjfQOt87R09pgxz+8dVrFphDmUEmgdwDxXwwSQDbTpYoqRWuLQAAAABJRU5ErkJggg=="});
 ;// CONCATENATED MODULE: ./public/images/personal/camera.svg
-/* harmony default export */ var camera = ({"src":"/_next/static/image/public/images/personal/camera.6c53ccfa415583cd5cb7ac5bba72efdf.svg","height":75,"width":75});
+/* harmony default export */ const camera = ({"src":"/_next/static/image/public/images/personal/camera.6c53ccfa415583cd5cb7ac5bba72efdf.svg","height":75,"width":75});
 // EXTERNAL MODULE: external "react-redux"
 var external_react_redux_ = __webpack_require__(79);
 // EXTERNAL MODULE: ./redux/features/userSlice.js
-var userSlice = __webpack_require__(246);
+var userSlice = __webpack_require__(6562);
 // EXTERNAL MODULE: ./public/images/common/userDefault.png
-var userDefault = __webpack_require__(6596);
+var userDefault = __webpack_require__(7513);
 // EXTERNAL MODULE: ./lib/er.lib.js
-var er_lib = __webpack_require__(955);
+var er_lib = __webpack_require__(1863);
 // EXTERNAL MODULE: ./lib/request-destinations.js + 1 modules
-var request_destinations = __webpack_require__(9541);
+var request_destinations = __webpack_require__(8955);
 // EXTERNAL MODULE: external "react-toastify"
 var external_react_toastify_ = __webpack_require__(2034);
 ;// CONCATENATED MODULE: ./components/Pages/Personal/Content/UserInfo/UserInfo.jsx
-
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -622,6 +619,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  // styles 
 
  // icons 
+
+
 
 
 
@@ -911,10 +910,10 @@ function UserInfo() {
   });
 }
 ;// CONCATENATED MODULE: ./components/Pages/Personal/Content/Content.jsx
-
-
 // styles
  // components
+
+
 
 
 
@@ -925,14 +924,14 @@ function Content() {
   });
 }
 // EXTERNAL MODULE: ./components/Pages/Personal/Personal.module.scss
-var Personal_module = __webpack_require__(6218);
+var Personal_module = __webpack_require__(811);
 var Personal_module_default = /*#__PURE__*/__webpack_require__.n(Personal_module);
 ;// CONCATENATED MODULE: ./components/Pages/Personal/Personal.jsx
-
-
 // components
 
  // styles 
+
+
 
 
 function Personal() {
@@ -948,9 +947,7 @@ function Personal() {
   });
 }
 ;// CONCATENATED MODULE: ./pages/personal.js
-
-
-function personal_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function personal_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function personal_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { personal_ownKeys(Object(source), true).forEach(function (key) { personal_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { personal_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -960,10 +957,11 @@ function personal_defineProperty(obj, key, value) { if (key in obj) { Object.def
 
 
 
+
 const PersonalPage = () => /*#__PURE__*/jsx_runtime_.jsx(Personal, {});
 
 PersonalPage.layout = "withoutPhoto";
-/* harmony default export */ var personal = (PersonalPage);
+/* harmony default export */ const personal = (PersonalPage);
 async function getStaticProps(ctx) {
   return {
     props: personal_objectSpread({}, await loadNamespaces_default()(personal_objectSpread(personal_objectSpread(personal_objectSpread({}, ctx), {}, {
@@ -977,8 +975,8 @@ async function getStaticProps(ctx) {
 
 /***/ }),
 
-/***/ 6814:
-/***/ (function(module) {
+/***/ 686:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -988,8 +986,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3368:
-/***/ (function(module) {
+/***/ 3302:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -1002,8 +1000,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7248:
-/***/ (function(module) {
+/***/ 2773:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -1015,8 +1013,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8968:
-/***/ (function(module) {
+/***/ 2184:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -1045,8 +1043,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1053:
-/***/ (function(module) {
+/***/ 3768:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -1058,8 +1056,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5347:
-/***/ (function(module) {
+/***/ 9913:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -1076,8 +1074,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 6218:
-/***/ (function(module) {
+/***/ 811:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -1089,82 +1087,162 @@ module.exports = {
 /***/ }),
 
 /***/ 6139:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("@reduxjs/toolkit");;
+module.exports = require("@reduxjs/toolkit");
 
 /***/ }),
 
 /***/ 2376:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("axios");;
+module.exports = require("axios");
 
 /***/ }),
 
 /***/ 8404:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/loadNamespaces");;
+module.exports = require("next-translate/loadNamespaces");
 
 /***/ }),
 
 /***/ 8841:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/useTranslation");;
+module.exports = require("next-translate/useTranslation");
 
 /***/ }),
 
-/***/ 8417:
-/***/ (function(module) {
+/***/ 9325:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router-context.js");;
+module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
 
-/***/ 2238:
-/***/ (function(module) {
+/***/ 8300:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router/utils/get-asset-path-from-route.js");;
+module.exports = require("next/dist/shared/lib/i18n/detect-domain-locale.js");
+
+/***/ }),
+
+/***/ 5378:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
+
+/***/ }),
+
+/***/ 7162:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/mitt.js");
+
+/***/ }),
+
+/***/ 8773:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router-context.js");
+
+/***/ }),
+
+/***/ 2248:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
+
+/***/ }),
+
+/***/ 9372:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
+
+/***/ }),
+
+/***/ 665:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
+
+/***/ }),
+
+/***/ 2747:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
+
+/***/ }),
+
+/***/ 333:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
+
+/***/ }),
+
+/***/ 3456:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
+
+/***/ }),
+
+/***/ 7620:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
 /***/ 9297:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react");;
+module.exports = require("react");
 
 /***/ }),
 
 /***/ 79:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-redux");;
+module.exports = require("react-redux");
 
 /***/ }),
 
 /***/ 2034:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-toastify");;
+module.exports = require("react-toastify");
 
 /***/ }),
 
 /***/ 5282:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react/jsx-runtime");;
+module.exports = require("react/jsx-runtime");
 
 /***/ })
 
@@ -1174,8 +1252,8 @@ module.exports = require("react/jsx-runtime");;
 // load runtime
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
-var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = __webpack_require__.X(0, [1276,123,9452,7061,7164,4208,8617], function() { return __webpack_exec__(712); });
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [1694,543,8402,7023,4587,3404,844,2835], () => (__webpack_exec__(9133)));
 module.exports = __webpack_exports__;
 
 })();

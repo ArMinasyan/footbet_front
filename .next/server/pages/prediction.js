@@ -1,11 +1,11 @@
-(function() {
+(() => {
 var exports = {};
 exports.id = 6337;
 exports.ids = [6337];
 exports.modules = {
 
-/***/ 2123:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ 6932:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 // ESM COMPAT FLAG
@@ -13,34 +13,34 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": function() { return /* binding */ prediction; },
-  "getStaticProps": function() { return /* binding */ getStaticProps; }
+  "default": () => (/* binding */ prediction),
+  "getStaticProps": () => (/* binding */ getStaticProps)
 });
 
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(5282);
 // EXTERNAL MODULE: ./i18n.json
-var i18n = __webpack_require__(1900);
+var i18n = __webpack_require__(608);
 // EXTERNAL MODULE: external "next-translate/loadNamespaces"
 var loadNamespaces_ = __webpack_require__(8404);
 var loadNamespaces_default = /*#__PURE__*/__webpack_require__.n(loadNamespaces_);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(9297);
 // EXTERNAL MODULE: ./node_modules/next/dist/client/router.js
-var client_router = __webpack_require__(8294);
+var client_router = __webpack_require__(7890);
 // EXTERNAL MODULE: ./components/Pages/PredictionPayments/PredictionPayments.module.scss
-var PredictionPayments_module = __webpack_require__(1072);
+var PredictionPayments_module = __webpack_require__(5752);
 var PredictionPayments_module_default = /*#__PURE__*/__webpack_require__.n(PredictionPayments_module);
 // EXTERNAL MODULE: ./components/Pages/common/Button/Button.jsx
-var Button = __webpack_require__(730);
+var Button = __webpack_require__(8857);
 // EXTERNAL MODULE: ./components/Pages/PredictionPayments/Header/Bar/Bar.module.scss
-var Bar_module = __webpack_require__(3003);
+var Bar_module = __webpack_require__(8408);
 var Bar_module_default = /*#__PURE__*/__webpack_require__.n(Bar_module);
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(5282);
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/Header/Bar/Bar.jsx
-
-
 // componetns
  // styles
+
+
 
 
 function Bar({
@@ -70,9 +70,9 @@ function Bar({
   });
 }
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/Header/Header.jsx
-
-
 // components
+
+
 
 function Header({
   predClick,
@@ -90,17 +90,17 @@ function Header({
   });
 }
 // EXTERNAL MODULE: ./public/images/games/atletico.png
-var atletico = __webpack_require__(6271);
+var atletico = __webpack_require__(7220);
 // EXTERNAL MODULE: ./public/images/games/atletic.png
-var atletic = __webpack_require__(7711);
+var atletic = __webpack_require__(9124);
 // EXTERNAL MODULE: ./public/images/main/matches/barca.png
-var barca = __webpack_require__(7115);
+var barca = __webpack_require__(843);
 // EXTERNAL MODULE: ./public/images/main/matches/marcel.png
-var marcel = __webpack_require__(5589);
+var marcel = __webpack_require__(2974);
 // EXTERNAL MODULE: ./public/images/main/matches/psj.png
-var psj = __webpack_require__(9570);
+var psj = __webpack_require__(7875);
 // EXTERNAL MODULE: ./public/images/main/matches/rennais.png
-var rennais = __webpack_require__(7199);
+var rennais = __webpack_require__(113);
 ;// CONCATENATED MODULE: ./src/games_data/express/express.js
 // icons
 
@@ -720,13 +720,13 @@ const invinsible_strategy = [{
   price: '1500 руб.'
 }];
 ;// CONCATENATED MODULE: ./public/images/main/matches/atletic.png
-/* harmony default export */ var matches_atletic = ({"src":"/_next/static/image/public/images/main/matches/atletic.36068b0c6cd737f059d5368450d62dc6.png","height":44,"width":32,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAYAAADaxo44AAAA00lEQVR4nAHIADf/AWpshrvP0N4uAgIDEgUEAQEKCgXtCRQS0gGOj5//KCciANnZ3wAKDQsAxcbTABHk4gABmJmo/AgHBgL7/v8Au6u+AHd4WgDuurT+AXFzif7n5/ABMjQm/y/25gA1Uk4BzbG0/wFjbYf/Jfrw/VZYRQP++PkABxMT/dq8vgMBpY2V+0dGOwTt3+D8/v//ABEeHgTLur/9AY+ZqDQh9+6fKiggLAAAAADY2uLV0QsXYQFxRVwAj7ukBLWpsLIAAAABS1dQTV1GYvyqH1gRvyLYuAAAAABJRU5ErkJggg=="});
+/* harmony default export */ const matches_atletic = ({"src":"/_next/static/image/public/images/main/matches/atletic.36068b0c6cd737f059d5368450d62dc6.png","height":44,"width":32,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAYAAADaxo44AAAA00lEQVR4nAHIADf/AWpshrvP0N4uAgIDEgUEAQEKCgXtCRQS0gGOj5//KCciANnZ3wAKDQsAxcbTABHk4gABmJmo/AgHBgL7/v8Au6u+AHd4WgDuurT+AXFzif7n5/ABMjQm/y/25gA1Uk4BzbG0/wFjbYf/Jfrw/VZYRQP++PkABxMT/dq8vgMBpY2V+0dGOwTt3+D8/v//ABEeHgTLur/9AY+ZqDQh9+6fKiggLAAAAADY2uLV0QsXYQFxRVwAj7ukBLWpsLIAAAABS1dQTV1GYvyqH1gRvyLYuAAAAABJRU5ErkJggg=="});
 ;// CONCATENATED MODULE: ./public/images/main/matches/atletico.png
-/* harmony default export */ var matches_atletico = ({"src":"/_next/static/image/public/images/main/matches/atletico.b9f122758b6071afc80acdef03fd696f.png","height":45,"width":40,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAA80lEQVR4nAHoABf/Ac/Pz/zu7u4D+vr6/wIBAQEKCwv/+v7+AQcCAv8B39/f8vv7+w39/Pz/6+7uABEQEADryckBI0ND9gG/v7/c3t3dI9/o6P4rHR0BQgsL//X//wLUDAzgAePi4qvd399U4b+//UkgIAMOBwf96i4uA/gJCbABw8bGUh8aGq0ItbX8FSQkBOrh4Pz8SUoE3uLiWAH///8A2dzcwvfh4T0e19b24SgpCgQZGcYtKys7AYKBgQC9vb0eb3NzzA/7+xXp/f3tsK2tNC8vL+ABsLGxBPX19fwB/PwzAgsLrNbMzFcIDQ3KHh4eBIZIeUvliy/1AAAAAElFTkSuQmCC"});
+/* harmony default export */ const matches_atletico = ({"src":"/_next/static/image/public/images/main/matches/atletico.b9f122758b6071afc80acdef03fd696f.png","height":45,"width":40,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAA80lEQVR4nAHoABf/Ac/Pz/zu7u4D+vr6/wIBAQEKCwv/+v7+AQcCAv8B39/f8vv7+w39/Pz/6+7uABEQEADryckBI0ND9gG/v7/c3t3dI9/o6P4rHR0BQgsL//X//wLUDAzgAePi4qvd399U4b+//UkgIAMOBwf96i4uA/gJCbABw8bGUh8aGq0ItbX8FSQkBOrh4Pz8SUoE3uLiWAH///8A2dzcwvfh4T0e19b24SgpCgQZGcYtKys7AYKBgQC9vb0eb3NzzA/7+xXp/f3tsK2tNC8vL+ABsLGxBPX19fwB/PwzAgsLrNbMzFcIDQ3KHh4eBIZIeUvliy/1AAAAAElFTkSuQmCC"});
 ;// CONCATENATED MODULE: ./public/images/main/matches/leipzig.png
-/* harmony default export */ var leipzig = ({"src":"/_next/static/image/public/images/main/matches/leipzig.44fb332c404a53a0acde9221334654e0.png","height":45,"width":72,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAsElEQVR4nAGlAFr/Ab+yvQBBFA8L0BgVuQoAAAP+/v4A+AIC/TDJ1Ui4BAH0Af/FzhLh0NR1BQkEePUvLAALCwoA/8TJAPv4/YggNS+LAfG6xUH03t9u/QoIT/cmIfsGBgUAA9XbBQLz9rEPJySTAcS8xAA8OzIGudDZ6h4VEg/7+/sA6fL18UXl6Raz/f36AcbEzALaEQ7+ENbbPQsTEX8DAwMA7OPmgdYeHMM9+foCiz5L2PaMojoAAAAASUVORK5CYII="});
+/* harmony default export */ const leipzig = ({"src":"/_next/static/image/public/images/main/matches/leipzig.44fb332c404a53a0acde9221334654e0.png","height":45,"width":72,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAsElEQVR4nAGlAFr/Ab+yvQBBFA8L0BgVuQoAAAP+/v4A+AIC/TDJ1Ui4BAH0Af/FzhLh0NR1BQkEePUvLAALCwoA/8TJAPv4/YggNS+LAfG6xUH03t9u/QoIT/cmIfsGBgUAA9XbBQLz9rEPJySTAcS8xAA8OzIGudDZ6h4VEg/7+/sA6fL18UXl6Raz/f36AcbEzALaEQ7+ENbbPQsTEX8DAwMA7OPmgdYeHMM9+foCiz5L2PaMojoAAAAASUVORK5CYII="});
 ;// CONCATENATED MODULE: ./public/images/main/matches/liverpool.png
-/* harmony default export */ var liverpool = ({"src":"/_next/static/image/public/images/main/matches/liverpool.ea148fab7996f2f01e85a97008ad9450.png","height":53,"width":41,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAYAAADaxo44AAAA00lEQVR4nAHIADf/Af///wi72NYk6gH/gPv//gYaAQN8OSIl3AGO1tGJ+gEAduz6+QAAAAAAFQYHAAP/AJQBq6inhQf0900E8vMLAP7+APwTEfD6Dgu8AfBkgUX2/Pa6AQYF/gISDQD+7vMCB/sASQHkdHenEGRlWAQPDv754eUAAAQDAvSxrasB3oJuux5heCL26eki983VABNGPt7jp5DfAWDJwsFI6vA5SBofBf7x9AC99u76tBUOxgF/ycNW5fPyZxQFBkIGBAUA5vf0wR4ND5pzLF2N0iuF7AAAAABJRU5ErkJggg=="});
+/* harmony default export */ const liverpool = ({"src":"/_next/static/image/public/images/main/matches/liverpool.ea148fab7996f2f01e85a97008ad9450.png","height":53,"width":41,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAYAAADaxo44AAAA00lEQVR4nAHIADf/Af///wi72NYk6gH/gPv//gYaAQN8OSIl3AGO1tGJ+gEAduz6+QAAAAAAFQYHAAP/AJQBq6inhQf0900E8vMLAP7+APwTEfD6Dgu8AfBkgUX2/Pa6AQYF/gISDQD+7vMCB/sASQHkdHenEGRlWAQPDv754eUAAAQDAvSxrasB3oJuux5heCL26eki983VABNGPt7jp5DfAWDJwsFI6vA5SBofBf7x9AC99u76tBUOxgF/ycNW5fPyZxQFBkIGBAUA5vf0wR4ND5pzLF2N0iuF7AAAAABJRU5ErkJggg=="});
 ;// CONCATENATED MODULE: ./src/games_data/matches/matches.js
 // icons
 
@@ -1572,7 +1572,7 @@ const predictions = [{
   price: '1500 руб.'
 }];
 // EXTERNAL MODULE: ./src/games_data/predictions/slide.js + 2 modules
-var slide = __webpack_require__(789);
+var slide = __webpack_require__(5589);
 ;// CONCATENATED MODULE: ./src/games_data/extra_data.js
 
 
@@ -1592,13 +1592,13 @@ const extra_data = {
 var useTranslation_ = __webpack_require__(8841);
 var useTranslation_default = /*#__PURE__*/__webpack_require__.n(useTranslation_);
 // EXTERNAL MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/GameInfo/GameInfo.module.scss
-var GameInfo_module = __webpack_require__(479);
+var GameInfo_module = __webpack_require__(4373);
 var GameInfo_module_default = /*#__PURE__*/__webpack_require__.n(GameInfo_module);
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/GameInfo/GameInfo.jsx
-
-
 // hooks
  // styles
+
+
 
 
 function GameInfo({
@@ -1652,20 +1652,20 @@ function GameInfo({
   });
 }
 // EXTERNAL MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/PaymentPart/PaymentPart.module.scss
-var PaymentPart_module = __webpack_require__(9791);
+var PaymentPart_module = __webpack_require__(8840);
 var PaymentPart_module_default = /*#__PURE__*/__webpack_require__.n(PaymentPart_module);
 ;// CONCATENATED MODULE: ./public/images/payments/paypall.png
-/* harmony default export */ var paypall = ({"src":"/_next/static/image/public/images/payments/paypall.dc990274d8d3551269872587bc0615aa.png","height":61,"width":252,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAATElEQVR4nGNkMG3+xqApPYXh1Mv1DHxMSgynyncw9J63YRAQ4GL49+8hI0PJtpsMGmqZDCkz/jOYi5kwPP7CwZDi/JpBSZGZ4fdvUQDn7RatZrF9ngAAAABJRU5ErkJggg=="});
+/* harmony default export */ const paypall = ({"src":"/_next/static/image/public/images/payments/paypall.dc990274d8d3551269872587bc0615aa.png","height":61,"width":252,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAATElEQVR4nGNkMG3+xqApPYXh1Mv1DHxMSgynyncw9J63YRAQ4GL49+8hI0PJtpsMGmqZDCkz/jOYi5kwPP7CwZDi/JpBSZGZ4fdvUQDn7RatZrF9ngAAAABJRU5ErkJggg=="});
 // EXTERNAL MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/PaymentPart/Details/Details.module.scss
-var Details_module = __webpack_require__(2170);
+var Details_module = __webpack_require__(8409);
 var Details_module_default = /*#__PURE__*/__webpack_require__.n(Details_module);
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/PaymentPart/Details/Details.jsx
-
-
 // hooks
  // icons
 
  // styles
+
+
 
 
 function Details({
@@ -1702,7 +1702,7 @@ function Details({
   });
 }
 // EXTERNAL MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/PaymentPart/Payment/Payment.module.scss
-var Payment_module = __webpack_require__(738);
+var Payment_module = __webpack_require__(4786);
 var Payment_module_default = /*#__PURE__*/__webpack_require__.n(Payment_module);
 // EXTERNAL MODULE: external "react-hook-form"
 var external_react_hook_form_ = __webpack_require__(2662);
@@ -1711,25 +1711,25 @@ var external_yup_ = __webpack_require__(9440);
 // EXTERNAL MODULE: external "@hookform/resolvers/yup"
 var yup_ = __webpack_require__(2166);
 // EXTERNAL MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/PaymentPart/Payment/CardForm/CardForm.module.scss
-var CardForm_module = __webpack_require__(2324);
+var CardForm_module = __webpack_require__(6344);
 var CardForm_module_default = /*#__PURE__*/__webpack_require__.n(CardForm_module);
 // EXTERNAL MODULE: ./components/common/auth/Modal/Modal.jsx
-var Modal_Modal = __webpack_require__(9452);
+var Modal_Modal = __webpack_require__(2361);
 // EXTERNAL MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/PaymentPart/Payment/Success/Success.module.scss
-var Success_module = __webpack_require__(2200);
+var Success_module = __webpack_require__(2635);
 var Success_module_default = /*#__PURE__*/__webpack_require__.n(Success_module);
 ;// CONCATENATED MODULE: ./public/images/payments/success.png
-/* harmony default export */ var success = ({"src":"/_next/static/image/public/images/payments/success.47f950b6549893640000b27ffb3137e1.png","height":132,"width":141,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAA8klEQVR4nAHnABj/ARm+LgAJAQY+7v/2jgUAAi/r/tT+Ygtq1X0YdeHkIdxYARa+LUrq/uS1BgEUABoBDf/g/c4BqRitAPfj9QBg8F5TAQC9HuFHCDUe1fvf++T6zgVpEHH/XQBX/WXhcATVFt7gAQC6AP+iD6b9BAgEA1rqVv+6Gb0A1NvUAXILb/4fBDECAQC/GuA37ygfiReA+/IV9AQH5wQAR+xk/A4TCwUA/QDgATK/P0fO/8G2WvJhAnIUawCk6KgAkBGMABsBL/7t//hJASnCNwAE/wQ60/vNjTLnNzDTE+cACQoD0Pf8/XMCAQHGNDBlOPg+WCUAAAAASUVORK5CYII="});
+/* harmony default export */ const success = ({"src":"/_next/static/image/public/images/payments/success.47f950b6549893640000b27ffb3137e1.png","height":132,"width":141,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAA8klEQVR4nAHnABj/ARm+LgAJAQY+7v/2jgUAAi/r/tT+Ygtq1X0YdeHkIdxYARa+LUrq/uS1BgEUABoBDf/g/c4BqRitAPfj9QBg8F5TAQC9HuFHCDUe1fvf++T6zgVpEHH/XQBX/WXhcATVFt7gAQC6AP+iD6b9BAgEA1rqVv+6Gb0A1NvUAXILb/4fBDECAQC/GuA37ygfiReA+/IV9AQH5wQAR+xk/A4TCwUA/QDgATK/P0fO/8G2WvJhAnIUawCk6KgAkBGMABsBL/7t//hJASnCNwAE/wQ60/vNjTLnNzDTE+cACQoD0Pf8/XMCAQHGNDBlOPg+WCUAAAAASUVORK5CYII="});
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/PaymentPart/Payment/Success/Success.jsx
-
-
-
 // hooks
 
 
  // styles
 
  // icon 
+
+
+
 
 
 function Success() {
@@ -1775,19 +1775,19 @@ function Success() {
   });
 }
 // EXTERNAL MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/PaymentPart/Payment/Pending/Pending.module.scss
-var Pending_module = __webpack_require__(420);
+var Pending_module = __webpack_require__(2715);
 var Pending_module_default = /*#__PURE__*/__webpack_require__.n(Pending_module);
 ;// CONCATENATED MODULE: ./public/images/payments/pending.png
-/* harmony default export */ var pending = ({"src":"/_next/static/image/public/images/payments/pending.d414753b156d078c28452fbd603cf8dc.png","height":133,"width":141,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAaVBMVEX+AADTAAD/AAD+AAD/AABqAABrAAD/AADvAAD/AADvAAD/AAD1j4/NmJj+FRX/ERHX1tbN19f/FBT+Fhb/FBTXy8vI0ND7cnK5h4f/AADzAAD6eXn7c3O5jo7PgYHybm65hYX/AAD1AADFnmqmAAAAG3RSTlMAAB8jKSsssry9vcHm7u/2+fn5+vr+/v7+/v5Q9j6rAAAARElEQVR42gVAhRGAIAB8u0iRbvYf0gPmg7FjBhYSe49kwVWktbJc+ELTuoUXyldjqld4knBOpAcrzWNkumLaTs7vffoBm4UEZFuSu4IAAAAASUVORK5CYII="});
+/* harmony default export */ const pending = ({"src":"/_next/static/image/public/images/payments/pending.d414753b156d078c28452fbd603cf8dc.png","height":133,"width":141,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAaVBMVEX+AADTAAD/AAD+AAD/AABqAABrAAD/AADvAAD/AADvAAD/AAD1j4/NmJj+FRX/ERHX1tbN19f/FBT+Fhb/FBTXy8vI0ND7cnK5h4f/AADzAAD6eXn7c3O5jo7PgYHybm65hYX/AAD1AADFnmqmAAAAG3RSTlMAAB8jKSsssry9vcHm7u/2+fn5+vr+/v7+/v5Q9j6rAAAARElEQVR42gVAhRGAIAB8u0iRbvYf0gPmg7FjBhYSe49kwVWktbJc+ELTuoUXyldjqld4knBOpAcrzWNkumLaTs7vffoBm4UEZFuSu4IAAAAASUVORK5CYII="});
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/PaymentPart/Payment/Pending/Pending.jsx
-
-
-
 // hooks
 
  // styles
 
  // icon 
+
+
+
 
 
 function Pending() {
@@ -1833,11 +1833,7 @@ function Pending() {
   });
 }
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/PaymentPart/Payment/CardForm/CardForm.jsx
-
-
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -1851,6 +1847,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  // styles
 
  // components
+
+
+
 
 
 
@@ -2011,12 +2010,12 @@ function CardForm() {
   });
 }
 ;// CONCATENATED MODULE: ./public/images/payments/card.png
-/* harmony default export */ var card = ({"src":"/_next/static/image/public/images/payments/card.8578d5aa65dcb35ad4737cce805121ac.png","height":377,"width":694,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAjklEQVR4nA3Juw3CMBAG4P/sQ0qMjUAC8RgBOuo07MAiDMEOrEBJgxiABZAQiJ4OGopEjnOOSf3R+XLdvt6lK9aLWwIEpIImSGsm1dBoReX3vqLofW51DaoDUAnyzS8daUlzfGh3eJ6EVfSkWmtYnOGUZ9w4buLIZYGK/SMNLKMDCBNspjFzjKnrYdxn+QPWaC3vWMd+VwAAAABJRU5ErkJggg=="});
+/* harmony default export */ const card = ({"src":"/_next/static/image/public/images/payments/card.8578d5aa65dcb35ad4737cce805121ac.png","height":377,"width":694,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAjklEQVR4nA3Juw3CMBAG4P/sQ0qMjUAC8RgBOuo07MAiDMEOrEBJgxiABZAQiJ4OGopEjnOOSf3R+XLdvt6lK9aLWwIEpIImSGsm1dBoReX3vqLofW51DaoDUAnyzS8daUlzfGh3eJ6EVfSkWmtYnOGUZ9w4buLIZYGK/SMNLKMDCBNspjFzjKnrYdxn+QPWaC3vWMd+VwAAAABJRU5ErkJggg=="});
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/PaymentPart/Payment/Payment.jsx
 
-
-
  // icons
+
+
 
 
 function Payment() {
@@ -2038,10 +2037,10 @@ function Payment() {
   });
 }
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/PaymentPart/PaymentPart.jsx
-
-
 // styles
  // components
+
+
 
 
 
@@ -2056,11 +2055,9 @@ function PaymentPart({
   });
 }
 // EXTERNAL MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/PaymentTab.module.scss
-var PaymentTab_module = __webpack_require__(6116);
+var PaymentTab_module = __webpack_require__(1986);
 var PaymentTab_module_default = /*#__PURE__*/__webpack_require__.n(PaymentTab_module);
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/Tabs/PaymentTab/PaymentTab.jsx
-
-
 // hooks 
  // db's
 
@@ -2068,6 +2065,8 @@ var PaymentTab_module_default = /*#__PURE__*/__webpack_require__.n(PaymentTab_mo
 
 
  // styles 
+
+
 
 
 function PaymentTab() {
@@ -2115,13 +2114,13 @@ function PaymentTab() {
   });
 }
 // EXTERNAL MODULE: ./components/Pages/PredictionPayments/Tabs/Row/Row.module.scss
-var Row_module = __webpack_require__(7689);
+var Row_module = __webpack_require__(6004);
 var Row_module_default = /*#__PURE__*/__webpack_require__.n(Row_module);
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/Tabs/Row/Row.jsx
-
-
 // translation
  // styles
+
+
 
 
 function Row({
@@ -2256,13 +2255,13 @@ function Row({
   });
 }
 // EXTERNAL MODULE: ./components/Pages/PredictionPayments/Tabs/TabHeader/TabHeader.module.scss
-var TabHeader_module = __webpack_require__(9970);
+var TabHeader_module = __webpack_require__(6417);
 var TabHeader_module_default = /*#__PURE__*/__webpack_require__.n(TabHeader_module);
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/Tabs/TabHeader/TabHeader.jsx
-
-
 // styles
  // translations
+
+
 
 
 function TabHeader() {
@@ -2308,15 +2307,13 @@ function TabHeader() {
   });
 }
 // EXTERNAL MODULE: ./components/Pages/PredictionPayments/Tabs/PredictionTab/PredictionTab.module.scss
-var PredictionTab_module = __webpack_require__(5383);
+var PredictionTab_module = __webpack_require__(8257);
 var PredictionTab_module_default = /*#__PURE__*/__webpack_require__.n(PredictionTab_module);
 // EXTERNAL MODULE: ./lib/request-destinations.js + 1 modules
-var request_destinations = __webpack_require__(9541);
+var request_destinations = __webpack_require__(8955);
 // EXTERNAL MODULE: ./lib/er.lib.js
-var er_lib = __webpack_require__(955);
+var er_lib = __webpack_require__(1863);
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/Tabs/PredictionTab/PredictionTab.jsx
-
-
 // hooks
 
  // datas
@@ -2325,6 +2322,8 @@ var er_lib = __webpack_require__(955);
 
 
  // styles
+
+
 
 
 
@@ -2391,10 +2390,10 @@ function PredictionTab({
   });
 }
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/Tabs/Tabs.jsx
-
-
-
 // components
+
+
+
 
 
 function Tabs({
@@ -2412,13 +2411,13 @@ function Tabs({
   });
 }
 ;// CONCATENATED MODULE: ./components/Pages/PredictionPayments/PredictionPayments.jsx
-
-
 // hooks
 
  // styles
 
  // components
+
+
 
 
 
@@ -2462,9 +2461,7 @@ function PredictionPayments() {
   });
 }
 ;// CONCATENATED MODULE: ./pages/prediction.js
-
-
-function prediction_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function prediction_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function prediction_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { prediction_ownKeys(Object(source), true).forEach(function (key) { prediction_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { prediction_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -2474,10 +2471,11 @@ function prediction_defineProperty(obj, key, value) { if (key in obj) { Object.d
 
 
 
+
 const PredictionPaymentsPage = () => /*#__PURE__*/jsx_runtime_.jsx(PredictionPayments, {});
 
 PredictionPaymentsPage.layout = "withoutPhoto";
-/* harmony default export */ var prediction = (PredictionPaymentsPage);
+/* harmony default export */ const prediction = (PredictionPaymentsPage);
 async function getStaticProps(ctx) {
   return {
     props: prediction_objectSpread({}, await loadNamespaces_default()(prediction_objectSpread(prediction_objectSpread(prediction_objectSpread({}, ctx), {}, {
@@ -2491,8 +2489,8 @@ async function getStaticProps(ctx) {
 
 /***/ }),
 
-/***/ 3003:
-/***/ (function(module) {
+/***/ 8408:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -2504,8 +2502,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1072:
-/***/ (function(module) {
+/***/ 5752:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -2516,8 +2514,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 479:
-/***/ (function(module) {
+/***/ 4373:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -2533,8 +2531,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2170:
-/***/ (function(module) {
+/***/ 8409:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -2548,8 +2546,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9791:
-/***/ (function(module) {
+/***/ 8840:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -2559,8 +2557,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2324:
-/***/ (function(module) {
+/***/ 6344:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -2579,8 +2577,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 738:
-/***/ (function(module) {
+/***/ 4786:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -2593,8 +2591,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 420:
-/***/ (function(module) {
+/***/ 2715:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -2606,8 +2604,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2200:
-/***/ (function(module) {
+/***/ 2635:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -2619,8 +2617,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 6116:
-/***/ (function(module) {
+/***/ 1986:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -2630,8 +2628,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5383:
-/***/ (function(module) {
+/***/ 8257:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -2643,8 +2641,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7689:
-/***/ (function(module) {
+/***/ 6004:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -2673,8 +2671,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9970:
-/***/ (function(module) {
+/***/ 6417:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -2687,90 +2685,170 @@ module.exports = {
 /***/ }),
 
 /***/ 2166:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("@hookform/resolvers/yup");;
+module.exports = require("@hookform/resolvers/yup");
 
 /***/ }),
 
 /***/ 2376:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("axios");;
+module.exports = require("axios");
 
 /***/ }),
 
 /***/ 8404:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/loadNamespaces");;
+module.exports = require("next-translate/loadNamespaces");
 
 /***/ }),
 
 /***/ 8841:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/useTranslation");;
+module.exports = require("next-translate/useTranslation");
 
 /***/ }),
 
-/***/ 8417:
-/***/ (function(module) {
+/***/ 9325:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router-context.js");;
+module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
 
-/***/ 2238:
-/***/ (function(module) {
+/***/ 8300:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router/utils/get-asset-path-from-route.js");;
+module.exports = require("next/dist/shared/lib/i18n/detect-domain-locale.js");
+
+/***/ }),
+
+/***/ 5378:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
+
+/***/ }),
+
+/***/ 7162:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/mitt.js");
+
+/***/ }),
+
+/***/ 8773:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router-context.js");
+
+/***/ }),
+
+/***/ 2248:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
+
+/***/ }),
+
+/***/ 9372:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
+
+/***/ }),
+
+/***/ 665:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
+
+/***/ }),
+
+/***/ 2747:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
+
+/***/ }),
+
+/***/ 333:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
+
+/***/ }),
+
+/***/ 3456:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
+
+/***/ }),
+
+/***/ 7620:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
 /***/ 9297:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react");;
+module.exports = require("react");
 
 /***/ }),
 
 /***/ 2268:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-dom");;
+module.exports = require("react-dom");
 
 /***/ }),
 
 /***/ 2662:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react-hook-form");;
+module.exports = require("react-hook-form");
 
 /***/ }),
 
 /***/ 5282:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react/jsx-runtime");;
+module.exports = require("react/jsx-runtime");
 
 /***/ }),
 
 /***/ 9440:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("yup");;
+module.exports = require("yup");
 
 /***/ })
 
@@ -2780,8 +2858,8 @@ module.exports = require("yup");;
 // load runtime
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
-var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = __webpack_require__.X(0, [1276,9452,7164,730,9122,4208,789], function() { return __webpack_exec__(2123); });
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [1694,8402,7023,3404,8857,2361,844,5589], () => (__webpack_exec__(6932)));
 module.exports = __webpack_exports__;
 
 })();

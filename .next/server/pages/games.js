@@ -1,11 +1,11 @@
-(function() {
+(() => {
 var exports = {};
 exports.id = 8451;
 exports.ids = [8451];
 exports.modules = {
 
-/***/ 4246:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ 8393:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 // ESM COMPAT FLAG
@@ -13,36 +13,36 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": function() { return /* binding */ games; },
-  "getStaticProps": function() { return /* binding */ getStaticProps; }
+  "default": () => (/* binding */ games),
+  "getStaticProps": () => (/* binding */ getStaticProps)
 });
 
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(5282);
 // EXTERNAL MODULE: ./i18n.json
-var i18n = __webpack_require__(1900);
+var i18n = __webpack_require__(608);
 // EXTERNAL MODULE: external "next-translate/loadNamespaces"
 var loadNamespaces_ = __webpack_require__(8404);
 var loadNamespaces_default = /*#__PURE__*/__webpack_require__.n(loadNamespaces_);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(9297);
 // EXTERNAL MODULE: ./components/Pages/Games/Games.module.scss
-var Games_module = __webpack_require__(5762);
+var Games_module = __webpack_require__(4950);
 var Games_module_default = /*#__PURE__*/__webpack_require__.n(Games_module);
 // EXTERNAL MODULE: external "next-translate/useTranslation"
 var useTranslation_ = __webpack_require__(8841);
 var useTranslation_default = /*#__PURE__*/__webpack_require__.n(useTranslation_);
 // EXTERNAL MODULE: ./components/Pages/common/Title/Title.jsx
-var Title = __webpack_require__(7061);
+var Title = __webpack_require__(4587);
 // EXTERNAL MODULE: ./components/Pages/common/Button/Button.jsx
-var Button = __webpack_require__(730);
+var Button = __webpack_require__(8857);
 // EXTERNAL MODULE: ./components/Pages/Games/Header/Bar/Bar.module.scss
-var Bar_module = __webpack_require__(7829);
+var Bar_module = __webpack_require__(1325);
 var Bar_module_default = /*#__PURE__*/__webpack_require__.n(Bar_module);
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(5282);
 ;// CONCATENATED MODULE: ./components/Pages/Games/Header/Bar/Bar.jsx
-
 // componetns
  // styles
+
 
 
 function Bar({
@@ -69,18 +69,15 @@ function Bar({
   });
 }
 ;// CONCATENATED MODULE: external "react-select"
-var external_react_select_namespaceObject = require("react-select");;
+const external_react_select_namespaceObject = require("react-select");
 var external_react_select_default = /*#__PURE__*/__webpack_require__.n(external_react_select_namespaceObject);
 // EXTERNAL MODULE: ./components/Pages/Games/Header/Header.module.scss
-var Header_module = __webpack_require__(4649);
+var Header_module = __webpack_require__(2117);
 var Header_module_default = /*#__PURE__*/__webpack_require__.n(Header_module);
 ;// CONCATENATED MODULE: ./public/images/games/selectvector.png
-/* harmony default export */ var selectvector = ({"src":"/_next/static/image/public/images/games/selectvector.3a55c009daf25944341fe4f031bf1eeb.png","height":7,"width":11,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAQAAADSmGXeAAAASklEQVR42mP4J/tv/79r/879uwCEl/6ZMzAw/Cv99x8I/wLxQgYI+LfiH1AIKM8N5PxjBGLhf/f+ff9nxcDwj5kBQvyL+lcOkQQA134tfkxfUkYAAAAASUVORK5CYII="});
+/* harmony default export */ const selectvector = ({"src":"/_next/static/image/public/images/games/selectvector.3a55c009daf25944341fe4f031bf1eeb.png","height":7,"width":11,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAQAAADSmGXeAAAASklEQVR42mP4J/tv/79r/879uwCEl/6ZMzAw/Cv99x8I/wLxQgYI+LfiH1AIKM8N5PxjBGLhf/f+ff9nxcDwj5kBQvyL+lcOkQQA134tfkxfUkYAAAAASUVORK5CYII="});
 ;// CONCATENATED MODULE: ./components/Pages/Games/Header/Header.jsx
-
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -94,6 +91,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  // styles
 
  // icons 
+
+
 
 
 function Header({
@@ -208,13 +207,13 @@ function Header({
   });
 }
 // EXTERNAL MODULE: ./components/Pages/Games/Tabs/Row/Row.module.scss
-var Row_module = __webpack_require__(4317);
+var Row_module = __webpack_require__(4293);
 var Row_module_default = /*#__PURE__*/__webpack_require__.n(Row_module);
 ;// CONCATENATED MODULE: ./components/Pages/Games/Tabs/Row/Row.jsx
-
-
 // translation 
  // styles 
+
+
 
 
 function Row({
@@ -345,13 +344,13 @@ function Row({
   });
 }
 // EXTERNAL MODULE: ./components/Pages/Games/Tabs/TabHeader/TabHeader.module.scss
-var TabHeader_module = __webpack_require__(4448);
+var TabHeader_module = __webpack_require__(6767);
 var TabHeader_module_default = /*#__PURE__*/__webpack_require__.n(TabHeader_module);
 ;// CONCATENATED MODULE: ./components/Pages/Games/Tabs/TabHeader/TabHeader.jsx
-
-
 // styles
  // translations
+
+
 
 
 function TabHeader() {
@@ -396,20 +395,20 @@ function TabHeader() {
   });
 }
 // EXTERNAL MODULE: ./node_modules/next/dist/client/router.js
-var client_router = __webpack_require__(8294);
+var client_router = __webpack_require__(7890);
 // EXTERNAL MODULE: ./components/Pages/Games/Tabs/boardsStyle.module.scss
-var boardsStyle_module = __webpack_require__(2582);
+var boardsStyle_module = __webpack_require__(4132);
 var boardsStyle_module_default = /*#__PURE__*/__webpack_require__.n(boardsStyle_module);
 // EXTERNAL MODULE: ./lib/er.lib.js
-var er_lib = __webpack_require__(955);
+var er_lib = __webpack_require__(1863);
 // EXTERNAL MODULE: ./lib/request-destinations.js + 1 modules
-var request_destinations = __webpack_require__(9541);
+var request_destinations = __webpack_require__(8955);
 ;// CONCATENATED MODULE: ./components/Pages/Games/Tabs/BsStGames/BsStGames.jsx
 
 
-
-
  // styles 
+
+
 
 
 
@@ -473,9 +472,9 @@ function BsStGames() {
 ;// CONCATENATED MODULE: ./components/Pages/Games/Tabs/ExpressGames/ExpressGames.jsx
 
 
-
-
  // styles 
+
+
 
 
 
@@ -538,9 +537,9 @@ function ExpressGames() {
 }
 ;// CONCATENATED MODULE: ./components/Pages/Games/Tabs/OrdinarGames/OrdinarGames.jsx
 
-
-
  // styles 
+
+
 
 
 
@@ -605,12 +604,12 @@ function OrdinarGames() {
   });
 }
 // EXTERNAL MODULE: ./components/Pages/Games/Tabs/Tabs.module.scss
-var Tabs_module = __webpack_require__(6454);
+var Tabs_module = __webpack_require__(2333);
 var Tabs_module_default = /*#__PURE__*/__webpack_require__.n(Tabs_module);
 ;// CONCATENATED MODULE: ./components/Pages/Games/Tabs/Tabs.jsx
-
-
 // styles
+
+
 
 
 
@@ -626,11 +625,11 @@ function Tabs({
   });
 }
 ;// CONCATENATED MODULE: ./components/Pages/Games/Games.jsx
-
-
 // styles
 
  // components
+
+
 
 
 
@@ -711,9 +710,7 @@ function Games() {
   });
 }
 ;// CONCATENATED MODULE: ./pages/games.js
-
-
-function games_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function games_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function games_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { games_ownKeys(Object(source), true).forEach(function (key) { games_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { games_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -723,10 +720,11 @@ function games_defineProperty(obj, key, value) { if (key in obj) { Object.define
 
 
 
+
 const GamesPage = () => /*#__PURE__*/jsx_runtime_.jsx(Games, {});
 
 GamesPage.layout = "withoutPhoto";
-/* harmony default export */ var games = (GamesPage);
+/* harmony default export */ const games = (GamesPage);
 async function getStaticProps(ctx) {
   return {
     props: games_objectSpread({}, await loadNamespaces_default()(games_objectSpread(games_objectSpread(games_objectSpread({}, ctx), {}, {
@@ -740,8 +738,8 @@ async function getStaticProps(ctx) {
 
 /***/ }),
 
-/***/ 5762:
-/***/ (function(module) {
+/***/ 4950:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -752,8 +750,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7829:
-/***/ (function(module) {
+/***/ 1325:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -765,8 +763,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4649:
-/***/ (function(module) {
+/***/ 2117:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -777,8 +775,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4317:
-/***/ (function(module) {
+/***/ 4293:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -808,8 +806,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4448:
-/***/ (function(module) {
+/***/ 6767:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -821,8 +819,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 6454:
-/***/ (function(module) {
+/***/ 2333:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -832,8 +830,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2582:
-/***/ (function(module) {
+/***/ 4132:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -846,58 +844,138 @@ module.exports = {
 /***/ }),
 
 /***/ 2376:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("axios");;
+module.exports = require("axios");
 
 /***/ }),
 
 /***/ 8404:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/loadNamespaces");;
+module.exports = require("next-translate/loadNamespaces");
 
 /***/ }),
 
 /***/ 8841:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/useTranslation");;
+module.exports = require("next-translate/useTranslation");
 
 /***/ }),
 
-/***/ 8417:
-/***/ (function(module) {
+/***/ 9325:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router-context.js");;
+module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
 
-/***/ 2238:
-/***/ (function(module) {
+/***/ 8300:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router/utils/get-asset-path-from-route.js");;
+module.exports = require("next/dist/shared/lib/i18n/detect-domain-locale.js");
+
+/***/ }),
+
+/***/ 5378:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
+
+/***/ }),
+
+/***/ 7162:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/mitt.js");
+
+/***/ }),
+
+/***/ 8773:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router-context.js");
+
+/***/ }),
+
+/***/ 2248:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
+
+/***/ }),
+
+/***/ 9372:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
+
+/***/ }),
+
+/***/ 665:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
+
+/***/ }),
+
+/***/ 2747:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
+
+/***/ }),
+
+/***/ 333:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
+
+/***/ }),
+
+/***/ 3456:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
+
+/***/ }),
+
+/***/ 7620:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
 /***/ 9297:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react");;
+module.exports = require("react");
 
 /***/ }),
 
 /***/ 5282:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react/jsx-runtime");;
+module.exports = require("react/jsx-runtime");
 
 /***/ })
 
@@ -907,8 +985,8 @@ module.exports = require("react/jsx-runtime");;
 // load runtime
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
-var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = __webpack_require__.X(0, [1276,123,9452,7061,730], function() { return __webpack_exec__(4246); });
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [1694,543,8402,7023,4587,8857], () => (__webpack_exec__(8393)));
 module.exports = __webpack_exports__;
 
 })();

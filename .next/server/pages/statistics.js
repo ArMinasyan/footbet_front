@@ -1,11 +1,11 @@
-(function() {
+(() => {
 var exports = {};
 exports.id = 6080;
 exports.ids = [6080];
 exports.modules = {
 
-/***/ 825:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ 31:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 // ESM COMPAT FLAG
@@ -13,33 +13,33 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": function() { return /* binding */ statistics; },
-  "getStaticProps": function() { return /* binding */ getStaticProps; }
+  "default": () => (/* binding */ statistics),
+  "getStaticProps": () => (/* binding */ getStaticProps)
 });
 
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(5282);
 // EXTERNAL MODULE: ./i18n.json
-var i18n = __webpack_require__(1900);
+var i18n = __webpack_require__(608);
 // EXTERNAL MODULE: external "next-translate/loadNamespaces"
 var loadNamespaces_ = __webpack_require__(8404);
 var loadNamespaces_default = /*#__PURE__*/__webpack_require__.n(loadNamespaces_);
 // EXTERNAL MODULE: ./components/Pages/Statistics/Statistics.module.scss
-var Statistics_module = __webpack_require__(2759);
+var Statistics_module = __webpack_require__(3868);
 var Statistics_module_default = /*#__PURE__*/__webpack_require__.n(Statistics_module);
 // EXTERNAL MODULE: ./components/Pages/common/Title/Title.jsx
-var Title = __webpack_require__(7061);
+var Title = __webpack_require__(4587);
 // EXTERNAL MODULE: external "next-translate/useTranslation"
 var useTranslation_ = __webpack_require__(8841);
 var useTranslation_default = /*#__PURE__*/__webpack_require__.n(useTranslation_);
 // EXTERNAL MODULE: ./components/Pages/Statistics/Tab/Row/Row.module.scss
-var Row_module = __webpack_require__(976);
+var Row_module = __webpack_require__(9172);
 var Row_module_default = /*#__PURE__*/__webpack_require__.n(Row_module);
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(5282);
 ;// CONCATENATED MODULE: ./components/Pages/Statistics/Tab/Row/Row.jsx
-
-
 // translation
  // styles
+
+
 
 
 function Row({
@@ -198,13 +198,13 @@ function Row({
   });
 }
 // EXTERNAL MODULE: ./components/Pages/Statistics/Tab/TabHeader/TabHeader.module.scss
-var TabHeader_module = __webpack_require__(3298);
+var TabHeader_module = __webpack_require__(4124);
 var TabHeader_module_default = /*#__PURE__*/__webpack_require__.n(TabHeader_module);
 ;// CONCATENATED MODULE: ./components/Pages/Statistics/Tab/TabHeader/TabHeader.jsx
-
-
 // styles
  // translations
+
+
 
 
 function TabHeader() {
@@ -245,17 +245,17 @@ function TabHeader() {
   });
 }
 // EXTERNAL MODULE: ./public/images/games/atletico.png
-var atletico = __webpack_require__(6271);
+var atletico = __webpack_require__(7220);
 // EXTERNAL MODULE: ./public/images/games/atletic.png
-var atletic = __webpack_require__(7711);
+var atletic = __webpack_require__(9124);
 // EXTERNAL MODULE: ./public/images/main/matches/barca.png
-var barca = __webpack_require__(7115);
+var barca = __webpack_require__(843);
 // EXTERNAL MODULE: ./public/images/main/matches/marcel.png
-var marcel = __webpack_require__(5589);
+var marcel = __webpack_require__(2974);
 // EXTERNAL MODULE: ./public/images/main/matches/psj.png
-var psj = __webpack_require__(9570);
+var psj = __webpack_require__(7875);
 // EXTERNAL MODULE: ./public/images/main/matches/rennais.png
-var rennais = __webpack_require__(7199);
+var rennais = __webpack_require__(113);
 ;// CONCATENATED MODULE: ./components/Pages/Statistics/Tab/StatisticsTab/statistics_tab.js
 // icons
 
@@ -532,20 +532,20 @@ const statistics_tab = [{
   gameResult: 'return'
 }];
 // EXTERNAL MODULE: ./components/Pages/Statistics/Tab/StatisticsTab/StatisticsTab.module.scss
-var StatisticsTab_module = __webpack_require__(2194);
+var StatisticsTab_module = __webpack_require__(8081);
 var StatisticsTab_module_default = /*#__PURE__*/__webpack_require__.n(StatisticsTab_module);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(9297);
 // EXTERNAL MODULE: ./lib/er.lib.js
-var er_lib = __webpack_require__(955);
+var er_lib = __webpack_require__(1863);
 // EXTERNAL MODULE: ./lib/request-destinations.js + 1 modules
-var request_destinations = __webpack_require__(9541);
+var request_destinations = __webpack_require__(8955);
 ;// CONCATENATED MODULE: ./components/Pages/Statistics/Tab/StatisticsTab/StatisticsTab.jsx
 
 
-
-
  // styles 
+
+
 
 
 
@@ -605,10 +605,10 @@ function StatisticsTab() {
   });
 }
 ;// CONCATENATED MODULE: ./components/Pages/Statistics/Statistics.jsx
-
-
 // styles
  // components
+
+
 
 
 
@@ -625,9 +625,7 @@ function Statistics() {
   });
 }
 ;// CONCATENATED MODULE: ./pages/statistics.js
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -637,10 +635,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 const StatisticsPage = () => /*#__PURE__*/jsx_runtime_.jsx(Statistics, {});
 
 StatisticsPage.layout = "withoutPhoto";
-/* harmony default export */ var statistics = (StatisticsPage);
+/* harmony default export */ const statistics = (StatisticsPage);
 async function getStaticProps(ctx) {
   return {
     props: _objectSpread({}, await loadNamespaces_default()(_objectSpread(_objectSpread(_objectSpread({}, ctx), {}, {
@@ -654,8 +653,8 @@ async function getStaticProps(ctx) {
 
 /***/ }),
 
-/***/ 2759:
-/***/ (function(module) {
+/***/ 3868:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -666,8 +665,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 976:
-/***/ (function(module) {
+/***/ 9172:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -698,8 +697,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2194:
-/***/ (function(module) {
+/***/ 8081:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -711,8 +710,8 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3298:
-/***/ (function(module) {
+/***/ 4124:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -725,58 +724,138 @@ module.exports = {
 /***/ }),
 
 /***/ 2376:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("axios");;
+module.exports = require("axios");
 
 /***/ }),
 
 /***/ 8404:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/loadNamespaces");;
+module.exports = require("next-translate/loadNamespaces");
 
 /***/ }),
 
 /***/ 8841:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/useTranslation");;
+module.exports = require("next-translate/useTranslation");
 
 /***/ }),
 
-/***/ 8417:
-/***/ (function(module) {
+/***/ 9325:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router-context.js");;
+module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
 
-/***/ 2238:
-/***/ (function(module) {
+/***/ 8300:
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/next-server/lib/router/utils/get-asset-path-from-route.js");;
+module.exports = require("next/dist/shared/lib/i18n/detect-domain-locale.js");
+
+/***/ }),
+
+/***/ 5378:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
+
+/***/ }),
+
+/***/ 7162:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/mitt.js");
+
+/***/ }),
+
+/***/ 8773:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router-context.js");
+
+/***/ }),
+
+/***/ 2248:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
+
+/***/ }),
+
+/***/ 9372:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
+
+/***/ }),
+
+/***/ 665:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
+
+/***/ }),
+
+/***/ 2747:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
+
+/***/ }),
+
+/***/ 333:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
+
+/***/ }),
+
+/***/ 3456:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
+
+/***/ }),
+
+/***/ 7620:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
 /***/ 9297:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react");;
+module.exports = require("react");
 
 /***/ }),
 
 /***/ 5282:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react/jsx-runtime");;
+module.exports = require("react/jsx-runtime");
 
 /***/ })
 
@@ -786,8 +865,8 @@ module.exports = require("react/jsx-runtime");;
 // load runtime
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
-var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = __webpack_require__.X(0, [1276,123,9452,7061,7164,4208], function() { return __webpack_exec__(825); });
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [1694,543,8402,7023,4587,3404,844], () => (__webpack_exec__(31)));
 module.exports = __webpack_exports__;
 
 })();

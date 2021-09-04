@@ -1,409 +1,401 @@
-(function() {
+(() => {
 var exports = {};
 exports.id = 4783;
 exports.ids = [4783];
 exports.modules = {
 
-/***/ 1900:
-/***/ (function(module) {
-
-"use strict";
-module.exports = JSON.parse('{"locales":["rs","am","en","deu","fr","esp"],"defaultLocale":"rs","pages":{"*":["common"],"/":["home"],"/testimonials":["testimonials","home"],"/matches":["home"],"/games":["games"],"/prediction":["prediction"],"/statistics":["statistics"],"/aboutUs":["aboutUs"],"/personal":["personal"]}}');
-
-/***/ }),
-
 /***/ 7655:
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
 	"./am/aboutUs": [
-		905,
-		905
+		159,
+		159
 	],
 	"./am/aboutUs.json": [
-		905,
-		905
+		159,
+		159
 	],
 	"./am/common": [
-		709,
-		709
+		2765,
+		2765
 	],
 	"./am/common.json": [
-		709,
-		709
+		2765,
+		2765
 	],
 	"./am/games": [
-		6350,
-		6350
+		834,
+		834
 	],
 	"./am/games.json": [
-		6350,
-		6350
+		834,
+		834
 	],
 	"./am/home": [
-		4709,
-		4709
+		5907,
+		3494
 	],
 	"./am/home.json": [
-		4709,
-		4709
+		5907,
+		3494
 	],
 	"./am/personal": [
-		7334,
-		7334
+		9127,
+		9127
 	],
 	"./am/personal.json": [
-		7334,
-		7334
+		9127,
+		9127
 	],
 	"./am/prediction": [
-		8333,
-		8333
+		5810,
+		5810
 	],
 	"./am/prediction.json": [
-		8333,
-		8333
+		5810,
+		5810
 	],
 	"./am/statistics": [
-		412,
-		412
+		5240,
+		5240
 	],
 	"./am/statistics.json": [
-		412,
-		412
+		5240,
+		5240
 	],
 	"./am/testimonials": [
-		6229,
-		6229
+		3193,
+		3193
 	],
 	"./am/testimonials.json": [
-		6229,
-		6229
+		3193,
+		3193
 	],
 	"./deu/aboutUs": [
-		2535,
-		2535
+		9963,
+		9963
 	],
 	"./deu/aboutUs.json": [
-		2535,
-		2535
+		9963,
+		9963
 	],
 	"./deu/common": [
-		9264,
-		9264
+		8268,
+		8268
 	],
 	"./deu/common.json": [
-		9264,
-		9264
+		8268,
+		8268
 	],
 	"./deu/games": [
-		9643,
-		9643
+		5553,
+		5553
 	],
 	"./deu/games.json": [
-		9643,
-		9643
+		5553,
+		5553
 	],
 	"./deu/home": [
-		1799,
-		1799
+		6192,
+		7732
 	],
 	"./deu/home.json": [
-		1799,
-		1799
+		6192,
+		7732
 	],
 	"./deu/personal": [
-		3666,
-		3666
+		1657,
+		1657
 	],
 	"./deu/personal.json": [
-		3666,
-		3666
+		1657,
+		1657
 	],
 	"./deu/prediction": [
-		7349,
-		7349
+		6769,
+		6769
 	],
 	"./deu/prediction.json": [
-		7349,
-		7349
+		6769,
+		6769
 	],
 	"./deu/statistics": [
-		1825,
-		1825
+		4336,
+		4336
 	],
 	"./deu/statistics.json": [
-		1825,
-		1825
+		4336,
+		4336
 	],
 	"./deu/testimonials": [
-		4222,
-		4222
+		4680,
+		4680
 	],
 	"./deu/testimonials.json": [
-		4222,
-		4222
+		4680,
+		4680
 	],
 	"./en/aboutUs": [
-		4386,
-		4386
+		1190,
+		1190
 	],
 	"./en/aboutUs.json": [
-		4386,
-		4386
+		1190,
+		1190
 	],
 	"./en/common": [
-		5361,
-		5361
+		464,
+		464
 	],
 	"./en/common.json": [
-		5361,
-		5361
+		464,
+		464
 	],
 	"./en/games": [
-		1254,
-		1254
+		29,
+		29
 	],
 	"./en/games.json": [
-		1254,
-		1254
+		29,
+		29
 	],
 	"./en/home": [
-		4360,
-		4360
+		2482,
+		2482
 	],
 	"./en/home.json": [
-		4360,
-		4360
+		2482,
+		2482
 	],
 	"./en/personal": [
-		7272,
-		7272
+		5714,
+		5714
 	],
 	"./en/personal.json": [
-		7272,
-		7272
+		5714,
+		5714
 	],
 	"./en/prediction": [
-		416,
-		416
+		9265,
+		9265
 	],
 	"./en/prediction.json": [
-		416,
-		416
+		9265,
+		9265
 	],
 	"./en/statistics": [
-		356,
-		356
+		2825,
+		2825
 	],
 	"./en/statistics.json": [
-		356,
-		356
+		2825,
+		2825
 	],
 	"./en/testimonials": [
-		6588,
-		6588
+		2927,
+		2927
 	],
 	"./en/testimonials.json": [
-		6588,
-		6588
+		2927,
+		2927
 	],
 	"./esp/aboutUs": [
-		2301,
-		2301
+		9028,
+		9028
 	],
 	"./esp/aboutUs.json": [
-		2301,
-		2301
+		9028,
+		9028
 	],
 	"./esp/common": [
-		6330,
-		6330
+		5803,
+		5803
 	],
 	"./esp/common.json": [
-		6330,
-		6330
+		5803,
+		5803
 	],
 	"./esp/games": [
-		2751,
-		2751
+		7691,
+		7691
 	],
 	"./esp/games.json": [
-		2751,
-		2751
+		7691,
+		7691
 	],
 	"./esp/home": [
-		5484,
-		5484
+		5965,
+		5965
 	],
 	"./esp/home.json": [
-		5484,
-		5484
+		5965,
+		5965
 	],
 	"./esp/personal": [
-		1479,
-		1479
+		2566,
+		2566
 	],
 	"./esp/personal.json": [
-		1479,
-		1479
+		2566,
+		2566
 	],
 	"./esp/prediction": [
-		9057,
-		9057
+		9747,
+		9747
 	],
 	"./esp/prediction.json": [
-		9057,
-		9057
+		9747,
+		9747
 	],
 	"./esp/statistics": [
-		6960,
-		6960
+		3021,
+		3021
 	],
 	"./esp/statistics.json": [
-		6960,
-		6960
+		3021,
+		3021
 	],
 	"./esp/testimonials": [
-		6716,
-		6716
+		5210,
+		5210
 	],
 	"./esp/testimonials.json": [
-		6716,
-		6716
+		5210,
+		5210
 	],
 	"./fr/aboutUs": [
-		7958,
-		7958
+		2014,
+		2014
 	],
 	"./fr/aboutUs.json": [
-		7958,
-		7958
+		2014,
+		2014
 	],
 	"./fr/common": [
-		1061,
-		1061
+		5167,
+		5167
 	],
 	"./fr/common.json": [
-		1061,
-		1061
+		5167,
+		5167
 	],
 	"./fr/games": [
-		5518,
-		5518
+		7776,
+		7776
 	],
 	"./fr/games.json": [
-		5518,
-		5518
+		7776,
+		7776
 	],
 	"./fr/home": [
-		6483,
-		6483
+		2936,
+		1660
 	],
 	"./fr/home.json": [
-		6483,
-		6483
+		2936,
+		1660
 	],
 	"./fr/personal": [
-		1958,
-		1958
+		9829,
+		9829
 	],
 	"./fr/personal.json": [
-		1958,
-		1958
+		9829,
+		9829
 	],
 	"./fr/prediction": [
-		5984,
-		8981
+		7791,
+		7791
 	],
 	"./fr/prediction.json": [
-		5984,
-		8981
+		7791,
+		7791
 	],
 	"./fr/statistics": [
-		7792,
-		7792
+		2501,
+		2501
 	],
 	"./fr/statistics.json": [
-		7792,
-		7792
+		2501,
+		2501
 	],
 	"./fr/testimonials": [
-		4975,
-		4975
+		9618,
+		9618
 	],
 	"./fr/testimonials.json": [
-		4975,
-		4975
+		9618,
+		9618
 	],
 	"./rs/aboutUs": [
-		7160,
-		7160
+		238,
+		238
 	],
 	"./rs/aboutUs.json": [
-		7160,
-		7160
+		238,
+		238
 	],
 	"./rs/common": [
-		4766,
-		4766
+		4981,
+		4981
 	],
 	"./rs/common.json": [
-		4766,
-		4766
+		4981,
+		4981
 	],
 	"./rs/games": [
-		1029,
-		1029
+		5819,
+		5819
 	],
 	"./rs/games.json": [
-		1029,
-		1029
+		5819,
+		5819
 	],
 	"./rs/home": [
-		2361,
-		2361
+		5354,
+		5354
 	],
 	"./rs/home.json": [
-		2361,
-		2361
+		5354,
+		5354
 	],
 	"./rs/personal": [
-		1392,
-		1392
+		3357,
+		3357
 	],
 	"./rs/personal.json": [
-		1392,
-		1392
+		3357,
+		3357
 	],
 	"./rs/prediction": [
-		3915,
-		3915
+		4802,
+		4802
 	],
 	"./rs/prediction.json": [
-		3915,
-		3915
+		4802,
+		4802
 	],
 	"./rs/statistics": [
-		2391,
-		2391
+		623,
+		623
 	],
 	"./rs/statistics.json": [
-		2391,
-		2391
+		623,
+		623
 	],
 	"./rs/testimonials": [
-		5409,
-		5409
+		490,
+		490
 	],
 	"./rs/testimonials.json": [
-		5409,
-		5409
+		490,
+		490
 	]
 };
 function webpackAsyncContext(req) {
 	if(!__webpack_require__.o(map, req)) {
-		return Promise.resolve().then(function() {
+		return Promise.resolve().then(() => {
 			var e = new Error("Cannot find module '" + req + "'");
 			e.code = 'MODULE_NOT_FOUND';
 			throw e;
@@ -411,34 +403,33 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return __webpack_require__.e(ids[1]).then(function() {
+	return __webpack_require__.e(ids[1]).then(() => {
 		return __webpack_require__.t(id, 3 | 16);
 	});
 }
-webpackAsyncContext.keys = function() { return Object.keys(map); };
+webpackAsyncContext.keys = () => (Object.keys(map));
 webpackAsyncContext.id = 7655;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 3782:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ 7882:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getStaticProps": function() { return /* binding */ getStaticProps; }
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps)
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5282);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _next_translate_root_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1900);
-/* harmony import */ var next_translate_loadNamespaces__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8404);
-/* harmony import */ var next_translate_loadNamespaces__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_translate_loadNamespaces__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_scss_pages_privacy_policy_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(694);
+/* harmony import */ var _next_translate_root_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(608);
+/* harmony import */ var next_translate_loadNamespaces__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8404);
+/* harmony import */ var next_translate_loadNamespaces__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_translate_loadNamespaces__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _styles_scss_pages_privacy_policy_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8194);
 /* harmony import */ var _styles_scss_pages_privacy_policy_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_scss_pages_privacy_policy_module_scss__WEBPACK_IMPORTED_MODULE_3__);
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5282);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -448,12 +439,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 function TermsOfUse() {
-  return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+  return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
     className: (_styles_scss_pages_privacy_policy_module_scss__WEBPACK_IMPORTED_MODULE_3___default()["privacy-policy-page"]),
-    children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+    children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
       className: (_styles_scss_pages_privacy_policy_module_scss__WEBPACK_IMPORTED_MODULE_3___default()["privacy-policy-container"]),
-      children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+      children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
         className: (_styles_scss_pages_privacy_policy_module_scss__WEBPACK_IMPORTED_MODULE_3___default()["text-container"]),
         children: `
 1. ОБЩИЕ ПОЛОЖЕНИЯ
@@ -613,13 +605,13 @@ function TermsOfUse() {
 }
 
 TermsOfUse.layout = "withoutPhoto";
-/* harmony default export */ __webpack_exports__["default"] = (TermsOfUse);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TermsOfUse);
 async function getStaticProps(ctx) {
   return {
-    props: _objectSpread({}, await next_translate_loadNamespaces__WEBPACK_IMPORTED_MODULE_2___default()(_objectSpread(_objectSpread(_objectSpread({}, ctx), {}, {
+    props: _objectSpread({}, await next_translate_loadNamespaces__WEBPACK_IMPORTED_MODULE_1___default()(_objectSpread(_objectSpread(_objectSpread({}, ctx), {}, {
       pathname: '/terms-of-use',
       loaderName: 'getStaticProps'
-    }, _next_translate_root_i18n__WEBPACK_IMPORTED_MODULE_1__), {}, {
+    }, _next_translate_root_i18n__WEBPACK_IMPORTED_MODULE_0__), {}, {
       loadLocaleFrom: (l, n) => __webpack_require__(7655)(`./${l}/${n}`).then(m => m.default)
     })))
   };
@@ -627,8 +619,8 @@ async function getStaticProps(ctx) {
 
 /***/ }),
 
-/***/ 694:
-/***/ (function(module) {
+/***/ 8194:
+/***/ ((module) => {
 
 // Exports
 module.exports = {
@@ -641,18 +633,26 @@ module.exports = {
 /***/ }),
 
 /***/ 8404:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("next-translate/loadNamespaces");;
+module.exports = require("next-translate/loadNamespaces");
 
 /***/ }),
 
 /***/ 5282:
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
-module.exports = require("react/jsx-runtime");;
+module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ 608:
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse('{"locales":["rs","am","en","deu","fr","esp"],"defaultLocale":"rs","pages":{"*":["common"],"/":["home"],"/testimonials":["testimonials","home"],"/matches":["home"],"/games":["games"],"/prediction":["prediction"],"/statistics":["statistics"],"/aboutUs":["aboutUs"],"/personal":["personal"]}}');
 
 /***/ })
 
@@ -662,8 +662,8 @@ module.exports = require("react/jsx-runtime");;
 // load runtime
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
-var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = (__webpack_exec__(3782));
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = (__webpack_exec__(7882));
 module.exports = __webpack_exports__;
 
 })();
