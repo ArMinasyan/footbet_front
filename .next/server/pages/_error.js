@@ -1,29 +1,36 @@
-"use strict";
-(() => {
+(function() {
 var exports = {};
 exports.id = 4820;
 exports.ids = [4820];
 exports.modules = {
 
-/***/ 8085:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 7422:
+/***/ (function(module) {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+module.exports = _interopRequireDefault;
+
+/***/ }),
+
+/***/ 9731:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
 
 
+var _interopRequireDefault = __webpack_require__(7422);
 
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
+exports.__esModule = true;
 exports.default = void 0;
 
 var _react = _interopRequireDefault(__webpack_require__(9297));
 
-var _head = _interopRequireDefault(__webpack_require__(6695));
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
+var _head = _interopRequireDefault(__webpack_require__(5273));
 
 const statusCodes = {
   400: 'Bad Request',
@@ -41,8 +48,12 @@ function _getInitialProps({
     statusCode
   };
 }
+/**
+* `Error` component used for handling errors.
+*/
 
-class Error1 extends _react.default.Component {
+
+class Error extends _react.default.Component {
   render() {
     const {
       statusCode
@@ -60,15 +71,17 @@ class Error1 extends _react.default.Component {
       style: styles.desc
     }, /*#__PURE__*/_react.default.createElement("h2", {
       style: styles.h2
-    }, this.props.title || statusCode ? title : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "Application error: a client-side exception has occurred (see the browser console for more information)"), "."))));
+    }, this.props.title || statusCode ? title : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "Application error: a client-side exception has occurred (", /*#__PURE__*/_react.default.createElement("a", {
+      href: "https://nextjs.org/docs/messages/client-side-exception-occurred"
+    }, "developer guidance"), ")"), "."))));
   }
 
 }
 
-Error1.displayName = 'ErrorPage';
-Error1.getInitialProps = _getInitialProps;
-Error1.origGetInitialProps = _getInitialProps;
-exports.default = Error1;
+exports.default = Error;
+Error.displayName = 'ErrorPage';
+Error.getInitialProps = _getInitialProps;
+Error.origGetInitialProps = _getInitialProps;
 const styles = {
   error: {
     color: '#000',
@@ -109,17 +122,19 @@ const styles = {
 
 /***/ }),
 
-/***/ 6695:
-/***/ ((module) => {
+/***/ 5273:
+/***/ (function(module) {
 
-module.exports = require("next/dist/shared/lib/head.js");
+"use strict";
+module.exports = require("next/dist/next-server/lib/head.js");;
 
 /***/ }),
 
 /***/ 9297:
-/***/ ((module) => {
+/***/ (function(module) {
 
-module.exports = require("react");
+"use strict";
+module.exports = require("react");;
 
 /***/ })
 
@@ -129,8 +144,8 @@ module.exports = require("react");
 // load runtime
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
-var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(8085));
+var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
+var __webpack_exports__ = (__webpack_exec__(9731));
 module.exports = __webpack_exports__;
 
 })();
