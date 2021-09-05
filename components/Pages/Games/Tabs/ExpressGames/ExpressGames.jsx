@@ -13,7 +13,8 @@ export function ExpressGames() {
     const [ express, setExpess ] = useState([]);
 
     useEffect(()=>{
-        request( GET_MATCHES_BY_TYPE(1),{}, {auth:true} )
+        // request( GET_MATCHES_BY_TYPE(1),{}, {auth:true} )
+        request( GET_MATCHES_BY_TYPE(3),{}, {auth:true} )
         .then( rsp => {
             setExpess( rsp.data.data.map( item => {
                 return {

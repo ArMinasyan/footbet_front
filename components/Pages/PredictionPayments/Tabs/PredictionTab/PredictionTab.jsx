@@ -14,6 +14,7 @@ import { request } from "/lib/er.lib";
 export function PredictionTab({ click }) {
   const [slide_data, setSlideData] = useState([]);
   const router = useRouter();
+  let showPrediction = false;
 
   useEffect(() => {
     request(GET_PREDICTIONS, {}, { auth: true })
@@ -27,7 +28,7 @@ export function PredictionTab({ click }) {
               teamOneIcon: item[`team1_img_path`],
               teamTwoName: "",
               teamTwoIcon: item[`team2_img_path`],
-              prediction: item.prediction,
+              prediction: showPrediction ?  item.prediction : ``,
               type: item.type,
               date: item.date,
               time: item.time,
