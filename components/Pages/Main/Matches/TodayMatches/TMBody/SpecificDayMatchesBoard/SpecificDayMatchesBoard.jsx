@@ -73,7 +73,6 @@ export function SpecificDayMatchesBoard({ day }) {
         );
       })
       .catch((err) => {
-        console.log(err);
       });
   }, [day]);
 

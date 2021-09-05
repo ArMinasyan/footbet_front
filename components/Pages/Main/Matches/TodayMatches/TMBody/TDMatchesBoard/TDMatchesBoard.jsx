@@ -62,7 +62,6 @@ export function TDMatchesBoard() {
         );
       })
       .catch((err) => {
-        console.log(err);
       });
   }, []);
 

@@ -25,7 +25,6 @@ export function Slide() {
                 setSlideData( news.data.data );
             })
             .catch( err => {
-                console.log( err );
             })
     },[])
 

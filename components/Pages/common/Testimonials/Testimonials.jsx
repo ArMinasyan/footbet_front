@@ -50,7 +50,7 @@ export function Testimonials({
 
                     );
                 })
-                .catch(err => { console.log(err) })
+                .catch(err => {  })
         }
     }, [matchId])
 

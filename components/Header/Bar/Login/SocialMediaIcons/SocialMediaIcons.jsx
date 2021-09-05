@@ -28,11 +28,9 @@ const icons = [
 
 
 const responseFacebook = (response) => {
-    console.log(response);
 }
 
 const responseGoogle = (response) => {
-    console.log(response);
 }
 
 const TWITTER_CONSUMER_KEY = "";
@@ -48,7 +46,6 @@ export function SocialMediaIcons() {
     function onSocialMediaBtnClick(i) {
         if (i === 0) {
             const facebookLoginBtn = document.querySelector(`.facebook-login-btn`);
-            console.log( facebookLoginBtn );
             if (facebookLoginBtn)
                 facebookLoginBtn.click();
         }
@@ -62,7 +59,6 @@ export function SocialMediaIcons() {
             VK.Auth.login(function(response){
                 if(response.session){
                     /*User authorization succeeded*/
-                    console.log(response)
                     if(response.status=='connected'){
                         /*Selected user access settings, if they are requested*/
                     }
@@ -77,7 +73,6 @@ export function SocialMediaIcons() {
     }
 
     const twitterAuthHandler = ( err, data ) => {
-        console.log( err, data );
     }
 
     

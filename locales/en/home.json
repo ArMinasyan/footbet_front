@@ -83,5 +83,6 @@
             "placeHolder": "Leave feedback...",
             "sendButton": "Send"
         }
-    }
+    },
+    "gameWillStart": "Game starts after"
 }

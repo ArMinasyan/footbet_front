@@ -83,5 +83,6 @@
             "placeHolder": "Feedback geben...",
             "sendButton": "Senden"
         }
-    }
+    },
+    "gameWillStart": "Das spiel startet nach"
 }

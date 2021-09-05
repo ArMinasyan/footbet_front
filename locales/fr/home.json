@@ -82,5 +82,6 @@
             "placeHolder": "Donner des commentaires...",
             "sendButton": "Envoyer"
         }
-    }
+    },
+    "gameWillStart": "Game starts after"
 }

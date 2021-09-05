@@ -34,12 +34,13 @@ export function Item({
     // setShowPrediction(!showPrediction);
     router.push(`/prediction`);
   }
-  console.log(expiryTimestamp);
   let start = new Date().getTime();
   let end = new Date(expiryTimestamp).getTime();
 
   let time = new Date();
   time.setSeconds(time.getSeconds() + (end - start) / 1000);
+  const gameFinished = (new Date()).getTime() > (time.getTime() + (90 * 1000 * 60));
+
 
   return (
     <>
@@ -51,12 +52,16 @@ export function Item({
               <p>{teamOneName}</p>
             </div>
             <div className={styles.timer_container}>
-              <p>{gameStarted ? `Игра начался ` : `Игра начинается через`}</p>
-              <Timer
+              <p>{gameFinished ? 
+                t(`home:matches.TM.today.rowOne.gameState.finished`) : 
+                gameStarted ? 
+                  t(`home:matches.TM.today.rowOne.gameState.started`) :  
+                  t(`home:gameWillStart`) }</p>
+              { (!gameStarted && !gameFinished) && <Timer
                 expiryTimestamp={time}
                 timeClass={styles.timer}
                 timeOut={() => setGameStarted(true)}
-              />
+              />}
             </div>
             <div className={styles.team}>
               <img src={teamTwoIcon} alt="" />

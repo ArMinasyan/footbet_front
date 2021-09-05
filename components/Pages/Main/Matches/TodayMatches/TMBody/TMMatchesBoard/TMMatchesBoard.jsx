@@ -63,7 +63,6 @@ export function TMMatchesBoard() {
         );
       })
       .catch((err) => {
-        console.log(err);
       });
   }, []);
 
