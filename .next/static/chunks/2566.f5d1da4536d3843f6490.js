@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[2566],{82566:function(e){e.exports=JSON.parse('{"title":"Cuenta personal","board":{"PGButton":"Juegos comprados","headers":{"gamesHistory":"Historia del juego","prediction":"Apuesta","date":"Fecha","score":"Cuenta","price":"Precio"}}}')}}]);
