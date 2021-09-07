@@ -41,6 +41,7 @@ export function LeaveComment( { matchId } ) {
         });
         
     const submit = async (data) => {
+      console.log( data, matchId );
       if ( matchId ) {
         try {
           setLoading(true);
@@ -59,6 +60,8 @@ export function LeaveComment( { matchId } ) {
       }
     }
 
+    if ( !matchId )
+      return <></>;
 
     return (
         <div className={styles.container}>

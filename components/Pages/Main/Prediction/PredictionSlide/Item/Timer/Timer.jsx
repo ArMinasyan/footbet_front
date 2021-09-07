@@ -14,6 +14,7 @@ export function Timer({ expiryTimestamp, timeClass, timeOut }) {
         </span>
         :<span>{minutes < 10 ? "0" + minutes : minutes}</span>:
         <span>{seconds < 10 ? "0" + seconds : seconds}</span>
+        <span>МСК</span>
       </div>
     </div>
   );

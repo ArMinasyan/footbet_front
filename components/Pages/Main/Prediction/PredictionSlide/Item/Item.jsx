@@ -35,7 +35,9 @@ export function Item({
     router.push(`/prediction`);
   }
   let start = new Date().getTime();
-  let end = new Date(expiryTimestamp).getTime();
+  const gameDate = new Date(expiryTimestamp);
+  gameDate.setHours( gameDate.getUTCHours() + 3 );
+  let end = gameDate.getTime();
 
   let time = new Date();
   time.setSeconds(time.getSeconds() + (end - start) / 1000);
