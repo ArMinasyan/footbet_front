@@ -51,30 +51,6 @@ export function Row({
                     </div>
                 </div>
                 <div className={styles.right}>
-                    <div className={styles.prediction}>
-                        {
-                            prediction.thereIs ?
-                                <div className={styles.prediction_content}>
-                                    <span className={styles.prediction_title}>{translate('prediction')}</span>
-                                    <span className={styles.prediction_body}>
-                                        <span>{prediction.totalBet}</span>
-                                        <span>{prediction.coefficent}</span>
-                                    </span>
-                                </div> :
-                                <div className={styles.simulator} />
-                        }
-                    </div>
-                    <div className={styles.date_time}>
-                        <div className={styles.date}>
-                            <span>{date}</span>
-                        </div>
-                        <div className={styles.time}>
-                            <span>{time}</span>
-                        </div>
-                    </div>
-                    <div className={styles.coefficent}>
-                        <span>{coefficent}</span>
-                    </div>
                     <div className={styles.price}>
                         <span className={styles.price_title}>{translate('price')}</span>
                         <span>{price}</span>

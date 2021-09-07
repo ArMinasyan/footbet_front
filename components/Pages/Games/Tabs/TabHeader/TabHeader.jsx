@@ -21,26 +21,6 @@ export function TabHeader() {
             <div className={styles.content}>
                 <div>
                     <p>
-                        {translate('prediction').toUpperCase()}
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        {translate('date').toUpperCase()}
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        {translate('time').toUpperCase()}
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        {translate('coeficent').toUpperCase()}
-                    </p>
-                </div>
-                <div>
-                    <p>
                         {translate('price').toUpperCase()}
                     </p>
                 </div>

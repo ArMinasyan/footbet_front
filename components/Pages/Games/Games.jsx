@@ -9,9 +9,9 @@ export default function Games() {
 
     const
         // states
-        [showExpressGames, setShowExpressGames] = useState(true),
+        [showExpressGames, setShowExpressGames] = useState(false),
         [showOrdinarGames, setShowOrdinarGames] = useState(false),
-        [showBsStGames, setShowBsStGames] = useState(false),
+        [showBsStGames, setShowBsStGames] = useState(true),
         // functions
         handleChangingBySelect = (data) => {
             switch (data.id) {

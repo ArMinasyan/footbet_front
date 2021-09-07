@@ -67,38 +67,12 @@ export function Header({
     }
 
 
-    const
-        IndicatorSeparator = ({ innerProps }) => <span style={{ display: 'none' }} {...innerProps} />,
-        IndicatorsContainer = () => <div><img src={vector.src} alt="vector" style={{ minWidth: '11px', marginRight: '5px' }} /></div>
-
-
-
     return (
         <div className={styles.container}>
             <Title
                 page='games'
-                textPathName='header.title'
+                textPathName='header.barButtons.bestStrategy'
             />
-            <Bar
-                expClick={expClick}
-                ordClick={ordClick}
-                bsStClick={bsStClick}
-                expActive={expActive}
-                ordActive={ordActive}
-                bsStActive={bsStActive}
-            />
-            <div className={styles.select}>
-                <Select
-                    instanceId="select-game-type"
-                    options={options}
-                    className={styles.select_container}
-                    styles={customStyles}
-                    isSearchable={false}
-                    placeholder={options[0].label}
-                    components={{ IndicatorSeparator, IndicatorsContainer }}
-                    onChange={changeBySelect}
-                />
-            </div>
         </div>
     )
 }
