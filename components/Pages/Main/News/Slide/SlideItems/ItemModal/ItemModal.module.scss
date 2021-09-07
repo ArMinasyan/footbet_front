@@ -44,6 +44,7 @@ $backGround: rgba(0, 0, 0, 0.6);
 
             .description_content {
                 @include column-center();
+                box-sizing: unset !important;
                 width: 100%;
                 position: absolute;
                 bottom: -38%;
