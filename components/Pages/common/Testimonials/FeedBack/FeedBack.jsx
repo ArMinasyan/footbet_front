@@ -61,7 +61,7 @@ export function FeedBack({
                             </p>
                         </div>
                         <div className={styles.likes_dislikes}>
-                            <div className={styles.like}>
+                            {/* <div className={styles.like}>
                                 <img src={likeIcon.src} alt="like" />
                                 <span>{likes}</span>
                             </div>
@@ -75,7 +75,7 @@ export function FeedBack({
                             </div>
                             {showReactions &&
                                 <LikeDislikeDrop data={reactionsForTesting} />
-                            }
+                            } */}
                         </div>
                     </div>
                 </div>
