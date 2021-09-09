@@ -15,6 +15,7 @@ import styles from './Testimonials.module.scss'
 import { request } from '../../../../lib/er.lib'
 import { GET_FEEDBACK } from '../../../../lib/request-destinations'
 import { useSelector } from 'react-redux'
+import { selectUser } from '/redux/features/userSlice'
 import { getMatchId } from '../../../../redux/features/matchSlice'
 
 import avatar from '/public/images/main/feedbacks/avatar.png'
@@ -24,6 +25,7 @@ export function Testimonials({
     locationInPage,
     textPathName
 }) {
+    const user = useSelector(selectUser);
     const matchId = useSelector(getMatchId);
     const
         // states
@@ -137,7 +139,7 @@ export function Testimonials({
                                 ))
                             }
                         </Carousel>
-                        <LeaveComment matchId={matchId} />
+                        {user && <LeaveComment matchId={matchId} />}
                     </div>
                 </div>
             }
