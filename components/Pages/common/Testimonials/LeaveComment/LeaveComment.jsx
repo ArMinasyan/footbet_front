@@ -20,6 +20,7 @@ import { useRef } from 'react'
 export function LeaveComment( { matchId } ) {
 
   const [ loading, setLoading ] = useState(false);
+  const [ comment, setComment ] = useState(``);
   const commentBoxRef = useRef(null);
     const
         // states consts
@@ -41,13 +42,11 @@ export function LeaveComment( { matchId } ) {
         });
         
     const submit = async (data) => {
-      console.log( data, matchId );
       if ( matchId ) {
         try {
           setLoading(true);
-          await request(ADD_FEEDBACK, { comment: data.comment, stars: simulator, matchId }, {auth: true});
-          if ( commentBoxRef.current ) 
-            commentBoxRef.current.value = "";
+          await request(ADD_FEEDBACK, { comment: comment, stars: simulator, matchId }, {auth: true});
+          setComment(``);
         }
         catch ( err ) {
           toast( err.response.data?.message || `Невозможно добавить отзыв`, {
@@ -97,6 +96,8 @@ export function LeaveComment( { matchId } ) {
                         rows="7"
                         ref={commentBoxRef}
                         placeholder={translate('placeHolder')}
+                        value={comment}
+                        onChange={(e)=>setComment(e.target.value)}
                     ></textarea>
                 </div>
                 <div className={styles.button_container}>
