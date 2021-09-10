@@ -29,9 +29,9 @@ export function PrdeictionSlide() {
             return {
               id: item.id,
               teamOneName: "",
-              teamOneIcon: item[`photo1`],
+              teamOneIcon: item[`team1_img_path`],
               teamTwoName: "",
-              teamTwoIcon: item[`photo2`],
+              teamTwoIcon: item[`team2_img_path`],
               prediction: {
                 thereIs: false,
                 totalBet: "тб 1,5 / ",
