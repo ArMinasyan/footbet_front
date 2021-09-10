@@ -10,9 +10,7 @@ export function PageParticles({
             <p className={styles.title}>
                 {title}
             </p>
-            <p className={styles.body}>
-                {body}
-            </p>
+            <p className={styles.body} dangerouslySetInnerHTML={ { __html: body } } />
         </div>
     )
 }
