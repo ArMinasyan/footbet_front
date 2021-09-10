@@ -5,14 +5,6 @@ import styles from './Row.module.scss'
 
 export function Row({
     order,
-    teamOneName,
-    teamOneIcon,
-    teamTwoName,
-    teamTwoIcon,
-    prediction,
-    date,
-    time,
-    coefficent,
     price,
     clickBuy
 }) {
@@ -31,23 +23,11 @@ export function Row({
                         <span className={styles.order}>{order}.</span>
                     </div>
                     <div className={styles.teamOne}>
-                        <div className={styles.leftItems}>
-                            <span>{teamOneName}</span>
-                        </div>
-                        <div className={styles.leftItems}>
-                            <img src={teamOneIcon} alt="" />
-                        </div>
+
                     </div>
                     <div className={styles.leftItems}>
-                        <span className={styles.vs}>VS.</span>
                     </div>
                     <div className={styles.teamTwo}>
-                        <div className={styles.leftItems}>
-                            <span>{teamTwoName}</span>
-                        </div>
-                        <div className={styles.leftItems}>
-                            <img src={teamTwoIcon} alt="" />
-                        </div>
                     </div>
                 </div>
                 <div className={styles.right}>

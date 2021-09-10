@@ -46,16 +46,10 @@ export function BsStGames() {
                     invinsible_strategy.map((el, i) => (
                         <Row
                             order={i + 1}
-                            teamOneName={el.teamOneName}
-                            teamOneIcon={el.teamOneIcon}
-                            teamTwoName={el.teamTwoName}
-                            teamTwoIcon={el.teamTwoIcon}
-                            date={el.date}
-                            time={el.time}
                             prediction={el.prediction}
                             coefficent={el.coefficent}
                             price={el.price}
-                            key={Math.random()}
+                            key={`key-${i}`}
                             clickBuy={() => router.push({
                                 pathname: '/prediction',
                                 query: { game: el.id }
