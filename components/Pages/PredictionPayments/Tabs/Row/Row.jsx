@@ -87,7 +87,6 @@ export function Row({
               className={styles.button_content}
               onClick={() => {
                 clickBuy();
-                openPayments();
               }}
             >
               <span>{t("common:commons.buy")}</span>

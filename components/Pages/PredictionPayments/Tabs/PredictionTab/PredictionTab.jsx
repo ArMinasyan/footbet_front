@@ -10,6 +10,7 @@ import { TabHeader } from "../TabHeader/TabHeader";
 import styles from "./PredictionTab.module.scss";
 import { GET_PREDICTIONS } from "/lib/request-destinations";
 import { request } from "/lib/er.lib";
+import { buy } from "../../../../../lib/project.lib";
 
 export function PredictionTab({ click }) {
   const [slide_data, setSlideData] = useState([]);
@@ -63,12 +64,7 @@ export function PredictionTab({ click }) {
             coefficent={el.coefficent}
             price={el.price}
             key={Math.random()}
-            clickBuy={() =>
-              router.push({
-                pathname: "/prediction",
-                query: { game: el.id },
-              })
-            }
+            clickBuy={() =>buy(el.id) }
             openPayments={click}
           />
         ))}
