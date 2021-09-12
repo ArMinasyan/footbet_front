@@ -54,7 +54,8 @@ export default function Dropdown() {
             {
                 id: 'games',
                 key: Math.random(),
-                frstContent: translate('games'),
+                frstContent: translate('games.frs'),
+                secContent: translate('games.sec'),
                 href: '/games'
             },
             {

@@ -13,6 +13,8 @@ $containerWidth: 716px;
         width: get_percent(431px, $containerWidth);
         @include mobile {
             width: 100%;
+            align-items: flex-start;
+            padding-top: 30px;
         }
     }
 

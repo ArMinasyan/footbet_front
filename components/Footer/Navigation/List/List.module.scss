@@ -8,6 +8,12 @@ $borders: 2px solid #7e1a4a;
     @include tablet {
         @include column-start();
     }
+
+    @include mobile {
+      width: fill-available;
+      display: block;
+    }
+
     ul {
         margin-right: 15px;
         margin-left: 15px;
@@ -43,6 +49,7 @@ $borders: 2px solid #7e1a4a;
                 font-size: 10px;
                 line-height: 11px;
                 padding: 2px 0 !important;
+                white-space: normal;
             }
         }
         @include tablet {

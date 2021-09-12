@@ -10,4 +10,8 @@
     @include center();
     justify-content: space-between;
     width: get_percent(1740px);
+
+    @include mobile {
+      width: unset;
+    }
 }
