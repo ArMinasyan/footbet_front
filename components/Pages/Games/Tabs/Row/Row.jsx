@@ -6,6 +6,7 @@ import styles from './Row.module.scss'
 export function Row({
     order,
     price,
+    text,
     clickBuy
 }) {
 
@@ -23,12 +24,14 @@ export function Row({
                         <span className={styles.order}>{order}.</span>
                     </div>
                     <div className={styles.teamOne}>
-
+                      
                     </div>
                     <div className={styles.leftItems}>
+                    { text }
                     </div>
                     <div className={styles.teamTwo}>
                     </div>
+                    
                 </div>
                 <div className={styles.right}>
                     <div className={styles.price}>

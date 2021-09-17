@@ -20,6 +20,7 @@ export function BsStGames() {
                 return {
                     id: item.id,
                     teamOneName: '',
+                    name: item.name,
                     teamOneIcon: item[`team1_img_path`],
                     teamTwoName: '',
                     teamTwoIcon: item[`team2_img_path`],
@@ -49,6 +50,7 @@ export function BsStGames() {
                             prediction={el.prediction}
                             coefficent={el.coefficent}
                             price={el.price}
+                            text={el.name}
                             key={`key-${i}`}
                             clickBuy={() => router.push({
                                 pathname: '/prediction',

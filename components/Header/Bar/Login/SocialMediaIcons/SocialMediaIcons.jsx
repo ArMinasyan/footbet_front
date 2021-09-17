@@ -11,19 +11,24 @@ import GoogleLogin from 'react-google-login'
 import TwitterLogin from "react-twitter-login";
 import { useEffect } from 'react'
 
+import { LOGIN_WITH_FB } from '/lib/request-destinations.js';
+import { request } from '/lib/er.lib';
+import { LOGIN_WITH_GOOGLE, LOGIN_WITH_VK } from '../../../../../lib/request-destinations'
+
 const icons = [
-    {
-        iconUrl: facebook.src,
-    },
-    {
-        iconUrl: gmail.src,
-    },
-    {
-        iconUrl: vk.src,
-    },
-    {
-        iconUrl: twitter.src,
-    }]
+  {
+    iconUrl: facebook.src,
+  },
+  {
+    iconUrl: gmail.src,
+  },
+  {
+    iconUrl: vk.src,
+  }
+  // {
+  //   iconUrl: twitter.src,
+  // },
+];
 
 
 
@@ -40,32 +45,53 @@ export function SocialMediaIcons() {
 
 
     useEffect(()=>{                         
-     VK.init({apiId:'7911294'});
+    //  VK.init({apiId:'7911294'});
     },[])
     
-    function onSocialMediaBtnClick(i) {
+    async function onSocialMediaBtnClick(i) {
         if (i === 0) {
-            const facebookLoginBtn = document.querySelector(`.facebook-login-btn`);
-            if (facebookLoginBtn)
-                facebookLoginBtn.click();
+          try {
+            console.log( LOGIN_WITH_FB );
+            const rsp = await request( LOGIN_WITH_FB );
+            console.log( rsp )
+          }
+          catch ( err ) {
+
+          }
+            // const facebookLoginBtn = document.querySelector(`.facebook-login-btn`);
+            // if (facebookLoginBtn)
+            //     facebookLoginBtn.click();
         }
         else if (i === 1) {
-            const
-                googleLoginBtn = document.querySelector(`.google-login-btn`)
-            if (googleLoginBtn)
-                googleLoginBtn.click();
+          try {
+            const rsp = await request( LOGIN_WITH_GOOGLE );
+            console.log( rsp );
+          }
+          catch ( err ) {
+            
+          }
+            // const
+            //     googleLoginBtn = document.querySelector(`.google-login-btn`)
+            // if (googleLoginBtn)
+            //     googleLoginBtn.click();
         }
-        else if ( i === 2 ) {            
-            VK.Auth.login(function(response){
-                if(response.session){
-                    /*User authorization succeeded*/
-                    if(response.status=='connected'){
-                        /*Selected user access settings, if they are requested*/
-                    }
-                } else {
-                    /*User clicks the cancel button in the authorization window*/
-                }
-            });
+        else if ( i === 2 ) {   
+          try {
+            const rsp = await request( LOGIN_WITH_VK );
+            console.log( rsp );
+          }
+          catch ( err ) {}
+                     
+            // VK.Auth.login(function(response){
+            //     if(response.session){
+            //         /*User authorization succeeded*/
+            //         if(response.status=='connected'){
+            //             /*Selected user access settings, if they are requested*/
+            //         }
+            //     } else {
+            //         /*User clicks the cancel button in the authorization window*/
+            //     }
+            // });
         }
         else if ( i === 3 ) {
 

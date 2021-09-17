@@ -114,7 +114,7 @@ export function SocialMedia() {
     <>
       <div className={styles.container} ref={socialMediasRef}>
         {icons.map((el) => (
-          <Icon id={el.id} key={el.key} src={el.src} click={el.click} />
+          <Icon id={el.id} key={el.id} src={el.src} click={el.click} />
         ))}
       </div>
       {showPhoneModal && (

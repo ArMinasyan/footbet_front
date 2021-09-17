@@ -55,7 +55,7 @@ export function SM() {
                 {
                     icons.map(el => (
                         <Icon
-                            key={el.key}
+                            key={el.url}
                             src={el.src}
                             url={el.url}
                             elements={icons.length}
