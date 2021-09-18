@@ -13,6 +13,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { request } from "../../../../../../../lib/er.lib";
 import { GET_MATCHES_OF_NEXT_DAY, GET_MATCHES_OF_SPECIFIC_DAY } from "../../../../../../../lib/request-destinations";
+import { selectUser } from "../../../../../../../redux/features/userSlice";
+import { useSelector } from "react-redux";
 
 export function TMMatchesBoard() {
   const [firstPage, setFirstPage] = useState([]),
@@ -21,6 +23,7 @@ export function TMMatchesBoard() {
     [firstPageItems, upDateFirstPageItems] = useState(firstPage),
     [secondPageItems, upDateSecondPageItems] = useState(secondPage),
     [matches, setMatches] = useState([]);
+  const user = useSelector( selectUser );
 
   useEffect(() => {
     upDateFirstPageItems(matches.filter((el, i) => i < 4));
@@ -122,12 +125,11 @@ export function TMMatchesBoard() {
                           teamTwoIcon={el.teamTwoIcon}
                           buyButtonName={el.buyButtonName}
                           titleName={el.titleName}
-                          clickBuy={() =>
-                            router.push({
-                              pathname: "/prediction",
-                              query: { game: el.id },
-                            })
-                          }
+                          clickBuy={() => {
+                            if ( user ) buy(el.id);
+                            else 
+                              router.push(`/registration`);
+                          }}
                         />
                       </div>
                     )}

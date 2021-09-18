@@ -15,11 +15,14 @@ import { request } from "../../../../../lib/er.lib";
 import { GET_PREDICTIONS } from "../../../../../lib/request-destinations";
 import { setMatchId } from "../../../../../redux/features/matchSlice";
 import { buy } from "../../../../../lib/project.lib";
+import { useSelector } from 'react-redux'
+import { selectUser } from "./../../../../../redux/features/userSlice";
 
 export function PrdeictionSlide() {
   const [slide_data, setSlideData] = useState([]);
   const [currentMatchId, setCurrentMatchId] = useState(null);
   const dispatch = useDispatch();
+  const user = useSelector( selectUser );
 
   useEffect(() => {
     request(GET_PREDICTIONS, {}, { auth: true })
@@ -101,12 +104,11 @@ export function PrdeictionSlide() {
             prediction={el.predictionText}
             ordinar={el.ordinarText}
             key={Math.random()}
-            clickBuy={() =>buy( el.id )
-              // router.push({
-              //   pathname: "/prediction",
-              //   query: { game: el.id },
-              // })
-            }
+            clickBuy={() => {
+              if ( user ) buy(el.id);
+              else 
+                router.push(`/registration`);
+            }}
           />
         ))}
       </Carousel>

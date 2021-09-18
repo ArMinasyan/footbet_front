@@ -11,10 +11,13 @@ import styles from "./PredictionTab.module.scss";
 import { GET_PREDICTIONS } from "/lib/request-destinations";
 import { request } from "/lib/er.lib";
 import { buy } from "../../../../../lib/project.lib";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../../../../redux/features/userSlice";
 
 export function PredictionTab({ click }) {
   const [slide_data, setSlideData] = useState([]);
   const router = useRouter();
+  const user = useSelector( selectUser );
   let showPrediction = false;
 
   useEffect(() => {
@@ -64,7 +67,11 @@ export function PredictionTab({ click }) {
             coefficent={el.coefficent}
             price={el.price}
             key={Math.random()}
-            clickBuy={() =>buy(el.id) }
+            clickBuy={() =>{
+                if ( user ) buy(el.id);
+                else 
+                  router.push(`/registration`);
+            }}
             openPayments={click}
           />
         ))}

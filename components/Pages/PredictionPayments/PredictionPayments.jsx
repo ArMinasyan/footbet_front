@@ -10,18 +10,16 @@ import { Tabs } from './Tabs/Tabs'
 
 export default function PredictionPayments() {
 
-    const
-        router = useRouter(),
         // review queries for understanding user want buy game (if ye, which game ) or not
-        openGamePaymentsPage = Object.keys(router.query).length === 0 ? false : true,
+        // openGamePaymentsPage = Object.keys(router.query).length === 0 ? false : true,
         // states
-        [showPredictionTab, setShowPredictionTabs] = useState(!openGamePaymentsPage),
-        [showPaymentTab, setShowPaymentTab] = useState(openGamePaymentsPage)
+        // [showPredictionTab, setShowPredictionTabs] = useState(!openGamePaymentsPage),
+        // [showPaymentTab, setShowPaymentTab] = useState(openGamePaymentsPage)
 
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-                <Header
+                {/* <Header
                     predClick={() => {
                         setShowPredictionTabs(true)
                         setShowPaymentTab(false)
@@ -32,14 +30,10 @@ export default function PredictionPayments() {
                         setShowPaymentTab(true)
                     }}
                     paymActive={showPaymentTab}
-                />
+                /> */}
                 <Tabs
-                    predictionTab={showPredictionTab}
-                    paymentTab={showPaymentTab}
-                    click={() => {
-                        setShowPredictionTabs(false)
-                        setShowPaymentTab(true)
-                    }}
+                    predictionTab={true}
+                    paymentTab={false}
                 />
             </div>
         </div>
