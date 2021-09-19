@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTimer } from "react-timer-hook";
 
 export function Timer({ expiryTimestamp, timeClass, timeOut }) {
@@ -6,6 +6,10 @@ export function Timer({ expiryTimestamp, timeClass, timeOut }) {
     expiryTimestamp,
     onExpire: () => timeOut(),
   });
+  useEffect(()=>{
+    if ( (seconds + minutes + hours + days) === 0 )
+    timeOut();
+  }, [seconds, minutes, hours, days, timeOut]);
   return (
     <div className={timeClass}>
       <div>
