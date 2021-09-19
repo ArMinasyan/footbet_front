@@ -7,7 +7,7 @@ export function Timer({ expiryTimestamp, timeClass, timeOut }) {
     onExpire: () => timeOut(),
   });
   useEffect(()=>{
-    if ( (seconds + minutes + hours + days) === 0 )
+    if ( !(seconds + minutes + hours + days)  )
     timeOut();
   }, [seconds, minutes, hours, days, timeOut]);
   return (
