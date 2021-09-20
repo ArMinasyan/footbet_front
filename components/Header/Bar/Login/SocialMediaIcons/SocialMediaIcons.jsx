@@ -41,7 +41,7 @@ const icons = [
 export function SocialMediaIcons() {
   async function login(provider) {
     try {
-      const userInfo = await signIn(provider)
+      const userInfo = await signIn(provider, { redirect: false })
       console.log( userInfo, 1234 );
       debugger
       if ( userInfo ) {
