@@ -8,7 +8,7 @@ import { Provider } from 'react-redux'
 import { store, persistor } from '../redux/store'
 import { PersistGate } from 'redux-persist/integration/react'
 import { resetServerContext } from 'react-beautiful-dnd';
-import { SessionProvider } from "next-auth/client"
+import { getSession, SessionProvider } from "next-auth/client"
 import"./../styles/static-empty.css";
 
 
@@ -35,11 +35,13 @@ export default function MyApp({
   )
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(ctx) {
 
   resetServerContext()
 
   return {
-    props: {}, // will be passed to the page component as props
+    props: {
+      session: await getSession(ctx)
+    }
   }
 }
