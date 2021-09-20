@@ -60,7 +60,7 @@ export function TMMatchesBoard() {
               score: match.score,
               buyButtonName: ".rowOne.buyButton",
               coefficent: match.coefficent,
-              titleName: ".rowOne.title",
+              titleName: match.country,
             };
           })
         );
