@@ -32,7 +32,7 @@ export function PredictionTab({ click }) {
               teamOneIcon: item[`team1_img_path`],
               teamTwoName: "",
               teamTwoIcon: item[`team2_img_path`],
-              prediction: showPrediction ?  item.prediction : ``,
+              prediction: item.prediction || ``,
               type: item.type,
               date: item.date,
               time: item.time,

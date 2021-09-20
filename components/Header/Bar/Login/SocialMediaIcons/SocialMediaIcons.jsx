@@ -16,6 +16,8 @@ import { request } from '/lib/er.lib';
 import { LOGIN_WITH_GOOGLE, LOGIN_WITH_VK } from '../../../../../lib/request-destinations'
 import { signIn } from 'next-auth/client'
 import Link from 'next/link';
+import axios from 'axios'
+import { host } from '../../../../../lib/constants'
 
 const icons = [
   {
@@ -39,8 +41,13 @@ const icons = [
 export function SocialMediaIcons() {
   async function login(provider) {
     try {
-      const rsp = await signIn(provider)
-      console.log( 123, rsp );
+      const userInfo = await signIn(provider)
+      if ( userInfo ) {
+        axios.post(`${host}auth/social`, userInfo).then(res => {
+          console.log(res.data.data)
+        })
+      }
+      
     }
     catch( err ) {}
   }

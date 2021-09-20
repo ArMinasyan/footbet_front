@@ -9,6 +9,7 @@ export default NextAuth({
     Providers.Google({
       clientId: '748491700753-8jfne8qudsjr7okh8tktp78ulevinvvj.apps.googleusercontent.com',
       clientSecret: 'gxKIG8LPbIb1xgljwgebWz7A',
+      
       authorizationUrl: 'https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&access_type=offline&response_type=code',
     }),
     Providers.Facebook({
@@ -56,11 +57,8 @@ export default NextAuth({
         }
       }
 
-      axios.post(`${host}auth/social`, userInfo).then(res => {
-        console.log(res.data.data)
-      })
 
-      return true
+      return userInfo
     }
   }
 })
