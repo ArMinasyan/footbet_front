@@ -51,9 +51,7 @@ export function SocialMediaIcons() {
     async function onSocialMediaBtnClick(i) {
         if (i === 0) {
           try {
-            console.log( LOGIN_WITH_FB );
             const rsp = await request( LOGIN_WITH_FB );
-            console.log( rsp )
           }
           catch ( err ) {
 
@@ -65,7 +63,6 @@ export function SocialMediaIcons() {
         else if (i === 1) {
           try {
             const rsp = await request( LOGIN_WITH_GOOGLE );
-            console.log( rsp );
           }
           catch ( err ) {
             
@@ -78,7 +75,6 @@ export function SocialMediaIcons() {
         else if ( i === 2 ) {   
           try {
             const rsp = await request( LOGIN_WITH_VK );
-            console.log( rsp );
           }
           catch ( err ) {}
                      

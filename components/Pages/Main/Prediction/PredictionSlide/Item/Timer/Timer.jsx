@@ -10,11 +10,13 @@ export function Timer({ expiryTimestamp, timeClass, timeOut }) {
     if ( !(seconds + minutes + hours + days)  )
     timeOut();
   }, [seconds, minutes, hours, days, timeOut]);
+
+  const h = ((days * 24) + hours + "").padStart(2, "0");
   return (
     <div className={timeClass}>
       <div>
         <span>
-          {hours < 10 ? "0" + hours : days ? (days * 24) + hours : hours}
+          {h}
         </span>
         :<span>{minutes < 10 ? "0" + minutes : minutes}</span>:
         <span>{seconds < 10 ? "0" + seconds : seconds}</span>

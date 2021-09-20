@@ -39,9 +39,7 @@ export function Item({
   gameDate.setHours( gameDate.getUTCHours() + 3 );
   let end = gameDate.getTime();
 
-  let time = new Date();
-  time.setSeconds(time.getSeconds() + (end - start) / 1000);
-  const gameFinished = (new Date()).getTime() > (time.getTime() + (90 * 1000 * 60));
+  const gameFinished = (new Date()).getTime() > (gameDate.getTime() + (90 * 1000 * 60));
 
 
   return (
@@ -60,7 +58,7 @@ export function Item({
                   t(`home:matches.TM.today.rowOne.gameState.started`) :  
                   t(`home:gameWillStart`) }</p>
               { (!gameStarted && !gameFinished) && <Timer
-                expiryTimestamp={time}
+                expiryTimestamp={gameDate}
                 timeClass={styles.timer}
                 timeOut={() => setGameStarted(true)}
               />}
