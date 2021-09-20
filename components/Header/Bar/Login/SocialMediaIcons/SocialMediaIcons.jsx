@@ -14,16 +14,21 @@ import { useEffect } from 'react'
 import { LOGIN_WITH_FB } from '/lib/request-destinations.js';
 import { request } from '/lib/er.lib';
 import { LOGIN_WITH_GOOGLE, LOGIN_WITH_VK } from '../../../../../lib/request-destinations'
+import { signIn } from 'next-auth/client'
+import Link from 'next/link';
 
 const icons = [
   {
     iconUrl: facebook.src,
+    provider: "facebook"
   },
   {
     iconUrl: gmail.src,
+    provider: "google"
   },
   {
     iconUrl: vk.src,
+    provider: "vk"
   }
   // {
   //   iconUrl: twitter.src,
@@ -32,73 +37,7 @@ const icons = [
 
 
 
-const responseFacebook = (response) => {
-}
-
-const responseGoogle = (response) => {
-}
-
-const TWITTER_CONSUMER_KEY = "";
-const TWITTER_CONSUMER_SECRET = "";
-
 export function SocialMediaIcons() {
-
-
-    useEffect(()=>{                         
-    //  VK.init({apiId:'7911294'});
-    },[])
-    
-    async function onSocialMediaBtnClick(i) {
-        if (i === 0) {
-          try {
-            const rsp = await request( LOGIN_WITH_FB );
-          }
-          catch ( err ) {
-
-          }
-            // const facebookLoginBtn = document.querySelector(`.facebook-login-btn`);
-            // if (facebookLoginBtn)
-            //     facebookLoginBtn.click();
-        }
-        else if (i === 1) {
-          try {
-            const rsp = await request( LOGIN_WITH_GOOGLE );
-          }
-          catch ( err ) {
-            
-          }
-            // const
-            //     googleLoginBtn = document.querySelector(`.google-login-btn`)
-            // if (googleLoginBtn)
-            //     googleLoginBtn.click();
-        }
-        else if ( i === 2 ) {   
-          try {
-            const rsp = await request( LOGIN_WITH_VK );
-          }
-          catch ( err ) {}
-                     
-            // VK.Auth.login(function(response){
-            //     if(response.session){
-            //         /*User authorization succeeded*/
-            //         if(response.status=='connected'){
-            //             /*Selected user access settings, if they are requested*/
-            //         }
-            //     } else {
-            //         /*User clicks the cancel button in the authorization window*/
-            //     }
-            // });
-        }
-        else if ( i === 3 ) {
-
-        }
-    }
-
-    const twitterAuthHandler = ( err, data ) => {
-    }
-
-    
-
     return (
         <div className={styles.conteiner}>
             <div className={styles.content}>
@@ -108,46 +47,19 @@ export function SocialMediaIcons() {
                             <div className={styles.iconContent} key={Math.random() * 10}>
                                 <a target="_blank">
                                     <div className={styles.iconBody}>
-                                        <img
-                                            src={el.iconUrl}
-                                            alt="" onClick={() => onSocialMediaBtnClick(i)}
-                                            className={styles.icon}
-                                            style={{ cursor: 'pointer' }}
-                                        />
-                                        {
-                                            (i === 0) && (
-                                                <ReactFacebookLogin
-                                                    containerStyle={{ display: `none` }}
-                                                    cssClass="facebook-login-btn"
-                                                    appId="118863770361683"
-                                                    fields="name,email,picture"
-                                                    callback={responseFacebook} />
-                                            )
-                                        }
-                                        {
-                                            (i === 1) && (
-                                                <GoogleLogin
-                                                    clientId="1089618047943-r91su9qkc0c9npo1tfoff3sp8421bt5g.apps.googleusercontent.com"
-                                                    render={renderProps => (
-                                                        <button
-                                                            onClick={renderProps.onClick}
-                                                            disabled={renderProps.disabled}
-                                                            style={{ display: 'none' }}
-                                                            className="google-login-btn"
-                                                        />)}
-                                                    cookiePolicy={'single_host_origin'}
-                                                    onSuccess={responseGoogle}
-                                                    onFailure={responseGoogle}
-                                                />
-                                            ) 
-                                        }
-                                        {                                            
-                                            <TwitterLogin
-                                                authCallback={twitterAuthHandler}
-                                                consumerKey={TWITTER_CONSUMER_KEY}
-                                                consumerSecret={TWITTER_CONSUMER_SECRET}
+                                        <Link href={'api/auth/signin'}>
+                                          <a onClick={e => {
+                                            e.preventDefault();
+                                            signIn(el.provider)
+                                          }}>
+                                            <img
+                                                src={el.iconUrl}
+                                                alt=""
+                                                className={styles.icon}
+                                                style={{ cursor: 'pointer' }}
                                             />
-                                        }
+                                          </a>
+                                        </Link>
                                     </div>
                                 </a>
                             </div>
