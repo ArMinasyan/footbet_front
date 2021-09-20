@@ -42,6 +42,8 @@ export function SocialMediaIcons() {
   async function login(provider) {
     try {
       const userInfo = await signIn(provider)
+      console.log( userInfo, 1234 );
+      debugger
       if ( userInfo ) {
         axios.post(`${host}auth/social`, userInfo).then(res => {
           console.log(res.data.data)
