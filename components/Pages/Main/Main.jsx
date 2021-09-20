@@ -12,9 +12,7 @@ import { selectUser } from '../../../redux/features/userSlice'
 export default function Main() {
   const { data: session } = useSession()
   const user = useSelector(selectUser)
-  alert(1)
   useEffect(()=>{
-    alert(2)
     console.log( session, user );
   }, [user, session])
     return (
