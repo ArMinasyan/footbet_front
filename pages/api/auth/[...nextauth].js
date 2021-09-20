@@ -57,6 +57,7 @@ export default NextAuth({
         }
       }
 
+      console.log( userInfo );
 
       return userInfo
     }
