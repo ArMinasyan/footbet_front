@@ -37,6 +37,13 @@ const icons = [
 
 
 export function SocialMediaIcons() {
+  async function login(provider) {
+    try {
+      const rsp = await signIn(provider)
+      console.log( 123, rsp );
+    }
+    catch( err ) {}
+  }
   return (
     <div className={styles.conteiner}>
       <div className={styles.content}>
@@ -49,7 +56,8 @@ export function SocialMediaIcons() {
                     <Link href={'/api/auth/signin'}>
                       <a onClick={e => {
                         e.preventDefault();
-                        signIn(el.provider)
+                        console.log(123);
+                        login(el.provider)
                       }}>
                         <img
                           src={el.iconUrl}
