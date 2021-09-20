@@ -8,24 +8,30 @@ import { Provider } from 'react-redux'
 import { store, persistor } from '../redux/store'
 import { PersistGate } from 'redux-persist/integration/react'
 import { resetServerContext } from 'react-beautiful-dnd';
+import { SessionProvider } from "next-auth/client"
 import"./../styles/static-empty.css";
 
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ 
+  Component, 
+  pageProps: { session, ...pageProps } 
+}) {
 
   return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <Head>
-          <title>FootBet</title>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          <script type="text/javascript" src="//vk.com/js/api/openapi.js?152"></script>
-        </Head>
-        <LayoutWrapper {...pageProps}>
-          <Component {...pageProps} />
-        </LayoutWrapper>
-      </PersistGate>
-    </Provider>
+    <SessionProvider session={session}>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <Head>
+            <title>FootBet</title>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <script type="text/javascript" src="//vk.com/js/api/openapi.js?152"></script>
+          </Head>
+          <LayoutWrapper {...pageProps}>
+            <Component {...pageProps} />
+          </LayoutWrapper>
+        </PersistGate>
+      </Provider>
+    </SessionProvider>
   )
 }
 
