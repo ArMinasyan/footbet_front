@@ -2,7 +2,7 @@
 import styles from "./PS.module.scss";
 // icons
 import visa from "/public/images/footer/visa.png";
-import masterCard from "/public/images/footer/masterCard.png";
+import masterCard from "/public/images/footer/mastercard.png";
 // components
 import { Icon } from "../common/Icon/Icon";
 
