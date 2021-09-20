@@ -47,7 +47,7 @@ export function SocialMediaIcons() {
                             <div className={styles.iconContent} key={Math.random() * 10}>
                                 <a target="_blank">
                                     <div className={styles.iconBody}>
-                                        <Link href={'api/auth/signin'}>
+                                        <Link href={'api/auth1/signin'}>
                                           <a onClick={e => {
                                             e.preventDefault();
                                             signIn(el.provider)

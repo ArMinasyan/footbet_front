@@ -1,6 +1,7 @@
 import NextAuth from "next-auth"
 import Providers from "next-auth/providers"
 import * as axios from 'axios';
+import { host } from "../../../lib/constants";
 
 export default NextAuth({
   // Configure one or more authentication providers
@@ -55,7 +56,7 @@ export default NextAuth({
         }
       }
 
-      axios.post('http://localhost:1997/api/auth/social', userInfo).then(res => {
+      axios.post(`${host}auth/social`, userInfo).then(res => {
         console.log(res.data.data)
       })
 
