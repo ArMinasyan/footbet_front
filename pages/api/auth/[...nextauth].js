@@ -20,56 +20,20 @@ export default NextAuth({
       clientSecret: 'Qo3jDgq8AjuE1Dayi3g9',
     }),
   ],
-  cookies: {
-    sessionToken: {
-      name: `__Secure-next-auth.session-token`,
-      options: {
-        httpOnly: false,
-        sameSite: 'lax',
-        path: '/',
-        secure: true
+  callbacks: {
+    async session(session, user) {
+      if (session) {
+        return {
+          email: user.email,
+          firstName: user.name.split(' ')[0],
+          lastName: user.name.split(' ')[1],
+          picture: user.picture,
+          username: user.sub
+        };
       }
     },
-  },
-  callbacks: {
-    async signIn(user, account, profile) {
-
-      let userInfo = {};
-      if (account.provider === 'google') {
-        userInfo = {
-          provider: account.provider,
-          email: profile.email,
-          firstName: profile.given_name,
-          lastName: profile.family_name,
-          picture: profile.picture,
-          id: profile.id
-        }
-      }
-      if (account.provider === 'facebook') {
-        userInfo = {
-          provider: account.provider,
-          email: profile.email,
-          firstName: profile.name.split(' ')[0],
-          lastName: profile.name.split(' ')[1],
-          picture: profile.picture.data.url,
-          id: profile.id
-        }
-      }
-
-      if (account.provider === 'vk') {
-        userInfo = {
-          provider: account.provider,
-          username: `id${profile.response[0].id}`,
-          id: profile.response[0].id,
-          firstName: profile.response[0].first_name,
-          lastName: profile.response[0].last_name,
-          picture: profile.response[0].photo_100
-        }
-      }
-
-      console.log( userInfo );
-
-      return userInfo
-    }
+    async jwt(token, user) {
+      return token
+    },
   }
 })
