@@ -9,7 +9,6 @@ export default NextAuth({
     Providers.Google({
       clientId: '748491700753-8jfne8qudsjr7okh8tktp78ulevinvvj.apps.googleusercontent.com',
       clientSecret: 'gxKIG8LPbIb1xgljwgebWz7A',
-      
       authorizationUrl: 'https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&access_type=offline&response_type=code',
     }),
     Providers.Facebook({
@@ -21,6 +20,17 @@ export default NextAuth({
       clientSecret: 'Qo3jDgq8AjuE1Dayi3g9',
     }),
   ],
+  cookies: {
+    sessionToken: {
+      name: `__Secure-next-auth.session-token`,
+      options: {
+        httpOnly: false,
+        sameSite: 'lax',
+        path: '/',
+        secure: true
+      }
+    },
+  },
   callbacks: {
     async signIn(user, account, profile) {
 
