@@ -21,6 +21,9 @@ export default NextAuth({
     }),
   ],
   jwt: {
+    verificationOptions: {
+      algorithms: ['HS512']
+    },
     signingKey: '52e6af576381512ad7b493c485ac5e78cf32ef5e74f758a954e263317fb4875a'
   },
   callbacks: {
