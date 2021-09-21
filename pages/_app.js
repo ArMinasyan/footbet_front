@@ -12,13 +12,12 @@ import { getSession, SessionProvider } from "next-auth/client"
 import"./../styles/static-empty.css";
 
 
-export default function MyApp({ 
-  Component, 
-  pageProps: { session, ...pageProps } 
+export default function MyApp({
+  Component,
+  pageProps: { session, ...pageProps }
 }) {
 
   return (
-    <SessionProvider session={session}>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <Head>
@@ -31,7 +30,6 @@ export default function MyApp({
           </LayoutWrapper>
         </PersistGate>
       </Provider>
-    </SessionProvider>
   )
 }
 
