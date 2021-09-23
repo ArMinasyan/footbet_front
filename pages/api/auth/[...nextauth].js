@@ -32,9 +32,8 @@ export default NextAuth({
         };
       }
     },
-    redirect(url, baseUrl) {
-      console.log(url)
-      console.log(baseUrl)
+    async redirect(url, baseUrl) {
+      return baseUrl
     }
   }
 })
