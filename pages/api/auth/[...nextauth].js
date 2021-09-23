@@ -32,8 +32,9 @@ export default NextAuth({
         };
       }
     },
-    async jwt(token, user) {
-      return token
-    },
+    redirect(url, baseUrl) {
+      console.log(url)
+      console.log(baseUrl)
+    }
   }
 })
