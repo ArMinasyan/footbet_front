@@ -41,19 +41,18 @@ const icons = [
 export function SocialMediaIcons() {
   async function login(provider) {
     try {
-      const userInfo = await signIn(provider, { redirect: 'https://footbet24.com' })
-      console.log(userInfo, 1234);
+      const userInfo = await signIn(provider, { redirect: false })
+      console.log( userInfo, 1234 );
       debugger
-      if (userInfo) {
+      if ( userInfo ) {
         axios.post(`${host}auth/social`, userInfo).then(res => {
           console.log(res.data.data)
         })
       }
 
-    } catch (err) {
     }
+    catch( err ) {}
   }
-
   return (
     <div className={styles.conteiner}>
       <div className={styles.content}>
