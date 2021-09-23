@@ -15,7 +15,7 @@ export default function Main() {
   useEffect(() => {
     if (session) {
       console.log('session', session)
-      axios.post('http://localhost:1997/api-1/auth/social', session).then(res => {
+      axios.post('https://footbet24.com/api-1auth/social', session).then(res => {
         console.log(res.data.data)
       })
     }
