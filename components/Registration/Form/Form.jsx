@@ -33,7 +33,7 @@ export function Form({ title }) {
     const router = useRouter();
     const dRef = useRef();
 
-  const formatDate = date => `${date.getFullYear()}-${(date.getMonth()+1+'').padStart(2, '0')}-${(date.getDate()+'').padStart(2, '0')}`;
+  const formatDate = date => !date ? `` : `${date.getFullYear()}-${(date.getMonth()+1+'').padStart(2, '0')}-${(date.getDate()+'').padStart(2, '0')}`;
 
     const
         // translation consfigs
