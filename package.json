@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 1998",
+    "dev": "next dev -p 3000",
     "build": "next build",
     "start:dev": "NEXTAUTH_URL=http://localhost:1998 NODE_ENV=production node server.js",
     "start": "NEXTAUTH_URL=https://footbet24.com next start -p 1998",

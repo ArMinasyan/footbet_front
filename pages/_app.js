@@ -8,7 +8,7 @@ import { Provider } from 'react-redux'
 import { store, persistor } from '../redux/store'
 import { PersistGate } from 'redux-persist/integration/react'
 import { resetServerContext } from 'react-beautiful-dnd';
-import { getSession, SessionProvider } from "next-auth/client"
+import { getSession, Provider as SessionProvider } from "next-auth/client"
 import"./../styles/static-empty.css";
 
 
@@ -18,6 +18,7 @@ export default function MyApp({
 }) {
 
   return (
+    <SessionProvider session={session}>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <Head>
@@ -30,6 +31,7 @@ export default function MyApp({
           </LayoutWrapper>
         </PersistGate>
       </Provider>
+    </SessionProvider>
   )
 }
 

@@ -114,9 +114,10 @@ export function SpecificDayMatchesBoard({ day }) {
                 style={{ width: "100%" }}
               >
                 {firstPageItems.map((el, i) => (
-                  <Draggable index={i} key={Math.random()} draggableId={el.id}>
-                    {(provided) => (
+                  // <Draggable index={i} key={Math.random()} draggableId={el.id}>
+                  //   {(provided) => (
                       <div
+                        key={el.id}
                         style={{ width: "100%" }}
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
@@ -140,8 +141,8 @@ export function SpecificDayMatchesBoard({ day }) {
                           }
                         />
                       </div>
-                    )}
-                  </Draggable>
+                  //   )}
+                  // </Draggable>
                 ))}
                 {provided.placeholder}
               </div>

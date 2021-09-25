@@ -16,20 +16,23 @@ export function LoggedWallper({
     click
 }) {
     const data = useSelector(selectUser);
-    const [ photo, setPhoto ] = useState(data.photo)
-    const [ fullname, setFullname ] = useState(data.username)
+    const [ photo, setPhoto ] = useState(data?.photo)
+    const [ fullname, setFullname ] = useState(data?.username)
     useEffect(()=>{
-        setPhoto( data.photo )
-        setFullname( data.username )
+        setPhoto( data?.photo )
+        setFullname( data?.username )
     },[data])
 
+    
+    if ( !data )
+      return <></>
     return (
         <div className={styles.container}>
             <div className={styles.content}>
                 <div className={styles.user_photo}>
                     <Link href='/personal'>
                         <img
-                            src={photo || userDefaultIcon.src}
+                            src={img || userDefaultIcon.src}
                             alt={`${fullname} icon`} />
                     </Link>
                 </div>

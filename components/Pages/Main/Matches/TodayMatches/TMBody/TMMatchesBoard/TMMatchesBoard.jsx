@@ -107,9 +107,10 @@ export function TMMatchesBoard() {
                 style={{ width: "100%" }}
               >
                 {firstPageItems.map((el, i) => (
-                  <Draggable index={i} key={Math.random()} draggableId={el.id}>
-                    {(provided) => (
+                  // <Draggable index={i} key={Math.random()} draggableId={el.id}>
+                  //   {(provided) => (
                       <div
+                        key={el.id}
                         style={{ width: "100%" }}
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
@@ -132,8 +133,8 @@ export function TMMatchesBoard() {
                           }}
                         />
                       </div>
-                    )}
-                  </Draggable>
+                  //   )}
+                  // </Draggable>
                 ))}
                 {provided.placeholder}
               </div>

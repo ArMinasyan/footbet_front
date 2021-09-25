@@ -13,11 +13,13 @@ export function Logged( ) {
         [showUserDrop, setShowUserDrop] = useState(false)
 
     const data = useSelector(selectUser);
-    const [photo,setPhoto] = useState(data.photo);
+    const [photo,setPhoto] = useState(data?.photo);
     useEffect (()=>{
-        setPhoto(data.photo)
+        setPhoto(data?.photo)
     }, [data]);
 
+    if ( !data )
+      return <></>
     return (
         <div
             className={styles.container}
