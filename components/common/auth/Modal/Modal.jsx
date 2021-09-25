@@ -22,6 +22,8 @@ export function Modal({
     containerStyles = null,
     contentStyles = null,
     otherStyles = null,
+    onClick = null,
+    customized = false,
     portalLocation = 'modal-conteiner' }) {
 
 
@@ -30,14 +32,16 @@ export function Modal({
         [showModal, setShowModal] = useState(false)
 
     useEffect(() => {
-        setShowModal(true)
+      setShowModal(true)
+      if ( !customized ) {
         document.addEventListener("mousedown", handleClose);
 
         return () => {
             handle_overflow_on_close();
             document.removeEventListener("mousedown", handleClose);
         };
-    }, [handleClose])
+      }
+    }, [])
 
     const node = useRef()
 
@@ -54,6 +58,12 @@ export function Modal({
 
     const modal = (
         <div
+          onClick={()=>{
+            if ( customized ) {
+              handle_overflow_on_close()
+            }
+            onClick()
+          }}
             className={`${styles.modalConteiner} ${containerStyles}`}
             style={{
                 top: '0px',

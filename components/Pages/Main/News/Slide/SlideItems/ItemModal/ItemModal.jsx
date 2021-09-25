@@ -11,8 +11,10 @@ export function ItemModal({
             onClose={onModalClose}
             containerStyles={styles.Mcontainer}
             contentStyles={styles.Mcontent}
+            customized
+            onClick={onModalClose}
         >
-            <div className={styles.container}>
+            <div onClick={(e)=>e.stopPropagation()} className={styles.container}>
                 <div className={styles.img_content}>
                     <img src={img} alt="" />
                 </div>

@@ -1,6 +1,7 @@
 // hooks and helpers
 import { useRouter } from 'next/dist/client/router';
 import { useEffect, useRef } from 'react';
+import { signOut } from 'next-auth/client';
 import { useDispatch } from 'react-redux';
 import userDefaultIcon from '/public/images/common/userDefault.png'
 // translation 
@@ -39,6 +40,7 @@ export function LoggedDrop({ onClose, user }) {
 
     function _logout() {
         dispatch(logout());
+        signOut();
         router.push(`/`);
     }    
 
