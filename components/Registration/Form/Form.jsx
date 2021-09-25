@@ -27,6 +27,7 @@ import { useRouter } from 'next/dist/client/router'
 export function Form({ title }) {
     const formRef = useRef();
     const router = useRouter();
+    const dRef = useRef();
 
     const
         // translation consfigs
@@ -111,6 +112,12 @@ export function Form({ title }) {
                         label={calendar}
                         id='birth_date'
                         type='text'
+                        onClick={()=>{
+                          if ( dRef.current ) {
+                            dRef.current.focus()
+                          }
+                        }}
+                        ref={dRef}
                         placeholder={translate('birthDate')}
                         errors={(!!errors.dateOfBirth)}
                         other={{

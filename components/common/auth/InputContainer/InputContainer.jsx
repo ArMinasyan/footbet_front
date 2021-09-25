@@ -6,6 +6,8 @@ export function InputContainer({
     type,
     placeholder,
     errors,
+    ref,
+    onClick,
     other }) {
 
     return (
@@ -21,8 +23,9 @@ export function InputContainer({
                 </div>
             }
             <div className={styles.input_container}>
-                <div className={errors ? styles.input_error_content : styles.input_success_content}>
+                <div onClick={onClick} className={errors ? styles.input_error_content : styles.input_success_content}>
                     <input
+                        ref={ref}
                         id={id}
                         type={type}
                         placeholder={placeholder}

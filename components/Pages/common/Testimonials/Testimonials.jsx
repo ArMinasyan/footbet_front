@@ -39,7 +39,7 @@ export function Testimonials({
                     setFeedBacks(
                         predictions.data.data.map(feedBack => ({
                             avatar: avatar.src,
-                            nikName: "Lorem ipsum",
+                            nikName: feedBack.username,
                             rateing: feedBack.stars,
                             description: feedBack.comment,
                             date: {
