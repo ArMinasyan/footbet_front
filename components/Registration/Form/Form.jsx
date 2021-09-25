@@ -114,38 +114,39 @@ export function Form({ title }) {
                         other={register('username')}
                     />
                     {
-                      isMobile() ? (
-                        <>                        
+                      
+                      // isMobile() ? (
+                      //   <>                        
                         
-                          <InputContainer
-                            label={calendar}
-                            id='birth_date'
-                            type='text'
-                            placeholder={translate('birthDate')}
-                            errors={(!!errors.dateOfBirth)}
-                            other={
-                              {
-                                ...register('dateOfBirth'),
-                                onClick:()=>setShowCalendar(true),
-                                onFocus: (e) => setShowCalendar(true),
-                                value: formatDate(date)
-                              }
-                            }
-                          />
-                          {/* { 
-                          showCalendar &&                            
-                            <DatePickerInput
-                              placeholder="mm/dd/yyyy"
-                              labelText="Date Picker label"
-                              id="date-picker-single"
-                              onChange={date => {
-                                setDate(val);
-                                setShowCalendar(false);
-                              }}
-                            />
-                          } */}
-                        </>
-                      ) : (
+                      //     <InputContainer
+                      //       label={calendar}
+                      //       id='birth_date'
+                      //       type='text'
+                      //       placeholder={translate('birthDate')}
+                      //       errors={(!!errors.dateOfBirth)}
+                      //       other={
+                      //         {
+                      //           ...register('dateOfBirth'),
+                      //           // onClick:()=>setShowCalendar(true),
+                      //           // onFocus: (e) => setShowCalendar(true),
+                      //           value: formatDate(date)
+                      //         }
+                      //       }
+                      //     />
+                      //     {/* { 
+                      //     showCalendar &&                            
+                      //       <DatePickerInput
+                      //         placeholder="mm/dd/yyyy"
+                      //         labelText="Date Picker label"
+                      //         id="date-picker-single"
+                      //         onChange={date => {
+                      //           setDate(val);
+                      //           setShowCalendar(false);
+                      //         }}
+                      //       />
+                      //     } */}
+                      //   </>
+                      // ) : (
                         <InputContainer
                             label={calendar}
                             id='birth_date'
@@ -164,7 +165,7 @@ export function Form({ title }) {
                                 onBlur: (e) => e.target.type = 'text'
                             }}
                         />
-                      ) 
+                      // ) 
                     }
                     <InputContainer
                         label={email}

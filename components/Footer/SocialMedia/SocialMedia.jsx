@@ -18,7 +18,8 @@ export function SocialMedia() {
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-                <div className={styles.controler}>
+                <div>
+                {/* <div className={styles.controler}> */}
                     <div className={styles.social_medias}>
                         <p>
                             {
