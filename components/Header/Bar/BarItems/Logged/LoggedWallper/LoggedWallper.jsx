@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useEffect,useState } from 'react'
 import { useSelector } from 'react-redux'
+import { isMobile } from '../../../../../../lib/er.lib'
 import { selectUser } from '../../../../../../redux/features/userSlice'
 // styles
 import styles from './LoggedWallper.module.scss'
@@ -32,6 +33,8 @@ export function LoggedWallper({
                 <div className={styles.user_photo}>
                     <Link href='/personal'>
                         <img
+                          width={isMobile() ? 30 : 36}
+                          height={isMobile() ? 30 : 36}
                             src={img || userDefaultIcon.src}
                             alt={`${fullname} icon`} />
                     </Link>

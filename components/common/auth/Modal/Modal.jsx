@@ -62,7 +62,8 @@ export function Modal({
             if ( customized ) {
               handle_overflow_on_close()
             }
-            onClick()
+            if (onClick)
+              onClick()
           }}
             className={`${styles.modalConteiner} ${containerStyles}`}
             style={{

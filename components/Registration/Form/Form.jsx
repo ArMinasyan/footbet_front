@@ -23,8 +23,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useRef, useState } from 'react'
 import { useRouter } from 'next/dist/client/router'
 
-import Calendar from 'react-calendar';
-
+// import { DatePickerInput } from 'carbon-components-react';
 
 export function Form({ title }) {
   const [ showCalendar, setShowCalendar ] = useState(false);
@@ -116,32 +115,35 @@ export function Form({ title }) {
                     />
                     {
                       isMobile() ? (
-                        <>
+                        <>                        
+                        
                           <InputContainer
-                              label={calendar}
-                              id='birth_date'
-                              type='text'
-                              placeholder={translate('birthDate')}
-                              errors={(!!errors.dateOfBirth)}
-                              other={
-                                {
-                                  ...register('dateOfBirth'),
-                                  onClick:()=>setShowCalendar(true),
-                                  onFocus: (e) => setShowCalendar(true),
-                                  readOnly: true,
-                                  value: formatDate(date)
-                                }
+                            label={calendar}
+                            id='birth_date'
+                            type='text'
+                            placeholder={translate('birthDate')}
+                            errors={(!!errors.dateOfBirth)}
+                            other={
+                              {
+                                ...register('dateOfBirth'),
+                                onClick:()=>setShowCalendar(true),
+                                onFocus: (e) => setShowCalendar(true),
+                                value: formatDate(date)
                               }
+                            }
                           />
-                          { 
-                            showCalendar && <Calendar
-                              value={date}
-                              onChange={(val)=>{
+                          {/* { 
+                          showCalendar &&                            
+                            <DatePickerInput
+                              placeholder="mm/dd/yyyy"
+                              labelText="Date Picker label"
+                              id="date-picker-single"
+                              onChange={date => {
                                 setDate(val);
                                 setShowCalendar(false);
                               }}
                             />
-                          }
+                          } */}
                         </>
                       ) : (
                         <InputContainer
