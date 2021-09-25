@@ -15,19 +15,25 @@ import calendar from '/public/images/register/calendar.svg'
 import email from '/public/images/register/mail.svg'
 import phone from '/public/images/register/phone.svg'
 import key from '/public/images/register/key.svg'
-import { request } from '../../../lib/er.lib'
+import { isMobile, request } from '../../../lib/er.lib'
 import { REGISTER } from '../../../lib/request-destinations'
 import { Ball } from '../../common/auth/BallRightCorner/Ball'
 
 import { ToastContainer, toast } from 'react-toastify';
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { useRouter } from 'next/dist/client/router'
+
+import Calendar from 'react-calendar';
 
 
 export function Form({ title }) {
+  const [ showCalendar, setShowCalendar ] = useState(false);
+  const [ date, setDate ] = useState(null); 
     const formRef = useRef();
     const router = useRouter();
     const dRef = useRef();
+
+  const formatDate = date => `${date.getFullYear()}-${(date.getMonth()+1+'').padStart(2, '0')}-${(date.getDate()+'').padStart(2, '0')}`;
 
     const
         // translation consfigs
@@ -66,7 +72,7 @@ export function Form({ title }) {
         submit = async ( e ) => {
             e.preventDefault();
             const registerFormData = new FormData( formRef.current );
-            const dateOfBirth = registerFormData.get(`dateOfBirth`) || "";
+            const dateOfBirth = isMobile() ? formatDate(date) : registerFormData.get(`dateOfBirth`) || "";
             const [ year, month, date ] = dateOfBirth.split(`-`);
             if ( year && month && date ) {
                 registerFormData.delete( `dateOfBirth` );
@@ -108,24 +114,56 @@ export function Form({ title }) {
                         errors={(!!errors.username)}
                         other={register('username')}
                     />
-                    <InputContainer
-                        label={calendar}
-                        id='birth_date'
-                        type='text'
-                        onClick={()=>{
-                          if ( dRef.current ) {
-                            dRef.current.focus()
+                    {
+                      isMobile() ? (
+                        <>
+                          <InputContainer
+                              label={calendar}
+                              id='birth_date'
+                              type='text'
+                              placeholder={translate('birthDate')}
+                              errors={(!!errors.dateOfBirth)}
+                              other={
+                                {
+                                  ...register('dateOfBirth'),
+                                  onClick:()=>setShowCalendar(true),
+                                  onFocus: (e) => setShowCalendar(true),
+                                  readOnly: true,
+                                  value: formatDate(date)
+                                }
+                              }
+                          />
+                          { 
+                            showCalendar && <Calendar
+                              value={date}
+                              onChange={(val)=>{
+                                setDate(val);
+                                setShowCalendar(false);
+                              }}
+                            />
                           }
-                        }}
-                        ref={dRef}
-                        placeholder={translate('birthDate')}
-                        errors={(!!errors.dateOfBirth)}
-                        other={{
-                            ...register('dateOfBirth'),
-                            onFocus: (e) => e.target.type = 'date',
-                            onBlur: (e) => e.target.type = 'text'
-                        }}
-                    />
+                        </>
+                      ) : (
+                        <InputContainer
+                            label={calendar}
+                            id='birth_date'
+                            type='text'
+                            onClick={()=>{
+                              if ( dRef.current ) {
+                                dRef.current.focus()
+                              }
+                            }}
+                            ref={dRef}
+                            placeholder={translate('birthDate')}
+                            errors={(!!errors.dateOfBirth)}
+                            other={{
+                                ...register('dateOfBirth'),
+                                onFocus: (e) => e.target.type = 'date',
+                                onBlur: (e) => e.target.type = 'text'
+                            }}
+                        />
+                      ) 
+                    }
                     <InputContainer
                         label={email}
                         id='email'
