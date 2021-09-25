@@ -7,6 +7,7 @@ import styles from '../boardsStyle.module.scss'
 import { useEffect, useState } from 'react';
 import { request } from '../../../../../lib/er.lib'
 import { GET_MATCHES_BY_TYPE } from '../../../../../lib/request-destinations';
+import { buy } from '../../../../../lib/project.lib';
 
 export function BsStGames() {
 
@@ -52,10 +53,7 @@ export function BsStGames() {
                             price={el.price}
                             text={el.name}
                             key={`key-${i}`}
-                            clickBuy={() => router.push({
-                                pathname: '/prediction',
-                                query: { game: el.id }
-                            })}
+                            clickBuy={() =>buy(el.id, true)}
                         />
                     ))
                 }

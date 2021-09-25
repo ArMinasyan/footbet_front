@@ -127,7 +127,7 @@ export function TMMatchesBoard() {
                           buyButtonName={el.buyButtonName}
                           titleName={el.titleName}
                           clickBuy={() => {
-                            if ( user ) buy(el.id);
+                            if ( user )  router.push( '/prediction');
                             else 
                               router.push(`/registration`);
                           }}
