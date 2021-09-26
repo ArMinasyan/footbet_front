@@ -1,5 +1,5 @@
 // hooks
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // translations
 import useTranslation from "next-translate/useTranslation";
 // styles
@@ -8,6 +8,7 @@ import styles from "./Item.module.scss";
 import { Timer } from "./Timer/Timer";
 import { PredictionModal } from "./PredictionModal/PredictionModal";
 import { useRouter } from "next/dist/client/router";
+import { parseDate } from "../../../../../../lib/er.lib";
 
 export function Item({
   teamOneName,
@@ -34,10 +35,9 @@ export function Item({
     // setShowPrediction(!showPrediction);
     router.push(`/prediction`);
   }
-  let start = new Date().getTime();
-  const gameDate = new Date(expiryTimestamp);
+
+  const gameDate = parseDate(expiryTimestamp, `.`);
   gameDate.setHours( gameDate.getUTCHours() + 3 );
-  let end = gameDate.getTime();
 
   const gameFinished = (new Date()).getTime() > (gameDate.getTime() + (90 * 1000 * 60));
 
@@ -57,10 +57,11 @@ export function Item({
                 gameStarted ? 
                   t(`home:matches.TM.today.rowOne.gameState.started`) :  
                   t(`home:gameWillStart`) }</p>
-              { (!gameStarted && !gameFinished) && <Timer
+              { (!gameFinished) && <Timer
                 expiryTimestamp={gameDate}
                 timeClass={styles.timer}
-                timeOut={() => setGameStarted(true)}
+                gameStarted={gameStarted}
+                timeOut={(v) => setGameStarted(v)}
               />}
             </div>
             <div className={styles.team}>

@@ -8,7 +8,7 @@ export function Timer({ expiryTimestamp, timeClass, timeOut }) {
   });
   useEffect(()=>{
     if ( !(seconds + minutes + hours + days)  )
-    timeOut();
+      timeOut();
   }, [seconds, minutes, hours, days, timeOut]);
 
   const h = ((days * 24) + hours + "").padStart(2, "0");

@@ -1,6 +1,7 @@
 // hooks and helpers
 import { useRouter } from "next/dist/client/router";
 import { useState, useEffect } from "react";
+import moment from 'moment';
 //components
 import Carousel from "react-elastic-carousel";
 import { Arrow } from "./Arrows/Arrow";
@@ -25,7 +26,7 @@ export function PrdeictionSlide() {
   const user = useSelector( selectUser );
 
   useEffect(() => {
-    request(GET_PREDICTIONS, {}, { auth: true })
+    request(GET_PREDICTIONS(Intl.DateTimeFormat().resolvedOptions().timeZone), {}, { auth: true })
       .then((rsp) => {
         // toast(`Successfully registered`)
         setSlideData(

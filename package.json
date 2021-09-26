@@ -16,6 +16,7 @@
     "axios": "^0.21.1",
     "carbon-components": "^10.44.0",
     "carbon-components-react": "^7.44.2",
+    "moment": "^2.29.1",
     "next": "^11.1.2",
     "next-auth": "^3.29.0",
     "next-redux-wrapper": "^7.0.2",

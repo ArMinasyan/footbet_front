@@ -19,9 +19,9 @@ export function PredictionTab({ click }) {
   const router = useRouter();
   const user = useSelector( selectUser );
   let showPrediction = false;
-
+  // alert(moment().parseZone().zoneName())
   useEffect(() => {
-    request(GET_PREDICTIONS, {}, { auth: true })
+    request(GET_PREDICTIONS(Intl.DateTimeFormat().resolvedOptions().timeZone), {}, { auth: true })
       .then((rsp) => {
         // toast(`Successfully registered`)
         setSlideData(
