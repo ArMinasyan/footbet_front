@@ -5,13 +5,14 @@ export function InputContainer({
     id,
     type,
     placeholder,
+    className='',
     errors,
     ref,
     onClick,
     other }) {
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container + ' ' + className}>
             {label &&
                 <div className={styles.label_content}>
                     <label htmlFor={id}>
@@ -28,7 +29,7 @@ export function InputContainer({
                         ref={ref}
                         id={id}
                         type={type}
-                        placeholder={placeholder}
+                        placeholder={type !== `date` ? placeholder : undefined}
                         {...other}
                     />
                 </div>

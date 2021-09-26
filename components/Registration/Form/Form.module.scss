@@ -32,6 +32,41 @@ $formHeight: 758px;
     }
 
     @include animation();
+
+    .dateInput {
+      width: 100%;
+      margin: 0 0 4.7% 5px;
+      label {
+        width: 96%;
+        display: flex;
+        span {
+          width: 36px;
+          height: 36px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 5.4px;
+          border-radius: 100%;
+          background-color: rgba(255, 255, 251, 0.09);
+        }
+        input {
+          -webkit-appearance: none;
+          padding: 16px;
+          font-family: "Arsenal", sans-serif;
+          font-size: 11px;
+          line-height: 14px;
+          letter-spacing: 0.15em;
+          width: 95%;
+          margin-left: 5px;
+          outline: none;
+          box-sizing: border-box;
+          border-radius: 10px;
+          color: rgba(255, 255, 255, 0.5);
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          background: rgba(196, 196, 196, 0.2);
+        }
+      }
+    }
 }
 .ball {
     position: absolute;

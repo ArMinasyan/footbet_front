@@ -71,7 +71,7 @@ export function Form({ title }) {
         submit = async ( e ) => {
             e.preventDefault();
             const registerFormData = new FormData( formRef.current );
-            const dateOfBirth = isMobile() ? formatDate(date) : registerFormData.get(`dateOfBirth`) || "";
+            const dateOfBirth = isMobile() ? formatDate(new Date(date)) : registerFormData.get(`dateOfBirth`) || "";
             const [ year, month, date ] = dateOfBirth.split(`-`);
             if ( year && month && date ) {
                 registerFormData.delete( `dateOfBirth` );
@@ -115,38 +115,42 @@ export function Form({ title }) {
                     />
                     {
                       
-                      // isMobile() ? (
-                      //   <>                        
+                      isMobile() ? (
+                        <>                        
                         
-                      //     <InputContainer
-                      //       label={calendar}
-                      //       id='birth_date'
-                      //       type='text'
-                      //       placeholder={translate('birthDate')}
-                      //       errors={(!!errors.dateOfBirth)}
-                      //       other={
-                      //         {
-                      //           ...register('dateOfBirth'),
-                      //           // onClick:()=>setShowCalendar(true),
-                      //           // onFocus: (e) => setShowCalendar(true),
-                      //           value: formatDate(date)
-                      //         }
-                      //       }
-                      //     />
-                      //     {/* { 
-                      //     showCalendar &&                            
-                      //       <DatePickerInput
-                      //         placeholder="mm/dd/yyyy"
-                      //         labelText="Date Picker label"
-                      //         id="date-picker-single"
-                      //         onChange={date => {
-                      //           setDate(val);
-                      //           setShowCalendar(false);
-                      //         }}
-                      //       />
-                      //     } */}
-                      //   </>
-                      // ) : (
+                          <InputContainer
+                            label={calendar}
+                            className={`hidden`}
+                            id='birth_date'
+                            type='text'
+                            placeholder={translate('birthDate')}
+                            errors={(!!errors.dateOfBirth)}
+                            other={
+                              {
+                                ...register('dateOfBirth'),
+                                // onClick:()=>setShowCalendar(true),
+                                // onFocus: (e) => setShowCalendar(true),
+                                value: formatDate(new Date(date))
+                              }
+                            }
+                          />
+                          {                               
+                            <div className={styles.dateInput}>
+                                <label>
+                                    <span>
+                                      <img
+                                        src={calendar.src}
+                                        alt="icon"
+                                      />
+                                    </span>
+                                    <input type="date" 
+                                      value={date} 
+                                      onChange={(e)=>setDate(e.target.value)} />
+                                </label>
+                            </div>
+                          }
+                        </>
+                      ) : (
                         <InputContainer
                             label={calendar}
                             id='birth_date'
@@ -165,7 +169,7 @@ export function Form({ title }) {
                                 onBlur: (e) => e.target.type = 'text'
                             }}
                         />
-                      // ) 
+                      ) 
                     }
                     <InputContainer
                         label={email}
