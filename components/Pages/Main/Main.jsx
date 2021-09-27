@@ -32,18 +32,18 @@ export default function Main() {
   //     })
   //   }
   // }, [session])
-    return (
-        <>
-            <News />
-            <Matches
-                gameRulesState={true}
-            />
-            <Prediction />
-            <Testimonials
-                page={'home'}
-                locationInPage={'testimonials'}
-                textPathName={'.title'}
-            />
-        </>
-    )
+  return (
+    <>
+      <News/>
+      <Matches
+        gameRulesState={true}
+      />
+      <Prediction/>
+      <Testimonials
+        page={'home'}
+        locationInPage={'testimonials'}
+        textPathName={'.title'}
+      />
+    </>
+  )
 }

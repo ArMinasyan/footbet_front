@@ -21,17 +21,16 @@ export default NextAuth({
     }),
   ],
   callbacks: {
-    async session(session, user) {
-      console.log('session', session)
-      console.log('user', user);
+    async session(session, user, account) {
+      console.log(session)
+      console.log(user);
       if (session) {
         return {
           email: user.email,
           firstName: user.name.split(' ')[0],
           lastName: user.name.split(' ')[1],
           picture: user.picture,
-          username: user.sub,
-          provider: user.provider || ''
+          username: user.sub
         };
       }
     },
@@ -44,9 +43,8 @@ export default NextAuth({
     // },
     async jwt(token, token1, data) {
 
-
+      console.log(token, `token`);
       token.provider = data.provider;
-      console.log(token, 'token')
       // Persist the OAuth access_token to the token right after signin
       // if (account) {
       //   token.accessToken = account.access_token
