@@ -16,22 +16,22 @@ export default function Main() {
   const dispatch = useDispatch()
   console.log( `session`, session );
   const user = useSelector(selectUser)
-  useEffect(() => {
-    if (session) {
-      axios.post('https://footbet24.com/api-1auth/social', session).then(async(res) => {
-        setCookie( `access-token`, res?.data?.data?.token, 1 );
-        try {
-          const user = ( await request( GET_ACCOUNT_INFO, {}, {auth: true} ) ).data?.data;
-          console.log( user );
-          dispatch(login(user));
-        }
-        catch( err ) {
-          console.log( err, 1213 );
-          removeCookie( `access-token`)
-        }
-      })
-    }
-  }, [session])
+  // useEffect(() => {
+  //   if (session) {
+  //     axios.post('https://footbet24.com/api-1auth/social', session).then(async(res) => {
+  //       setCookie( `access-token`, res?.data?.data?.token, 1 );
+  //       try {
+  //         const user = ( await request( GET_ACCOUNT_INFO, {}, {auth: true} ) ).data?.data;
+  //         console.log( user );
+  //         dispatch(login(user));
+  //       }
+  //       catch( err ) {
+  //         console.log( err, 1213 );
+  //         removeCookie( `access-token`)
+  //       }
+  //     })
+  //   }
+  // }, [session])
     return (
         <>
             <News />
