@@ -43,7 +43,8 @@ export default NextAuth({
     // },
     async jwt(token, token1, data) {
 
-      console.log(token, 'token')
+      console.log(token, 'token');
+      console.log('provider',data.provider)
       token['provider'] = data.provider;
       // token['provider'] = data.provider;
       // console.log(token, `token`);
