@@ -22,8 +22,6 @@ export default NextAuth({
   ],
   callbacks: {
     async session(session, user, account) {
-      console.log(session)
-      console.log(user);
       if (session) {
         return {
           email: user.email,
