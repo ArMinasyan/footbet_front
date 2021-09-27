@@ -3,7 +3,7 @@ import Providers from "next-auth/providers"
 import * as axios from 'axios';
 import { host } from "../../../lib/constants";
 
-var provider='';
+var provider = '';
 
 export default NextAuth({
   // Configure one or more authentication providers
@@ -25,15 +25,15 @@ export default NextAuth({
   callbacks: {
     async session(session, user) {
       console.log(session, 'session');
-      console.log(user, 'user')
+      console.log(user, 'user');
+
       if (session) {
         return {
           email: user.email,
           firstName: user.name.split(' ')[0],
           lastName: user.name.split(' ')[1],
           picture: user.picture,
-          username: user.sub,
-          provider:provider
+          username: user.sub
         };
       }
     },
@@ -44,17 +44,13 @@ export default NextAuth({
     //   console.log(session, `sessionnn`);
     //   return session;
     // },
-    async jwt(token, token1, data) {
-
-      console.log(token, 'token');
-      console.log('provider',data.provider)
-      provider = data.provider;
+    async jwt(token, token1, account) {
       // token['provider'] = data.provider;
       // console.log(token, `token`);
       // Persist the OAuth access_token to the token right after signin
-      // if (account) {
-      //   token.accessToken = account.access_token
-      // }
+      if (account) {
+        token.accessToken = account.access_token
+      }
       return token
     }
   }
