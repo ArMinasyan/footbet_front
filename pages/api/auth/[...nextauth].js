@@ -20,9 +20,6 @@ export default NextAuth({
       clientSecret: 'Qo3jDgq8AjuE1Dayi3g9',
     }),
   ],
-  session: {
-    jwt: true
-  },
   callbacks: {
     async session(session, user) {
       console.log('session', session)
