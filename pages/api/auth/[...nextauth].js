@@ -44,13 +44,13 @@ export default NextAuth({
     async jwt(token, token1, data) {
 
 
-      token['provider'] = data.provider;
-      console.log(token, `token`);
+      // token['provider'] = data.provider;
+      // console.log(token, `token`);
       // Persist the OAuth access_token to the token right after signin
       // if (account) {
       //   token.accessToken = account.access_token
       // }
-      return token
+      return data
     }
   }
 })
