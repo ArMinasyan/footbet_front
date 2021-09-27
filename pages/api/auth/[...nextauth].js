@@ -3,6 +3,8 @@ import Providers from "next-auth/providers"
 import * as axios from 'axios';
 import { host } from "../../../lib/constants";
 
+var provider='';
+
 export default NextAuth({
   // Configure one or more authentication providers
   providers: [
@@ -30,7 +32,8 @@ export default NextAuth({
           firstName: user.name.split(' ')[0],
           lastName: user.name.split(' ')[1],
           picture: user.picture,
-          username: user.sub
+          username: user.sub,
+          provider:provider
         };
       }
     },
@@ -45,7 +48,7 @@ export default NextAuth({
 
       console.log(token, 'token');
       console.log('provider',data.provider)
-      token['provider'] = data.provider;
+      provider = data.provider;
       // token['provider'] = data.provider;
       // console.log(token, `token`);
       // Persist the OAuth access_token to the token right after signin
