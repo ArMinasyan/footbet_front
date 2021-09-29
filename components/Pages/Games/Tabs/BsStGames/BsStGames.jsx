@@ -8,8 +8,11 @@ import { useEffect, useState } from 'react';
 import { request } from '../../../../../lib/er.lib'
 import { GET_MATCHES_BY_TYPE } from '../../../../../lib/request-destinations';
 import { buy } from '../../../../../lib/project.lib';
+import { useSelector } from "react-redux";
+import { selectUser } from "../../../../../redux/features/userSlice";
 
 export function BsStGames() {
+  const user = useSelector( selectUser );
 
     const router = useRouter()
     const [ invinsible_strategy, setInvinsible_strategy ] = useState([]);
@@ -53,7 +56,11 @@ export function BsStGames() {
                             price={el.price}
                             text={el.name}
                             key={`key-${i}`}
-                            clickBuy={() =>buy(el.id, true)}
+                            clickBuy={() => {                              
+                              if ( user ) buy(el.id, true)
+                              else 
+                                router.push(`/registration`);
+                            }}
                         />
                     ))
                 }

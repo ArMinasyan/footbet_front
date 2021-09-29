@@ -19,46 +19,18 @@ import userDefaultIcon from '/public/images/common/userDefault.png'
 import { request } from '../../../../../lib/er.lib';
 import { CHANGE_ACCOUNT_IMAGE, CHANGE_ACCOUNT_INFO } from '../../../../../lib/request-destinations'
 import { ToastContainer, toast } from 'react-toastify';
-import { login } from '../../../../../redux/features/userSlice'
+import { login, changeUserData as _changeUserData } from '../../../../../redux/features/userSlice'
 import { useEffect } from 'react'
 
 
 export function UserInfo() {
 
-    const user_info = useSelector(selectUser)
+    const userInfo = useSelector(selectUser)
+    const user_info = {...userInfo};
     const dispatch = useDispatch();
-   
-    useEffect(()=>{
-        if ( changeName !== null )
-            changeUserData( `username`, user_info.username );
-    },[user_info.username]);
-   
-    useEffect(()=>{
-        if ( changeDate !== null )
-            changeUserData( `dateOfBirth`, user_info.dateOfBirth );
-    },[user_info.dateOfBirth]);
-   
-    useEffect(()=>{
-        if ( changePhone !== null )
-            changeUserData( `mobile`, user_info.mobile );
-    },[user_info.mobile]);
-   
-    useEffect(()=>{
-        if ( changeEmail !== null )
-            changeUserData( `email`, user_info.email );
-    },[user_info.email]);
 
-    async function changeUserData(key,value) {
-        try {
-            (await request( CHANGE_ACCOUNT_INFO, {[key]:value}, {auth: true} ))
-            toast( `Successfully updated`);
-        }
-        catch( err ) {
-            toast( error.response.data?.message || `Can't update`, {
-                type: `error`
-            });
-        }
-    }
+    const [ phoneErrMessage, setPhoneErrMessage ] = useState(``);
+   
 
     const
         // states
@@ -67,22 +39,70 @@ export function UserInfo() {
         [changeDate, setChangeDate] = useState(null),
         [changePhone, setChangePhone] = useState(null),
         [changeEmail, setChangeEmail] = useState(null),
+        [username, setUsername] = useState(user_info.username),
+        [date, setDate] = useState(user_info.dateOfBirth),
+        [mobile, setMobile] = useState(user_info.mobile),
+        [vemail, setEmail] = useState(user_info.email),
         [userPhoto, setUserPhoto] = useState(user_info.photo ?? userDefaultIcon.src ),
         { t } = useTranslation('personal')
+
+    useEffect(()=>{
+      if ( !changeName && changeName !== null )
+          changeUserData( `username`, username );
+    },[changeName]);
+   
+    useEffect(()=>{
+        if ( !changeDate && changeDate !== null ) {
+          const d = date;
+          changeUserData( `dateOfBirth`, d.split(`-`).reverse().join(`.`) );
+        }
+    },[changeDate]);
+   
+    useEffect(()=>{
+        if ( !changePhone && !phoneErrMessage && changePhone !== null )
+            changeUserData( `mobile`, mobile );
+    },[changePhone]);
+   
+    useEffect(()=>{
+        if ( !changeEmail && changeEmail !== null )
+            changeUserData( `email`, vemail );
+    },[changeEmail]);
+
+    async function changeUserData(key,value) {
+        try {
+            (await request( CHANGE_ACCOUNT_INFO, {[key]:value}, {auth: true} ))
+            dispatch(_changeUserData({...user_info, [key]: value}));
+            toast( `Successfully updated`);
+        }
+        catch( err ) {
+            toast( err.response?.data?.message || `Can't update`, {
+                type: `error`
+            });
+        }
+    }
     
     const changeUserPhoto = async (image) => {
         const formData = new FormData();
         formData.append(`profile_img`, image);
         try {
-            const imgPath = (await request( CHANGE_ACCOUNT_IMAGE, formData, {auth: true} )).data?.data.img_path ?? "";
+            const imgPath = (await request( CHANGE_ACCOUNT_IMAGE, formData, {auth: true} )).data?.data.photo ?? "";
             toast( `Image successfully updated`);
             dispatch(login({...user_info, photo:imgPath }));
         }
         catch( err ) {
-            toast( error.response.data?.message || `Can't update image`, {
+            toast( err.response.data?.message || `Can't update image`, {
                 type: `error`
             });
         }
+    }
+
+    function checkValidState( val, type ) {
+      if ( type === `phone` ) {
+        if ( !(/^\+([0-9])*$/g.test( val )) ) {
+          setPhoneErrMessage(`Телефон не валиден`);
+        }
+        else setPhoneErrMessage(null);
+      }
     }
 
     return (
@@ -115,14 +135,15 @@ export function UserInfo() {
                         <div>
                             <p style={!changeName ?
                                 { display: 'block' } : { display: 'none' }
-                            }>{user_info.username}</p>
+                            }>{username}</p>
                             <input
-                                placeholder={user_info.username}
+                                placeholder={username}
                                 type='text'
                                 style={changeName ?
                                     { display: 'block' } : { display: 'none' }
                                 }
-                                onChange={(e) => user_info.username = e.target.value}
+                                value={username}
+                                onInput={(e) => setUsername(e.target.value)}
                             />
                         </div>
                         <span>
@@ -140,14 +161,15 @@ export function UserInfo() {
                         <div>
                             <p style={!changeDate ?
                                 { display: 'block' } : { display: 'none' }
-                            }>{user_info.dateOfBirth}</p>
+                            }>{date}</p>
                             <input
                                 placeholder={user_info.dateOfBirth}
                                 type='date'
                                 style={changeDate ?
                                     { display: 'block' } : { display: 'none' }
                                 }
-                                onChange={(e) => user_info.dateOfBirth = e.target.value}
+                                value={date}
+                                onChange={(e) => setDate( e.target.value )}
                             />
                         </div>
                         <span>
@@ -165,14 +187,19 @@ export function UserInfo() {
                         <div>
                             <p style={!changePhone ?
                                 { display: 'block' } : { display: 'none' }
-                            }>{user_info.mobile}</p>
+                            }>{mobile}</p>
                             <input
-                                placeholder={user_info.mobile}
-                                type='text'
+                                placeholder={mobile}
+                                type='tel'
                                 style={changePhone ?
                                     { display: 'block' } : { display: 'none' }
                                 }
+                                onInput={(e) => {
+                                  checkValidState(e.target.value, `phone`);
+                                  setMobile(e.target.value);
+                                }}
                                 onChange={(e) => user_info.mobile = e.target.value}
+                                value={mobile}
                             />
                         </div>
                         <span>
@@ -183,6 +210,7 @@ export function UserInfo() {
                             />
                         </span>
                     </div>
+                    { phoneErrMessage && <p style={{color: `red`, fontSize: 12}}>{phoneErrMessage}</p>}
                     <div className={styles.info_input}>
                         <span>
                             <img src={email.src} alt='' />
@@ -190,14 +218,16 @@ export function UserInfo() {
                         <div>
                             <p style={!changeEmail ?
                                 { display: 'block' } : { display: 'none' }
-                            }>{user_info.email}</p>
+                            }>{vemail}</p>
                             <input
-                                placeholder={user_info.email}
+                                placeholder={vemail}
+                                value={vemail}
                                 type='text'
                                 style={changeEmail ?
                                     { display: 'block' } : { display: 'none' }
                                 }
                                 onChange={(e) => user_info.email = e.target.value}
+                                onInput={(e) =>setEmail(e.target.value)}
                             />
                         </div>
                         <span>
