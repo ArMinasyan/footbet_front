@@ -112,7 +112,9 @@ export function Form({ title }) {
         router.push(`/`);
       } catch (error) {
         if (!error.response.data.success) {
-          toast(error.response.data?.validationError?.message || error.response.data?.message || `Не удалось зарегистрироватся`, {
+          toast(error.response.data?.validationError?.message ||
+            error.response.data?.message ||
+            `Не удалось зарегистрироватся`, {
             type: `error`,
           });
         }

@@ -20,75 +20,81 @@ import { SET_NEW_PASSWORD } from '../../../../../../lib/request-destinations'
 
 
 export function NewPassword({ onModalClose }) {
-    const
-        // modal states pass => password Ml => Modal
-        [showNewPassMl, setShowNewPassMl] = useState(true),
-        [showSuccessMl, setShowSuccessMl] = useState(false),
-        // translation consfigs
-        { t } = useTranslation('common'),
-        translationPath = 'header.newPasswordModal.',
-        translate = key => t(`${translationPath}${key}`),
-        // yup configs
-        schema = yup.object().shape({
-            password: yup
-                .string()
-                .required()
-                .min(6)
-        }),
-        // form configs
-        { register, handleSubmit, formState: { errors } } = useForm({
-            mode: 'onChange',
-            resolver: yupResolver(schema)
-        }),
-        // on form submit
-        submit = async ( data ) => {
-            try {
-                await request( SET_NEW_PASSWORD, { password: data.password }, {
-                    headers: {
-                        'Authorization': `Bearer ${getCookie(`reset-token`)}`
-                    }
-                })
-                setShowNewPassMl(false)
-                setShowSuccessMl(true)
-            }
-            catch ( err ) {
-                toast( err.response.data?.message || `Не удалось востановить пароль`, {
-                    type: `error`
-                });
-            }
+  const
+    // modal states pass => password Ml => Modal
+    [showNewPassMl, setShowNewPassMl] = useState(true),
+    [showSuccessMl, setShowSuccessMl] = useState(false),
+    // translation consfigs
+    { t } = useTranslation('common'),
+    translationPath = 'header.newPasswordModal.',
+    translate = key => t(`${translationPath}${key}`),
+    // yup configs
+    schema = yup.object().shape({
+      password: yup
+        .string()
+        .required()
+        .min(6)
+    }),
+    // form configs
+    { register, handleSubmit, formState: { errors } } = useForm({
+      mode: 'onChange',
+      resolver: yupResolver(schema)
+    }),
+    // on form submit
+    submit = async (data) => {
+      try {
+        await request(SET_NEW_PASSWORD, { password: data.password }, {
+          headers: {
+            'Authorization': `Bearer ${getCookie(`reset-token`)}`
+          }
+        })
+        setShowNewPassMl(false)
+        setShowSuccessMl(true)
+      } catch (err) {
+        // toast( err.response.data?.message || `Не удалось востановить пароль`, {
+        //     type: `error`
+        // });
+        if (!error.response.data.success) {
+          toast(error.response.data?.validationError?.message ||
+            error.response.data?.message ||
+            `Не удалось зарегистрироватся`, {
+            type: `error`,
+          });
         }
+      }
+    }
 
-    return (
-        <>
-            {showNewPassMl &&
-                <Modal onClose={onModalClose} contentStyles={styles.m_content} containerStyles={styles.m_container}>
-                    <div className={styles.container}>
-                        <Title
-                            styles={styles.title}
-                            content={translate('title')}
-                        />
-                        <form onSubmit={handleSubmit(submit)}>
-                            <div className={styles.inputs}>
-                                <InputContainer
-                                    id='password'
-                                    type='password'
-                                    placeholder={t('registration.inputPlaceHolders.password')}
-                                    errors={!!errors.password}
-                                    other={register('password')}
-                                />
-                            </div>
-                            <Submit
-                                styles={styles.submit}
-                                content={translate('success')}
-                            />
-                        </form>
-                    </div>
-                    <ToastContainer />
-                </Modal>
-            }
-            {
-                showSuccessMl && <Success onModalClose={onModalClose} />
-            }
-        </>
-    )
+  return (
+    <>
+      {showNewPassMl &&
+      <Modal onClose={onModalClose} contentStyles={styles.m_content} containerStyles={styles.m_container}>
+        <div className={styles.container}>
+          <Title
+            styles={styles.title}
+            content={translate('title')}
+          />
+          <form onSubmit={handleSubmit(submit)}>
+            <div className={styles.inputs}>
+              <InputContainer
+                id='password'
+                type='password'
+                placeholder={t('registration.inputPlaceHolders.password')}
+                errors={!!errors.password}
+                other={register('password')}
+              />
+            </div>
+            <Submit
+              styles={styles.submit}
+              content={translate('success')}
+            />
+          </form>
+        </div>
+        <ToastContainer/>
+      </Modal>
+      }
+      {
+        showSuccessMl && <Success onModalClose={onModalClose}/>
+      }
+    </>
+  )
 }
