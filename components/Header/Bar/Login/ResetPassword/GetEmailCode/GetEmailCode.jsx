@@ -77,11 +77,11 @@ export function GetEmailCode({ onModalClose }) {
         //     type: `error`
         // });
         if (!error.response.data.success) {
-          toast(error.response.data?.validationError?.message ||
-            error.response.data?.message ||
-            `Не удалось зарегистрироватся`, {
-            type: `error`,
-          });
+            toast( error.response.data?.validationError?.message ||
+              err.response.data?.message ||
+              `Не удалось востановить пароль`, {
+                type: `error`
+            });
         }
       }
     }
