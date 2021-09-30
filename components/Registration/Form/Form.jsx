@@ -111,6 +111,7 @@ export function Form({ title }) {
 
         router.push(`/`);
       } catch (error) {
+        console.log(error.response.data);
         if (!error.response.data.success) {
           toast(error.response.data?.validationError?.message || error.response.data?.data.message || `Не удалось зарегистрироватся`, {
             type: `error`,
