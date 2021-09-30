@@ -60,10 +60,11 @@ export function Testimonials({
     const sorting = (toSort, sortingBy, dateActive) => {
         if (toSort.length > 0) {
             let
-                dataForSorting = toSort.reduce((ac, el) => ac.concat(el)),
+                dataForSorting = toSort,
                 sortedData = [],
                 sorted = []
 
+                console.log( toSort, dataForSorting );
             if (sortingBy === "date") sorted = dataForSorting.sort((a, b) => (b.date.sortFormat - a.date.sortFormat))
             else if (sortingBy === "rate") sorted = dataForSorting.sort((a, b) => (b.rateing - a.rateing))
 

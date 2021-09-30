@@ -38,7 +38,6 @@ export function Item({
 
   const gameDate = parseDate(expiryTimestamp, `.`);
   gameDate.setHours( gameDate.getUTCHours() + 3 );
-
   const gameFinished = (new Date()).getTime() > (gameDate.getTime() + (90 * 1000 * 60));
 
 
@@ -52,17 +51,17 @@ export function Item({
               <p>{teamOneName}</p>
             </div>
             <div className={styles.timer_container}>
-              <p>{gameFinished ? 
+              {/* <p>{gameFinished ? 
                 t(`home:matches.TM.today.rowOne.gameState.finished`) : 
                 gameStarted ? 
                   t(`home:matches.TM.today.rowOne.gameState.started`) :  
                   t(`home:gameWillStart`) }</p>
-              { (!gameFinished) && <Timer
+              { (!gameFinished && !gameStarted) && <Timer
                 expiryTimestamp={gameDate}
                 timeClass={styles.timer}
                 gameStarted={gameStarted}
-                timeOut={(v) => setGameStarted(v)}
-              />}
+                timeOut={() => setGameStarted(true)}
+              />} */}
             </div>
             <div className={styles.team}>
               <img src={teamTwoIcon} alt="" />

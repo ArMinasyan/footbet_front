@@ -26,7 +26,7 @@ export function PrdeictionSlide() {
   const user = useSelector( selectUser );
 
   useEffect(() => {
-    request(GET_PREDICTIONS(Intl.DateTimeFormat().resolvedOptions().timeZone), {}, { auth: true })
+    request(GET_PREDICTIONS(Intl.DateTimeFormat().resolvedOptions().timeZone), {} )
       .then((rsp) => {
         // toast(`Successfully registered`)
         setSlideData(

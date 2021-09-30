@@ -42,11 +42,9 @@ export function SocialMediaIcons() {
   async function login(provider) {
     try {
       const userInfo = await signIn(provider, { redirect: false })
-      console.log( userInfo, 1234 );
       debugger
       if ( userInfo ) {
         axios.post(`${host}auth/social`, userInfo).then(res => {
-          console.log(res.data.data)
         })
       }
 
@@ -65,7 +63,6 @@ export function SocialMediaIcons() {
                     <Link href={'/api/auth/signin'}>
                       <a onClick={e => {
                         e.preventDefault();
-                        console.log(123);
                         login(el.provider)
                       }}>
                         <img

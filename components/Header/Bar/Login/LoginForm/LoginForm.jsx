@@ -51,6 +51,7 @@ export function LoginForm({ onModalClose, handleResetPassModal }) {
         }),
         // on form submit
         submit = async (data) => {
+          console.log(data);
             try {
                 const { token } = (await request( LOGIN, data )).data?.data;
                 setCookie( `access-token`, token, 1 );

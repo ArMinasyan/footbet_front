@@ -7,10 +7,9 @@ export function InputContainer({
     placeholder,
     className='',
     errors,
-    ref,
+    innerRef,
     onClick,
     other }) {
-
     return (
         <div className={styles.container + ' ' + className}>
             {label &&
@@ -26,7 +25,7 @@ export function InputContainer({
             <div className={styles.input_container}>
                 <div onClick={onClick} className={errors ? styles.input_error_content : styles.input_success_content}>
                     <input
-                        ref={ref}
+                        ref={innerRef}
                         id={id}
                         type={type}
                         placeholder={type !== `date` ? placeholder : undefined}
