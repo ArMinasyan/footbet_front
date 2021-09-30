@@ -116,10 +116,6 @@ export function Form({ title }) {
             type: `error`,
           });
         }
-
-        // toast(error.response.data?.message || `Не удалось зарегистрироватся`, {
-        //   type: `error`,
-        // });
       }
     };
 
