@@ -32,7 +32,6 @@ import { useDispatch } from "react-redux";
 // import { DatePickerInput } from 'carbon-components-react';
 
 export function Form({ title }) {
-  const [showCalendar, setShowCalendar] = useState(false);
   const [date, setDate] = useState(null);
   const formRef = useRef();
   const dispatch = useDispatch();
@@ -68,7 +67,7 @@ export function Form({ title }) {
         .string()
         .required()
         .matches(/^[+]{1}[0-9]+$/gm),
-      password: yup.string().required().min(6),
+      password: yup.string().required().min(8),
     }),
     // form configs
     {
@@ -76,7 +75,7 @@ export function Form({ title }) {
       formState: { errors },
       handleSubmit,
     } = useForm({
-      mode: "onSubmit",
+      mode: "onChange",
       resolver: yupResolver(schema),
     }),
     submit = async (e) => {
@@ -179,7 +178,7 @@ export function Form({ title }) {
                   dRef.current.focus();
                 }
               }}
-              ref={dRef}
+              innerRef={dRef}
               placeholder={translate("birthDate")}
               errors={!!errors.dateOfBirth}
               other={{
