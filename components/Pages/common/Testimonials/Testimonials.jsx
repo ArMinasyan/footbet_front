@@ -34,7 +34,7 @@ export function Testimonials({
 
     useEffect(() => {
         if (matchId !== null  && matchId !== undefined) {
-            request(GET_FEEDBACK(matchId))
+            request(GET_FEEDBACK())
                 .then(predictions => {
                     setFeedBacks(
                         predictions.data.data.map(feedBack => ({
@@ -78,7 +78,7 @@ export function Testimonials({
             setDateActive(dateActive)
         }
     }
-    // Artificial reactions data 
+    // Artificial reactions data
     const reactions = [
         {
             username: "Lorem Ipsum",
