@@ -31,7 +31,7 @@ export function RowDescription({
                     `}
         >
           <span>{date}</span>
-          <span>&nbsp;{translate(gameState)}</span>
+          <span>&nbsp; </span>
         </div>
         <div className={styles.teams}>
           <div className={styles.teamOne}>

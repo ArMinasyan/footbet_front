@@ -51,7 +51,7 @@ export function Item({
               <p>{teamOneName}</p>
             </div>
             <div className={styles.timer_container}>
-              <p>{gameFinished ? 
+              {/* <p>{gameFinished ? 
                 t(`home:matches.TM.today.rowOne.gameState.finished`) : 
                 gameStarted ? 
                   t(`home:matches.TM.today.rowOne.gameState.started`) :  
@@ -61,7 +61,7 @@ export function Item({
                 timeClass={styles.timer}
                 gameStarted={gameStarted}
                 timeOut={() => setGameStarted(true)}
-              />}
+              />} */}
             </div>
             <div className={styles.team}>
               <img src={teamTwoIcon} alt="" />
