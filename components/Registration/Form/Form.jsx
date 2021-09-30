@@ -94,11 +94,7 @@ export function Form({ title }) {
         const register_response = await request(REGISTER, registerFormData);
 
         toast(`Successfully registered`);
-        if (register_response.data.data.success === false) {
-          toast(error.response.data?.data.message || `Не удалось зарегистрироватся`, {
-            type: `error`,
-          });
-        }
+
         if (register_response?.status === 200) {
           const { token } = (
             await request(LOGIN, {
@@ -116,6 +112,12 @@ export function Form({ title }) {
         router.push(`/`);
       } catch (error) {
         console.log(error.response.data);
+        if (register_response.data.data.success === false) {
+          toast(error.response.data?.validationError?.message || error.response.data?.data.message || `Не удалось зарегистрироватся`, {
+            type: `error`,
+          });
+        }
+
         toast(error.response.data?.message || `Не удалось зарегистрироватся`, {
           type: `error`,
         });
