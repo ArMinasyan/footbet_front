@@ -42,9 +42,9 @@ export function Form({ title }) {
     !date
       ? ``
       : `${date.getFullYear()}-${(date.getMonth() + 1 + "").padStart(
-          2,
-          "0"
-        )}-${(date.getDate() + "").padStart(2, "0")}`;
+        2,
+        "0"
+      )}-${(date.getDate() + "").padStart(2, "0")}`;
 
   const // translation consfigs
     { t } = useTranslation("common"),
@@ -94,7 +94,11 @@ export function Form({ title }) {
         const register_response = await request(REGISTER, registerFormData);
 
         toast(`Successfully registered`);
-
+        if (register_response.data.data.success === false) {
+          toast(error.response.data?.data.message || `Не удалось зарегистрироватся`, {
+            type: `error`,
+          });
+        }
         if (register_response?.status === 200) {
           const { token } = (
             await request(LOGIN, {
@@ -158,7 +162,7 @@ export function Form({ title }) {
                 <div className={styles.dateInput}>
                   <label>
                     <span>
-                      <img src={calendar.src} alt="icon" />
+                      <img src={calendar.src} alt="icon"/>
                     </span>
                     <input
                       type="date"
@@ -213,13 +217,13 @@ export function Form({ title }) {
             errors={!!errors.password}
             other={register("password")}
           />
-          <Button content={translate("buttonTitle")} onClick={submit} />
+          <Button content={translate("buttonTitle")} onClick={submit}/>
         </form>
       </div>
       <div className={styles.ball}>
-        <Ball />
+        <Ball/>
       </div>
-      <ToastContainer />
+      <ToastContainer/>
     </>
   );
 }
