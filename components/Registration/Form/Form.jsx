@@ -45,6 +45,7 @@ export function Form({ title }) {
         2,
         "0"
       )}-${(date.getDate() + "").padStart(2, "0")}`;
+  // const formatDateForSubmit = (date) => !date ? `${(date.getMonth() + 1 + "").padStart(2, "0")}-${(date.getDate() + "").padStart(2, "0")}` : 
 
   const // translation consfigs
     { t } = useTranslation("common"),
@@ -84,10 +85,10 @@ export function Form({ title }) {
       const dateOfBirth = isMobile()
         ? formatDate(new Date(date))
         : registerFormData.get(`dateOfBirth`) || "";
-      const [year, month, date] = dateOfBirth.split(`-`);
-      if (year && month && date) {
+      const [year, month, _date] = dateOfBirth.split(`-`);
+      if (year && month && _date) {
         registerFormData.delete(`dateOfBirth`);
-        registerFormData.append(`dateOfBirth`, [month, date, year].join(`.`));
+        registerFormData.append(`dateOfBirth`, [month, _date, year].join(`.`));
       }
 
       try {
