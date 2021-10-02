@@ -76,8 +76,8 @@ export function GetEmailCode({ onModalClose }) {
         // toast( err.response.data?.message || `Не удалось востановить пароль`, {
         //     type: `error`
         // });
-        if (!error.response.success) {
-            toast( error.response.data?.validationError?.message ||
+        if (!err.response.success) {
+            toast(err.response.data?.validationError?.message ||
               err.response.data?.message ||
               `Не удалось востановить пароль`, {
                 type: `error`
