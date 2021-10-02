@@ -53,7 +53,7 @@ export function ForgotPassword({ onModalClose }) {
         // toast( err.response.data?.message || `Не удалось востановить пароль`, {
         //     type: `error`
         // });
-        if (!error.response.data.success) {
+        if (!error.response.success) {
           toast( error.response.data?.validationError?.message ||
             err.response.data?.message ||
             `Не удалось востановить пароль`, {

@@ -45,7 +45,7 @@ export function Form({ title }) {
         2,
         "0"
       )}-${(date.getDate() + "").padStart(2, "0")}`;
-  // const formatDateForSubmit = (date) => !date ? `${(date.getMonth() + 1 + "").padStart(2, "0")}-${(date.getDate() + "").padStart(2, "0")}` : 
+  // const formatDateForSubmit = (date) => !date ? `${(date.getMonth() + 1 + "").padStart(2, "0")}-${(date.getDate() + "").padStart(2, "0")}` :
 
   const // translation consfigs
     { t } = useTranslation("common"),
@@ -112,7 +112,7 @@ export function Form({ title }) {
 
         router.push(`/`);
       } catch (error) {
-        if (!error.response.data.success) {
+        if (!error.response.success) {
           toast(error.response.data?.validationError?.message ||
             error.response.data?.message ||
             `Не удалось зарегистрироватся`, {
