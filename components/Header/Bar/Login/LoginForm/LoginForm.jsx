@@ -58,13 +58,13 @@ export function LoginForm({ onModalClose, handleResetPassModal }) {
                 const user = ( await request( GET_ACCOUNT_INFO, {}, {auth: true} ) ).data?.data;
                 dispatch(login(user));
                 router.push(`/`);
+                handle_to_register_click()
             }
             catch( error ) {
                 toast( error.response.data?.message || `Проблемы с сетью`, {
                     type: `error`
                 });
             }
-            handle_to_register_click()
         };
 
         

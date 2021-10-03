@@ -7,6 +7,7 @@ export function Sorting({
     sortingText,
     dateSortingText,
     rateSorting,
+    sortType,
     sortByDate,
     sortByRate,
     dateActive
@@ -28,7 +29,7 @@ export function Sorting({
             </div>
             <div className={styles.bar}>
                 <p
-                    className={`${styles.byDate} ${dateActive ? styles.active : null}`}
+                    className={`${styles.byDate} ${sortType ==="created_at" ? styles.active : null}`}
                     onClick={sortByDate}>
                     {
                         translate(dateSortingText)
@@ -36,7 +37,7 @@ export function Sorting({
                 </p>
                 <p
                     onClick={sortByRate}
-                    className={!dateActive ? styles.active : null}
+                    className={sortType !=="created_at"  ? styles.active : null}
                 >
                     {
                         translate(rateSorting)

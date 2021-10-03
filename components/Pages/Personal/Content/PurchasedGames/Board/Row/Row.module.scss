@@ -47,6 +47,18 @@ $returnColor: #b4ac00;
     font-size: 18px;
     line-height: 23px;
     letter-spacing: 0.1em;
+    @media screen and (min-width: 1000px) {
+      font-size: 12px;
+      line-height: 15px;      
+    }
+    @media screen and (min-width: 1300px) {
+      font-size: 14px;
+      line-height: 18px;      
+    }
+    @media screen and (min-width: 1600px) {
+      font-size: 16px;
+      line-height: 20px;      
+    }
 }
 
 .container {
@@ -69,7 +81,7 @@ $returnColor: #b4ac00;
         }
         .left {
             display: grid;
-            grid-template-columns: 1fr 2fr 1fr 2fr;
+            grid-template-columns: 10px 2fr 1fr 2fr;
             padding-top: 5px;
             @include tablet {
                 width: 100%;
@@ -150,6 +162,7 @@ $returnColor: #b4ac00;
             .prediction {
                 width: 100%;
                 height: 100%;
+                overflow: hidden;
 
                 @include tablet {
                     width: 50%;
@@ -157,12 +170,17 @@ $returnColor: #b4ac00;
 
                 .prediction_content {
                     background-color: $pink;
-                    padding: 7px 35px;
-                    @include center();
-
-                    @include noteBook {
-                        min-width: 120px;
+                    padding: 7px 25px;
+                    @media screen and (min-width: 1000px) {
+                      padding: 7px 13px;
                     }
+                    @media screen and (min-width: 1300px) {
+                      padding: 7px 17px; 
+                    }
+                    @media screen and (min-width: 1600px) {
+                      padding: 7px 20px;
+                    }
+                    @include center();
 
                     @include tablet {
                         @include column-center();
@@ -203,6 +221,18 @@ $returnColor: #b4ac00;
                             line-height: 17px;
                             text-align: center;
                             white-space: nowrap;
+                            @media screen and (min-width: 1000px) {
+                              font-size: 12px;
+                              line-height: 15px;      
+                            }
+                            @media screen and (min-width: 1300px) {
+                              font-size: 14px;
+                              line-height: 18px;      
+                            }
+                            @media screen and (min-width: 1600px) {
+                              font-size: 16px;
+                              line-height: 20px;      
+                            }
                             @include tablet {
                                 @include arimo-font();
                                 font-size: 14px;

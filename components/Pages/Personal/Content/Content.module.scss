@@ -4,7 +4,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 2.19fr;
-    grid-column-gap: 215px;
+    grid-column-gap: 10vw;
     margin-top: 37px;
 
     @include tablet {
@@ -12,4 +12,17 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto;
     }
+}
+
+
+@media screen and ( min-width: 1300px ) {
+  .container {
+    grid-column-gap: 7.5vw;
+  }
+}
+
+@media screen and ( min-width: 1600px ) {
+  .container {
+    grid-column-gap: 9vw;
+  }
 }

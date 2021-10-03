@@ -25,6 +25,7 @@ export function Testimonials({
     locationInPage,
     textPathName
 }) {
+  const [sortType, setSortType] = useState("created_at");
     const user = useSelector(selectUser);
     const matchId = useSelector(getMatchId);
     const
@@ -33,8 +34,8 @@ export function Testimonials({
         [dateActive, setDateActive] = useState(true)
 
     useEffect(() => {
-        if (matchId !== null  && matchId !== undefined) {
-            request(GET_FEEDBACK())
+        // if (matchId !== null  && matchId !== undefined) {
+            request(GET_FEEDBACK(sortType))
                 .then(predictions => {
                     setFeedBacks(
                         predictions.data.data.map(feedBack => ({
@@ -53,8 +54,8 @@ export function Testimonials({
                     );
                 })
                 .catch(err => {  })
-        }
-    }, [matchId])
+        // }
+    }, [sortType])
 
     // function for sorting
     const sorting = (toSort, sortingBy, dateActive) => {
@@ -65,7 +66,7 @@ export function Testimonials({
                 sorted = []
 
                 console.log( toSort, dataForSorting );
-            if (sortingBy === "date") sorted = dataForSorting.sort((a, b) => (b.date.sortFormat - a.date.sortFormat))
+            if (sortingBy === "date") sorted = dataForSorting.sort((a, b) => ((b.date?.sortFormat || 0) - (a.date?.sortFormat || 0)))
             else if (sortingBy === "rate") sorted = dataForSorting.sort((a, b) => (b.rateing - a.rateing))
 
             for (let i = 1; i <= Math.ceil(dataForSorting.length / 3); i++) {
@@ -109,8 +110,9 @@ export function Testimonials({
                             sortingText={"sort"}
                             dateSortingText={"byDate"}
                             rateSorting={"byRate"}
-                            sortByDate={() => { sorting(feedBacks, "date", true) }}
-                            sortByRate={() => { sorting(feedBacks, "rate", false) }}
+                            sortType={sortType}
+                            sortByDate={() => { setSortType("created_at") }}
+                            sortByRate={() => { setSortType("stars") }}
                             dateActive={dateActive}
                         />
                         <Carousel
@@ -129,7 +131,7 @@ export function Testimonials({
                                                 nikName={el.nikName}
                                                 rateing={el.rateing}
                                                 description={el.description}
-                                                date={el.date.renderFormat}
+                                                date={el.date?.renderFormat || ""}
                                                 likes={el.likes}
                                                 disLikes={el.disLikes}
                                                 key={Math.random()}

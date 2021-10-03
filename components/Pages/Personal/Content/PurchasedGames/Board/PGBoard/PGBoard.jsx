@@ -1,10 +1,26 @@
 import { Row } from '../Row/Row'
 import { BoardHeader } from '../BoardHeader/BoardHeader';
-import { PG_board } from './PG_board';
+// import { PG_board } from './PG_board';
 // styles 
 import styles from './PGBoard.module.scss'
+import { useEffect, useState } from 'react';
+import { request } from '../../../../../../../lib/er.lib';
+import { GET_PAYMENT_HISTORY } from '../../../../../../../lib/request-destinations';
 
 export function PGBoard({ show }) {
+  const [ PG_board, setMatches ] = useState([]);
+  useEffect(()=>{
+    getMatches();
+  }, []);
+
+  async function getMatches() {
+    try {
+      const rsp = await request(GET_PAYMENT_HISTORY,{}, {auth: true});
+      setMatches( rsp?.data?.data || [] );
+    }
+    catch( err ) { }  
+  }
+
     return (
         <>
             {show &&
@@ -14,15 +30,15 @@ export function PGBoard({ show }) {
                         {PG_board.map((el, i) => (
                             <Row
                                 order={i + 1}
-                                teamOneName={el.teamOneName}
-                                teamOneIcon={el.teamOneIcon}
-                                teamTwoName={el.teamTwoName}
-                                teamTwoIcon={el.teamTwoIcon}
+                                teamOneName={""}
+                                teamOneIcon={el.team1_img_path}
+                                teamTwoName={""}
+                                teamTwoIcon={el.team2_img_path}
                                 prediction={el.prediction}
                                 date={el.date}
-                                score={el.score}
+                                score={el.factor}
                                 price={el.price}
-                                key={Math.random()}
+                                key={el.id}
                             />
                         ))
                         }

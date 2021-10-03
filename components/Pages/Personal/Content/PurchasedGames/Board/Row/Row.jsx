@@ -27,14 +27,14 @@ export function Row({
             <div className={styles.content}>
                 <div className={styles.left}>
                     <div className={styles.leftItems}>
-                        <span className={styles.order}>{order}.</span>
+                        {/* <span className={styles.order}>{order}.</span> */}
                     </div>
                     <div className={styles.teamOne}>
                         <div className={styles.leftItems}>
                             <span>{teamOneName}</span>
                         </div>
                         <div className={styles.leftItems}>
-                            <img src={teamOneIcon} alt="" />
+                            <img width="50" height="50" src={teamOneIcon} alt="" />
                         </div>
                     </div>
                     <div className={styles.leftItems}>
@@ -45,19 +45,19 @@ export function Row({
                             <span>{teamTwoName}</span>
                         </div>
                         <div className={styles.leftItems}>
-                            <img src={teamTwoIcon} alt="" />
+                            <img width="50" height="50" src={teamTwoIcon} alt="" />
                         </div>
                     </div>
                 </div>
                 <div className={styles.right}>
                     <div className={styles.prediction}>
                         {
-                            prediction.thereIs ?
+                            prediction ?
                                 <div className={styles.prediction_content}>
                                     <span className={styles.prediction_title}>{translate('prediction')}</span>
                                     <span className={styles.prediction_body}>
-                                        <span>{prediction.totalBet}</span>
-                                        <span>{prediction.coefficent}</span>
+                                        <span style={{"white-space": "pre-line"}}>{prediction}</span>
+                                        <span>{score}</span>
                                     </span>
                                 </div> :
                                 <div className={styles.simulator} />

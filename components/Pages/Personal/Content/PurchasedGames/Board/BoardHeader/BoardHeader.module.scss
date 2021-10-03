@@ -5,69 +5,81 @@ $left: 397px;
 $right: 581px;
 
 @mixin headers {
-    display: grid;
-    grid-template-columns:
-        get_percent(207px, $right)
-        get_percent(132px, $right)
-        get_percent(121px, $right)
-        get_percent(108px, $right);
+  display: grid;
+  grid-template-columns:
+    get_percent(207px, $right)
+    get_percent(132px, $right)
+    get_percent(121px, $right)
+    get_percent(108px, $right);
 }
 
 .container {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    width: 100%;
-    display: grid;
-    grid-template-columns:
-        get_percent($left, $parentWidth)
-        get_percent($right, $parentWidth);
-    background-color: $lightSilver;
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    get_percent($left, $parentWidth)
+    get_percent($right, $parentWidth);
+  background-color: $lightSilver;
+  @include tablet {
+    background-color: #1b1a30;
+    @include flex-start();
+  }
+  .left {
     @include tablet {
-        background-color: #1b1a30;
-        @include flex-start();
+      display: none;
     }
-    .left {
-        @include tablet {
-            display: none;
-        }
-        padding: 22px 17px;
-        @include arimo-font();
-        font-size: 22px;
-        line-height: 25px;
-        letter-spacing: 0.1em;
+    padding: 22px 17px;
+    @include arimo-font();
+    font-size: 22px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+  }
+  .right {
+    @include tablet {
+      display: none;
     }
-    .right {
-        @include tablet {
-            display: none;
-        }
-        @include center();
-        align-items: flex-end;
-        @include headers();
-        padding-bottom: 7px;
-        p {
-            @include center();
-            align-items: flex-end;
-            @include arimo-font();
-            font-weight: bold;
-            font-size: 16px;
-            line-height: 18px;
-            letter-spacing: 0.1em;
-        }
+    @include center();
+    align-items: flex-end;
+    @include headers();
+    padding-bottom: 7px;
+    p {
+      @include center();
+      align-items: flex-end;
+      @include arimo-font();
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0.1em;
     }
-    .for_tablets {
-        display: none;
-        width: 100%;
-        border-top: 1px solid white;
-        @include tablet {
-            display: block;
-            min-height: 34px;
-            padding: 8px 50px;
-            @include arimo-font();
-            font-size: 15px;
-            line-height: 17px;
-            letter-spacing: 0.1em;
-        }
+  }
+  .for_tablets {
+    display: none;
+    width: 100%;
+    border-top: 1px solid white;
+    @include tablet {
+      display: block;
+      min-height: 34px;
+      padding: 8px 50px;
+      @include arimo-font();
+      font-size: 15px;
+      line-height: 17px;
+      letter-spacing: 0.1em;
     }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    justify-content: flex-end;
+    display: flex;
+    width: 100%;
+    
+    .right{
+      width: 58%;
+    }
+  }
 }
