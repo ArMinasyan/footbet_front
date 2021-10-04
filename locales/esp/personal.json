@@ -7,6 +7,7 @@
             "prediction": "Apuesta",
             "date": "Fecha",
             "score": "Cuenta",
+            "coeficent": "coef",
             "price": "Precio"
         }
 

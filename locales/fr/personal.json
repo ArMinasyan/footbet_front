@@ -7,6 +7,7 @@
             "prediction": "Prédiction",
             "date": "Date",
             "score": "score/facture",
+            "coeficent": "coef.",
             "price": "le prix",
             "changePassword": "réinitialisez votre mot de passe"
         }

@@ -57,7 +57,7 @@ export function Row({
                                     <span className={styles.prediction_title}>{translate('prediction')}</span>
                                     <span className={styles.prediction_body}>
                                         <span style={{"white-space": "pre-line"}}>{prediction}</span>
-                                        <span>{score}</span>
+                                        {/* <span>{score}</span> */}
                                     </span>
                                 </div> :
                                 <div className={styles.simulator} />

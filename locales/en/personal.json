@@ -7,6 +7,7 @@
             "prediction": "Prediction",
             "date": "Date",
             "score": "Score / bill",
+            "coeficent": "Coef.",
             "price": "Price"
         }
 

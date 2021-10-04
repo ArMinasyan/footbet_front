@@ -7,8 +7,8 @@ export function BoardHeader() {
 
     const
         // translation consfigs
-        { t } = useTranslation('personal'),
-        translationPath = 'board.headers.',
+        { t } = useTranslation(''),
+        translationPath = 'personal:board.headers.',
         translate = key => t(`${translationPath}${key}`)
 
     return (
@@ -31,7 +31,7 @@ export function BoardHeader() {
                 </div>
                 <div>
                     <p>
-                        {translate('score')}
+                        {translate('coeficent')}
                     </p>
                 </div>
                 <div>
