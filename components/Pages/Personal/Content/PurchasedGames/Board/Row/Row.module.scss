@@ -372,3 +372,10 @@ $returnColor: #b4ac00;
         }
     }
 }
+
+@media screen and ( max-width: 1000px ) {
+  .score {
+    display: block !important;
+    border-color: transparent !important;
+  }
+}

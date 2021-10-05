@@ -56,7 +56,7 @@ export function Row({
                                 <div className={styles.prediction_content}>
                                     <span className={styles.prediction_title}>{translate('prediction')}</span>
                                     <span className={styles.prediction_body}>
-                                        <span style={{"white-space": "pre-line"}}>{prediction}</span>
+                                        <span style={{"whiteSpace": "pre-line"}}>{prediction}</span>
                                         {/* <span>{score}</span> */}
                                     </span>
                                 </div> :
@@ -64,7 +64,7 @@ export function Row({
                         }
                     </div>
                     <div className={styles.date_time}>
-                        <span className={styles.tablet_score}>{score}</span>
+                        <span className={styles.tablet_score}></span>
                         <div className={styles.date}>
                             <span>{date}</span>
                         </div>
