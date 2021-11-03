@@ -75,6 +75,10 @@ export function Row({
             <div className={styles.time}>
               <span>{time}</span>
             </div>
+            <div className={`${styles.coefficent} ${styles.coefficentForMobile}`}>
+              <p>{translate("prediction")}</p>
+              <span>{coefficent}</span>
+            </div>
           </div>
           <div className={styles.coefficent}>
             <span>{coefficent}</span>
