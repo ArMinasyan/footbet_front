@@ -55,7 +55,7 @@ export function Row({
             {prediction ? (
               <div className={styles.prediction_content}>
                 <span className={styles.prediction_title}>
-                  {translate("prediction")}
+                  {translate("coeficent")}
                 </span>
                 <span className={styles.prediction_body}>
                   <span>{prediction}</span>
