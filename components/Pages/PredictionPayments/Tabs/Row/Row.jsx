@@ -55,7 +55,7 @@ export function Row({
             {prediction ? (
               <div className={styles.prediction_content}>
                 <span className={styles.prediction_title}>
-                  {translate("coeficent")}
+                  {translate("prediction")}
                 </span>
                 <span className={styles.prediction_body}>
                   <span>{prediction}</span>
@@ -76,7 +76,7 @@ export function Row({
               <span>{time}</span>
             </div>
             <div className={`${styles.coefficent} ${styles.coefficentForMobile}`}>
-              <p>{translate("prediction")}</p>
+              <p>{translate("coeficent")}</p>
               <span>{coefficent}</span>
             </div>
           </div>

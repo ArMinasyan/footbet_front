@@ -169,6 +169,15 @@ $buyButtonHover: #a10b45;
             background: none;
             padding: 7px 0;
             min-width: 107px;
+            flex-direction: row;
+            margin-top: 30px;
+            .prediction_title {
+              margin-right: 5px;
+            }
+
+            .prediction_body {
+              background-color: #a10b45;
+            }
           }
 
           .prediction_title {
